@@ -39,12 +39,12 @@ Sau buổi này, bạn làm được:
 
 1. **Nhóm trưởng** bấm **Fork** (góc trên bên phải repo này). Ở trang *Create a new fork*, chọn tài khoản GitHub của nhóm trưởng làm **Owner** và sửa ô **Repository name** theo cú pháp:
    ```text
-   K5-<L3A hoặc L3B>-DAY02-HoVaTen-MSSV-DiscoveryProblemFraming
+    K5-<L3A hoặc L3B>-DAY02-TenNhom-DiscoveryProblemFraming
    ```
 
-   `HoVaTen-MSSV` là họ tên và MSSV của **nhóm trưởng** (không dấu, không khoảng trắng). Ví dụ nhóm trưởng Nguyễn Văn An, MSSV `20241234`, lớp L3A: `K5-L3A-DAY02-NguyenVanAn-20241234-DiscoveryProblemFraming`.
+    Ví dụ lớp L3A: `K5-L3A-DAY02-NhomABC-DiscoveryProblemFraming`. Lớp L3B: `K5-L3B-DAY02-NhomABC-DiscoveryProblemFraming`.
 
-   Lưu ý khi fork:
+    Lưu ý khi fork:
    - Nếu lỡ để tên mặc định, vào **Settings → General → Repository name** trong repo fork để đổi tên.
    - Cả nhóm làm bài và commit trên **đúng repo fork này**. Không tạo Pull Request về repo gốc. Không fork thêm repo cá nhân.
    - Nhóm trưởng vào **Settings → Collaborators**, mời các thành viên. Mỗi người chấp nhận lời mời rồi mới commit được.
@@ -85,7 +85,7 @@ Lab giữ nguyên một số thuật ngữ tiếng Anh vì đây là từ các t
 ## Cấu trúc repo
 
 ```text
-K5-<L3A hoặc L3B>-DAY02-HoVaTen-MSSV-DiscoveryProblemFraming/
+K5-<L3A hoặc L3B>-DAY02-TenNhom-DiscoveryProblemFraming/
 ├── README.md
 ├── RULES.md
 ├── CHECKPOINTS.md

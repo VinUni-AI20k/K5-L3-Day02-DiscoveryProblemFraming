@@ -188,17 +188,17 @@ Làm thế nào để kiểm chứng độ chính xác của các đề xuất k
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
-
+Sau khi nghe top 3 problem của các bạn khác trong nhóm, tôi nhận thấy có thể coi tìm và xác định được một vấn đề là bước đầu quan trọng nhất trong quá trình tạo ra sản phẩm AI. Cần phải xác định được đúng điểm đau của đối tượng, từ đó đi đến giải pháp.
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
-
+Một ví dụ mà nhóm đã bị cuốn theo hướng nghĩ giải pháp theo vấn đề là khi nhóm đã nghĩ trước là sử dụng AI để hỗ trợ học sinh tổng hợp kiến thức và deadline. Lúc đó nhóm đã nhanh chóng nhận ra và đi lại từng bước để xác định vấn đề cụ thể, rồi từ đó đi sâu vào giải pháp.
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
-
+Tôi đã đổi ý trong lần phản biện ý tưởng dùng AI để tóm tắt đề cương ôn thi cho học sinh sinh viên. Lý do phản biện của các thành viên trong nhóm mà tôi thấy hợp lý là đã có những công cụ miễn phí có sẵn, tiêu biểu như NotebookLM của Google, để giải quyết vấn đề này một cách hiệu quả cho học sinh sinh viên. Từ phản biện đó tôi đã ưu tiên vấn đề task tracking.
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
-
+Điều khó nhất khi viết Problem Statement là việc này yêu cầu trải nghiệm thực tế rất cao, vì có trải nghiệm thực tết mới có các chi tiết những khó khăn, vấn đề tiềm năng cần giải quyết.
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
-
+Nếu làm lại, tôi sẽ cố gắng đào sâu hơn, lấy những dữ liệu thực tế thay vì ước lượng như hiện tại.
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
 ---

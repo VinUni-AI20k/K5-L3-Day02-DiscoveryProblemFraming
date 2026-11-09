@@ -7,7 +7,7 @@
 ## 1. Thông tin học viên
 - Họ tên: Nguyen Van Minh
 - MSSV: 2A202603771
-- Email trường (không bắt buộc, repo có thể để public): [EMAIL_ADDRESS]
+- Email trường (không bắt buộc, repo có thể để public):26ai.minhnv7@vinuni.edu.vn
 - Tên nhóm: H1
 - Link repo nhóm: https://github.com/huyvu-03/K5-L3B-Day02-H1-DiscoveryProblemFraming.git
 
@@ -154,16 +154,16 @@ HIỆN TẠI — 255 phút (~4.25 tiếng)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Pitch Card #1 "Tóm tắt hồ sơ tái khám" (người thân đi viện) và 2 card cá nhân. | Đưa bài toán #1 vào shortlist để nhóm cân nhắc và chấm điểm. |
+| Phản biện bài của bạn khác | Đặt câu hỏi cho Chuẩn: *"Bài điểm danh ca học dùng mã QR tĩnh (Rule) là xong, có cần đến AI không?"*<br>Hỏi Huy: *"Quyền truy cập dữ liệu đa kênh cá nhân lấy ở đâu?"* | Chuẩn đồng ý bài điểm danh chỉ cần Rule; Huy và nhóm nhận ra rào cản bảo mật Zalo. |
+| Nhận phản biện | Chuẩn hỏi: *"Nhóm IT lấy đâu ra chuyên môn y tế để kiểm tra bản tóm tắt trích xuất đúng hay sai?"* | Thấy rủi ro Feasibility/Viability y tế quá lớn, chủ động rút bài và đồng thuận chuyển sang bài deadline của nhóm. |
+| Gom cluster / cây OST | Cùng nhóm gom 12 candidate thành 3 nhóm: Học tập, Deadline, Quy trình. | Xác định đúng nhánh Opportunity, gạch bỏ các giải pháp trá hình như "App AI tự giải lab". |
+| Chọn candidate problem | Tham gia chấm điểm shortlist 7 tiêu chí cho 3 candidate. | Cả nhóm đồng thuận chọn bài tổng hợp deadline học tập cuối ngày (33/35 điểm). |
+| Kiểm chứng / research | Phỏng vấn trải nghiệm thực tế của 3 bạn trong nhóm (Minh, Huy, Chuẩn) và khảo sát 8 bạn trong lớp; tìm 3 giải pháp Canvas iCal, Motion, n8n. | Phát hiện 90% lỗi sót deadline đến từ tin nhắn Zalo trôi; định hướng nhóm dùng cơ chế Daily Digest. |
+| Quy trình nhóm | Đóng góp ý kiến quy trình tương lai: dùng iCal cho LMS, AI trích xuất tin nhắn chat, và người phải duyệt trước khi lưu. | Chốt quy trình 4 bước rõ ràng, có phương án quay về nếu AI trích xuất sai. |
+| Problem Statement | Cùng gọt giũa 6 trường cho v0 và v1; thêm metric thời gian giảm từ 25' xuống 5'. | Bỏ hết các từ khóa mang tính giải pháp, câu chữ đúng chuẩn Lean UX. |
+| Mức can thiệp AI | Phân tích ma trận độ mơ hồ/phức tạp, bảo vệ quan điểm chọn Workflow thay vì Agent. | Thống nhất chọn Workflow có AI bóc tách tin nhắn, không cần Agent tự động hoá hoàn toàn. |
+| Quyết định | Đánh giá 4 rủi ro và đề xuất ngưỡng dừng cho pilot 2 tuần. | Chốt quyết định "Go phạm vi nhỏ" với ngưỡng dừng nếu AI sai trên 20%. |
 
 ---
 
@@ -171,12 +171,12 @@ HIỆN TẠI — 255 phút (~4.25 tiếng)
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Gợi ý thêm các problem lặp lại/tốn thời gian quanh sinh hoạt và học tập. | Nhớ ra các bài toán quản lý thuốc của bố mẹ và tổng hợp hóa đơn. | Gợi ý ý tưởng viển vông như "Chatbot AI chẩn đoán bệnh cho người thân". | Bỏ ngay ý chẩn đoán vì rủi ro y tế quá lớn; chỉ giữ các bài toán có số liệu thật. |
+| CP2 Problem Card | Đóng vai PM hoài nghi để phản biện card cá nhân. | Chỉ ra baseline 55' của bài bệnh án ban đầu chỉ là ước lượng cảm tính. | Gợi ý nâng cấp bài gửi xe thành app AI định vị xe thông minh toàn trường. | Bác bỏ gợi ý vẽ vời của AI; xác định rõ bài gửi xe chỉ cần FAQ/infographic (Rule) là đủ. |
+| CP4 Research | Tìm 2–3 công cụ/pattern đã giải bài toán tương tự trên thị trường. | Gợi ý nhanh template n8n và công cụ xếp lịch Motion. | Đưa link Canvas cũ bị lỗi 404; nói Motion tự đọc được tin nhắn Zalo tiếng Việt. | Tự bấm từng link kiểm tra, tìm lại link đúng trên Canvas Community; đọc tài liệu Motion thấy không hỗ trợ Zalo. |
+| CP5 Quy trình | Chuyển mô tả văn bản sang sơ đồ Mermaid. | Chuyển định dạng nhanh, trực quan. | Tự động gộp bước "AI trích xuất" và "Sinh viên duyệt" làm một, mất kiểm soát con người. | Tách riêng bước sinh viên duyệt (Human-in-the-loop) và thêm phương án quay về. |
+| CP5–6 Problem Statement | Soát lỗi logic và chỉ ra từ ngữ lồng ghép giải pháp. | Bắt được lỗi metric ghi chung chung "giúp sinh viên tiện hơn". | Tự viết lại câu chữ nhồi nhét đầy thuật ngữ công nghệ (LLM, RAG, Agent). | Xóa hết tên công nghệ, chỉ giữ lại mô tả nỗi đau và con số đo lường thật. |
+| CP6 Mức can thiệp / quyết định | Gợi ý các tiêu chí đánh giá đầu ra (eval) và các loại rủi ro. | Nhắc rủi ro Zalo không có API mở cho ứng dụng ngoài. | Khuyên nên dùng Agent tự động toàn bộ quy trình từ đọc tin nhắn đến nộp bài. | Giữ nguyên Workflow bán tự động, kiên quyết không cho AI tự nộp bài. |
 
 ---
 
@@ -185,21 +185,29 @@ HIỆN TẠI — 255 phút (~4.25 tiếng)
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Tôi học được cách các bạn nhìn ra nút thắt từ việc học hằng ngày và cách thu hẹp một ý tưởng chung chung thành một bài toán cụ thể. Bài của Chuẩn về sửa lỗi code IT rất thú vị nhưng khó đo baseline vì mỗi lỗi một khác; bài của Huy về lọc thông báo và bài của Cao về deadline thì chạm đúng vào nỗi đau lặp lại mỗi tối của cả nhóm.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Có, vừa thống nhất chọn chủ đề deadline là nhóm đã nhảy ngay vào bàn xem nên dùng model AI nào để cào tin nhắn Discord. Nhóm sau đó quyết định gác công nghệ lại để tập trung làm rõ xem sinh viên thực sự nghẽn ở bước nào trước.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+Có. Ban đầu tôi rất muốn làm bài tóm tắt bệnh án của mẹ, nhưng khi Chuẩn phản biện là nhóm IT lấy đâu ra chuyên môn y tế để kiểm tra AI trích xuất đúng hay sai, tôi nhận thấy rủi ro quá lớn nên chủ động rút bài khỏi shortlist và đồng thuận chuyển sang bài deadline của nhóm.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Bất ngờ nhất là sinh viên không hề gặp khó khăn với lịch của LMS Canvas. Hóa ra 90% lần bị sót deadline lại đến từ tin nhắn dặn bài đột xuất trôi trên Discord lúc nửa đêm hoặc email dài của thầy cô. Điều này làm nhóm thay đổi hẳn hướng tiếp cận: không làm lại tính năng của LMS mà tập trung xử lý tin nhắn chat trôi nổi.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+Khó nhất là phải kiềm chế bản thân không đưa giải pháp hay từ khóa "AI" vào câu văn, và phải tìm được con số baseline và target đo lường thật bằng phút thay vì viết chung chung kiểu "giúp quản lý tiện hơn".
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+Tôi sẽ đi phỏng vấn người thật sớm hơn để lấy số liệu thực tế thay vì ngồi tranh luận lý thuyết, và sẽ phản biện nhóm kỹ hơn về việc làm sao lấy được dặn dò của giảng viên.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+Bài toán bắt đầu từ **Problem**: sinh viên bị sót bài tập do thông báo rải rác trên LMS, Discord, Email mất 20–25 phút rà soát mỗi tối. **Quy trình tương lai** kết hợp iCal lấy bài từ LMS và AI trích xuất tin nhắn chat, gửi bản Daily Digest lúc 22h00 để người dùng kiểm tra. **Metric** là giảm thời gian xuống dưới 5 phút và 0 lần miss deadline. **Boundary** là AI chỉ gợi ý, không tự nộp bài và bắt buộc người duyệt (Human-in-the-loop). **Mức can thiệp là Workflow** bán tự động vì các bước quy trình định sẵn, không cần Agent tự quyết. Quyết định cuối là **Go phạm vi nhỏ** pilot 2 tuần kèm ngưỡng dừng nếu AI sai trên 20% thì quay về dùng Google Calendar thủ công.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+1. Design Council (UK) — Double Diamond Framework.
+2. Gemini 3.8 flash

@@ -129,47 +129,69 @@ Chuẩn ban đầu muốn giữ bài "Khắc phục lỗi code" vì mang đậm 
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Sinh viên học từ 4–5 môn/kỳ đều mất từ 20–30 phút mỗi tối để lướt kiểm tra bài tập và deadline từ nhiều nguồn rời rạc (LMS, Zalo, Teams, Email). | Value | 5 | 2 | ✅ |
+| 2 | Đa số các lần bị trễ hạn hoặc bỏ sót deadline xuất phát từ các thông báo không có cấu trúc (dặn dò trong nhóm chat Zalo/Teams, slide bài giảng) chứ không phải bài tập chính thức đã tạo trên LMS. | Value | 5 | 2 | ✅ |
+| 3 | Sinh viên sẵn sàng dành 2–3 phút mỗi tối để xem lại và bấm duyệt danh sách deadline do hệ thống tổng hợp thay vì tự đi tìm thủ công. | Usability | 4 | 3 | — |
+| 4 | Có thể lấy dữ liệu bài tập từ LMS tự động qua chuẩn lịch iCal, và trích xuất ngày giờ hạn nộp từ tin nhắn ngôn ngữ tự nhiên bằng Rule/LLM. | Feasibility | 4 | 4 | — |
+| 5 | Sinh viên lo ngại rủi ro bảo mật thông tin cá nhân và không sẵn sàng cấp quyền truy cập toàn bộ tài khoản chat Zalo cá nhân cho một ứng dụng bên thứ ba. | Viability | 5 | 1 | ✅ |
 
-*Điền 4–6 giả định; xóa dòng thừa.*
-
-Giả định nhóm kiểm chứng trong buổi này:
+Giả định nhóm kiểm chứng trong buổi này: **Giả định #1, #2 và #5** (nhóm giả định có độ quan trọng cao nhưng bằng chứng thực tế còn thấp).
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
+**Cách đã dùng:** Phỏng vấn sâu 3 sinh viên kỹ thuật trong nhóm theo trải nghiệm thực tế đã xảy ra (theo đúng 3 luật The Mom Test: Nguyễn Văn Minh, Vũ Quang Huy, Phạm Lê Chuẩn) + Khảo sát nhanh (micro-survey) 8 sinh viên trong lớp L3B.
 
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
+#### Interview Snapshot #1 — Trải nghiệm từ Nguyễn Văn Minh
 
 | Trường | Nội dung |
 |---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+| Người được hỏi (vai trò, không ghi tên thật) | Sinh viên năm 2 ngành AI / Kỹ thuật (Nguyễn Văn Minh), đang theo học các môn lab thực hành và đồ án dự án |
+| Câu nói đáng nhớ nhất (nguyên văn) | *"Sợ nhất là hạn nộp bài trên LMS ghi là Chủ nhật, nhưng tối thứ Sáu trợ giảng ghim tin nhắn trong nhóm Zalo bảo nộp sớm vào sáng thứ Bảy để chấm bù; mình mà không lướt Zalo lúc 23h đêm là coi như sáng hôm sau mất trắng 20% điểm."* |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Tuần trước ở môn Lập trình/AI, suýt bị trễ hạn nộp bài lab vì thông báo cập nhật rubric và hạn nộp của trợ giảng bị trôi sau hàng chục tin nhắn thảo luận bài của các bạn trong nhóm chat Zalo. |
+| Hiện đang xử lý bằng cách nào (workaround)? | Chụp ảnh màn hình các đoạn tin nhắn quan trọng gửi vào mục "Cloud của tôi" trên Zalo hoặc tự copy paste vào ứng dụng Google Keep/Notion cá nhân. |
+| Mất bao lâu, bao lần? | Mỗi tối mất 20–25 phút trước giờ ngủ (khoảng 22h–23h) mở lần lượt Canvas LMS, nhóm Zalo lớp và Teams để rà soát; lặp lại đều đặn 4–5 buổi/tuần. |
+| Insight / opportunity rút ra | Nỗi đau lớn nhất không nằm ở việc thiếu lịch của LMS (LMS đã có lịch rõ ràng), mà nằm ở việc thông tin bài tập bị phân mảnh ở **các kênh chat phi chính thức (Zalo/Teams)** với định dạng văn bản tự do, rất dễ trôi mất nếu không đọc kịp. |
 
-Tổng hợp:
+#### Interview Snapshot #2 — Trải nghiệm từ Vũ Quang Huy
+
+| Trường | Nội dung |
+|---|---|
+| Người được hỏi (vai trò, không ghi tên thật) | Sinh viên năm 2 ngành Công nghệ Thông tin (Vũ Quang Huy), theo dõi nhiều kênh học tập và thông báo môn học cùng lúc |
+| Câu nói đáng nhớ nhất (nguyên văn) | *"Thông báo thì giảng viên gửi qua Email trường, bài tập thì nộp trên LMS, còn lịch dời ca học hay dặn dò bài tập lớn thì trợ giảng lại nhắn vào nhóm Zalo; mỗi tối mở đủ 3 cái ứng dụng để check bài là hết cả buổi tối."* |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Đợt vừa rồi giảng viên gửi email thông báo thay đổi đề cương và dời hạn nộp bài tập lớn, nhưng vì hòm thư sinh viên nhận quá nhiều email thông báo tự động từ trường nên email quan trọng bị trôi mất, dẫn đến bị nộp trễ 1 ngày. |
+| Hiện đang xử lý bằng cách nào (workaround)? | Dùng một cuốn sổ tay nhỏ đặt trên bàn học để tự ghi lại danh sách deadline đầu tuần; tuy nhiên giữa tuần giảng viên đổi lịch đột xuất là sổ tay bị sai lệch ngay. |
+| Mất bao lâu, bao lần? | Đầu mỗi tuần mất khoảng 30–40 phút ngồi gom bài; mỗi buổi tối mất thêm 15–20 phút kiểm tra lại các kênh; kỳ trước từng bị trễ 1 bài tập quan trọng. |
+| Insight / opportunity rút ra | Thông tin quan trọng thường bị "chôn vùi" trong biển thông báo; giải pháp cần có tính năng **bóc tách chính xác nội dung chứa bài tập/hạn chót** thay vì bắt sinh viên phải tự đọc và lọc thủ công hàng chục thông báo mỗi ngày. |
+
+#### Interview Snapshot #3 — Trải nghiệm từ Phạm Lê Chuẩn
+
+| Trường | Nội dung |
+|---|---|
+| Người được hỏi (vai trò, không ghi tên thật) | Sinh viên năm 2 ngành Kỹ thuật Hệ thống / IT (Phạm Lê Chuẩn), thường xuyên làm bài tập kỹ thuật và đồ án nhóm |
+| Câu nói đáng nhớ nhất (nguyên văn) | *"Mình muốn có một công cụ nhìn vào là biết tối nay và ngày mai phải nộp bài gì ngay lập tức, chứ không muốn mất thời gian tự tay ngồi gõ từng đầu việc vào ứng dụng nhắc việc."* |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Thứ Sáu tuần trước, ngồi sửa lỗi code cho bài lab đến tận 1h sáng nên quên bẵng mất có một bài kiểm tra trắc nghiệm lý thuyết ngắn phải hoàn thành trước 23h59 trên LMS. |
+| Hiện đang xử lý bằng cách nào (workaround)? | Dùng ứng dụng nhắc việc trên điện thoại (Apple Reminders / Google Tasks) nhưng vì phải tự gõ tay từng bài nên nhiều hôm mệt mỏi quên không nhập, dẫn đến app không nhắc được. |
+| Mất bao lâu, bao lần? | Mất 15–20 phút tự đối chiếu và kiểm tra lịch mỗi ngày; tháng trước bị trễ 2 bài quiz trắc nghiệm do không ai nhắc. |
+| Insight / opportunity rút ra | Sinh viên có tâm lý ngại nhập liệu thủ công; việc tổng hợp bài tập phải diễn ra **tự động hoặc bán tự động (tối thiểu thao tác nhập tay)**, và phải làm nổi bật những việc sắp hết hạn trong vòng 24 giờ tới. |
+
+#### Tổng hợp kết quả kiểm chứng:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Phỏng vấn sâu (The Mom Test) | 3 (Minh, Huy, Chuẩn) | Cả 3/3 sinh viên xác nhận mất 15–25 phút mỗi tối để rà soát bài tập; việc bỏ sót deadline đều do thông báo bị phân mảnh ở nhiều kênh (LMS, Zalo, Teams, Email). | Chuẩn phản bác: Nếu giải pháp yêu cầu cấp mật khẩu hoặc quyền đọc toàn bộ tin nhắn Zalo cá nhân thì sẽ không dùng vì lo ngại an toàn dữ liệu riêng tư.<br>Minh & Huy phản bác: Nếu bot tự động gom quá nhiều thông báo rác (lời cảm ơn, chat chit trong nhóm lớp) thì sẽ làm ngập lụt thông báo và bị tắt chuông. |
+| Micro survey trong lớp | 8 sinh viên lớp L3B | 7/8 sinh viên xác nhận phải theo dõi bài tập từ 3 nguồn trở lên; 6/8 người từng bị sót hoặc suýt trễ deadline ít nhất 1 lần trong tháng trước. | 1/8 sinh viên cho biết lớp họ giảng viên cam kết 100% chỉ dùng Canvas LMS nên chỉ cần xem LMS là đủ; 2/8 người đề nghị phải có chế độ tóm tắt ngắn gọn dưới 5 dòng mỗi tối thay vì gửi danh sách quá dài. |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
+1. **Thu hẹp ranh giới (Boundary) và cách lấy dữ liệu:** Nhóm hủy bỏ ý tưởng "tự động đọc mọi tin nhắn từ Zalo cá nhân" (vướng rào cản bảo mật và quyền riêng tư theo phản bác của Chuẩn ở Giả định #5). Thay vào đó, nhóm chuyển sang mô hình lai: **Tự động đồng bộ bài tập chính thức từ LMS qua chuẩn iCal/RSS + Cho phép sinh viên chủ động forward/dán tin nhắn dặn dò vào bot để AI bóc tách ngày giờ hạn nộp.**
+2. **Cơ chế xác nhận con người (Human-in-the-loop):** Để tránh việc AI trích xuất nhầm hoặc làm phiền sinh viên (theo phản bác của Minh và Huy về ngập lụt thông báo), nhóm bổ sung bước: Hệ thống chỉ gửi **1 bản tin Daily Digest ngắn gọn vào lúc 22h00** tóm tắt các task sắp tới, sinh viên kiểm tra và bấm xác nhận trước khi lưu vào lịch cá nhân.
 
 ### 3.3. Research giải pháp đã có
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| **Canvas LMS Calendar Feed (iCal)** | https://community.canvaslms.com/t5/Student-Guide/How-do-I-subscribe-to-the-Calendar-feed-using-Google-Calendar/ta-p/522 | Bước 1: Lấy bài tập chính thức từ LMS Canvas đồng bộ về Google/Apple Calendar. | Chuẩn iCal toàn cầu, hoàn toàn tự động, độ trễ thấp, ổn định 100%, không tốn chi phí và không cần AI. | Hoàn toàn không lấy được bài tập dặn dò qua Zalo, Teams, slide hay email của giảng viên. | **Không dùng AI cho phần LMS**. Bước này chỉ cần dùng Rule (iCal feed) có sẵn, vừa chính xác tuyệt đối vừa tiết kiệm tài nguyên. |
+| **Motion (usemotion.com)** | https://www.usemotion.com/ | Bước tự động tính toán và xếp lịch làm bài tập vào các khoảng thời gian trống trong ngày. | Thuật toán xếp lịch và phân bổ thời gian theo mức độ ưu tiên và deadline rất thông minh. | Chi phí quá đắt ($19/tháng), không phù hợp sinh viên; người dùng vẫn phải tự gõ task thủ công; không có khả năng đọc hiểu tin nhắn chat tiếng Việt. | Sinh viên không cần một hệ thống xếp lịch đắt tiền, nhu cầu cốt lõi nằm ở bước **thu thập và trích xuất thông tin rải rác từ các kênh chat/email tiếng Việt**. |
+| **Template n8n: AI Message Summarizer & Task Extractor** | https://n8n.io/workflows/1888-summarize-messages-using-openai/ | Bước 2–3: Đọc tin nhắn từ kênh chat (webhook), dùng LLM trích xuất deadline thành cấu trúc JSON. | Kiến trúc Workflow định sẵn rõ ràng, dùng AI bóc tách ngôn ngữ tự nhiên thành dữ liệu có cấu trúc rất hiệu quả. | Zalo hạn chế API bot cá nhân; nếu AI trích xuất sai ngày giờ deadline mà tự động tạo lịch sẽ gây hậu quả bỏ sót bài. | Áp dụng mô hình Workflow của n8n nhưng **bắt buộc phải có bước sinh viên duyệt lại (Human-in-the-loop)** trước khi đưa task vào lịch chính thức. |
 
 ---
 

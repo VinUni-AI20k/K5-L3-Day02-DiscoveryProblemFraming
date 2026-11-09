@@ -4,8 +4,7 @@
 
 - Họ tên: Mai Danh Hiếu
 - MSSV: 2A202603948
-- Email trường: 
-- Tên nhóm: Cold
+- Tên nhóm: NhomCold
 - Link repo nhóm: https://github.com/Ama2352/K5-L3B-DAY02-NhomCold-DiscoveryProblemFraming
 
 ---
@@ -35,6 +34,8 @@ Sau khi tự nêu 5 khó khăn về teamwork, tôi dùng AI hỗ trợ diễn đ
 
 ## 3. Top 3 Problem Cards + quy trình nháp (CP2)
 
+“Giả thuyết về AI” nêu đầu vào, cách hỗ trợ, đầu ra và bước con người kiểm tra. “Cảm nhận nhanh” là mức can thiệp sơ bộ cho từng card ở CP2; quyết định triển khai được đánh giá riêng sau kiểm chứng.
+
 ### Bảng chọn top 3
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
@@ -57,10 +58,10 @@ Sau khi tự nêu 5 khó khăn về teamwork, tôi dùng AI hỗ trợ diễn đ
 | Impact (nếu không giải thì sao) | Mất khoảng 20 phút và 2–3 lượt hỏi lại để có thông tin tiến độ; nếu trạng thái chưa rõ, nhóm có nguy cơ bỏ sót trở ngại hoặc bố trí sai việc tiếp theo. |
 | Success metric (baseline → target) | Thời gian mỗi lần tổng hợp từ khoảng 20 xuống tối đa 10 phút; số lượt hỏi lại từ 2–3 xuống tối đa 1 lượt. Ghi giờ bắt đầu/kết thúc và đếm lượt hỏi trong 3 lần cập nhật trước/sau thay đổi; đo riêng thao tác và chờ. Số trạng thái phải sửa sau xác nhận không tăng. |
 | Phương án không dùng AI | Thống nhất mẫu cập nhật gồm việc, người phụ trách, trạng thái, hạn và trở ngại; mỗi người cập nhật trước mốc chung. |
-| Giả thuyết về AI (nếu có) | Nếu dữ liệu đã đủ nhưng khó tổng hợp, AI có thể soạn bản nháp kèm nguồn. Con người xác nhận; không suy diễn việc chưa cập nhật là đã hoàn thành. |
-| Cảm nhận nhanh | No AI trước; cân nhắc Workflow nếu dữ liệu đầy đủ nhưng tổng hợp vẫn tốn công. Chưa chốt. |
+| Giả thuyết về AI (nếu có) | Sử dụng mô hình ngôn ngữ để tổng hợp cập nhật và tin nhắn được cung cấp thành bản nháp tiến độ theo từng đầu việc: người phụ trách, trạng thái, trở ngại và mốc tiếp theo, kèm nguồn. Thông tin thiếu hoặc mâu thuẫn được tách thành câu hỏi làm rõ; người điều phối kiểm tra trước khi gửi, không suy diễn im lặng là đã hoàn thành. |
+| Cảm nhận nhanh | Workflow — nhận cập nhật → AI tổng hợp và chỉ ra chỗ thiếu → người điều phối kiểm tra → gửi báo cáo. Mẫu cập nhật chung là phương án No AI để so sánh. |
 
-Quy trình hiện tại — cần bổ sung thời gian từng bước:
+Quy trình hiện tại — số liệu hồi tưởng tổng và chỉ số thao tác:
 
 ```text
 [1 Xem danh sách việc] → [2 Đọc cập nhật]
@@ -83,10 +84,10 @@ Thời gian riêng từng bước và thời gian chờ: chưa đo tách biệt.
 | Impact (nếu không giải thì sao) | Chênh lệch khoảng 4 giờ làm giữa hai thành viên và phát sinh chuyển giao 2 đầu việc. Chênh lệch giờ công là tín hiệu cần xem xét cùng độ khó, kỹ năng và thời gian rảnh, chưa đủ để kết luận ai thiếu trách nhiệm. |
 | Success metric (baseline → target) | Số đầu việc phải chuyển người phụ trách vì quá tải từ 2 xuống tối đa 1 trong một đợt có quy mô tương đương. Ghi lý do mỗi lần chuyển, giờ công dự kiến/thực tế và khả năng nhận việc của từng người; không lấy số task bằng nhau làm chuẩn công bằng. |
 | Phương án không dùng AI | Chia việc theo đầu ra rõ ràng, cùng ước lượng công sức, công khai khả năng nhận việc và rà soát tải định kỳ. |
-| Giả thuyết về AI (nếu có) | AI có thể đề xuất chia nhỏ mô tả dài và phát hiện phạm vi chồng chéo. Thành viên xác nhận công sức và nhận việc; AI không tự giao việc hay chấm trách nhiệm. |
-| Cảm nhận nhanh | No AI; có thể dùng Rule cảnh báo giờ dự kiến vượt khả năng nhận việc nếu đầu vào đáng tin cậy. |
+| Giả thuyết về AI (nếu có) | AI có thể tách mô tả công việc dài thành các đầu việc và chỉ ra phạm vi có thể chồng chéo để thành viên rà soát. Công sức và khả năng nhận việc do thành viên cung cấp; tổng giờ dự kiến và cảnh báo vượt khả năng được tính bằng quy tắc. Người điều phối cùng thành viên quyết định phân công, AI không tự giao việc hoặc đánh giá trách nhiệm. |
+| Cảm nhận nhanh | Rule — cộng giờ dự kiến theo người và cảnh báo khi vượt khả năng đã khai báo; không dùng số task bằng nhau làm chuẩn công bằng. AI chỉ là hỗ trợ tùy chọn khi mô tả việc khó tách. |
 
-Quy trình hiện tại — cần bổ sung thời gian từng bước:
+Quy trình hiện tại — số liệu hồi tưởng tổng và chỉ số thao tác:
 
 ```text
 [1 Liệt kê việc] → [2 Ước lượng công sức]
@@ -111,10 +112,10 @@ Giờ làm nhiệm vụ không phải thời gian dành cho phân công.
 | Impact (nếu không giải thì sao) | Việc làm slide phải chờ nội dung thêm khoảng 1 ngày và phát sinh 2 lượt làm rõ. Điều này thu hẹp thời gian hoàn thiện slide; không đồng nghĩa mất cả ngày lao động vì người nhận có thể làm việc khác. |
 | Success metric (baseline → target) | Độ trễ bàn giao nội dung lần đầu từ khoảng 1 ngày xuống 0 ngày so với mốc đã hẹn; số lượt trao đổi bổ sung từ 2 xuống tối đa 1. Đối chiếu mốc hẹn với thời điểm gửi thực tế và đếm lượt bổ sung trong 3 lần bàn giao tiếp theo. Ghi thêm thời điểm xác nhận đủ đầu vào để tránh giao đúng hạn nhưng thiếu nội dung. |
 | Phương án không dùng AI | Ghi quan hệ phụ thuộc, người giao/nhận, hạn nội bộ, tiêu chí đầu ra đủ dùng và cách báo sớm khi không kịp. |
-| Giả thuyết về AI (nếu có) | Nếu phụ thuộc nằm trong nhiều mô tả dài, AI có thể đề xuất danh sách để người thực hiện kiểm tra. Nhắc hạn đơn giản có thể dùng Rule. |
-| Cảm nhận nhanh | No AI để thống nhất bàn giao; cân nhắc Rule cho nhắc mốc. Chưa có căn cứ cần Agent. |
+| Giả thuyết về AI (nếu có) | AI có thể đọc mô tả các nhiệm vụ để đề xuất quan hệ phụ thuộc và checklist đầu vào bàn giao, kèm đoạn nguồn. Người giao và người nhận xác nhận danh sách; hệ thống dùng quy tắc nhắc trước mốc hoặc cảnh báo thiếu trường bắt buộc. AI không tự xác nhận đầu ra đủ dùng hoặc cam kết lại hạn bàn giao. |
+| Cảm nhận nhanh | Rule — theo dõi đầu việc phụ thuộc, hạn nội bộ và checklist bàn giao; nhắc theo mốc cố định, người nhận kiểm chất lượng. Không cần AI tự lập kế hoạch để xử lý việc chờ bàn giao. |
 
-Quy trình hiện tại — cần bổ sung thời gian từng bước:
+Quy trình hiện tại — số liệu hồi tưởng tổng và chỉ số thao tác:
 
 ```text
 [1 Xác định đầu vào] → [2 Hỏi tình trạng/hạn giao]
@@ -123,7 +124,7 @@ Quy trình hiện tại — cần bổ sung thời gian từng bước:
 → [6 Bắt đầu việc tiếp theo]
 
 Nếu chưa đủ: bước 5 → bước 3 → bước 4.
-Thời gian thao tác từng bước và thời gian bổ sung: chưa đo.
+Một ngày là độ trễ bàn giao, không phải giờ thao tác; đo riêng thời gian lập yêu cầu, gửi, kiểm tra và trao đổi bổ sung ở lần bàn giao tiếp theo.
 Một ngày là độ trễ bàn giao lần đầu, không phải tổng giờ công bị mất.
 ```
 
@@ -153,20 +154,22 @@ Tôi đã xác nhận lựa chọn top 3, quy trình và số liệu từ trải
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
+| Pitch Problem Card | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Phản biện bài của bạn khác | Không có câu hỏi trực tiếp được ghi lại. | Không có bản ghi trong tài liệu hiện tại |
 | Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Gom cluster / cây OST | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Chọn candidate problem | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Kiểm chứng / research | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Quy trình nhóm | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Problem Statement | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Mức can thiệp AI | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Quyết định | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
 
 ---
 
 ## 5. Dùng AI
+
+Các dòng dưới ghi phạm vi sử dụng đã có trong bản cá nhân, không phải trạng thái mới nhất của bài nhóm. Bản chung hiện có CP3–CP6 và kết luận Not Yet; không quy việc chỉnh bản chung thành trải nghiệm hoặc đóng góp của riêng tác giả.
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
@@ -182,6 +185,8 @@ Tôi đã xác nhận lựa chọn top 3, quy trình và số liệu từ trải
 ---
 
 ## 6. Reflection (CP7)
+
+**Trạng thái bằng chứng:** phần trả lời cá nhân không có nội dung trải nghiệm trong bản nguồn. Giữ câu hỏi để tác giả tự trả lời; không xem mục này là đã đáp ứng C4/C5.
 
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 

@@ -1,12 +1,10 @@
 # Báo cáo cá nhân — 2A202603945_VuLuongDuy
 
-> ⚠️ **Trước khi nộp:** mọi chỗ `[ĐO THẬT]` / `___` là số ước tính hoặc ô trống — thay bằng số bạn tự quan sát, hỏi hoặc đếm được (ảnh chụp inbox đã che tên, lịch sử đơn). Mục 4–6 phải tự viết bằng trải nghiệm thật (RULES §2, RUBRIC C4). Xóa khối ghi chú này khi xong.
 
 ## 1. Thông tin học viên
 
 - Họ tên: Vũ Lương Duy
 - MSSV: 2A202603945
-- Email trường (không bắt buộc):
 - Tên nhóm: NhomCold
 - Link repo nhóm: https://github.com/Ama2352/K5-L3B-DAY02-NhomCold-DiscoveryProblemFraming
 
@@ -25,7 +23,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | 3 | Pain từ người khác | Khi tôi nhắn hỏi mua hàng qua Facebook, tôi muốn được trả lời trong vài phút, để quyết định mua luôn thay vì sang shop khác | Người mua (chính tôi) | Lần gần nhất tôi chờ 3 giờ mới được trả lời và đã mua chỗ khác |
 | 4 | Cần đọc, tổng hợp nhiều thông tin | Khi bán cùng lúc trên Facebook, Zalo và Shopee, chủ shop muốn biết tổng số đơn và tồn kho thật, để không bán quá số hàng đang có | Chủ shop | 20 lần/tháng phải xin lỗi khách vì hết hàng sau khi đã chốt |
 | 5 | Pain từ người khác | Khi giao hàng thất bại vì sai SĐT/địa chỉ, chủ shop muốn biết sớm trước khi gửi, để không mất phí ship 2 chiều | Chủ shop, đơn vị vận chuyển | 8 đơn hoàn/tháng do sai thông tin ; mỗi đơn hoàn mất phí ship chiều về |
-| 6 | Lặp lại | Khi có sản phẩm mới, chủ shop muốn đăng lên nhiều kênh với mô tả phù hợp từng nơi, để không mất cả buổi tối đăng bài | Chủ shop | ~18 phút/sản phẩm × 5 kênh |
+| 6 | Lặp lại | Khi có sản phẩm mới, chủ shop muốn đăng lên nhiều kênh với mô tả phù hợp từng nơi, để không mất cả buổi tối đăng bài | Chủ shop | ~18 phút/sản phẩm cho quy trình 3 kênh ở card #3 (ước lượng) |
 | 7 | Tốn thời gian | Khi cuối ngày đối soát, chủ shop muốn khớp tiền COD về với danh sách đơn, để biết đơn nào chưa thu tiền | Chủ shop | ~30 phút/ngày |
 | 8 | Pain từ người khác | Khi nhận đánh giá 1–2 sao trên sàn, chủ shop muốn phản hồi sớm, để không ảnh hưởng điểm shop | Chủ shop, khách | 10 đánh giá xấu/tháng |
 
@@ -34,6 +32,8 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 ---
 
 ## 3. Top 3 Problem Cards + quy trình nháp (CP2)
+
+“Giả thuyết về AI” nêu đầu vào, cách hỗ trợ, đầu ra và bước con người kiểm tra. “Cảm nhận nhanh” là mức can thiệp sơ bộ cho từng card ở CP2; quyết định triển khai được đánh giá riêng sau kiểm chứng.
 
 ### Bảng chọn top 3
 
@@ -48,20 +48,20 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Trường | Nội dung |
 |---|---|
 | Job Story | Khi khách inbox đồng ý mua, chủ shop muốn có ngay thông tin đơn đầy đủ và đúng trong file quản lý, để tạo vận đơn mà không phải đọc lại cả cuộc chat |
-| Actor | Chủ shop nhỏ (1–3 người), bán thời trang/mỹ phẩm qua Facebook Page và Zalo, ~20–50 tin nhắn/ngày |
+| Actor | Chủ shop nhỏ (1–3 người), bán thời trang/mỹ phẩm qua Facebook Page và Zalo, quy mô tin nhắn cần đo; không suy từ giả thuyết 200 đơn/ngày |
 | Thời điểm / bối cảnh | Buổi tối (giờ khách nhắn nhiều nhất) và sau mỗi buổi livestream |
 | Quy trình hiện tại (3–7 bước) | 1. Mở inbox, lọc tin chưa đọc · 2. Trả lời câu hỏi giá/size/ship · 3. Kiểm tồn kho trong Sheet · 4. Xin tên, SĐT, địa chỉ · 5. Chép thông tin đơn sang Sheet/phần mềm vận chuyển · 6. Tạo vận đơn, gửi mã cho khách |
 | Bottleneck (bước nào, mất bao nhiêu phút) | Bước 5: đọc lại đoạn chat, chép từng trường sang Sheet, ~1 phút/đơn, dễ chép sai SĐT/địa chỉ |
 | Impact (nếu không giải thì sao) | ~200 phút/ngày; 8 đơn hoàn/tháng do sai thông tin (mất phí ship 2 chiều) |
 | Success metric (baseline → target) | Thời gian từ "khách đồng ý mua" đến "đơn có trong Sheet": ~1 phút → ≤ 20 giây/đơn; đơn hoàn do sai thông tin: 8 → 0 |
 | Phương án không dùng AI | Mẫu tin "xác nhận đơn" khách tự điền theo khuôn (Tên / SĐT / Địa chỉ / Sản phẩm / Size), hoặc gửi link Google Form |
-| Giả thuyết về AI (nếu có) | AI đọc đoạn chat tự do, trích các trường đơn hàng thành 1 dòng; chủ shop duyệt rồi mới lưu |
-| Cảm nhận nhanh | Rule hoặc Workflow |
+| Giả thuyết về AI (nếu có) | Sử dụng mô hình ngôn ngữ để trích tên người nhận, số điện thoại, địa chỉ, sản phẩm, biến thể và số lượng từ đoạn chat chốt đơn thành bản nháp có cấu trúc, kèm đoạn nguồn. Trường thiếu hoặc mâu thuẫn được đánh dấu để chủ shop hỏi lại; chủ shop kiểm tra trước khi lưu. AI không tự điền thông tin giao hàng, chốt giá hoặc tạo vận đơn. |
+| Cảm nhận nhanh | Workflow — lấy đoạn chat → AI trích thông tin → kiểm định dạng bằng Rule → chủ shop duyệt → lưu đơn; luồng cố định, không cần Agent tự chốt đơn. |
 
 Quy trình nháp hiện tại:
 
 ```text
-HIỆN TẠI — 1 đơn, ~6 phút [ĐO THẬT]
+HIỆN TẠI — 1 đơn, ~6 phút (ước lượng thiết kế)
 
 [1 Mở inbox: 0.5'] → [2 Trả lời giá/size/ship: 2'] → [3 Kiểm kho: 0.5']
 → [4 Xin thông tin giao hàng: 1.5'] → [5 Chép đơn sang Sheet: 1'] ← BOTTLENECK (dễ sai)
@@ -80,8 +80,8 @@ HIỆN TẠI — 1 đơn, ~6 phút [ĐO THẬT]
 | Impact (nếu không giải thì sao) | 20 lần/tháng hủy đơn vì hết hàng |
 | Success metric (baseline → target) | Số đơn hủy vì hết hàng: 20 → 0/tháng |
 | Phương án không dùng AI | Phần mềm quản lý bán hàng đa kênh đồng bộ kho |
-| Giả thuyết về AI (nếu có) | Không cần — bài toán đúng/sai rõ |
-| Cảm nhận nhanh | Rule |
+| Giả thuyết về AI (nếu có) | Không cần AI cho việc cộng, trừ và đồng bộ tồn kho. Dùng mã SKU thống nhất và quy tắc cập nhật khi đơn được xác nhận, hủy hoặc hoàn; giao dịch thiếu mã hoặc gây tồn âm phải chuyển chủ shop kiểm tra. AI không được tự ước đoán lượng hàng còn lại. |
+| Cảm nhận nhanh | Rule — cập nhật tồn theo sự kiện đơn hàng và đối chiếu SKU; số lượng phải được tính từ giao dịch, không tạo bằng mô hình ngôn ngữ. |
 
 Quy trình nháp hiện tại:
 
@@ -99,11 +99,11 @@ Quy trình nháp hiện tại:
 | Thời điểm / bối cảnh | Mỗi lần nhập hàng mới (~1–2 lần/tuần) |
 | Quy trình hiện tại (3–7 bước) | 1. Chụp ảnh · 2. Sửa ảnh · 3. Viết mô tả · 4. Đăng Facebook · 5. Đăng Shopee (điền thuộc tính) · 6. Đăng Zalo |
 | Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3: viết mô tả, ~5 phút/sản phẩm |
-| Impact (nếu không giải thì sao) | 270 phút/tuần |
+| Impact (nếu không giải thì sao) | 18 phút/sản phẩm theo ước lượng; tổng tuần = 18 × số sản phẩm thực tế, không dùng 270 phút khi thiếu số sản phẩm |
 | Success metric (baseline → target) | ~18 → 8 phút/sản phẩm |
 | Phương án không dùng AI | Mẫu mô tả theo loại sản phẩm |
-| Giả thuyết về AI (nếu có) | AI soạn nháp mô tả từ ảnh + thông số, chủ shop sửa |
-| Cảm nhận nhanh | Workflow |
+| Giả thuyết về AI (nếu có) | Sử dụng mô hình ngôn ngữ để soạn bản nháp mô tả riêng cho từng kênh từ ảnh, thông số sản phẩm và mẫu nội dung của shop. Chủ shop kiểm tra tên, chất liệu, kích thước, giá và chính sách trước khi đăng; AI không tự suy ra đặc tính không có trong dữ liệu hoặc tự công bố bài. |
+| Cảm nhận nhanh | Workflow — nhận ảnh và thông số → AI viết nháp theo mẫu từng kênh → chủ shop kiểm tra → đăng. Các kênh và bước xử lý đã xác định, không cần Agent. |
 
 Quy trình nháp hiện tại:
 
@@ -123,27 +123,26 @@ Quy trình nháp hiện tại:
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
 | Bước 2 (trả lời câu hỏi) tốn nhiều phút hơn bước 5, sao lại chọn bước 5 là bottleneck? | Đồng ý một phần | Ghi rõ: bước 5 không dài nhất nhưng là bước **gây lỗi tốn tiền** (đơn hoàn); bước 2 đưa vào giả định cần kiểm chứng |
-| Chưa có người bán thật nào xác nhận số liệu | Đồng ý | Đánh dấu mọi số là , lên kế hoạch phỏng vấn 2–3 chủ shop |
+| Chưa có người bán thật nào xác nhận số liệu | Đồng ý | Phân loại các số của chủ shop là giả thuyết cần đối chiếu, không coi là kết quả phỏng vấn; dùng 2–3 trường hợp thật để kiểm |
 | Gợi ý chatbot tự chốt đơn và tự tạo vận đơn | Không đồng ý | Tạo vận đơn sai = mất tiền thật; giữ bước chủ shop duyệt trước khi lưu |
 
 ---
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-> Tự điền bằng việc thật bạn đã làm trong buổi lab.
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
+| Pitch Problem Card | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Phản biện bài của bạn khác | Không có câu hỏi trực tiếp được ghi lại. | Không có bản ghi trong tài liệu hiện tại |
 | Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Gom cluster / cây OST | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Chọn candidate problem | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Kiểm chứng / research | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Quy trình nhóm | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Problem Statement | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Mức can thiệp AI | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| Quyết định | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
 
 ---
 
@@ -154,13 +153,15 @@ Quy trình nháp hiện tại:
 | CP1 Scan | Gợi ý thêm problem sau khi tự scan | Gợi ý đối soát COD, đánh giá xấu | Đưa ý "chatbot bán hàng 24/7" — solution trá hình | Bỏ ý đó |
 | CP2 Problem Card | Đóng vai "PM hoài nghi" phản biện card #1 | Chỉ ra bước 2 tốn nhiều phút hơn bước 5 | Đề xuất chatbot tự tạo vận đơn | Giữ bước chủ shop duyệt |
 | CP4 Research | Gợi ý công cụ có sẵn | Gợi ý Pancake, trả lời tự động của Meta, Shopee | Đưa link trang trợ giúp Meta bị lỗi 404 | Tự mở từng link, chỉ giữ link đã kiểm |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP5 Quy trình | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| CP5–6 Problem Statement | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
+| CP6 Mức can thiệp / quyết định | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại | Không có bản ghi trong tài liệu hiện tại |
 
 ---
 
 ## 6. Reflection (CP7)
+
+**Trạng thái bằng chứng:** phần trả lời cá nhân không có nội dung trải nghiệm trong bản nguồn. Giữ câu hỏi để tác giả tự trả lời; không xem mục này là đã đáp ứng C4/C5.
 
 > Tự viết, tối thiểu 200 từ cho 6.1–6.6. Không dùng AI viết thay (RUBRIC C4 = 0 nếu vi phạm).
 

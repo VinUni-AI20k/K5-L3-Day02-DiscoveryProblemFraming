@@ -30,6 +30,12 @@
 | 10 | | | | | |
 | 11 | | | | | |
 | 12 | | | | | |
+| 13 | | | | | |
+| 14 | | | | | |
+| 15 | | | | | |
+| 16 | | | | | |
+| 17 | | | | | |
+| 18 | | | | | |
 
 ### 2.2. Cluster
 
@@ -124,41 +130,114 @@ Tổng hợp:
 
 ## 4. Quy trình trước/sau (CP5)
 
+Phần này mô tả cả gom và soát; thời gian tương lai là kỳ vọng thiết kế. Lựa chọn Rule cho riêng bước so số và giả thuyết AI cho ghép file sai mẫu cần được đánh giá theo phạm vi riêng, trước khi nhóm chốt mức can thiệp.
+
+Phạm vi: từ lúc nhận bảng chào giá của 4 nhà thầu đến lúc trình lãnh đạo, gồm 2 phần **gom** (Card #2) và **soát** (Card #1) trong báo cáo cá nhân của Nguyễn Văn Vinh. Vẽ cả phần gom vì bước soát chỉ làm được khi bảng của 4 nhà thầu đã được gom đúng theo mã dòng. Số liệu lấy từ gói thầu gần nhất; thời gian ghi "(ước)" là ước lượng từng bước, tổng gom và tổng soát là đo thật.
+
 ### 4.1. Quy trình hiện tại
 
-Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
+**HIỆN TẠI** — 8 bước/vòng, 8/8 bước thủ công, khoảng 11–13 giờ/vòng × 2 vòng/gói. Ô viền đỏ là bottleneck.
 
-```text
-
+```mermaid
+flowchart LR
+  S1["1. Nhận 4 file<br/>chào giá<br/>5'"] --> S2["2. Kiểm<br/>đúng/sai mẫu<br/>15' (ước)"]
+  S2 --> S3["3. Copy 3 nhà thầu<br/>đúng mẫu × 7 sheet<br/>3–4 giờ"]
+  S3 --> S4["4. Ghép 1 nhà thầu<br/>sai mẫu<br/>2,5 giờ<br/>⚠ bottleneck phụ"]
+  S4 --> S5["5. Kiểm tổng tiền<br/>khớp file gốc<br/>20' (ước)"]
+  S5 --> S6["6. Dò từng dòng:<br/>so khối lượng + đơn giá<br/>~16.000 dòng<br/>~4 giờ (ước)<br/>⚠ BOTTLENECK CHÍNH"]
+  S6 --> S7["7. Cộng phát sinh<br/>+ ghi chú dòng<br/>bất thường<br/>1 giờ (ước)"]
+  S7 --> S8["8. Trình<br/>lãnh đạo<br/>10' (ước)"]
+  S8 -. "Chưa chốt: mời chào giá lần 2, làm lại từ bước 1" .-> S1
+  classDef bn fill:#ffe0e0,stroke:#d00,stroke-width:2px,color:#000
+  classDef bn2 fill:#fff0e0,stroke:#e08000,stroke-width:2px,color:#000
+  class S6 bn
+  class S4 bn2
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Chuyên viên KTKT (Nam) | Email / file nộp của 4 nhà thầu | 4 file Excel chào giá đã lưu | 5' / vòng | 2 vòng/gói ở gói gần nhất |
+| 2 | Chuyên viên KTKT | 4 file chào giá, mẫu 7 sheet trong HSYC | Danh sách file đúng mẫu / sai mẫu (gói gần nhất: 3 đúng, 1 sai) | 15' (ước) / vòng | |
+| 3 | Chuyên viên KTKT | 3 file đúng mẫu | File tổng hợp 7 sheet, 63 cột/sheet | 3–4 giờ / vòng (đo) | Copy tay từng sheet |
+| 4 | Chuyên viên KTKT | 1 file sai mẫu (1 sheet 4.870 dòng) | Dòng của nhà thầu sai mẫu được xếp vào đúng hạng mục, đúng mã dòng | 2,5 giờ / vòng (đo) | Bottleneck phụ: chậm khoảng 2 lần so với một nhà thầu đúng mẫu; chỉ xảy ra khi có nhà thầu sai mẫu |
+| 5 | Chuyên viên KTKT | File tổng hợp + 4 file gốc | Xác nhận tổng tiền từng nhà thầu khớp file gốc | 20' (ước) / vòng | Handoff sang phần soát |
+| 6 | Chuyên viên KTKT | File tổng hợp (~4.100 dòng × 4 nhà thầu) | Các dòng có khối lượng khác mời thầu hoặc đơn giá chênh lớn được đánh dấu | ~4 giờ (ước) / vòng | **Bottleneck chính**; dò bằng mắt |
+| 7 | Chuyên viên KTKT | Các dòng đã đánh dấu | Tổng phát sinh từng nhà thầu (0 đến ~3,9 tỷ) + ghi chú lý do | 1 giờ (ước) / vòng | |
+| 8 | Chuyên viên KTKT → Lãnh đạo | Bảng tổng hợp có ghi chú | Lãnh đạo chọn nhà thầu, hỏi lại, hoặc mời chào giá lần 2 | 10' (ước) / vòng | Gói gần nhất: bị hỏi lại / trả lại ~4 lần |
 
-**Bottleneck chính:**
+Tổng: gom (bước 1–5) 6–7 giờ + soát (bước 6–8) 5–6 giờ = **khoảng 11–13 giờ/vòng, 22–26 giờ/gói (2 vòng)**.
+
+**Bottleneck chính:** Bước 6, dò khoảng 16.000 dòng (4.100 dòng × 4 nhà thầu) bằng mắt để tìm dòng có khối lượng khác mời thầu hoặc đơn giá chênh lớn, mất khoảng 4 giờ/vòng. Đây là bước vừa tốn thời gian nhất vừa có rủi ro cao nhất: sót một dòng có thể làm lệch so sánh giá tới hàng tỷ (gói gần nhất có 1 nhà thầu mà giá trị tính theo khối lượng chào thấp hơn giá trị tính theo khối lượng mời thầu khoảng 3 tỷ). Bước 4 là bottleneck phụ, phụ thuộc vào việc có nhà thầu sai mẫu hay không (tỷ lệ này cần kiểm ở CP4).
 
 ### 4.2. Quy trình tương lai
 
-Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
+**TƯƠNG LAI (kỳ vọng, chưa pilot)** — 9 bước/vòng, 4/9 bước thủ công, khoảng 2–2,5 giờ/vòng. Xanh dương = Rule, vàng = AI, xanh lá = con người, xám = phương án quay về.
 
-```text
-
+```mermaid
+flowchart LR
+  F1["1. Nhận 4 file<br/>👤 Người<br/>5'"] --> F2["2. Kiểm mẫu tự động<br/>⚙ Rule<br/>2'"]
+  F2 -->|"file đúng mẫu"| F3["3. Gom theo mã dòng<br/>⚙ Rule<br/>5'"]
+  F2 -->|"file sai mẫu"| F4["4. Gợi ý ghép dòng<br/>vào mã dòng mời thầu<br/>🤖 AI<br/>5'"]
+  F4 --> F5["5. Duyệt dòng AI ghép<br/>👤 Người (HITL)<br/>40' (ước)"]
+  F3 --> F6["6. Kiểm đủ 4 nhà thầu,<br/>mapping và tổng tiền<br/>theo hạng mục<br/>khớp file gốc<br/>⚙ Rule<br/>2'"]
+  F5 --> F6
+  F6 -->|"khớp 100%"| F7["7. Tính chênh khối lượng,<br/>% chênh đơn giá, tô màu,<br/>cộng phát sinh<br/>⚙ Rule<br/>2'"]
+  F6 -->|"không khớp"| FB["Phương án quay về:<br/>ghép tay file đó<br/>hoặc yêu cầu nhà thầu<br/>nộp lại đúng mẫu"]
+  FB --> F6
+  F7 --> F8["8. Xem dòng tô màu,<br/>ghi chú lý do<br/>👤 Người (HITL)<br/>60' (ước)"]
+  F8 --> F9["9. Trình lãnh đạo<br/>👤 Người<br/>10'"]
+  classDef rule fill:#dde8ff,stroke:#3060c0,color:#000
+  classDef ai fill:#fff2c0,stroke:#c09000,color:#000
+  classDef human fill:#dff5df,stroke:#2e8b2e,color:#000
+  classDef fb fill:#eeeeee,stroke:#777,stroke-dasharray:4 3,color:#000
+  class F2,F3,F6,F7 rule
+  class F4 ai
+  class F1,F5,F8,F9 human
+  class FB fb
 ```
+
+| Bước | Ai / cái gì làm | Việc | Thời gian (ước) |
+|---:|---|---|---|
+| 1 | Con người | Nhận 4 file chào giá | 5' |
+| 2 | Rule (macro) | Kiểm tên sheet, cột, mã dòng so với mẫu HSYC; tách file đúng mẫu / sai mẫu | 2' |
+| 3 | Rule (Power Query / macro) | Gom các file đúng mẫu vào file tổng hợp theo mã dòng | 5' |
+| 4 | AI | Chỉ với file sai mẫu: đọc từng dòng, gợi ý dòng đó thuộc mã dòng nào trong BOQ mời thầu (kể cả khi mô tả khác chữ), kèm mức tin cậy; dòng không tìm được thì đánh dấu "chưa ghép" | 5' |
+| 5 | Con người (HITL) | Duyệt dòng AI ghép, ưu tiên dòng tin cậy thấp và dòng "chưa ghép"; tự ghép các dòng còn lại | 40' |
+| 6 | Rule | So tổng tiền từng hạng mục của từng nhà thầu với file gốc; chỉ sang bước 7 khi khớp 100% | 2' |
+| 7 | Rule (công thức + conditional formatting) | Tính chênh khối lượng = khối lượng chào − khối lượng mời thầu; % chênh đơn giá so với trung vị 4 nhà thầu; tô màu dòng chênh khối lượng khác 0 hoặc chênh đơn giá vượt ngưỡng; cộng phát sinh | 2' |
+| 8 | Con người (HITL) | Xem các dòng tô màu, quyết định dòng nào thật sự bất thường, ghi lý do | 60' |
+| 9 | Con người | Trình lãnh đạo | 10' |
+
+Gom (bước 1–6) khoảng 1 giờ; soát (bước 7–9) khoảng 1,2 giờ.
+
+**Boundary — AI không được:**
+- Sửa khối lượng, đơn giá hay bất kỳ con số nào của nhà thầu; AI chỉ gợi ý dòng đó thuộc mã dòng nào.
+- Tự xóa hoặc bỏ qua dòng mà nó không ghép được (phải đánh dấu "chưa ghép" để người xử lý).
+- Kết luận nhà thầu nào đạt, rẻ nhất hay bị loại; quyết định này thuộc chuyên viên và lãnh đạo.
+- Tự gửi file cho lãnh đạo hoặc nhà thầu.
+- Nhận dữ liệu chào giá qua công cụ AI chưa được tổ chức cho phép (dữ liệu chào giá là thông tin mật của gói thầu).
+
+**Khi nào con người phải kiểm tra (HITL):**
+- Bước 5: mọi mapping do AI gợi ý phải được người duyệt đối chiếu mã, mô tả, đơn vị và dòng nguồn trước khi dùng; ưu tiên dòng tin cậy thấp và xử lý riêng các dòng chưa ghép.
+- Bước 6: nếu tổng tiền bất kỳ hạng mục nào không khớp file gốc thì dừng, không sang bước 7.
+- Bước 8: mọi dòng tô màu phải được người xem và ghi lý do trước khi trình.
+
+Kiểm tra chéo: tổng tiền khớp không chứng minh mọi dòng được ghép đúng. Một dòng ghép sai có thể không tạo chênh khối lượng nếu hai dòng cùng khối lượng hoặc cùng đơn vị. Vì vậy chuyên viên kiểm mã, mô tả, đơn vị và dòng nguồn của mọi mapping AI trước khi sử dụng, không chỉ các gợi ý có mức tin cậy thấp; dòng mơ hồ được chuyển xử lý thủ công.
+
+**Phương án quay về:**
+- AI ghép sai, tổng tiền không khớp, hoặc AI không dùng được → chuyên viên ghép tay file sai mẫu như hiện tại (khoảng 2,5 giờ), hoặc yêu cầu nhà thầu nộp lại đúng mẫu.
+- Macro / Power Query lỗi (ví dụ nhà thầu đổi mã dòng) → quay về copy tay (bước 3 hiện tại) cho file đó.
+- Ngưỡng tô màu báo quá nhiều dòng → chỉnh ngưỡng cùng lãnh đạo; trong lúc chờ, dò tay các dòng có giá trị lớn.
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 8 | 9 | Thêm bước kiểm mẫu tự động và tách riêng bước người duyệt dòng AI ghép |
+| Tổng thời gian | 11–13 giờ/vòng (22–26 giờ/gói) | ~2–2,5 giờ/vòng (~4–5 giờ/gói) | "Trước" đo trên gói gần nhất; "Sau" là ước lượng, cần đo khi pilot |
+| Số bước thủ công | 8/8 | 4/9 | Bước thủ công còn lại: nhận file, duyệt dòng AI ghép, xem dòng tô màu, trình lãnh đạo |
+| Bottleneck chính | Dò ~16.000 dòng bằng mắt (~4 giờ/vòng) | Xem và ghi lý do cho các dòng tô màu (~60'/vòng) | Thời gian bước 8 phụ thuộc số dòng bị tô màu, tức là phụ thuộc ngưỡng |
+| Rủi ro mới phát sinh | — | AI ghép sai dòng nhưng tổng tiền vẫn khớp; ngưỡng tô màu đặt sai gây báo nhầm nhiều hoặc bỏ sót; nhà thầu đổi mã dòng làm gom tự động sai; dữ liệu mật đi qua công cụ AI; chuyên viên tin máy, soát lơ là hơn | Xử lý bằng bước 6 (khớp tổng tiền), bước 7 (tô màu dòng chênh), HITL ở bước 5 và 8, và boundary về công cụ AI |
 
 ---
 
@@ -199,7 +278,7 @@ Theo dữ liệu từ Problem Card cá nhân, quá trình kiểm tra mất kho�
 | Ghép file sai mẫu | Cao | Cao | Workflow kết hợp AI hỗ trợ đối chiếu ngữ nghĩa |
 | Đánh giá hồ sơ năng lực | Cao | Cao | AI trích xuất bằng chứng, chuyên viên quyết định |
 
-**Vị trí của bài toán chính:** Độ mơ hồ thấp, độ phức tạp xử lý dữ liệu cao
+**Vị trí của bài toán chính:** Độ mơ hồ thấp khi bảng đã ghép đúng mã/đơn vị và quy tắc rõ; nhiều nguồn/bước phụ thuộc nhau tạo độ phức tạp tích hợp. Số dòng lớn riêng nó không chứng minh cần Agent.
 
 Khó khăn chính không nằm ở việc cần AI suy luận mà nằm ở số lượng dòng phải kiểm tra lớn, thao tác thủ công lặp lại và nguy cơ bỏ sót các chênh lệch
 
@@ -207,7 +286,7 @@ Khó khăn chính không nằm ở việc cần AI suy luận mà nằm ở số
 
 | Mức | Phương án | Khả năng giải quyết | Hạn chế | Lựa chọn |
 |---|---|---|---|---|
-| No AI | Tiếp tục sử dụng Excel và kiểm tra thủ công | Không cần thay đổi quy trình | Mất 5–6 giờ/vòng, có nguy cơ bỏ sót | Không ưu tiên |
+| No AI | Chuẩn hóa mẫu, checklist mã/đơn vị/phiên bản, phân công kiểm và quản lý BOQ chung; soát thủ công theo cách đã cải tiến | Có thể đủ khi phạm vi nhỏ hoặc công soát sau cải tiến đạt mục tiêu | Cần đo công còn lại sau cải tiến, không mặc định bằng hiện trạng 5–6 giờ/vòng | Đối chứng cần thử trước khi chọn Rule |
 | Rule | Sử dụng Excel Formula, Conditional Formatting, Power Query để phát hiện chênh lệch | Có thể kiểm tra toàn bộ dòng đã khớp mã, tự động tính chênh khối lượng và đơn giá | Cần dữ liệu được ghép đúng, chưa tự hiểu file sai mẫu | **Ưu tiên cho bài toán chính** |
 | Workflow | Kết hợp bước nhập dữ liệu, kiểm tra, tổng hợp và xuất báo cáo, bổ sung AI khi cần xử lý dữ liệu phi cấu trúc | Giảm thao tác giữa các bước, hỗ trợ xử lý nhà thầu chào sai mẫu | Phụ thuộc dữ liệu đầu vào và khả năng đối chiếu | Cân nhắc cho bài toán mở rộng |
 | Agent | Hệ thống tự lựa chọn công cụ, phân tích hồ sơ và thực hiện nhiều bước | Linh hoạt với tác vụ có nhiều ngoại lệ | Chi phí cao, khó kiểm soát, nguy cơ kết luận sai | Chưa cần thiết |
@@ -228,6 +307,8 @@ Khi nhà thầu gửi bảng chào giá không theo mẫu, mô tả hạng mục
 Đây là công đoạn thuộc Problem Card #2, không phải bước so sánh số liệu của Problem Card #1
 
 ### 6.3. AI Canvas rút gọn
+
+Phương án Rule chính không cần AI Canvas theo worksheet. Bảng dưới là bản chuẩn bị riêng cho hướng mở rộng ghép file sai mẫu nếu sau này có bằng chứng cần AI; không tính lợi ích của hướng này vào target soát Rule.
 
 | Thành phần | Nội dung |
 |---|---|
@@ -257,6 +338,8 @@ Khi nhà thầu gửi bảng chào giá không theo mẫu, mô tả hạng mục
 - Khi hệ thống không thể xác định kết quả đáng tin cậy, quay về quy trình kiểm tra thủ công
 
 ### 6.4. Hai câu hỏi Google PAIR
+
+Các câu trả lời sau phục vụ hướng mở rộng có AI và cần actor xác nhận. Không coi chúng là bằng chứng nhóm đã chọn hoặc thử AI trong phạm vi Rule.
 
 **1. Người dùng muốn được hỗ trợ hay giao hẳn việc cho hệ thống?**
 
@@ -330,6 +413,8 @@ Do đó, ưu tiên phát hiện đầy đủ các chênh lệch khối lượng 
 ### 8.2. Kết luận
 
 **Quyết định đề xuất cá nhân: GO với Rule-based Automation cho Problem Card #1**
+
+Đây là đề xuất của người phụ trách để nhóm review, không phải quyết định chung hoặc kết quả pilot. Trước thử cần xác nhận quyền dùng dữ liệu, mapping/đơn vị/phiên bản, ngưỡng và đáp án được người domain duyệt. Baseline được dẫn theo báo cáo Vinh, không thay kiểm chứng CP4 ngoài nhóm.
 **Đối với AI: NOT YET**
 **Lý do:**
 
@@ -375,8 +460,8 @@ Sử dụng một bộ hồ sơ chào giá đã xử lý trước đây, gồm 4
 - Tổng tiền trong bảng tổng hợp không khớp với file gốc mà không giải thích được
 - Hệ thống bỏ sót chênh lệch khối lượng trong dữ liệu đã khớp mã
 - Không phát hiện hoặc không cảnh báo các dòng thiếu mã, trùng mã hay không ghép được
-- Thời gian xử lý không cải thiện đáng kể so với Excel/Power Query hiện có
-- Chi phí triển khai và vận hành vượt quá lợi ích tiết kiệm được
+- Sau tối đa hai vòng pilot cùng phạm vi soát, nếu tổng công xử lý + kiểm/sửa/ngoại lệ vẫn từ 90 phút/vòng trở lên hoặc không tốt hơn No AI cải tiến thì dừng mở rộng và rà soát lại phương án
+- Khi tổng chi phí thiết lập/vận hành/kiểm tra vượt lợi ích thời gian tiết kiệm quy đổi theo cách tính được nhóm duyệt trước pilot thì dừng mở rộng
 - Không đảm bảo quyền truy cập và bảo mật hồ sơ chào giá
 
 **Phương án quay về:**

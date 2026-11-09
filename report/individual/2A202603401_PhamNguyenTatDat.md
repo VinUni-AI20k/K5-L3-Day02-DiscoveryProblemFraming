@@ -10,7 +10,7 @@
 - MSSV: 2A202603401
 - Email trường (không bắt buộc, repo có thể để public): 
 - Tên nhóm: tido
-- Link repo nhóm:
+- Link repo nhóm:https://github.com/datnguyen101004/K5-L3A-DAY02-tido-DiscoveryProblemFraming.git
 
 ---
 

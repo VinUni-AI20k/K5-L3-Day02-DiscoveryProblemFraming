@@ -65,12 +65,17 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 Quy trình nháp hiện tại:
 
-```text
-HIỆN TẠI — khoảng 40–50 phút/tuần (ước lượng)
+flowchart LR
+  subgraph HT["HIỆN TẠI: khoảng 40–50 phút/tuần (ước lượng)"]
+    A["1 Xem bảng task: 5'"] --> B["2 Nhắn hỏi từng người: 10'"]
+    B --> C["3 Chờ + hỏi lại: 10–20'"]
+    C --> D["4 Đối chiếu commit GitHub: 5–10'"]
+    D --> E["5 Viết tóm tắt: 10'"]
+    E --> F["6 Trình bày với mentor"]
+  end
+  C:::bottleneck
+  classDef bottleneck fill:#fde2e2,stroke:#c0392b
 
-[1 Xem bảng task: 5'] → [2 Nhắn hỏi từng người: 10'] → [3 Chờ + hỏi lại: 10–20'] ← BOTTLENECK
-→ [4 Đối chiếu commit GitHub: 5–10'] → [5 Viết tóm tắt: 10'] → [6 Trình bày với mentor]
-```
 
 ### Problem Card #2 — Đồng bộ tài liệu thiết kế hệ thống (ERD/Use Case)
 
@@ -89,13 +94,18 @@ HIỆN TẠI — khoảng 40–50 phút/tuần (ước lượng)
 
 Quy trình nháp hiện tại:
 
-```text
-HIỆN TẠI — mỗi lần lệch thiết kế mất khoảng 1–2 giờ × 2–3 người
+flowchart LR
+  subgraph HT["HIỆN TẠI: mỗi lần lệch thiết kế mất khoảng 1–2 giờ × 2–3 người"]
+    A["1 Sửa sơ đồ"] --> B["2 Nhắn group (hay quên)"]
+    B --> C["3 Người khác không biết đổi gì"]
+    C --> D["4 Code theo bản cũ"]
+    D --> E["5 Lỗi khi ghép code"]
+    E --> F["6 Họp khẩn/debug: 60–120'"]
+    F --> G["7 Sửa code"]
+  end
+  B:::bottleneck
+  classDef bottleneck fill:#fde2e2,stroke:#c0392b
 
-[1 Sửa sơ đồ] → [2 Nhắn group (hay quên)] ← BOTTLENECK
-→ [3 Người khác không biết đổi gì] → [4 Code theo bản cũ]
-→ [5 Lỗi khi ghép code] → [6 Họp khẩn/debug: 60–120'] → [7 Sửa code]
-```
 
 ### Problem Card #3 — Quản lý mã nguồn và xử lý Git conflict
 
@@ -114,13 +124,17 @@ HIỆN TẠI — mỗi lần lệch thiết kế mất khoảng 1–2 giờ × 2
 
 Quy trình nháp hiện tại:
 
-```text
-HIỆN TẠI — 2–4 tiếng mỗi đợt merge
+flowchart LR
+  subgraph HT["HIỆN TẠI: 2–4 tiếng mỗi đợt merge"]
+    A["1 Code nhánh riêng nhiều ngày"] --> B["2 Cùng merge sát deadline"]
+    B --> C["3 Conflict nhiều file"]
+    C --> D["4 Đọc conflict + hỏi tác giả"]
+    D --> E["5 Gỡ conflict + chạy thử"]
+    E --> F["6 Sửa lỗi do gộp sai"]
+  end
+  D:::bottleneck
+  classDef bottleneck fill:#fde2e2,stroke:#c0392b
 
-[1 Code nhánh riêng nhiều ngày] → [2 Cùng merge sát deadline]
-→ [3 Conflict nhiều file] → [4 Đọc conflict + hỏi tác giả] ← BOTTLENECK
-→ [5 Gỡ conflict + chạy thử] → [6 Sửa lỗi do gộp sai]
-```
 
 ### Card muốn pitch nhất
 

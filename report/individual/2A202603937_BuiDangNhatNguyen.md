@@ -145,16 +145,16 @@ HIỆN TẠI (khoảng 35 phút gom bằng chứng xin duyệt & bàn giao xử 
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Trình bày Problem Card #1: bài toán kỹ sư trực vận hành mất 90-120 phút dò thủ công qua hàng chục nguồn log rời rạc và đề xuất kiến trúc Agentic AI tự chủ theo ngưỡng `Confidence Score` kết hợp `HITL` | Nhóm thống nhất chọn bài toán của tôi làm Candidate Problem chính thức của cả nhóm |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: *(Cập nhật câu hỏi trực tiếp đặt cho Card của Vũ / Bảo / Hà Anh trong buổi họp CP3)* | Giúp nhóm đối chiếu mức độ rõ ràng của quy trình và khả năng so sánh 4 mức can thiệp AI giữa các đề tài |
+| Nhận phản biện | Câu hỏi tôi nhận được: Con số 90-120 phút là thời gian điều tra hay khắc phục hoàn toàn? Khi nào một sự cố được coi là đã cô lập, và làm sao đảm bảo Agent không tự ý chạy lệnh làm sập môi trường thật? | Tôi đã sửa gì: Tách rõ 90-120 phút gồm 30-60 phút phát hiện trễ và 60-70 phút điều tra/cô lập ban đầu; định nghĩa rõ quyền chỉ đọc (`Read-only`) khi tra log và khóa hành động ngăn chặn trong `Parameterized Runbook` có thời hạn tự mở 15 phút kèm nút `1-click Rollback` |
+| Gom cluster / cây OST | Cùng nhóm phân tích các nhánh nguyên nhân gây chậm trễ trong điều tra sự cố đa nguồn log và phản ứng ca đêm | Tách rõ các nhánh Opportunity (nhiễu cảnh báo đầu vào, mất thời gian tra chéo log đa tầng, chậm trễ phản ứng ban đêm) khỏi giải pháp công nghệ |
+| Chọn candidate problem | Cung cấp bối cảnh vận hành thực tế để nhóm chấm điểm theo 7 tiêu chí | Bài toán giám sát log đa nguồn đạt điểm cao nhất về khả năng so sánh rõ rệt 4 mức `No AI / Rule / Workflow / Agent` |
+| Kiểm chứng / research | Đóng góp câu hỏi chuyên môn hạ tầng cho Vũ đi phỏng vấn DevOps/SRE và hỗ trợ Hà Anh đối chiếu các công cụ (OpenSearch, Datadog Watchdog, Loki) | Làm rõ khoảng trống của các công cụ hiện có giữa chi phí bản quyền cao và rủi ro tự động chặn nhầm |
+| Quy trình nhóm | Phụ trách chính Mục 4 (`group_report.md`): vẽ 2 sơ đồ `Mermaid` (quy trình hiện tại 6 bước thủ công và quy trình tương lai kết hợp `Rule` + `Agent` + `Confidence Score` + `HITL` + `Rollback`) và lập bảng `Before/After` | Chỉ rõ 2 điểm nghẽn chính (55 phút lọc nhiễu/tra chéo log và độ trễ xử lý ban đêm), đặt cơ sở định lượng cho toàn bộ báo cáo nhóm |
+| Problem Statement | Giải đáp 5 câu hỏi chuyên môn hạ tầng (trong `report/assets/2A202603937_cp5_cp6_workflow_and_ai_level.md`) để Bảo viết `Problem Statement v0/v1` | Thống nhất ranh giới cứng (`Boundary`): cấm sinh lệnh shell tự do và bắt buộc qua `HITL` với mọi dịch vụ cốt lõi dùng chung |
+| Mức can thiệp AI | Phụ trách chính Mục 6 (`group_report.md`): lập ma trận `mơ hồ x phức tạp`, bảng so sánh 4 mức AI, `AI Canvas` và trả lời 2 câu hỏi `Google PAIR` | Chứng minh thuyết phục vì sao `Workflow` tĩnh không đủ cho hàng chục nguồn log phân tán và vì sao phải dùng `Bounded Autonomy` |
+| Quyết định | Cùng Hà Anh và cả nhóm xác định phạm vi Pilot thu hẹp ở tầng cổng Nginx trước và thiết lập ngưỡng dừng (`Kill Criteria`) | Đảm bảo quyết định `Go` có điều kiện đi kèm cơ chế kiểm soát rủi ro chặt chẽ |
 
 ---
 
@@ -164,10 +164,10 @@ HIỆN TẠI (khoảng 35 phút gom bằng chứng xin duyệt & bàn giao xử 
 |---|---|---|---|---|
 | CP1 Scan | Rà soát cách viết Job Story theo 4 lăng kính cho bài toán vận hành đa nguồn log mà không vi phạm lỗi nhét từ khóa công nghệ vào cột vấn đề | Nhắc quy tắc không đưa chữ "AI" hay "Agent" vào cột Job Story của CP1 để tránh bị trừ điểm, và gợi ý thêm góc nhìn cảnh báo giả đầu tuần | Bản nháp đầu của AI hiểu hẹp rằng hệ thống chỉ có 2 file log cố định, diễn đạt còn mờ nhu cầu cần cơ chế tự khoanh vùng và tự cô lập sự cố vào ca đêm | Chỉnh lại đúng thực tế doanh nghiệp có hàng chục nguồn log đa tầng (Nginx chỉ là cổng vào), làm rõ nỗi đau khi thiếu phản ứng tự động an toàn lúc vắng người trực và xóa sạch mọi thông số riêng của công ty |
 | CP2 Problem Card | Đóng vai Product Manager hoài nghi để phản biện thiết kế AI tự chủ (`Agentic AI`) dùng cột mốc `Confidence Score` kết hợp `HITL` | Chỉ ra 2 lỗ hổng quan trọng: rủi ro mô hình tự chấm `Confidence Score` ảo và rủi ro nếu cho Agent tự sinh lệnh hệ thống tùy ý thay vì khóa trong kịch bản cố định | Ban đầu AI rút gọn phần giả thuyết quá mức khiến cơ chế tự chủ 4 bước (tự chọn nguồn log, tính `Confidence Score`, phân mốc tự thực thi hay chuyển `HITL`, tự kiểm tra hoàn tác) chưa được thể hiện sâu | Viết chi tiết cơ chế tự chủ có kiểm soát vào Card #1, liên kết chặt 3 Problem Cards thành 3 mắt xích (Màng lọc nhiễu đầu vào -> Agent tự chủ theo `Confidence Score` -> Nhánh bàn giao bằng chứng cho `HITL` khi dưới ngưỡng) |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5-6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP4 Research | Tra cứu tài liệu kỹ thuật chính thức của các công cụ giám sát log (GoAccess, OpenSearch Anomaly Detection, Grafana Loki, Datadog Watchdog) để hỗ trợ nhóm đối chiếu | Tóm tắt nhanh cơ chế thuật toán (như Random Cut Forest của OpenSearch) và cung cấp đường dẫn tài liệu chính thức mở được | AI có xu hướng khen công cụ thương mại giải quyết được mọi thứ mà ít nhấn mạnh rào cản không được đẩy log nội bộ nhạy cảm lên đám mây bên thứ ba | Bổ sung rõ khoảng trống thực tế: công cụ mã nguồn mở miễn phí thì thiếu suy luận ngữ cảnh liên tầng, còn công cụ thương mại thì chi phí cao và vướng quy định bảo mật dữ liệu log nội bộ |
+| CP5 Quy trình | Kiểm tra cú pháp sơ đồ `Mermaid` cho quy trình hiện tại (6 bước) và quy trình tương lai có phân nhánh theo ngưỡng `Confidence Score` | Giúp cấu trúc hóa sơ đồ luồng xử lý rõ ràng, tách biệt trực quan các bước `Rule`, `Agent`, `HITL` và nhánh `Fallback/Rollback` | Gợi ý ban đầu của AI gộp chung độ trễ phát hiện với thời gian kỹ sư thao tác thành một con số mơ hồ và thiếu cơ chế tự hết hạn lệnh chặn | Tách bạch rõ 30-60 phút phát hiện trễ với 60-70 phút thao tác điều tra; bổ sung cơ chế tự hết hạn sau 15 phút (`Auto-TTL`), bước Agent tự đọc lại log sau 2 phút (`Self-Check`) và nút `1-click Rollback` |
+| CP5-6 Problem Statement | Phản biện chéo các tiêu chí định nghĩa "đã cô lập sự cố" và ranh giới an toàn (`Boundary`) để phối hợp với bạn viết Problem Statement | Nhắc các trường hợp biên như nguy cơ tấn công Prompt Injection qua chuỗi `User-Agent` trong log làm mô hình hiểu sai lệnh | Đề xuất của AI về công thức `Confidence Score` ban đầu còn định tính, chưa có điều kiện chặn cứng cho các dịch vụ quan trọng | Đặt quy tắc ép quyền tự thực thi về `0%` (bắt buộc qua `HITL`) nếu đối tượng nằm trong `Whitelist` hoặc chạm tới cơ sở dữ liệu/dịch vụ cốt lõi dùng chung |
+| CP6 Mức can thiệp / quyết định | Phản biện lập luận so sánh 4 mức (`No AI / Rule / Workflow / Agent`), bảng `AI Canvas` và 2 câu hỏi `Google PAIR` | Giúp hệ thống hóa câu trả lời cho câu hỏi của Google PAIR bằng cách tách riêng rủi ro Báo nhầm ở khâu tự chặn và rủi ro Bỏ sót ở khâu phát hiện | Khi giải thích vì sao chọn `Agent`, AI dễ sa vào mô tả tính năng chung chung mà chưa xoáy sâu vào điểm yếu của `Workflow` tĩnh khi gặp hàng chục nguồn log | Viết lập luận sắc bén chỉ rõ `Workflow` tĩnh sẽ thất bại khi phải chọn nhánh động giữa hàng chục nguồn log phân tán và khi cần vòng lặp tự kiểm chứng sau hành động vào ca đêm, đồng thời chốt phạm vi Pilot bắt đầu từ tầng cổng Nginx |
 
 ---
 

@@ -5,10 +5,10 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
-- Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
-- Quyết định cuối: Go / Not Yet / No-Go
+- Tên nhóm: HEHEHE
+- Thành viên: xem `TEAM.md` (Bùi Đặng Nhật Nguyên, Đỗ Hoàng Vũ, Trần Gia Bảo, Trần Thị Hà Anh)
+- Candidate problem được chọn (1 câu): Kỹ sư trực ca vận hành mất 90-120 phút mỗi sự cố để lần mò thủ công qua hàng chục nguồn log rời rạc và thiếu cơ chế AI tự chủ có kiểm soát (Agentic AI phân quyền theo cột mốc `Confidence Score` kết hợp `HITL`) để vừa cô lập tức thì bất thường rõ bằng chứng vào ban đêm vừa giữ lại ca nhạy cảm chờ con người duyệt.
+- Quyết định cuối: *Chốt sau CP6 (Định hướng: Go thử nghiệm Pilot có điều kiện ở tầng cổng Nginx trước khi mở rộng)*
 
 ---
 
@@ -18,57 +18,70 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 1 | Bùi Đặng Nhật Nguyên | Khi hệ thống gặp lỗi hàng loạt hoặc bị khai thác bất thường (nhất là ban đêm), tôi muốn tự động lần ra nguyên nhân gốc giữa hàng chục nguồn log và phân quyền xử lý theo `Confidence Score` + `HITL`, để cô lập mối đe dọa rõ ràng trong vài phút mà vẫn an toàn cho ca nhạy cảm | Kỹ sư trực vận hành hệ thống (IT / NetOps On-call) | Bước 3, 4 & 5: Lọc nhiễu thủ công, tự mò mở tiếp hàng chục nguồn log trên nhiều máy chủ (55 phút) và chờ người thức dậy gõ lệnh chặn ban đêm | Con số 90-120 phút gồm thời gian phát hiện hay điều tra? Tính `Confidence Score` từ tín hiệu nào để LLM không tự chấm điểm cao ảo rồi chặn nhầm cổng hợp lệ? (Bảo, Vũ hỏi) |
+| 2 | Bùi Đặng Nhật Nguyên | Khi trực ca vào giờ cao điểm sáng đầu tuần, tôi muốn phân biệt mức tăng lưu lượng tự nhiên theo chu kỳ với sự cố thật, để không kích hoạt nhầm quy trình phản ứng và không tốn thời gian đóng cảnh báo giả | Kỹ sư trực ca vận hành (On-call Engineer) | Bước 3 & 4: Tách lọc kết nối giữ phiên (WebSocket) và so sánh thủ công với số liệu sáng thứ Hai tuần trước (25 phút/đợt) | Dùng công thức thống kê cửa sổ trượt (`Rule`) đã đủ giải quyết hơn 80% cảnh báo giả chưa, có cần tới AI ở bước này không? (Bảo hỏi) |
+| 3 | Bùi Đặng Nhật Nguyên | Khi gặp sự cố liên tầng phức tạp nằm dưới ngưỡng được phép tự động can thiệp, tôi muốn có sẵn hồ sơ bằng chứng xuyên qua các nguồn log kèm lệnh đề xuất, để người duyệt `HITL` và đội backend xử lý trong vài phút | Kỹ sư trực ca (người duyệt `HITL`) và Lập trình viên backend | Bước 2 & 4: Tra chéo qua nhiều nguồn log và biên soạn tóm tắt bằng chứng bàn giao (22 phút/sự cố) | Nếu gộp chung Card #2 (màng lọc đầu vào) và Card #3 (nhánh bàn giao `HITL`) vào làm các mắt xích bên trong Card #1 thì quy trình có trọn vẹn hơn không? (Vũ, Hà Anh hỏi) |
+| 4 | Đỗ Hoàng Vũ | Khi nhận một lô vài trăm câu trắc nghiệm mới cần đưa vào ngân hàng đề, tôi muốn biết nhanh câu nào sai đáp án, có hai đáp án đúng hoặc lộ đáp án trong thân câu, để không phát hành câu hỏng tới học sinh | Người duyệt nội dung (giáo viên / content editor) ở trung tâm luyện thi hoặc edtech | Bước 2: Đọc và tự giải lại từng câu để kiểm đáp án (1,8-2,4 phút/câu, mất 4-6 giờ cho lô 150 câu) | Nếu dùng LLM tự giải lại để bắt lỗi đáp án trên các môn tự nhiên khó thì làm sao biết khi nào chính LLM giải sai? (Nguyên hỏi) |
+| 5 | Đỗ Hoàng Vũ | Khi xem lại kết quả một bài thi trắc nghiệm trên Moodle, tôi muốn biết câu nào quá khó, quá dễ hoặc không phân loại được người học, để sửa ngân hàng đề trước kỳ thi sau | Giảng viên, giáo viên ra đề thi | Bước đọc và diễn giải bảng chỉ số thống kê câu hỏi sau kỳ thi (6/8 giảng viên bỏ qua không mở báo cáo) | Moodle đã tính sẵn các chỉ số thống kê câu hỏi, vậy vấn đề là thiếu công cụ hay giảng viên không có động lực sửa lại đề sau khi thi xong? (Bảo hỏi) |
+| 6 | Đỗ Hoàng Vũ | Khi viết ba phương án nhiễu cho mỗi câu trắc nghiệm, tôi muốn biết phương án nào vô lý, trùng ý nhau hoặc quá giống đáp án đúng, để câu hỏi thực sự phân loại được người học | Người soạn câu hỏi trắc nghiệm (Content editor) | Bước tự nghĩ và đánh giá chất lượng 3 phương án nhiễu bằng cảm tính (3-5 phút/câu) | Tiêu chí định lượng thế nào là một phương án nhiễu tốt khi chưa có dữ liệu học sinh làm thử? (Hà Anh hỏi) |
+| 7 | Trần Gia Bảo | Khi cần biết doanh thu, số đơn hoặc hiệu quả theo giai đoạn ngoài báo cáo cố định, tôi muốn tự hỏi và lấy dữ liệu từ hệ thống mà không phải chờ người biết viết SQL | Quản lý hoặc nhân viên nghiệp vụ không biết SQL | Bước 2-4: Gửi yêu cầu cho kỹ thuật, chờ làm rõ điều kiện lọc và viết câu lệnh SQL | Khách hàng doanh nghiệp đã có sẵn Dashboard BI (như PowerBI, Metabase) giải quyết phần lớn nhu cầu này chưa? (Vũ hỏi) |
+| 8 | Trần Gia Bảo | Khi người dùng hỏi dữ liệu bằng câu thông thường, tôi muốn hệ thống hiểu đúng tên bảng, cột và quan hệ dữ liệu trong CSDL để không phải sửa truy vấn SQL nhiều lần | Lập trình viên triển khai Text-to-SQL, người sử dụng | Bước ánh xạ thuật ngữ nghiệp vụ của người dùng sang đúng cấu trúc bảng/cột (schema) khi JOIN nhiều bảng | Đây là bài toán kỹ thuật bên trong giải pháp Text-to-SQL hay là vấn đề gốc của người dùng cuối? (Nguyên hỏi) |
+| 9 | Trần Gia Bảo | Khi một câu hỏi dữ liệu được diễn đạt theo nhiều cách khác nhau, tôi muốn nhận kết quả nhất quán và có thể kiểm tra nguồn bảng/điều kiện lọc, để tin tưởng số liệu dùng ra quyết định | Người dùng nghiệp vụ, người kiểm tra dữ liệu | Bước kiểm chứng xem câu truy vấn sinh ra có dùng đúng định nghĩa doanh thu/đơn hủy hay không | Nếu người dùng không biết đọc SQL thì họ kiểm tra tính đúng đắn của câu truy vấn bằng cách nào? (Hà Anh hỏi) |
+| 10 | Trần Thị Hà Anh | Khi kết thúc mỗi buổi học Python (75 bài của 5 lớp), tôi muốn xác định nhanh lỗi sai lặp lại và viết nhận xét đúng với bài từng học sinh, để trả kết quả kịp thời mà không phải chấm tay từng bài từ đầu | Giáo viên dạy lập trình tại trung tâm (Minh) | Bước đọc từng bài code, tìm lỗi và gõ nhận xét riêng cho 75 bài dù nhiều lỗi lặp lại (ước tính 5-7 phút/bài) | Dùng bộ test tự động (Unit Test / Linter) đã bắt được phần lớn lỗi cú pháp và kết quả chạy code chưa? (Vũ, Nguyên hỏi) |
+| 11 | Trần Thị Hà Anh | Khi chấm xong bài của một lớp, tôi muốn biết những lỗi nào xuất hiện nhiều nhất trong 15 học sinh, để điều chỉnh nội dung ôn tập cho buổi học tiếp theo | Giáo viên dạy lập trình | Bước tự thống kê và gom nhóm các lỗi sai phổ biến của 5 lớp sau mỗi buổi học | Nếu gắn nhãn mã lỗi lúc chấm bài thì chỉ cần bảng tổng hợp Excel (`No AI`) là thống kê được ngay đúng không? (Bảo hỏi) |
+| 12 | Trần Thị Hà Anh | Khi kết thúc khóa học 12 tuần, tôi muốn tổng hợp điểm số, bài tập và sự tiến bộ của từng học sinh trong 75 em, để viết nhận xét cá nhân có căn cứ gửi phụ huynh | Giáo viên dạy lập trình, học sinh, phụ huynh | Bước mở lại ghi chú và bài làm suốt 12 tuần của 75 học sinh để viết nhận xét cuối khóa | Tần suất chỉ diễn ra 1 lần vào cuối khóa 12 tuần thì mức độ cấp thiết có cao bằng các việc lặp lại hàng ngày/hàng tuần không? (Nguyên hỏi) |
 
 ### 2.2. Cluster
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| **A - Giám sát log đa tầng, điều tra nguyên nhân gốc & cô lập sự cố ngoài giờ (AIOps)** | #1, #2, #3 (Nhật Nguyên) | Dữ liệu đầu vào gồm hàng chục nguồn log phân tán và nhiều nhiễu; cần kết hợp lọc nhiễu chu kỳ (`Rule`), tự chủ chọn nhánh điều tra liên tầng (`Agent`) và phân quyền phản ứng theo ngưỡng điểm tự tin (`Confidence Score` + `HITL`) để xử lý kịp thời vào ban đêm |
+| **B - Kiểm định nội dung câu hỏi trắc nghiệm & hỗ trợ chấm bài trong giáo dục (EdTech)** | #4, #5, #6 (Hoàng Vũ), #10, #11, #12 (Hà Anh) | Kiểm tra chất lượng đầu ra theo bộ quy tắc sư phạm và đáp án chuẩn lặp lại trên số lượng lớn câu hỏi/bài nộp; phần lớn giải quyết tốt bằng `Rule` (Linter, Unit Test, thống kê Moodle) kết hợp `Workflow` có người duyệt |
+| **C - Truy xuất và đối chiếu dữ liệu kinh doanh từ cơ sở dữ liệu (Text-to-SQL)** | #7, #8, #9 (Gia Bảo) | Chuyển đổi yêu cầu ngôn ngữ tự nhiên thành câu lệnh truy vấn có cấu trúc; điểm nghẽn nằm ở việc chuẩn hóa định nghĩa chỉ số nghiệp vụ và kiểm chứng độ chính xác khi người dùng không biết đọc SQL |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian từ lúc phát sinh bất thường đến lúc khoanh vùng đúng nguyên nhân gốc và cô lập sự cố từ 90-120 phút xuống dưới 5 phút (với ca đủ độ tin cậy tự động) và dưới 15 phút (với ca chờ người duyệt HITL), giữ tỷ lệ cảnh báo sai dưới 15% và 0 lần chặn nhầm kết nối hợp lệ.
+│
+├── Opportunity A (Đầu vào cảnh báo): Kỹ sư trực ca bị quá tải bởi cảnh báo giả vào giờ cao điểm đầu tuần (như sáng thứ Hai) do lưu lượng giữ phiên tăng tự nhiên, làm mất 30-40 phút kiểm tra tay và gây nguy cơ kích hoạt nhầm quy trình phản ứng.
+│
+├── Opportunity B (Điều tra liên tầng): Khi có triệu chứng lỗi ở cổng đón lưu lượng (như Nginx), kỹ sư mất 55 phút gõ lệnh lọc nhiễu và tự mò mẫm mở tiếp hàng chục nguồn log rời rạc (tường lửa, DNS, xác thực, ứng dụng, database) trên nhiều máy chủ để tìm nguyên nhân gốc.
+│
+└── Opportunity C (Phản ứng ca đêm & Bàn giao HITL): Vào ban đêm lúc vắng người trực màn hình, các đợt dò quét lỗ hổng hoặc gây nghẽn đã rõ bằng chứng không được cô lập kịp thời, trong khi các ca liên tầng nhạy cảm lại thiếu bản tổng hợp bằng chứng có dẫn nguồn để con người phê duyệt nhanh trong vài phút.
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- ~~"Xây dựng AI Agent tự động đọc toàn bộ log công ty và tự chạy lệnh shell sửa lỗi máy chủ"~~ (Gạch bỏ vì đây là giải pháp đóng gói sẵn, chưa tách rõ nỗi đau ở từng bước và cực kỳ nguy hiểm nếu cho sinh lệnh shell tự do không có ngưỡng kiểm soát).
+- ~~"Tích hợp mô hình LLM local để tóm tắt file log Nginx"~~ (Gạch bỏ vì gọi tên công cụ cụ thể và thu hẹp sai bài toán: thực tế doanh nghiệp có hàng chục nguồn log đa tầng chứ không chỉ đọc 1-2 file log tĩnh).
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| **1. Điều tra đa nguồn log & cô lập sự cố theo ngưỡng `Confidence Score` + `HITL` (Cluster A - #1, #2, #3)** | 5 | 5 | 4 | 5 | 4 | 5 | 5 | **33/35** |
+| **2. Duyệt lô câu hỏi trắc nghiệm mới trước khi đưa vào ngân hàng đề (Cluster B - #4)** | 5 | 5 | 5 | 4 | 5 | 3 | 4 | **31/35** |
+| **3. Tự lấy số liệu kinh doanh từ CSDL không phụ thuộc viết SQL (Cluster C - #7)** | 4 | 4 | 3 | 4 | 4 | 4 | 4 | **27/35** |
+| **4. Chấm bài code Python và viết nhận xét cho 75 học sinh (Cluster B - #10)** | 4 | 4 | 3 | 4 | 4 | 3 | 4 | **26/35** |
 
-**Candidate được chọn:**
+**Candidate được chọn:** Điều tra sự cố qua hàng chục nguồn log rời rạc và tự động cô lập bất thường ngoài giờ theo kiến trúc **Agentic AI có kiểm soát (`Bounded Autonomy` phân quyền bằng cột mốc `Confidence Score` kết hợp `HITL` và `Rollback`)** (gộp hoàn chỉnh 3 mắt xích #1, #2, #3 của Cluster A).
 
 **Vì sao chọn:**
 
+- Có quy trình thực tế 6 bước rất rõ ràng từ trải nghiệm vận hành hạ tầng của thành viên trong nhóm, chỉ ra chính xác điểm nghẽn định lượng được (30-60 phút phát hiện trễ + 55 phút lọc nhiễu và tra chéo qua hàng chục nguồn log).
+- Là bài toán thể hiện rõ nét và thuyết phục nhất sự khác biệt giữa cả 4 mức can thiệp (`No AI`, `Rule` ở bước lọc nhiễu chu kỳ, `Workflow` ở nhánh đóng gói hồ sơ `HITL`, và `Agent` ở bước tự chọn nguồn log điều tra liên tầng + tự chủ thực thi theo ngưỡng `Confidence Score`), giúp nhóm khai thác sâu bài toán quản trị rủi ro AI (`Boundary`, `Fallback`, `1-click Rollback`).
+
 **Vì sao loại các candidate còn lại:**
 
+- **Loại Candidate 2 (Duyệt câu hỏi trắc nghiệm - #4) và Candidate 4 (Chấm code Python - #10):** Dù có quy trình rõ, nhưng phần lớn lỗi hình thức/cú pháp giải quyết hiệu quả nhất bằng `Rule` (Regex, Unit Test, Linter) và một `Workflow` cố định chạy qua từng câu hỏi độc lập; không có nhu cầu rẽ nhánh điều tra động qua nhiều hệ thống hay ra quyết định tự chủ thời gian thực như bài toán vận hành hạ tầng, nên kém đất diễn hơn khi phân tích chiều sâu `Workflow vs Agent` ở CP6.
+- **Loại Candidate 3 (Truy xuất số liệu kinh doanh Text-to-SQL - #7):** Các tình huống nhân viên kinh doanh chờ báo cáo hiện mới dừng ở giả thuyết từ góc nhìn kỹ thuật, chưa đo được baseline thời gian thực tế tại doanh nghiệp khách hàng và phần lớn nhu cầu tra cứu định kỳ có thể giải quyết bằng Dashboard BI sẵn có (`No AI`).
+
 **Xử lý bất đồng (nếu có):**
+
+- Ban đầu có ý kiến lo ngại đề tài giám sát đa nguồn log bằng Agentic AI quá rộng và rủi ro cao nếu máy tự chạy lệnh làm sập hệ thống thật. Nhóm đã giải quyết triệt để bằng cách: (1) Thiết kế cơ chế **Tự chủ có kiểm soát (`Bounded Autonomy`)** dựa trên 3 cột mốc `Confidence Score` kết hợp `HITL` và khóa chặt hành động trong `Parameterized Runbook` có nút `1-click Rollback`; (2) Thu hẹp phạm vi **Pilot 2 tuần đầu** chỉ áp dụng tại tầng cổng đón lưu lượng (Nginx) trước khi mở rộng sang các nguồn log dịch vụ khác.
 
 ---
 
@@ -110,9 +123,10 @@ Tổng hợp:
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| **Datadog Watchdog (Log Anomaly Detection & RCA)** | https://docs.datadoghq.com/watchdog/ | Bước 1, Bước 3 và một phần Bước 4 (Tự động phát hiện bất thường lưu lượng/lỗi và gợi ý tương quan giữa các dịch vụ) | Học đường cơ sở theo chu kỳ tuần rất chuẩn (giảm cảnh báo giả đầu tuần); giao diện trực quan gom nhóm mẫu lỗi tự động | Chi phí bản quyền SaaS tính theo dung lượng log rất đắt khi công ty có hàng chục nguồn log lớn; bắt buộc đẩy dữ liệu log nội bộ lên đám mây bên thứ ba (vướng quy định bảo mật của nhiều doanh nghiệp) | Học cách dùng đường cơ sở theo chu kỳ thứ/giờ (`Rule`) ở Bước 1 để lọc bỏ nhiễu đầu tuần trước khi gọi tới Agent |
+| **Dynatrace Davis AI (Causal AI & Topology Mapping)** | https://www.dynatrace.com/support/help/platform/davis-ai | Bước 4 (Truy vết nguyên nhân gốc xuyên qua các tầng hạ tầng, ứng dụng và database dựa trên đồ thị phụ thuộc) | Sử dụng Causal AI dựa trên sơ đồ kết nối thực tế (Topology) để chỉ ra điểm nghẽn gốc thay vì chỉ đoán mò tương quan thống kê | Đòi hỏi cài đặt tác nhân thu thập (OneAgent) sâu vào mọi máy chủ với chi phí doanh nghiệp rất cao; nếu thiếu cấu hình kịch bản kiểm soát thì vẫn chỉ dừng ở báo cáo nguyên nhân chứ chưa tự cô lập cục bộ theo ngưỡng an toàn | Khi thiết kế Agent điều tra đa nguồn log, không để LLM tự đoán cảm tính mà phải bắt buộc trích dẫn bằng chứng dòng log khớp mốc thời gian giữa cổng vào và dịch vụ phía sau |
+| **PagerDuty AIOps (Signal Intelligence & Auto-Remediation)** | https://support.pagerduty.com/docs/aiops-signal-intelligence-overview | Bước 1 và Bước 5 (Gom nhóm cảnh báo chống bão alert, điều phối ca trực và kích hoạt Runbook tự động khắc phục) | Có cơ chế Runbook Automation cho phép gắn kịch bản xử lý chuẩn hóa và phân quyền người duyệt (`HITL`) trên từng loại sự cố | Bản thân PagerDuty không trực tiếp đọc sâu vào nội dung hàng chục file log thô (như phân tích chuỗi URI/User-Agent dò quét lỗ hổng ở Nginx) nếu không mua kèm hệ sinh thái giám sát đắt đỏ | Áp dụng triết lý **Parameterized Runbook + HITL + 1-click Rollback**: tuyệt đối cấm Agent tự sinh lệnh shell tự do, chỉ cho phép gọi hàm cô lập cục bộ có sẵn khi `Confidence Score >= 85%` |
+| **OpenSearch Anomaly Detection & Grafana Loki (Open-source Self-hosted)** | https://opensearch.org/docs/latest/monitoring-plugins/ad/index/ và https://grafana.com/docs/loki/latest/ | Bước 1 và Bước 2 (Thu thập log tập trung nội bộ On-premise và phát hiện bất thường bằng thuật toán Random Cut Forest) | Mã nguồn mở, miễn phí bản quyền, chạy hoàn toàn trên máy chủ nội bộ (đảm bảo 100% quyền riêng tư dữ liệu log công ty) | Chỉ phát hiện được điểm dị biệt về mặt con số hoặc tìm kiếm khi kỹ sư tự gõ câu truy vấn; không biết tự suy luận ngữ nghĩa để nhảy từ triệu chứng ở cổng proxy sang đúng nguồn log ứng dụng/mạng liên quan và không có cơ chế tính `Confidence Score` để tự cô lập ban đêm | Dùng hạ tầng gom log nội bộ kết hợp màng lọc `Rule` làm nền tảng, sau đó đặt lớp **Agentic AI có kiểm soát (`Bounded Autonomy`)** lên trên để giải quyết bài toán tự chọn nhánh điều tra và phân quyền `Confidence Score + HITL` |
 
 ---
 
@@ -120,39 +134,85 @@ Tổng hợp:
 
 ### 4.1. Quy trình hiện tại
 
-Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
+Sơ đồ quy trình xử lý sự cố hiện tại (6 bước thủ công, tổng thời gian từ lúc phát sinh bất thường đến lúc cô lập xong khoảng 90-120 phút, trong đó 30-60 phút là độ trễ phát hiện và khoảng 90 phút là thời gian kỹ sư thao tác):
 
-```text
+```mermaid
+flowchart TD
+    S1["Bước 1: Nhận báo lỗi trễ từ người dùng hoặc cảnh báo ngưỡng tĩnh (Độ trễ phát hiện: 30-60 phút)"]
+    S2["Bước 2: Mở log cổng đón lưu lượng (như Nginx access/error log) xem triệu chứng (10 phút)"]
+    S3["Bước 3: Gõ lệnh lọc bỏ bản ghi nhiễu (giữ phiên, cache) tìm khung giờ đỉnh lỗi (20 phút - BOTTLENECK 1)"]
+    S4["Bước 4: Đăng nhập từng máy chủ tra chéo sang log tường lửa, DNS, ứng dụng, database (35 phút - BOTTLENECK 2)"]
+    S5["Bước 5: Tự đánh giá độ chắc chắn rồi gõ lệnh chặn IP hoặc báo đội ứng dụng (10 phút - BOTTLENECK BAN ĐÊM)"]
+    S6["Bước 6: Theo dõi lại log xác nhận lỗi đã hạ và viết báo cáo sự cố (15 phút)"]
 
+    S1 --> S2 --> S3 --> S4 --> S5 --> S6
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Người dùng hệ thống / Kỹ sư trực ca (On-call) | Dịch vụ phản hồi chậm, báo lỗi hàng loạt hoặc cảnh báo ngưỡng tĩnh | Tin nhắn / ticket báo sự cố trong kênh vận hành | Độ trễ 30-60 phút sau khi lỗi bắt đầu tăng (trung bình 2-3 sự cố đáng kể/tuần) | Ban đêm không có người trực màn hình nên phát hiện rất muộn |
+| 2 | Kỹ sư trực ca (IT / NetOps On-call) | Thông báo sự cố, quyền truy cập máy chủ cổng vào | Các dòng log triệu chứng ban đầu tại cổng proxy (như Nginx `access.log`, `error.log`) | 10 phút/lần | Mới chỉ thấy triệu chứng bề nổi (mã lỗi `5xx`/`4xx`), chưa biết nguyên nhân gốc |
+| 3 | Kỹ sư trực ca | Hàng trăm nghìn dòng log thô ở cổng vào | Khung giờ đỉnh lỗi, danh sách đường dẫn hoặc IP nghi vấn sau khi tách bỏ kết nối giữ phiên | 20 phút/lần | **Bottleneck 1:** Tốn công gõ lệnh cắt lọc thủ công vì log chứa rất nhiều bản ghi giữ phiên (WebSocket) và kiểm tra sức khỏe định kỳ |
+| 4 | Kỹ sư trực ca | Khung giờ đỉnh lỗi và dấu hiệu từ cổng vào | Nguyên nhân gốc được xác định (do dò quét lỗ hổng, lỗi DNS, treo dịch vụ backend hay database) | 35 phút/lần | **Bottleneck 2 (Nặng nhất):** Công ty có hàng chục nguồn log rời rạc ở nhiều tầng; kỹ sư phải tự suy đoán và đăng nhập từng máy chủ để đối chiếu mốc thời gian |
+| 5 | Kỹ sư trực ca / Đội phát triển backend | Kết luận nguyên nhân gốc và mức độ rủi ro | Thực thi lệnh cô lập (như chặn IP, giới hạn tốc độ) hoặc bàn giao bằng chứng cho đội ứng dụng | 10 phút thao tác (nhưng vào ban đêm có thể trễ vài giờ vì chờ người thức dậy xử lý) | **Bottleneck 3 (Ban đêm):** Thiếu cơ chế tự động thực thi an toàn cho các ca đã rõ bằng chứng lúc vắng người trực |
+| 6 | Kỹ sư trực ca | Trạng thái hệ thống sau khi can thiệp và lịch sử câu lệnh đã gõ | Xác nhận tỷ lệ lỗi đã về mức bình thường và bản tóm tắt sự cố | 15 phút/lần | Phải tự gom lại các đoạn log đã đọc từ nhiều cửa sổ terminal để viết báo cáo |
 
 **Bottleneck chính:**
 
+- **Điểm nghẽn điều tra (Bước 3 + Bước 4, mất 55 phút thao tác trực tiếp):** Kỹ sư phải lọc nhiễu bằng tay rồi tự mò mẫm mở tiếp hàng chục nguồn log khác nhau (tường lửa, DNS, xác thực, ứng dụng, database) trên nhiều máy chủ mà không có công cụ tự động chọn nhánh truy vết.
+- **Điểm nghẽn phản ứng ngoài giờ (Bước 1 + Bước 5, mất thêm 40-70 phút):** Vào ban đêm, dù có những đợt dò quét lỗ hổng hoặc gửi truy vấn dồn dập rất rõ bằng chứng ở tầng cổng, hệ thống vẫn phải chờ con người thức dậy đọc log rồi mới gõ lệnh cô lập.
+
 ### 4.2. Quy trình tương lai
 
-Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
+Ghi rõ bước nào **Rule**, bước nào **AI (`Agent`)**, bước nào **con người (`HITL`)**, **boundary** ở đâu, **phương án quay về** khi AI sai:
 
-```text
+```mermaid
+flowchart TD
+    R1["Bước 1 (RULE): Màng lọc thống kê cửa sổ trượt theo chu kỳ thứ/giờ, tự loại bỏ log giữ phiên và chặn >80% cảnh báo giả đầu tuần (Dưới 30 giây)"]
+    A2["Bước 2 (AI - AGENT): Từ triệu chứng ở cổng vào (Nginx), Agent tự suy luận và chọn công cụ chỉ đọc (Read-only) để mở tiếp đúng nguồn log liên quan (tường lửa, DNS, ứng dụng, DB) (1-2 phút)"]
+    A3["Bước 3 (RULE + AGENT): Tính điểm tự tin tổng hợp (Confidence Score 0-100%) từ độ lệch thống kê + độ khớp kịch bản liên tầng + kiểm tra Whitelist (10 giây)"]
+    D{"Phân nhánh theo cột mốc Confidence Score và Boundary"}
 
+    B_LOW["Nhánh 1 (Confidence Score < 60%): Tự động ghi log theo dõi ngầm, không đánh thức ca trực"]
+    B_MID["Nhánh 2 (60% <= Confidence Score < 85% HOẶC chạm dịch vụ cốt lõi): Chuyển sang CON NGƯỜI (HITL) kèm hồ sơ bằng chứng đa tầng và lệnh đề xuất chờ bấm duyệt (2-5 phút)"]
+    B_HIGH["Nhánh 3 (Confidence Score >= 85% VÀ thuộc hành động cục bộ an toàn ở cổng vào): AGENT tự chủ kích hoạt Parameterized Runbook (ví dụ khóa tạm 1 IP hoặc áp rate-limit trong 15 phút) (Dưới 30 giây)"]
+
+    C4["Bước 4 (AGENT + CON NGƯỜI): Agent tự đọc lại log sau 2 phút để kiểm chứng lỗi đã hạ (Self-Check) và gửi thông báo kèm nút Hoàn tác 1 chạm (1-click Rollback)"]
+    FB["Phương án quay về (FALLBACK / ROLLBACK): Nếu sau 2 phút lỗi không giảm hoặc kỹ sư bấm Hoàn tác -> Tự động gỡ lệnh chặn ngay lập tức và chuyển toàn bộ sang chế độ chỉ cảnh báo (HITL)"]
+
+    R1 --> A2 --> A3 --> D
+    D -->|"< 60%"| B_LOW
+    D -->|"60% đến < 85% hoặc Dịch vụ cốt lõi"| B_MID
+    D -->|">= 85% và Cục bộ an toàn"| B_HIGH
+    B_MID --> C4
+    B_HIGH --> C4
+    C4 --> FB
 ```
+
+**Phân tách rõ vai trò và chốt chặn an toàn trong quy trình tương lai:**
+
+- **Bước dùng `Rule` (Bước 1 + một phần Bước 3):** Lọc bỏ các bản ghi giữ phiên định kỳ (WebSocket/healthcheck), tính ngưỡng động theo khung giờ trong tuần để chặn cảnh báo giả sáng thứ Hai trước khi gọi Agent, và kiểm tra danh sách trắng (`Whitelist` IP nội bộ / cổng đối tác).
+- **Bước dùng `AI - Agent` (Bước 2 + Bước 3 + Nhánh 3 + Bước 4):**
+  - **Tự chủ điều tra (`Read-only`):** Tự quyết định cần gọi công cụ đọc nguồn log nào tiếp theo tùy theo mã lỗi ở cổng vào (không đi theo kịch bản cứng).
+  - **Tự chủ thực thi có điều kiện (`Bounded Autonomy`):** Khi `Confidence Score >= 85%` và sự cố thuộc nhóm hành động cục bộ có thể đảo ngược ở tầng cổng (như khóa tạm thời 1 IP đang khai thác lỗ hổng trong 15 phút), Agent tự kích hoạt kịch bản chuẩn đã tham số hóa (`Parameterized Runbook`).
+- **Bước `Con người trong vòng lặp (HITL)` (Nhánh 2 + Bước 4):** Khi `Confidence Score` nằm trong khoảng `60% đến < 85%` hoặc khi sự cố liên quan tới tầng ứng dụng/cơ sở dữ liệu dùng chung, kỹ sư trực ca nhận sẵn bảng tóm tắt bằng chứng có dẫn nguồn dòng log và chỉ cần bấm **Duyệt** hoặc **Bác bỏ** trên màn hình cảnh báo.
+- **Ranh giới cấm (`Boundary`):**
+  1. Agent chỉ có quyền **đọc (`Read-only`)** đối với toàn bộ các nguồn log; tuyệt đối **không được tự ý sinh lệnh shell tự do** (`rm`, `kill`, sửa file cấu hình gốc hay khởi động lại cụm database/ứng dụng lõi).
+  2. Mọi thao tác ngăn chặn tự động chỉ được gọi qua hàm cố định (`Parameterized Runbook` như `rate_limit_ip(ip, ttl=15m)`), không bao giờ áp dụng lên dải IP nằm trong `Whitelist` hoặc dịch vụ thanh toán/dùng chung.
+- **Phương án quay về (`Fallback & Rollback`):**
+  1. **Tự động hết hạn (`Auto-TTL`):** Mọi lệnh cô lập tự động ở tầng cổng đều tự gỡ sau 15 phút nếu không được gia hạn.
+  2. **Tự kiểm chứng (`Post-action Self-Check`):** Sau khi thực thi 2 phút, nếu tỷ lệ lỗi không giảm hoặc tăng thêm, hệ thống tự động rollback lệnh vừa chạy và đánh thức kỹ sư trực ca.
+  3. **Nút Hoàn tác 1 chạm (`1-click Rollback`) & Công tắc ngắt (`Kill Switch`):** Kỹ sư có thể hủy lệnh chặn chỉ bằng 1 nút bấm trên tin nhắn thông báo; nếu mô hình AI gặp lỗi kết nối hoặc vượt ngưỡng cảnh báo sai, hệ thống tự động hạ cấp về `Rule + cảnh báo thủ công`.
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 6 bước tuần tự | 4 bước tự động hóa + 1 bước duyệt/kiểm tra | Rút gọn toàn bộ khâu lọc nhiễu và tra chéo log thủ công |
+| Tổng thời gian | 90-120 phút (gồm 30-60 phút phát hiện trễ + 60-70 phút điều tra và xử lý) | Dưới 5 phút (với ca `>= 85%` tự cô lập) hoặc dưới 15 phút (với ca `60% - < 85%` chờ người duyệt `HITL`) | Đo từ lúc xuất hiện chuỗi lỗi bất thường ở cổng vào đến lúc cô lập xong hoặc bàn giao đúng nguyên nhân gốc |
+| Số bước thủ công | 6/6 bước (100% phụ thuộc kỹ sư đọc log và gõ lệnh) | 0 bước (ca đêm đủ ngưỡng tự tin `>= 85%`) hoặc 1 bước bấm duyệt `HITL` (ca nhạy cảm) | Giải phóng kỹ sư khỏi việc thức đêm đọc hàng trăm nghìn dòng log thô |
+| Bottleneck chính | Bước 3 & 4 (55 phút lọc nhiễu và mò tìm qua hàng chục nguồn log) + Bước 5 (chờ người xử lý ban đêm) | Bước chờ kỹ sư xác nhận ở nhánh `HITL` (2-5 phút với hồ sơ bằng chứng đã gom sẵn) | Kỹ sư không phải tự đi tìm log nữa mà chỉ kiểm tra bằng chứng có dẫn nguồn |
+| Rủi ro mới phát sinh | Không có rủi ro từ AI (nhưng chịu rủi ro gián đoạn dịch vụ kéo dài hàng giờ) | Nguy cơ điểm tự tin ảo dẫn tới chặn nhầm kết nối hợp lệ, hoặc log độc hại chứa câu lệnh lừa mô hình (Prompt Injection qua log) | Kiểm soát bằng công thức `Confidence Score` định lượng, `Whitelist`, khóa chặt trong `Parameterized Runbook` và nút `1-click Rollback` |
 
 ---
 
@@ -177,38 +237,60 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:
+Bài của nhóm nằm ở ô: **Độ mơ hồ Cao × Độ phức tạp Cao** (kết hợp một phần **Độ mơ hồ Thấp × Độ phức tạp Thấp** ở bước lọc nhiễu đầu vào).
 
 Vì sao:
+
+- **Độ mơ hồ cao ở triệu chứng đầu vào:** Cùng một biểu hiện tăng vọt mã lỗi `502`/`504` hoặc `400`/`404` tại tầng cổng đón lưu lượng (Nginx) có thể bắt nguồn từ rất nhiều kịch bản khác nhau: đợt tăng lưu lượng hợp lệ vào sáng đầu tuần, máy khách bị rớt mạng đồng loạt, kẻ tấn công dò quét lỗ hổng bảo mật, lỗi phân giải DNS nội bộ, hay một dịch vụ backend phía sau bị treo kết nối database. Không thể nhìn riêng một dòng log ở cổng vào mà biết ngay bản chất sự cố.
+- **Độ phức tạp cao ở đường điều tra và quyết định phản ứng:** Hạ tầng thực tế có hàng chục nguồn log rời rạc ở nhiều tầng. Thứ tự cần mở tiếp nguồn log nào phụ thuộc hoàn toàn vào phát hiện ở bước trước đó (rẽ nhánh động nhiều vòng), sau đó còn phải tổng hợp độ tin cậy (`Confidence Score`) để quyết định tự cô lập ngay hay chuyển cho con người duyệt (`HITL`).
+
+| Ma trận phân loại tác vụ trong bài toán của nhóm | Độ phức tạp Thấp (1-2 bước cố định) | Độ phức tạp Cao (Nhiều bước, rẽ nhánh động qua nhiều nguồn log) |
+|---|---|---|
+| **Độ mơ hồ Cao** (Triệu chứng đa nghĩa, cần suy luận ngữ cảnh liên tầng) | Tóm tắt và giải thích một đoạn log lỗi đơn lẻ -> *Phù hợp: LLM đơn lẻ* | **Bài toán chính của nhóm:** Tự chủ chọn nhánh điều tra qua hàng chục nguồn log và phân quyền cô lập sự cố theo `Confidence Score` + `HITL` -> ***Phù hợp: Agent có kiểm soát (Bounded Autonomy)*** |
+| **Độ mơ hồ Thấp** (Quy tắc rõ ràng, định lượng được) | Lọc bỏ bản ghi giữ phiên (WebSocket/cache), tính ngưỡng cửa sổ trượt theo thứ/giờ, kiểm tra `Whitelist` -> ***Phù hợp: Rule (Bước 1)*** | Đóng gói hồ sơ sự cố theo mẫu cố định sau khi đã biết rõ nguồn lỗi -> *Phù hợp: Workflow tĩnh* |
 
 ### 6.2. So sánh 4 mức
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| **No AI** (sửa quy trình) | Viết tài liệu hướng dẫn tra cứu (Runbook), gom log tập trung về một màn hình (OpenSearch/Loki) và chia lịch trực đêm | Khi hạ tầng nhỏ (chỉ có 1-2 máy chủ), ít sự cố ngoài giờ và luôn có kỹ sư thức trực nhìn màn hình 24/7 | Vào ban đêm vẫn mất 30-60 phút mới có người thức dậy đọc log; kỹ sư vẫn phải tự tra chéo thủ công qua hàng chục nguồn log khi sự cố phức tạp | Không (chỉ dùng làm nền tảng gom dữ liệu) |
+| **Rule** | Đặt ngưỡng tĩnh hoặc công thức thống kê cửa sổ trượt trên tỷ lệ lỗi/lưu lượng; dùng biểu thức chính quy (`Regex`) tách log giữ phiên và chặn IP cố định khi vượt ngưỡng | Khi chỉ cần lọc nhiễu đầu vào hoặc chặn các mẫu tấn công đơn giản đã biết trước cấu trúc cố định | Nếu chỉ báo động thì ban đêm không ai xử lý kịp; nếu cho `Rule` tự động chặn thẳng khi vượt ngưỡng thì rất dễ khóa nhầm cổng đối tác hoặc người dùng thật lúc cao điểm | Chọn làm **Bước 1 (Màng lọc nhiễu đầu vào)** và kiểm tra `Whitelist`, nhưng không đủ cho toàn bộ bài toán |
+| **Workflow** | Chuỗi bước cố định viết sẵn: Nhận cảnh báo -> Chạy cố định 3 câu truy vấn lấy log -> Đưa vào LLM tóm tắt -> Gửi tin nhắn báo kỹ sư trực ca | Khi công ty chỉ có 2-3 file log cố định (như chỉ có duy nhất log Nginx) và mục tiêu chỉ dừng ở việc gửi bản tóm tắt cho người đọc | **Không đủ cho thực tế đa nguồn log và phản ứng ban đêm:** Nếu viết cứng lệnh kéo toàn bộ hàng chục nguồn log mỗi lần có cảnh báo thì vừa quá tải chi phí token vừa chậm; nếu chỉ kéo cố định 1-2 nguồn thì bỏ sót nguyên nhân gốc ở tầng khác; đồng thời `Workflow` tĩnh chỉ biết gửi tin nhắn chứ không thể tự đánh giá độ tin cậy để cô lập sự cố ban đêm rồi tự kiểm tra lại sau 2 phút | Chọn làm **nhánh phụ (`HITL` đóng gói bằng chứng)**, không đủ làm kiến trúc chính |
+| **Agent** | **Agent có kiểm soát (`Bounded Autonomy`):** Từ triệu chứng ở cổng vào, Agent tự chọn công cụ chỉ đọc để mở tiếp đúng nguồn log liên quan, tính `Confidence Score` tổng hợp, tự kích hoạt `Parameterized Runbook` nếu `>= 85%` (hoặc chuyển `HITL` nếu `60% - < 85%`), tự đọc lại log kiểm chứng sau 2 phút và cung cấp nút `1-click Rollback` | Khi có hàng chục nguồn log phân tán cần rẽ nhánh điều tra linh hoạt theo ngữ cảnh, đồng thời cần rút ngắn thời gian cô lập sự cố ban đêm xuống dưới 5 phút mà vẫn an toàn | Nguy cơ mô hình tự chấm điểm tự tin ảo, bị đánh lừa bởi nội dung log độc hại (Prompt Injection) hoặc gọi nhầm hành động nếu không khóa chặt quyền hạn | **CHỌN** (kết hợp `Rule` ở đầu vào, giới hạn trong `Parameterized Runbook`, phân tầng theo `Confidence Score` + `HITL`, và chạy Pilot từ tầng cổng Nginx trước) |
 
-**Mức chọn:**
+**Mức chọn:** Kiến trúc lai **Rule + Agentic AI có kiểm soát (`Bounded Autonomy` theo cột mốc `Confidence Score` kết hợp `HITL`)**.
 
-**Vì sao không chọn mức đơn giản hơn:**
+**Vì sao không chọn mức đơn giản hơn (`Rule` hoặc `Workflow` tĩnh):**
+
+1. **Lý do không dừng ở `Rule`:** `Rule` không hiểu được mối liên hệ ngữ nghĩa xuyên qua nhiều tầng hệ thống (ví dụ phân biệt giữa lỗi `502` do một cuộc tấn công dò quét lỗ hổng với lỗi `502` do dịch vụ backend đang khởi động lại hoặc đứt kết nối DNS). Nếu dùng `Rule` để tự động chặn IP vào ban đêm thì tỷ lệ chặn nhầm người dùng hợp lệ rất cao.
+2. **Lý do `Workflow` tĩnh không đủ (luận điểm cốt lõi):**
+   - Nếu bài toán chỉ có 2 file log tĩnh thì `Workflow` cố định là đủ. Nhưng trong hạ tầng doanh nghiệp thực tế có hàng chục nguồn log khác nhau (cổng proxy Nginx, tường lửa, DNS, dịch vụ xác thực, hàng loạt microservice và database), đường đi điều tra không cố định: mã lỗi `504` hướng Agent đi kiểm tra độ trễ upstream và database, trong khi chuỗi `400`/`404` bất thường hướng Agent đi kiểm tra log tường lửa và mẫu khai thác lỗ hổng. Một `Workflow` tuyến tính không thể tự chọn công cụ tra cứu theo từng giả thuyết.
+   - Hơn nữa, bài toán đòi hỏi khả năng **tự chủ ra quyết định ngăn chặn vào ban đêm** kèm **vòng lặp tự kiểm chứng (`Self-Check`)** sau khi hành động. `Agent` mới có khả năng thực hiện vòng lặp *Quan sát triệu chứng -> Chọn nguồn log kiểm tra -> Chấm điểm `Confidence Score` -> Thực thi Runbook an toàn (nếu `>= 85%`) -> Đọc lại log sau 2 phút để xác nhận kết quả hoặc tự Rollback*.
+   - Để kiểm soát rủi ro kỹ thuật và vừa sức thử nghiệm (Pilot), nhóm thu hẹp điểm khởi đầu ở tầng cổng đón lưu lượng (Nginx) trước khi mở rộng danh mục công cụ đọc log sang các tầng sâu hơn.
 
 ### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| **Prediction** - AI dự đoán / tạo ra gì? | 1. Dự đoán nhánh nguồn log cần mở tiếp theo để tìm nguyên nhân gốc.<br>2. Xác định nguyên nhân khả dĩ kèm trích dẫn dòng log gốc (timestamp, dịch vụ, mã lỗi).<br>3. Tính điểm tự tin tổng hợp (`Confidence Score` từ `0-100%`) và đề xuất hàm khắc phục tham số hóa (`Parameterized Runbook`) tương ứng. |
+| **Judgment** - con người cân nhắc, quyết định gì? | 1. **Ở giai đoạn thiết kế:** Con người quy định công thức tính `Confidence Score`, thiết lập các cột mốc phân quyền (`60%`, `85%`), danh sách trắng (`Whitelist`) và danh mục hàm Runbook được phép gọi.<br>2. **Trong lúc vận hành:** Với các ca có `Confidence Score` từ `60% đến < 85%` hoặc chạm tới dịch vụ cốt lõi dùng chung, kỹ sư trực ca xem xét bộ bằng chứng đã gom sẵn để bấm **Duyệt** hoặc **Bác bỏ** (`HITL`), hoặc bấm **Hoàn tác 1 chạm (`Rollback`)** nếu phát hiện Agent chặn sai ở ca tự động. |
+| **Action** - hành động cuối cùng là gì, ai làm? | - **Nếu `Confidence Score >= 85%` và thuộc phạm vi cục bộ an toàn ở cổng vào:** Agent tự động kích hoạt `Parameterized Runbook` (ví dụ áp giới hạn tốc độ hoặc cô lập tạm thời IP tấn công trong 15 phút), sau đó tự đọc log kiểm tra lại sau 2 phút.<br>- **Nếu `60% <= Confidence Score < 85%` hoặc đụng dịch vụ cốt lõi:** Kỹ sư trực ca bấm xác nhận thực thi hoặc chuyển tiếp hồ sơ bằng chứng cho đội backend sửa lỗi. |
+| **Outcome** - đo kết quả bằng gì? | 1. Thời gian từ lúc phát sinh bất thường đến lúc cô lập xong hoặc khoanh vùng đúng nguyên nhân gốc (mục tiêu giảm từ `90-120 phút` xuống `< 5 phút` với ca tự động và `< 15 phút` với ca `HITL`).<br>2. Tỷ lệ cảnh báo sai dưới `15%`.<br>3. Số lần tự động chặn nhầm dải IP nội bộ / đối tác hợp lệ bằng `0`. |
+| **Input** - AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | 1. Luồng log thời gian thực từ cổng vào (như Nginx `access.log`, `error.log`) và quyền truy cập **chỉ đọc (`Read-only`)** tới log các dịch vụ liên quan (đã có sẵn trên máy chủ công ty).<br>2. Số liệu thống kê baseline theo khung giờ/thứ trong tuần (tự tổng hợp từ log lịch sử).<br>3. Danh sách trắng (`Whitelist` IP/dịch vụ) và bộ kịch bản chuẩn (`Parameterized Runbooks`). |
+| **Feedback** - lấy phản hồi ở đâu để cải thiện? | 1. Kết quả tự kiểm tra log 2 phút sau khi thực thi (`Self-Check`: tỷ lệ lỗi `5xx`/`4xx` có giảm thật không).<br>2. Hành động bấm nút của kỹ sư trực ca (`Duyệt`, `Bác bỏ` ở nhánh `HITL`, hoặc bấm `1-click Rollback`).<br>3. Nhãn nguyên nhân gốc thực tế sau mỗi biên bản họp rút kinh nghiệm sự cố (Post-mortem) để hiệu chỉnh lại trọng số `Confidence Score`. |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+- **Người dùng muốn được hỗ trợ (`augment`) hay giao hẳn việc (`automate`)? Bằng chứng:**
+  - Người vận hành cần **sự kết hợp phân tầng theo độ tin cậy và thời điểm (`Bounded Autonomy`)**, không chọn cực đoan một bên:
+    1. **Giao việc có điều kiện (`Automate` kèm `Rollback`) khi `Confidence Score >= 85%`:** Vào ban đêm lúc không có người canh màn hình, đối với những đợt dò quét lỗ hổng hoặc gửi request làm nghẽn cổng vào đã rõ bằng chứng và có thể xử lý bằng hành động cục bộ đảo ngược được (như khóa tạm 1 IP ngoại lai trong 15 phút), kỹ sư muốn hệ thống **tự động cô lập ngay** để bảo vệ dịch vụ và không bị dựng dậy lúc nửa đêm.
+    2. **Hỗ trợ ra quyết định (`Augment` qua `HITL`) khi `60% <= Confidence Score < 85%` hoặc đụng dịch vụ cốt lõi:** Với các sự cố liên tầng phức tạp hoặc chạm tới cơ sở dữ liệu/dịch vụ dùng chung, kỹ sư tuyệt đối không muốn máy tự ý khởi động lại hay sửa cấu hình, mà muốn Agent **đóng gói sẵn bằng chứng từ nhiều nguồn log kèm lệnh đề xuất** để con người kiểm tra và bấm duyệt trong vài phút.
+- **AI sai kiểu nào tệ hơn, báo nhầm (`False Positive`) hay bỏ sót (`False Negative`)? Vì sao, và thiết kế đã xử lý thế nào:**
+  - Mức độ nguy hại phụ thuộc vào **tầng hành động**, nên thiết kế tách làm 2 cơ chế xử lý riêng:
+    1. **Ở tầng Tự động thực thi lệnh chặn (Auto-containment): Sai kiểu Báo nhầm / Chặn nhầm (`False Positive`) tệ hơn rất nhiều.** Nếu Agent tự động khóa nhầm IP cổng thanh toán đối tác hoặc chặn nhầm người dùng thật đang truy cập cao điểm, chính hệ thống AI sẽ gây ra sự cố gián đoạn diện rộng.
+       - *Cách thiết kế xử lý:* Đặt ngưỡng tự thực thi rất cao (`Confidence Score >= 85%`), bắt buộc đối chiếu `Whitelist` bằng `Rule` cứng, cấm sinh lệnh shell tự do (chỉ gọi `Parameterized Runbook` có thời hạn tự mở `TTL 15 phút`), tự kiểm tra lại log sau 2 phút và trang bị nút **Hoàn tác 1 chạm (`1-click Rollback`)**.
+    2. **Ở tầng Phát hiện và Gom bằng chứng cảnh báo (Detection & Triage): Sai kiểu Bỏ sót (`False Negative`) sự cố nghiêm trọng tệ hơn.** Nếu bỏ sót dấu hiệu dịch vụ bắt đầu treo dây chuyền vào ban đêm, sự cố sẽ kéo dài hàng giờ tới sáng hôm sau.
+       - *Cách thiết kế xử lý:* Hạ ngưỡng thu thập bằng chứng xuống `60%`; mọi trường hợp nghi ngờ từ `60% đến < 85%` mà Agent chưa đủ tự tin tự xử lý đều không bị bỏ qua, mà được gom đầy đủ bằng chứng chuyển sang nhánh `HITL` cho kỹ sư trực ca quyết định.
 
 ---
 

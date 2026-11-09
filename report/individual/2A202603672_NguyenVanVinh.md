@@ -74,17 +74,17 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 Quy trình nháp hiện tại:
 
-```text
-HIỆN TẠI — 6 bước, 5–6 giờ/vòng, 6/6 bước thủ công
+**HIỆN TẠI** — 6 bước, 6/6 bước thủ công. Tổng đo được: 5–6 giờ/vòng × 2 vòng/gói. Ô viền đỏ là BOTTLENECK (bước 2–3: dò từng dòng bằng mắt).
 
-[1 Mở 7 sheet hạng mục: 10' (ước)]
-→ [2 So khối lượng chào vs mời thầu từng dòng: ~2 giờ (ước)] ┐
-→ [3 So đơn giá giữa 4 nhà thầu: ~2 giờ (ước)]             ┘ ← BOTTLENECK (bước 2–3: dò từng dòng bằng mắt)
-→ [4 Cộng phát sinh từng nhà thầu: 30' (ước)]
-→ [5 Ghi chú dòng bất thường: 30' (ước)]
-→ [6 Gửi lãnh đạo: 10' (ước)]
-
-Tổng đo được: 5–6 giờ/vòng × 2 vòng/gói
+```mermaid
+flowchart LR
+  A["1. Mở 7 sheet<br/>hạng mục<br/>10' (ước)"] --> B["2. So khối lượng chào<br/>với mời thầu từng dòng<br/>~2 giờ (ước)<br/>⚠ BOTTLENECK"]
+  B --> C["3. So đơn giá<br/>giữa 4 nhà thầu<br/>~2 giờ (ước)<br/>⚠ BOTTLENECK"]
+  C --> D["4. Cộng phát sinh<br/>từng nhà thầu<br/>30' (ước)"]
+  D --> E["5. Ghi chú<br/>dòng bất thường<br/>30' (ước)"]
+  E --> F["6. Gửi lãnh đạo<br/>10' (ước)"]
+  classDef bn fill:#ffe0e0,stroke:#d00,stroke-width:2px,color:#000
+  class B,C bn
 ```
 
 ### Problem Card #2 — Gom bảng chào giá vào file tổng hợp (gộp #1, #2, #4)
@@ -104,15 +104,17 @@ Tổng đo được: 5–6 giờ/vòng × 2 vòng/gói
 
 Quy trình nháp hiện tại:
 
-```text
-HIỆN TẠI — 5 bước/vòng, khoảng 6–7 giờ/vòng, 5/5 bước thủ công
+**HIỆN TẠI** — 5 bước/vòng, khoảng 6–7 giờ/vòng, 5/5 bước thủ công; gói gần nhất 2 vòng. Ô viền đỏ là BOTTLENECK (tính trên mỗi nhà thầu).
 
-[1 Nhận 4 file: 5']
-→ [2 Kiểm đúng/sai mẫu: 15' (ước)]
-→ [3 Copy 3 nhà thầu đúng mẫu × 7 sheet: 3–4 giờ]
-→ [4 Ghép 1 nhà thầu sai mẫu: 2,5 giờ] ← BOTTLENECK (tính trên mỗi nhà thầu)
-→ [5 Kiểm tổng tiền khớp file gốc: 20' (ước)]
-↺ Vòng 2: lặp lại toàn bộ (gói gần nhất: 2 vòng)
+```mermaid
+flowchart LR
+  A["1. Nhận 4 file<br/>5'"] --> B["2. Kiểm đúng/sai mẫu<br/>15' (ước)"]
+  B --> C["3. Copy 3 nhà thầu<br/>đúng mẫu × 7 sheet<br/>3–4 giờ"]
+  C --> D["4. Ghép 1 nhà thầu<br/>sai mẫu<br/>2,5 giờ<br/>⚠ BOTTLENECK"]
+  D --> E["5. Kiểm tổng tiền<br/>khớp file gốc<br/>20' (ước)"]
+  E -. "Vòng 2: lặp lại toàn bộ" .-> A
+  classDef bn fill:#ffe0e0,stroke:#d00,stroke-width:2px,color:#000
+  class D bn
 ```
 
 ### Problem Card #3 — Đánh giá năng lực theo tiêu chí
@@ -132,15 +134,17 @@ HIỆN TẠI — 5 bước/vòng, khoảng 6–7 giờ/vòng, 5/5 bước thủ 
 
 Quy trình nháp hiện tại:
 
-```text
-HIỆN TẠI — 6 bước, khoảng 3 giờ công/nhà thầu (tổng của 2 người) × 4 = khoảng 12 giờ công/gói
+**HIỆN TẠI** — 6 bước, khoảng 3 giờ công/nhà thầu (tổng của 2 người) × 4 = khoảng 12 giờ công/gói. Ô viền đỏ là BOTTLENECK.
 
-[1 Mở hồ sơ: 5' (ước)]
-→ [2 Tìm tài liệu cho từng tiêu chí: ~1,5 giờ (ước)] ← BOTTLENECK
-→ [3 So với yêu cầu tối thiểu: 30' (ước)]
-→ [4 Ghi kết luận + lý do: 40' (ước)]
-→ [5 Hai người đối chiếu: 10' (ước)]
-→ [6 Tổng hợp bảng: 5' (ước)]
+```mermaid
+flowchart LR
+  A["1. Mở hồ sơ<br/>5' (ước)"] --> B["2. Tìm tài liệu<br/>cho từng tiêu chí<br/>~1,5 giờ (ước)<br/>⚠ BOTTLENECK"]
+  B --> C["3. So với<br/>yêu cầu tối thiểu<br/>30' (ước)"]
+  C --> D["4. Ghi kết luận<br/>+ lý do<br/>40' (ước)"]
+  D --> E["5. Hai người<br/>đối chiếu<br/>10' (ước)"]
+  E --> F["6. Tổng hợp bảng<br/>5' (ước)"]
+  classDef bn fill:#ffe0e0,stroke:#d00,stroke-width:2px,color:#000
+  class B bn
 ```
 
 ### Card muốn pitch nhất

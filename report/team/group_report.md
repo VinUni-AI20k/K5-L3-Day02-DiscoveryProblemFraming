@@ -157,39 +157,57 @@ Nhóm thu hẹp problem từ “Sinh viên mất nhiều thời gian tóm tắt 
 
 ### 4.1. Quy trình hiện tại
 
-Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
-
 ```text
+HIỆN TẠI — Khi chưa có đề cương khóa trước đáng tin cậy; khoảng 3–5 giờ/môn
 
+[1. Kiểm tra tài liệu ôn tập có sẵn; nếu không đủ tin cậy, lấy slide/giáo trình mới: 5']
+  → [2. Lướt tài liệu dài để nhận biết chương và định vị nội dung cần ôn: 15']
+  → [3. Đọc dò, chọn kiến thức cốt lõi rồi tự gõ/chụp công thức, định nghĩa sang đề cương: ~210'] ← BOTTLENECK
+  → [4. Mở lại tài liệu gốc để kiểm tra ký hiệu, biến số, ngữ cảnh và phần bị bỏ sót: ~30']
+  → [5. Hoàn thiện đề cương để dùng khi ôn thi: ~10']
+
+Trường hợp có đề cương khóa trước đáng tin cậy, sinh viên có thể dùng lại và không thực hiện toàn bộ quy trình này.
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Sinh viên | Slide/giáo trình hiện tại và đề cương hoặc tài liệu từ khóa trước (nếu có) | Quyết định dùng tài liệu sẵn có hay tự tổng hợp từ bộ tài liệu mới | Khoảng 5 phút / môn | Nếu đề cương cũ đáng tin cậy thì có thể bỏ qua phần lớn công việc tự tổng hợp; pain tập trung ở môn có tài liệu mới hoặc chưa có bản tổng hợp phù hợp. |
+| 2 | Sinh viên | Bộ slide/giáo trình dài, thường trên 200 trang theo candidate được chọn | Nhận biết cấu trúc chương và các phần cần ôn | Khoảng 15 phút / môn | Lướt tài liệu để định vị nội dung; tài liệu có thể dài hoặc chưa có cấu trúc ôn tập phù hợp. |
+| 3 | Sinh viên | Slide/giáo trình theo chương | Đề cương cá nhân gồm kiến thức cốt lõi, định nghĩa và công thức | Khoảng 210 phút / môn; tổng thời gian được ước tính khoảng 3–5 giờ tùy môn | **Bottleneck chính:** phải đọc dò, chọn lọc rồi gõ lại hoặc chụp công thức/định nghĩa thủ công. Đây là phần mất thời gian nhất; công thức và thuật ngữ chuyên ngành cũng dễ bị ghi thiếu hoặc sai. |
+| 4 | Sinh viên | Đề cương đang làm và slide/giáo trình gốc | Nội dung đã đối chiếu được ký hiệu, biến số, ngữ cảnh và nguồn | Khoảng 30 phút / môn | Khi thiếu ngữ cảnh hoặc lo ngại sai ký hiệu, sinh viên phải tìm lại trang gốc. Cần truy xuất được nguồn để kiểm tra độ chính xác, nhất là với công thức và hình/sơ đồ. |
+| 5 | Sinh viên | Đề cương đã tổng hợp và đối chiếu | Tài liệu dùng để ôn thi | Khoảng 10 phút / môn | Hoàn thiện định dạng để đọc, in hoặc mở trên thiết bị; đây không phải pain trọng tâm. |
 
-**Bottleneck chính:**
+**Bottleneck chính:** Bước 3 ước tính chiếm khoảng 78% thời gian soạn tài liệu, kéo theo bước 4 phát sinh thêm thời gian để kiểm tra độ chính xác và tìm lại nguồn. Điều này khớp với kết quả CP4: nhu cầu không chỉ là tóm tắt nhanh, mà còn phải đáng tin cậy và đối chiếu được với tài liệu gốc.
 
 ### 4.2. Quy trình tương lai
 
-Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
 ```text
+TƯƠNG LAI — Workflow hỗ trợ tổng hợp; chỉ áp dụng khi chưa có đề cương khóa trước đáng tin cậy
 
+[1. Con người: Chọn slide/giáo trình cần ôn và xác nhận được phép dùng công cụ xử lý: ~5']
+  → [2. Rule: Trích xuất văn bản/OCR, chia theo chương và giữ thông tin trang nguồn;
+     con người kiểm tra nhanh file scan hoặc trang trích xuất lỗi: ~15']
+  → [3. AI: Tạo bản nháp đề cương theo chương, nêu khái niệm/công thức cốt lõi
+     và gắn trang nguồn để tra cứu; không tự thêm kiến thức ngoài tài liệu: ~20–30'] ← GIẢM BOTTLENECK
+  → [4. Con người: Đối chiếu công thức, ký hiệu, thuật ngữ, độ bao phủ và trích dẫn
+     với slide gốc; sửa hoặc bổ sung phần sai/thiếu: ~40–50']
+  → [5. Con người: Hoàn thiện đề cương để ôn thi: ~10']
+
+Boundary: Không dùng bản nháp AI như đáp án đã xác thực; mọi công thức, nội dung trích từ
+hình/sơ đồ và phần không có trích dẫn rõ ràng phải được kiểm tra trên slide gốc.
+Nếu trích xuất hoặc AI sai/thiếu, bỏ phần lỗi và tự đọc, chép lại từ tài liệu gốc như quy trình hiện tại.
 ```
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 5 | 5 | Cùng phạm vi: một môn chưa có đề cương khóa trước đáng tin cậy. |
+| Tổng thời gian | ~270 phút (ước tính; khoảng 3–5 giờ tùy môn) | ~90–110 phút mục tiêu | Ước tính ban đầu, cần đo thử trên bộ slide thật |
+| Số bước thủ công | 5/5 | 3/5 hoàn toàn thủ công; bước 2 có kiểm tra thủ công | Bước 3 chuyển việc tạo bản nháp sang AI; người học vẫn kiểm tra và chịu trách nhiệm nội dung cuối. |
+| Bottleneck chính | Đọc dò và tự gõ/chụp kiến thức cốt lõi (~210 phút) | Đối chiếu độ chính xác, nhất là công thức và nội dung từ hình (~40–50 phút) | Không cắt giảm bước kiểm tra để đổi lấy tốc độ; trích dẫn trang giúp tìm lại nguồn nhanh hơn. |
+| Rủi ro mới phát sinh | Sai sót khi chép tay, bỏ sót kiến thức | AI/OCR có thể viết sai ký hiệu, bỏ sót nội dung hoặc gắn nguồn không khớp | Kiểm tra với slide gốc; nếu không xác minh được thì tự xử lý phần đó theo quy trình hiện tại. |
 
 ---
 
@@ -197,16 +215,20 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Sinh viên ôn thi một môn có slide/giáo trình dài hoặc mới cập nhật và chưa có đề cương khóa trước đáng tin cậy. |
+| **Quy trình** | Sinh viên kiểm tra tài liệu có sẵn, chọn slide/giáo trình cần ôn, rồi tự đọc, chọn lọc và gõ/chụp kiến thức thành đề cương; sau đó tra lại tài liệu gốc để kiểm tra công thức, thuật ngữ và phần bị bỏ sót. Công cụ được đề xuất hỗ trợ trích xuất/chia tài liệu và tạo bản nháp có dẫn trang; sinh viên rà soát, chỉnh sửa và hoàn thiện bản dùng để ôn. |
+| **Bottleneck** | Tự đọc dò và tổng hợp thủ công kiến thức cốt lõi, đặc biệt là công thức và thuật ngữ; bước này được ước tính khoảng 210 phút/môn. Việc tìm lại trang gốc để xác minh nội dung cũng phát sinh thêm thời gian. |
+| **Impact** | Quy trình hiện tại mất khoảng 3–5 giờ/môn theo ước tính của nhóm, làm giảm thời gian dành cho ôn tập và khiến sinh viên dễ bỏ sót hoặc ghi sai kiến thức. Mục tiêu là giảm thời gian tạo đề cương nhưng vẫn giữ khả năng kiểm tra nội dung với tài liệu gốc. |
+| **Success Metric** (baseline → target, cách đo) | Baseline ước tính ~270 phút; mục tiêu ban đầu 90–110 phút/môn. Đo thời gian thực tế từ lúc chọn tài liệu đến khi hoàn thiện đề cương đã rà soát trên cùng một bộ slide/giáo trình. Đồng thời, lập trước checklist các ý chính và mẫu công thức cần có, rồi đối chiếu đề cương với tài liệu gốc: ghi nhận nội dung bị bỏ sót, công thức/ký hiệu sai và trích dẫn không truy được về nguồn. Tiêu chí chất lượng tối thiểu của mẫu là không có lỗi trọng yếu về công thức/ký hiệu và mọi nội dung được lấy mẫu đều truy được về nguồn; theo dõi độ bao phủ bằng checklist. Mục tiêu thời gian và chất lượng đều cần thử nghiệm, chưa phải kết quả đã xác nhận. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI chỉ tạo bản nháp dựa trên tài liệu đầu vào, không tự thêm kiến thức ngoài nguồn hoặc được xem là đáp án đã xác thực. Sinh viên phải kiểm tra công thức, ký hiệu, nội dung từ hình/sơ đồ, độ bao phủ và trích dẫn với tài liệu gốc; phần sai, thiếu nguồn hoặc không xác minh được phải tự xử lý theo quy trình hiện tại. Bản tạo ra mặc định thuộc về cá nhân; chỉ chia sẻ tự nguyện sau khi rà soát, ghi rõ môn/học kỳ/phiên bản tài liệu và được phép chia sẻ. |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
 
--
+1. Sẽ có nhiều người cùng ôn một môn. Có nên tính đến việc xây dựng một kho chung để chỉ cần một người làm đề cương, những người khác có thể dùng theo đề cương chuẩn đó không?
+- **Phản biện của nhóm:** Ý tưởng kho chung nằm ngoài phạm vi hiện tại. Problem Statement v0 chỉ tập trung rút gọn quy trình mỗi sinh viên xây dựng đề cương từ tài liệu của mình; chưa giải quyết việc tạo, quản lý hay chọn một đề cương chuẩn dùng chung.
+- **Hướng nối tiếp:** Có thể phát triển một hệ thống chia sẻ, nơi nhiều phiên bản đề cương được đăng song song và cộng đồng sinh viên đánh giá để giúp người học lựa chọn bản phù hợp cho việc ôn thi. Đây là hướng phát triển sau, không phải phần của giải pháp đang xác định.
+2. Nếu chỉ đo thời gian tạo đề cương thì chưa biết bản nháp có đủ chính xác và đầy đủ để dùng ôn tập hay không; cần có tiêu chí chất lượng, không chỉ tiêu chí tốc độ.
+- **Nhóm đồng ý:** Bổ sung đánh giá chất lượng bằng cách đối chiếu một checklist ý chính và mẫu công thức với tài liệu gốc, ghi nhận nội dung bỏ sót, lỗi công thức/ký hiệu và trích dẫn không truy được nguồn. Thời gian mục tiêu chỉ có ý nghĩa khi mẫu kiểm tra không có lỗi trọng yếu về công thức/ký hiệu và các nội dung được lấy mẫu đều truy được về nguồn; độ bao phủ được theo dõi bằng checklist.
 
 ---
 

@@ -180,36 +180,62 @@ Tổng hợp:
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 
 ```text
+HIỆN TẠI — 6 bước, khoảng 45–50 phút thao tác cho một chu kỳ họp + theo dõi,
+6/6 bước thủ công (không tính thời gian họp và thời gian thực hiện task)
 
+[1 Đọc lại ghi chú/tin nhắn sau họp: 10']
+→ [2 Tách task, owner và deadline: 15'] ← BOTTLENECK
+→ [3 Gửi danh sách phân công vào nhóm chat: 5']
+→ [4 Thành viên báo trạng thái rải rác trong chat: không cố định]
+→ [5 Trưởng nhóm tìm và đối chiếu các cập nhật: 15']
+→ [6 Trưởng nhóm nhắn nhắc hoặc hỏi lại: 5']
 ```
 
-| Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
+| Bước | Actor | Input | Output | Thời gian / tần suất | Handoff / ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Trưởng nhóm / người ghi chép | Ghi chú họp và lịch sử chat Zalo/Discord | Các đoạn chứa quyết định, task hoặc deadline | Khoảng 10 phút sau mỗi buổi họp | Chuyển các đoạn liên quan sang bước 2; có thể phải lướt lại nhiều tin nhắn |
+| 2 | Trưởng nhóm / người ghi chép | Các đoạn thông tin từ bước 1 | Danh sách task gồm nội dung, owner và deadline | Khoảng 15 phút sau mỗi buổi họp | **Bottleneck:** chuyển danh sách cho cả nhóm; dễ thiếu owner/deadline hoặc hiểu nhầm người thực hiện |
+| 3 | Trưởng nhóm | Danh sách task đã tổng hợp | Tin nhắn phân công trong nhóm chat | Khoảng 5 phút sau mỗi buổi họp | Handoff sang từng thành viên; danh sách có thể bị trôi khi xuất hiện tin nhắn mới |
+| 4 | Thành viên | Task được giao và kết quả đang thực hiện | Tin nhắn “đang làm/đã xong/bị chặn” | Không cố định trong tuần | Handoff ngược lại cho trưởng nhóm; cách báo trạng thái chưa thống nhất |
+| 5 | Trưởng nhóm | Lịch sử chat và các cập nhật từ thành viên | Bảng trạng thái tạm thời trong đầu/ghi chú riêng | Khoảng 15 phút cho mỗi lần kiểm tra tiến độ | Phải tìm và đối chiếu thủ công; dễ bỏ sót hoặc ghi nhận trùng |
+| 6 | Trưởng nhóm | Trạng thái đã đối chiếu và deadline | Tin nhắn nhắc việc hoặc câu hỏi xác nhận | Khoảng 5 phút cho mỗi lần kiểm tra | Handoff cho thành viên cần cập nhật; phụ thuộc vào trưởng nhóm chủ động nhắc |
 
-**Bottleneck chính:**
+**Bottleneck chính:** Bước 2 — chuyển nội dung họp/chat không có cấu trúc thành danh sách task có đủ nội dung, owner và deadline. Bằng chứng hiện có trong báo cáo cá nhân ghi nhận mất 25–30 phút sau một buổi họp để đọc lại và tổng hợp action item; đã có một task bị trễ vì hai thành viên hiểu nhầm người thực hiện. Khi cần tìm lại quyết định/tài liệu cũ, một thành viên còn mất 15–20 phút/lần, khoảng 3–4 lần/tuần. CP4 cần xác nhận các tín hiệu này với người dùng ngoài nhóm.
 
 ### 4.2. Quy trình tương lai
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
 ```text
+TƯƠNG LAI — 5 bước, mục tiêu dưới 10 phút thao tác sau mỗi buổi họp,
+3/5 bước có thao tác thủ công
 
+[1 Người ghi chép chọn ghi chú/đoạn chat được phép dùng: 2'] ← CON NGƯỜI
+→ [2 Kiểm tra đủ trường task–owner–deadline: <1']           ← RULE
+→ [3 Trích xuất action item thành bản nháp: 1']              ← AI
+→ [4 Trưởng nhóm đối chiếu nguồn, sửa và xác nhận: 5']       ← CON NGƯỜI
+→ [5 Xác nhận cập nhật bảng task; gửi/nhắc theo hạn: 1']      ← CON NGƯỜI + RULE
+
+BOUNDARY:
+- AI chỉ xử lý ghi chú hoặc đoạn chat được thành viên chủ động cung cấp; không tự đọc chat riêng.
+- Nếu nguồn không nêu owner hoặc deadline, AI phải đánh dấu “thiếu thông tin”, không tự suy đoán.
+- AI không tự giao việc, đổi deadline, đánh dấu hoàn thành hoặc gửi thông báo cho cả nhóm.
+- Trưởng nhóm phải đối chiếu từng task, owner và deadline với nội dung nguồn trước khi xác nhận.
+
+PHƯƠNG ÁN QUAY VỀ:
+- Nếu AI trích xuất thiếu/sai hoặc không hoạt động, trưởng nhóm bỏ bản nháp AI và điền thủ công
+  template task–owner–deadline–status. Rule nhắc hạn vẫn chạy trên dữ liệu đã được xác nhận.
 ```
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 6 | 5 | Gộp việc tìm/chép lại thành một bản nháp có cấu trúc |
+| Tổng thời gian thao tác | Khoảng 45–50 phút cho một chu kỳ họp + kiểm tra tiến độ | Dưới 10 phút sau họp; việc nhắc hạn chạy từ dữ liệu đã xác nhận | Baseline 45–50 phút là tổng ước lượng từ các bước; CP4 cần kiểm chứng |
+| Số bước thủ công | 6/6 | 3/5 | Trưởng nhóm vẫn chọn nguồn, duyệt và xác nhận cập nhật |
+| Bottleneck chính | Tách task/owner/deadline và tìm lại cập nhật trong chat | Trưởng nhóm kiểm tra và sửa bản nháp | Điểm kiểm tra của con người được giữ để bảo đảm chất lượng |
+| Rủi ro mới phát sinh | — | AI bỏ sót task, gán nhầm owner/deadline; lộ nội dung chat | Xử lý bằng boundary, HITL và phương án quay về |
 
 ---
 
@@ -217,16 +243,17 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Sinh viên làm bài tập/dự án theo nhóm, đặc biệt là trưởng nhóm hoặc người chịu trách nhiệm theo dõi tiến độ |
+| **Quy trình** | Sau buổi họp hoặc khi có task mới, nhóm phải đọc lại ghi chú/tin nhắn, tách action item, xác định người phụ trách và deadline, gửi lại phân công, nhận cập nhật trạng thái rồi nhắc các task sắp hoặc đã trễ hạn |
+| **Bottleneck** | Chuyển nội dung thảo luận rải rác thành danh sách task có đủ nội dung, owner và deadline; riêng bước đọc lại và tổng hợp hiện mất khoảng 25–30 phút sau mỗi buổi họp và vẫn có nguy cơ hiểu nhầm hoặc bỏ sót |
+| **Impact** | Trưởng nhóm mất thời gian tổng hợp và nhắc thủ công; thông tin bị trôi trong chat có thể làm hai người hiểu nhầm phân công, trùng việc hoặc để task trễ, ảnh hưởng tiến độ và kết quả chung |
+| **Success Metric** (baseline → target, cách đo) | Thời gian tổng hợp action item sau họp từ 25–30 phút xuống dưới 10 phút, đồng thời 100% task trong nội dung nguồn có đủ task/owner/deadline hoặc được đánh dấu “thiếu thông tin”. Đo bằng cách trưởng nhóm bấm giờ từ lúc bắt đầu đọc lại nội dung đến lúc gửi danh sách đã xác nhận trong 4 buổi họp liên tiếp, rồi đối chiếu danh sách với ghi chú/chat nguồn. Baseline/target phải được cập nhật nếu CP4 cho bằng chứng khác. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI không tự truy cập chat riêng, tự giao việc, đổi owner/deadline, đánh dấu task hoàn thành hoặc tự gửi thông báo. Trưởng nhóm phải đối chiếu mọi task, owner và deadline với nội dung nguồn và xác nhận trước khi cập nhật bảng chung hoặc gửi cho thành viên. |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
 
--
+- **Phản biện từ AI:** Metric ban đầu trộn hai pain khác nhau — “tổng hợp action item sau họp” và “theo dõi tiến độ trong tuần” — nên khó biết cải thiện đến từ bước nào. Baseline cũng mới dựa trên trải nghiệm của một thành viên.
+- **Trạng thái nhóm cần xác nhận:** Đồng ý hay không với việc thu hẹp metric chính vào thời gian tổng hợp action item sau họp; sau CP4, thay dòng này bằng quyết định thật của nhóm và số liệu đã được kiểm chứng.
 
 ---
 

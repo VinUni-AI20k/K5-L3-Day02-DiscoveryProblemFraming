@@ -17,7 +17,7 @@
 | 1 | Nguyễn Trọng Hưởng | 202603607 | Trưởng nhóm, điều phối thời gian, ghi chép | trongjhuongwr |
 | 2 | Nguyễn Văn Vinh | 2A202603672 | Quy trình, dữ liệu, bottleneck và before/after | VINH1811 |
 | 3 | Đàm Tuấn Linh | 2A202603624 | Kiểm chứng, assumption map và snapshot | damlinh820 |
-| 4 | Mai Đặng Khương | 2A202603627 | Research giải pháp hiện có, kiểm nguồn | dangkhuong14 |
+| 4 | Mai Đăng Khương | 2A202603627 | Research giải pháp hiện có, kiểm nguồn | dangkhuong14 |
 | 5 | Phạm Ngọc Trung Quân | 2A202603626 | Eval, đáp án đối chiếu, phương án đơn giản | jadenphm29 |
 | 6 | Giáp Mạnh Tuyên | 2A202603648 | Mức can thiệp, boundary và bốn rủi ro | Tanashi-Titus |
 
@@ -117,3 +117,28 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Trong các nghiệp vụ đòi hỏi độ chính xác và trách nhiệm cao như đấu thầu xây dựng, AI không nhất thiết phải tự động hóa toàn bộ quy trình. Giải pháp hỗ trợ ra quyết định, có con người kiểm chứng, có thể phù hợp hơn.
 - Cần phân biệt giữa độ chính xác kỹ thuật của mô hình và độ tin cậy của toàn bộ hệ thống. Một mô hình nhận dạng hoặc phát hiện tốt vẫn có thể gây sai sót nếu thiếu bước kiểm chứng, đối chiếu ngữ cảnh và truy vết nguồn.
 - Kết quả nghiên cứu thực tế có thể làm thay đổi Problem Statement, phạm vi giải pháp và mức can thiệp AI. Việc điều chỉnh bài toán dựa trên bằng chứng là một phần quan trọng của quá trình Problem Discovery & Framing.
+
+### MaiDangKhuong-2A202603627
+
+**Phần việc phụ trách:**
+
+- CP4 — Research giải pháp hiện có và nguồn tham khảo cho bài toán đối chiếu chào giá nhà thầu.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Chuẩn bị báo cáo cá nhân gồm 5 vấn đề và 3 Problem Cards: research marketing, làm rõ user story e-commerce, kiểm thử/tài liệu API; chọn marketing làm card ưu tiên pitch cá nhân.
+- Thực hiện phần research được giao với trợ lý hỗ trợ; bàn giao mục 3.3 của báo cáo nhóm, đã tích hợp qua PR #5 theo nhật ký nhóm.
+- Cung cấp đầu vào so sánh công cụ theo bước quy trình, điểm mạnh, khoảng trống và bài học. Bản tổng hợp hiện tại đối chiếu Excel Rule, Procore Bidding và Autodesk BuildingConnected; phần Microsoft bổ trợ và chỉnh link giữ đúng nguồn theo ghi nhận review của Hưởng.
+- Cập nhật nhật ký cá nhân để phân biệt chức năng công cụ được mô tả với giả thuyết áp dụng và target chưa kiểm nghiệm. Phần sửa bốn tham chiếu thiếu đích do Hưởng review, không ghi thành công việc tôi đã tự thực hiện.
+- Đồng bộ phần hiểu bài với phạm vi Rule và trạng thái Not Yet cho pilot; không nhận vai trò phỏng vấn, xây eval, tổng hợp quy trình hoặc ra quyết định của thành viên khác.
+
+**Bằng chứng** (phần nào trong báo cáo, file nào, commit nào):
+
+- [PR #5](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/5): tích hợp phần research.
+- [Báo cáo nhóm](report/team/group_report.md), mục 3.3: bảng research hiện tại sau review.
+- [Báo cáo cá nhân](report/individual/2A202603627_MaiDangKhuong.md), mục 4–5: nhật ký bàn giao và cách dùng AI; mục 6 còn phần tự hoàn thiện.
+- Các bổ sung cá nhân trong lần cập nhật này chưa có commit/PR mới; không gán chúng vào PR #5 đã merge.
+
+**Điều mình học được từ phần nhóm:**
+
+Học được cách cùng nhóm thu hẹp bài toán, xác định đúng điểm nghẽn và tìm hiểu giải pháp có sẵn trước khi chọn công nghệ. Qua phần research, tôi thấy không phải bài toán nào cũng cần AI; đôi khi Rule đã đủ phù hợp. Mình cũng hiểu rằng chọn được giải pháp chưa có nghĩa là có thể triển khai ngay, mà còn cần kiểm tra dữ liệu và cách đánh giá kết quả.

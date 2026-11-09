@@ -95,6 +95,24 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - File cá nhân: `report/individual/2A202603695_PhamThanhTung.md`
 - Phần nhóm trong `report/team/group_report.md`: Mục 2.1 (Candidate #10, #11, #12 và nội dung phản biện), các phần CP3–CP6 liên quan đến kiểm chứng vấn đề, đề xuất quy trình và đánh giá mức can thiệp AI.
 
+### DangVietAnh-2A202603685
+
+**Phần việc phụ trách:**
+
+- Đưa ra các problem statement và đưa ra quyết định not go
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Đưa ra các problem statement, đặt câu hỏi cho các thành viên
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+- File cá nhân
+- group_report.md
+
+**Điều mình học được từ phần nhóm:**
+
+- Ý tưởng có thể nghe khả thi nhưng đến khi bàn bạc thực chất đó chỉ là triệu chứng nên not go
+
 **Điều mình học được từ phần nhóm:**
 
 - Qua quá trình làm việc nhóm, mình hiểu rõ hơn cách xác định một vấn đề thực tế và phân tích nguyên nhân trước khi đưa ra giải pháp. Mình học được cách đặt câu hỏi phản biện, kiểm chứng dữ liệu đầu vào và đánh giá tính khả thi của việc ứng dụng AI. Ngoài ra, mình nhận ra không phải vấn đề nào cũng cần dùng AI, mà cần lựa chọn giải pháp phù hợp để đảm bảo hiệu quả và hạn chế sai sót.

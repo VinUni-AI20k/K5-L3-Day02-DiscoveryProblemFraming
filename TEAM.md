@@ -13,7 +13,7 @@
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 | | | | |
-| 2 | | | | |
+| 2 | Nguyễn Lâm Tùng | 202603854 | Phụ trách CP4 — Kiểm chứng (The Mom Test) & Research | |
 | 3 | | | | |
 | 4 | | | | |
 
@@ -26,8 +26,8 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
 | CP3 — Hội tụ nhóm | | | Cluster, cây OST, bảng chấm điểm |
-| CP4 — Kiểm chứng | | | Assumption map, snapshot hoặc survey |
-| CP4 — Research | | | Bảng research có link |
+| CP4 — Kiểm chứng | Nguyễn Lâm Tùng | Cả nhóm | Assumption map, snapshot hoặc survey |
+| CP4 — Research | Nguyễn Lâm Tùng | Cả nhóm | Bảng research có link |
 | CP5 — Quy trình trước/sau | | | Quy trình + bảng before/after |
 | CP5 — Problem Statement v0 | | | Problem Statement v0 |
 | CP6 — Mức can thiệp + Problem Statement v1 | | | Ma trận, AI Canvas, eval, Problem Statement v1 |
@@ -36,6 +36,33 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 ## Cá nhân
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
+
+### NguyenLamTung-202603854
+
+**Phần việc phụ trách:**
+
+- Phụ trách chính **CP4 — Kiểm chứng (The Mom Test) & Research giải pháp đã có** (Mục 3.1, 3.2, 3.3 trong `report/team/group_report.md`).
+- Đóng góp 3 Problem Cards cá nhân vào bảng Pitch của nhóm (dòng #4, #5, #6 tại Mục 2.1 trong `report/team/group_report.md`) và tham gia gom Cluster, vẽ cây OST, chấm điểm shortlist ở CP3.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- **Mục 2.1 (Pitch — CP3):** Đưa 3 Problem Cards cá nhân vào bảng Pitch (#4 Ghép code/báo cáo 4 thành viên & dò mâu thuẫn số liệu, #5 Đối chiếu bài làm với Rubric trước 23h59, #6 Tìm giải đáp chính thức của TA trong chat lớp) và đặt câu hỏi phản biện cho các thành viên khác.
+- **Mục 3.1 (Assumption Map — CP4):** Thiết lập bảng 5 giả định cốt lõi của nhóm (trải đủ Value, Usability, Feasibility & Viability), chấm điểm mức độ Quan trọng và Bằng chứng (1–5) để chọn ra 4 giả định ưu tiên kiểm chứng ngay tại lớp.
+- **Mục 3.2 (Kiểm chứng — CP4):** Trực tiếp đi phỏng vấn nhanh 2 bạn nhóm trưởng/người ghép bài của nhóm khác trong lớp L3B theo đúng 3 luật *The Mom Test*; ghi lại 2 bảng Interview Snapshot chi tiết, lập bảng Tổng hợp (có cả tín hiệu xác nhận 60–85 phút ở nhóm làm phân tán và tín hiệu phản bác 20–25 phút ở nhóm ngồi chung một màn hình), từ đó đề xuất 3 điều chỉnh giúp nhóm thu hẹp Actor và tách bạch ranh giới Rule vs. AI.
+- **Mục 3.3 (Research — CP4):** Tìm hiểu, kiểm tra link thực tế và phân tích 3 công cụ/giải pháp có sẵn (`GitHub Actions + markdownlint`, `Google Docs Checklist & Template`, `Claude/ChatGPT copy-paste kèm prompt đối chiếu Rubric`), chỉ rõ từng công cụ giải quyết bước nào trong quy trình 80 phút và rút ra bài học thiết kế Workflow cho nhóm.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- File báo cáo nhóm `report/team/group_report.md`: **Mục 2.1** (dòng Pitch #4, #5, #6) và toàn bộ **Mục 3 (3.1 Assumption Map, 3.2 Kiểm chứng, 3.3 Research giải pháp đã có)**.
+- File báo cáo cá nhân: `report/individual/202603854_NguyenLamTung.md` (hoàn thiện đầy đủ các mục 1 → 7).
+
+**Điều mình học được từ phần nhóm:**
+
+- Học được cách tách bạch rõ ràng giữa **nỗi đau thật (Opportunity)** và **giải pháp đội lốt (Solution)** khi cùng nhóm vẽ cây OST ở CP3.
+- Khi trực tiếp đi phỏng vấn theo *The Mom Test* ở CP4, tôi nhận ra tín hiệu phản bác (nhóm 3 người ngồi làm chung trực tiếp trên một màn hình chỉ mất 20–25 phút và chỉ cần Checklist) lại chính là dữ liệu quý giá nhất giúp nhóm không làm giải pháp tràn lan mà thu hẹp đúng Actor cần giải quyết.
+- Qua phần Research 3 công cụ, tôi hiểu rõ nguyên tắc **không dùng AI cho việc mà Rule làm tốt hơn**: những lỗi cơ học như sai tên file hay vỡ bảng Markdown nên giao cho Checklist và `markdownlint` (Rule), chỉ dùng AI ở đúng bước nghẽn 35 phút là đọc dò mâu thuẫn số liệu và ngữ nghĩa chéo giữa 4 phần viết độc lập, và luôn phải khóa Boundary để con người duyệt cuối.
+
+---
 
 ### HoVaTen-MSSV
 

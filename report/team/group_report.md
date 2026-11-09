@@ -115,11 +115,11 @@ Sử dụng AI chat bot kết hợp RAG document, thread cũ và tự động ch
 
 ### 3.3. Research giải pháp đã có
 
-| Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
-|---|---|---|---|---|---|
-| Tìm kiếm trong Discord | | Bước tìm kiếm theo từ khoá | Có sẵn trong Discord, tốc độ nhanh, miễn phí | Chỉ tìm theo từ khoá chính xác, nếu học viên mô tả không chính xác thì sẽ không ra | Người dùng |
-| Discord Forum gom nhóm | | Gom các ca lỗi theo chủ đề | Tốc độ nhanh, tính năng có sẵn, tìm kiếm theo keyword nếu diễn đạt không chính xác | Phụ thuộc vào việc thiết kế tag và gán tag của các bài viết trước | Gom nhóm các vấn đề cũ giúp tìm kiếm tốt hơn |
-| Chat Bot hỏi đáp | | Bước tìm kiếm lỗi và giải đáp | Có khả năng hiểu ngữ nghĩa của người dùng | Có thể hallucinate | Sử dụng LLM không có thể dẫn đến hallucinate |
+| Công cụ / case / pattern | Link                                                                                    | Giải bước nào trong quy trình? | Điểm mạnh                                                                          | Khoảng trống / rủi ro                                                              | Bài học cho nhóm                             |
+| ------------------------ | --------------------------------------------------------------------------------------- | ------------------------------ | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------- |
+| Tìm kiếm trong Discord   | https://support.discord.com/hc/en-us/articles/115000468588-How-to-Use-Search-on-Discord | Bước tìm kiếm theo từ khoá     | Có sẵn trong Discord, tốc độ nhanh, miễn phí                                       | Chỉ tìm theo từ khoá chính xác, nếu học viên mô tả không chính xác thì sẽ không ra | Người dùng                                   |
+| Discord Forum gom nhóm   | https://docs.discord.com/developers/intro                                               | Gom các ca lỗi theo chủ đề     | Tốc độ nhanh, tính năng có sẵn, tìm kiếm theo keyword nếu diễn đạt không chính xác | Phụ thuộc vào việc thiết kế tag và gán tag của các bài viết trước                  | Gom nhóm các vấn đề cũ giúp tìm kiếm tốt hơn |
+| Chat Bot hỏi đáp         | https://docs.discord.com/developers/bots/overview                                       | Bước tìm kiếm lỗi và giải đáp  | Có khả năng hiểu ngữ nghĩa của người dùng                                          | Có thể hallucinate                                                                 | Sử dụng LLM không có thể dẫn đến hallucinate |
 
 ---
 
@@ -129,37 +129,87 @@ Sử dụng AI chat bot kết hợp RAG document, thread cũ và tự động ch
 
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 
-```text
+![Quy trình hiện tại](../assets/cp5-workflow-before.png)
 
+```text
+HIỆN TẠI — 4 bước chính, hoàn toàn thủ công
+[1 Học viên gặp lỗi, kiểm tra log]
+→ [2 Tìm kiếm từ khóa trên Discord: ~1']
+→ [3 Mở và đọc từng thread: ~15'] ← BOTTLENECK
+→ [4 Áp dụng hướng dẫn và kiểm tra kết quả]
+          |
+          └── Nếu không giải quyết được:
+              → [5 Hỏi bạn cùng nhóm / gửi ticket: ~3']
+              → [6 Chờ coach phản hồi: ~10']
+              → [Quay lại bước 4]
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 | ---: | ----- | ----- | ------ | -------------------- | ------- |
-|    1 |       |       |        |                      |         |
-|    2 |       |       |        |                      |         |
-|    3 |       |       |        |                      |         |
-|    4 |       |       |        |                      |         |
-|    5 |       |       |        |                      |         |
+| 1. Xác định lỗi | Học viên | Log, thông báo lỗi | Mô tả lỗi cần xử lý | Chưa đo | |
+| 2. Tìm kiếm | Học viên | Từ khóa lỗi | Danh sách thread liên quan | ~1 phút | |
+| 3. Đọc thread | Học viên | Các thread Discord | Câu trả lời có khả năng phù hợp | ~15 phút | |
+| 4. Kiểm tra và áp dụng | Học viên | Hướng dẫn tìm được | Kết quả xử lý lỗi | Chưa đo | |
+| 5. Gửi câu hỏi (nếu cần) | Học viên | Log, mô tả lỗi | Ticket hoặc câu hỏi | ~3 phút | |
+| 6. Phản hồi (nếu cần) | Coach | Ticket, câu hỏi | Hướng dẫn xử lý | ~10 phút chờ | |
 
-**Bottleneck chính:**
+**Bottleneck chính:** Bước 3 — học viên phải mở và đọc nhiều thread vì câu trả lời phân tán, từ khóa tìm kiếm không thống nhất và hướng dẫn cuối cùng của coach có thể nằm giữa nhiều tin nhắn.  
+**Tần suất:** Khoảng 2 lần/tuần. Riêng bước đọc thread chiếm khoảng 30 phút/tuần/học viên.  
+**Handoff:** Nếu không tự giải quyết được, học viên chuyển vấn đề cho bạn cùng nhóm hoặc coach.
 
 ### 4.2. Quy trình tương lai
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
-```text
+![Quy trình tương lai](../assets/cp5-workflow-future.png)
 
+```text
+TƯƠNG LAI — 3 bước, khoảng 8 phút/lần (mục tiêu)
+[1 Nhập mô tả lỗi và truy xuất thread: 1']
+    ← HỌC VIÊN + RULE/SEARCH
+    Input: lỗi, log, lịch sử Discord
+    Output: các thread liên quan
+→ [2 Tổng hợp hướng dẫn xử lý: 2']
+    ← AI (RAG / AI Search)
+    Input: các thread đã truy xuất
+    Output: hướng dẫn + link nguồn gốc
+→ [3 Kiểm tra và áp dụng hướng dẫn: 5']
+    ← CON NGƯỜI (HITL)
+    Input: hướng dẫn, link Discord
+    Output: kết quả sửa lỗi
+BOUNDARY:
+- AI chỉ tổng hợp từ dữ liệu được cấp quyền.
+- Không bịa cách sửa lỗi hoặc mạo nhận coach.
+- Không tự chạy lệnh, sửa code hoặc đóng ticket.
+- Không đọc DM trái phép hay lưu API key, mật khẩu.
+- Học viên phải kiểm tra hướng dẫn trước khi áp dụng.
+- Chỉ coach xác nhận câu trả lời chính thức.
+PHƯƠNG ÁN QUAY VỀ:
+AI không tìm thấy nguồn / trả lời sai / ngừng hoạt động
+→ Học viên tìm kiếm thủ công trên Discord.
+→ Nếu vẫn không giải quyết được, hỏi coach
+  kèm thông tin lỗi và các bước đã thử.
 ```
+
+| Bước | Actor / Cơ chế | Input | Output | Thời gian mục tiêu | Ghi chú |
+| ---: | -------------- | ----- | ------ | ------------------ | ------- |
+| 1. Truy xuất | Học viên + Rule/Search | Mô tả lỗi, log đã loại thông tin nhạy cảm | Danh sách thread liên quan | 1 phút | |
+| 2. Tổng hợp | AI (RAG) | Thread, câu trả lời cũ | Hướng dẫn có dẫn nguồn | 2 phút | |
+| 3. Kiểm chứng và áp dụng | Học viên | Hướng dẫn, nguồn gốc | Kết quả xử lý lỗi | 5 phút | |
+
+- **AI Intervention Point:** Bước 2 — AI hỗ trợ tổng hợp thông tin từ các thread được truy xuất, không tự quyết định hoặc thực hiện cách sửa lỗi.
+- **Human-in-the-Loop:** Học viên đối chiếu hướng dẫn với lỗi thực tế và kiểm tra kết quả sau khi áp dụng.
+- **Handoff:** Hệ thống chuyển hướng dẫn cho học viên kiểm chứng. Những trường hợp không giải quyết được sẽ được học viên chuyển cho coach.
 
 ### 4.3. Before / after
 
-| Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
-|---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Chỉ số         |                                    Trước |                                                     Sau (kỳ vọng) | Ghi chú                                                                                     |
+| -------------- | ---------------------------------------: | ----------------------------------------------------------------: | ------------------------------------------------------------------------------------------- |
+| Số bước        | 4 bước chính, thêm 2 bước khi cần hỗ trợ |                                                            3 bước | Rút gọn quy trình nhờ tìm kiếm và tổng hợp thông tin tự động.                               |
+| Tổng thời gian |                           Chưa đo đầy đủ |                                                 Khoảng 8 phút/lần | Mục tiêu chính: thời gian tìm được hướng dẫn phù hợp ≤ 3 phút.                              |
+| Bước thủ công  |                           4/4 bước chính |                               1/3 hoàn toàn thủ công, 1/3 kết hợp | Học viên vẫn nhập mô tả lỗi, kiểm tra và áp dụng hướng dẫn.                                 |
+| Bottleneck     |         Mở và đọc từng thread (~15 phút) |                            Học viên kiểm tra và áp dụng (~5 phút) | Bước kiểm tra vẫn cần thiết để đảm bảo hướng dẫn phù hợp và an toàn.                        |
+| Rủi ro mới     |                                        — | AI tổng hợp sai ngữ cảnh, hướng dẫn lỗi thời, truy xuất sai nguồn | Kiểm soát bằng dẫn nguồn Discord, Human-in-the-Loop và phương án quay về tìm kiếm thủ công. |
 
 ---
 
@@ -167,16 +217,18 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Học viên gặp lỗi kỹ thuật khi làm bài / học, là lab coach / mentor phải trả lời thủ công. |
+| **Quy trình** | Học viên gặp vấn đề.<br/>Học viên tìm kiếm trong chat cũ về câu hỏi và trả lời của vấn đề.(1 phút)<br/>Học viên dán log hoặc chụp màn hình cho trợ lý bot hoặc tạo ticket. (3 phút)<br/>Học viên phải đợi trả lời của lab coach về vấn đề hiện có. (10 phút) |
+| **Bottleneck** | Bước 2, tìm lại trong chat cũ. Từ khóa tìm kiếm thường không khớp cách người trước mô tả lỗi, nên học viên phải mở từng thread để đọc. Câu trả lời cuối của coach nằm lẫn giữa nhiều tin nhắn thử–sai và không được đánh dấu. Bước này mất ~15 phút/lần. Nếu không tìm ra, quy trình rơi sang bước 3–4: hỏi lại và chờ coach. |
+| **Impact** | Phía học viên: ~15 phút/lần × 2 lần/tuần ≈ 30 phút/tuần/người. Khi phải hỏi lại, học viên bị chặn, không làm tiếp lab được trong lúc chờ. Phía coach: phải trả lời lại câu đã từng trả lời |
+| **Success Metric** (baseline → target, cách đo) | Thời gian từ lúc bắt đầu tìm đến lúc có cách sửa: baseline ~15 phút/lần → target < 3 phút/lần. Cách đo: ≥ 3 học viên tự bấm giờ mỗi lần tìm, trong 2 tuần. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI không được trả lời thay coach khi chưa có coach duyệt. AI không được tự đánh dấu câu hỏi là "đã giải". AI không được đọc kênh riêng hoặc DM, và không được giữ lại log hay ảnh chụp có API key, mật khẩu. HITL: học viên tự kiểm cách sửa trước khi chạy lệnh trên máy mình; chỉ coach xác nhận câu trả lời nào đúng. |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
 
--
+- **AI: Quy trình thiếu bước**
+  - Thiếu đường hỏi bạn cùng nhóm: đây thường là cách xử lý phổ biến.
+  - Thiếu bước áp dụng cách sửa: tìm thấy câu trả lời rồi vẫn phải chạy thử. Nếu câu trả lời đã cũ (đợt lab trước, thư viện đã đổi phiên bản), học viên mất thêm thời gian, mà quy trình chưa tính.
 
 ---
 

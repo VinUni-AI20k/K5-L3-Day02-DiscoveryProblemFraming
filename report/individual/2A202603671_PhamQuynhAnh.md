@@ -6,11 +6,11 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên:
-- MSSV:
+- Họ tên:Phạm Quỳnh Anh 
+- MSSV:2A202603671
 - Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm:
-- Link repo nhóm:
+- Tên nhóm:xyz
+- Link repo nhóm:https://github.com/ducminh03/K5-L3A-DAY02-xyz-DiscoveryProblemFraming
 
 ---
 
@@ -20,12 +20,12 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
+| 1 | Cần đọc tổng hợp nhiều thông tin  |Khi ôn thi cuối kì tôi cần tổng hợp lại toàn bộ kiến thức cốt lõi để có thể ghi nhớ nhanh chóng   |Sinh viên đại học |mất 4-5 tiếng để ngồi xem lại toàn bộ slide bài giảng để tổng hợp công thức |
+| 2 |Lặp lại| Khi phát sinh các khoản chi tiêu nhỏ lẻ trong ngày(tiền ăn, tiền gửi xe, tiền mua đồ), tôi muốn ghi nhận lại số tiền và phân loại vào các khoản mục, để kiểm soát chi tiêu hàng tháng mà không phải nhớ lại và cộng trừ lại vào cuối ngày|Cá nhân |Mất khoảng 15-20p mỗi ngày để tổng hợp lại chi tiêu |
+| 3 |Lặp lại |Khi khách hàng muốn hỏi thông tin sản phẩm(giá, kích thước,...)tôi muốn cung cấp thông tin cho khách hàng mà không phải trực page  |Chủ cửa hàng | Tỷ lệ rớt đơn khoảng 40% vào khung giờ 22-7h sáng do khách hàng đợi quá lâu không thấy trả lời|
+| 4 |Lặp lại |Khi tập gym/giảm cân, tôi muốn ước tính nhanh lượng calo và protein của suất ăn để điều chỉnh lượng chế độ ăn trong ngày   |Cá nhân  | Mất khoảng 15p mỗi bữa ăn để tra cứu calo cho từng món|
+| 5 | Cần đọc, tổng hợp nhiều thông tin|Khi đăng ký tín chỉ vào ngày mở cổng, tôi muốn so sánh nhanh thời khóa biểu của 8‑10 lớp để tránh trùng lịch, để có lịch học hợp lý mà không phải ngồi 2 đêm trên Excel.| Sinh viên| Mất ≈ 4 giờ (2 đêm) dò danh sách lớp; 1 lần trùng giờ → phải đổi lớp, gây lãng phí 1 tuần học.|
+| 6 |Pain từ người khác | Khi đối chiếu đơn hàng COD với báo cáo vận chuyển hàng tuần, tôi muốn so khớp nhanh mã đơn và số tiền thực nhận để phát hiện sai lệch, để không để mất tiền công ty.| Chủ shop, nhân viên kế toán|Mất 3‑4 giờ mỗi tuần kiểm tra 500 đơn; 2‑3 đơn có sai lệch > 5 % giá trị. |
 | 7 | | | | |
 | 8 | | | | |
 
@@ -41,17 +41,17 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 |Trả lời thông tin sản phẩm và tư vấn khách hàng ngoài giờ hành chính (bán hàng online)	 |ảnh hưởng trực tiếp đến doanh thu cửa hàng |Chưa chắc mức độ sẵn sàng mua hàng thực tế của khách|
+| 2 |Ghi nhận và phân loại chi tiêu nhỏ lẻ hàng ngày	 |vấn đề ai cũng từng gặp | Chưa chắc người dùng có duy trid thói quen nhập liệu lâu dài hay không |
+| 3 |Tổng hợp kiến thức và công thức cốt lõi từ slide bài giảng khi ôn thi| nhu cầu cấp thiết của sinh viên| dữ liệu slide bài giảng nhiều thông tin, lộn xộn|
 
 ### Problem Card #1
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
+| Job Story | KKhi khách hàng nhắn tin hỏi thông tin sản phẩm (giá, kích thước, tình trạng còn hàng) ngoài giờ hành chính (22h–7h), tôi (chủ shop) muốn cung cấp thông tin chính xác và tư vấn tức thì cho khách, để giữ chân khách mua hàng mà tôi không phải thức đêm trực page.|
+| Actor |Chủ cửa hàng online, nhân viên trực page, khách mua hàng ban đêm |
+| Thời điểm / bối cảnh |Khung giờ từ 22h đêm đến 7h sáng hôm sau, khi chủ shop ngủ hoặc không có nhân viên trực ca |
 | Quy trình hiện tại (3–7 bước) | |
 | Bottleneck (bước nào, mất bao nhiêu phút) | |
 | Impact (nếu không giải thì sao) | |

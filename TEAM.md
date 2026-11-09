@@ -4,18 +4,20 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Candidate problem nhóm chọn (1 câu):
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Tên nhóm: Nhomabc404
+- Candidate problem nhóm chọn (1 câu): Người được hỏi phải giải thích lại cùng một câu hỏi cho đồng nghiệp, bạn học, khoảng 2 lần/tuần và khoảng 15–30 phút mỗi lần (survey 10 người, ước lượng). *(Bản nháp, chờ nhóm xác nhận.)*
+- Quyết định cuối (Go / Not Yet / No-Go): Go, phạm vi nhỏ (pilot FAQ, No AI) *(bản nháp, chờ nhóm xác nhận)*
 
 ## Thành viên
 
-| STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
-|---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| STT | Họ và tên           | MSSV        | Vai trò trong nhóm | Tài khoản GitHub |
+| --: | ------------------- | ----------- | ------------------ | ---------------- |
+| 1   | Nguyễn Quang Đạo    | 2A202603614 |                    | NguyenQuangDao |
+| 2   | Đỗ Cao Cường        | 2A202603612 |                    | cuongdc03 |
+| 3   | Hồ Sỹ Tùng          | 2A202603650 |                    | SyxTun9 |
+| 4   | Trần Quốc Đông      | 2A202603643 | Nhóm trưởng        | dongtranquoc951 |
+| 5   | Trần Đức Mạnh       | 2A202603615 |                    | trmanh204 |
+| 6   | Nguyễn Văn Ngọc Sơn | 2A202603600 |                    | kynnnS |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 

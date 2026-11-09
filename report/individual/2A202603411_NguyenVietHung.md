@@ -10,7 +10,7 @@
 - MSSV: 2A202603411
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: AEZE
-- Link repo nhóm: https://github.com/hhuydaugg/K5-L3A-DAY02-AZEZ-DiscoveryProblemFraming.git
+- Link repo nhóm: 
 
 ---
 
@@ -24,11 +24,9 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 - 0,57 phút cho mỗi ghi chép bệnh án.
 - 6,89 phút thời gian documentation mỗi ngày.
 - 5,17 phút làm hồ sơ ngoài giờ mỗi ngày.|
-| 2 |Pain từ người khác |Sau khi được bác sĩ khám chữa bệnh và kê đơn thuốc, tôi muốn hệ thống có thể hỗ trợ nhắc nhở tôi về việc sử dụng thuốc đúng liều lượng, đúng thời gian để việc chữa bệnh đạt hiệu quả tốt nhất. |Bệnh nhân, bác sĩ |Mẫu khảo sát từ 127 bệnh nhân tại Bệnh viện Y học gia đình Huế trong khoảng thời gian 2 tháng, cho thấy có 28,3% số bệnh nhân tham gia khảo sát tự ý điều chỉnh lịch sử dụng thuốc, khoảng 30-50% bệnh nhân tham gia khảo sát quên sử dụng thuốc theo đúng liệu trình|
-| 3 |Lặp lại, tốn thời gian|Khi bệnh nhân muốn đặt hoặc thay đổi lịch khám, tôi muốn hệ thống tự động kiểm tra lịch trống và đề xuất khung giờ phù hợp, để giảm thời gian xử lý yêu cầu và hạn chế tình trạng đặt lịch không thành công. |Nhân viên CSKH, bệnh nhân |Một nghiên cứu tại bệnh viện tuyến cuối ở Ấn Độ năm 2025 ghi nhận thời gian đăng ký ngoại trú trung bình qua phương thức online là 4,15 phút, thấp hơn khoảng 60% so với phương thức đăng ký trực tiếp (10,37 phút). Tuy nhiên, việc đặt lịch online trước không đồng nghĩa với việc bệnh nhân đã hoàn tất toàn bộ thủ tục khi đến bệnh viện. Khâu check-in, xác minh danh tính và điều phối đến phòng khám vẫn cần được đánh giá riêng. |
-| 4 |Cần đọc, tổng hợp thông tin |Khi bệnh nhân chuẩn bị ra viện, tôi muốn hệ thống rà soát tính đầy đủ và nhất quán của hồ sơ, để phát hiện sớm các giấy tờ hoặc thông tin còn thiếu và rút ngắn thời gian hoàn tất thủ tục.|Bác sĩ, nhân viên y tế |Nghiên cứu tổng hợp các công trình về tính kịp thời và chất lượng thông tin khi bệnh nhân ra viện.
-- Trung vị 67% bản tóm tắt ra viện được hoàn thành trong vòng 48 giờ.
-- Chỉ 55% được cung cấp cho bác sĩ chăm sóc ban đầu trong vòng 48 giờ. |
+| 2 | Pain từ người khác | Sau khi được bác sĩ khám chữa bệnh và kê đơn thuốc, tôi muốn hệ thống có thể hỗ trợ nhắc nhở tôi về việc sử dụng thuốc đúng liều lượng, đúng thời gian để việc chữa bệnh đạt hiệu quả tốt nhất. | Bệnh nhân, bác sĩ | Mẫu khảo sát từ 127 bệnh nhân tại Bệnh viện Y học gia đình Huế trong khoảng thời gian 2 tháng, cho thấy có 28,3% số bệnh nhân tham gia khảo sát tự ý điều chỉnh lịch sử dụng thuốc, khoảng 30-50% bệnh nhân tham gia khảo sát quên sử dụng thuốc theo đúng liệu trình |
+| 3 | Lặp lại, tốn thời gian | Khi bệnh nhân muốn đặt hoặc thay đổi lịch khám, tôi muốn hệ thống tự động kiểm tra lịch trống và đề xuất khung giờ phù hợp, để giảm thời gian xử lý yêu cầu và hạn chế tình trạng đặt lịch không thành công. | Nhân viên CSKH, bệnh nhân | Một nghiên cứu tại bệnh viện tuyến cuối ở Ấn Độ năm 2025 ghi nhận thời gian đăng ký ngoại trú trung bình qua phương thức online là 4,15 phút, thấp hơn khoảng 60% so với phương thức đăng ký trực tiếp (10,37 phút). Tuy nhiên, việc đặt lịch online trước không đồng nghĩa với việc bệnh nhân đã hoàn tất toàn bộ thủ tục khi đến bệnh viện. Khâu check-in, xác minh danh tính và điều phối đến phòng khám vẫn cần được đánh giá riêng. |
+| 4 | Cần đọc, tổng hợp thông tin | Khi bệnh nhân chuẩn bị ra viện, tôi muốn hệ thống rà soát tính đầy đủ và nhất quán của hồ sơ, để phát hiện sớm các giấy tờ hoặc thông tin còn thiếu và rút ngắn thời gian hoàn tất thủ tục. | Bác sĩ, nhân viên y tế | Nghiên cứu tổng hợp các công trình về tính kịp thời và chất lượng thông tin khi bệnh nhân ra viện. Trung vị 67% bản tóm tắt ra viện được hoàn thành trong vòng 48 giờ. Chỉ 55% được cung cấp cho bác sĩ chăm sóc ban đầu trong vòng 48 giờ. |
 | 5 | | | | |
 | 6 | | | | |
 | 7 | | | | |

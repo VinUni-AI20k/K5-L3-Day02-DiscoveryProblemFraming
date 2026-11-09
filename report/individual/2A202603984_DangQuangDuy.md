@@ -1,4 +1,4 @@
-# Báo cáo cá nhân — MSSV_HoTen
+# Báo cáo cá nhân — 2A202603984_DangQuangDuy
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -10,7 +10,7 @@
 - MSSV: 2A202603984
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: Ban4
-- Link repo nhóm:
+- Link repo nhóm: https://github.com/laitrongduc/K5-L3B-DAY02-Ban4-DiscoveryProblemFraming
 
 ---
 
@@ -153,16 +153,16 @@ BOTTLENECK GIẢ ĐỊNH: Bước 2–4 — chuyển rubric thành checklist và
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card |  | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Pitch 3 candidate cho nhóm: #4 (tổng hợp tài liệu ôn thi, sinh viên CNTT), #5 (ticket CSKH thương mại điện tử), #6 (đơn COD có nguy cơ bị từ chối). Với mỗi card nêu Job Story, actor, bước nghẽn và số phút/số đơn. | Card #4 vào shortlist và đạt 30/35 điểm, xếp thứ 2 sau candidate bác sĩ lọc y văn (31); được xếp vào cluster A cùng #1, #2, #8, #9. Card #5 và #6 không vào shortlist. |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: với candidate #10 (hóa đơn lệch PO của Minh Phương), tôi hỏi nghẽn thật nằm ở bước đối chiếu hay bước chờ mua hàng/kho duyệt, và doanh nghiệp vừa ở VN có PO/phiếu nhập điện tử để đối chiếu không. | Câu hỏi nhắm vào hai giả định chưa có bằng chứng (vị trí bottleneck và dữ liệu có sẵn). Nhóm ghi lại đúng hai lý do này khi loại #10: chưa kiểm chứng được PO/phiếu nhập điện tử ở doanh nghiệp vừa VN, và baseline chỉ có số liệu Mỹ. |
+| Nhận phản biện | Câu hỏi tôi nhận được: (Trung, về #4) làm thế nào đảm bảo AI không bỏ sót kiến thức quan trọng hoặc tổng hợp sai nội dung từ slide và giáo trình; (về #5) AI xử lý thế nào các ngoại lệ như đơn thất lạc, hoàn tiền chậm, khiếu nại; (về #6) dữ liệu nào ảnh hưởng nhất tới việc khách từ chối nhận hàng và xử lý ra sao khi dữ liệu lịch sử thiếu. | Tôi đã sửa gì: ở card #1 của báo cáo cá nhân, thêm metric chất lượng gồm khả năng truy ngược về tài liệu gốc, mức bao phủ đề cương và điểm tự kiểm tra 20 câu; đồng thời thu hẹp phạm vi về một môn học thay vì xây chatbot học tập tổng quát. |
+| Gom cluster / cây OST | Candidate #4 nằm trong cluster A "Tìm, lọc và tổng hợp thông tin từ nhiều nguồn"; #5 vào cluster B; #6 vào cluster D. Ở OST, nhóm gạch bỏ ý "Sinh viên cần ChatGPT tóm tắt slide ôn thi" vì là tên công cụ, pain thật là 3–4 giờ/môn đọc và chọn lọc. | Cluster A trở thành nhánh chứa candidate được chọn (#1 bác sĩ lọc y văn). Việc gạch ý ChatGPT ở trên chính là áp dụng nguyên tắc "tầng opportunity chỉ chứa pain" cho card của tôi. |
+| Chọn candidate problem | Card #4 của tôi đạt 30 điểm so với 31 của candidate được chọn; chênh 1 điểm. Điểm thấp hơn của #4 nằm ở "Pain có bằng chứng" (3/5), vì 3–4 giờ/môn mới là ước tính chưa bấm giờ. | Nhóm chọn candidate bác sĩ lọc y văn. |
+| Kiểm chứng / research | Không phụ trách | Kết quả nhóm: 1 phỏng vấn bác sĩ (60' tìm và lọc + 30' đọc kỹ), Del Fiol 2014 (chỉ 51% câu hỏi được đi tìm câu trả lời), 2 công cụ đã có đều bị loại vì vướng NPI Mỹ hoặc chi phí Enterprise. Actor được đổi sang bác sĩ trẻ. |
+| Quy trình nhóm | Tôi tham gia góp ý vào các bước quy trình | Quy trình hiện tại 5 bước (~90' gồm 30' đọc kỹ), bottleneck Bước 4 (25'). Quy trình tương lai gồm 4 bước Rule → DL → LLM → Bác sĩ. |
+| Problem Statement | Không phụ trách | v1 đổi Actor và thêm Boundary "không để sinh viên tìm bằng ChatGPT" sau phản biện trên lớp. |
+| Mức can thiệp AI | Chỉ ra những khó khăn của việc No AI | Nhóm chọn Workflow (Rule + DL + LLM, bác sĩ quyết định), ô mơ hồ cao × phức tạp cao; không chọn Agent vì rủi ro hallucinate trong y tế. |
+| Quyết định | Gói ý về việc pilot trên phạm vi hẹp | Go (phạm vi hẹp, pilot trên kho Răng Hàm Mặt); ngưỡng dừng: bịa số liệu trích dẫn thì cancel và quay về tra cứu thủ công. |
 
 ---
 
@@ -170,12 +170,12 @@ BOTTLENECK GIẢ ĐỊNH: Bước 2–4 — chuyển rubric thành checklist và
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Sau khi tự scan 8 problem theo 4 lăng kính, dùng AI gợi ý thêm vấn đề (không đưa giải pháp). | Gợi ý thêm các tình huống tôi chưa nghĩ tới: tạo flashcard từ bài giảng, đối chiếu kiến thức theo đề cương, kiểm tra bài nộp theo rubric, tìm lại thông báo môn học. | Có ý quá rộng, kiểu "trợ lý AI học tập toàn diện", không chỉ ra quy trình, actor hay bottleneck. Các con số thời gian chỉ là ước tính, không có bằng chứng thật. | Chỉ giữ ý có tình huống và kết quả cụ thể; loại ý chung chung. Đánh dấu rõ mọi con số là "ước tính cần kiểm chứng" và ghi cách kiểm chứng (bấm giờ, lịch sử tin nhắn nhóm). |
+| CP2 Problem Card | Dùng prompt "product manager hoài nghi" để phản biện Problem Card #1. | Chỉ ra 4 điểm yếu: mốc 3–4 giờ/môn chưa đo; "kiến thức trọng tâm" mơ hồ; chỉ đo thời gian thì bộ ôn tập có thể nhanh nhưng thiếu hoặc sai; nguy cơ phình thành "chatbot học tập". | **[Điền: AI có chỗ nào sai/hời hợt không? Ví dụ: không chỉ ra được ai là người xác định phạm vi thi, hoặc không hỏi liệu No AI đã đủ chưa.]** | Đồng ý cả 4 điểm và sửa: ghi rõ ước tính, gắn nội dung ôn tập với đề cương/slide thay vì để AI đoán đề, thêm metric chất lượng (truy ngược nguồn, bao phủ đề cương, tự kiểm tra 20 câu), thu hẹp về một môn học trước kỳ thi. |
+| CP4 Research | **[Điền: nếu bạn dùng AI để tìm công cụ/nguồn, ghi prompt đã dùng; nếu không dùng, ghi "không dùng AI ở CP4".]** | | **[Điền: link chết, trích sai, hay claim không có nguồn nào bạn đã tự mở kiểm tra?]** | **[Điền]** |
+| CP5 Quy trình | **[Điền: có nhờ AI chuyển quy trình sang Mermaid/ASCII không?]** | | Worksheet cảnh báo AI hay gộp hai bước thành một và làm mất bottleneck. **[Điền: bạn có gặp lỗi này không?]** | **[Điền]** |
+| CP5–6 Problem Statement | **[Điền: có dùng prompt phản biện Problem Statement không?]** | | **[Điền: AI có chỉ ra chỗ lẫn giải pháp vào problem hoặc metric chưa đo được không?]** | **[Điền]** |
+| CP6 Mức can thiệp / quyết định | **[Điền: có dùng AI để so sánh 4 mức hoặc điền AI Canvas không?]** | | **[Điền: AI có đẩy lên Agent quá sớm không?]** | **[Điền]** |
 
 ---
 
@@ -201,4 +201,8 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 ## 7. Tài liệu tham khảo
 
--
+- Del Fiol G. và cộng sự, *JAMA Internal Medicine*, 2014 (tổng hợp 11 nghiên cứu về câu hỏi lâm sàng của bác sĩ; nguồn của số liệu 0,57 câu hỏi/bệnh nhân và 51% được đi tìm câu trả lời, dẫn trong báo cáo nhóm).
+- OpenEvidence: https://www.openevidence.com/
+- UpToDate Expert AI, Wolters Kluwer, 9/2025: https://www.wolterskluwer.com/en/solutions/uptodate
+- Worksheet Day 02, `docs/01-worksheet.md` (Job Story, Opportunity Solution Tree, Mom Test, ma trận mơ hồ × phức tạp, No AI / Rule / Workflow / Agent, AI Canvas, Google PAIR, 4 rủi ro).
+- Báo cáo nhóm Ban4, `report/team/group_report.md`.

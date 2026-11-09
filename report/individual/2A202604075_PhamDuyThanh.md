@@ -134,16 +134,16 @@ Tổng thời gian ước tính: ~55–80 phút/bộ góp ý; cần đo bằng m
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Báo cáo nhóm ghi tên tôi ở 3 candidate: tìm yêu cầu/deadline; tổng hợp tài liệu ôn tập; phân loại feedback. Tôi chưa đặt câu hỏi trực tiếp trong lớp do thời gian hạn chế. | Candidate tìm yêu cầu/deadline đang được xem xét làm hướng tiếp tục; chưa có ghi nhận về phần pitch/thảo luận trực tiếp của tôi. |
+| Phản biện bài của bạn khác | Tôi chưa đặt câu hỏi phản biện trực tiếp. | Không có câu hỏi do tôi đặt để ghi nhận. |
+| Nhận phản biện | Tôi chưa có trải nghiệm phản biện trực tiếp đủ để ghi lại câu hỏi cụ thể. | Chưa ghi nhận thay đổi do phản biện của bạn khác. |
+| Gom cluster / cây OST | Tôi chưa có thông tin về đóng góp trực tiếp của mình ở phần này. | Chưa có kết quả cá nhân để ghi nhận. |
+| Chọn candidate problem | Candidate nhóm đang xem xét: sinh viên làm bài cá nhân cần tìm đúng yêu cầu/deadline mới nhất nằm rải rác ở LMS, chat nhóm và tài liệu lớp. | Hướng giải quyết dự kiến là bắt đầu bằng checklist Rule/Workflow; chưa có quyết định Go / Not Yet / No-Go. |
+| Kiểm chứng / research | Tôi chưa phỏng vấn và chưa thực hiện kiểm chứng/research. | Chưa có bằng chứng xác nhận hoặc bác bỏ pain, tần suất và thời lượng. |
+| Quy trình nhóm | Tôi ghi lại quy trình giả thuyết gồm 6 bước: mở đề trên LMS → tìm thông báo trong chat → mở rubric/tài liệu → đối chiếu bản mới nhất → hỏi lại nếu chưa rõ → ghi checklist và deadline. | Bottleneck dự kiến ở bước 2–4, ước tính 10–15 phút/lần; chưa bấm giờ và chưa xác nhận với người dùng. |
+| Problem Statement | Tôi đã mô tả actor, quy trình, bottleneck, metric thử nghiệm và boundary dự kiến theo thông tin hiện có. | Baseline chưa đo; cần đo 3 lần. Chưa có Problem Statement v0/v1 hoàn chỉnh của nhóm để so sánh. |
+| Mức can thiệp AI | Mức dự kiến là Rule/Workflow trước, dùng checklist cố định; chưa có bằng chứng cho thấy cần AI. | Nếu sau này thử AI, AI chỉ trích yêu cầu/deadline từ tài liệu đã chọn và báo chỗ chưa nhất quán; người học phải xác nhận với nguồn gốc. |
+| Quyết định | Chưa có quyết định cuối của nhóm. | Bước tiếp theo là đo baseline và phân biệt bottleneck do thông tin nhiều kênh hay do yêu cầu chưa rõ. |
 
 ---
 
@@ -151,12 +151,12 @@ Tổng thời gian ước tính: ~55–80 phút/bộ góp ý; cần đo bằng m
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Dùng AI để gợi ý/diễn đạt 7 Job Story từ bối cảnh học tập và làm việc nhóm. | Gợi ý actor, bối cảnh và cách đo cho các ý tưởng. | AI không biết tần suất, thời gian hay bằng chứng thật của tôi; một số ý có thể không đúng trải nghiệm. | Ghi rõ đây là bản nháp cần xác nhận; bỏ ý nào không đúng và thay dấu hiệu thật trước khi nộp. |
+| CP2 Problem Card | Dùng AI để phát triển 3 card và quy trình nháp từ các ý scan. | Giúp cấu trúc quy trình, bottleneck, metric thử nghiệm và phương án không AI. | Các thời lượng, target và quy trình là ước tính, chưa được đo hoặc xác nhận. | Đánh dấu ước tính/chưa đo và nêu cách lấy baseline; không xem là kết quả thực tế. |
+| CP4 Research | Không dùng AI; tôi chưa phỏng vấn và chưa làm research. | — | Chưa có dữ liệu kiểm chứng hay nguồn research. | Ghi rõ chưa thực hiện, không tạo kết quả giả định. |
+| CP5 Quy trình | Không dùng AI ở checkpoint này. | — | Quy trình và 10–15 phút/lần hiện chỉ là giả thuyết/ước tính, chưa quan sát thực tế. | Ghi rõ ước tính; cần đo 3 lần và xác nhận quy trình với người thực hiện. |
+| CP5–6 Problem Statement | Không dùng AI ở checkpoint này. | — | Chưa có bản v0/v1 hoàn chỉnh của nhóm để đối chiếu. | Ghi nhận nội dung hiện tại là hướng nháp, không coi là kết quả nhóm đã xác nhận. |
+| CP6 Mức can thiệp / quyết định | Không dùng AI; nhóm dự kiến bắt đầu với Rule/Workflow, chưa chốt quyết định cuối. | — | Chưa có bằng chứng kiểm chứng để kết luận mức này đủ hoặc cần AI. | Đề xuất đo baseline và thử checklist trước; quyết định Go / Not Yet / No-Go vẫn để nhóm thống nhất. |
 
 ---
 
@@ -166,20 +166,33 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Mình cảm thấy hầu như vấn đề nằm rất nhiều ở việc soạn báo cáo theo tuần/tháng hay việc soạn tài liệu học tập rất mất thời gian
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Có, và lúc đó nhóm em cảm thấy đã đi sai hướng và đã ngay lập tức đóng băng giải pháp và lùi lại 5p để làm rõ lại vấn đề cốt lõi mà ý tưởng đang giải quyết
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Em không vì nhận ra ngay sai lầm của mình
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Kết quả kiểm chứng thì em chưa có cơ hội để phỏng vấn các bạn xung quanh vì bạn nhóm trưởng đại diện cho toàn nhóm để lên phản biện với các nhóm khác ạ
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Điều khó nhất đó chính là khó khăn trong việc cưỡng lại sự cám dỗ của việc lồng ghép giải pháp vào vấn đề
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+
+Em nghĩ nhóm em làm khá ổn và mình cũng đã làm tròn trách nhiệm nên chưa nghĩ ra cần phản biện mạnh phần nào nữa
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
+Bài toán nhóm đang xem xét là sinh viên làm bài cá nhân phải tìm và xác nhận yêu cầu/deadline mới nhất khi thông tin nằm rải ở LMS, chat nhóm và tài liệu lớp. Quy trình giả thuyết gồm mở đề trên LMS, tìm thông báo trong chat, mở rubric/tài liệu, đối chiếu phiên bản, hỏi lại khi chưa rõ, rồi ghi checklist và deadline. Bottleneck dự kiến là tìm và đối chiếu thông tin ở bước 2–4, ước tính 10–15 phút/lần nhưng chưa được bấm giờ. Baseline sẽ được đo trong 3 lần tìm; target thử nghiệm là giảm trung vị thời gian ít nhất 30% và không bỏ sót yêu cầu bắt buộc. Boundary dự kiến là nếu dùng AI thì AI chỉ trích yêu cầu/deadline từ tài liệu đã chọn và chỉ ra điểm chưa nhất quán, còn người học phải kiểm tra nguồn gốc. Mức can thiệp dự kiến là Rule/Workflow trước vì chưa có bằng chứng cần AI. Nhóm chưa đưa ra quyết định cuối; cần đo baseline và xác định bottleneck trước khi chốt.
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- Template và prompt mẫu của lớp: docs/01-worksheet.md (repo K5-L3B-Day02-4Ward-DiscoveryProblemFraming).

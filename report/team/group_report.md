@@ -295,19 +295,18 @@ Nhóm trưởng dùng 1 prompt chuẩn hóa dán dữ liệu tổng hợp từ F
 Bấm giờ thực tế quy trình trong 2 tuần liên tiếp và chấm điểm bản nháp theo 3 tiêu chí đánh giá. 
 
 
-
 **Ngưỡng dừng** (nếu sau … mà … thì quay về …):
 Nếu sau 2 tuần pilot mà PM vẫn phải viết lại trên 50% câu chữ của bản nháp $\rightarrow$ Dừng dùng AI, quay về dùng Google Docs template điền tay truyền thống (No AI).   Nếu các thành viên không chịu điền Form mà vẫn nhắn tin riêng $\rightarrow$ Dừng công nghệ để chấn chỉnh kỷ luật quy trình làm việc trước.  
----
+
 
 ## 9. Hạn chế và hướng tiếp theo
 Hạn chế: Thí nghiệm mới thực hiện trên quy mô nhóm làm đồ án sinh viên môn học; chưa kiểm chứng trên môi trường doanh nghiệp có nhiều công cụ phân tán phức tạp (như Jira + GitLab + Slack enterprise).   
 Hướng tiếp theo: Sau khi ổn định khâu sinh bản nháp từ Form, nhóm sẽ nghiên cứu tích hợp webhook để tự động lấy commit message từ GitHub/GitLab làm dữ liệu đầu vào bổ trợ.
--
+
 
 ## 10. Tài liệu tham khảo
 Teresa Torres (2021), Continuous Discovery Habits (Phương pháp Opportunity Solution Tree).   
 Rob Fitzpatrick (2013), The Mom Test (Nguyên tắc phỏng vấn kiểm chứng nhu cầu khách hàng không thiên vị).   
 Google PAIR Guidebook (Quy chuẩn thiết kế trải nghiệm người dùng tương tác với AI: Augment vs Automate, Error tolerance).   
 Atlassian Rovo & n8n Automation Workflows for Weekly Reporting.   
--
+

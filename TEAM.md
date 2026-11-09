@@ -172,3 +172,44 @@ Học được cách cùng nhóm thu hẹp bài toán, xác định đúng đi�
 
 - Chọn Rule để đánh giá không đồng nghĩa đã đủ điều kiện chạy pilot; cần quyền dữ liệu, mapping, bộ đáp án và ngưỡng do người có trách nhiệm xác nhận.
 - Không gộp thời gian ghép bảng với thời gian soát khi đánh giá lợi ích của một giải pháp chỉ tác động đến phần so số.
+
+### NguyenVanVinh-2A202603672
+
+**Phần việc phụ trách:**
+
+- Người chính CP5 — Quy trình trước/sau: vẽ quy trình hiện tại, quy trình tương lai và bảng before/after (mục 4 báo cáo nhóm).
+- Người cung cấp domain và dữ liệu cho candidate được chọn (V1 — soát chênh khối lượng/đơn giá): actor, quy trình thực tế, số liệu gói thầu và baseline thời gian.
+- Hỗ trợ CP5 — Problem Statement v0: cung cấp quy trình, bottleneck và baseline cho bản tổng hợp.
+- Việc được giao trước pilot (mục 8): xác nhận phạm vi, nhật ký thời gian và dữ liệu được phép dùng.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- **CP1 — Scan:** 8 problem theo đủ 4 lăng kính, lấy từ quy trình đánh giá chào giá gói cơ điện (BOQ ~4.100 dòng, 4 nhà thầu, 7 hạng mục); mỗi dòng có số đo thời gian, số dòng hoặc số lần.
+- **CP2 — Problem Card:** 3 card kèm quy trình nháp (Mermaid): V1 soát chênh lệch (5–6 giờ/vòng), V2 gom bảng chào giá (6–7 giờ/vòng), V3 chấm năng lực (3 giờ công/nhà thầu, tổng của 2 người). Dùng AI phản biện; sửa V1 từ "Rule hoặc Workflow" thành Rule.
+- **CP3 — Hội tụ:** pitch 3 card; V1 vào shortlist với 30/35 điểm, cao nhất (L1 và T1 cùng 24 điểm) và được chọn. Đặt câu hỏi phản biện cho card của Hưởng (H1), Linh (L2), Quân (Q3).
+- **CP4 — Kiểm chứng / research:** cung cấp số liệu domain bổ trợ cho mục 3. Research thêm 3 nguồn và tự mở kiểm link: Power Query (Microsoft yêu cầu các file cùng schema, nên không gom được file sai mẫu), Archdesk và Corten (công cụ bid leveling có sẵn); loại 1 link chết.
+- **CP5 — Quy trình trước/sau:** viết bản ban đầu của mục 4, được tích hợp qua PR #4:
+  - 4.1: quy trình hiện tại 8 bước, có actor / input / output / thời gian, tổng 11–13 giờ/vòng; bottleneck chính là bước dò ~16.000 dòng (~4 giờ/vòng), bottleneck phụ là ghép file sai mẫu (2,5 giờ).
+  - 4.2 ban đầu: quy trình tương lai 9 bước tách Rule / AI / con người; boundary, HITL và phương án quay về. Bản này là nguồn lịch sử tại PR #4; quy trình hiện tại trên main đã được Hưởng thu hẹp sang Rule qua PR #10.
+  - 4.3 ban đầu: before/after của toàn luồng gom + soát, kỳ vọng 2–2,5 giờ/vòng. Metric hiện tại chỉ đo soát dưới 90 phút công/vòng; không dùng target toàn luồng thay target này.
+- **Sau review CP5:** chấp nhận hai điểm sửa — bước duyệt phải kiểm mọi dòng AI ghép (tổng tiền khớp không chứng minh ghép đúng) và tách baseline riêng phần soát (300–360 phút/vòng) khỏi thời gian gom.
+- **CP5–CP6 — Problem Statement, mức can thiệp:** baseline 300–360 phút/vòng và target dưới 90 phút/vòng (từ mục tiêu 1,5 giờ ở Card #1) được dùng cho v0/v1; kết luận Rule của Card #1 được nhóm giữ ở CP6, AI mapping tách thành hướng mở rộng.
+- **CP7:** bổ sung báo cáo cá nhân mục 4–6 và mục đóng góp này; review tích hợp chuẩn hóa phần hiểu bài, giữ nguyên câu trả lời 6.1–6.6.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- [Báo cáo nhóm](report/team/group_report.md):
+  - Mục 2.1, dòng 4–6: card V1, V2, V3; mục 2.4: bảng chấm điểm V1 30/35.
+  - Mục 4: quy trình trước/sau (4.1–4.3) do Vinh viết.
+  - Mục 5 và 7: baseline phần soát ghi nguồn "theo Vinh".
+  - Mục 8.2: việc được giao trước pilot; mục 10: nguồn [V-CP5].
+- [PR #4](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/4), merge commit `270bb22`; các commit của Vinh: `a295e96`, `cd91790`, `2f96679`.
+- [Báo cáo cá nhân](report/individual/2A202603672_NguyenVanVinh.md): mục 2 (scan), mục 3 (3 card + quy trình nháp), mục 4 (tham gia nhóm), mục 5 (dùng AI).
+- Không có file trong `report/assets/`: sơ đồ viết trực tiếp bằng Mermaid trong báo cáo.
+
+**Điều mình học được từ phần nhóm:**
+
+- Nên thử Rule làm mốc đối chứng trước, chỉ dùng AI khi chứng minh được Rule không đủ.
+- Phải tách bước gom khỏi bước soát; gộp lại thì baseline và target không cùng phạm vi.
+- Tổng tiền khớp không chứng minh các dòng đã được ghép đúng; cần kiểm cả mã, đơn vị và dòng nguồn.
+- Số liệu từ một gói thầu chỉ là điểm bắt đầu; cần bấm giờ từng bước và có bộ đáp án trước khi kết luận.

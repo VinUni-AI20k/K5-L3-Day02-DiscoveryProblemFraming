@@ -173,8 +173,8 @@ flowchart LR
 | Nhận phản biện | Review nhóm: "Tổng tiền khớp vẫn có thể che sai mapping; không lấy thời gian gom làm baseline của bước soát" | Bước duyệt kiểm mọi dòng AI ghép, không chỉ dòng tin cậy thấp; tách baseline soát (300–360 phút/vòng) khỏi gom |
 | Chọn candidate problem | Cung cấp số liệu cho V1: ~4.100 dòng × 4 nhà thầu, 5–6 giờ/vòng | V1 được 30/35 điểm, cao nhất shortlist; V2 giữ làm điều kiện đầu vào |
 | Kiểm chứng / research | Cung cấp số liệu domain cho CP4; tự research Power Query, Archdesk, Corten | Power Query chỉ gom được file cùng mẫu, khớp với việc tách V2 |
-| Quy trình nhóm | Vẽ quy trình hiện tại và tương lai (mục 4 báo cáo nhóm) | Chốt bottleneck: dò ~16.000 dòng; AI chỉ ở 1 bước, còn lại là Rule |
-| Problem Statement | Cung cấp baseline, bottleneck, boundary làm nguồn cho v0/v1 | Target v1: ≤90 phút/vòng cho phần soát |
+| Quy trình nhóm | Vẽ quy trình hiện tại và tương lai (mục 4 báo cáo nhóm) | Bản CP5 ban đầu tại PR #4 mô tả toàn luồng gom + soát. Bản tổng hợp hiện tại chọn Rule cho riêng soát; AI mapping nằm ngoài phạm vi chính |
+| Problem Statement | Cung cấp baseline, bottleneck, boundary làm nguồn cho v0/v1 | Target v1: dưới 90 phút công/vòng cho phần soát, gồm kiểm/sửa/ngoại lệ |
 | Mức can thiệp AI | Card #1 đã tự kết luận Rule từ CP2 | Nhóm chọn Rule; AI mapping tách thành hướng mở rộng |
 | Quyết định | Được giao xác nhận phạm vi, nhật ký thời gian và quyền dùng dữ liệu | Nhóm đề xuất Not Yet, chờ kiểm các điều kiện này |
 
@@ -222,7 +222,7 @@ Nếu làm lại tôi sẽ cố gắng thực hiện bấm giờ đo thời gian
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
-Hiện nay việc chấm thầu, so sánh đối chiếu nhà thầu đối với các chuyên viên kinh tế kỹ thuật là vấn đề nan giải và problem mà chúng tôi đã tìm ra ở đây đó chính là mỗi 1 bộ hồ sơ mời thầu có kích thước khổng lồ đó là với hàng chục nghìn dòng dữ liệu vậy nên việc mà so sánh thủ công rất mất thời gian do đó chúng tôi đã đưa ra quy trình xử lý như sau Nhận file → gom vào bảng tổng hợp → dò từng dòng → cộng phát sinh → trình lãnh đạo. Metric được đo trực tiếp trên bộ hồ sơ mới nhất với Baseline: 5–6 giờ/vòng, tức 300–360 phút. Target: dưới 90 phút/vòng, tính cả thời gian kiểm và sửa. Cách đo: chạy trên một gói thầu cũ đã có đáp án, ghi thời gian từng vòng. Boundary và HITL: Không sửa số gốc, không tự chọn hay loại nhà thầu, không tự gửi hồ sơ. Dòng mơ hồ hoặc không khớp thì chuyển cho chuyên viên. Chuyên viên kiểm bảng trước khi trình lãnh đạo. Mức can thiệp: Rule vì Rule so khối lượng là phép trừ, so đơn giá là công thức cộng ngưỡng. Kết quả có đúng/sai rõ ràng, không cần AI suy luận. Quyết định: Not YetPhải kiểm trước 3 điều: quyền dùng dữ liệu, mapping đúng, bộ đáp án để chấm. Ngưỡng dừng: sau 2 vòng thử mà vẫn từ 90 phút trở lên, hoặc bỏ sót dù chỉ 1 dòng có trong đáp án → dừng, quay về soát thủ công hoặc phương án đơn giản hơn.
+Chuyên viên KTKT mất nhiều công soát khối lượng và đơn giá trong bảng chào giá nhà thầu. Phạm vi đã chọn nhận bảng ghép đúng mã, đơn vị và phiên bản, kiểm đầu vào, tính chênh lệch rồi chuyển chuyên viên rà soát trước trình. Baseline riêng phần soát là 5–6 giờ/vòng theo nguồn tôi cung cấp, còn target dưới 90 phút công/vòng tính cả kiểm, sửa và ngoại lệ, không cộng công gom vào baseline soát. Kết quả phải truy về dòng nguồn, giữ số gốc và không tự chọn, loại nhà thầu hoặc gửi hồ sơ. Nhóm chọn Rule vì phép so khối lượng và độ lệch đơn giá có quy tắc kiểm được, còn AI mapping được tách thành hướng mở rộng. Quyết định hiện tại là Not Yet cho pilot, chờ quyền dữ liệu, mapping, cấu hình và bộ đáp án được xác nhận. Nếu nhận sai mapping hoặc bỏ sót chênh đã biết thì dừng dùng output để trình; sau hai vòng mà vẫn từ 90 phút/vòng trở lên hoặc không tốt hơn No AI cải tiến thì dừng mở rộng và quay về phương án đã kiểm.
 
 ---
 

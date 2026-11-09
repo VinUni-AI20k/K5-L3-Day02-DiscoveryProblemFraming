@@ -9,8 +9,8 @@
 - Họ tên: Đoàn Đăng Khoa
 - MSSV: 2A202603766
 - Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm: G1
-- Link repo nhóm: https://github.com/lqkhanhno/K5-L3B-DAY02-G1-DiscoveryProblemFraming/tree/main
+- Tên nhóm: G3
+- Link repo nhóm: https://github.com/lqkhanhno/K5-L3B-DAY02-G3-DiscoveryProblemFraming
 
 ---
 

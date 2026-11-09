@@ -17,159 +17,114 @@
 
 ## 2. Hội tụ nhóm (CP3)
 
-**Phần đã xác nhận:** nhóm đã thảo luận và chọn hướng ở mục 1. **Phần chưa có nguồn:** ghi chép pitch/challenge, cluster, OST, shortlist/điểm và lý do chọn–loại. Các mục 2.1–2.4 dưới đây chờ nội dung nhóm tự thực hiện và cung cấp; không suy diễn từ báo cáo CP1–CP2 thành kết quả thảo luận CP3.
+Tôi tổng hợp ba card của mỗi thành viên thành 18 candidate, gom theo pain và đối chiếu ba hướng shortlist để làm rõ cơ sở chọn bài toán nhà thầu. Nguồn là sáu báo cáo cá nhân tại commit `b2bf713`; mỗi mã dưới đây gắn với đúng card trong báo cáo người đưa ra.
 
-| Nội dung cần đưa vào báo cáo | Căn cứ cần nhóm cung cấp | Kiểm tra khi tổng hợp |
-|---|---|---|
-| Pitch và challenge | Candidate đã thực sự trình bày; ai hỏi ai; câu hỏi và điều chỉnh thực tế | Mỗi thành viên có ít nhất một câu hỏi; phân biệt card chuẩn bị với card đã pitch |
-| Cluster và OST | Cách nhóm đã gom; một outcome; các opportunity và ý đã gạch bỏ nếu có | Nhánh là nhu cầu/pain; không thay bằng tên công cụ/tính năng |
-| Shortlist và điểm | Ba candidate, điểm 1–5 theo bảy tiêu chí, căn cứ nhóm sử dụng | Chỉ tính tổng từ điểm nhóm cung cấp; không tự tạo điểm |
-| Lý do và bất đồng | Lý do nhóm chọn, loại ít nhất hai candidate khác và cách xử lý bất đồng nếu có | Chưa có ghi chép không được diễn đạt thành “không có bất đồng” |
+Hướng nhà thầu là lựa chọn nhóm đã xác nhận. Các câu hỏi kèm người trao đổi trong mục 2.1 là **phân công phản biện đề xuất**; điểm ở mục 2.4 là **đánh giá đề xuất của tôi theo tài liệu**. Chúng dùng chuẩn bị review, không được ghi thành lời nói đã diễn ra hoặc điểm đồng thuận của cả nhóm. Các mốc thời gian giữ đúng loại nguồn: trí nhớ, ghi nhận trong báo cáo, giả định hoặc benchmark.
 
 ### 2.1. Pitch
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 1 | [Hưởng](../individual/202603607_NguyenTrongHuong.md), Card #1 | **H1:** Khi cần dùng lại nội dung từng gửi trong nhóm chat, tôi muốn tìm đúng đoạn chat, ảnh, link hoặc tài liệu, để lấy được thông tin cần dùng. | Người tham gia nhóm chat, có quyền xem nội dung | Lướt, chờ tải và nhận diện nội dung; tổng lượt thành công 5–15 phút theo trí nhớ, không phải thời gian riêng bước nghẽn | **Đề xuất Vinh trao đổi:** Phần mất công nằm ở nhận diện nội dung hay chờ ứng dụng tải, và tìm kiếm/lọc sẵn có đã giải được đến đâu? |
+| 2 | [Hưởng](../individual/202603607_NguyenTrongHuong.md), Card #2 | **H2:** Khi chọn laptop trong ngân sách, tôi muốn đối chiếu cấu hình, giá, còn hàng và review, để chọn được máy phù hợp. | Người tự tìm hiểu và mua laptop | Đọc rồi đối chiếu nhiều nguồn; khoảng một tuần là thời gian lịch của lần chọn máy, không phải tổng giờ thao tác | **Đề xuất Khương trao đổi:** Thống nhất tiêu chí và bảng so sánh trước có giảm được công đối chiếu không, và thông tin nào cần kiểm lại sát thời điểm mua? |
+| 3 | [Hưởng](../individual/202603607_NguyenTrongHuong.md), Card #3 | **H3:** Khi phụ trách nơi ở cho chuyến đi nhóm, tôi muốn đối chiếu chỗ ở với các hoạt động xung quanh, để phối hợp lịch trình phù hợp. | Hưởng phụ trách lưu trú; nhóm lớp hơn 10 người | Tìm chỗ ở, đọc review và phối hợp; khoảng một tuần là toàn giai đoạn chuẩn bị chuyến Vũng Tàu | **Đề xuất Tuyên trao đổi:** Bao nhiêu công thuộc riêng việc chọn nơi ở và bao nhiêu thuộc chờ các thành viên thống nhất, để metric không gộp hai nguyên nhân? |
+| 4 | [Vinh](../individual/2A202603672_NguyenVanVinh.md), Card #1 | **V1:** Khi soát bảng chào giá, tôi muốn nhận ra dòng chênh khối lượng hoặc đơn giá cần xem xét, để chuẩn bị bảng đối chiếu có căn cứ trước trình duyệt. | Chuyên viên KTKT phía chủ đầu tư, phụ trách chào giá cơ điện | Dò khối lượng/đơn giá trên bảng đã ghép; khoảng 4.100 dòng × 4 nhà thầu, tổng soát 5–6 giờ/vòng theo Vinh | **Đề xuất Hưởng trao đổi:** Nếu bảng đã đúng mã và đơn vị, công thức so sánh còn bỏ trống trường hợp nào, và phần ghép sai mẫu phải được tính riêng ra sao? |
+| 5 | [Vinh](../individual/2A202603672_NguyenVanVinh.md), Card #2 | **V2:** Khi nhận bảng chào giá khác cấu trúc, tôi muốn gom đúng dòng vào cùng bảng đối chiếu, để so các nhà thầu trên cùng phạm vi. | Chuyên viên KTKT tổng hợp chào giá | Một nhà thầu sai mẫu mất khoảng 2,5 giờ ghép; tổng gom 6–7 giờ/vòng theo trường hợp Vinh mô tả | **Đề xuất Quân trao đổi:** Cần bộ trường hợp nào để bắt lỗi ghép sai nhưng tổng tiền vẫn khớp, và ai xác nhận đáp án mapping? |
+| 6 | [Vinh](../individual/2A202603672_NguyenVanVinh.md), Card #3 | **V3:** Khi đối chiếu hồ sơ năng lực với tiêu chí, tôi muốn tìm đúng bằng chứng cho từng tiêu chí, để ghi kết luận kèm lý do rõ. | Chuyên viên KTKT và đồng nghiệp cùng tổ | Tìm tài liệu chứng minh; khoảng 25 tiêu chí × 4 nhà thầu, 3 giờ công/nhà thầu là tổng công hai người theo nguồn | **Đề xuất Linh trao đổi:** Tiêu chí nào kiểm cơ học được, tiêu chí nào cần phán đoán chuyên môn, và bằng chứng phải dẫn tới trang/tài liệu nào? |
+| 7 | [Linh](../individual/2A202603624_DamTuanLinh.md), Card #1 | **L1:** Khi kết thúc cuộc gọi CSKH, tôi muốn lưu đủ nhu cầu, vấn đề, cam kết và bước tiếp theo vào CRM, để đồng nghiệp tiếp nhận đúng ngữ cảnh. | Nhân viên CSKH/tư vấn và người tiếp nhận ca sau | Nghe lại, lọc thông tin và nhập CRM; mốc 5–8 phút/cuộc gọi trong card là giả định | **Đề xuất Hưởng trao đổi:** So với biểu mẫu bốn trường, bản nháp từ hội thoại giảm được bao nhiêu công khi tính cả nghe lại và sửa cam kết/lịch hẹn sai? |
+| 8 | [Linh](../individual/2A202603624_DamTuanLinh.md), Card #2 | **L2:** Khi ôn video tiếng Anh, tôi muốn tìm đúng mốc có thuật ngữ cần học và hiểu đoạn đó, để tránh tua nhiều lần. | Sinh viên/người tự học qua video | Tua và nghe thử khi thiếu transcript; 5–15 phút/lượt trong card là giả định | **Đề xuất Vinh trao đổi:** Với video đã có transcript tốt, tìm từ khóa thông thường có đủ không, và phần khó còn lại là phiên âm, dịch hay định vị đoạn? |
+| 9 | [Linh](../individual/2A202603624_DamTuanLinh.md), Card #3 | **L3:** Khi chuẩn bị shortlist sau nhiều vòng tuyển dụng, tôi muốn gom bằng chứng theo cùng tiêu chí, để trưởng bộ phận rà soát mà không đọc lại mọi tài liệu rời. | HR tổng hợp; trưởng bộ phận/người phỏng vấn quyết định | Đọc, chuẩn hóa và đối chiếu CV/nhận xét; 10–20 phút/ứng viên trong card là giả định | **Đề xuất Tuyên trao đổi:** Nếu hai nhận xét mâu thuẫn hoặc một tiêu chí thiếu bằng chứng, bảng tổng hợp sẽ giữ cả nguồn và chuyển người xác minh thế nào? |
+| 10 | [Khương](../individual/2A202603627_MaiDangKhuong.md), Card #1 | **K1:** Khi nhận brief và tài liệu sản phẩm, tôi muốn tổng hợp căn cứ thị trường/khách hàng, để đề xuất hướng nội dung có cơ sở. | Người làm content tại công ty truyền thông và nhận freelance | Research và tổng hợp căn cứ; khoảng hai ngày thuộc một job do người bạn chia sẻ, không phải mọi job | **Đề xuất Hưởng trao đổi:** Trong hai ngày của job đó, bước tìm nguồn, đọc hay tổng hợp tốn công nhất, và template research đã giải được phần nào? |
+| 11 | [Khương](../individual/2A202603627_MaiDangKhuong.md), Card #2 | **K2:** Khi nhận user story e-commerce, tôi muốn làm rõ ràng buộc và tình huống biên, để triển khai đúng mong đợi. | Backend developer và người xác nhận nghiệp vụ | Làm rõ story khó khoảng 10 phút theo trải nghiệm; tách tự phân tích, trao đổi và chờ | **Đề xuất Linh trao đổi:** Với story khó nhưng ít phải làm lại, metric nên ưu tiên thời gian hay mức đủ của acceptance criteria, và ai chốt quy tắc nghiệp vụ? |
+| 12 | [Khương](../individual/2A202603627_MaiDangKhuong.md), Card #3 | **K3:** Khi bàn giao API, tôi muốn kiểm đủ response case và mô tả rõ tham số, để frontend tích hợp với ít câu hỏi lại. | Backend viết tài liệu/kiểm thử; frontend sử dụng | Xác định case và mô tả tài liệu; gần 15 phút/API là tổng kiểm thử + tài liệu, không phải riêng một bước | **Đề xuất Quân trao đổi:** Bộ tiêu chí nào xác định tài liệu đủ và test bao phủ đúng contract, thay vì chỉ đếm số case hoặc tốc độ viết? |
+| 13 | [Quân](../individual/2A202603626_PhamNgocTrungQuan.md), Card #1 | **Q1:** Khi nhận nhiều report CSKH, tôi muốn phân loại và nhận ra report cùng sự cố, để xử lý đúng nhóm vấn đề. | Nhân viên và trưởng nhóm CSKH | Đọc, phân loại và so nội dung; 3–5 giờ/lô là ghi nhận ban đầu cần đối chiếu nguồn | **Đề xuất Hưởng trao đổi:** Định nghĩa cùng sự cố khác nội dung gần giống ở đâu, và ai kiểm đáp án để bắt cả gộp nhầm lẫn bỏ sót? |
+| 14 | [Quân](../individual/2A202603626_PhamNgocTrungQuan.md), Card #2 | **Q2:** Khi intern bắt đầu công việc, tôi muốn họ tìm được hướng dẫn đúng và hiểu cách làm, để giảm hướng dẫn lặp lại. | Intern, quản lý và thành viên hướng dẫn | Hướng dẫn/giải đáp; 2–3 ngày/intern là ghi nhận ban đầu, không được mặc định thành giờ công liên tục | **Đề xuất Khương trao đổi:** Câu hỏi lặp do khó tìm, tài liệu thiếu hay quy trình khó hiểu, và checklist/FAQ tập trung giải được bao nhiêu? |
+| 15 | [Quân](../individual/2A202603626_PhamNgocTrungQuan.md), Card #3 | **Q3:** Khi đối soát hóa đơn/chứng từ, tôi muốn đối chiếu thông tin nhất quán, để phát hiện thiếu hoặc sai lệch trước tổng hợp. | Kế toán, tài chính và người kiểm | Đọc, nhập và đối chiếu nhiều chứng từ; mức pain trong card là giả thuyết cần khảo sát | **Đề xuất Vinh trao đổi:** Những trường nào có thể kiểm bằng quy tắc cố định, và trường hợp sai số/thiếu chứng từ cần người xác minh ra sao? |
+| 16 | [Tuyên](../individual/2A202603648_GiapManhTuyen.md), Card #1 | **T1:** Khi JD thay đổi sau khi đăng nhiều kênh, tôi muốn các bản đăng được cập nhật nhất quán, để hạn chế thông tin lệch và thao tác lặp. | Recruiter, Hiring Manager và người quản lý kênh tuyển dụng | Đối chiếu/cập nhật JD giữa các kênh; benchmark viết + đăng trong báo cáo không phải baseline riêng công đồng bộ | **Đề xuất Hưởng trao đổi:** Sau một nguồn JD chung và công cụ đăng đa kênh, công cập nhật còn lại được đo thế nào để chứng minh khoảng trống cần xử lý? |
+| 17 | [Tuyên](../individual/2A202603648_GiapManhTuyen.md), Card #2 | **T2:** Khi CV đến từ nhiều nguồn và định dạng, tôi muốn gom đúng thông tin và nhận ra hồ sơ thiếu/trùng, để bàn giao dữ liệu đầy đủ. | Recruiter, TA Operations và Hiring Manager | Thu thập, chuẩn hóa và kiểm trùng; số liệu ngoài trong báo cáo chỉ là benchmark tham khảo | **Đề xuất Linh trao đổi:** ATS hoặc biểu mẫu chung đã xử lý được phần nào, và tiêu chí nào xác nhận hai bản ghi là cùng một ứng viên? |
+| 18 | [Tuyên](../individual/2A202603648_GiapManhTuyen.md), Card #3 | **T3:** Khi ứng viên đi qua nhiều vòng, tôi muốn biết trạng thái, việc đang chờ và người phụ trách tiếp theo, để phản hồi đúng lúc. | Recruiter, người phỏng vấn, Hiring Manager và ứng viên | Chờ feedback, cập nhật trạng thái và bàn giao; tách thời gian lịch với phút thao tác | **Đề xuất Khương trao đổi:** Chậm vì thiếu thông tin hay người phụ trách không phản hồi, và SLA/phân công rõ có giải quyết được trước khi thêm công cụ không? |
+
+Bảng phân công review có mặt cả sáu thành viên; tên trong cột cuối là người được đề xuất trao đổi. Mỗi lượt review cần chốt câu hỏi, câu trả lời và điều chỉnh thực tế để dùng làm nhật ký phản biện cá nhân.
 
 ### 2.2. Cluster
 
+Tôi gom theo nguyên nhân gây tốn công và công việc người dùng cần hoàn thành. Cùng cluster chỉ thể hiện pattern chung; mỗi candidate vẫn giữ actor, dữ liệu và baseline riêng.
+
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| **A — Khó tìm đúng thông tin đã có** | H1, L2, Q2 | Nội dung tồn tại nhưng khó định vị đúng chỗ/đúng ngữ cảnh; người dùng phải lướt, nghe lại hoặc hỏi người khác. |
+| **B — Khó tổng hợp nhiều nguồn thành căn cứ xử lý** | H2, H3, L1, K1, Q1 | Phải đọc, chọn và đối chiếu thông tin phân tán trước khi chọn phương án, ghi nhận nhu cầu hoặc chuyển việc. |
+| **C — Khó chuẩn hóa và đối chiếu theo cùng tiêu chí** | V1, V2, V3, L3, Q3, T2 | Dữ liệu, mô tả hoặc cấu trúc khác nhau làm tăng công ghép, kiểm thiếu và xác nhận chênh lệch. |
+| **D — Thông tin bàn giao thiếu rõ ràng hoặc thiếu bao phủ** | K2, K3 | Người thực hiện tiếp theo phải hỏi lại hoặc tự suy diễn vì ràng buộc, tham số và tình huống chưa được mô tả đầy đủ. |
+| **E — Thay đổi và trạng thái không được cập nhật nhất quán** | T1, T3 | Nhiều bên cùng tham gia nhưng nội dung hoặc trách nhiệm thay đổi không được đồng bộ, làm tăng công kiểm và nhắc việc. |
+
+Hai cặp cần giữ ranh giới khi hội tụ:
+- **V1 và V2:** V1 so số sau khi bảng ghép đúng; V2 tạo điều kiện đầu vào đó. Không cộng toàn bộ công V2 vào baseline rồi chỉ đánh giá giải pháp tác động V1.
+- **L3 và T2:** L3 tổng hợp bằng chứng theo tiêu chí để người phụ trách xem xét; T2 tập trung gom/chuẩn hóa bản ghi ứng viên. Hai phần liên quan nhưng khác đầu ra và tiêu chí đạt.
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
-Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
+Tôi đặt một outcome chung để nối các cluster, sau đó thu hẹp về một opportunity đủ cụ thể cho bài nhóm. Các nhánh mô tả nhu cầu/pain; phương án xử lý được xem sau khi xác định quy trình và bằng chứng.
 
 ```text
-OUTCOME:
-├── Opportunity A:
-├── Opportunity B:
-└── Opportunity C:
-```
-
-Những ý đã gạch bỏ vì là solution đội lốt opportunity:
-
--
-
-### 2.4. Chấm điểm shortlist (1–5)
-
-| Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
-
-**Candidate được chọn:** Đối chiếu hồ sơ chào giá của các nhà thầu với yêu cầu/BOQ và giữa các nhà thầu để phát hiện chênh lệch. Nguồn: trưởng nhóm xác nhận trong chat; chi tiết phạm vi còn chờ chốt.
-
-**Vì sao chọn:** Chưa có lý do do nhóm cung cấp; chờ ghi lại lập luận thực tế.
-
-**Vì sao loại các candidate còn lại:** Chưa có nội dung do nhóm cung cấp; cần lý do cho ít nhất hai candidate.
-
-**Xử lý bất đồng (nếu có):** Chưa được xác nhận.
-
-### 2.5. Bản tham khảo do AI soạn — chưa phải kết quả CP3
-
-**Nguồn và giới hạn:** bản này được soạn theo yêu cầu trưởng nhóm ngày 2026-11-09, dựa trên các candidate đã viết trong báo cáo cá nhân. Việc sắp cluster, OST, shortlist, câu hỏi và lập luận bên dưới là đề xuất của AI; chưa xác nhận nhóm từng trình bày, đặt câu hỏi hoặc đồng thuận như vậy. Không dùng phần này làm bằng chứng hoàn thành CP3 hoặc đóng góp cá nhân. Theo `RULES.md`, nhóm vẫn tự thực hiện pitch/challenge và ghi lại kết quả thực tế tại mục 2.1–2.4; việc đồng ý một bản tham khảo không thay thế hoạt động đó.
-
-#### a. Danh mục candidate đã có trong báo cáo cá nhân
-
-Các mã dưới đây chỉ phục vụ bản tham khảo, không phải thứ tự pitch. Nguồn [S-H] đến [S-T] nằm ở mục 10. Nội dung được rút gọn, không phải lời nói nguyên văn của thành viên.
-
-| Người có báo cáo | Candidate trong top 3 cá nhân | Actor/phạm vi thể hiện trong nguồn | Giới hạn khi sử dụng |
-|---|---|---|---|
-| Hưởng [S-H] | H1: tìm nội dung cũ trong chat; H2: so sánh laptop trong ngân sách; H3: tìm chỗ ở gắn với lịch trình Vũng Tàu | Người tham gia nhóm chat; người mua laptop; người phụ trách chỗ ở cho nhóm lớp | Số liệu theo trí nhớ; chưa có bấm giờ từng bước; một tuần chuẩn bị không phải công thao tác |
-| Vinh [S-V] | V1: soát khối lượng/đơn giá; V2: gom bảng chào giá, gồm file sai mẫu; V3: đối chiếu hồ sơ năng lực với tiêu chí | Chuyên viên KTKT phía chủ đầu tư; V3 có đồng nghiệp cùng chấm | Nguồn mô tả một gói thầu; cần xác nhận xuất xứ dữ liệu và quyền sử dụng; thời gian bước con có ước lượng |
-| Linh [S-L] | L1: tổng hợp/cập nhật thông tin CSKH; L2: phụ đề, dịch và định vị đoạn video; L3: tổng hợp thông tin ứng viên | CSKH; người xem tài liệu/video; HR/người tuyển dụng theo phần scan | Mới có tên top 3; các Problem Card chi tiết còn trống, chưa có baseline đủ dùng |
-| Khương [S-K] | K1: research làm căn cứ định hướng content; K2: làm rõ user story e-commerce; K3: kiểm thử và tài liệu API | Người làm content; backend developer và người nhận bàn giao frontend | Research 2 ngày thuộc một job được bạn chia sẻ; các mốc khác thuộc phạm vi cá nhân, chưa phải kiểm chứng CP4 |
-| Quân [S-Q] | Q1: phân loại/phát hiện report khách hàng trùng; Q2: onboarding và tìm tài liệu nội bộ; Q3: tổng hợp/đối soát chứng từ | CSKH; intern/quản lý; kế toán | Top 3 và Card #2 mô tả Q2 ở mức khác nhau; cần Quân xác nhận phạm vi. Một số số liệu ban đầu/giả thuyết còn cần xác minh |
-| Tuyên [S-T] | T1: đồng bộ tin tuyển dụng đa kênh khi JD đổi; T2: tập trung/chuẩn hóa hồ sơ ứng viên; T3: theo dõi trạng thái và bàn giao trong pipeline | Recruiter/HR, Hiring Manager và các bên phối hợp tuyển dụng | Báo cáo dùng benchmark bên ngoài; chưa phải baseline doanh nghiệp cụ thể hoặc bằng chứng của hướng chào giá |
-
-#### b. Câu hỏi gợi ý để nhóm tự xem xét
-
-Đây là câu hỏi do AI đề xuất trong bản tham khảo, chưa có người hỏi hoặc người nhận thực tế. Chỉ ghi vào nhật ký phản biện sau khi có nội dung thực sự diễn ra, đúng nguồn.
-
-| Candidate/phạm vi | Câu hỏi tham khảo | Lỗ hổng cần làm rõ |
-|---|---|---|
-| V1–V2: chào giá | Bảng đã ghép đúng mã dòng chưa; công thức so khối lượng/đơn giá còn bỏ trống trường hợp nào? | Tách việc chuẩn hóa/ghép dòng khỏi việc so sánh số; chưa có lý do mặc định cần AI |
-| H1: chat | Thời gian mất ở đọc/nhận diện nội dung hay chờ tải, và dữ liệu cũ có còn lấy được không? | Can thiệp tìm kiếm có thể không giảm được phần chờ của ứng dụng |
-| L1: CSKH | Lần xử lý gần nhất có những nguồn nào, phải ghi lại trường nào và mất bao nhiêu phút? | Chưa có một trường hợp hành vi cụ thể cùng baseline |
-| K1: research content | Hai ngày thuộc một brief nào, bước nào tốn nhất và người làm dùng căn cứ gì để chốt insight? | Không suy từ thời gian một job ra mọi job hoặc hiệu quả chuyển đổi |
-| Q1: report trùng | Nhóm định nghĩa trùng bằng cùng sự cố hay nội dung gần giống; ai kiểm đáp án khi hai report khác chữ? | Cần tiêu chí và đáp án; số liệu ban đầu còn cần xác minh |
-| T1: tuyển dụng đa kênh | Nếu đã có ATS/công cụ đăng đa kênh, phần chậm còn lại là cập nhật JD hay phối hợp phê duyệt? | Tránh chọn một pain mà công cụ hoặc quy trình hiện tại đã giải đủ |
-
-#### c. Phương án gom cluster tham khảo
-
-| Cluster đề xuất | Candidate | Pattern chung | Điểm cần giữ riêng |
-|---|---|---|---|
-| A — Khó truy xuất thông tin đúng lúc | H1, L2, Q2 | Thông tin có sẵn nhưng khó đến đúng nội dung cần dùng | Chat, video và tài liệu onboarding khác quyền truy cập, định dạng và cách đo |
-| B — Tổng hợp nhiều nguồn trước khi xử lý/chọn lựa | H2, H3, L1, K1, Q1 | Người phụ trách phải đọc, gom và hiểu thông tin phân tán | Không coi cùng pattern là cùng actor hoặc cùng baseline |
-| C — Chuẩn hóa và đối chiếu theo tiêu chí | V1, V2, V3, L3, Q3, T2 | Khác cấu trúc/mô tả làm tăng công tìm, ghép, kiểm thiếu hoặc sai lệch | V1 và V2 là hai bước khác nhau; hồ sơ năng lực, ứng viên và chứng từ có tiêu chí riêng |
-| D — Làm rõ nội dung để bàn giao | K2, K3 | Yêu cầu hoặc tài liệu chưa đủ rõ để người sau thực hiện | Cần phân biệt thời gian tự làm rõ, trao đổi và chờ |
-| E — Giữ thông tin nhất quán khi nhiều bên cập nhật | T1, T3 | Trạng thái/nội dung thay đổi nhưng cập nhật và bàn giao không đồng bộ | Chậm do công cụ khác chậm do trách nhiệm hoặc phê duyệt |
-
-#### d. OST tham khảo cho bước hội tụ
-
-Outcome dưới đây là định hướng đề xuất, chưa có baseline/target do nhóm chốt. Sau hội tụ cần gắn phút công với một actor, một loại tác vụ và phạm vi dữ liệu cụ thể; không dùng một metric chung cho cả 18 candidate.
-
-```text
-OUTCOME ĐỀ XUẤT: Giảm phút công tìm, tổng hợp và đối chiếu thông tin
-                cho một tác vụ cụ thể, đồng thời giữ chất lượng được kiểm từ nguồn
-├── Opportunity A: Khó lấy đúng nội dung cần dùng từ thông tin đã có
+OUTCOME: Giảm công tìm, tổng hợp và đối chiếu thông tin cho một tác vụ cụ thể,
+         đồng thời giữ chất lượng có thể kiểm tra từ nguồn
+├── Opportunity A: Khó lấy đúng nội dung đã có khi cần sử dụng
 │   └── H1, L2, Q2
-├── Opportunity B: Thông tin phân tán làm tăng công đọc và tổng hợp
+├── Opportunity B: Thông tin phân tán làm tăng công đọc và tổng hợp căn cứ
 │   └── H2, H3, L1, K1, Q1
-├── Opportunity C: Dữ liệu khác cấu trúc/mô tả làm tăng công ghép và đối chiếu
-│   └── V1, V2, V3, L3, Q3, T2
-├── Opportunity D: Yêu cầu/tài liệu chưa rõ khiến bàn giao thiếu căn cứ
+├── Opportunity C: Dữ liệu không đồng nhất làm tăng công chuẩn hóa và đối chiếu
+│   ├── V2: khó đưa chào giá về cùng hạng mục, mã dòng và đơn vị
+│   ├── V1: tốn công nhận ra dòng chênh khối lượng/đơn giá sau khi đã ghép đúng
+│   └── V3, L3, Q3, T2: khó tìm/ghép bằng chứng theo tiêu chí
+├── Opportunity D: Bàn giao thiếu rõ ràng làm tăng công làm rõ và hỏi lại
 │   └── K2, K3
-└── Opportunity E: Thay đổi nội dung/trạng thái không được cập nhật nhất quán
+└── Opportunity E: Thay đổi hoặc trạng thái không được cập nhật nhất quán
     └── T1, T3
 ```
 
-Ví dụ cách diễn đạt nên loại khỏi tầng opportunity: “chatbot tìm tài liệu”, “agent tự chấm nhà thầu”, “dashboard tuyển dụng”. Đây là ví dụ AI nêu để kiểm cách viết, không phải những ý được ghi nhận nhóm từng đưa ra hoặc gạch bỏ.
+**Opportunity ưu tiên:** V1 — giảm công soát chênh khối lượng/đơn giá trên bảng đã ghép đúng, bảo đảm kết quả truy về nguồn để chuyên viên kiểm. V2 được giữ như điều kiện đầu vào và một hướng mở rộng riêng. Outcome ở cấp toàn nhóm là định hướng; metric định lượng của phạm vi chọn được nêu tại mục 5 và 7.
 
-#### e. Shortlist và cơ sở đánh giá tham khảo
+Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
-**Shortlist AI đề xuất để đối chiếu:** V1 — soát chênh lệch chào giá; H1 — tìm nội dung chat; T1 — giữ nhất quán tin tuyển dụng khi JD đổi. Chưa có căn cứ khẳng định đây là shortlist nhóm từng chọn. V2 cần được xem riêng như điều kiện đầu vào của V1, không mặc định gộp toàn bộ thời gian hai việc thành một bottleneck.
+Các ví dụ dưới đây là cách tôi chuẩn hóa cách diễn đạt khi review, không phải lời trích từ buổi thảo luận:
 
-| Tiêu chí nhóm cần chấm 1–5 | V1 — chào giá | H1 — chat | T1 — tin tuyển dụng |
-|---|---|---|---|
-| Actor rõ | Báo cáo Vinh nêu chuyên viên KTKT; nhóm cần chốt actor của phạm vi chung | Hưởng là người có trải nghiệm; cần thu hẹp một nhóm/nguồn | Báo cáo Tuyên nêu HR/Recruiter và các bên phối hợp; cần chọn actor chính |
-| Quy trình rõ | Có mô tả gom → soát → trình; cần tách phạm vi ghép và soát | Có bản nháp; chưa xác nhận đủ từng bước thực tế | Có mô tả đăng/cập nhật; chưa có quy trình thực tế tại một tổ chức |
-| Pain có bằng chứng | Có dữ liệu được báo cáo trong CP1–CP2; nguồn và phạm vi cần kiểm; chưa có CP4 | Có ước lượng trí nhớ và lượt không tìm được; chưa có nhật ký đo | Có benchmark được báo cáo; chưa có baseline của actor cụ thể |
-| Impact đo được | Có thể đo phút/vòng và chất lượng phát hiện trên cùng bộ hồ sơ; chưa có số đo nhóm xác nhận | Có thể đo phút/lượt và tỷ lệ tìm đúng; cần tính lượt thất bại | Có thể đo phút cập nhật/JD và số bài lệch; cần dữ liệu thực tế |
-| Vừa sức lab | Phải giới hạn hạng mục, định dạng và dữ liệu được phép dùng | Phải giới hạn một nguồn và khả năng lấy dữ liệu | Phải giới hạn kênh và quyền truy cập; tránh triển khai đa nền tảng |
-| So sánh 4 mức | Có thể đối chứng bảng/công thức với hỗ trợ ghép mô tả; chưa chọn mức | Có thể đối chứng tìm kiếm/lọc/chỉ mục với hỗ trợ ngữ nghĩa | Có thể đối chứng nguồn JD chung và Rule với hỗ trợ xử lý nội dung |
-| Nhóm hiểu domain | Có báo cáo Vinh làm đầu mối domain; không suy ra cả nhóm đã hiểu đủ | Có trải nghiệm cá nhân Hưởng; chưa xác nhận mức hiểu của cả nhóm | Tuyên mô tả kinh nghiệm công cụ tuyển dụng; chưa xác nhận cả nhóm hiểu đủ |
+- ~~“Làm agent tự chấm nhà thầu”~~ → “Chuyên viên tốn công tìm dòng chênh lệch và bằng chứng để giải trình”.
+- ~~“Làm chatbot tìm mọi tài liệu”~~ → “Người dùng khó lấy đúng nội dung đã có khi cần”.
+- ~~“Xây hệ thống tự động tuyển dụng đa kênh”~~ → “Thông tin JD hoặc trạng thái ứng viên không được cập nhật nhất quán giữa các bên”.
 
-**Điểm số và tổng:** chưa chấm. Bảng này cung cấp căn cứ và lỗ hổng để nhóm tự chấm tại mục 2.4; không tạo số nhằm làm cho hướng đã chọn có tổng cao nhất. Các nguồn benchmark chưa được mở kiểm trong lượt này nên không dùng số của chúng để chấm pain/impact của nhóm.
+### 2.4. Chấm điểm shortlist (1–5)
 
-#### f. Lập luận chọn–loại để nhóm xem xét
+Ba hướng shortlist theo thông tin nhóm đã cung cấp: **V1 — đối chiếu chào giá nhà thầu; L1 — ghi chú CSKH vào CRM; T1 — đồng bộ tuyển dụng đa kênh**. Tên L1 được thu hẹp theo card hiện tại của Linh, giữ ngoài phạm vi việc tự suy đoán khả năng trả nợ hay quyết định cho vay.
 
-**Vì sao hướng chào giá có thể đáng ưu tiên:** báo cáo Vinh đã mô tả actor, chuỗi hồ sơ → bảng tổng hợp → đối chiếu → trình duyệt và phân biệt file đúng/sai mẫu. Hướng này cho phép thiết kế đầu ra kiểm được tới dòng nguồn, so với yêu cầu/BOQ và giữa các nhà thầu. Có thể đặt cách làm bảng/công thức làm đối chứng để đánh giá phần còn cần hỗ trợ. Đây là lập luận đề xuất từ nội dung nguồn, chưa phải lý do đồng thuận đã ghi nhận của nhóm hoặc bằng chứng đã kiểm chứng.
+Tôi chấm đề xuất theo bảy tiêu chí, trọng số bằng nhau; tổng tối đa 35. Điểm phản ánh độ rõ và cơ sở trong tài liệu tại thời điểm review, không phải kết quả bỏ phiếu, phép đo hiệu quả hoặc so sánh quy mô thị trường. Các dữ liệu CP4/CP5 về sau không được hồi tố thành bằng chứng nhóm đã có khi pitch.
 
-**Điều kiện có thể làm lập luận trên không đứng vững:** không có quyền dùng dữ liệu; không xác định được dòng tương ứng/đáp án đối chiếu; chưa tách công ghép khỏi công soát; hoặc bảng/công thức đã xử lý đủ trong phạm vi chọn. Trường hợp cuối vẫn có thể dẫn đến một bài lab chọn No AI/Rule hợp lệ; nhóm tự quyết sau kiểm chứng.
+Cách đọc thang điểm:
+- **Actor, quy trình:** 1 là mô tả chung; 3 là xác định được nhưng còn phần cần làm rõ; 5 là vai trò, thời điểm, đầu vào/đầu ra và bước làm rõ trong card.
+- **Pain, impact:** 1 là nhận định chung; 2 là chủ yếu giả định/benchmark; 3 là có trường hợp hoặc cách đo nhưng dữ liệu hạn chế; 4 là có trường hợp và số liệu với phạm vi cụ thể; 5 đòi hỏi bằng chứng được kiểm thêm, đủ để đối chiếu cả thời gian và chất lượng.
+- **Vừa sức lab, so sánh các mức:** 1 là phạm vi rộng, khó kiểm; 3 là cần chốt điều kiện truy cập/phạm vi; 5 là có phép so và đầu ra kiểm được trong phạm vi nhỏ.
+- **Nhóm hiểu domain:** chấm theo căn cứ từ thành viên đưa bài, không suy một người hiểu thành cả nhóm đã thành thạo. Điểm 3 thể hiện có đầu mối kinh nghiệm; điểm cao hơn cần nhóm giải thích nhất quán quy trình và ngoại lệ.
 
-**Vì sao có thể chưa ưu tiên H1 ở vòng này:** trải nghiệm tìm chat có thật theo báo cáo Hưởng, nhưng chưa tách công tìm khỏi chờ tải và chưa xác minh khả năng lấy lịch sử/tệp cũ. Hỗ trợ ngữ nghĩa có thể không xử lý phần chậm chính. Đây là điểm cần kiểm, không chứng minh hướng này không đáng giải.
+| Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **V1 — Soát chênh khối lượng/đơn giá** | 5 | 5 | 4 | 4 | 4 | 5 | 3 | **30** |
+| **L1 — Ghi chú CSKH vào CRM** | 5 | 4 | 2 | 3 | 3 | 5 | 2 | **24** |
+| **T1 — Đồng bộ JD trên nhiều kênh** | 4 | 4 | 2 | 3 | 3 | 5 | 3 | **24** |
 
-**Vì sao có thể chưa ưu tiên T1 ở vòng này:** báo cáo Tuyên đã lưu ý công cụ đa kênh hiện có và khác biệt giữa benchmark với baseline thực tế. Chưa biết khoảng trống sau công cụ/quy trình hiện tại là gì; cần actor, dữ liệu cập nhật JD và phạm vi kênh cụ thể. Không dùng benchmark tuyển dụng để so lớn/nhỏ trực tiếp với số liệu chào giá hoặc tìm chat.
+**Căn cứ cho điểm đề xuất:**
+- **V1:** vai trò chuyên viên KTKT và chuỗi soát đã rõ; Vinh nêu một trường hợp khoảng 4.100 dòng, bốn nhà thầu và 5–6 giờ soát/vòng. Có thể định nghĩa đối chứng bằng công thức trên cùng bảng đã ghép đúng, kiểm đến dòng nguồn. Pain/impact chưa ở mức 5 vì nguồn một trường hợp, baseline chất lượng và quyền dùng dữ liệu vẫn cần kiểm. Vừa sức ở mức 4 khi giới hạn phần soát; domain ở mức 3 vì có Vinh làm đầu mối, không mặc định cả nhóm hiểu đủ.
+- **L1:** actor và thời điểm sau cuộc gọi rõ; quy trình nháp có thể vẽ được và có đối chứng biểu mẫu bốn trường. Pain ở mức 2 vì số phút trong card là giả định; impact ở mức 3 vì định nghĩa được metric nhưng chưa có baseline thực. Vừa sức/domain bị giới hạn bởi quyền xử lý cuộc gọi, chất lượng tiếng nói và hiểu quy trình CRM. Không dùng tần suất hàng nghìn cuộc gọi nêu ở scan làm số đo của một đơn vị cụ thể.
+- **T1:** có quy trình cập nhật và kinh nghiệm công cụ do Tuyên mô tả; actor có nhiều bên nên cần chọn người thao tác chính. Pain ở mức 2 vì dữ liệu ngoài là benchmark, không phải baseline cập nhật JD của một tổ chức. Tần suất đổi JD, số kênh có quyền tích hợp và công còn lại sau công cụ sẵn có quyết định độ khả thi. Hai hướng L1/T1 đồng điểm nhưng khác điểm mạnh; không điều chỉnh điểm chỉ để tạo thứ hạng riêng.
 
-**Phần nhóm cần tự ghi tiếp:** hướng đã chọn có đúng với V1 hay gồm cả V2; shortlist thực tế; điểm và căn cứ; lý do thực sự của nhóm; các câu hỏi thực sự đã hỏi/nhận; bất đồng và cách xử lý nếu có. Không chuyển các đoạn AI đề xuất ở đây thành sự kiện quá khứ.
+**Candidate được chọn:** Đối chiếu hồ sơ chào giá của các nhà thầu với yêu cầu/BOQ và giữa các nhà thầu để phát hiện chênh lệch; lựa chọn hướng đã được trưởng nhóm xác nhận. Bản tổng hợp của tôi đề xuất ưu tiên V1, nhận bảng đã được chuyên viên kiểm ghép đúng mã/đơn vị. V2 được theo dõi như phần tiền xử lý hoặc nhánh mở rộng, không mặc định là chức năng chính đã chốt.
+
+**Vì sao chọn:** Tôi đề xuất ưu tiên V1 vì có actor cụ thể, quy trình mô tả được, số liệu có phạm vi và cách kiểm đầu ra trực tiếp từ dòng nguồn. Bài toán cho phép so No AI cải tiến, Rule và hỗ trợ ngữ nghĩa theo từng bước, nên có thể kiểm giá trị tăng thêm mà không bắt đầu từ một tên công nghệ. Điều kiện để lập luận này đứng vững là có quyền dùng dữ liệu, mapping/đơn vị đúng, đáp án đối chiếu và cách ghi công kiểm/sửa. Nếu No AI hoặc Rule đủ, đó vẫn là kết luận phù hợp với Lab.
+
+**Vì sao loại các candidate còn lại:**
+- **L1 — CSKH/CRM:** chưa ưu tiên trong vòng này vì baseline thời gian và lỗi đang là giả định; cần xác minh quyền dùng cuộc gọi và phần công còn lại sau biểu mẫu CRM. Việc dự đoán khả năng trả nợ là phạm vi khác với ghi chú sau cuộc gọi, có tiêu chí và trách nhiệm riêng; không dùng nó để làm impact cho card ghi chú.
+- **T1 — Tuyển dụng đa kênh:** chưa ưu tiên trong vòng này vì benchmark viết/đăng không đo riêng việc đồng bộ JD; cần chứng minh tần suất thay đổi và khoảng trống sau một nguồn JD chung/công cụ hiện có. Phụ thuộc quyền cập nhật từng kênh khiến phạm vi thử cần thu hẹp. Lập luận này không khẳng định hướng tuyển dụng không có giá trị.
+
+**Xử lý bất đồng (nếu có):** Tôi đề xuất quay về actor, quy trình, nguồn số liệu và phạm vi thử thay vì biểu quyết ngay theo tên giải pháp. Nếu khác nhận định về ghép và soát, tách V2 khỏi V1 và giữ metric riêng; nếu khác nhận định về mức can thiệp, lấy No AI/Rule làm đối chứng, chỉ nâng mức khi có căn cứ. Với điểm hoặc lập luận có ý kiến khác, ghi ý kiến, nguồn kiểm và điều được sửa khi review. Đoạn này mô tả cách xử lý đề xuất, không ghi nhận một cuộc tranh luận cụ thể hoặc tự kết luận nhóm không có bất đồng.
 
 ---
 
@@ -346,7 +301,7 @@ Kiểm tra chéo: tổng tiền khớp không chứng minh mọi dòng được 
 
 Phạm vi của v0/v1 đề xuất dưới đây là **riêng phần soát**; sơ đồ mục 4 của Vinh giữ nguyên để thể hiện bối cảnh toàn luồng gom + soát. Target 2–2,5 giờ/vòng trong mục 4 là kỳ vọng cho toàn luồng có AI mapping, không dùng thay target riêng bước soát.
 
-Bản tổng hợp đề xuất từ pain và quy trình trong báo cáo Vinh; v0 giữ cách mô tả vấn đề, chưa gắn một công cụ cụ thể. Đây là nội dung chuẩn bị review, không ghi nhận nhóm đã tự viết/chốt bản này.
+Bản tổng hợp đề xuất từ pain và quy trình trong báo cáo Vinh; v0 giữ cách mô tả vấn đề, chưa gắn một công cụ cụ thể. Đây là bản đề xuất để nhóm review và xác nhận phạm vi, metric cùng boundary.
 
 | Trường | Nội dung |
 |---|---|
@@ -557,7 +512,7 @@ Bản review tổng hợp đề xuất, phân biệt với đề xuất cá nhâ
 
 - Bản này tích hợp review nguồn Vinh/Tuyên, bộ tiêu chí đề xuất và research tài liệu công cụ; không khẳng định đã chạy pilot, phỏng vấn hoặc có đồng thuận về các bản v0/v1 được soạn trong lượt này.
 - Phạm vi đề xuất chính là soát trên bảng đã ghép đúng. Nhóm cần xác nhận phạm vi, quyền dùng dữ liệu, đáp án, dung sai/ngưỡng và nguồn thời gian; hoạt động gom/AI mapping được đo và quyết định riêng.
-- Bằng chứng CP3 và CP4 phải đến từ trao đổi/kiểm chứng thực tế. Mục 2.5 là tài liệu chuẩn bị lịch sử, không thay thế ghi chép buổi thảo luận.
+- Mục 2 tổng hợp 18 card và đề xuất câu hỏi/điểm để review. Khi dùng làm bằng chứng CP3, ghi lại hỏi–đáp, điểm và điều chỉnh được các thành viên xác nhận. Nguồn CP4 được ghi đúng người cung cấp và giới hạn.
 - Quân cùng người domain hoàn thiện eval; Linh bổ sung nguồn kiểm chứng, Khương đối chiếu research; Vinh/Tuyên phản hồi các điểm review. Hưởng cập nhật nội dung và `TEAM.md` theo sản phẩm được xác nhận.
 - Đánh giá lợi ích tính cả thiết lập, kiểm/sửa, xử lý ngoại lệ và lượt thất bại. Không xem target tương lai là hiệu quả đã đạt.
 - Bản tổng hợp v0/v1 và đề xuất quyết định này ở nhánh Hưởng/local. CP5 của Vinh, research của Khương và CP6 của Tuyên đã merge qua PR #4/#5/#6; bản local giữ nguyên các phần đó và ghi rõ nơi bổ sung đề xuất review.
@@ -568,19 +523,19 @@ Bản review tổng hợp đề xuất, phân biệt với đề xuất cá nhâ
 - [CHECKPOINTS.md](../../CHECKPOINTS.md), [Worksheet](../../docs/01-worksheet.md), [RUBRIC.md](../../RUBRIC.md), [SUBMISSION.md](../../SUBMISSION.md) — cấu trúc và điều kiện kiểm tra bài nộp.
 - [TEAM.md](../../TEAM.md), [nhật ký điều phối](../../docs/TEAM_WORK_LOG.md) — phân công, nguồn xác nhận và phần còn thiếu.
 - Trưởng nhóm Nguyễn Trọng Hưởng, trao đổi trong chat ngày 2026-11-09: cung cấp hướng đã chọn; xác nhận các thành viên đồng ý phân công và coach đã cho phép nhóm 6 người. Chưa kèm biên bản CP3 hoặc nguồn kiểm chứng CP4 trong repo.
-- **Nguồn nội bộ của bản tham khảo 2.5:** đọc trực tiếp nội dung Git tại commit `4c402eb728df47a395c4ce4da5d0e223a798fc6a` của `origin/main`. Các link dưới đây cố định theo commit để phân biệt nội dung đã đọc với bản thay đổi về sau; chưa kiểm giao diện web trong lượt này.
-- [S-H — Báo cáo Hưởng, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/202603607_NguyenTrongHuong.md).
-- [S-V — Báo cáo Vinh, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/2A202603672_NguyenVanVinh.md).
-- [S-L — Báo cáo Linh, danh sách top 3](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/2A202603624_DamTuanLinh.md).
-- [S-K — Báo cáo Khương, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/2A202603627_MaiDangKhuong.md).
-- [S-Q — Báo cáo Quân, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/2A202603626_PhamNgocTrungQuan.md).
-- [S-T — Báo cáo Tuyên, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/2A202603648_GiapManhTuyen.md).
+- **Nguồn sáu báo cáo cho CP3:** đọc trực tiếp nội dung tại commit `b2bf713ee593d8e1ede81a0f50210420ca69cc26`. Các liên kết cố định dưới đây dùng đối chiếu card và loại số liệu; câu hỏi, cluster và điểm trong mục 2 là phần tôi tổng hợp để review.
+- [S-H — Báo cáo Hưởng, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/b2bf713ee593d8e1ede81a0f50210420ca69cc26/report/individual/202603607_NguyenTrongHuong.md).
+- [S-V — Báo cáo Vinh, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/b2bf713ee593d8e1ede81a0f50210420ca69cc26/report/individual/2A202603672_NguyenVanVinh.md).
+- [S-L — Báo cáo Linh, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/b2bf713ee593d8e1ede81a0f50210420ca69cc26/report/individual/2A202603624_DamTuanLinh.md).
+- [S-K — Báo cáo Khương, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/b2bf713ee593d8e1ede81a0f50210420ca69cc26/report/individual/2A202603627_MaiDangKhuong.md).
+- [S-Q — Báo cáo Quân, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/b2bf713ee593d8e1ede81a0f50210420ca69cc26/report/individual/2A202603626_PhamNgocTrungQuan.md).
+- [S-T — Báo cáo Tuyên, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/b2bf713ee593d8e1ede81a0f50210420ca69cc26/report/individual/2A202603648_GiapManhTuyen.md).
 
 - **[V-CP5]** [Quy trình nhóm do Vinh viết tại `2f96679`](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/2f966796fadb9e2df49bc7aa96d10777595e595b/report/team/group_report.md) và [báo cáo cá nhân cùng commit](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/2f966796fadb9e2df49bc7aa96d10777595e595b/report/individual/2A202603672_NguyenVanVinh.md): nguồn baseline, phạm vi và kịch bản tương lai; đọc trực tiếp nội dung Git.
 - **[T-CP6]** [Mức can thiệp và quyết định đề xuất của Tuyên tại `b650c92`](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/b650c927350787f4b09e9b3285add056a946c35a/report/team/group_report.md): nguồn so bốn mức, boundary và rủi ro; bản tổng hợp có điều chỉnh sau review.
-- **[L-NEW]** [Báo cáo Linh tại `6f3fe68`](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/6f3fe68/report/individual/2A202603624-DamTuanLinh.md): đã điền ba card trên nhánh cá nhân; tên file nhánh còn dấu `-`, khác tên chuẩn hóa trên main. Nguồn này dùng cho câu hỏi review hiện tại, tách khỏi snapshot lịch sử mục 2.5.
+- **[L-NEW]** [Báo cáo Linh tại `6f3fe68`](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/6f3fe68/report/individual/2A202603624-DamTuanLinh.md): đã điền ba card trên nhánh cá nhân; tên file nhánh còn dấu `-`, khác tên chuẩn hóa trên main. Đây là nguồn lịch sử; mục 2 dùng bản chuẩn hóa đã merge tại b2bf713.
 - Research công cụ: [Append](https://learn.microsoft.com/en-us/power-query/append-queries), [Merge](https://learn.microsoft.com/en-us/power-query/merge-queries-overview), [Conditional Formatting](https://support.microsoft.com/en-us/excel/use-conditional-formatting-to-highlight-information-in-excel), tài liệu Microsoft mở kiểm ngày 2026-11-09.
-- Hưởng yêu cầu trợ lý đọc, review và soạn bản tổng hợp trong chat ngày 2026-11-09; các câu hỏi, phân tích v0/v1, eval và kết luận soạn ở lượt này là đề xuất review. Việc nhóm chốt và kết quả thử được ghi theo hoạt động thực tế.
+- Nguyễn Trọng Hưởng — tổng hợp card, câu hỏi, phân tích v0/v1, eval và lập luận review từ các nguồn được dẫn. Nội dung được nhóm chốt và kết quả thử được ghi theo hoạt động thực tế.
 
 - Tích hợp xác nhận ngày 2026-11-09: [PR #3](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/3), [PR #4](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/4), [PR #5](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/5), [PR #6](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/6), [PR #7](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/7), main tại `314b6d8c71bfaba38aa18e2e0745f3c5da6eb8b0`. Các mục 3.3/4/6 trong bản local giữ nguyên từ main này; v0/v1, eval và kết luận tổng hợp là đề xuất để người phụ trách/nhóm kiểm.
 

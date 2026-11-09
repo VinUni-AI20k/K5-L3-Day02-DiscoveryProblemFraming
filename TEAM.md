@@ -40,7 +40,7 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | CP6 — Mức can thiệp + Problem Statement v1 | Tuyên phân tích; Hưởng tổng hợp theo ủy quyền | Quân cung cấp eval | Mục 6–7: chọn Rule, AI mapping tách riêng; năm tiêu chí phải đạt đồng thời |
 | CP6 — Quyết định | Hưởng, theo ủy quyền trực tiếp của trưởng nhóm | Tuyên cung cấp rủi ro; Quân cung cấp eval | Mục 8: Not Yet cho pilot, điều kiện chuyển Go, ngưỡng dừng và người phụ trách từng điều kiện |
 
-Các đường dẫn sản phẩm trong `report/assets/` là đầu ra dự kiến; Vinh và Tuyên viết trực tiếp trong `report/team/group_report.md`, đã tích hợp lên main qua PR #4/#6; Khương bổ sung mục 3.3 qua PR #5. Bản tổng hợp local dẫn commit nguồn và phân biệt đề xuất với kết quả đã kiểm. Phân công không thay thế bằng chứng đóng góp. Phụ thuộc và trạng thái chi tiết ở [nhật ký điều phối](docs/TEAM_WORK_LOG.md#2-phân-công-đã-xác-nhận-và-phụ-thuộc). Các quan hệ hỗ trợ phục vụ tổng hợp trong bảng là luồng bàn giao dự kiến, chưa ghi nhận là công việc đã diễn ra.
+Các đường dẫn sản phẩm trong `report/assets/` là đầu ra dự kiến; Vinh và Tuyên viết trực tiếp trong `report/team/group_report.md`, đã tích hợp lên main qua PR #4/#6; Khương bổ sung mục 3.3 qua PR #5. Bản tổng hợp và quyết định Rule/Not Yet đã công bố qua PR #8–#10; nguồn baseline, target và kết quả thực nghiệm được phân biệt riêng. Phân công không thay thế bằng chứng đóng góp. Phụ thuộc và trạng thái chi tiết ở [nhật ký điều phối](docs/TEAM_WORK_LOG.md#2-phân-công-đã-xác-nhận-và-phụ-thuộc). Các quan hệ hỗ trợ phục vụ tổng hợp trong bảng là luồng bàn giao dự kiến, chưa ghi nhận là công việc đã diễn ra.
 
 ## Cá nhân
 
@@ -50,13 +50,13 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
-- Điều phối sáu thành viên; quản lý phân công/log, review bàn giao và tổng hợp báo cáo nhóm, Problem Statement, metric và quyết định để nhóm kiểm/chốt.
+- Điều phối sáu thành viên; quản lý phân công/log, review bàn giao và tổng hợp báo cáo nhóm, Problem Statement, metric; công bố phạm vi Rule và quyết định Not Yet qua PR #10 theo ủy quyền của tôi.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
 - Điều phối tích hợp sáu báo cáo cá nhân qua PR #2; tiếp tục yêu cầu kiểm năm nhánh và merge PR #3–#7 của bốn thành viên. Không tạo PR trùng cho Quân vì nội dung đã có trên main; giữ các bản đang sửa trên nhánh cá nhân.
 - Yêu cầu trợ lý đọc năm báo cáo, soạn mỗi người một câu hỏi bám vào card; lưu ở mục 4 báo cáo cá nhân như nội dung chuẩn bị trao đổi.
-- Sử dụng trợ lý review CP5 của Vinh và CP6 của Tuyên, xử lý conflict/tên file, khôi phục template, kiểm phạm vi diff và merge qua PR #4/#6. Review sửa logic kiểm mapping và phân biệt baseline gom + soát 11–13 giờ/vòng với riêng soát 5–6 giờ/vòng. Bản tổng hợp local giữ nội dung đã merge, bổ sung v0/v1 và điều kiện review.
+- Sử dụng trợ lý review CP5 của Vinh và CP6 của Tuyên, xử lý conflict/tên file, khôi phục template, kiểm phạm vi diff và merge qua PR #4/#6. Review sửa logic kiểm mapping và phân biệt baseline gom + soát 11–13 giờ/vòng với riêng soát 5–6 giờ/vòng. Bản tổng hợp đã tích hợp qua PR #8–#10, bổ sung v0/v1 và điều kiện trước pilot.
 - Tổng hợp v0/v1, metric cùng phạm vi, năm tiêu chí, bốn rủi ro, điều kiện Go và ngưỡng dừng; bản trước đã merge qua PR #8/#9. Ngày 2026-11-09, tôi ủy quyền chốt hướng Rule cho phần soát và giữ Not Yet cho pilot, đồng bộ quyết định trong báo cáo nhóm và log.
 - Yêu cầu review bản eval Quân tại `9ccefc8`; nhận xét được ghi trong báo cáo nhóm mục 7, gồm sửa trung vị TC-03, đơn vị tiền TC-09, tỷ lệ thiếu nguồn và phân biệt target với kết quả đã chạy. Đây là review tài liệu, không gán cho Quân câu trả lời chưa có.
 - Kiểm research nhà thầu của Khương trong PR #5, sửa bốn tham chiếu thiếu đích thành link chính thức đã mở kiểm; giữ rõ tính năng công cụ với giả thuyết áp dụng. Phần research bổ trợ Microsoft trước đó được ghi đúng nguồn.
@@ -67,9 +67,10 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - [PR #2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/2), merge commit `4c402eb`: tập hợp báo cáo cá nhân trên main.
 - [PR #3](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/3), [#4](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/4), [#5](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/5), [#6](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/6), [#7](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/7), main `314b6d8`: tích hợp mới và review.
 - [Báo cáo cá nhân](report/individual/202603607_NguyenTrongHuong.md), mục 4–5: câu hỏi review và cách dùng AI.
-- [Báo cáo nhóm](report/team/group_report.md), mục 3.3, 4–8 và 10: research, bản tổng hợp đề xuất và commit nguồn.
+- [Báo cáo nhóm](report/team/group_report.md), mục 3.3, 4–8 và 10: research, quy trình, v0/v1, quyết định đã công bố và commit nguồn.
 - [PR #8](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/8) và [PR #9](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/9): bản tổng hợp và mục 2 đã tích hợp, main `90dcaa7`.
-- [Nhật ký điều phối](docs/TEAM_WORK_LOG.md): phân công, quyết định theo ủy quyền và review eval. Lượt cập nhật quyết định hiện tại ở local trên nhánh Hưởng; không gán commit cho phần còn đang sửa.
+- [PR #10](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/10), nội dung `384850c`, merge `1ee80b3`: công bố quy trình Rule, metric dưới 90 phút công/vòng, quyết định Not Yet và review eval Quân.
+- [Nhật ký điều phối](docs/TEAM_WORK_LOG.md): phân công, quyết định theo ủy quyền, review eval và sự kiện merge PR #10. Lượt rà soát ghi chú sau PR #10 được theo dõi riêng, không gán trước một commit cho thay đổi mới.
 
 **Điều mình học được từ phần nhóm:**
 

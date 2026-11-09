@@ -25,9 +25,9 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | 3 |Pain từ người khác|Khi lựa chọn dự án và hỏi năng lực của thành viên nhóm, tôi muốn biết chính xác năng lực của họ để phân công công việc cũng như cho họ làm việc họ có năng lực nhất để nhóm có chọn được dự án thích hợp nhất cũng như thành viên nhận được công việc thích hợp nhất|Toàn bộ thành viên nhóm|Có thể tốn nhiều ngày nhiều thời gian, luôn luôn có thể mắc sai lầm khi giao việc không thích hợp cho các thành viên có thể giao họ việc làm mà họ chưa có nhiều năng lực dẫn đến họ mất thời gian tìm hiểu hơn|
 | 4 |Tốn thời gian|Khi phải tìm tài liệu học tập từ nhiều nguồn trong khoá học AI, tôi muốn gom những phần quan trọng để học tập hiệu quả hơn|Tôi|Mất khoảng 1-2 giờ mỗi lần muốn học tập, khoảng 2-3 lần mỗi tuần khi gặp khó khăn trong việc học|
 | 5 |Cần đọc, tổng hợp nhiều thông tin |Khi làm bài tập liên quan đến thuật toán hoặc cấu trúc dữ liệu, tôi muốn hiểu rõ đề và các ràng buộc trước khi code để tránh viết sai hướng|Tôi|Mỗi lần mất 30p hoặc hơn để phân tích để cũng như tìm hiểu nguồn trên mạng hoặc đọc hiểu AI khi mang ra|
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
+| 6 |Pain từ người khác|Khi người nhà hỏi cách dùng hoặc sửa lỗi máy tính/phần mềm, tôi muốn hướng dẫn nhanh và dễ hiểu, để không phải giải thích lại nhiều lần.|Người thân|Mỗi lần 10–25 phút; 1–3 lần/tuần.|
+| 7 |Lặp lại + Tốn thời gian|Khi phải theo dõi tiến độ các môn học và điểm số trên hệ thống trường, tôi muốn kiểm tra nhanh những môn đang yếu hoặc sắp thi, để phân bổ thời gian học hợp lý.|Tôi|Mất 15–30 phút mỗi lần kiểm tra; 2–3 lần/tuần.|
+| 8 |Tốn thời gian|Khi học đàn nguyệt, tôi muốn nhớ rõ các kỹ thuật tay trái/tay phải và thứ tự luyện tập, để không mất thời gian ngồi nhớ lại mỗi buổi.|Tôi|Mỗi buổi luyện mất thêm 10–15 phút vì phải nhớ lại; 3–5 buổi/tuần.|
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 

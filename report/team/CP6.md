@@ -8,7 +8,7 @@ Tôi tập trung vào việc tìm lại bằng chứng trong paper đã đọc �
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Tôi xếp bài toán vào ô **mơ hồ thấp, phức tạp thấp**. Paper đã được chọn, các bước tìm và kiểm tra nguồn tương đối rõ. Tôi có thể đối chiếu kết quả với PDF để biết bằng chứng có đúng vị trí và hỗ trợ nhận định hay không.
+Tôi xếp bài toán vào ô **mơ hồ thấp, phức tạp thấp** trong phạm vi tìm lại một bằng chứng ở paper đã đọc. Tôi chỉ cần đối chiếu ghi chú với PDF đã chọn, không tổng hợp nhiều nguồn hoặc tìm paper mới. Các bước đã rõ; kết quả được kiểm tra bằng vị trí nguồn và nội dung hỗ trợ nhận định.
 
 Điểm tôi cần giữ lại là bước đọc ngữ cảnh: mở đúng trang chưa có nghĩa là hiểu đúng kết quả.
 
@@ -18,12 +18,12 @@ Tôi xếp bài toán vào ô **mơ hồ thấp, phức tạp thấp**. Paper đ
 |---|---|---|---|---|
 | **No AI** | Ghi chú kèm nhận định, trang/hình/bảng, annotation và ngữ cảnh; mở lại bằng liên kết Zotero | Ghi chú dẫn về đúng nguồn, tôi kiểm tra được nội dung | Thiếu vị trí, liên kết hỏng, hiểu sai ngữ cảnh | Chọn |
 | **Rule** | Script kiểm tra trường nguồn còn thiếu và tìm từ khóa theo quy tắc | Có nhiều thao tác lặp cần tự động hóa | Đủ trường nhưng sai nguồn; từ khóa không khớp nhận định | Chưa cần script riêng |
-| **Workflow** | Nhận định + PDF → AI gợi ý đoạn kèm vị trí → tôi đối chiếu | Cách ghi chú và tìm kiếm đơn giản chưa đáp ứng nhu cầu | Đoạn liên quan nhưng không hỗ trợ nhận định | Chưa chọn |
+| **Workflow** | Các bước cố định: nhận định + PDF → AI gợi ý đoạn kèm vị trí → tôi đối chiếu | Cách ghi chú và tìm kiếm đơn giản chưa đáp ứng nhu cầu | Đoạn liên quan nhưng không hỗ trợ nhận định | Chưa chọn |
 | **Agent** | AI tự chọn công cụ, nguồn và bước tìm tiếp theo | Các bước tìm kiếm chưa xác định trước | Phạm vi rộng, thêm chi phí và khó kiểm tra nguồn | Không chọn |
 
 **Tôi chọn No AI.** Tôi sẽ ghi vị trí nguồn ngay trong ghi chú và dùng liên kết Zotero để mở lại. Nếu liên kết thiếu hoặc hỏng, tôi tìm trong PDF rồi bổ sung vị trí vừa tìm được.
 
-Lý do là cách này xử lý trực tiếp bước dò PDF trong CP2–CP5. CP4 cho thấy công cụ đã có tính năng phù hợp, còn tôi chưa có căn cứ để thêm AI. No AI cũng là mức đơn giản nhất để bắt đầu. Mốc 3 phút được giữ làm mục tiêu đánh giá từ CP5.
+Lý do là cách này xử lý trực tiếp bước dò PDF trong CP2–CP5. CP4 cho thấy công cụ đã có tính năng phù hợp, còn tôi chưa có căn cứ để thêm AI. Tôi chủ yếu sửa cách ghi chú và dùng tính năng sẵn có; chưa cần script tự động, AI tạo nội dung hoặc tự quyết bước tìm kiếm. No AI là mức đơn giản nhất để bắt đầu. Mốc 3 phút được giữ làm mục tiêu đánh giá từ CP5.
 
 ### 6.3. AI Canvas rút gọn
 
@@ -43,8 +43,8 @@ Với mức No AI, tôi không cần điền phần này. Nếu chuyển sang Wo
 | **Quy trình** | Mở ghi chú → xác định paper → tìm bằng chứng → kiểm tra ngữ cảnh → ghi vị trí nguồn |
 | **Bottleneck** | Dò PDF để tìm lại bằng chứng, với mốc 6 phút trong tổng 10 phút/lần ở Card #1 và CP5. Tôi giữ lưu ý từ CP4: cần phân biệt thiếu vị trí nguồn với khó hiểu ngữ cảnh. |
 | **Impact** | Với mốc 3 lượt/tuần, tổng thời gian là 30 phút, trong đó dò PDF chiếm 18 phút. Khi thiếu nguồn, tôi khó giải thích nhận định với nhóm và mentor. |
-| **Success Metric** | Từ mốc trung bình 10 phút/lần, ít nhất 9/10 tác vụ tìm đúng nguồn, đúng ngữ cảnh trong tối đa 3 phút. Khi áp dụng, tôi sẽ bấm giờ từ mở ghi chú đến xác minh và ghi nguồn, tính cả lượt thất bại; công bổ sung ghi chú được ghi riêng. |
-| **Boundary** | Tôi đối chiếu nội dung và ngữ cảnh trong PDF trước khi dùng bằng chứng. Nếu nguồn sai hoặc mất, tôi quay về tìm thủ công; không kết luận chỉ từ annotation. |
+| **Success Metric** | Từ mốc trung bình 10 phút/lần, ít nhất 9/10 tác vụ tìm đúng nguồn, đúng ngữ cảnh trong tối đa 3 phút. Trong pilot 4 tuần với 10 tác vụ, tôi sẽ bấm giờ từ mở ghi chú đến xác minh và ghi nguồn, tính cả lượt thất bại. Tôi ghi riêng công bổ sung ghi chú; tổng thời gian gồm chuẩn bị phải thấp hơn tổng thời gian tìm thủ công cho cùng bộ tác vụ. |
+| **Boundary** | Tôi đối chiếu nội dung và ngữ cảnh trong PDF trước khi dùng bằng chứng; không dùng AI tạo trích dẫn hoặc tự kết luận paper chứng minh điều gì. Nếu nguồn sai hoặc mất, tôi quay về tìm thủ công; chưa xác minh được thì ghi rõ và không dùng nhận định đó. |
 | **AI intervention point** | Không có; tôi dùng ghi chú có vị trí nguồn và tính năng Zotero |
 | **Mức chọn** | No AI |
 | **Rủi ro & người kiểm tra** | Liên kết sai, thiếu ngữ cảnh, tăng công ghi chú. Tôi kiểm tra mỗi lần sử dụng; khi đánh giá, tôi nhờ một thành viên khác đối chiếu với PDF. |
@@ -55,7 +55,7 @@ Với mức No AI, tôi không cần điền phần này. Nếu chuyển sang Wo
 |---|---|---|---|
 | Actor | Sinh viên đọc và so sánh paper | Giới hạn paper đã đọc, có PDF gốc | Giữ phạm vi tìm lại bằng chứng |
 | Impact | 30–40 phút/tuần cho 3–4 lượt | Dùng mốc 30 phút/tuần cho 3 lượt | Thống nhất với CP1–CP2 và CP4 |
-| Success Metric | 10 → tối đa 3 phút/lần, đúng đoạn và ngữ cảnh | Ít nhất 9/10 tác vụ đạt cả thời gian và chất lượng; tính ngoại lệ và công ghi chú | Đánh giá cả bộ tác vụ, không bỏ qua lượt phải tìm thủ công |
+| Success Metric | 10 → tối đa 3 phút/lần, đúng đoạn và ngữ cảnh | Ít nhất 9/10 tác vụ đạt trong pilot 4 tuần; tính ngoại lệ và tổng công ghi chú | Đánh giá cả bộ tác vụ, không bỏ qua lượt tìm thủ công hoặc công chuẩn bị |
 | Boundary | Ưu tiên Zotero; AI có thể thử sau | Chọn No AI, giữ kiểm tra PDF và cách quay về | Phù hợp với phương án tôi chọn |
 
 ### 7.3. Tiêu chí đánh giá
@@ -70,7 +70,7 @@ Tôi dùng 5 tiêu chí cho phương án ghi chú và truy xuất nguồn:
 | 4 | Xử lý nguồn thiếu/lỗi | Ghi rõ chưa xác minh, quay về PDF gốc | Dùng nguồn chưa kiểm tra hoặc tự tạo nguồn |
 | 5 | Thời gian | Tìm và xác minh đúng trong tối đa 3 phút | Quá 3 phút hoặc chưa xác minh được |
 
-Tôi tính một lượt đạt khi đáp ứng tiêu chí 1–3 và 5. Nếu nguồn thiếu hoặc lỗi, tôi áp dụng tiêu chí 4; chỉ tính thành công sau khi xác minh được bằng chứng.
+Tôi tính một lượt đạt khi đáp ứng tiêu chí 1–3 và 5. Nếu nguồn thiếu hoặc lỗi, tôi áp dụng thêm tiêu chí 4. Lượt chưa xác minh được vẫn tính vào tổng 10 tác vụ và không được tính là thành công.
 
 ### 7.4. Tổng hợp dữ liệu đánh giá
 
@@ -103,14 +103,14 @@ Tôi đánh giá rủi ro ở phạm vi thiết kế pilot nhỏ:
 
 ### 8.2. Kết luận
 
-**Tôi chọn Go với thiết kế pilot nhỏ dùng No AI.** Phạm vi bài toán gọn, công cụ có sẵn và chưa có lý do tăng mức can thiệp. Tôi giữ việc kiểm tra PDF trước khi dùng bằng chứng.
+**Tôi chọn Go với thiết kế pilot nhỏ dùng No AI.** Ở phạm vi này, hai rủi ro Trung bình là giá trị sử dụng và khả năng duy trì ghi chú; tôi sẽ đánh giá chúng trong pilot. Phương án dùng công cụ có sẵn, chưa cần xây hệ thống mới. Tôi giữ việc kiểm tra PDF trước khi dùng bằng chứng và chưa mở rộng sang người dùng khác.
 
-**Pilot tôi đề xuất:** 10 tác vụ từ 5 paper đã đọc, gồm đoạn văn, hình và bảng. Tôi sẽ dùng mẫu ghi chú có nhận định, vị trí nguồn, annotation/liên kết và ngữ cảnh; ghi lại thời gian, đúng/sai, ngoại lệ và công chuẩn bị.
+**Pilot tôi đề xuất:** Trong 4 tuần, tôi chọn 10 tác vụ từ 5 paper đã đọc, gồm đoạn văn, hình và bảng. Tôi sẽ dùng mẫu ghi chú có nhận định, vị trí nguồn, annotation/liên kết và ngữ cảnh; ghi lại thời gian, đúng/sai, ngoại lệ và công chuẩn bị. Một thành viên khác đối chiếu bằng chứng với PDF theo 5 tiêu chí; tôi so sánh tổng thời gian với cách tìm thủ công trên cùng bộ tác vụ.
 
 **Ngưỡng dừng:**
 
-- Nếu dưới 9/10 tác vụ đạt đủ tiêu chí, tôi chưa mở rộng mà quay về tìm thủ công và sửa ghi chú.
-- Nếu công chuẩn bị lớn hơn thời gian tiết kiệm, tôi thu hẹp các nhận định cần lưu nguồn.
+- Sau 4 tuần, nếu chưa đủ 10 tác vụ hoặc dưới 9/10 tác vụ đạt đủ tiêu chí, tôi chưa mở rộng mà quay về tìm thủ công và sửa ghi chú.
+- Nếu công chuẩn bị lớn hơn hoặc bằng thời gian tiết kiệm, tôi thu hẹp các nhận định cần lưu nguồn.
 - Nếu có bằng chứng sai được dùng trước khi đối chiếu PDF, tôi dừng để sửa bước kiểm tra.
 
 ## Tôi dùng AI ở đâu

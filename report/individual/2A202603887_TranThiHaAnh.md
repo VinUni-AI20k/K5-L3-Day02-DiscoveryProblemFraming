@@ -10,7 +10,7 @@
 - MSSV: 2A202603887
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: HEHEHE
-- Link repo nhóm: https://github.com/VinUni-AI20k/K5-L3-Day02-DiscoveryProblemFraming.git
+- Link repo nhóm: https://github.com/hoangvu1806/K5-L3B-DAY02-HEHEHE-DiscoveryProblemFraming
 
 ---
 Scenario: Giáo viên dạy lập trình tại trung tâm
@@ -51,7 +51,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
 | 1 | Chấm code và viết phản hồi cho từng bài (#1–#3) | Tần suất cao, quy trình rõ, số lượng khoảng 75 bài cho mỗi vòng bài tập và có bước nghẽn cụ thể | Tỷ lệ bài có lỗi lặp lại chưa được đo |
-| 2 | Tổng hợp lỗi phổ biến của từng lớp (#4) | Tác động trực tiếp tới việc điều chỉnh bài giảng; phải gom dữ liệu từ khoảng 15 bài/lớp |  |
+| 2 | Tổng hợp lỗi phổ biến của từng lớp (#4) | Tác động trực tiếp tới việc điều chỉnh bài giảng; phải gom dữ liệu từ khoảng 15 bài/lớp | Taxonomy lỗi có ổn định giữa các bài tập hay không và baseline 20 phút/lớp chưa được đo |
 | 3 | Theo dõi tiến bộ và viết nhận xét cuối khóa (#5–#7) | Phải tổng hợp dữ liệu của khoảng 75 học sinh trong 12 tuần; ảnh hưởng tới học sinh và phụ huynh | Tiêu chí thế nào là “tiến bộ”|
 
 ### Problem Card #1
@@ -152,16 +152,16 @@ HIỆN TẠI — khoảng 15 phút/học sinh (ước tính cần kiểm chứng
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Pitch 3 candidate: chấm code và viết phản hồi (#10), tổng hợp lỗi lớp (#11), nhận xét cuối khóa (#12) | Nhóm đưa cả 3 vào Cluster B (EdTech); candidate #10 vào shortlist và đạt 26/35 |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: Có nên gộp Card #2–#3 của Nguyên thành các mắt xích của Card #1? Tiêu chí định lượng cho phương án nhiễu tốt là gì? Người không biết SQL kiểm tra truy vấn bằng cách nào? | Giúp làm rõ quy trình AIOps trọn vẹn, yêu cầu eval cho bài trắc nghiệm và boundary kiểm chứng của Text-to-SQL |
+| Nhận phản biện | Tôi được hỏi: Unit Test/Linter đã bắt phần lớn lỗi code chưa; mã lỗi + Excel có đủ cho thống kê không; việc cuối khóa có đủ cấp thiết không? | Tôi đồng ý phần lỗi xác định và thống kê nên ưu tiên Rule/No AI; không tiếp tục giả định AI cần cho toàn bộ quy trình chấm bài |
+| Gom cluster / cây OST | Cung cấp 3 candidate để nhóm gom vào Cluster B; đối chiếu chúng với cluster AIOps và Text-to-SQL | Nhìn rõ candidate của tôi có quy trình rõ nhưng phần lớn giải được bằng Rule/Workflow, không cần Agent |
+| Chọn candidate problem | Tham gia so sánh shortlist; chấp nhận chọn bài điều tra log đa tầng của Nguyên thay cho candidate #10 của tôi | Candidate AIOps thể hiện rõ hơn sự khác nhau giữa Rule, Workflow và Agent, nhưng cần boundary chặt |
+| Kiểm chứng / research | Đọc tổng hợp 5 phỏng vấn; kiểm tài liệu chính thức của Datadog Watchdog, Dynatrace Davis AI và PagerDuty AIOps/Event Orchestration | Hoàn thiện mục 3.3, chỉ ra công cụ giải bước nào, điều kiện dữ liệu và khoảng trống so với auto-containment |
+| Quy trình nhóm | Không phụ trách vẽ chính; dùng quy trình hiện tại/tương lai để xác định chỗ Rule, Agent read-only, policy và HITL | Quyết định/threshold bám đúng điểm can thiệp và fallback trong mục 4 báo cáo nhóm |
+| Problem Statement | Đối chiếu v1 với CP4: baseline khoanh vùng 15–30 phút, chưa có baseline phát hiện → cô lập ngoài giờ | Không coi target <5/<15 phút hoặc ngưỡng 60/85 là kết quả đã kiểm chứng |
+| Mức can thiệp AI | Phản biện rủi ro của quyền tự động thực thi khi score chưa hiệu chuẩn | Tách Agent điều tra/đề xuất khỏi Rule/policy cấp quyền; trước mắt chỉ shadow pilot read-only |
+| Quyết định | Đánh giá 4 rủi ro và viết quyết định, pilot, tiêu chí mở quyền, ngưỡng dừng | Chốt Not Yet cho auto-containment; quay về Rule + Workflow read-only + HITL nếu không đạt hoặc có sự cố an toàn |
 
 ---
 
@@ -169,12 +169,12 @@ HIỆN TẠI — khoảng 15 phút/học sinh (ước tính cần kiểm chứng
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Gợi ý thêm problem theo 4 lăng kính | Mở rộng sang theo dõi tiến bộ và pain của phụ huynh | Gợi ý “AI tự động chấm và gửi điểm” là solution-first và bỏ qua rủi ro sai | Giữ Job Story có actor/bối cảnh/kết quả; bỏ giải pháp tự gửi và ghi rõ các số là ước tính từ scenario |
+| CP2 Problem Card | Yêu cầu phản biện 3 card, không viết lại thay | Chỉ ra baseline chưa đo, bottleneck Card #1 bị gộp và metric chỉ đo tốc độ là thiếu | Có gợi ý tăng tự động hóa bằng tự chấm/tự gửi phản hồi | Tách bước 4–5, thêm log sửa sai và giữ Minh là người duyệt cuối; Card #2 chọn Rule thay vì AI |
+| CP4 Research | Hỗ trợ tìm và so sánh tài liệu chính thức của 3 công cụ | Nhanh chóng định vị các trang về baseline/RCA, topology và event orchestration | Bản nháp ban đầu suy diễn “chi phí rất cao”, “bắt buộc đưa toàn bộ log lên cloud” và gán HITL/rollback cho sản phẩm khi chưa có nguồn trực tiếp | Chỉ giữ claim được tài liệu hãng hỗ trợ; nêu rõ điều kiện APM/topology/event input và tách bài học thiết kế của nhóm khỏi tính năng sản phẩm |
+| CP5 Quy trình | Không dùng AI trực tiếp để vẽ quy trình | — | — | Tôi đọc quy trình nhóm để gắn risk và ngưỡng dừng vào đúng bước |
+| CP5–6 Problem Statement | Dùng AI rà tính nhất quán giữa kết quả phỏng vấn, baseline và target | Phát hiện 15–30 phút là thời gian khoanh vùng, không đồng nghĩa 90–120 phút phát hiện → cô lập | AI có thể trình bày target đề xuất như số đã được kiểm chứng | Ghi rõ target/ngưỡng score là giả thuyết; yêu cầu đo timestamp cùng định nghĩa trong shadow pilot |
+| CP6 Mức can thiệp / quyết định | Gợi ý lỗ hổng rủi ro và các ngưỡng pilot có thể đo | Hữu ích khi tách Value/Usability/Feasibility/Viability và xây kill criteria | Có xu hướng chọn Go vì thiết kế có nhiều guardrail dù chưa có log pilot hay thử rollback | Chốt Not Yet cho quyền tự động; chỉ Go shadow pilot read-only và dừng ngay nếu có một vi phạm an toàn nghiêm trọng |
 
 ---
 
@@ -200,4 +200,6 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 ## 7. Tài liệu tham khảo
 
--
+- Datadog, [Watchdog](https://docs.datadoghq.com/watchdog/) và [Watchdog RCA](https://docs.datadoghq.com/watchdog/rca/).
+- Dynatrace, [Davis AI](https://docs.dynatrace.com/docs/semantic-dictionary/model/davis) và [Root cause analysis concepts](https://docs.dynatrace.com/docs/dynatrace-intelligence/root-cause-analysis-classic/concepts).
+- PagerDuty, [AIOps](https://support.pagerduty.com/main/docs/aiops) và [Event Orchestration](https://support.pagerduty.com/main/docs/event-orchestration).

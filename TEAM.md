@@ -4,7 +4,7 @@
 
 - Tên nhóm: HEHEHE
 - Candidate problem nhóm chọn (1 câu): Kỹ sư trực ca vận hành mất 90-120 phút mỗi sự cố để lần mò thủ công qua hàng chục nguồn log rời rạc và thiếu cơ chế AI tự chủ có kiểm soát (Agentic AI phân quyền theo cột mốc `Confidence Score` kết hợp `HITL`) để vừa cô lập tức thì bất thường rõ bằng chứng vào ban đêm vừa giữ lại ca nhạy cảm chờ con người duyệt.
-- Quyết định cuối (Go / Not Yet / No-Go): *Chốt sau CP6 (Định hướng: Go thử nghiệm Pilot có điều kiện với Agentic AI + Confidence Score + HITL, bắt đầu từ tầng cổng Nginx)*
+- Quyết định cuối (Go / Not Yet / No-Go): **Not Yet** cho quyền tự động cô lập; **Go cho shadow pilot read-only** ở tầng Nginx để hiệu chuẩn và kiểm chứng an toàn.
 
 ## Thành viên
 
@@ -13,7 +13,7 @@
 | 1 | Bùi Đặng Nhật Nguyên | 2A202603937 | Owner problem, Domain expert - vẽ quy trình, thiết kế khung quản trị Agentic AI (`Confidence Score` + `HITL`), AI Canvas, so sánh 4 mức AI | double-n-021 |
 | 2 | Đỗ Hoàng Vũ | 2A202603920 | Kiểm chứng (phỏng vấn), điều phối, quản trị repo | hoangvu1806 |
 | 3 | Trần Gia Bảo | 2A202603914 | Người viết — Problem Statement v0 và v1, 3–5 tiêu chí đánh giá | *(tự cập nhật)* |
-| 4 | Trần Thị Hà Anh | 2A202603887 | Research + Quyết định — bảng công cụ có link, 4 rủi ro, ngưỡng dừng | *(tự cập nhật)* |
+| 4 | Trần Thị Hà Anh | 2A202603887 | Research + Quyết định — bảng công cụ có link, 4 rủi ro, ngưỡng dừng | hnha02 |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
@@ -124,12 +124,17 @@ Mỗi thành viên tự điền mục của mình.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
--
+- Hoàn thành CP1 với 8 Job Story và CP2 với 3 Problem Card cho scenario giáo viên dạy lập trình; pitch 3 candidate #10–#12 để nhóm so sánh với AIOps và Text-to-SQL.
+- Kiểm tra tài liệu chính thức của Datadog Watchdog, Dynatrace Davis AI và PagerDuty AIOps/Event Orchestration; sửa bảng research để tách rõ anomaly/RCA, event orchestration và quyền thực thi, đồng thời bỏ các khẳng định chi phí/bảo mật chưa có nguồn.
+- Đánh giá 4 rủi ro Value/Usability/Feasibility/Viability dựa trên tổng hợp 5 phỏng vấn; chốt **Not Yet** cho auto-containment và đề xuất shadow pilot read-only 2 tuần/30 mẫu.
+- Viết tiêu chí mở quyền và ngưỡng dừng đo được: dừng ngay khi có vi phạm quyền/whitelist, rollback thất bại hoặc bỏ sót sự cố nghiêm trọng; nếu không đạt chất lượng thì quay về Rule + Workflow read-only + HITL.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
--
+- Báo cáo cá nhân: `report/individual/2A202603887_TranThiHaAnh.md` (CP1–CP2 ở commit `3edf93a`; nhật ký CP3–CP6 và bảng dùng AI được cập nhật trong cùng đợt hoàn thiện này).
+- Báo cáo nhóm: mục `3.3 Research giải pháp đã có`, mục `8.1 Bốn rủi ro`, mục `8.2 Kết luận`, mục `9 Hạn chế` và mục `10 Tài liệu tham khảo` trong `report/team/group_report.md`.
+- Bằng chứng kiểm chứng dùng để ra quyết định: `report/assets/cp4-interview-tonghop.md`.
 
 **Điều mình học được từ phần nhóm:**
 
--
+- Research không chỉ để liệt kê công cụ mà phải chỉ ra công cụ giải đúng bước nào, cần dữ liệu gì và còn thiếu gì so với bài toán. Kết quả phỏng vấn cũng khiến mình đổi từ hướng “Go có điều kiện” sang “Not Yet”: pain ngoài giờ là thật, nhưng baseline 90–120 phút và các ngưỡng 60/85 chưa được log xác nhận. Với hành động có thể chặn người dùng thật, nhóm phải tách Agent đọc/đề xuất khỏi policy cấp quyền và chỉ mở quyền sau shadow pilot có tiêu chí dừng rõ ràng.

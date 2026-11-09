@@ -8,7 +8,7 @@
 - Tên nhóm: HEHEHE
 - Thành viên: xem `TEAM.md` (Bùi Đặng Nhật Nguyên, Đỗ Hoàng Vũ, Trần Gia Bảo, Trần Thị Hà Anh)
 - Candidate problem được chọn (1 câu): Kỹ sư trực ca vận hành mất 90-120 phút mỗi sự cố để lần mò thủ công qua hàng chục nguồn log rời rạc và thiếu cơ chế AI tự chủ có kiểm soát (Agentic AI phân quyền theo cột mốc `Confidence Score` kết hợp `HITL`) để vừa cô lập tức thì bất thường rõ bằng chứng vào ban đêm vừa giữ lại ca nhạy cảm chờ con người duyệt.
-- Quyết định cuối: *Chốt sau CP6 (Định hướng: Go thử nghiệm Pilot có điều kiện ở tầng cổng Nginx trước khi mở rộng)*
+- Quyết định cuối: **Not Yet** — chỉ chạy shadow pilot read-only ở tầng Nginx; chưa cho Agent tự cô lập cho đến khi có log pilot, hiệu chuẩn ngưỡng và kiểm chứng rollback.
 
 ---
 
@@ -123,10 +123,9 @@ Tổng hợp:
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| **Datadog Watchdog (Log Anomaly Detection & RCA)** | https://docs.datadoghq.com/watchdog/ | Bước 1, Bước 3 và một phần Bước 4 (Tự động phát hiện bất thường lưu lượng/lỗi và gợi ý tương quan giữa các dịch vụ) | Học đường cơ sở theo chu kỳ tuần rất chuẩn (giảm cảnh báo giả đầu tuần); giao diện trực quan gom nhóm mẫu lỗi tự động | Chi phí bản quyền SaaS tính theo dung lượng log rất đắt khi công ty có hàng chục nguồn log lớn; bắt buộc đẩy dữ liệu log nội bộ lên đám mây bên thứ ba (vướng quy định bảo mật của nhiều doanh nghiệp) | Học cách dùng đường cơ sở theo chu kỳ thứ/giờ (`Rule`) ở Bước 1 để lọc bỏ nhiễu đầu tuần trước khi gọi tới Agent |
-| **Dynatrace Davis AI (Causal AI & Topology Mapping)** | https://www.dynatrace.com/support/help/platform/davis-ai | Bước 4 (Truy vết nguyên nhân gốc xuyên qua các tầng hạ tầng, ứng dụng và database dựa trên đồ thị phụ thuộc) | Sử dụng Causal AI dựa trên sơ đồ kết nối thực tế (Topology) để chỉ ra điểm nghẽn gốc thay vì chỉ đoán mò tương quan thống kê | Đòi hỏi cài đặt tác nhân thu thập (OneAgent) sâu vào mọi máy chủ với chi phí doanh nghiệp rất cao; nếu thiếu cấu hình kịch bản kiểm soát thì vẫn chỉ dừng ở báo cáo nguyên nhân chứ chưa tự cô lập cục bộ theo ngưỡng an toàn | Khi thiết kế Agent điều tra đa nguồn log, không để LLM tự đoán cảm tính mà phải bắt buộc trích dẫn bằng chứng dòng log khớp mốc thời gian giữa cổng vào và dịch vụ phía sau |
-| **PagerDuty AIOps (Signal Intelligence & Auto-Remediation)** | https://support.pagerduty.com/docs/aiops-signal-intelligence-overview | Bước 1 và Bước 5 (Gom nhóm cảnh báo chống bão alert, điều phối ca trực và kích hoạt Runbook tự động khắc phục) | Có cơ chế Runbook Automation cho phép gắn kịch bản xử lý chuẩn hóa và phân quyền người duyệt (`HITL`) trên từng loại sự cố | Bản thân PagerDuty không trực tiếp đọc sâu vào nội dung hàng chục file log thô (như phân tích chuỗi URI/User-Agent dò quét lỗ hổng ở Nginx) nếu không mua kèm hệ sinh thái giám sát đắt đỏ | Áp dụng triết lý **Parameterized Runbook + HITL + 1-click Rollback**: tuyệt đối cấm Agent tự sinh lệnh shell tự do, chỉ cho phép gọi hàm cô lập cục bộ có sẵn khi `Confidence Score >= 85%` |
-| **OpenSearch Anomaly Detection & Grafana Loki (Open-source Self-hosted)** | https://opensearch.org/docs/latest/monitoring-plugins/ad/index/ và https://grafana.com/docs/loki/latest/ | Bước 1 và Bước 2 (Thu thập log tập trung nội bộ On-premise và phát hiện bất thường bằng thuật toán Random Cut Forest) | Mã nguồn mở, miễn phí bản quyền, chạy hoàn toàn trên máy chủ nội bộ (đảm bảo 100% quyền riêng tư dữ liệu log công ty) | Chỉ phát hiện được điểm dị biệt về mặt con số hoặc tìm kiếm khi kỹ sư tự gõ câu truy vấn; không biết tự suy luận ngữ nghĩa để nhảy từ triệu chứng ở cổng proxy sang đúng nguồn log ứng dụng/mạng liên quan và không có cơ chế tính `Confidence Score` để tự cô lập ban đêm | Dùng hạ tầng gom log nội bộ kết hợp màng lọc `Rule` làm nền tảng, sau đó đặt lớp **Agentic AI có kiểm soát (`Bounded Autonomy`)** lên trên để giải quyết bài toán tự chọn nhánh điều tra và phân quyền `Confidence Score + HITL` |
+| **Datadog Watchdog (Anomaly Detection & RCA)** | [Watchdog](https://docs.datadoghq.com/watchdog/) · [Watchdog RCA](https://docs.datadoghq.com/watchdog/rca/) | Bước 1, 3 và hỗ trợ bước 4: tạo baseline, phát hiện hành vi bất thường, gom log pattern và hỗ trợ điều tra nguyên nhân | Tự tạo baseline theo hành vi lịch sử; Watchdog RCA liên kết anomaly với APM, trace, hạ tầng và log pattern để hỗ trợ triage | RCA yêu cầu APM; Datadog khuyến nghị unified tagging. Tài liệu cũng chỉ nêu một số loại root cause được hỗ trợ, nên không thể coi đây là bằng chứng rằng công cụ sẽ tìm được mọi nguyên nhân hoặc tự khắc phục an toàn | Dùng baseline/Rule để giảm nhiễu trước; mọi kết luận root cause phải có telemetry truy xuất được và được kiểm trên dữ liệu của pilot |
+| **Dynatrace Davis AI (Causal AI & Topology)** | [Davis AI](https://docs.dynatrace.com/docs/semantic-dictionary/model/davis) · [RCA concepts](https://docs.dynatrace.com/docs/dynatrace-intelligence/root-cause-analysis-classic/concepts) | Bước 4: đặt event trong topology, liên kết host/process/service và khoanh vùng root cause khả dĩ | Kết hợp quan hệ topology với event, transaction và dữ liệu liên quan thay vì chỉ dựa vào trùng thời gian | Kết quả phụ thuộc độ đầy đủ và đúng của telemetry/topology; đây là hỗ trợ phát hiện và RCA, không chứng minh rằng hệ thống nên được quyền tự chặn hoặc restart dịch vụ | Lớp điều tra cần topology và bằng chứng theo timestamp; policy cấp quyền thực thi phải tách khỏi mô hình suy luận |
+| **PagerDuty AIOps + Event Orchestration** | [PagerDuty AIOps](https://support.pagerduty.com/main/docs/aiops) · [Event Orchestration](https://support.pagerduty.com/main/docs/event-orchestration) | Bước 1 và 5: giảm nhiễu/routing alert, áp rule theo event và gọi webhook hoặc Automation Action đã cấu hình | Có rule phân tuyến, suppress/pause alert, enrichment và khả năng kích hoạt automation trước khi báo người; quyền sửa orchestration được giới hạn theo role | Cần nguồn monitoring gửi event vào; không thay thế lớp thu thập/đọc log thô. Một số tính năng orchestration/automation thuộc gói nâng cao hoặc add-on; rule phức tạp có thể khó bảo trì | Chỉ gọi runbook định trước từ rule/policy; kiểm thử điều kiện, quyền, audit và rollback thay vì cho LLM sinh shell command |
 
 ---
 
@@ -353,31 +352,34 @@ Vì sao:
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **TB** | 5/5 người được hỏi từng phải tra nhiều nguồn log; 2/5 thường bị gọi dậy ban đêm và đa số chấp nhận auto-block có điều kiện. Tuy nhiên phỏng vấn phản bác baseline 60–90 phút: khoanh vùng thường chỉ 15–30 phút, chưa có log chứng minh thời gian phát hiện → cô lập ngoài giờ. |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | **TB** | Người dùng yêu cầu whitelist, giới hạn thời gian chặn và rollback. Thiết kế có evidence ID, HITL và kill switch, nhưng chưa thử giao diện duyệt/hoàn tác với kỹ sư trong một ca thật và chưa biết họ có hiểu `Confidence Score` hay không. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **Cao** | Có thể bắt đầu từ Nginx log và runbook cục bộ, nhưng chưa có tập incident gán nhãn, telemetry liên tầng, công thức score đã hiệu chuẩn hay bằng chứng rollback hoạt động. Mốc 60/85 và target <5/<15 phút hiện là giả thuyết. |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | **Cao** | Chưa đánh giá chi phí lưu trữ/quan sát, yêu cầu dữ liệu nội bộ, RBAC, audit và trách nhiệm khi chặn nhầm. Chưa chỉ định owner phê duyệt whitelist/runbook, trực kill switch và rà soát sau sự cố. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** **Not Yet** đối với quyền tự động cô lập; **Go cho shadow pilot read-only** để thu bằng chứng.
 
-**Lý do:**
+**Lý do:** Pain ngoài giờ và nhu cầu giảm alert noise đã có tín hiệu, nhưng hai rủi ro Feasibility/Viability còn cao. Nhóm chưa có baseline cùng định nghĩa, tập incident gán nhãn, score đã hiệu chuẩn hoặc kết quả thử rollback; vì vậy cho Agent tự chặn ngay không nhất quán với yêu cầu an toàn của người được phỏng vấn.
 
-**Nếu Go — pilot nhỏ nhất:**
+**Nếu Go — pilot nhỏ nhất:** Chưa Go cho auto-containment ở thời điểm hiện tại.
 
-**Nếu Not Yet — cần kiểm chứng gì trước:**
+**Nếu Not Yet — cần kiểm chứng gì trước:** Chạy shadow pilot read-only 2 tuần ở Nginx trên tối thiểu 30 incident/alert lịch sử hoặc phát sinh mới. Agent chỉ đề xuất nguồn log, nguyên nhân, evidence ID và runbook; kỹ sư thực hiện hoặc bác bỏ. Đo cùng một định nghĩa: thời gian phát hiện → khoanh vùng/cô lập, Top-3 root-cause hit rate, false-alert rate, số ca bỏ sót nghiêm trọng, tỷ lệ đề xuất bị bác và thời gian duyệt. Diễn tập whitelist, TTL 15 phút, audit, kill switch và rollback trong môi trường staging; chỉ đề xuất mở quyền cục bộ khi 100% kết luận có bằng chứng, Top-3 hit rate ≥80%, không bỏ sót sự cố nghiêm trọng và 0 vi phạm quyền/whitelist.
 
-**Nếu No-Go — nên làm gì thay AI:**
+**Nếu No-Go — nên làm gì thay AI:** Chưa chọn No-Go; trong thời gian kiểm chứng vẫn dùng Rule cho baseline/lọc nhiễu và Workflow read-only để gom bằng chứng cho người trực.
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+**Ngưỡng dừng:** Dừng pilot ngay nếu có **1** lần truy cập vượt quyền, đề xuất chặn đối tượng trong whitelist, thực thi ngoài runbook, rollback/kill switch thất bại hoặc bỏ sót một sự cố mức nghiêm trọng. Sau 2 tuần/30 mẫu, nếu Top-3 hit rate <80%, false-alert rate ≥15% hoặc median ca HITL không dưới 15 phút thì không mở quyền tự động; quay về **Rule + Workflow read-only + HITL**, sửa dữ liệu/rule rồi đánh giá lại.
 
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+- Kết quả hiện dựa trên 5 phỏng vấn tổng hợp, chưa có timestamp từng sự cố và chưa có log pilot; các target là ngưỡng đề xuất, không phải kết quả đã đạt.
+- Cần thống nhất owner cho dữ liệu, whitelist, runbook, audit và trực kill switch trước khi thử bất kỳ hành động thay đổi hệ thống nào.
 
 ## 10. Tài liệu tham khảo
 
--
+- Datadog, [Watchdog](https://docs.datadoghq.com/watchdog/) và [Watchdog RCA](https://docs.datadoghq.com/watchdog/rca/).
+- Dynatrace, [Davis AI](https://docs.dynatrace.com/docs/semantic-dictionary/model/davis) và [Root cause analysis concepts](https://docs.dynatrace.com/docs/dynatrace-intelligence/root-cause-analysis-classic/concepts).
+- PagerDuty, [AIOps](https://support.pagerduty.com/main/docs/aiops), [Event Orchestration](https://support.pagerduty.com/main/docs/event-orchestration) và [Pricing tiers](https://support.pagerduty.com/main/docs/pricing-tiers).

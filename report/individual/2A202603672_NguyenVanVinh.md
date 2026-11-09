@@ -234,3 +234,8 @@ Hiện nay việc chấm thầu, so sánh đối chiếu nhà thầu đối vớ
 - Microsoft — Power Query gom nhiều file từ thư mục (CP4): https://support.microsoft.com/en-us/excel/import-data-from-a-folder-with-multiple-files-power-query
 - Archdesk — Subcontractor Bidding & Bid Leveling (CP4): https://archdesk.com/solutions/subcontractor-bidding
 - Corten Technologies — AI Bid Leveling (CP4): https://cortentechnologies.com/ai-bid-leveling/
+- Microsoft — Conditional formatting trong Excel (phương án Rule tô màu dòng chênh, Card #1): https://support.microsoft.com/en-us/excel/use-conditional-formatting-to-highlight-information-in-excel
+- Microsoft — Hàm MEDIAN (% chênh đơn giá so với trung vị 4 nhà thầu): https://support.microsoft.com/en-au/excel/functions/median-function
+- Teresa Torres — Opportunity Solution Trees (CP3 gom cluster, chọn opportunity): https://www.producttalk.org/opportunity-solution-trees/
+- Microsoft Research — Guidelines for Human-AI Interaction (boundary, HITL, phương án quay về ở CP5): https://www.microsoft.com/en-us/research/publication/guidelines-for-human-ai-interaction/
+- Marty Cagan, SVPG — The Four Big Risks (quyết định Not Yet ở CP6): https://www.svpg.com/four-big-risks/

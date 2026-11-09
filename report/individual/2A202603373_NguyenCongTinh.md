@@ -63,19 +63,11 @@ AI gợi ý
 | Cảm nhận nhanh | Workflow kết hợp AI |
 
 Quy trình nháp hiện tại:
-
-
-Nhận phản hồi khách hàng
-          ↓
-Đọc nội dung phản hồi
-          ↓
-Xác định nhóm vấn đề
-          ↓
-Ghi nhận vào bảng theo dõi
-          ↓
-Chuyển bộ phận phụ trách
-          ↓
-Theo dõi kết quả xử lý
+```
+[1 Tiếp nhận phản hồi: 1'] → [2 Đọc và hiểu nội dung: 1–2']
+→ [3 Xác định nhóm vấn đề: 1–2'] ← BOTTLENECK
+→ [4 Ghi nhận vào bảng theo dõi: 1'] → [5 Chuyển bộ phận phụ trách: 1']
+→ [6 Theo dõi trạng thái xử lý: 1–2']
 ```
 
 ### Problem Card #2
@@ -96,19 +88,10 @@ Theo dõi kết quả xử lý
 Quy trình nháp hiện tại:
 
 ```
-Thu thập phản hồi từ nhiều nguồn
-                ↓
-Đọc từng phản hồi
-                ↓
-Đối chiếu nội dung tương tự
-                ↓
-Nhóm các vấn đề trùng lặp
-                ↓
-Thống kê lỗi phổ biến
-                ↓
-Xác định mức độ ưu tiên
-                ↓
-Báo cáo và đề xuất cải tiến
+[1 Thu thập phản hồi từ nhiều nguồn: 5'] → [2 Đọc và rà soát nội dung: 15']
+→ [3 Đối chiếu các phản hồi tương tự: 20'] ← BOTTLENECK
+→ [4 Nhóm các vấn đề trùng lặp: 15'] → [5 Thống kê tần suất và mức độ xuất hiện: 10']
+→ [6 Xác định mức độ ưu tiên: 5'] → [7 Lập báo cáo và đề xuất cải tiến: 5']
 ```
 
 ### Problem Card #3
@@ -129,19 +112,13 @@ Báo cáo và đề xuất cải tiến
 Quy trình nháp hiện tại:
 
 ```
-Nhân viên CSKH gặp lỗi
-          ↓
-Tìm kiếm tài liệu hướng dẫn
-          ↓
-Không tìm thấy hướng xử lý
-          ↓
-Liên hệ bộ phận kỹ thuật
-          ↓
-Chờ phản hồi hướng dẫn
-          ↓
-Thực hiện xử lý lỗi
-          ↓
-Phản hồi kết quả
+[1 Phát hiện lỗi trong quá trình hỗ trợ khách hàng: 1']
+→ [2 Tìm kiếm tài liệu hướng dẫn: 3–5']
+→ [3 Không tìm thấy hướng dẫn phù hợp: 1']
+→ [4 Liên hệ bộ phận kỹ thuật: 2']
+→ [5 Chờ phản hồi và hướng dẫn xử lý: 10–20'] ← BOTTLENECK
+→ [6 Thực hiện theo hướng dẫn: 3–5']
+→ [7 Phản hồi kết quả xử lý: 1']
 
 ```
 

@@ -242,38 +242,38 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:
+Bài của nhóm nằm ở ô: **Độ mơ hồ cao × độ phức tạp thấp trong phạm vi thử nghiệm.**
 
-Vì sao:
+Vì sao: Rubric có tiêu chí định tính, một tiêu chí có thể có nhiều cách đáp ứng và minh chứng nằm ở nhiều đoạn. Tuy nhiên, phạm vi chỉ gồm một rubric và một bài làm dạng văn bản đọc được; các bước xử lý cố định, không phải tự tìm nguồn hoặc tự chọn công cụ. Không xét code chạy được, ảnh, PDF scan hay đánh giá độ sáng tạo. Độ mơ hồ đòi hỏi đối chiếu ngữ nghĩa; số bước hữu hạn không tạo ra nhu cầu dùng Agent.
 
 ### 6.2. So sánh 4 mức
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| **No AI** (sửa quy trình) | Checklist từng tiêu chí và review chéo, ghi vị trí minh chứng thủ công. | Rubric ngắn, yêu cầu rõ, người dùng tự rà soát được trong thời gian chấp nhận được. | Vẫn phải đọc và tìm minh chứng; dễ bỏ sót khi sát deadline. | Là đối chứng và phương án quay về. |
+| **Rule** | Kiểm tra định dạng, số từ và mục bắt buộc theo cấu hình; không kết luận chất lượng nội dung. | Yêu cầu xác định được bằng điều kiện cố định. | Có tên mục chưa có nghĩa nội dung đã đáp ứng; kiểm tra số từ có thể sai với file trích xuất lỗi. | Dùng ở bước kiểm tra cấu trúc. |
+| **Workflow** | Nhận hai file → Rule kiểm tra → AI đối chiếu từng tiêu chí và dẫn chứng → sinh viên review → tự sửa và nộp. | Cần đối chiếu ngữ nghĩa nhưng trình tự, dữ liệu đầu vào và quyền thao tác đều xác định trước. | Bịa dẫn chứng, báo đạt sai, bỏ sót hoặc thời gian review lại làm mất lợi ích. | Hướng thử nghiệm được đề xuất; chưa triển khai sử dụng thật. |
+| **Agent** | AI tự chọn công cụ, tìm thêm dữ liệu và lặp lại việc kiểm tra. | Chỉ cân nhắc khi có nhu cầu thích ứng nhiều nguồn/công cụ mà Workflow cố định không đáp ứng. | Khó kiểm soát phạm vi, thời gian và thao tác; không cần thiết với hai file đầu vào. | Không chọn. |
 
-**Mức chọn:**
+**Mức chọn:** Workflow kết hợp Rule và human-in-the-loop (đề xuất).
 
-**Vì sao không chọn mức đơn giản hơn:**
+**Vì sao không chọn mức đơn giản hơn:** Rule xử lý tiêu chí cứng nhưng không đối chiếu được các cách diễn đạt khác nhau với rubric. Workflow có thể hỗ trợ phần này, song CP4 chưa chứng minh nó tốt hơn checklist. Vì vậy phải so sánh với No AI/Rule trước; nếu mức đơn giản đã đủ thì dừng phần AI. Không chọn Agent vì không cần AI tự quyết bước tiếp theo.
 
 ### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| **Prediction** — AI dự đoán / tạo ra gì? | Với mỗi tiêu chí: đề xuất “đã đáp ứng”, “đáp ứng một phần”, “chưa tìm thấy minh chứng” hoặc “cần người kiểm tra”; kèm vị trí/trích đoạn và gợi ý phần cần tự rà lại. Không dự đoán điểm chính thức. |
+| **Judgment** — con người cân nhắc, quyết định gì? | Sinh viên kiểm tra trích dẫn, đọc ngữ cảnh và quyết định sửa. Người chấm tham chiếu xử lý tiêu chí định tính hoặc bất đồng. |
+| **Action** — hành động cuối cùng là gì, ai làm? | Sinh viên tự chỉnh bài và tự nộp; Workflow chỉ xuất báo cáo đối chiếu, không ghi đè file hay thao tác LMS. |
+| **Outcome** — đo kết quả bằng gì? | Thời gian soát–sửa, mức khớp nhãn với người chấm, số lần báo đạt sai và số dẫn chứng không tồn tại. So sánh với checklist trên cùng bộ thử. |
+| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Một rubric rõ tiêu chí và một bài làm Markdown/PDF có lớp văn bản đọc được, được phép xử lý. Bộ 5 bài thử và nhãn tham chiếu chưa được cung cấp trong repo. Không đưa dữ liệu lên công cụ ngoài khi chưa có quyền sử dụng. |
+| **Feedback** — lấy phản hồi ở đâu để cải thiện? | Lưu tiêu chí, nhãn AI, minh chứng, nhãn người chấm và lý do sửa; dùng để cải thiện prompt/rule. Không tự huấn luyện bằng bài làm hoặc thông tin cá nhân. |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng: Đề xuất augment: sinh viên vẫn đọc báo cáo, tự sửa và tự nộp. CP4 ghi nhận nhu cầu đối chiếu cụ thể, đồng thời 2/6 người trong poll cho rằng tự đọc hoặc review chéo đã đủ. Đây chưa phải bằng chứng họ muốn giao toàn bộ việc cho AI.
+- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào: Bỏ sót thiếu sót thật, đặc biệt báo “đã đáp ứng” khi chưa có minh chứng, dễ tạo sự yên tâm sai trước khi nộp. Báo nhầm thiếu sót cũng tốn thời gian và có thể khiến người dùng sửa sai. Thiết kế không ép kết luận đạt/không đạt khi thiếu căn cứ: hiển thị “cần người kiểm tra”, giữ checklist đầy đủ và yêu cầu trích dẫn cho mọi kết luận đã đáp ứng.
 
 ---
 
@@ -281,29 +281,36 @@ Vì sao:
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Sinh viên đại học hoặc nhóm trưởng tự rà soát bài báo cáo dạng văn bản trước khi nộp. |
+| **Quy trình** | Chuẩn bị rubric và bản nháp → kiểm tra cấu trúc bằng Rule → AI tìm minh chứng theo từng tiêu chí → sinh viên đối chiếu báo cáo với bản gốc → tự sửa và nộp. |
+| **Bottleneck** | Dò tìm minh chứng và đối chiếu rubric: khoảng 25–30 phút theo CP3–CP5. |
+| **Impact** | Hai phỏng vấn và poll 6 người trong CP4 ghi nhận khó khăn khi tự rà soát; 4/6 người trong poll gặp khó khăn, 2/6 thấy cách thủ công đủ dùng. Quy trình CP5 cộng thành 60 phút/lần; đây là baseline mô tả quy trình, chưa có log bấm giờ trong repo. Không suy rộng các mẫu nhỏ thành toàn bộ sinh viên. |
+| **Success Metric** (baseline → target, cách đo) | Trên bộ thử 5 bài: thời gian trung bình toàn luồng soát–sửa ≤20 phút/bài và thấp hơn checklist ít nhất 20%; nhãn khớp người chấm ≥90%; không bịa minh chứng và không báo đạt cho tiêu chí bắt buộc đã được người chấm xác định thiếu. Baseline 60 phút của CP5 là tham chiếu lập kế hoạch; đo lại đối chứng checklist trước khi kết luận hiệu quả. |
+| **Boundary** | Chỉ xử lý văn bản đọc được và rubric rõ, có quyền sử dụng; không chấm điểm chính thức, không đánh giá độ sáng tạo/sâu sắc thay giảng viên, không tự sửa/nộp bài. Trích đoạn phải tồn tại trong bản gốc. Tiêu chí mơ hồ hoặc trích xuất lỗi được chuyển người kiểm tra. |
+| **AI intervention point** | Bước 3 của quy trình CP5: đối chiếu ngữ nghĩa từng tiêu chí với nội dung, xuất nhãn đề xuất và minh chứng; Rule xử lý kiểm tra cấu trúc, người dùng giữ quyết định cuối. |
+| **Mức chọn** | Workflow có Rule và human-in-the-loop; chưa triển khai khi chưa qua kiểm chứng. |
+| **Rủi ro & người kiểm tra** | Sinh viên kiểm tra minh chứng và quyết định sửa; giảng viên/trợ giảng hoặc người chấm được nhóm thống nhất tạo nhãn tham chiếu. Nhóm phải phân công người kiểm tra trước khi chạy thử; hiện chưa có người được chỉ định trong repo. |
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| Impact | Ghi 50–60 phút và 2/3 sinh viên bị trừ 1–2 điểm. | Dùng hai snapshot và poll 6 người trong CP4; phân biệt tổng bước mô tả 60 phút với thời gian đo thực tế. | Số mẫu và mức mất điểm trong v0 chưa khớp dữ liệu được trình bày; không dùng claim đó làm kết quả kiểm chứng trong v1. |
+| Success Metric | Baseline 55–60 phút gọi là đo thực tế; tỷ lệ sót lỗi khoảng 30% → 0%. | Tổng bước 60 phút là tham chiếu; bổ sung đối chứng checklist, nhãn khớp người chấm ≥90%, không bịa minh chứng và cách đo trên 5 bài. | Chưa có log trong báo cáo để xác lập tỷ lệ sót lỗi 30%; cần đo chất lượng đối chiếu ngữ nghĩa và lợi ích so với phương án đơn giản hơn. |
+| Boundary | Không sửa/nộp hoặc chấm điểm thay người dùng. | Thêm giới hạn đầu vào, quyền sử dụng, xử lý tiêu chí mơ hồ và trách nhiệm kiểm tra minh chứng. | Giảm rủi ro báo đạt sai và sử dụng dữ liệu không được phép. |
+| Mức can thiệp | Luồng tương lai chưa chốt loại can thiệp. | Đề xuất Workflow cố định; không dùng Agent. | Chỉ có hai đầu vào và trình tự xác định trước. |
 
 **Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | Bao phủ rubric | Mọi tiêu chí có ID và một dòng kết quả; tiêu chí không xử lý được ghi rõ cần người kiểm tra. | Bỏ tiêu chí, tự đổi yêu cầu hoặc im lặng bỏ qua phần không đọc được. |
+| 2 | Minh chứng truy vết được | 100% trích dẫn tồn tại và đúng vị trí/ngữ cảnh; không có dẫn chứng bịa. | Có trích đoạn, số trang hoặc nội dung không tồn tại; dẫn chứng không liên quan. |
+| 3 | Khớp người chấm | Tỷ lệ nhãn khớp ≥90% trên các cặp bài–tiêu chí có nhãn tham chiếu rõ. AI né kết luận ở các cặp này được tính không khớp; tiêu chí thực sự mơ hồ được báo cáo riêng, không dùng để tăng tỷ lệ. | Tỷ lệ khớp <90% hoặc không có nhãn tham chiếu để tính. |
+| 4 | Không tạo yên tâm sai | Không báo “đã đáp ứng” cho tiêu chí bắt buộc người chấm xác định thiếu; bộ thử phải có ít nhất 5 cặp bài–tiêu chí thiếu để đánh giá. | Có báo đạt sai, hoặc bộ thử không có đủ trường hợp thiếu để kiểm tra. |
+| 5 | Đúng phạm vi, gợi ý hữu ích | Gợi ý gắn với tiêu chí/vị trí cụ thể để sinh viên tự rà lại; không hứa điểm, không sửa hay nộp thay. | Nhận xét chung chung, phán xét sáng tạo/sâu sắc như kết luận chính thức, hứa điểm hoặc vượt quyền thao tác. |
+
+**Cách đo đề xuất:** Chọn 5 bài được phép sử dụng và rubric tương ứng; người chấm gán nhãn trước, không nhìn output AI. So sánh checklist với Workflow trên cùng bộ bài, phân công người rà soát độc lập hoặc đảo thứ tự để giảm ảnh hưởng nhớ bài. Bấm giờ từ chuẩn bị input đến khi review và sửa xong, gồm thời gian chờ AI. Ghi số bài, tổng cặp bài–tiêu chí, số khớp, số báo đạt sai, số dẫn chứng bịa và thời gian từng lượt. Ngưỡng trên là đề xuất để thử, không phải kết quả đã đạt.
 
 ---
 
@@ -313,31 +320,38 @@ Vì sao:
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | Có nhu cầu và lợi ích hơn cách hiện tại không? | Trung bình | 4/6 người trong poll gặp khó khăn, nhưng 2/6 thấy tự đọc/review chéo đủ dùng. Chưa có so sánh thời gian và chất lượng với checklist. |
+| **Usability** | Có hiểu và kiểm tra được phản hồi không? | Trung bình | Minh chứng theo tiêu chí giúp kiểm tra, nhưng người dùng có thể tin nhãn “đã đáp ứng” mà bỏ đọc bản gốc. Chưa có quan sát sử dụng bản thử. |
+| **Feasibility** | Có đủ dữ liệu và độ chính xác không? | Cao | Chưa có bộ 5 bài, nhãn tham chiếu hoặc kết quả eval; rubric định tính và trích xuất văn bản có thể gây lỗi. |
+| **Viability** | Quyền dùng dữ liệu, chi phí và vận hành có phù hợp không? | Cao | CP4 để mở quyền đưa bài làm vào AI. Chưa đo chi phí, chưa phân công người vận hành hoặc xác lập điều kiện xử lý dữ liệu. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** **Not Yet** (đề xuất) với triển khai Workflow cho người dùng thật; thực hiện kiểm chứng giới hạn trước.
 
-**Lý do:**
+**Lý do:** Quy trình cố định phù hợp Workflow nhưng chưa có bằng chứng AI tốt hơn checklist. Hai rủi ro Cao là độ chính xác và điều kiện sử dụng dữ liệu; có thể giảm bằng một vòng kiểm chứng nhỏ. Chưa có cơ sở chọn Go hoặc xây Agent.
 
-**Nếu Go — pilot nhỏ nhất:**
+**Nếu Go — pilot nhỏ nhất:** Một loại bài báo cáo văn bản và rubric rõ, sinh viên tự kiểm tra mọi nhận định; không kết nối nộp bài LMS, không tự chấm điểm chính thức. Chỉ thực hiện sau khi vượt các ngưỡng kiểm chứng bên dưới.
 
-**Nếu Not Yet — cần kiểm chứng gì trước:**
+**Nếu Not Yet — cần kiểm chứng gì trước:** Trong một tuần:
 
-**Nếu No-Go — nên làm gì thay AI:**
+1. Nhóm chỉ định người phụ trách dữ liệu, người chạy thử và người chấm tham chiếu; thống nhất quyền sử dụng và loại dữ liệu được phép đưa vào công cụ. Khi chưa có quyền, chỉ dùng bài mẫu được phép xử lý.
+2. Chuẩn bị 5 bài và rubric rõ, gồm ít nhất 5 cặp bài–tiêu chí thiếu; gán nhãn tham chiếu độc lập.
+3. Chạy đối chứng checklist và Workflow, ghi thời gian, eval và chi phí thực tế. Chưa cam kết mua dịch vụ hay triển khai hệ thống.
+4. Nhóm xem kết quả rồi chốt Go phạm vi nhỏ, tiếp tục Not Yet hoặc dừng phần AI. Chỉ cân nhắc Go khi cả 5 tiêu chí đạt, thời gian trung bình ≤20 phút và giảm ít nhất 20% so với checklist, có quyền dữ liệu và người vận hành, chi phí nằm trong ngân sách nhóm chốt trước khi thử, không còn rủi ro Cao.
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+**Nếu No-Go — nên làm gì thay AI:** Checklist theo rubric, kiểm tra cấu trúc bằng Rule và review chéo; người dùng tự tìm minh chứng.
+
+**Ngưỡng dừng** (nếu sau … mà … thì quay về …): Dừng lượt thử ngay khi gặp dẫn chứng bịa hoặc báo đạt sai cho tiêu chí bắt buộc bị thiếu; chuyển bài đó sang checklist thủ công. Sau một tuần, nếu thiếu quyền dữ liệu, không đủ bộ thử/nhãn tham chiếu, hoặc không đạt bất kỳ ngưỡng chất lượng, thời gian hay chi phí nào ở trên thì không chuyển sang Go; quay về checklist + Rule + review chéo và ghi lý do. Chưa kết luận No-Go vĩnh viễn từ một bộ thử nhỏ.
 
 ---
-
 ## 9. Hạn chế và hướng tiếp theo
 
--
+- Mẫu kiểm chứng nhỏ: hai interview snapshot và poll 6 người, chưa đại diện cho mọi sinh viên hoặc loại bài. Học viên xác nhận hai phỏng vấn và poll là thật.
+- Chưa có kết quả thử Workflow so với checklist hoặc nhãn tham chiếu của người chấm. Các ngưỡng ≤20 phút, khớp ≥90% và giảm thời gian ít nhất 20% là mục tiêu kiểm chứng, không phải hiệu quả đã đạt.
+- - Phạm vi thử chỉ gồm bài văn bản đọc được và rubric rõ; chưa kiểm tra code, hình ảnh, PDF scan hoặc tiêu chí sáng tạo/sâu sắc. Chưa xác nhận quyền xử lý dữ liệu, chi phí và người vận hành.
+- Hướng tiếp theo: nhóm phân công người phụ trách, bổ sung hồ sơ phỏng vấn/poll, chuẩn bị 5 bài được phép sử dụng và nhãn tham chiếu; chạy đối chứng trong một tuần theo mục 8.2 rồi xem lại quyết định Not Yet.
 
 ## 10. Tài liệu tham khảo
 
--
+- Các nguồn research đã liệt kê tại mục 3.3: [FeedbackFruits — Self-Assessment](https://feedbackfruits.com/solutions/self-assessment), [Turnitin Clarity — AI Tools](https://guides.turnitin.com/hc/en-us/articles/36917529868429-AI-Tools-with-Turnitin-Clarity), [OpenAI — Assessment and Feedback](https://help.openai.com/en/articles/8313397-how-can-chatgpt-be-used-for-assessment-and-feedback), [Gradescope](https://www.gradescope.com/).

@@ -91,24 +91,27 @@ Giả định nhóm kiểm chứng trong buổi này: **Giả định #1 và #2*
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn nhanh 2 đồng nghiệp/sinh viên làm đồ án capstone và phân tích transcript 1 buổi thảo luận kiến trúc thực tế.
+Cách đã dùng: Phỏng vấn sâu 2 kỹ sư phần mềm (Software Engineers) và 1 Tech Lead (theo chuẩn The Mom Test, Rob Fitzpatrick).
 
-Interview snapshot:
+Interview snapshots:
+- Phỏng vấn #1 (Tech Lead): [`report/assets/cp4-interview-snapshot-1.md`](../assets/cp4-interview-snapshot-1.md)
+- Phỏng vấn #2 (Software Engineer): [`report/assets/cp4-interview-snapshot-2.md`](../assets/cp4-interview-snapshot-2.md)
 
-| Trường | Nội dung |
-|---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | Tech Lead / Senior Dev nhóm 6 người tại một công ty phần mềm outsource |
-| Câu nói đáng nhớ nhất (nguyên văn) | *"Họp chọn giải pháp mệt nhất là ông nào cũng bảo phương án của mình nhanh nhất, nhẹ nhất. Nhưng khi hỏi 'thế nếu scale lên 100k user hoặc team mở rộng thì sao' thì lại im lặng hoặc lảng tránh. Bọn anh toàn mất nửa tiếng chỉ để bắt từng ông thừa nhận nhược điểm của mình."* |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Buổi họp RFC chọn giữa RESTful API truyền thống hay chuyển sang gRPC cho hệ thống microservices nội bộ. Hai bên cãi nhau 45 phút, cuối cùng sếp vào chốt theo kinh nghiệm cũ vì hết giờ. |
-| Hiện đang xử lý bằng cách nào (workaround)? | Phải cử 1 người làm "thẩm phán" (facilitator) ngồi ghi bảng trắng hai cột Pros/Cons, nhưng người ghi chép cũng bị cuốn vào tranh luận nên bảng trắng ghi sơ sài. |
-| Mất bao lâu, bao lần? | 1–2 lần/tuần, mỗi buổi họp review mất 30–45 phút tranh luận không hồi kết. |
-| Insight / opportunity rút ra | Nhu cầu lớn nhất không phải là "ai thắng ai thua", mà là **cần một bên thứ ba trung lập liệt kê sòng phẳng mọi sự đánh đổi (trade-off) theo các chiều: thời gian dev, độ phức tạp hạ tầng, khả năng scale**. |
+| Trường | Nội dung Phỏng vấn #1 (Tech Lead) | Nội dung Phỏng vấn #2 (Software Engineer) |
+|---|---|---|
+| **Người được hỏi** | Tech Lead / Senior Dev nhóm 6 người | Backend Software Engineer (2 năm kinh nghiệm) |
+| **Câu nói đáng nhớ nhất (nguyên văn)** | *"Họp chọn giải pháp mệt nhất là ông nào cũng bảo phương án của mình nhanh nhất, nhẹ nhất. Bọn anh toàn mất nửa tiếng chỉ để bắt từng ông thừa nhận nhược điểm của mình."* | *"Nhiều khi biết giải pháp của đồng nghiệp có rủi ro, nhưng nói thẳng thì sợ mất lòng. Cả buổi cứ tranh cãi vòng vo, ai cũng giữ giải pháp mình nên họp kéo dài cả tiếng."* |
+| **Lần gần nhất xảy ra** | Họp RFC chọn RESTful API vs gRPC, cãi nhau 45 phút, cuối cùng sếp vào chốt theo kinh nghiệm cũ vì hết giờ. | Họp chọn thư viện background job (Celery vs Redis Queue), tranh luận 30 phút vì mỗi người quen dùng một loại, phải hoãn sang buổi sau. |
+| **Workaround hiện tại** | Cử 1 người làm Facilitator ghi bảng trắng Pros/Cons nhưng người ghi chép cũng bị cuốn vào cãi nhau. | Ai nói to hơn thì thắng, hoặc đùn đẩy trách nhiệm quyết định cho Tech Lead. |
+| **Mất bao lâu, bao lần?** | 1–2 lần/tuần, mất 30–45 phút tranh luận/buổi. | 1 lần/sprint (mỗi 2 tuần), mất 25–35 phút bế tắc. |
+| **Insight rút ra** | Cần một bên thứ ba trung lập liệt kê sòng phẳng mọi sự đánh đổi (trade-off) theo các chiều cụ thể. | Cần công cụ khách quan để biến cuộc họp thành "dữ liệu nói" thay vì cảm giác bị công kích cá nhân. |
 
-Tổng hợp:
+Tổng hợp kiểm chứng:
 
-| Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
+| Nguồn | Số người / mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| Phỏng vấn Tech Lead & Dev | 3 người | 3/3 khẳng định việc bảo vệ thiên kiến cá nhân làm cuộc họp kéo dài ít nhất 20 phút; rất hoan nghênh bảng ma trận trade-off độc lập | 1/3 cảnh báo: nếu AI đưa ra kết luận "nên chọn phương án A" sẽ gây tự ái và phản ứng ngược từ phía người ủng hộ phương án B |
+| Phỏng vấn sâu (The Mom Test) | 2 Software Engineers & 1 Tech Lead | 3/3 khẳng định việc bảo vệ cái tôi/ngại va chạm làm cuộc họp bế tắc kéo dài 25–45 phút; 3/3 rất cần bảng ma trận trade-off độc lập | 1 người cảnh báo: nếu AI tự kết luận "chọn phương án A" sẽ gây tự ái và phản ứng ngược; AI chỉ nên đưa dữ liệu đối chiếu đa chiều |
+| Quan sát thực tế từ nhóm | 3 thành viên nhóm | Cả 3 thành viên đều từng trải qua cảm giác bế tắc tranh luận trong các đồ án capstone và dự án thực tập | Với các buổi daily standup hoặc task bugfix nhỏ thì không gặp bế tắc này (nhóm thu hẹp bối cảnh vào họp RFC/Design Review) |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
 - **Tuyệt đối không để AI kết luận thay:** AI chỉ sinh bảng so sánh đối chiếu đa chiều (Pros / Cons / Trade-off Matrix) và đặt câu hỏi gợi mở, để quyền quyết định 100% cho con người.

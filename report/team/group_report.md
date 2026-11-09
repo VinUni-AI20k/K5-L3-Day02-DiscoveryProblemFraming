@@ -405,7 +405,7 @@ Do đó, ưu tiên phát hiện đầy đủ các chênh lệch khối lượng 
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
 
-v1 dùng phạm vi Rule đã chọn, sau review v0 và nguồn Vinh/Tuyên. Năm tiêu chí dưới đây là yêu cầu nghiệm thu thiết kế, không phải kết quả test. Quân đã có bản eval và 10 tình huống tổng hợp trên nhánh `quan-branch` tại `9ccefc8`; kết quả review được ghi dưới bảng, bản đó chưa được tích hợp vào main.
+v1 dùng phạm vi Rule đã chọn, sau review v0 và nguồn Vinh/Tuyên. Năm tiêu chí dưới đây là yêu cầu nghiệm thu thiết kế, không phải kết quả test. Quân đã có bản eval và 10 tình huống tổng hợp tại `9ccefc8`; nhận xét review đã công bố qua PR #10, bản eval chưa được tích hợp vào main. Đầu nhánh Quân tại `70be730` đã xóa file eval; liên kết cố định bên dưới giữ bản nguồn để sửa và khôi phục khi tích hợp.
 
 | Trường | Nội dung |
 |---|---|
@@ -469,7 +469,7 @@ Tuyên đề xuất Go cho Rule ở Card #1 và Not Yet với AI. Sau review ngu
 
 ### 8.2. Kết luận
 
-**Quyết định hiện tại — 2026-11-09:** **Not Yet** cho triển khai/pilot; **chọn Rule** cho soát khối lượng và đơn giá trên bảng đã ghép đúng. AI mapping, đọc PDF/scan, đánh giá năng lực và Agent nằm ngoài phạm vi này. Quyết định được ghi theo ủy quyền của trưởng nhóm; cập nhật này ở nhánh Hưởng để kiểm tra trước khi công bố qua PR.
+**Quyết định hiện tại — 2026-11-09:** **Not Yet** cho triển khai/pilot; **chọn Rule** cho soát khối lượng và đơn giá trên bảng đã ghép đúng. AI mapping, đọc PDF/scan, đánh giá năng lực và Agent nằm ngoài phạm vi này. Quyết định được ghi theo ủy quyền của trưởng nhóm và đã công bố qua [PR #10](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/10), merge `1ee80b3`.
 
 **Lý do:** có pain được báo cáo và một phương án đơn giản có thể kiểm, nhưng hai rủi ro Cao ở dữ liệu/mapping và quyền sử dụng cần giảm trước khi Go. Không nâng mức chỉ để bài có AI.
 
@@ -496,7 +496,7 @@ Tuyên đề xuất Go cho Rule ở Card #1 và Not Yet với AI. Sau review ngu
 - Mục 2 tổng hợp 18 card và đề xuất câu hỏi/điểm để review. Khi dùng làm bằng chứng CP3, ghi lại hỏi–đáp, điểm và điều chỉnh được các thành viên xác nhận. Nguồn CP4 được ghi đúng người cung cấp và giới hạn.
 - Quân cùng người domain hoàn thiện eval; Linh bổ sung nguồn kiểm chứng, Khương đối chiếu research; Vinh/Tuyên phản hồi các điểm review. Hưởng cập nhật nội dung và `TEAM.md` theo sản phẩm được xác nhận.
 - Đánh giá lợi ích tính cả thiết lập, kiểm/sửa, xử lý ngoại lệ và lượt thất bại. Không xem target tương lai là hiệu quả đã đạt.
-- Bản tổng hợp trước đã merge qua PR #8/#9, main tại `90dcaa7`. Lượt cập nhật hiện tại đồng bộ quy trình Rule, metric, quyết định điều phối và review eval Quân trên nhánh Hưởng; không ghi là đã merge trước khi có PR.
+- Bản tổng hợp đã merge qua PR #8/#9; quy trình Rule, metric, quyết định điều phối và review eval Quân đã công bố qua PR #10, main `1ee80b3`. Lượt rà soát sau đó cập nhật nguồn và ghi chú trạng thái; không coi các ghi chú mới là nội dung đã có trong PR #10.
 
 ## 10. Tài liệu tham khảo
 
@@ -518,7 +518,8 @@ Tuyên đề xuất Go cho Rule ở Card #1 và Not Yet với AI. Sau review ngu
 - Research công cụ: [Append](https://learn.microsoft.com/en-us/power-query/append-queries), [Merge](https://learn.microsoft.com/en-us/power-query/merge-queries-overview), [Conditional Formatting](https://support.microsoft.com/en-us/excel/use-conditional-formatting-to-highlight-information-in-excel), tài liệu Microsoft mở kiểm ngày 2026-11-09.
 - Nguyễn Trọng Hưởng — tổng hợp card, câu hỏi, phân tích v0/v1, eval và lập luận review từ các nguồn được dẫn. Nội dung được nhóm chốt và kết quả thử được ghi theo hoạt động thực tế.
 
-- Lịch sử tích hợp: PR #3–#7 đưa sản phẩm thành viên vào main `314b6d8`; [PR #8](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/8) đưa bản tổng hợp vào main; [PR #9](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/9) hoàn thiện mục 2, main `90dcaa7`. Lượt hiện tại cập nhật mục 4.2–4.3 và quyết định theo ủy quyền; không coi nội dung vừa sửa là phần đã được các PR trước công bố.
+- Lịch sử tích hợp: PR #3–#7 đưa sản phẩm thành viên vào main `314b6d8`; [PR #8](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/8) đưa bản tổng hợp vào main; [PR #9](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/9) hoàn thiện mục 2, main `90dcaa7`.
+- [PR #10](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/10), commit nội dung `384850c`, merge `1ee80b365df473922ac73b5f64649497f604cf5b`: đã công bố phạm vi Rule, quy trình mục 4.2–4.3, metric, quyết định điều phối và review eval.
 
 - Nguồn CP4 mới nhất: [cập nhật Linh tại e278c07](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/e278c07e098b3a8dc339a39d7d6e3dfe4b04c5e4/report/team/group_report.md), giữ nguyên assumption map và snapshot, kèm ghi chú giới hạn khi review.
 - [Linh bổ sung tổng hợp phỏng vấn tại `4efec2b`](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/commit/4efec2b075d78608d5365d380919f7331c9d2786): nguồn số người và ý kiến lo ngại độ chính xác/trách nhiệm; giới hạn snapshot được ghi ở mục 3.2.

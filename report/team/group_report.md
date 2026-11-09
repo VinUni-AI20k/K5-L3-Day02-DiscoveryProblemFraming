@@ -40,6 +40,8 @@
 | C. Truyền đạt, phản hồi lặp lại cho từng cá nhân | #3 Tư vấn bệnh nhân lặp lại, #11 Giáo viên chấm và nhận xét bài | Nội dung giống nhau phần lớn nhưng vẫn phải làm lại thủ công cho từng người |
 | D. Chờ đợi / rủi ro vận hành khi thiếu thông tin trạng thái | #6 Đơn COD có nguy cơ bị từ chối, #12 Người bệnh chờ kết quả cận lâm sàng | Không biết trước trạng thái (kết quả có chưa, đơn có bị từ chối không) nên phải chờ hoặc xử lý muộn |
 
+![Gom 12 candidate thành 4 cluster](../assets/cp3-cluster.png)
+
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
@@ -59,6 +61,8 @@ OUTCOME: Giảm thời gian người làm chuyên môn phải tự tìm, lọc v
 └── Opportunity D (cluster D): "Tôi không biết trạng thái hiện tại nên phải ngồi chờ
                                 hoặc chỉ xử lý khi sự cố đã xảy ra"
 ```
+
+![Opportunity Solution Tree rút gọn](../assets/cp3-ost.png)
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 

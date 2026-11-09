@@ -134,7 +134,7 @@ Nhận yêu cầu tuyển dụng và tiêu chí
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
 | Mô tả “tệp khách hàng lớn, nhu cầu thực” chưa chứng minh pain cụ thể của người trực tiếp làm.|Đồng ý |Thu hẹp Card #1 vào thời gian nghe lại và nhập CRM sau từng cuộc gọi; xác định actor, điểm nghẽn và cách đo. |
-| Đề xuất AI ngay có thể rơi vào solution-first; một số phần chỉ cần rule hoặc cải tiến quy trình.||Đồng ý  ||Bổ sung phương án không AI cho cả ba card; chỉ dùng AI ở phần dữ liệu phi cấu trúc, không mặc định dùng Agent. |
+| Đề xuất AI ngay có thể rơi vào solution-first; một số phần chỉ cần rule hoặc cải tiến quy trình.|Đồng ý |Bổ sung phương án không AI cho cả ba card; chỉ dùng AI ở phần dữ liệu phi cấu trúc, không mặc định dùng Agent. |
 ---
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)

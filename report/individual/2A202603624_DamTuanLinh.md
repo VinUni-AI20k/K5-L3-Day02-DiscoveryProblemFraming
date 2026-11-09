@@ -41,14 +41,14 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 |---:|---|---|---|
 | 1 |CSKH mất thời gian nghe lại cuộc gọi và cập nhật thông tin lên CRM |Đội ngũ CSKH không chăm sóc đúng đối tượng, khó ghi chép, tổng hợp và mất thời gian để cập nhật vào dữ liệu hệ thống |CRM hiện có tự động ghi chú chưa? Có được phép xử lý bản ghi âm và dữ liệu cá nhân không? |
 | 2 |Người xem video tiếng nước ngoài khó tìm lại đúng đoạn có thuật ngữ cần học |Nhiều người đau, impact rộng |Tần suất gặp video không có phụ đề là bao nhiêu? Công cụ phụ đề/tìm transcript sẵn có đã đáp ứng đến đâu? |
-| 3 |HR khó tổng hợp, đối chiếu thông tin ứng viên từ nhiều hồ sơ và vòng phỏng vấn |Tốn thời gia |Quy mô tuyển dụng thực tế có đủ lớn? Có bộ tiêu chí đánh giá thống nhất và dữ liệu được phép dùng không? |
+| 3 |HR khó tổng hợp, đối chiếu thông tin ứng viên từ nhiều hồ sơ và vòng phỏng vấn |Có nhiều nguồn thông tin không đồng nhất; mất thời gian chuẩn bị shortlist và trao đổi với trưởng bộ phận. |Quy mô tuyển dụng thực tế có đủ lớn? Có bộ tiêu chí đánh giá thống nhất và dữ liệu được phép dùng không? |
 
-### Problem Card #1
+### Problem Card #1 : 
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
+| Job Story | Khi kết thúc một cuộc gọi tư vấn và cần chuyển sang khách hàng tiếp theo, tôi muốn lưu nhanh nhu cầu, vấn đề, cam kết và bước chăm sóc tiếp theo vào CRM, để đồng nghiệp có thể tiếp nhận đúng ngữ cảnh mà không phải nghe lại toàn bộ cuộc gọi. |
+| Actor |	Nhân viên CSKH/tư vấn bán hàng, ngân hàng (người trực tiếp thao tác); trưởng nhóm CSKH và nhân viên tiếp nhận ca sau (người chịu ảnh hưởng). |
 | Thời điểm / bối cảnh | |
 | Quy trình hiện tại (3–7 bước) | |
 | Bottleneck (bước nào, mất bao nhiêu phút) | |

@@ -4,7 +4,7 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: xyz
 - Candidate problem nhóm chọn (1 câu):
 - Quyết định cuối (Go / Not Yet / No-Go):
 
@@ -12,10 +12,9 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| 1 | Vũ Đức Minh | 2A202603673 | Trưởng nhóm | ducminh03 |
+| 2 | Nguyễn Văn Nhi | 2A202603697 | Thành viên | nguyenvannhi242 |
+| 3 | Phạm Quỳnh Anh | 2A202603671 | Thành viên | phamquynhanh-17 |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 

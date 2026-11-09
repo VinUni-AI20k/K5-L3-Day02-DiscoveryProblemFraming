@@ -6,11 +6,11 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên:
-- MSSV:
+- Họ tên: Hà Minh Thắng 
+- MSSV: 2A202603676
 - Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm:
-- Link repo nhóm:
+- Tên nhóm: ABC
+- Link repo nhóm: https://github.com/manhkhai205/K5-L3A-Day02-ABC-DiscoveryProblemFraming.git
 
 ---
 

@@ -138,7 +138,35 @@ HIỆN TẠI — 15-20 phút loay hoay
 | Card 2: Dữ liệu giao thông mạng xã hội rất nhiễu, AI có thể bị hallucinate | Đồng ý | Giới hạn success metric vào tính tóm tắt nhanh thay vì chỉ đường tự động hoàn toàn | 
 | Card 3: Xử lý xe máy đòi hỏi tay chân thao tác vật lý, AI không thể vặn ốc thay | Đồng ý | Đổi trọng tâm sang "chuẩn đoán đúng bệnh" (Troubleshooting) thay vì sửa xe | 
 
+## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
+| Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
+|---|---|---|
+| Pitch Problem Card | | |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
+| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
+| Gom cluster / cây OST | | |
+| Chọn candidate problem | | |
+| Kiểm chứng / research | | |
+| Quy trình nhóm | | |
+| Problem Statement | | |
+| Mức can thiệp AI | | |
+| Quyết định | | |
+
+---
+
+## 5. Dùng AI
+
+| Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
+|---|---|---|---|---|
+| CP1 Scan | | | | |
+| CP2 Problem Card | | | | |
+| CP4 Research | | | | |
+| CP5 Quy trình | | | | |
+| CP5–6 Problem Statement | | | | |
+| CP6 Mức can thiệp / quyết định | | | | |
+
+---
 
 ## 6. Reflection (CP7)
 

@@ -114,9 +114,9 @@ Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Phỏng vấn chuyên viên đấu thầu| 3|2 người xác nhận muốn sử dụng sản phẩm làm 1 công cụ hỗ trợ làm việc | 1 người nói việc đối chiếu rất phức tạp AI detech cũng có thể sai và không ai chịu trách nhiệm cho việc đó|
 
-**Nhóm đã sửa problem thế nào sau kiểm chứng:**
+**Nhóm đã sửa problem thế nào sau kiểm chứng:**3 người được phỏng vấn, 2 người ủng hộ và 1 người lo ngại về độ chính xác, trách nhiệm, nên điều chỉnh mô hình từ AI tự động đánh giá hồ sơ sang AI hỗ trợ đối chiếu, có con người kiểm chứng (Human-in-the-loop).
 
 ### 3.3. Research giải pháp đã có
 

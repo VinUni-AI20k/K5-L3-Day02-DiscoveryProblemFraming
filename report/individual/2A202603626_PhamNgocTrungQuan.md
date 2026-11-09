@@ -154,7 +154,7 @@ Tiếp nhận hóa đơn và chứng từ -> Kiểm tra tài liệu -> Đọc th
 | Mức can thiệp AI | | |
 | Quyết định | | |
 
----
+--- 
 
 ## 5. Dùng AI
 

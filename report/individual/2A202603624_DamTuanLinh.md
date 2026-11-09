@@ -49,19 +49,25 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 |---|---|
 | Job Story | Khi kết thúc một cuộc gọi tư vấn và cần chuyển sang khách hàng tiếp theo, tôi muốn lưu nhanh nhu cầu, vấn đề, cam kết và bước chăm sóc tiếp theo vào CRM, để đồng nghiệp có thể tiếp nhận đúng ngữ cảnh mà không phải nghe lại toàn bộ cuộc gọi. |
 | Actor |	Nhân viên CSKH/tư vấn bán hàng, ngân hàng (người trực tiếp thao tác); trưởng nhóm CSKH và nhân viên tiếp nhận ca sau (người chịu ảnh hưởng). |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Thời điểm / bối cảnh |	Ngay sau cuộc gọi, nhất là khi lượng cuộc gọi liên tiếp cao và một khách hàng có thể được nhiều nhân viên chăm sóc. Giới hạn vào ghi chú và cập nhật CRM, không tự động đánh giá khả năng trả nợ hay quyết định cấp tín dụng. |
+| Quy trình hiện tại (3–7 bước) |	(1) Nhận cuộc gọi và tra hồ sơ khách trên CRM; (2) trao đổi, ghi chú rời các thông tin quan trọng; (3) kết thúc cuộc gọi; (4) nhớ lại hoặc nghe lại phần cần thiết; (5) phân loại nhu cầu và nhập tóm tắt, trạng thái, lịch hẹn vào CRM; (6) kiểm tra và chuyển việc cho người phụ trách tiếp theo. Đây là quy trình nháp cần phỏng vấn xác nhận. |
+| Bottleneck (bước nào, mất bao nhiêu phút) |Bước 4–5: nghe lại, lọc thông tin và nhập liệu. Giả định 5–8 phút/cuộc gọi; chưa đo thực tế. Đặc biệt dễ bỏ sót cam kết, thời hạn hoặc nhu cầu thay đổi. |
+| Impact (nếu không giải thì sao) |Tăng thời gian xử lý sau cuộc gọi; CRM thiếu/không nhất quán; khách phải nhắc lại nhu cầu; bỏ lỡ lịch chăm sóc. Chưa có bằng chứng để quy đổi thành doanh thu mất đi. |
+| Success metric (baseline → target) |Thời gian hoàn tất ghi chú CRM: baseline giả định 6 phút → mục tiêu ≤3 phút/cuộc gọi; tỷ lệ bản ghi đủ 4 trường (nhu cầu, vấn đề, cam kết, bước tiếp theo): baseline cần đo → mục tiêu ≥95%; tỷ lệ thông tin sai nghiêm trọng: baseline cần đo → mục tiêu ≤2%. Đo thử 30–50 cuộc gọi có sự đồng ý và đối chiếu với người phụ trách. |
+| Phương án không dùng AI |Chuẩn hóa biểu mẫu CRM với trường bắt buộc, menu chọn loại nhu cầu, checklist cuối cuộc gọi và mẫu ghi chú; phân công kiểm tra ngẫu nhiên. Đây là phương án đối chứng cần thử trước. |
+| Giả thuyết về AI (nếu có) |	Với bản ghi âm được phép xử lý, speech-to-text kết hợp trích xuất thông tin có thể tạo bản nháp ghi chú và gợi ý trường CRM; nhân viên kiểm tra, sửa và xác nhận trước khi lưu. Không tự gửi tin nhắn, không tự quyết định nghiệp vụ nhạy cảm. |
+| Cảm nhận nhanh | 	Workflow + AI hỗ trợ (chưa cần Agent tự chủ): quy trình có bước cố định, điểm cần AI là hiểu hội thoại không cấu trúc|
 
 Quy trình nháp hiện tại:
 
 ```text
-
+Khách gọi đến
+  → Nhân viên tra cứu hồ sơ CRM
+  → Trao đổi và ghi chú rời
+  → Kết thúc cuộc gọi
+  → [NGHẼN: nhớ/nghe lại + lọc nhu cầu, cam kết]
+  → Nhập tay các trường CRM
+  → Kiểm tra và chuyển ca / đặt lịch chăm sóc
 ```
 
 ### Problem Card #2

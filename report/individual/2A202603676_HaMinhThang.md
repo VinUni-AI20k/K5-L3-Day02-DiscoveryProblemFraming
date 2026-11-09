@@ -172,12 +172,12 @@ Quy trình nháp hiện tại:
 | Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: Dựa vào thông tin đó có cần dùng tới AI không? | Chỉnh lại vấn đề đó|
 | Nhận phản biện | Câu hỏi tôi nhận được: Tôi có thể tiếp cận được tới các bác sĩ trực lúc giao ca không? | Tôi đã sửa gì: Tôi phải lên kế hoạch cho quá trình xin phỏng vấn. |
 | Gom cluster / cây OST | Có 3 nhánh: Đọc hội thoại tóm tắt, Tra cứu thông tin và Xử lý thông tin | |
-| Chọn candidate problem | | |
+| Chọn candidate problem |Chọn nhánh tổng hợp thông tin hội thoại | |
 | Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Quy trình nhóm |Đọc ngược đoạn chat tư vấn --> bắt SĐT, địa chỉ --> tìm sản phẩm --> Tạo đơn | |
+| Problem Statement |Một nhân viên trực sale mất thời gian để hỗ trợ đồng thời nhiều khách trong 1 khoảng thời gian ngắn gây nguy cơ xao nhãng, khi lập đơn hàng phải hỏi lại người được tư vấn, gây khó chịu | |
+| Mức can thiệp AI |ChatBot | |
+| Quyết định |Go | |
 
 ---
 

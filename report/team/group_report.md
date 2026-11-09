@@ -7,8 +7,8 @@
 
 - Tên nhóm: xyz
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
-- Quyết định cuối: Go / Not Yet / No-Go
+- Candidate problem được chọn (1 câu): Sinh viên gặp khó khăn và mất nhiều thời gian (3–5 giờ/môn) để tự tổng hợp, hệ thống hóa kiến thức cốt lõi và công thức chính xác kèm trang nguồn đối chiếu từ các bộ slide/giáo trình dài (200+ trang) hoặc mới cập nhật khi chưa có đề cương khóa trước đáng tin cậy.
+- Quyết định cuối: **Go (Phạm vi nhỏ — Triển khai Pilot quy trình Workflow bán thủ công trên công cụ có sẵn, có bước con người kiểm chứng công thức)**
 
 ---
 
@@ -312,14 +312,6 @@ Vì sao:
 | 3 | **Độ bao phủ kiến thức trọng tâm (Coverage)** | Bao quát >= 90% các công thức, định lý và định nghĩa cốt lõi được giảng viên đóng khung hoặc tổng kết ở cuối mỗi chương. | Bỏ sót các công thức nền tảng trong slide bài giảng. |
 | 4 | **Tính cô đọng và phân loại (Structure & Conciseness)** | Nội dung trích xuất được gom nhóm rõ ràng theo từng chương/mục; độ dài bản tóm tắt chỉ chiếm từ 10–15% dung lượng slide gốc. | Trích xuất lan man toàn bộ lời dẫn, ví dụ phụ; không phân cấp được mục lục chương. |
 
----
-**Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
-
-| # | Tiêu chí | Đạt khi | Không đạt khi |
-|---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
 
 ---
 
@@ -329,31 +321,50 @@ Vì sao:
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **Trung bình** | Phỏng vấn CP4 (5 người) xác nhận sinh viên mất 3–5 giờ/môn khi phải tự tổng hợp môn nhiều công thức hoặc đổi slide mới; tuy nhiên nhu cầu **không xuất hiện ở mọi môn** (nếu đã có đề cương khóa trước tốt thì sinh viên dùng lại ngay với chi phí bằng 0). Do đó giá trị chỉ cao khi nhắm đúng vào các môn mới cập nhật tài liệu hoặc nặng công thức chưa có đề cương tin cậy. |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | **Thấp – Trung bình** | Sinh viên đã quen thao tác với PDF và các công cụ như *NotebookLM / Claude*. Nhờ yêu cầu bắt buộc gắn số trang nguồn cho từng mục, sinh viên dễ dàng lật lại đúng trang slide gốc để kiểm tra và sửa lại ký hiệu công thức trong khoảng 40–50 phút. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **Trung bình** | Các công cụ có sẵn (*Google NotebookLM, Claude Projects, Adobe PDF Spaces, SciSpace, Mathpix*) đã giải quyết tốt phần đọc PDF văn bản và gắn citation. Rủi ro kỹ thuật nằm ở các bộ slide chứa nhiều công thức viết trong ảnh chụp độ phân giải thấp hoặc sơ đồ phức tạp dễ bị OCR/AI đọc nhầm ký hiệu. |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | **Thấp – Trung bình** | Sinh viên tự vận hành quy trình cho mục đích ôn tập cá nhân trên các gói miễn phí/sinh viên sẵn có (*NotebookLM* miễn phí, *Mathpix/Claude* dùng trong hạn mức). Rủi ro bản quyền học liệu được kiểm soát bằng nguyên tắc: tài liệu chỉ xử lý trong không gian cá nhân khi được phép và không phát tán công khai khi chưa được phép. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** **Go (Phạm vi nhỏ — Triển khai Pilot quy trình Workflow bán thủ công bằng các công cụ có sẵn, KHÔNG tự xây dựng phần mềm/agent mới)**
 
 **Lý do:**
+- Không có rủi ro nào ở mức **Cao**. Các rủi ro **Trung bình** (Value chỉ tập trung ở môn chưa có đề cương cũ; Feasibility với công thức trong ảnh chụp) đều đã được kiểm soát bằng **Boundary chặt chẽ** (bắt buộc gắn trang nguồn + giữ bước sinh viên đối chiếu 40–50 phút) và có thể kiểm chứng ngay bằng một đợt chạy thử (pilot) với chi phí bằng 0 trên các công cụ sẵn có.
+- Kết quả Research ở CP4 chứng minh các công cụ như *NotebookLM*, *Claude Projects* và *Mathpix* đã giải quyết được từng mảnh ghép; việc tự lập trình một hệ thống mới từ đầu là dư thừa và không kinh tế.
 
 **Nếu Go — pilot nhỏ nhất:**
+- **Quy mô:** Thử nghiệm ngay trong 1 tuần trên **1 môn học thật có nhiều công thức/thuật ngữ và chưa có đề cương khóa trước** (khoảng 150–200 trang slide, chia làm 5–6 chương), với **3 sinh viên** thực hiện.
+- **Cách làm (không viết code xây app):**
+  1. Lập trước **checklist các mục chính và 15–20 công thức mẫu** từ mục lục bộ slide.
+  2. Chia bộ slide PDF theo chương; với trang có công thức dạng ảnh khó đọc thì quét nhanh qua *Mathpix Snip*, sau đó đưa vào *Google NotebookLM* (hoặc *Claude Project*) cùng prompt chuẩn yêu cầu tạo bản nháp đề cương theo chương kèm `[Số trang nguồn]`.
+  3. Sinh viên bấm giờ toàn bộ quá trình (từ lúc chuẩn bị file đến khi đối chiếu xong với slide gốc và sửa lỗi) và chấm bản nháp theo **4 tiêu chí đánh giá** ở Mục 7.
 
-**Nếu Not Yet — cần kiểm chứng gì trước:**
+**Nếu Not Yet — cần kiểm chứng gì trước:** *(Không áp dụng vì nhóm chọn Go phạm vi nhỏ; tuy nhiên trong quá trình pilot sẽ đồng thời xác nhận lại baseline thời gian và mục tiêu thời gian trên dữ liệu bấm giờ thật).*
 
-**Nếu No-Go — nên làm gì thay AI:**
+**Nếu No-Go — nên làm gì thay AI:** *(Áp dụng ngay cho các môn đã có đề cương khóa trước đáng tin cậy: dùng phương án **No AI** — xin lại đề cương khóa trên và chỉ tự ghi chú bổ sung các phần giảng viên nhấn mạnh thêm trên lớp).*
 
 **Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+- **Về thời gian & công sức sửa lỗi:** Nếu sau khi thử nghiệm trên **2 chương đầu tiên (hoặc 1 môn học)** mà tổng thời gian (tạo nháp + đối chiếu sửa lỗi) **vẫn vượt quá 180 phút/môn**, hoặc sinh viên phải **viết/gõ lại thủ công trên 40% số công thức** do AI/OCR trích xuất lỗi $\rightarrow$ **Dừng dùng AI tạo nháp cho phần công thức**, quay về phương án cắt dán trực tiếp ảnh chụp công thức từ slide gốc vào đề cương và chỉ dùng công cụ để lập mục lục trang nguồn.
+- **Về độ chính xác học thuật:** Nếu sau bước rà soát (Bước 4) mà kiểm tra chéo với checklist vẫn phát hiện **từ 1 lỗi trọng yếu trở lên về công thức/ký hiệu bị lọt qua** (sai dấu, sai biến số, thiếu điều kiện áp dụng làm giải sai bài tập) $\rightarrow$ **Dừng quy trình dùng AI tóm tắt môn đó**, quay về quy trình tự đọc và ghi chép trực tiếp từ slide gốc.
 
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+- **Hạn chế của buổi Discovery hiện tại:**
+  - Con số baseline (~270 phút/môn) và thời gian mục tiêu hiện đang dựa trên ước lượng hồi tưởng từ các buổi phỏng vấn ở CP4, chưa được bấm giờ trực tiếp (time-tracking) song song trên cùng một bộ slide chuẩn.
+  - Quy trình hiện tại mới giải quyết bài toán **tổng hợp và hệ thống hóa tài liệu chính xác**, chưa giải quyết được 2 nhu cầu liền kề mà người học nêu ra ở Phỏng vấn #2 và #3 là **tự kiểm tra lỗ hổng kiến thức (active recall/quiz)** và **hướng dẫn áp dụng công thức vào từng dạng bài tập**.
+- **Hướng tiếp theo:**
+  - Thực hiện ngay đợt **Pilot nhỏ nhất** trên 1 môn học thật của thành viên trong nhóm ở học kỳ này để đo đạc chính xác thời gian thực tế và tỷ lệ lỗi công thức ở Bước 3 & Bước 4.
+  - Ở vòng Discovery tiếp theo, kiểm chứng riêng bài toán *"Sinh viên không nhận biết được lỗ hổng kiến thức sau khi đọc đề cương"* (từ Phỏng vấn #2) và bài toán *"Kho đề cương chia sẻ có đánh giá chéo của cộng đồng sinh viên"* (từ Phản biện #1 ở CP5).
 
 ## 10. Tài liệu tham khảo
 
--
+- Google NotebookLM — Công cụ hỏi đáp và tổng hợp tài liệu có gắn trích dẫn nguồn: [https://notebooklm.google/](https://notebooklm.google/)
+- Anthropic Claude (Projects) — Không gian làm việc duy trì ngữ cảnh trên nhiều tài liệu: [https://claude.ai/](https://claude.ai/)
+- Mathpix Snip — Công cụ OCR nhận diện công thức toán học và chuyển đổi PDF khoa học sang LaTeX/Markdown: [https://mathpix.com/](https://mathpix.com/)
+- Adobe Acrobat AI Assistant (PDF Spaces) — Đọc, tóm tắt và trích dẫn nhảy tới vị trí nguồn trên nhiều file PDF: [https://www.adobe.com/acrobat/generative-ai-pdf.html](https://www.adobe.com/acrobat/generative-ai-pdf.html)
+- SciSpace — Hỗ trợ đọc tài liệu khoa học, giải thích thuật ngữ và biểu thức toán học: [https://scispace.com/](https://scispace.com/)
+- Tài liệu hướng dẫn Lab Day 02: [docs/01-worksheet.md](../../docs/01-worksheet.md), [docs/02-deliverable-example.md](../../docs/02-deliverable-example.md), [docs/03-international-frameworks.md](../../docs/03-international-frameworks.md) (Double Diamond, Jobs-to-be-Done, Opportunity Solution Tree — Teresa Torres, The Mom Test — Rob Fitzpatrick, Lean UX — Jeff Gothelf, Google PAIR Guidebook, Building Effective Agents — Anthropic, Four Big Risks — Marty Cagan).

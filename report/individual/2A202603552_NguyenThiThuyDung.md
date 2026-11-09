@@ -59,7 +59,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 Quy trình nháp hiện tại:
 
-```text
+```mermaid
 flowchart TD
     A["1. Xác định chủ đề và từ khóa<br/>10 phút"]
     B["2. Tìm kiếm trên nhiều nền tảng<br/>20 phút"]
@@ -95,7 +95,7 @@ flowchart TD
 
 Quy trình nháp hiện tại:
 
-```text
+```mermaid
 flowchart TD
     A["1. Xác định hệ thống nghiên cứu<br/>10 phút"]
     B["2. Xây dựng tiêu chí đánh giá<br/>15 phút"]
@@ -130,7 +130,7 @@ flowchart TD
 
 Quy trình nháp hiện tại:
 
-```text
+```mermaid
 flowchart TD
     A["1. Kiểm tra các kênh thông báo<br/>10 phút"]
     B["2. Đọc và xác định lịch mới<br/>10 phút"]
@@ -163,20 +163,21 @@ flowchart TD
 
 ---
 
+
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Đề xuất bài toán BA mất nhiều thời gian nghiên cứu, so sánh các hệ thống HIS/EHR/AI Agent. Trình bày Job Story, actor, quy trình AS-IS gồm 6 bước, bottleneck đọc/trích xuất 60 phút và tổng thời gian ước lượng 150 phút/hệ thống. | Candidate được đưa vào shortlist, đạt 32/35 điểm và được nhóm lựa chọn để tiếp tục phân tích. |
+| Phản biện bài của bạn khác | Phân tích candidate tìm kiếm và tổng hợp sự kiện NEU của thành viên khác. Câu hỏi tôi đã đặt: Sinh viên có thực sự thường xuyên gặp khó khăn khi tìm kiếm thông tin sự kiện từ nhiều kênh không, hay vấn đề chỉ phát sinh vào một số thời điểm nhất định?. Nội dung cần làm rõ gồm tần suất phát sinh vấn đề, khả năng kiểm chứng và sự cần thiết của AI. | Giúp nhóm xem xét tính thực tế và khả năng đo lường của candidate thay vì chỉ đánh giá mức độ hấp dẫn của ý tưởng. |
+| Nhận phản biện | Câu hỏi tôi nhận được: Bạn đã có dữ liệu thực tế chứng minh bước đọc và trích xuất thông tin là bottleneck lớn nhất chưa? Nếu sử dụng một bộ tiêu chí benchmarking và template so sánh cố định thì có thể giảm thời gian nghiên cứu mà không cần AI không?. Các nội dung cần phản biện gồm phạm vi benchmarking, mức độ tin cậy của baseline ước lượng và khả năng giải quyết bằng No AI/Rule. | Tôi đã thu hẹp phạm vi vào HIS/EHR/AI Agent với bộ tiêu chí cố định, ghi rõ baseline chưa đo và bổ sung đánh giá các phương án không sử dụng AI. |
+| Gom cluster / cây OST | Tham gia phân loại candidate thành ba cluster: tìm kiếm và tổng hợp thông tin; theo dõi thông tin theo thời gian; đánh giá và lựa chọn. Phân tích ba opportunity của bài benchmarking: tìm nguồn, đọc/trích xuất và đối chiếu/xác minh. | Xây dựng OST tập trung vào vấn đề người dùng, tránh nhầm các giải pháp như AI Agent hoặc dashboard tự động với opportunity. |
+| Chọn candidate problem | Đề xuất candidate #5: Benchmarking HIS/EHR/AI Agent. Tham gia đánh giá theo 7 tiêu chí: actor, quy trình, bằng chứng pain, impact, phạm vi lab, khả năng so sánh mức can thiệp và hiểu biết domain. | Nhóm thống nhất chọn candidate #5 với 32/35 điểm, cao nhất trong shortlist. |
+| Kiểm chứng / research | Xác định hai giả định ưu tiên A1 và A2, xây dựng câu hỏi Mom Test, mẫu Interview Snapshot và nghiên cứu các công cụ G2, Elicit, Consensus. | Làm rõ các rủi ro Value và Feasibility; thu hẹp phạm vi nghiên cứu vào việc trích xuất và đối chiếu chức năng theo bộ tiêu chí cố định. Các tình huống phỏng vấn giả lập không được tính là bằng chứng thực tế. |
+| Quy trình nhóm | Mô tả AS-IS gồm 6 bước với tổng thời gian ước lượng 150 phút/hệ thống. Phân tích TO-BE với AI Workflow, Rule, Human-in-the-loop và fallback. | Xác định điểm can thiệp của AI tại bước đọc/trích xuất; BA vẫn kiểm tra nguồn, sửa thông tin và phê duyệt bảng benchmarking. |
+| Problem Statement | Tham gia xây dựng Problem Statement v0 và v1, xác định actor, bottleneck, impact, success metric, boundary và AI intervention point. | Đề xuất target giảm từ 150 xuống dưới 90 phút/hệ thống; tối thiểu 90% nhận định có bằng chứng hoặc trạng thái chưa xác minh. |
+| Mức can thiệp AI | So sánh No AI, Rule, Workflow và Agent; đánh giá ma trận độ mơ hồ × độ phức tạp và vai trò của HITL. | Nhóm lựa chọn AI Workflow kết hợp Rule và HITL, không lựa chọn Agent tự chủ ở giai đoạn đầu. |
+| Quyết định | Tham gia đánh giá Value, Usability, Feasibility và Viability; đề xuất pilot nhỏ và tiêu chí dừng. | Nhóm thống nhất Not Yet vì chưa đủ bằng chứng thực tế về tần suất pain và baseline. Cần phỏng vấn và đo tác vụ trước khi Go. |
 
 ---
 
@@ -184,35 +185,107 @@ flowchart TD
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Sử dụng AI để mở rộng các problem tự nghĩ | Gợi ý thêm được hướng phát triển idea và chỉnh sửa lại cách diễn đạt | Một số vấn đề quá rộng, chưa sát công việc hoặc chưa có dấu hiệu định lượng. | Chọn 2 vấn đề phù hợp với công việc và trải nghiệm của mình, tập trung mô tả pain thay vì đề xuất giải pháp. |
+| CP2 Problem Card | Nhờ AI phản biện và tạo sơ đồ Mermaid theo ý tưởng có sẵn | Giúp chuẩn hóa bảng Problem Card, làm rõ quy trình và trực quan hóa các bước thực hiện. | AI đưa ra các câu hỏi quá to so với vấn đề | Tiếp nhận các câu hỏi phản biện phù hợp và chỉnh sửa lại problem card rõ ràng hơn |
+| CP4 Research | Nhờ AI gợi ý vài câu hỏi để đi phỏng vấn người dùng | Gợi ý được các khía cạnh cần đào sâu| Một số câu hỏi thiên về lý thuyết, không liên quan đến trải nghiệm| Chỉ tham khảo và giữ lại các câu hỏi đúng với chuẩn Mom test |
+| CP5 Quy trình | Dùng AI để format bảng và vẽ khung Mermaid | Căn chỉnh khung và chỉnh sửa lại bảng | AI tự ý gộp nội dung bảng, không giống như ý tưởng ban đầu của tôi | Chỉnh sửa lại phần AI tự ý chỉnh mà không hợp lý |
+| CP5–6 Problem Statement | Nhờ AI kiểm tra lại nội dung| Phát hiện được những chỗ viết chưa được chuẩn xác | AI có xu hướng dùng quá nhiều thuật ngữ chuyên ngành | Chỉ giữ lại những phần nội dung dễ đọc, dễ hiểu và hợp lý |
+| CP6 Mức can thiệp / quyết định | Hỏi AI về rủi ro kỹ thuật khi triển khai mô hình gợi ý | Giúp phân biệt tác vụ có quy tắc với tác vụ cần xử lý ngữ nghĩa, đồng thời làm rõ rủi ro của Agent tự chủ. | AI có thể đề xuất tự động hóa | Nhóm quyết định Not Yet cho đến khi có kiểm chứng và dữ liệu đo thực tế. |
 
 ---
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
+Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.** 
 
-**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+### 6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 
-**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+### 6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?
 
-**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+**Gợi ý tự viết:**
 
-**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+- Có lúc nào tôi hoặc nhóm muốn xây ngay AI Agent nghiên cứu thị trường không?
+- Những ý nào trong OST thực chất là solution thay vì opportunity?
+- Nhóm xử lý thế nào khi nhận ra No AI hoặc Rule có thể giải quyết một phần pain?
+- Điều gì khiến nhóm quay lại xác định vấn đề trước khi chọn giải pháp?
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+**[Tự viết tình huống thực sự xảy ra]**
+
+### 6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.
+
+**Gợi ý tự viết:**
+
+- Ban đầu tôi nhận định bottleneck chính nằm ở bước đọc/trích xuất vì sao?
+- Tôi đã nhận được câu hỏi phản biện cụ thể nào?
+- Câu hỏi đó khiến tôi thay đổi quan điểm gì?
+- Tôi đã điều chỉnh Problem Card hoặc cách lựa chọn mức AI như thế nào?
+
+**[Tự viết một ví dụ thật theo cấu trúc: Quan điểm ban đầu → Phản biện → Thay đổi]**
+
+### 6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?
+
+**Gợi ý tự viết:**
+
+- Tôi phát hiện điều gì khi nghiên cứu G2, Elicit và Consensus?
+- Những công cụ có sẵn đã giải quyết phần nào của bài toán?
+- Có điều gì tôi tưởng là pain lớn nhưng chưa có dữ liệu chứng minh không?
+- Việc thiếu phỏng vấn thực tế có làm tôi thay đổi độ tự tin vào giả định ban đầu không?
+
+**[Tự viết từ kết quả research hoặc kiểm chứng đã thực hiện]**
+
+### 6.5. Điều khó nhất khi viết Problem Statement là gì?
+
+**Gợi ý tự viết:**
+
+- Khó khăn lớn nhất của tôi là xác định actor, bottleneck, metric hay boundary?
+- Tại sao chỉ giảm thời gian chưa đủ để đánh giá thành công?
+- Vì sao các nhận định về chức năng hệ thống phải có nguồn bằng chứng?
+- Tôi đã học được gì khi phân biệt "không tìm thấy" với "không tồn tại"?
+
+**[Tự viết trải nghiệm cá nhân]**
+
+### 6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?
+
+**Gợi ý tự viết:**
+
+- Tôi có nên phỏng vấn BA và đo thời gian nghiên cứu thực tế ngay từ CP1–CP2 không?
+- Có nên thử phương án No AI trước khi cân nhắc AI Workflow?
+- Tôi sẽ phản biện thế nào nếu nhóm lựa chọn Agent quá sớm?
+- Tôi sẽ đặt câu hỏi nào để phân biệt pain thực tế với giả định chủ quan?
+
+**[Tự viết những thay đổi mình thực sự muốn thực hiện]**
+
+### 6.7. Hiểu bài
+
+**Tự giải thích bằng 5–8 câu, không nhìn tài liệu, theo chuỗi:**
+
+1. **Problem:** BA nghiên cứu các hệ thống HIS/EHR/AI Agent đang gặp vấn đề gì?
+2. **Quy trình:** Quy trình hiện tại gồm những bước nào và bottleneck dự kiến nằm ở đâu?
+3. **Metric:** Baseline và target của nhóm là gì? Đo thời gian và chất lượng như thế nào?
+4. **Boundary:** AI không được tự làm gì và lúc nào BA phải kiểm tra?
+5. **Mức can thiệp AI:** Vì sao nhóm lựa chọn Workflow kết hợp Rule và HITL thay vì Agent?
+6. **Quyết định:** Vì sao nhóm lựa chọn Not Yet? Cần bằng chứng gì để quyết định Go?
+
+**[Tự diễn giải bằng 5–8 câu theo cách hiểu của mình]**
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+1. VinUni AI20K. **K5 · L3 · Day 02 — Discovery & Problem Framing.** https://github.com/VinUni-AI20k/K5-L3-Day02-DiscoveryProblemFraming
+
+2. Nhóm NEU65. **Báo cáo nhóm Day 02 — Discovery & Problem Framing.** https://github.com/vuThai05/K5-L3A-DAY02-NEU65-DiscoveryProblemFraming
+
+3. G2. **Compare Software and Services.** https://www.g2.com/compare
+
+4. G2. **Researching and Customizing Software Recommendations on G2.** https://documentation.g2.com/help/docs/researching-and-customizing-software-recommendations-on-g2
+
+5. Elicit. **AI for Research & Decision-Making.** https://elicit.com/
+
+6. Elicit Help Center. **Getting Started with Elicit: Which Workflow Should I Use?** https://support.elicit.com/en/articles/14757543-getting-started-with-elicit-which-workflow-should-i-use
+
+7. Consensus Help Center. **How Consensus Works.** https://help.consensus.app/en/articles/9922673-how-consensus-works
+
+8. Consensus Help Center. **Responsible AI & Limitations.** https://help.consensus.app/en/articles/10046838-responsible-ai-limitations

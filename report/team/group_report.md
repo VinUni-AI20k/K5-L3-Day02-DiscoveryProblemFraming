@@ -16,20 +16,22 @@
 
 ### 2.1. Pitch
 
+Candidate tổng hợp từ CP2 của bốn báo cáo cá nhân, dùng mã truy vết ở mục 2.2. Chưa có biên bản pitch hoặc câu hỏi phản biện trực tiếp.
+
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 1 | Khoa | K1 — Khi chuẩn bị sprint, cần tìm và ghép thông tin dự án để hiểu bối cảnh công việc | Developer mới hoặc tham gia dự án có sẵn | Tìm, đọc và đối chiếu thông tin qua nhiều nguồn (bước 2–6 trong card) | |
+| 2 | Khoa | K2 — Khi làm task trên hệ thống có sẵn, cần tìm kiến thức và quyết định kỹ thuật cũ để hiểu module | Developer làm việc với module chưa quen | Đọc code, tìm lịch sử và hỏi người từng phụ trách (bước 3–6) | |
+| 3 | Khoa | K3 — Khi nhận backlog mới, cần hiểu yêu cầu và acceptance criteria để bắt đầu đúng phạm vi | Developer nhận task từ PO, PM hoặc Tech Lead | Làm rõ yêu cầu qua nhiều vòng trao đổi (bước 3–6) | |
+| 4 | Dương | D1 — Khi review PR lớn, cần hiểu thay đổi và rủi ro để nhận xét có căn cứ | Developer được giao review PR | Giả thuyết: lần theo mã liên quan để hiểu tác động (bước 4) | |
+| 5 | Dương | D2 — Khi điền nhiều biểu mẫu, cần xác định thông tin khách hàng để hoàn tất hồ sơ không bỏ sót | Nhân viên nhập thông tin khách hàng | Giả thuyết: nhập lại các trường trùng (bước 4) | |
+| 6 | Dương | D3 — Khi nhận tiền điện, nước và dịch vụ, cần đối chiếu hợp đồng để kiểm khoản phải trả | Người thuê nhà | Giả thuyết: đối chiếu từng khoản với điều khoản và dữ liệu tính tiền (bước 4) | |
+| 7 | Lam | L1 — Khi dùng lại nhận định trong paper đã đọc, cần tìm đúng bằng chứng để giải thích có căn cứ | Sinh viên mới tham gia nhóm nghiên cứu, bối cảnh giả định | Dò bằng chứng trong PDF (bước 3), chưa đo thực tế | |
+| 8 | Lam | L2 — Khi có nhiều paper liên quan, cần xác định bài sát câu hỏi nghiên cứu để chọn bài đọc sâu | Sinh viên chọn paper, bối cảnh giả định | Đọc tiêu đề và abstract (bước 2), chưa đo thực tế | |
+| 9 | Lam | L3 — Khi so điểm số giữa paper, cần kiểm điều kiện đánh giá để tránh kết luận thiếu căn cứ | Sinh viên lập bảng so sánh, bối cảnh giả định | Đối chiếu mô hình, dữ liệu và thiết lập (bước 4), chưa đo thực tế | |
+| 10 | An | A1 — Khi rà soát biến thể tín hiệu, cần nhận biết khác biệt để chọn bước thử tiếp có căn cứ | Người nghiên cứu tín hiệu định lượng | Đối chiếu nhiều thay đổi và chỉ số (bước 3), thời gian phân rã là ước lượng | |
+| 11 | An | A2 — Khi tiếp tục việc sau họp, cần rõ quyết định, người phụ trách và hạn để không bỏ sót cam kết | Người tổng hợp biên bản, bối cảnh giả định | Xác nhận người phụ trách và deadline (bước 3) | |
+| 12 | An | A3 — Khi tra đề nghị mua vật tư, cần biết người đang xử lý và thông tin thiếu để bổ sung đúng chỗ | Nhân viên gửi đề nghị mua, bối cảnh giả định | Xác định người giữ hồ sơ và thông tin thiếu (bước 3) | |
 
 ### 2.2. Cluster
 
@@ -68,46 +70,59 @@ A và C gom theo pattern, chưa đồng nghĩa các card là cùng một problem
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
-**[CHỜ NHÓM XÁC NHẬN]** Cây minh họa cho phạm vi developer làm rõ một task trước khi triển khai, từ K1–K3 thuộc phần developer của cluster A và C. Các candidate còn lại vẫn giữ trong bảng cluster; phạm vi này chưa phải lựa chọn problem cuối cùng.
+Phạm vi: tìm lại bằng chứng trong paper đã đọc, theo candidate L1 của Lam và [shortlist](shortlist.md).
 
 ~~~text
-OUTCOME: Giảm thời gian developer làm rõ một task trước khi triển khai,
-         đồng thời hiểu đúng yêu cầu, phạm vi và căn cứ kỹ thuật.
-├── Opportunity 1: Thông tin dự án liên quan đến task nằm rải rác,
-│                 phải tìm và ghép lại bối cảnh. [K1]
-├── Opportunity 2: Khó tìm lại kiến trúc và lý do quyết định kỹ thuật
-│                 khi làm việc với module chưa quen. [K2]
-└── Opportunity 3: Yêu cầu và acceptance criteria chưa rõ,
-                  phải trao đổi nhiều vòng để xác nhận. [K3]
+OUTCOME: Giảm thời gian tìm lại bằng chứng từ paper,
+         đồng thời giữ đúng ngữ cảnh và truy xuất được nguồn.
+├── Opportunity 1: Ghi chú thiếu vị trí cụ thể của bằng chứng
+│                 như số trang, hình, bảng hoặc đoạn văn.
+├── Opportunity 2: Mất thời gian dò lại PDF để tìm đúng
+│                 đoạn, hình hoặc bảng cần dùng.
+├── Opportunity 3: Khó xác nhận ngữ cảnh của bằng chứng
+│                 để diễn giải nhận định đúng phạm vi.
+└── Opportunity 4: Vị trí nguồn được ghi không nhất quán
+                  giữa các paper, gây khó khi tìm lại.
 ~~~
 
-**Hướng đo đề xuất:** ghi thời gian xử lý chủ động từ lúc bắt đầu tìm hiểu task đến khi ghi được yêu cầu, phạm vi và căn cứ kỹ thuật liên quan; ghi riêng thời gian chờ phản hồi. Kiểm lại các nội dung này với nguồn và người phụ trách task, đánh dấu phần còn thiếu. Baseline, target và tiêu chí hoàn thành: [CẦN NHÓM XÁC ĐỊNH].
+Các opportunity trên lấy từ shortlist và [Card #1 của Lam](../individual/2A202604020_NguyenDucKhuongLam.md); cần được kiểm chứng bằng trường hợp thực tế. Hướng đo là thời gian tìm được bằng chứng, độ đúng của vị trí nguồn và ngữ cảnh. Baseline và target chưa chốt bằng số đo thực tế.
 
 **Các ý là solution, không đặt ở tầng Opportunity:**
 
-- AI assistant truy xuất và tổng hợp thông tin dự án — K1.
-- RAG-based Technical Knowledge Assistant — K2.
-- AI Requirements Assistant — K3.
-- Shared folders, project templates và dashboard tập trung — K1.
-- ADR, chuẩn hóa tài liệu và user story template/Definition of Ready — K2, K3.
-
-Các ý trên đã xuất hiện trong phương án ở card gốc. Chúng mô tả cách xử lý pain, chưa phải giải pháp được nhóm chọn.
+- AI chatbot đọc paper.
+- RAG-based paper assistant.
+- Tự động tóm tắt PDF.
+- Ghi chú có cấu trúc, Zotero annotation và liên kết đến trang PDF.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
+Nguồn: [shortlist.md](shortlist.md). Điểm được giữ nguyên từ bảng shortlist.
+
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| L1 — Tìm lại bằng chứng từ paper | 5 | 5 | 4 | 5 | 5 | 5 | 4 | **33** |
+| A1 — So sánh biến thể tín hiệu | 5 | 5 | 4 | 4 | 4 | 5 | 3 | **30** |
+| K1 — Tổng hợp thông tin trước Sprint Planning | 5 | 4 | 2 | 3 | 3 | 4 | 4 | **25** |
 
-**Candidate được chọn:**
+Mốc 10 phút/lần, trong đó 6 phút dò PDF, là số liệu giả định trong báo cáo của Lam, chưa phải baseline đã đo. Điểm ở cột “Pain có bằng chứng” là đánh giá được ghi trong shortlist, chưa thay thế việc kiểm chứng thực tế.
+
+**Candidate được chọn:** L1 — Tìm lại bằng chứng từ paper.
+
+**Job Story:** Khi cần dùng lại một nhận định từ paper đã đọc, tôi muốn tìm đúng đoạn, hình hoặc bảng chứa bằng chứng, để giải thích có căn cứ mà không phải đọc lại cả bài.
 
 **Vì sao chọn:**
 
+- Phạm vi gọn trong một tác vụ: tìm đúng bằng chứng trong paper đã đọc.
+- Có thể đo thời gian tìm và kiểm tra trực tiếp vị trí nguồn, ngữ cảnh trong PDF.
+- Có phương án không dùng AI để đối chiếu: ghi số trang/hình/bảng, annotation và liên kết PDF trong Zotero.
+- Không cần tích hợp nhiều nguồn dữ liệu dự án. Candidate đạt 33 điểm, cao nhất trong shortlist.
+
 **Vì sao loại các candidate còn lại:**
 
-**Xử lý bất đồng (nếu có):**
+- **A1 — So sánh biến thể tín hiệu:** domain quant research đặc thù; cần kiểm tra điều kiện thử nghiệm và phân biệt mô tả chênh lệch với kết luận nhân quả.
+- **K1 — Tổng hợp thông tin trước Sprint Planning:** phạm vi rộng, liên quan nhiều nguồn và quyền truy cập; chưa có baseline thực nghiệm để xác định bước nghẽn chính.
+
+**Xử lý bất đồng (nếu có):** Chưa có ghi nhận trong tài liệu nguồn.
 
 ---
 

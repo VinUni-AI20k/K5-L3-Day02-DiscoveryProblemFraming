@@ -1,4 +1,4 @@
-# Báo cáo cá nhân — MSSV_HoTen
+# Báo cáo cá nhân — 2A202603626_PhamNgocTrungQuan
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -124,7 +124,7 @@ Tiếp nhận hóa đơn và chứng từ -> Kiểm tra tài liệu -> Đọc th
   - Có thực sự cần sử dụng LLM hay chỉ cần Embedding và thuật toán phân cụm?
   - Làm thế nào xác định hai report có cùng vấn đề nhưng cách diễn đạt khác nhau?
   - Cần xử lý thế nào khi AI phân loại sai hoặc không đủ độ tin cậy?
-  -  Có thể tiếp cận dữ liệu report thực tế để kiểm chứng vấn đề không? 
+  -  Có thể tiếp cận dữ liệu report thực tế để kiểm chứng vấn đề không?
   - Làm thế nào chứng minh hệ thống giúp tiết kiệm thời gian thay vì chỉ chuyển công việc từ đọc report sang kiểm tra kết quả AI?
 
 ### AI đã phản biện card thế nào
@@ -136,25 +136,25 @@ Tiếp nhận hóa đơn và chứng từ -> Kiểm tra tài liệu -> Đọc th
 | Chưa biết chính xác thời gian cho từng bước.                        |Đồng ý       | Xác định đọc, phân loại và so sánh là các bottleneck giả định; cần đo thời gian thực tế từng bước.                                                                             |
 | Chưa có baseline về chất lượng phân loại và phát hiện nội dung tương tự.                                                            |Đồng ý       | Bổ sung macro-F1, Precision@K và Recall làm metric đánh giá. Các ngưỡng chỉ là mục tiêu thử nghiệm.                                                                             |
 | AI có thể đề xuất ghép nhầm các report khác nhau.                                                            |Đồng ý       | Không tự động xóa hoặc gộp report. Nhân viên CSKH có quyền kiểm tra và quyết định cuối cùng.                                                                             |
-    
+
 ---
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | Pitch Problem Card #1 (Soát khối lượng và đơn giá bất thường) từ bài cá nhân của Vinh. Bài toán: 4.100 BOQ × 4 nhà thầu = 16.000 dòng cần dò bằng mắt, mất ~4 giờ/vòng, rủi ro sót 1 dòng = sai hàng tỷ VND. | Nhóm chọn bài toán này làm candidate chính (Outcome: Giảm thời gian soát từ 5–6 giờ/vòng xuống <1.5 giờ). |
-| Phản biện bài của bạn khác | Câu hỏi tôi đặt: Làm sao phân biệt file đúng mẫu vs sai mẫu? Cần Rule hay AI để ghép dòng sai mẫu? Làm sao kiểm soát khi AI ghép nhầm nhưng tổng tiền vẫn khớp? | Góp phần nhóm tách PC#1 (soát) từ PC#2 (ghép) và rõ ranh giới AI/Rule/Người. |
-| Nhận phản biện | Phản biện từ nhóm/AI: Cần rõ "độ mơ hồ × độ phức tạp" cho từng công đoạn; cần Assumption Map để kiểm chứng; không được giả định AI sẽ tốt hơn Rule khi dữ liệu cấu trúc. | Tôi bổ sung: thêm Assumption Map (CP3.1), research giải pháp Excel + Procore + BuildingConnected (CP3.3), rõ quy trình trước/sau (CP4). |
-| Gom cluster / cây OST | Tham gia phân tích: gom các candidate về 1 Outcome chung: "Hỗ trợ chuyên viên KTKT so sánh và phát hiện chênh lệch hồ sơ chào giá nhanh hơn, chính xác hơn, có truy vết". | 3 candidate → 1 Outcome → tách PC#1, PC#2, PC#3 (loại). |
-| Chọn candidate problem | Chọn PC#1 (soát chênh khối lượng + đơn giá) làm bài toán chính vì: Độ mơ hồ thấp (quy tắc rõ), volume lớn, bottleneck xác định, có baseline (5–6 giờ/vòng). | Candidate được chốt; PC#2 (ghép sai mẫu) → Not Yet; PC#3 (đánh giá năng lực) → No-Go. |
-| Kiểm chứng / research | Phỏng vấn 3 chuyên viên đấu thầu: 2 xác nhận muốn sử dụng, 1 lo ngại AI ghép sai. Research: Excel Formula + Conditional Formatting (Rule), Procore Bid Leveling, BuildingConnected Bid Leveling. | Insight: Rule phù hợp cho PC#1 (không cần AI). Quy trình tương lai: Rule cho kiểm mẫu/gom/tô màu; AI tùy chọn cho ghép sai mẫu (PC#2, Not Yet). |
-| Quy trình nhóm | Vẽ quy trình hiện tại (8 bước, 11–13 giờ/vòng) vs tương lai (9 bước, 2–2.5 giờ/vòng). Xác định bottleneck chính: bước 6 dò 16.000 dòng (~4 giờ). Boundary: AI không được sửa số, tự xóa dòng, kết luận nhà thầu nào trúng thầu. | Quy trình chi tiết có Mermaid diagram, bảng công đoạn, ghi chú HITL. |
-| Problem Statement | Hoàn thành PS v0 → v1: Actor (chuyên viên KTKT, lãnh đạo), Bottleneck (bước 6: 4 giờ dò 16.000 dòng), Success Metric (5 cái: thời gian <1.5 giờ, detect 100% chênh khối lượng, FP ≤2%, detect ≥90% chênh đơn giá, 100% ghi chú). | PS rõ ràng, có "Cách đo" cho từng metric. |
-| Mức can thiệp AI | Áp dụng ma trận độ mơ hồ × độ phức tạp: So khối lượng (thấp × cao) → Rule. Phát hiện đơn giá (trung × trung) → Rule. Ghép sai mẫu (cao × cao) → Workflow+AI (Not Yet). Kết luận: **Rule-based** cho PC#1. | Tạo bộ eval framework (cp6-2A202603626-eval.md) với 8 section: phạm vi, 5 loại chênh, 5 tiêu chí, 10 test case, 7 hạn chế, 8 câu xác nhận, plan. |
-| Quyết định | Kết luận: **Go (Rule), Not Yet (PC#2), No-Go (PC#3)**. Lý do Go: khối lượng dữ liệu lớn, thao tác lặp lại, quy tắc rõ, không cần AI → phù hợp Rule. Lý do Not Yet PC#2: AI có thể giúp ghép dòng sai mẫu, nhưng cần kiểm chứng riêng. | Pilot nhỏ nhất: dùng gói thầu cũ, chạy Rule, so kết quả trước/sau, đo thời gian và số bỏ sót. |
+| Pitch Problem Card | Tôi chuẩn bị ba card cá nhân về report CSKH, onboarding và đối soát chứng từ; chọn card report để ưu tiên pitch. | Q1–Q3 là đầu vào cho bảng tổng hợp mục 2.1. Bản chuẩn bị không thay cho bản ghi buổi pitch thực tế. |
+| Phản biện bài của bạn khác | Tôi ghi các câu hỏi review về Rule, mapping và kiểm tổng tiền trong bản phân tích eval. | Câu hỏi trong tài liệu không được gán thành hỏi–đáp trực tiếp khi chưa có bản ghi người hỏi, người trả lời và nội dung trao đổi. |
+| Nhận phản biện | Tôi đối chiếu phản biện CP2 đã ghi: report trùng khác report tương tự, baseline thiếu nguồn và nguy cơ gộp nhầm. Review bản eval ở mục 7 báo cáo nhóm còn chỉ ra sai trung vị, đơn vị tiền và tiêu chuẩn đạt/không đạt. | Bản eval tích hợp sửa các lỗi đã nêu, giữ dữ liệu tổng hợp là ví dụ thiết kế và yêu cầu kiểm đáp án trước pilot. Đây là review tài liệu; không bổ sung người hỏi trực tiếp chưa có nguồn. |
+| Gom cluster / cây OST | Ba card Q1–Q3 của tôi được đưa vào bản tổng hợp sáu thành viên. | Q1 thuộc cluster tổng hợp nhiều nguồn, Q2 thuộc khó tìm thông tin, Q3 thuộc chuẩn hóa/đối chiếu. Phần tổng hợp OST do Hưởng phụ trách. |
+| Chọn candidate problem | Tôi dùng candidate V1 nhóm đã chọn làm phạm vi thiết kế bộ eval. | Eval chỉ xét soát khối lượng/đơn giá trên bảng đã ghép đúng; không nhận việc ghép file sai mẫu hoặc đánh giá năng lực làm phạm vi chính. |
+| Kiểm chứng / research | Tôi dùng số liệu Vinh và research/kiểm chứng đã có trong báo cáo nhóm làm đầu vào cho eval. | Phỏng vấn được dẫn theo Linh và research theo Khương; đóng góp của tôi là tiêu chí và tình huống kiểm tra, không nhận lại các buổi phỏng vấn của thành viên khác. |
+| Quy trình nhóm | Tôi đối chiếu quy trình Vinh cung cấp để đặt điểm bắt đầu/kết thúc và công kiểm/sửa trong phép đo eval. | Quy trình và sơ đồ gốc thuộc CP5 của Vinh; target eval áp dụng riêng soát, không dùng tổng 11–13 giờ gom + soát làm baseline cho cùng phép so. |
+| Problem Statement | Tôi đề xuất tiêu chí và tình huống cho phần đánh giá v1; Hưởng tổng hợp v0/v1 trong báo cáo nhóm. | Năm tiêu chí áp dụng đồng thời; baseline chất lượng phải có nhãn độc lập, không suy tỷ lệ bỏ sót từ số dòng hồ sơ. |
+| Mức can thiệp AI | Tôi thiết kế eval cho hướng Rule: kiểm dữ liệu, tính chênh, truy vết và chuyên viên kiểm trước trình. | File eval có 10 tình huống tổng hợp cùng các trường hợp biên bổ sung; AI giải thích và ghép ngữ nghĩa nằm ngoài bộ nghiệm thu chính. |
+| Quyết định | Tôi đồng bộ kế hoạch eval với lựa chọn Rule và trạng thái Not Yet cho pilot đã công bố qua PR #10/#11. | Chỉ thử trên dữ liệu được phép dùng, có mapping, quy tắc và đáp án được người domain duyệt; không ghi target là hiệu quả đã đạt. |
 
---- 
+---
 
 ## 5. Dùng AI
 
@@ -162,11 +162,11 @@ Tiếp nhận hóa đơn và chứng từ -> Kiểm tra tài liệu -> Đọc th
 |---|---|---|---|---|
 | CP1 Scan | Dùng ChatGPT để bổ sung các vấn đề | Gợi ý thêm nhiều góc nhìn và các vấn đề liên quan đến thao tác lặp lại, tốn thời gian, xử lý nhiều thông tin. Giúp tôi có thêm lựa chọn để xem xét.| Một số ý tưởng còn khá chung chung, chưa xác định rõ đối tượng gặp vấn đề và mức độ ảnh hưởng. Một số vấn đề có thể giải quyết bằng công cụ thông thường mà chưa cần ứng dụng AI. | Tôi chọn lọc lại các ý tưởng dựa trên mức độ cần thiết, khả năng kiểm chứng và tính thực tế. Không lựa chọn vấn đề chỉ vì có thể ứng dụng AI mà ưu tiên những vấn đề có pain point rõ ràng. |
 | CP2 Problem Card | Dùng ChatGPT để đưa ra các đánh giá bổ sung cho các đánh giá cá nhân| Giúp phát hiện những điểm chưa rõ trong bài toán, đặc biệt là sự khác biệt giữa report trùng lặp và report có nội dung tương tự. Gợi ý bổ sung các metric như Precision, Recall, Macro-F1 và Precision@K. | Một số đánh giá còn mang tính lý thuyết, chưa dựa trên dữ liệu thực tế. Các ngưỡng đánh giá được đề xuất chưa có baseline để chứng minh tính phù hợp. | Tôi điều chỉnh lại các giả định, ghi rõ số liệu chưa được xác minh, bổ sung tiêu chí đánh giá và tình huống kiểm thử. Đồng thời xác định AI chỉ hỗ trợ phát hiện report liên quan, nhân viên CSKH vẫn là người quyết định việc xác nhận hoặc gộp report. |
-| CP3 Pitch & Hội tụ | Dùng Claude để phân tích ma trận độ mơ hồ × độ phức tạp cho từng công đoạn (kiểm mẫu, gom, ghép, so sánh, phát hiện bất thường). | Giúp tôi nhìn rõ: công đoạn nào độ mơ hồ cao (ghép sai mẫu) vs thấp (so khối lượng); độ phức tạp ở đâu (volume 16.000 dòng vs quy tắc có sẵn). | AI gợi ý dùng AI cho tất cả công đoạn; chưa gợi ý Rule riêng cho phần so sánh số liệu. | Tôi quyết định tách: PC#1 (so sánh) → Rule; PC#2 (ghép) → Workflow+AI (Not Yet); PC#3 (năng lực) → No-Go. |
+| CP3/CP6 — Phân tích tài liệu | Dùng Claude để phân tích ma trận độ mơ hồ × độ phức tạp cho từng công đoạn (kiểm mẫu, gom, ghép, so sánh, phát hiện bất thường). | Giúp tôi nhìn rõ: công đoạn nào độ mơ hồ cao (ghép sai mẫu) vs thấp (so khối lượng); độ phức tạp ở đâu (volume 16.000 dòng vs quy tắc có sẵn). | AI gợi ý dùng AI cho tất cả công đoạn; chưa gợi ý Rule riêng cho phần so sánh số liệu. | Tôi dùng cách tách phạm vi để thiết kế eval; phân tích tài liệu không thay cho pitch/challenge CP3. Quyết định hiện tại là Rule và Not Yet cho pilot. |
 | CP4 Research | Dùng Claude để research công cụ hiện có: Excel Formula + Conditional Formatting, Procore Bid Leveling, BuildingConnected. Hỏi Claude: "Công cụ nào phù hợp nhất cho 16.000 dòng cần dò?" | AI liệt kê đầy đủ: Excel Formula (minh bạch, không cần LLM), Procore (tập trung workflow), BuildingConnected (so sánh trực quan). Tôi hiểu được excel formula là baseline đủ tốt. | AI không làm phân tích chi tiết trade-off: Excel đơn giản nhưng phải kiểm mã/đơn vị thủ công; Procore có sẵn nhưng chưa test với 16.000 dòng. | Tôi bổ sung: cần thử Excel formula trước, khi nào không đủ mới xem Procore hoặc AI. |
-| CP5 Quy trình | Dùng Claude để format quy trình hiện tại (8 bước) và tương lai (9 bước) thành Mermaid diagram và bảng chi tiết. | AI xuất Mermaid code rõ ràng, ghi rõ thời gian từng bước (hiện tại: 11–13h/vòng; tương lai: 2–2.5h/vòng). Tôi thêm vào group_report section 4. | AI gợi ý tối ưu: "Đặt ngưỡng thấp để bao quát tất cả trường hợp"; nhưng không xét: ngưỡng thấp → báo nhiều → người phải dò thêm. | Tôi điều chỉnh: ngưỡng 30% chênh đơn giá là xác định được người domain, không phải AI tự đặt. |
+| CP5 Quy trình | Dùng Claude hỗ trợ phân tích quy trình hiện tại/tương lai từ nguồn Vinh để chuẩn bị eval. | Làm rõ bước tính toán và bước chuyên viên kiểm. | Quy trình tương lai có AI mapping thuộc hướng mở rộng; ngưỡng thấp có thể làm tăng công review. | Tôi tách phạm vi soát Rule, tính cả công kiểm/sửa và giữ ngưỡng là cấu hình cần duyệt. |
 | CP5–6 Problem Statement v0 → v1 | Dùng Claude để draft PS v0 (Actor, Bottleneck, Impact, Success Metric) và v1 (thêm Boundary, AI Intervention Point, Mức chọn). | AI giúp cấu trúc: C1–C5 là 5 tiêu chí rõ ràng (Độ chính xác khối lượng, chênh đơn giá, xử lý thiếu dữ liệu, truy nguồn, giảm thời gian). PS v1 có bảng so sánh v0 vs v1. | AI draft "Boundary" quá chung chung; chưa rõ từng bước HITL phải kiểm gì (mã, mô tả, đơn vị, dòng nguồn). | Tôi viết chi tiết: Boundary 5 điều AI không được + 3 khi con người phải kiểm (bước 5 duyệt AI ghép, bước 6 khớp tổng tiền, bước 8 xem dòng tô màu). |
-| CP6 Mức can thiệp / quyết định | Dùng Claude để viết Eval Framework (cp6-2A202603626-eval.md): 8 section (phạm vi, quy tắc, tiêu chí, test case, trước/sau, hạn chế, câu xác nhận, kế hoạch). | AI giúp cấu trúc đầy đủ: "5 loại chênh lệch → 5 tiêu chí đánh giá → 10 test case → cách đo từng metric". Eval framework trở thành tài liệu để đo giải pháp sau này. | AI gợi ý "ngưỡng 30% là đủ tốt"; nhưng không xét: ngưỡng này cần được domain expert (lãnh đạo) confirm, không phải AI đề xuất. | Tôi thêm ghi chú: "Ngưỡng 30% được confirm lãnh đạo" ở tiêu chí C2. Kết luận: Go (Rule), Not Yet (PC#2, AI), No-Go (PC#3, Agent). |
+| CP6 Mức can thiệp / quyết định | Dùng Claude để viết Eval Framework (cp6-2A202603626-eval.md): 8 section (phạm vi, quy tắc, tiêu chí, test case, trước/sau, hạn chế, câu xác nhận, kế hoạch). | AI giúp cấu trúc đầy đủ: "5 loại chênh lệch → 5 tiêu chí đánh giá → 10 test case → cách đo từng metric". Eval framework trở thành tài liệu để đo giải pháp sau này. | AI gợi ý "ngưỡng 30% là đủ tốt"; nhưng không xét: ngưỡng này cần được domain expert (lãnh đạo) confirm, không phải AI đề xuất. | Tôi giữ ngưỡng 30% chỉ cho dữ liệu tổng hợp minh họa; ngưỡng nghiệp vụ phải được người domain duyệt trước pilot. Chọn Rule nhưng trạng thái pilot là Not Yet. |
 
 ---
 
@@ -187,7 +187,9 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 - Em sẽ tìm hiểu quy trình thực tế và thu thập dữ liệu mẫu sớm hơn. Đồng thời, em sẽ thử nghiệm các giải pháp đơn giản trước, đo thời gian và độ chính xác rồi mới cân nhắc bổ sung AI nếu thực sự cần thiết.
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
-- Qua bài tập, em hiểu rằng cần bắt đầu từ vấn đề thực tế thay vì chọn công nghệ trước. Cần phân tích quy trình, xác định bottleneck và xây dựng tiêu chí đánh giá cụ thể. Với bài toán đánh giá thầu, Rule-based phù hợp để kiểm tra số liệu theo quy tắc. AI chưa cần thiết ở giai đoạn hiện tại. Quan trọng nhất là đảm bảo kết quả có thể truy xuất, kiểm chứng và luôn có con người kiểm tra trước khi đưa ra quyết định.
+
+Bài toán là giảm công soát chênh khối lượng và đơn giá trong hồ sơ chào giá nhà thầu. Quy trình đã chọn nhận bảng ghép đúng mã, đơn vị và phiên bản, tính chênh lệch rồi để chuyên viên rà cảnh báo và ngoại lệ trước trình. Baseline tham chiếu theo Vinh là 5–6 giờ công/vòng, target dưới 90 phút gồm kiểm, sửa và ngoại lệ, còn công gom được báo riêng. Kết quả phải truy về file/sheet/dòng nguồn, không sửa số gốc, bỏ dòng mơ hồ hoặc tự chọn nhà thầu. Nhóm chọn Rule vì phép so số có quy tắc kiểm được, không cần AI suy luận trong phạm vi chính. Quyết định hiện tại là Not Yet cho pilot đến khi quyền dữ liệu, mapping, ngưỡng và đáp án được xác nhận. Nếu bỏ sót chênh đã biết hoặc nhận sai mapping thì dừng dùng output để trình; sau hai vòng vẫn từ 90 phút/vòng trở lên hoặc không tốt hơn No AI cải tiến thì dừng mở rộng.
+
 ---
 
 ## 7. Tài liệu tham khảo
@@ -199,4 +201,5 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 - [Google PAIR: Human-in-the-Loop ML](https://pair.withgoogle.com/) — Thiết kế hệ thống hỗ trợ (không tự động hóa) dựa trên HITL
 - Báo cáo nhóm — Day 02 Discovery & Problem Framing (GitHub): Tài liệu kiểm chứng, quy trình trước/sau, mức can thiệp AI
 - Báo cáo cá nhân — Nguyễn Văn Vinh (2A202603672): Problem Card #1, #2, #3 (soát khối lượng, ghép file sai mẫu, đánh giá năng lực)
-- Eval Framework — Phạm Ngọc Trung Quân (cp6-2A202603626-eval.md): 8 section gồm phạm vi, quy tắc, 5 tiêu chí, 10 test case, success metrics
+- [Bộ eval](../assets/cp6-2A202603626-eval.md): bản tích hợp sau review, dữ liệu tổng hợp và đáp án thiết kế; không phải kết quả chạy test.
+- [Bản eval gốc tại 9ccefc8](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/9ccefc8/report/assets/cp6-2A202603626-eval.md); [PR #10](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/10), [PR #11](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/11): nguồn review và phạm vi hiện tại.

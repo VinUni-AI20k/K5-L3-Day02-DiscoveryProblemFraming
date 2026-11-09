@@ -4,18 +4,24 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Candidate problem nhóm chọn (1 câu):
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Tên nhóm: TEAMLAGI
+- Candidate problem nhóm chọn (1 câu): Đối chiếu hồ sơ chào giá của các nhà thầu với yêu cầu/BOQ và giữa các nhà thầu để phát hiện chênh lệch.
+- Quyết định hiện tại (Go / Not Yet / No-Go): **Not Yet cho triển khai/pilot; chọn Rule cho phần soát số liệu**, theo ủy quyền trực tiếp của trưởng nhóm ngày 2026-11-09. Không ghi thành biên bản biểu quyết của sáu người.
+- Quy mô: 6 người; Nguyễn Trọng Hưởng xác nhận trong chat ngày 2026-11-09 rằng coach đã cho phép.
+- Phạm vi: soát khối lượng/đơn giá trên bảng đã ghép đúng mã, đơn vị và phiên bản; không gồm ghép file sai mẫu hoặc đánh giá năng lực. Target dưới 90 phút công/vòng gồm kiểm/sửa/ngoại lệ; chỉ pilot khi quyền dữ liệu, mapping và đáp án được xác nhận.
 
 ## Thành viên
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 |Phạm Ngọc Trung Quân |2A202603626 | |https://github.com/jadenphm29|
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| 1 | Nguyễn Trọng Hưởng | 202603607 | Trưởng nhóm, điều phối thời gian, ghi chép | trongjhuongwr |
+| 2 | Nguyễn Văn Vinh | 2A202603672 | Quy trình, dữ liệu, bottleneck và before/after | VINH1811 |
+| 3 | Đàm Tuấn Linh | 2A202603624 | Kiểm chứng, assumption map và snapshot | damlinh820 |
+| 4 | Mai Đăng Khương | 2A202603627 | Research giải pháp hiện có, kiểm nguồn | dangkhuong14 |
+| 5 | Phạm Ngọc Trung Quân | 2A202603626 | Eval, đáp án đối chiếu, phương án đơn giản | jadenphm29 |
+| 6 | Giáp Mạnh Tuyên | 2A202603648 | Mức can thiệp, boundary và bốn rủi ro | Tanashi-Titus |
+
+Nguồn họ tên/MSSV: báo cáo cá nhân của từng thành viên trên `origin/main` tại commit `4c402eb`; thông tin của Hưởng theo xác nhận trong chat. Vai trò được Hưởng xác nhận đã có sự đồng ý của các thành viên trong chat ngày 2026-11-09. Tài khoản GitHub được đối chiếu qua metadata tác giả commit trên GitHub: Vinh 2f96679, Linh a3e538b, Khương 8a05fa2, Quân 9f5410a, Tuyên b650c92; không suy từ tên nhánh.
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
@@ -25,72 +31,210 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
-| CP3 — Hội tụ nhóm | | | Cluster, cây OST, bảng chấm điểm |
-| CP4 — Kiểm chứng | | | Assumption map, snapshot hoặc survey |
-| CP4 — Research | | | Bảng research có link |
-| CP5 — Quy trình trước/sau | | | Quy trình + bảng before/after |
-| CP5 — Problem Statement v0 | | | Problem Statement v0 |
-| CP6 — Mức can thiệp + Problem Statement v1 | | | Ma trận, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định | | | 4 rủi ro + Go/Not Yet/No-Go |
+| CP3 — Hội tụ nhóm | Hưởng điều phối/tổng hợp | Cả nhóm tự pitch, challenge và chốt | Báo cáo nhóm mục 2; thiếu ghi chép thực tế |
+| CP4 — Kiểm chứng | Linh | Người hỗ trợ cụ thể chưa xác nhận | Mục 3.1–3.2 có assumption map, một snapshot và tổng hợp 3 người tại `4efec2b`; bổ sung ngày/cách hỏi và hành vi từng người |
+| CP4 — Research | Khương | Người hỗ trợ cụ thể chưa xác nhận | Research mục 3.3 đã merge qua PR #5; file assets riêng là tùy chọn |
+| CP5 — Quy trình trước/sau | Vinh | Hưởng tổng hợp | CP5 nguồn đã merge qua PR #4; mục 4.1 giữ bối cảnh, mục 4.2–4.3 cập nhật quy trình Rule đúng phạm vi đã chọn |
+| CP5 — Problem Statement v0 | Hưởng tổng hợp theo ủy quyền trưởng nhóm | Vinh cung cấp quy trình; Linh/Khương cung cấp bằng chứng | Mục 5: phạm vi soát, baseline tham chiếu 300–360 phút và target dưới 90 phút; dữ liệu/ngưỡng được kiểm trước pilot |
+| CP6 — Eval | Quân | Hưởng review | [Bộ eval](report/assets/cp6-2A202603626-eval.md) đã khôi phục và sửa sau review; 10 cặp dữ liệu tổng hợp/đáp án thiết kế, không phải kết quả chạy |
+| CP6 — Mức can thiệp + Problem Statement v1 | Tuyên phân tích; Hưởng tổng hợp theo ủy quyền | Quân cung cấp eval | Mục 6–7: chọn Rule, AI mapping tách riêng; năm tiêu chí phải đạt đồng thời |
+| CP6 — Quyết định | Hưởng, theo ủy quyền trực tiếp của trưởng nhóm | Tuyên cung cấp rủi ro; Quân cung cấp eval | Mục 8: Not Yet cho pilot, điều kiện chuyển Go, ngưỡng dừng và người phụ trách từng điều kiện |
+
+Các đường dẫn sản phẩm trong `report/assets/` là đầu ra dự kiến; Vinh và Tuyên viết trực tiếp trong `report/team/group_report.md`, đã tích hợp lên main qua PR #4/#6; Khương bổ sung mục 3.3 qua PR #5. Bản tổng hợp và quyết định Rule/Not Yet đã công bố qua PR #8–#10; nguồn baseline, target và kết quả thực nghiệm được phân biệt riêng. Phân công không thay thế bằng chứng đóng góp. Phụ thuộc và trạng thái chi tiết ở [nhật ký điều phối](docs/TEAM_WORK_LOG.md#2-phân-công-đã-xác-nhận-và-phụ-thuộc). Các quan hệ hỗ trợ phục vụ tổng hợp trong bảng là luồng bàn giao dự kiến, chưa ghi nhận là công việc đã diễn ra.
 
 ## Cá nhân
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
-### HoVaTen-MSSV
+### NguyenTrongHuong-202603607
 
 **Phần việc phụ trách:**
 
--
+- Điều phối sáu thành viên; quản lý phân công/log, review bàn giao và tổng hợp báo cáo nhóm, Problem Statement, metric; công bố phạm vi Rule và quyết định Not Yet qua PR #10 theo ủy quyền của tôi.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
--
+- Điều phối tích hợp sáu báo cáo cá nhân qua PR #2; tiếp tục yêu cầu kiểm năm nhánh và merge PR #3–#7 của bốn thành viên. Không tạo PR trùng cho Quân vì nội dung đã có trên main; giữ các bản đang sửa trên nhánh cá nhân.
+- Yêu cầu trợ lý đọc năm báo cáo, soạn mỗi người một câu hỏi bám vào card; lưu ở mục 4 báo cáo cá nhân như nội dung chuẩn bị trao đổi.
+- Sử dụng trợ lý review CP5 của Vinh và CP6 của Tuyên, xử lý conflict/tên file, khôi phục template, kiểm phạm vi diff và merge qua PR #4/#6. Review sửa logic kiểm mapping và phân biệt baseline gom + soát 11–13 giờ/vòng với riêng soát 5–6 giờ/vòng. Bản tổng hợp đã tích hợp qua PR #8–#10, bổ sung v0/v1 và điều kiện trước pilot.
+- Tổng hợp v0/v1, metric cùng phạm vi, năm tiêu chí, bốn rủi ro, điều kiện Go và ngưỡng dừng; bản trước đã merge qua PR #8/#9. Ngày 2026-11-09, tôi ủy quyền chốt hướng Rule cho phần soát và giữ Not Yet cho pilot, đồng bộ quyết định trong báo cáo nhóm và log.
+- Yêu cầu review bản eval Quân tại `9ccefc8`; nhận xét được ghi trong báo cáo nhóm mục 7, gồm sửa trung vị TC-03, đơn vị tiền TC-09, tỷ lệ thiếu nguồn và phân biệt target với kết quả đã chạy. Đây là review tài liệu, không gán cho Quân câu trả lời chưa có.
+- Kiểm research nhà thầu của Khương trong PR #5, sửa bốn tham chiếu thiếu đích thành link chính thức đã mở kiểm; giữ rõ tính năng công cụ với giả thuyết áp dụng. Phần research bổ trợ Microsoft trước đó được ghi đúng nguồn.
+- Bảo toàn nội dung thành viên khi tích hợp; sửa tên file, khoảng trắng, dấu thừa và các điểm review đã nêu trong PR. Câu hỏi chuẩn bị không được ghi thành phỏng vấn/pitch đã xảy ra.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
--
+- [PR #2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/2), merge commit `4c402eb`: tập hợp báo cáo cá nhân trên main.
+- [PR #3](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/3), [#4](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/4), [#5](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/5), [#6](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/6), [#7](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/7), main `314b6d8`: tích hợp mới và review.
+- [Báo cáo cá nhân](report/individual/202603607_NguyenTrongHuong.md), mục 4–5: câu hỏi review và cách dùng AI.
+- [Báo cáo nhóm](report/team/group_report.md), mục 3.3, 4–8 và 10: research, quy trình, v0/v1, quyết định đã công bố và commit nguồn.
+- [PR #8](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/8) và [PR #9](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/9): bản tổng hợp và mục 2 đã tích hợp, main `90dcaa7`.
+- [PR #10](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/10), nội dung `384850c`, merge `1ee80b3`: công bố quy trình Rule, metric dưới 90 phút công/vòng, quyết định Not Yet và review eval Quân.
+- [Nhật ký điều phối](docs/TEAM_WORK_LOG.md): phân công, quyết định theo ủy quyền, review eval và sự kiện merge PR #10. Lượt rà soát ghi chú sau PR #10 được theo dõi riêng, không gán trước một commit cho thay đổi mới.
 
 **Điều mình học được từ phần nhóm:**
 
--
+- Khi tổng hợp phải giữ cùng phạm vi của baseline–target; số liệu trong báo cáo thành viên vẫn cần nguồn và quyền sử dụng được kiểm.
+- Công thức đúng không bảo đảm so đúng hạng mục; kiểm tổng tiền cần đi cùng mapping, đơn vị và truy vết.
+- Rule có thể phù hợp phần so số; hỗ trợ ghép ngữ nghĩa là bài toán mở rộng phải có đối chứng và người kiểm riêng.
+### DamTuanLinh-2A202603624
+
+**Phần việc phụ trách:**
+
+- Tham gia xây dựng và phản biện Problem Card, đánh giá tính thực tiễn và mức độ phù hợp của các vấn đề được đề xuất.
+- Tham gia phản biện chéo giữa các nhóm, tiếp nhận phản biện và đề xuất hướng cải thiện giải pháp AI.
+- Thực hiện nghiên cứu, phỏng vấn 3 chuyên viên trong lĩnh vực đấu thầu xây dựng nhằm kiểm chứng nhu cầu thực tế và tính khả thi của giải pháp.
+- Đóng góp vào việc điều chỉnh định hướng bài toán từ hệ thống AI tự động phát hiện sai lệch sang công cụ AI hỗ trợ đối soát hồ sơ, có sự kiểm chứng của con người.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- **Phản biện bài của nhóm khác:** Đặt câu hỏi cho nhóm phát triển nền tảng kết nối người kinh doanh đồ ăn và người mua trong khu dân cư: "Làm sao để xác nhận nhu cầu thực của người đăng bài?". Câu hỏi tập trung vào việc kiểm chứng nhu cầu người dùng trước khi phát triển giải pháp, tránh xây dựng sản phẩm dựa trên các giả định chưa được xác thực.
+
+- **Tiếp nhận phản biện:** Nhận câu hỏi về khả năng nhận dạng giọng nói trong điều kiện có tiếng ồn, khác biệt giọng vùng miền và yêu cầu độ chính xác cao đối với các thông tin tài chính như khoản vay, số tiền trả nợ và dữ liệu khách hàng. Từ đó đề xuất hướng giải quyết không chỉ tập trung tối ưu một mô hình Speech-to-Text mà xây dựng pipeline xử lý gồm tiền xử lý âm thanh, nhận dạng giọng nói, fine-tuning theo dữ liệu đặc thù và kiểm chứng thông tin tài chính quan trọng.
+
+- **Kiểm chứng nhu cầu thực tế:** Trực tiếp phỏng vấn 3 người có kinh nghiệm trong lĩnh vực đấu thầu xây dựng nhằm tìm hiểu khó khăn khi đối chiếu hồ sơ mời thầu và đánh giá khả năng ứng dụng AI vào quy trình làm việc.
+
+- **Tổng hợp kết quả phỏng vấn:** Trong 3 người được phỏng vấn, 2 người xác nhận có nhu cầu sử dụng công cụ AI hỗ trợ rà soát hồ sơ. Một người bày tỏ lo ngại về tính phức tạp của việc đối chiếu, khả năng AI đưa ra kết quả sai và vấn đề trách nhiệm khi xảy ra sai sót. Kết quả cho thấy giải pháp có tín hiệu nhu cầu ban đầu nhưng vẫn tồn tại rủi ro đáng kể về độ tin cậy và trách nhiệm chuyên môn.
+
+- **Đề xuất điều chỉnh định hướng giải pháp:** Từ kết quả kiểm chứng, đóng góp vào việc chuyển hướng bài toán từ hệ thống AI tự động phát hiện sai lệch và đưa ra kết luận sang công cụ AI hỗ trợ đối chiếu, rà soát hồ sơ (*AI-assisted Document Review*). Đề xuất áp dụng cơ chế *Human-in-the-loop*, trong đó AI hỗ trợ phát hiện chênh lệch, cung cấp thông tin để truy vết, còn chuyên viên chịu trách nhiệm xác minh và đưa ra quyết định cuối cùng.
+
+- **Đóng góp vào việc xác định mức can thiệp AI:** Làm rõ ranh giới giữa chức năng hỗ trợ nghiệp vụ và chức năng ra quyết định. AI không thay thế chuyên viên đánh giá hồ sơ, đặc biệt đối với các trường hợp cần diễn giải ngữ nghĩa, xác minh thông tin hoặc chịu trách nhiệm pháp lý.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- **Hoạt động phản biện chéo:** Câu hỏi về xác nhận nhu cầu thực của người đăng bài trong dự án kết nối kinh doanh đồ ăn tại khu dân cư.
+- **Hoạt động tiếp nhận phản biện:** Câu hỏi về nhận dạng giọng nói vùng miền, tiếng ồn và độ chính xác dữ liệu tài chính; đề xuất pipeline Speech-to-Text kết hợp kiểm chứng thông tin.
+- **Hoạt động kiểm chứng:** Kết quả phỏng vấn 3 người làm trong lĩnh vực đấu thầu xây dựng, gồm 2 phản hồi tích cực về nhu cầu sử dụng và 1 phản hồi nêu rủi ro về độ chính xác, trách nhiệm.
+- **Báo cáo nhóm `report/team/group_report.md`:** Các nội dung liên quan đến nghiên cứu người dùng, xác định vấn đề, phạm vi giải pháp, mức can thiệp AI và định hướng Human-in-the-loop.
+- **Kết quả tác động:** Đóng góp bằng chứng thực tế để nhóm xem xét điều chỉnh định hướng từ AI tự động kết luận sang AI hỗ trợ đối soát hồ sơ.
+
+- [Assumption map và snapshot tại e278c07](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/e278c07e098b3a8dc339a39d7d6e3dfe4b04c5e4/report/team/group_report.md); [tổng hợp phỏng vấn tại 4efec2b](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/commit/4efec2b075d78608d5365d380919f7331c9d2786): nguồn nội dung Linh cung cấp cho mục 3 báo cáo nhóm. Repo mới có một snapshot chi tiết; ngày/cách hỏi và hành vi từng người vẫn cần nguồn bổ sung.
+- [Báo cáo cá nhân](report/individual/2A202603624_DamTuanLinh.md), mục 4–6: nhật ký, cách dùng công cụ và phần hiểu bài; quyết định hiện tại là Rule/Not Yet cho pilot.
+
+**Điều mình học được từ phần nhóm:**
+
+- Một vấn đề chỉ thực sự đáng giải quyết khi có bằng chứng về nhu cầu người dùng, không nên chỉ dựa trên giả định hoặc khả năng công nghệ.
+- Phỏng vấn người dùng không chỉ nhằm xác nhận nhu cầu mà còn giúp phát hiện những rủi ro, giới hạn và điều kiện cần thiết để giải pháp được chấp nhận.
+- Trong các nghiệp vụ đòi hỏi độ chính xác và trách nhiệm cao như đấu thầu xây dựng, AI không nhất thiết phải tự động hóa toàn bộ quy trình. Giải pháp hỗ trợ ra quyết định, có con người kiểm chứng, có thể phù hợp hơn.
+- Cần phân biệt giữa độ chính xác kỹ thuật của mô hình và độ tin cậy của toàn bộ hệ thống. Một mô hình nhận dạng hoặc phát hiện tốt vẫn có thể gây sai sót nếu thiếu bước kiểm chứng, đối chiếu ngữ cảnh và truy vết nguồn.
+- Kết quả nghiên cứu thực tế có thể làm thay đổi Problem Statement, phạm vi giải pháp và mức can thiệp AI. Việc điều chỉnh bài toán dựa trên bằng chứng là một phần quan trọng của quá trình Problem Discovery & Framing.
+
+### MaiDangKhuong-2A202603627
+
+**Phần việc phụ trách:**
+
+- **CP3 — Chuẩn bị và tham gia hội tụ vấn đề:** chuẩn bị ba Problem Cards cá nhân để trình bày, tham gia đặt câu hỏi và trao đổi lựa chọn candidate theo phân công chung của nhóm. Nhật ký pitch/phản biện thực tế được ghi riêng trong báo cáo cá nhân.
+- **CP4 — Phụ trách chính research giải pháp hiện có:** tìm hiểu các công cụ và cách làm liên quan đến đối chiếu hồ sơ chào giá nhà thầu; tổng hợp vào mục 3.3 của báo cáo nhóm.
+- **Phân tích khả năng áp dụng:** làm rõ mỗi giải pháp hỗ trợ bước nào trong quy trình, điểm mạnh, hạn chế và khoảng trống so với nhu cầu của nhóm; phân biệt phần soát số liệu trên bảng đã ghép đúng với phần gom/ghép dữ liệu khác mẫu.
+- **Nguồn tham khảo và bàn giao research:** cung cấp liên kết làm căn cứ cho các nhận định về công cụ, phối hợp tiếp nhận review nguồn; phân biệt tính năng được tài liệu mô tả với giả thuyết áp dụng cần thử nghiệm. Mục 3.3 đã được tích hợp qua PR #5; phần sửa liên kết của Hưởng được ghi riêng ở đóng góp cụ thể.
+- **CP5 — Hỗ trợ bằng chứng cho Problem Statement:** cung cấp kết quả research để Hưởng tham khảo khi tổng hợp v0, đối chiếu phương án có sẵn và làm rõ phạm vi. Đây là vai trò hỗ trợ theo phân công, không phải phụ trách chính viết Problem Statement.
+- **Công việc tiếp theo trước pilot:** tiếp tục review nguồn và công cụ khi có dữ liệu được phép sử dụng, làm rõ khả năng đáp ứng phạm vi Rule để phục vụ việc xem xét điều kiện chuyển từ Not Yet sang Go. Không coi đây là hoạt động thử nghiệm đã hoàn thành.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Chuẩn bị báo cáo cá nhân gồm 5 vấn đề và 3 Problem Cards: research marketing, làm rõ user story e-commerce, kiểm thử/tài liệu API; chọn marketing làm card ưu tiên pitch cá nhân.
+- Thực hiện phần research được giao với trợ lý hỗ trợ; bàn giao mục 3.3 của báo cáo nhóm, đã tích hợp qua PR #5 theo nhật ký nhóm.
+- Cung cấp đầu vào so sánh công cụ theo bước quy trình, điểm mạnh, khoảng trống và bài học. Bản tổng hợp hiện tại đối chiếu Excel Rule, Procore Bidding và Autodesk BuildingConnected; phần Microsoft bổ trợ và chỉnh link giữ đúng nguồn theo ghi nhận review của Hưởng.
+- Cập nhật nhật ký cá nhân để phân biệt chức năng công cụ được mô tả với giả thuyết áp dụng và target chưa kiểm nghiệm. Phần sửa bốn tham chiếu thiếu đích do Hưởng review, không ghi thành công việc tôi đã tự thực hiện.
+- Đồng bộ phần hiểu bài với phạm vi Rule và trạng thái Not Yet cho pilot; không nhận vai trò phỏng vấn, xây eval, tổng hợp quy trình hoặc ra quyết định của thành viên khác.
+
+**Bằng chứng** (phần nào trong báo cáo, file nào, commit nào):
+
+- [PR #5](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/5): tích hợp phần research.
+- [Báo cáo nhóm](report/team/group_report.md), mục 3.3: bảng research hiện tại sau review.
+- [Báo cáo cá nhân](report/individual/2A202603627_MaiDangKhuong.md), mục 4–5: nhật ký bàn giao và cách dùng AI; mục 6 còn phần tự hoàn thiện.
+- Các bổ sung cá nhân trong lần cập nhật này chưa có commit/PR mới; không gán chúng vào PR #5 đã merge.
+
+**Điều mình học được từ phần nhóm:**
+
+Học được cách cùng nhóm thu hẹp bài toán, xác định đúng điểm nghẽn và tìm hiểu giải pháp có sẵn trước khi chọn công nghệ. Qua phần research, tôi thấy không phải bài toán nào cũng cần AI; đôi khi Rule đã đủ phù hợp. Mình cũng hiểu rằng chọn được giải pháp chưa có nghĩa là có thể triển khai ngay, mà còn cần kiểm tra dữ liệu và cách đánh giá kết quả.
+
+### GiapManhTuyen-2A202603648
+
+**Phần việc phụ trách:**
+
+- CP6: phân tích mức can thiệp, boundary và bốn rủi ro cho bài toán đối chiếu chào giá nhà thầu.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Viết ma trận độ mơ hồ/phức tạp và so sánh No AI / Rule / Workflow / Agent; xác định Rule cho phần so số trên bảng đã ghép đúng.
+- Phân tích AI Canvas/PAIR cho nhánh mở rộng ghép file sai mẫu, giới hạn dữ liệu, vai trò chuyên viên và phương án quay về.
+- Đề xuất Go cho hướng Rule trong bản CP6 ban đầu; bản tổng hợp của Hưởng bổ sung điều kiện dữ liệu/đáp án và chốt Not Yet cho pilot. Tôi phân biệt đề xuất cá nhân với quyết định hiện tại.
+- Cập nhật nhật ký và reflection cá nhân trên nhánh `titus` tại `7a068fa`; bản review tích hợp giữ nguyên câu trả lời 6.1–6.6.
+
+**Bằng chứng** (phần nào trong báo cáo, file nào, commit nào):
+
+- [PR #6](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/6), phần CP6 được tích hợp; [nguồn tại b650c92](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/b650c927350787f4b09e9b3285add056a946c35a/report/team/group_report.md).
+- [Báo cáo nhóm](report/team/group_report.md), mục 6–8: phân tích gốc và bản tổng hợp sau review.
+- [Báo cáo cá nhân](report/individual/2A202603648_GiapManhTuyen.md), mục 4–6; [cập nhật tại 7a068fa](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/commit/7a068fa).
+
+**Điều mình học được từ phần nhóm:**
+
+- Chọn Rule để đánh giá không đồng nghĩa đã đủ điều kiện chạy pilot; cần quyền dữ liệu, mapping, bộ đáp án và ngưỡng do người có trách nhiệm xác nhận.
+- Không gộp thời gian ghép bảng với thời gian soát khi đánh giá lợi ích của một giải pháp chỉ tác động đến phần so số.
+
+### NguyenVanVinh-2A202603672
+
+**Phần việc phụ trách:**
+
+- Người chính CP5 — Quy trình trước/sau: vẽ quy trình hiện tại, quy trình tương lai và bảng before/after (mục 4 báo cáo nhóm).
+- Người cung cấp domain và dữ liệu cho candidate được chọn (V1 — soát chênh khối lượng/đơn giá): actor, quy trình thực tế, số liệu gói thầu và baseline thời gian.
+- Hỗ trợ CP5 — Problem Statement v0: cung cấp quy trình, bottleneck và baseline cho bản tổng hợp.
+- Việc được giao trước pilot (mục 8): xác nhận phạm vi, nhật ký thời gian và dữ liệu được phép dùng.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- **CP1 — Scan:** 8 problem theo đủ 4 lăng kính, lấy từ quy trình đánh giá chào giá gói cơ điện (BOQ ~4.100 dòng, 4 nhà thầu, 7 hạng mục); mỗi dòng có số đo thời gian, số dòng hoặc số lần.
+- **CP2 — Problem Card:** 3 card kèm quy trình nháp (Mermaid): V1 soát chênh lệch (5–6 giờ/vòng), V2 gom bảng chào giá (6–7 giờ/vòng), V3 chấm năng lực (3 giờ công/nhà thầu, tổng của 2 người). Dùng AI phản biện; sửa V1 từ "Rule hoặc Workflow" thành Rule.
+- **CP3 — Hội tụ:** pitch 3 card; V1 vào shortlist với 30/35 điểm, cao nhất (L1 và T1 cùng 24 điểm) và được chọn. Đặt câu hỏi phản biện cho card của Hưởng (H1), Linh (L2), Quân (Q3).
+- **CP4 — Kiểm chứng / research:** cung cấp số liệu domain bổ trợ cho mục 3. Research thêm 3 nguồn và tự mở kiểm link: Power Query (Microsoft yêu cầu các file cùng schema, nên không gom được file sai mẫu), Archdesk và Corten (công cụ bid leveling có sẵn); loại 1 link chết.
+- **CP5 — Quy trình trước/sau:** viết bản ban đầu của mục 4, được tích hợp qua PR #4:
+  - 4.1: quy trình hiện tại 8 bước, có actor / input / output / thời gian, tổng 11–13 giờ/vòng; bottleneck chính là bước dò ~16.000 dòng (~4 giờ/vòng), bottleneck phụ là ghép file sai mẫu (2,5 giờ).
+  - 4.2 ban đầu: quy trình tương lai 9 bước tách Rule / AI / con người; boundary, HITL và phương án quay về. Bản này là nguồn lịch sử tại PR #4; quy trình hiện tại trên main đã được Hưởng thu hẹp sang Rule qua PR #10.
+  - 4.3 ban đầu: before/after của toàn luồng gom + soát, kỳ vọng 2–2,5 giờ/vòng. Metric hiện tại chỉ đo soát dưới 90 phút công/vòng; không dùng target toàn luồng thay target này.
+- **Sau review CP5:** chấp nhận hai điểm sửa — bước duyệt phải kiểm mọi dòng AI ghép (tổng tiền khớp không chứng minh ghép đúng) và tách baseline riêng phần soát (300–360 phút/vòng) khỏi thời gian gom.
+- **CP5–CP6 — Problem Statement, mức can thiệp:** baseline 300–360 phút/vòng và target dưới 90 phút/vòng (từ mục tiêu 1,5 giờ ở Card #1) được dùng cho v0/v1; kết luận Rule của Card #1 được nhóm giữ ở CP6, AI mapping tách thành hướng mở rộng.
+- **CP7:** bổ sung báo cáo cá nhân mục 4–6 và mục đóng góp này; review tích hợp chuẩn hóa phần hiểu bài, giữ nguyên câu trả lời 6.1–6.6.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- [Báo cáo nhóm](report/team/group_report.md):
+  - Mục 2.1, dòng 4–6: card V1, V2, V3; mục 2.4: bảng chấm điểm V1 30/35.
+  - Mục 4: quy trình trước/sau (4.1–4.3) do Vinh viết.
+  - Mục 5 và 7: baseline phần soát ghi nguồn "theo Vinh".
+  - Mục 8.2: việc được giao trước pilot; mục 10: nguồn [V-CP5].
+- [PR #4](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/4), merge commit `270bb22`; các commit của Vinh: `a295e96`, `cd91790`, `2f96679`.
+- [Báo cáo cá nhân](report/individual/2A202603672_NguyenVanVinh.md): mục 2 (scan), mục 3 (3 card + quy trình nháp), mục 4 (tham gia nhóm), mục 5 (dùng AI).
+- Không có file trong `report/assets/`: sơ đồ viết trực tiếp bằng Mermaid trong báo cáo.
+
+**Điều mình học được từ phần nhóm:**
+
+- Nên thử Rule làm mốc đối chứng trước, chỉ dùng AI khi chứng minh được Rule không đủ.
+- Phải tách bước gom khỏi bước soát; gộp lại thì baseline và target không cùng phạm vi.
+- Tổng tiền khớp không chứng minh các dòng đã được ghép đúng; cần kiểm cả mã, đơn vị và dòng nguồn.
+- Số liệu từ một gói thầu chỉ là điểm bắt đầu; cần bấm giờ từng bước và có bộ đáp án trước khi kết luận.
 
 ### PhamNgocTrungQuan-2A202603626
 
 **Phần việc phụ trách:**
 
--Viết 3-5 tiêu trí đánh giá, chuẩn bị tình huống đầu vào và kết quả mong đợi
--Chuẩn bị các tình huống đầu vào (test cases) đại diện cho những trường hợp sử dụng thực tế.
+- CP6 — tiêu chí đánh giá, tình huống đầu vào/đáp án mong đợi và cách so với phương án đơn giản.
 
-- Xác định kết quả đầu ra mong đợi tương ứng với từng tình huống.
-
-- Đối chiếu kết quả thực tế với kết quả mong đợi để đánh giá mức độ đáp ứng của hệ thống.
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- Đề xuất và xây dựng bộ tiêu chí đánh giá nhằm xác định các khía cạnh cần kiểm tra của hệ thống.
+- Viết bản eval tại `9ccefc8`: phạm vi, quy tắc, năm tiêu chí và mười tình huống tổng hợp cho bước soát.
+- Bản tích hợp sau review sửa trung vị TC-03, đơn vị tiền TC-09, baseline chất lượng thiếu nguồn và tiêu chuẩn đạt/không đạt; giữ ngưỡng 30% là cấu hình minh họa cần duyệt trước áp dụng thực tế.
+- Đồng bộ nhật ký cá nhân với phạm vi Rule và Not Yet cho pilot; phần phỏng vấn dẫn theo Linh, quy trình dẫn theo Vinh và research theo Khương.
+- Phân biệt dữ liệu/đáp án thiết kế với kết quả thực nghiệm; không ghi là đã đạt target hoặc đã được domain duyệt khi chưa có nguồn.
 
-- Thiết kế các tình huống đầu vào để kiểm tra khả năng xử lý trong những trường hợp khác nhau.
+**Bằng chứng** (phần nào trong báo cáo, file nào, commit nào):
 
-- Xác định kết quả mong đợi cho từng tình huống, làm cơ sở so sánh và đánh giá kết quả thực tế.
-
-- Tổng hợp các tiêu chí và tình huống đánh giá để hỗ trợ nhóm hoàn thiện báo cáo.
-
-**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
-
-- Nội dung bộ tiêu chí đánh giá trong group_report.md.
-
-- Danh sách tình huống đầu vào và kết quả mong đợi trong tài liệu kiểm thử/đánh giá.
-
-- Các file minh chứng trong thư mục report/assets/ (nếu có).
-
-- Commit Git chứa những thay đổi liên quan đến phần tiêu chí và tình huống đánh giá.
+- [Bản eval gốc tại 9ccefc8](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/9ccefc8/report/assets/cp6-2A202603626-eval.md).
+- [Bộ eval sau review](report/assets/cp6-2A202603626-eval.md); [báo cáo nhóm](report/team/group_report.md), mục 7.
+- [Báo cáo cá nhân](report/individual/2A202603626_PhamNgocTrungQuan.md), mục 4–7; [bản cá nhân tại 8efa2c1](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/commit/8efa2c1): nguồn phần reflection 6.1–6.6 được giữ nguyên khi review.
 
 **Điều mình học được từ phần nhóm:**
 
-- Hiểu rõ hơn cách xây dựng tiêu chí đánh giá dựa trên mục tiêu và yêu cầu của hệ thống.
-
-- Biết cách thiết kế tình huống đầu vào có tính đại diện để kiểm tra các trường hợp sử dụng khác nhau.
-
-- Hiểu được tầm quan trọng của việc xác định kết quả mong đợi trước khi thực hiện đánh giá.
-
-- Cải thiện kỹ năng phân tích, tư duy kiểm thử và phối hợp công việc trong nhóm.
+- Phải xác định đáp án và tiêu chí trước khi đánh giá; số dòng lớn không chứng minh cần AI hoặc tự suy ra được tỷ lệ bỏ sót.
+- Công thức đúng vẫn có thể so sai hạng mục nếu mapping sai; cần truy vết và kiểm đầu vào trước phép tính.
+- Chọn Rule để chuẩn bị thử không có nghĩa đã đủ điều kiện Go cho pilot.

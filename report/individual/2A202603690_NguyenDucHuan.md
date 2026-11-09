@@ -1,9 +1,5 @@
 # Báo cáo cá nhân — 2A202603690_NguyenDucHuan
 
-> Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
-> Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
-> Mỗi thành viên một file trong `report/individual/` trên repo nhóm: copy template này thành file mới, điền, rồi commit bằng tài khoản GitHub của bạn. Không viết hộ người khác.
-
 ## 1. Thông tin học viên
 
 - Họ tên: Nguyễn Đức Huân
@@ -46,12 +42,12 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Trường                  | Nội dung                                                                                                                                                                                                                                                          |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Job Story               | Khi kết thúc mỗi ngày học, tôi muốn nắm rõ các deadline, lịch học, việc cần thực hiện và các thay đổi mới của tất cả các môn học, tổng hợp từ nhiều nguồn như email, LMS của trường, MS Teams,… để thực hiện đúng hạn và không bỏ sót cập nhật sau từng buổi học. |
-| Actor                   | Sinh viên đang học nhiều môn/kỳ (chính tôi, 6 môn học/kỳ).                                                                                                                                                                                                       |
+| Actor                   | Sinh viên đang học nhiều môn/kỳ (chính tôi, 6 môn học/kỳ).                                                                                                                                                                                                        |
 | Thời điểm / bối cảnh    | Cuối mỗi ngày học, trên laptop/điện thoại; 3–4 nguồn tin                                                                                                                                                                                                          |
 | Quy trình hiện tại      | Email (1–2') -> LMS (1') -> Teams (2–4') -> Đối chiếu, ghi lại (1–2') -> Đặt nhắc hạn (0–1'). Tổng 5–10'/ngày _(ước lượng)_                                                                                                                                       |
-| Bottleneck              | Bỏ sót thay đổi khi rà nhiều kênh (chủ yếu ở bước Teams, 2–4'/lần): thông báo đổi hạn, đổi yêu cầu của nhiều môn lẫn trong nhiều team/kênh/chat                                                                                                                                                                 |
+| Bottleneck              | Bỏ sót thay đổi khi rà nhiều kênh (chủ yếu ở bước Teams, 2–4'/lần): thông báo đổi hạn, đổi yêu cầu của nhiều môn lẫn trong nhiều team/kênh/chat                                                                                                                   |
 | Impact                  | 35–70'/tuần; đã nộp muộn 1 báo cáo vì không check đủ deadline                                                                                                                                                                                                     |
-| Success metric          | **Chính:** số lần bỏ sót/phát hiện muộn: 1 lần/kỳ -> 0. **Phụ:** thời gian: 35–70'/tuần -> =< 15'/tuần. Đo: ghi log mỗi lần phát hiện muộn + bấm giờ 2 tuần                                                                                                                                                 |
+| Success metric          | **Chính:** số lần bỏ sót/phát hiện muộn: 1 lần/kỳ -> 0. **Phụ:** thời gian: 35–70'/tuần -> =< 15'/tuần. Đo: ghi log mỗi lần phát hiện muộn + bấm giờ 2 tuần                                                                                                       |
 | Phương án không dùng AI | Ghi ngay deadline vào một lịch/to-do duy nhất; bật thông báo kênh môn học; bảng deadline chung của lớp                                                                                                                                                            |
 | Giả thuyết về AI        | AI đọc thông báo mới, trích ra môn / việc / hạn / thay đổi để tôi xác nhận. Cần kiểm chứng: độ chính xác khi trích; quyền truy cập Teams/Outlook của trường                                                                                                       |
 | Cảm nhận nhanh          | **Workflow**: các bước cố định, AI chỉ cần ở bước trích xuất văn bản tự do                                                                                                                                                                                        |
@@ -84,7 +80,7 @@ Hệ quả đã xảy ra: nộp muộn 1 báo cáo vì không check đủ deadli
 | Success metric          | Hỏi lại: >5' -> =< 2'/nhóm; thời gian dành cho góp ý ≥ 70%. Đo: bấm giờ 6–8 buổi trong 1 tháng                                                                                                                   |
 | Phương án không dùng AI | **Rule:** mẫu báo cáo cố định (Đã làm / Sẽ làm / Đang vướng / Góp ý cũ), nộp trước họp 1 ngày                                                                                                                    |
 | Giả thuyết về AI        | **Workflow:** AI so sánh báo cáo tuần này với tuần trước, tóm 3–5 dòng gồm thay đổi, vướng mắc, góp ý chưa xử lý. Cần kiểm chứng: nhóm có báo cáo văn bản không; GV có đọc trước không                           |
-| Cảm nhận nhanh          | **Chưa biết**; cần phỏng vấn 2–3 GV trước khi chọn Rule hay Workflow                                                                                                                                                                |
+| Cảm nhận nhanh          | **Chưa biết**; cần phỏng vấn 2–3 GV trước khi chọn Rule hay Workflow                                                                                                                                             |
 
 Quy trình nháp hiện tại:
 
@@ -146,51 +142,58 @@ Lý do bottleneck: mỗi người chỉ nói giờ của mình, không ai thấy
 
 ## 4. Tôi đã tham gia phần nào (CP3 -> CP7)
 
-| Hoạt động                  | Tôi đã làm gì?         | Kết quả / ảnh hưởng tới bài nhóm |
-| -------------------------- | ---------------------- | -------------------------------- |
-| Pitch Problem Card         |                        |                                  |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt:    |                                  |
-| Nhận phản biện             | Câu hỏi tôi nhận được: | Tôi đã sửa gì:                   |
-| Gom cluster / cây OST      |                        |                                  |
-| Chọn candidate problem     |                        |                                  |
-| Kiểm chứng / research      |                        |                                  |
-| Quy trình nhóm             |                        |                                  |
-| Problem Statement          |                        |                                  |
-| Mức can thiệp AI           |                        |                                  |
-| Quyết định                 |                        |                                  |
+| Hoạt động                  | Tôi đã làm gì?                                                                                                                                                                                           | Kết quả / ảnh hưởng tới bài nhóm                                                                                                                                       |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pitch Problem Card         | Pitch 3 card: #7 tổng hợp deadline, #8 GV nắm tiến độ nhiều nhóm, #9 chốt lịch họp. Muốn pitch nhất là #7                                                                                                | #7–#9 vào bảng Pitch. #9 làm ví dụ "No AI đủ dùng", #7 là phương án dự phòng                                                                                           |
+| Phản biện bài của bạn khác | Hỏi #2: tốn 45–60' vì slide dài hay vì không biết trọng tâm? Hỏi #3: actor chịu pain là người share hay người không đọc? Hỏi #6: thành viên không cập nhật vì quên, ngại nói hay không biết cập nhật gì? | Nhóm chốt actor chính của #3 là người điều phối/người share. Thấy #2 và #3 cùng gốc "tài liệu dài, không rõ trọng tâm"                                                 |
+| Nhận phản biện             | #7: lần trễ cụ thể, đã bấm giờ chưa? (Huyền). #8: GV nhận ra nhóm gặp khó bằng cách nào? (Duyên). #9: xử lý thế nào nếu một người luôn bận? (Duyên)                                                      | #7: đánh dấu số phút là ước lượng, lên kế hoạch bấm giờ 2 tuần, đổi metric chính sang số lần bỏ sót (1/kỳ → 0). #8: ghi rõ ">5'" mới quan sát 1 buổi, cần phỏng vấn GV |
+| Gom cluster / cây OST      | Đề xuất tách cluster B (5/9 candidate) còn #3, #4, #9; viết lại OST gồm 1 outcome và 3 nhánh                                                                                                             | Nhóm dùng cluster B mới; OST có outcome "Giảm thời gian sinh viên mất để nắm đủ thông tin khi học và làm LAB nhóm" (trước đó để trống)                                 |
+| Chọn candidate problem     | Chấm điểm 3 card của mình; chỉ ra mục 2.4 đang chọn cả cluster; đề xuất #3 kèm lý do chọn và lý do loại 8 candidate còn lại                                                                              | Nhóm chuyển sang chọn #3 (32 điểm); 3 candidate cùng 31 điểm được tách bằng tiêu chí Pain và Impact                                                                    |
+| Problem Statement          | Viết v0 từ mục 3.2 và 4.1–4.3: actor, bottleneck chính/phụ, metric chính/phụ, boundary                                                                                                                   | Mục 5 có metric đủ baseline → target → cách đo; mọi số liệu truy được về mục 3.2 hoặc mục 4                                                                            |
+| Mức can thiệp AI           | Phân tích ma trận và 4 mức; lập luận chọn Rule, đặt điều kiện đo được để lên Workflow                                                                                                                    | Nhóm chọn Rule ở vòng 1; Workflow (AI chỉ nháp brief) ở vòng 2 nếu đạt điều kiện                                                                                       |
 
 ---
 
 ## 5. Dùng AI
 
-| Checkpoint                     | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
-| ------------------------------ | ---------------------- | ----------------- | -------------------------- | ----------------------------------- |
-| CP1 Scan | Định dạng bảng scan; gợi ý khung viết dấu hiệu đo được (thời gian, tần suất, sự việc) | | | |
-| CP2 Problem Card | Gợi ý chọn top 3 theo tiêu chí worksheet; tạo form Problem Card; đóng vai "PM hoài nghi" phản biện 3 card | | | |
-| CP4 Assumption Map | Viết nháp Assumption Map cho 4 candidate khi nhóm chưa chốt (`report/assets/cp4-assumption-map-draft.md`) | | | |
-| CP5 Quy trình                  |                        |                   |                            |                                     |
-| CP5–6 Problem Statement        |                        |                   |                            |                                     |
-| CP6 Mức can thiệp / quyết định |                        |                   |                            |                                     |
+| Checkpoint        | Tôi dùng AI để làm gì?                                                  | AI hữu ích ở đâu?                                                                                              | AI sai hoặc hời hợt ở đâu?                                           | Tôi sửa gì bằng nhận định của mình?                                                                                                |
+| ----------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| CP1 Scan          | Định dạng bảng scan, kiểm tra theo rubric C1, gợi ý khung viết dấu hiệu | Chỉ ra 4/6 dòng thiếu dấu hiệu đo được; phát hiện Job Story #1 mâu thuẫn ("đầu tuần" nhưng kiểm tra hằng ngày) | Chỉ đưa khung `[...]`, không biết số thật                            | Tự điền số thật (10 PDF chỉ ghi chú 3–4, GVHD 10 nhóm, PRJ3 đổi phòng 2 lần); thêm tần suất hằng ngày, impact tăng lên 35–70'/tuần |
+| CP2 Problem Card  | Chọn top 3, tạo form card, đóng vai "PM hoài nghi" phản biện            | Chỉ ra bottleneck Card #1 lệch: nộp muộn do bỏ sót thay đổi, không phải do mất 2–4' mở Teams                   | Lý do chọn chung chung; phản biện dài 6 điểm; form nhiều placeholder | Yêu cầu rút còn 1 điểm/card; đổi metric Card #1 sang số lần bỏ sót; chỉ đồng ý một phần với Card #3; tự điền số phút               |
+| CP5 Quy trình     | Vẽ sơ đồ ASCII mục 4.1 từ bảng 5 bước                                   | Giữ đúng số liệu, đánh dấu 2 bottleneck                                                                        | Chỉ chép số ước lượng, không kiểm được thực tế                       | [Điền: bước đã đối chiếu với nhóm]                                                                                                 |
+| CP6 Mức can thiệp | Phân tích ma trận, 4 mức, AI Canvas, PAIR                               | Lập luận "vì sao không chọn mức thấp hơn" bằng bằng chứng kiểm chứng                                           | Chọn Rule dựa trên ghi chú của nhóm, chưa bấm giờ việc viết brief    | [Điền: mức và quyết định nhóm chốt]                                                                                                |
 
 ---
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
+### 6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?
 
-**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Nhiều vấn đề nghe khác nhau nhưng cùng một gốc: thông tin rải rác và không ai chịu trách nhiệm tổng hợp _[điền ví dụ 1 problem của nhóm khác]_. Problem thuyết phục nhất là problem có số đo thật và một lần sự cố cụ thể, không phải problem có phạm vi lớn nhất.
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+### 6.2. Nhóm có lúc nào bị "solution-first" không? Nhận ra và xử lý thế nào?
 
-**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+Có. Một candidate ban đầu là "tạo nhóm chat Zalo để cập nhật tiến độ", tức là một giải pháp. Nhóm nhận ra khi áp quy tắc OST (thấy tên công cụ ở tầng opportunity thì gạch bỏ), rồi viết lại thành pain gốc: nhóm trưởng phát hiện muộn khi thành viên bị kẹt.
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+### 6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.
 
-**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+Có. Với card #7, Huyền hỏi lần trễ cụ thể và tôi đã bấm giờ chưa. Tôi nhận ra mình nộp muộn vì bỏ sót thay đổi, không phải vì kiểm tra chậm, nên đổi metric chính từ số phút/tuần sang số lần bỏ sót (1/kỳ → 0).
 
-**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+### 6.4. Kết quả kiểm chứng có làm tôi bất ngờ không? Điều gì?
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi _problem -> quy trình -> metric -> boundary -> mức can thiệp AI -> quyết định_ của bài nhóm mình.
+Có. Nhắc trên chat và gửi voice note vẫn không thay được 15–20 phút recap, nên vấn đề nằm ở chỗ thiếu brief và thiếu dấu hiệu "đã đọc", không phải thiếu nhắc nhở. Tôi cũng bất ngờ khi 2/6 người đã dùng GitHub Issues nên ít đau hơn, và chốt lịch họp có bằng chứng mạnh nhưng chỉ 1/6 người chọn là đau nhất.
+
+### 6.5. Điều khó nhất khi viết Problem Statement là gì?
+
+Khó nhất là tách số đã đo khỏi số ước lượng, và chọn đúng actor. Ở #3, chọn người share tài liệu hay người không đọc làm actor sẽ dẫn tới hai vấn đề và hai cách đo khác nhau.
+
+### 6.6. Nếu làm lại, tôi sẽ đổi gì? Phản biện nhóm mạnh hơn ở điểm nào?
+
+Tôi sẽ bấm giờ thật 1–2 tuần trước khi pitch thay vì dùng số ước lượng. Tôi cũng sẽ phản biện mạnh hơn việc nhóm gộp thêm bước tổng hợp sau họp vào problem (làm phạm vi rộng ra), và việc nhóm chưa phỏng vấn phía thành viên không đọc tài liệu.
+
+### 6.7. Hiểu bài
+
+Problem: tài liệu đã share nhưng thành viên chưa đọc, nên người điều phối phải kể lại 15–25 phút mỗi buổi họp, rồi mất thêm 30–60 phút dựng lại danh sách việc sau họp. <br>Metric: recap ≤ 5 phút và tổng hợp ≤ 10 phút, bấm giờ 3 buổi trước và 3 buổi sau khi áp dụng. <br>Boundary: AI không tự gửi brief, không gán người, không đổi hạn, không thêm việc ngoài tài liệu; người điều phối duyệt mọi brief. <br>Vì bài toán ít mơ hồ và ít phức tạp, nhóm chọn Rule trước (brief 4 mục, tick đã đọc, chốt bảng việc trong họp). <br>Workflow, với AI chỉ nháp brief, chỉ được thêm khi Rule chạy rồi mà viết brief vẫn tốn thời gian; quyết định cuối dựa trên kết quả đo đó.
 
 ---
 

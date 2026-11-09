@@ -6,7 +6,7 @@
 
 - Tên nhóm: hihihaha
 - Candidate problem nhóm chọn (1 câu): #12 — Khi lập báo cáo tuần, kỹ sư sản phẩm tại nhà máy sản xuất mạch điện tử mất khoảng 70 phút mỗi tuần để tra số lượng sản xuất và đưa số liệu vào đúng mục trong biểu mẫu.
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Quyết định cuối (Go / Not Yet / No-Go): **Go — pilot nhỏ với mức Rule (Power Query + biểu mẫu Excel), không dùng AI.**
 
 ## Thành viên
 
@@ -26,12 +26,12 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
 | CP3 — Hội tụ nhóm | Phí Hoàng Nam | | Cluster, cây OST, bảng chấm điểm |
-| CP4 — Kiểm chứng | | | Assumption map, snapshot hoặc survey |
-| CP4 — Research | | | Bảng research có link |
-| CP5 — Quy trình trước/sau | | | Quy trình + bảng before/after |
-| CP5 — Problem Statement v0 | | | Problem Statement v0 |
-| CP6 — Mức can thiệp + Problem Statement v1 | | | Ma trận, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định | | | 4 rủi ro + Go/Not Yet/No-Go |
+| CP4 — Kiểm chứng | Nguyễn Văn Huy | | Assumption map, snapshot hoặc survey |
+| CP4 — Research | Nguyễn Văn Huy | | Bảng research có link |
+| CP5 — Quy trình trước/sau | Nguyễn Bá Thành | | Quy trình + bảng before/after |
+| CP5 — Problem Statement v0 | Nguyễn Bá Thành | Nguyễn Tiến Đạt | Problem Statement v0 |
+| CP6 — Mức can thiệp + Problem Statement v1 | Nguyễn Tiến Đạt | | Ma trận, AI Canvas, eval, Problem Statement v1 |
+| CP6 — Quyết định | Nguyễn Tiến Đạt | | 4 rủi ro + Go/Not Yet/No-Go |
 
 ## Cá nhân
 
@@ -76,3 +76,26 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm**
 
 - Số liệu ước tính chưa đủ để kết luận; cần đo lại thời gian và kiểm lỗi trước khi đánh giá quy trình mới.
+
+### NguyenTienDat-2A202603452
+
+**Phần việc phụ trách**
+
+- Pitch ba Problem Card #1–#3; đặt câu hỏi phản biện cho #6, #7, #11; phụ trách CP6 — mức can thiệp AI, Problem Statement v1 và quyết định; hỗ trợ rà soát Problem Statement v0/v1.
+
+**Đóng góp cụ thể**
+
+- Pitch ba vấn đề: import Excel sổ quỹ, vẽ diagram đồ án và đọc hiểu task Jira; nêu bottleneck map cột Excel khoảng 40 phút/lần.
+- Đặt câu hỏi phản biện cho #6 (bỏ lỡ thông báo), #7 (hỏi lại sau họp) và #11 (viết action cho mã lỗi), tập trung vào hành vi và số liệu đã xảy ra.
+- Cùng nhóm chốt candidate #12; phụ trách CP6: so sánh 4 mức can thiệp, chọn **Rule** (Power Query + biểu mẫu Excel), viết Problem Statement v1 và đánh giá 4 rủi ro để đi **Go — pilot nhỏ**.
+- Hỗ trợ Problem Statement: rà lại Actor, Bottleneck, Impact, baseline 70/170 phút và Boundary giữa v0 và v1; đối chiếu các trường với dữ liệu 5 survey + 2 phỏng vấn trước khi chốt.
+
+**Bằng chứng**
+
+- [Mục 2.1 — CP3: bảng pitch và câu hỏi phản biện](report/team/group_report.md#2-hội-tụ-nhóm-cp3).
+- [Mục 5 — Problem Statement v0](report/team/group_report.md#5-problem-statement-v0-cp5).
+- [Mục 6–8 — CP6: mức can thiệp, Problem Statement v1 và quyết định](report/team/group_report.md#6-mức-can-thiệp-ai-cp6).
+
+**Điều mình học được từ phần nhóm**
+
+- Câu hỏi phản biện phải hỏi về hành vi đã xảy ra và số liệu cụ thể, không chỉ hỏi ý kiến. Với #12, nhóm phải tách baseline 70 phút cho phần tra + điền khỏi 170 phút cho toàn báo cáo, và chọn Rule thay vì AI vì dữ liệu có cấu trúc, mapping xác định.

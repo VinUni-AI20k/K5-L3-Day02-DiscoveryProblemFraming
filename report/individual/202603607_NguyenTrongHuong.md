@@ -29,6 +29,17 @@ Tôi ưu tiên những vấn đề trong đời sống mà tôi đã gặp hoặ
 
 **Cách bổ sung bằng chứng cho #4 và #5:** Với #4, ghi lại một lần gom việc, số tin/thông báo phải đọc, số đầu việc và số phút, rồi đối chiếu danh sách với nguồn. Với #5, ghi một lượt tìm giấy tờ cho một món đồ, nơi đã tìm, số phút và kết quả đúng/không tìm được. Đây là kế hoạch ghi nhận tiếp theo, chưa phải phép đo đã thực hiện.
 
+### Cách định lượng đề xuất cho vấn đề #4–#5
+
+Các số dưới đây là ví dụ giả định để chuẩn bị cách ghi nhận, chưa phải dấu hiệu thật của một sự việc đã xảy ra. Hai dòng trong bảng scan vẫn được đánh dấu thiếu bằng chứng định lượng.
+
+| Vấn đề | Phạm vi giả định | Phân bổ phút giả định | Kết quả cần đối chiếu ở lượt thực tế |
+|---|---|---|---|
+| #4 — Gom đầu việc | Một lượt tổng hợp 10 thông báo từ 3 nguồn, tạo 6 đầu việc phân biệt | Đọc 5 + trích thông tin 8 + gộp trùng 4 + kiểm lại 3 = **20 phút** | Có đủ việc so với nguồn không, thời hạn nào chưa rõ, có việc bị hiểu sai không. |
+| #5 — Tìm giấy tờ | Một lượt tìm hồ sơ của một món đồ, kiểm 3 nơi lưu | Tìm ở ba nơi 3 + 5 + 4, đối chiếu đúng món đồ 3 = **15 phút** | Tìm đúng giấy tờ hay không tìm được; có cần hỏi thêm người giữ giấy tờ không. |
+
+Không suy ra tần suất, tỷ lệ bỏ sót hoặc tổng thời gian mỗi tuần từ các ví dụ này. Khi có tình huống thực tế, ghi tên nguồn, loại giấy tờ, thời gian và kết quả đúng với lượt đó.
+
 ### Lý do điều chỉnh danh sách
 
 - Tôi chuyển trọng tâm từ các bất tiện có thể chỉ cần checklist hoặc nhắc giờ sang những việc có nhiều thông tin và cần hiểu ngữ cảnh.
@@ -50,7 +61,7 @@ Tôi chọn ba vấn đề #1, #2 và #3 để đào sâu. Card #1 là lựa ch�
 | 2 | #2 — So sánh và chọn laptop trong ngân sách | Có trải nghiệm cụ thể: tôi mất khoảng một tuần để tìm hiểu và chốt laptop; cần tổng hợp cả cấu hình, review, giá và còn hàng từ nhiều nguồn. | Khó nhất là hiểu cấu hình, đối chiếu máy hay cập nhật nơi bán? Tổng công thao tác là bao nhiêu? Chưa có ngân sách, nhu cầu và các mẫu đã cân nhắc cụ thể. |
 | 3 | #3 — Tìm chỗ ở gắn với lịch trình đi Vũng Tàu cho nhóm lớp | Có trường hợp cụ thể hơn 10 người; tôi trực tiếp phụ trách thuê chỗ ở và góp ý phần khác; cả quá trình lập kế hoạch khoảng một tuần. | Bước nào thật sự nghẽn nhất khi nhiều phần đều tốn công? Chưa có thời gian riêng phần của tôi, yêu cầu chỗ ở và tiêu chí chọn cụ thể. |
 
-**Quy ước thời gian:** `t1`, `t2`… là số phút từng bước, chưa có số liệu riêng. Khoảng 5–15 phút và hai mốc một tuần lấy từ trí nhớ về trải nghiệm đã kể. Tôi giữ nguyên đơn vị và phạm vi của các mốc này. Các target là mục tiêu đề xuất để kiểm chứng. Quy trình là bản nháp sắp xếp các hoạt động, cần đối chiếu thứ tự khi quan sát một lượt thực tế.
+**Quy ước thời gian:** Các số phút trong sơ đồ dưới đây là phân bổ giả định để phân tích, chưa được xác nhận từ quan sát hoặc trí nhớ của tôi. Chúng được đề xuất để có một bản định lượng cụ thể, không phải baseline thực tế. Thông tin từ trải nghiệm vẫn là 5–15 phút/lượt tìm chat thành công, khoảng một tuần chọn laptop và khoảng một tuần chuẩn bị chuyến đi. Các target là mục tiêu đề xuất cần kiểm chứng.
 
 ### Problem Card #1 — Tìm lại nội dung cũ trong nhóm chat
 
@@ -70,18 +81,19 @@ Tôi chọn ba vấn đề #1, #2 và #3 để đào sâu. Card #1 là lựa ch�
 Quy trình nháp hiện tại:
 
 ```text
-[1. Xác định nội dung cần tìm: t1 = chưa đo]
-  → [2. Mở nhóm/hội thoại liên quan: t2 = chưa đo]
-  → [3. Tìm theo dấu hiệu nhớ được: t3 = chưa đo; cần xác nhận cách làm]
-  → [4. Lướt tin cũ và chờ tải: t4 = chưa đo] ← ĐIỂM NGHẼN ĐÃ MÔ TẢ
-  → [5. Xem, mở và đối chiếu nội dung: t5 = chưa đo]
-  → [6. Lấy đúng nội dung hoặc ghi không tìm được: t6 = chưa đo]
+PHÂN BỔ GIẢ ĐỊNH ĐỂ PHÂN TÍCH — CHƯA XÁC NHẬN PHÚT TỪNG BƯỚC
+[1. Xác định nội dung cần tìm: 0,5 phút]
+  → [2. Mở nhóm/hội thoại: 0,5 phút]
+  → [3. Tìm theo dấu hiệu nhớ được: 1 phút]
+  → [4. Lướt tin cũ và chờ tải: 5 phút] ← ĐIỂM NGHẼN CẦN KIỂM
+  → [5. Mở và đối chiếu nội dung: 2 phút]
+  → [6. Lấy nội dung cần dùng: 1 phút]
 
-Bước 3–5 có thể lặp lại; tổng thời gian phải tính các lần lặp thực tế.
-Tổng lượt tìm THÀNH CÔNG: khoảng 5–15 phút, ước lượng theo trí nhớ.
-Tổng = thời gian thao tác + thời gian chờ tải không chồng lặp.
-Thời gian chờ ở t4 đã nằm trong tổng, không cộng thêm lần nữa.
-Lượt không tìm được: ghi tổng phút riêng; chưa có số liệu để gán khoảng 5–15 phút.
+Tổng kịch bản: 10 phút, gồm các vòng lặp tìm kiếm.
+Trong bước 4, tạm giả định 1 phút lướt và 4 phút chờ.
+Công thao tác 6 phút + chờ 4 phút = 10 phút, không cộng chờ lần nữa.
+Khoảng đã xác nhận từ trải nghiệm: 5–15 phút/lượt tìm THÀNH CÔNG.
+Lượt thất bại chưa có số đo; không gán tổng 10 phút cho lượt đó.
 ```
 
 **Điều đã xác nhận:** Tôi thường xuyên gặp vấn đề này; phải lướt tìm và chờ tải tin cũ; nội dung càng cũ càng tốn thời gian; kết quả có cả tìm được và không tìm được; lượt thành công ước lượng 5–15 phút.
@@ -106,19 +118,19 @@ Lượt không tìm được: ghi tổng phút riêng; chưa có số liệu đ�
 Quy trình nháp hiện tại:
 
 ```text
-[1. Xác định ngân sách và điều cần ở laptop: t1 = chưa đo]
-  → [2. Tìm các mẫu để cân nhắc: t2 = chưa đo]
-  → [3. Tìm hiểu cấu hình và thông số: t3 = chưa đo]
-  → [4. Xem video review, đọc thêm nguồn: t4 = chưa đo]
-  → [5. Đối chiếu các lựa chọn: t5 = chưa đo] ← NGHI VẤN BOTTLENECK
-  → [6. So giá và kiểm tra còn hàng: t6 = chưa đo]
-  → [7. Chốt mẫu phù hợp: t7 = chưa đo]
+PHÂN BỔ GIẢ ĐỊNH ĐỂ PHÂN TÍCH — CHƯA XÁC NHẬN PHÚT TỪNG BƯỚC
+[1. Xác định ngân sách và nhu cầu: 20 phút]
+  → [2. Tìm các mẫu để cân nhắc: 40 phút]
+  → [3. Tìm hiểu cấu hình và thông số: 60 phút]
+  → [4. Xem video review, đọc thêm nguồn: 70 phút]
+  → [5. Đối chiếu các lựa chọn: 80 phút] ← NGHI VẤN BOTTLENECK
+  → [6. So giá và kiểm tra còn hàng: 30 phút]
+  → [7. Chốt mẫu phù hợp: 20 phút]
 
-Các bước 2–6 có thể lặp lại; thứ tự trên là bản nháp để đối chiếu.
-Thời gian từ tìm hiểu đến chọn: khoảng 1 tuần, ước lượng theo trí nhớ.
-Tổng công thao tác = tổng phút thực sự làm ở t1–t7 qua các phiên, hiện chưa biết.
-Thời gian giữa các phiên tìm hiểu được tách khỏi công thao tác.
-Theo dõi riêng công đọc/xem nguồn, đối chiếu, kiểm tra giá/còn hàng và quyết định.
+Tổng công kịch bản: 320 phút = 5 giờ 20 phút qua nhiều phiên.
+Các số trên giả định đã cộng các vòng tìm hiểu lặp lại.
+Thời gian lịch đã xác nhận theo trí nhớ: khoảng 1 tuần.
+Chưa có dữ liệu để khẳng định công thao tác thực tế là 320 phút.
 ```
 
 **Điều đã xác nhận:** Tôi đã cân nhắc nhiều laptop; tìm hiểu cấu hình và thông số; đọc nhiều nguồn để so giá, xem còn hàng; xem video review; mất khoảng một tuần để chọn được laptop phù hợp với ngân sách.
@@ -143,19 +155,21 @@ Theo dõi riêng công đọc/xem nguồn, đối chiếu, kiểm tra giá/còn 
 Quy trình nháp hiện tại:
 
 ```text
-[1. Thống nhất nhóm và yêu cầu chỗ ở: t1 = chưa đo]
-  → [2. Tìm các lựa chọn lưu trú: t2 = chưa đo]
-  → [3. Đọc review, đối chiếu chỗ ở: t3 = chưa đo] ← BƯỚC CẦN KIỂM ƯU TIÊN
-  → [4. Liên hệ vị trí nơi ở với hoạt động gần đó: t4 = chưa đo]
-  → [5. Tìm/review điểm chơi và quán ăn: t5 = chưa đo]
-  → [6. Sắp xếp thứ tự và trao đổi phương án: t6 = chưa đo]
-  → [7. Kiểm tra và chốt các phần: t7 = chưa đo]
+PHÂN BỔ GIẢ ĐỊNH ĐỂ PHÂN TÍCH — CHƯA XÁC NHẬN PHÚT TỪNG BƯỚC
+[1. Ghi yêu cầu nhóm và chỗ ở: 20 phút]
+  → [2. Tìm các lựa chọn lưu trú: 50 phút]
+  → [3. Đọc review, đối chiếu chỗ ở: 70 phút] ← BƯỚC CẦN KIỂM ƯU TIÊN
+  → [4. Liên hệ vị trí nơi ở với hoạt động: 30 phút]
+  → [5. Tìm/review điểm chơi và quán ăn: 60 phút]
+  → [6. Sắp xếp thứ tự, trao đổi phương án: 45 phút]
+  → [7. Kiểm tra và chốt các phần: 25 phút]
 
-Thời gian lịch của giai đoạn lập kế hoạch: khoảng 1 tuần, ước lượng theo trí nhớ.
-Tôi phụ trách thuê nơi ở, quan sát và góp ý các phần khác.
-Các phần do nhiều người làm có thể diễn ra song song; đây không phải chuỗi đã bấm giờ.
-Công cá nhân, công cả nhóm và thời gian lịch phải ghi riêng, không cộng trùng.
-Chưa xác định chắc bottleneck hoặc phút từng bước.
+Tổng kịch bản: 300 phút công của đầu mối phụ trách từng bước.
+Phần tìm và đối chiếu nơi ở ở bước 2–3: giả định 120 phút.
+Chưa tính công của mọi người tham gia hoặc thời gian chờ phản hồi.
+Các phần có thể làm song song; không suy ra thời gian lịch từ tổng này.
+Thông tin đã xác nhận: hơn 10 người, chuẩn bị khoảng 1 tuần,
+tôi phụ trách thuê nơi ở và góp ý các phần khác.
 ```
 
 **Điều đã xác nhận:** Chuyến đi Vũng Tàu của nhóm lớp hơn 10 người; tôi phụ trách thuê nơi ở; còn góp ý địa điểm gần chỗ ở, thứ tự lịch và quán ăn; việc tìm kiếm, xem review và sắp xếp đều tốn thời gian; chuẩn bị khoảng một tuần.
@@ -180,117 +194,22 @@ Chưa xác định chắc bottleneck hoặc phút từng bước.
 | Card #1: AI tìm kiếm chưa chắc giải quyết được chờ tải tin cũ. | Đồng ý. Hai phần này có thể cần cách xử lý khác nhau. | Tách công thao tác với thời gian chờ; dùng công cụ tìm kiếm sẵn có hoặc chỉ mục làm đối chứng trước khi đánh giá phần AI. |
 | Card #2: thông số, review và giá/còn hàng là các loại thông tin khác nhau. | Đồng ý. Bảng so sánh phải giữ được nguồn, phiên bản và thời điểm kiểm. | Bổ sung bước kiểm thông tin và giới hạn kết luận vào nhu cầu/ngân sách, thay vì khẳng định máy tốt nhất toàn thị trường. |
 | Card #3: một tuần chuẩn bị của nhóm không phải thời gian tôi tìm chỗ ở. | Đồng ý. Vai trò và đơn vị đo cần gắn với phạm vi công việc. | Ghi tôi phụ trách thuê nơi ở, góp ý các phần khác; thu hẹp phần thử vào tìm/đối chiếu lưu trú và ghi công cá nhân riêng. |
-| Các card thiếu phút từng bước; Card #2 và #3 chưa có baseline công thao tác. | Đồng ý. Mốc tổng chỉ giúp xác nhận phạm vi thời gian, chưa đủ để phân bổ cho từng bước. | Giữ rõ số đã nhớ và số chưa ghi nhận; bổ sung bảng ghi thời gian bên dưới thay vì chia tùy ý các mốc tổng. |
+| Các card thiếu phút từng bước; Card #2 và #3 chưa có baseline công thao tác. | Đồng ý. Mốc tổng chỉ giúp xác nhận phạm vi thời gian, chưa đủ để phân bổ cho từng bước. | Giữ rõ số đã nhớ và số chưa ghi nhận; tổng hợp các trường dữ liệu còn thiếu trong bảng đối chiếu bên dưới. |
 | Chỉ đo nhanh hơn có thể bỏ qua kết quả sai và công kiểm/sửa. | Đồng ý. Mục tiêu phải có cả thời gian và chất lượng. | Card #1 theo dõi tìm đúng và lượt thất bại; Card #2–#3 giữ tiêu chí nhu cầu/nguồn và tính cả công kiểm/sửa. Target được giữ là giả thuyết cần thử. |
 
-### Bảng ghi nhận thời gian và bằng chứng tiếp theo
+### Bằng chứng và số liệu cần đối chiếu
 
-**Kịch bản định lượng tham khảo trong báo cáo:**
+Bảng này chỉ giữ thông tin từ trải nghiệm đã xác nhận. Các phép phân bổ giả định trước đây được bỏ khỏi báo cáo để việc đánh giá dựa trên cùng một loại bằng chứng.
 
-**Trạng thái: toàn bộ số trong các bảng dưới đây là giả định để phân tích, chưa được quan sát hoặc xác nhận từ trải nghiệm. Không dùng các số này làm bằng chứng thực tế, baseline đã đo hoặc kết quả khảo sát.**
+| Phạm vi | Thông tin đã có | Dữ liệu còn thiếu để đáp ứng yêu cầu |
+|---|---|---|
+| Card #1 — Tìm nội dung trong chat | Gặp thường xuyên; lượt tìm thành công ước lượng 5–15 phút, có lướt và chờ tải; có lượt không tìm được. | Phút từng bước, nhất là bước 4; tách thao tác/chờ tải; một trường hợp cụ thể và kết quả. |
+| Card #2 — Chọn laptop | Khoảng một tuần từ tìm hiểu đến chọn; đọc cấu hình, xem review, so giá/còn hàng từ nhiều nguồn. | Tổng công thao tác qua các phiên, phút từng bước, thời gian đối chiếu các mẫu và tiêu chí sử dụng. |
+| Card #3 — Chỗ ở gắn với lịch trình Vũng Tàu | Nhóm lớp hơn 10 người, chuẩn bị khoảng một tuần; tôi phụ trách thuê chỗ ở và góp ý các phần khác. | Công riêng phần tôi phụ trách, phút tìm và đọc/đối chiếu chỗ ở; tách thời gian chờ nhóm phản hồi. |
+| CP1 #4 — Gom đầu việc | Đã gặp hoặc trực tiếp quan sát việc gom đầu việc từ tin nhắn/thông báo. | Một lần cụ thể, nguồn thông báo, số tin hoặc số việc, phút xử lý; việc bị sót nếu thực sự có. |
+| CP1 #5 — Tìm giấy tờ | Đã gặp hoặc trực tiếp quan sát việc tìm hóa đơn/thông tin bảo hành. | Món đồ/giấy tờ cụ thể, nơi đã tìm, số phút hoặc số nơi phải kiểm, kết quả tìm. |
 
-Các mốc đã có từ trải nghiệm được giữ riêng: tìm chat thành công khoảng 5–15 phút; chọn laptop khoảng một tuần; lập kế hoạch đi Vũng Tàu cho nhóm hơn 10 người khoảng một tuần. Không suy ra thời gian từng bước từ các mốc tổng này.
-
-#### 1. Card #1 — Một lượt tìm nội dung cũ
-
-Kịch bản giả định: một lượt tìm thành công kéo dài 10 phút. Mốc này nằm trong khoảng đã nhớ nhưng cách phân bổ bên dưới chưa được xác nhận.
-
-| Bước theo quy trình trong báo cáo | Phút giả định | Căn cứ của giả định |
-|---|---:|---|
-| 1. Xác định nội dung cần tìm | 0,5 | Nhớ loại nội dung và mục đích tìm. |
-| 2. Mở nhóm/hội thoại | 0,5 | Giả định đã biết nhóm liên quan. |
-| 3. Tìm theo dấu hiệu nhớ được | 1 | Một số thao tác tìm ban đầu. |
-| 4. Lướt tin cũ và chờ tải | 5 | Giả định gồm 1 phút lướt và 4 phút chờ tải qua các lần lặp. |
-| 5. Mở và đối chiếu nội dung | 2 | Kiểm các ứng viên để xác định đúng nội dung. |
-| 6. Lấy nội dung cần dùng | 1 | Mở, lưu hoặc lấy liên kết kết quả. |
-| **Tổng giả định** | **10** | **6 phút thao tác + 4 phút chờ; phần chờ đã nằm trong bước 4.** |
-
-**Nhận xét trong kịch bản:** Bước 4 chiếm 50% tổng thời gian. Nếu một giải pháp chỉ giảm một nửa công thao tác nhưng giữ nguyên 4 phút chờ, tổng vẫn là `6 × 50% + 4 = 7 phút`. Muốn đạt target không quá 5 phút cần kiểm thêm khả năng giảm chờ hoặc giảm công tìm nhiều hơn. Đây là lý do cần đo riêng hai phần trước khi kết luận giá trị của AI.
-
-Lượt tìm thất bại không được gán mặc định 10 phút; phải ghi kết quả và thời gian riêng khi quan sát.
-
-#### 2. Card #2 — Công tìm hiểu và chọn laptop
-
-Kịch bản giả định: cộng công thao tác qua nhiều phiên trong một tuần, không tính thời gian giữa các phiên. Chưa có dữ liệu chứng minh tổng công thực tế bằng số này.
-
-| Bước theo quy trình trong báo cáo | Phút giả định |
-|---|---:|
-| 1. Xác định ngân sách và nhu cầu | 20 |
-| 2. Tìm các mẫu để cân nhắc | 40 |
-| 3. Tìm hiểu cấu hình và thông số | 60 |
-| 4. Xem video review, đọc thêm nguồn | 70 |
-| 5. Đối chiếu các lựa chọn | 80 |
-| 6. So giá và kiểm tra còn hàng | 30 |
-| 7. Chốt mẫu phù hợp | 20 |
-| **Tổng công giả định** | **320 phút = 5 giờ 20 phút** |
-
-**Nhận xét trong kịch bản:** Bước 5 chiếm 25% tổng công và là bước dài nhất theo cách phân bổ giả định. Phạm vi đọc, đối chiếu và kiểm tra ở bước 3–6 là `60 + 70 + 80 + 30 = 240 phút`. Nếu giảm được 30% phần này, vẫn giữ chất lượng và đã tính công kiểm/sửa, phần đó còn `240 × 70% = 168 phút`. Giữ các phần khác là 80 phút thì tổng còn 248 phút, giảm 72 phút. Không suy ra rằng một tuần từ tìm hiểu đến quyết định cũng giảm 30%.
-
-#### 3. Card #3 — Công chuẩn bị chỗ ở và phối hợp lịch trình
-
-Kịch bản giả định cho các đầu mối phụ trách từng bước. Số phút là công của đầu mối, không phải thời gian lịch của chuyến đi hoặc tổng công của mọi thành viên. Chưa có dữ liệu xác nhận phân bổ này.
-
-| Bước theo quy trình trong báo cáo | Phút công giả định của đầu mối |
-|---|---:|
-| 1. Ghi yêu cầu nhóm và chỗ ở | 20 |
-| 2. Tìm các lựa chọn lưu trú | 50 |
-| 3. Đọc review, đối chiếu chỗ ở | 70 |
-| 4. Xem vị trí nơi ở so với hoạt động | 30 |
-| 5. Tìm/review điểm chơi và quán ăn | 60 |
-| 6. Sắp xếp thứ tự và trao đổi phương án | 45 |
-| 7. Kiểm tra và chốt các phần | 25 |
-| **Tổng công đầu mối giả định** | **300 phút = 5 giờ** |
-
-**Nhận xét trong kịch bản:** Bước 3 có công đầu mối cao nhất. Với phần tìm và đối chiếu lưu trú ở bước 2–3, giả định công là `50 + 70 = 120 phút`. Target giảm 30% tương ứng còn 84 phút, tiết kiệm 36 phút trong phạm vi này nếu đã tính cả công kiểm/sửa. Các phần khác có thể diễn ra song song hoặc cần người khác tham gia; số này không chứng minh thời gian lập kế hoạch cả nhóm giảm từ một tuần xuống một mốc mới.
-
-#### 4. CP1 #4 — Gom đầu việc từ thông báo
-
-**Ví dụ giả định, không phải sự việc đã được kể:** Trong một lượt tổng hợp có 10 thông báo từ 3 nguồn và 6 đầu việc phân biệt sau khi đối chiếu.
-
-| Hoạt động minh họa | Phút giả định |
-|---|---:|
-| Mở và đọc 10 thông báo | 5 |
-| Trích việc cần làm và thông tin thời hạn được nêu | 8 |
-| Gộp thông báo trùng về cùng đầu việc | 4 |
-| Kiểm lại danh sách với nguồn | 3 |
-| **Tổng giả định** | **20** |
-
-Các chỉ số phù hợp để thu thập thật: số nguồn, số thông báo, số việc phân biệt, phút tổng hợp, số việc thiếu hoặc hiểu sai sau đối chiếu. Nếu thời hạn không được nêu, ghi chưa rõ thay vì tự suy ra.
-
-Trong ví dụ, `20 phút / 6 việc ≈ 3,3 phút/việc` chỉ là phép tính minh họa cho lượt đó; không ngoại suy thành năng suất thực tế hoặc mức tiết kiệm mỗi tuần. Tần suất thực tế chưa được ghi nhận.
-
-#### 5. CP1 #5 — Tìm giấy tờ mua hàng
-
-**Ví dụ giả định, không phải sự việc đã được kể:** Tìm hồ sơ của một thiết bị điện tử, kiểm ba nơi lưu rồi đối chiếu đúng món đồ. Ví dụ giả định cuối cùng tìm được tài liệu.
-
-| Hoạt động minh họa | Phút giả định |
-|---|---:|
-| Tìm tại nơi lưu thứ nhất | 3 |
-| Tìm tại nơi lưu thứ hai | 5 |
-| Tìm tại nơi lưu thứ ba | 4 |
-| Đối chiếu tài liệu với món đồ | 3 |
-| **Tổng giả định** | **15** |
-
-Các chỉ số phù hợp để thu thập thật: món đồ, nơi đã tìm, số nơi phải kiểm, phút từng nơi, kết quả đúng/không tìm được. Bước lâu nhất trong ví dụ là tìm ở nơi thứ hai, nhưng chưa thể coi đó là bottleneck của trải nghiệm thật. Không suy ra quyền đổi trả hoặc bảo hành chỉ từ việc tìm thấy giấy tờ.
-
-#### 6. Cách sử dụng
-
-- Dùng các bảng làm ví dụ để kiểm logic cộng thời gian, phạm vi can thiệp và cách đánh giá lợi ích.
-- Khi có một lượt thực tế, thay các giả định bằng số quan sát hoặc ước lượng theo trí nhớ được người học xác nhận, kèm đúng nguồn và đơn vị.
-- Cập nhật bottleneck theo dữ liệu thật; không cố giữ bước dài nhất chỉ vì ví dụ đang phân bổ như vậy.
-- Đối chiếu rubric bằng dữ liệu thật trong báo cáo chính. Phụ lục minh họa này chưa hoàn thành yêu cầu bằng chứng và số phút thực tế của CP1–CP2.
-
-#### Ghi nhận tiếp theo từ trải nghiệm
-
-Các lượt dưới đây chưa được thực hiện. Bảng dùng để bổ sung phần còn thiếu; mốc thời gian ở cột cuối không phải số phút của từng bước.
-
-| Phạm vi | Cách ghi từng bước | Kết quả phải đối chiếu | Mốc hiện có |
-|---|---|---|---|
-| Card #1: một lượt tìm nội dung | Ghi phút bước 1–6, tách thao tác/chờ tải, tính các vòng tìm lại; ghi giờ bắt đầu và kết thúc. | Đúng nội dung gốc hay không tìm được; nguồn có mở được không. | 5–15 phút/lượt thành công, theo trí nhớ. |
-| Card #2: một phiên so sánh laptop | Ghi phút tìm mẫu, đọc thông số, xem review, đối chiếu, kiểm giá/còn hàng; cộng các phiên nếu tiếp tục. | Bảng đối chiếu có nguồn và đáp ứng tiêu chí nào; thông tin nào còn thiếu. | Khoảng một tuần từ tìm hiểu đến chọn, chưa biết tổng giờ thao tác. |
-| Card #3: một phiên tìm chỗ ở | Ghi công cá nhân tìm/đọc/đối chiếu và phút trao đổi; tách phần chờ, không cộng công người khác vào công của tôi. | Phương án chỗ ở đáp ứng yêu cầu nào và cần nhóm chốt điều gì. | Hơn 10 người, khoảng một tuần lập kế hoạch chung. |
-| CP1 #4: một lần gom việc | Ghi số nguồn, số tin phải đọc, số đầu việc và tổng phút. | Đối chiếu danh sách với thông báo gốc để nhận ra việc thiếu hoặc hiểu sai. | Đã xác nhận từng gặp/quan sát; chưa có trường hợp định lượng. |
-| CP1 #5: một lượt tìm giấy tờ | Ghi món đồ, nơi đã tìm, phút từng nơi và tổng phút. | Tìm đúng giấy tờ của món đồ hay không tìm được. | Đã xác nhận từng gặp/quan sát; chưa có trường hợp định lượng. |
+**Cách hoàn thiện:** Ghi số còn nhớ là ước lượng theo trí nhớ, đúng với phạm vi công việc được mô tả. Phần không nhớ được giữ là chưa ghi nhận và bổ sung ở một lượt quan sát mới. Mỗi lượt ghi rõ bước, phút thao tác, phút chờ và kết quả; không quy đổi một tuần chuẩn bị thành thời gian làm liên tục hoặc chia đều cho các bước.
 
 ### Tự rà soát CP1–CP2
 
@@ -299,7 +218,6 @@ Các lượt dưới đây chưa được thực hiện. Bảng dùng để bổ
 - [x] Đã phân biệt ước lượng theo trí nhớ, công thao tác, thời gian lịch và target đề xuất.
 - [x] Đã tổng hợp phản biện và các điều chỉnh nội dung.
 - [x] Đã chọn Card #1 để pitch và có câu hỏi muốn nhóm phản biện.
-- [x] Có các bảng số liệu giả định ngay trong báo cáo để kiểm cách tính thời gian và phạm vi lợi ích.
 - [ ] Bổ sung trường hợp và dấu hiệu định lượng cho CP1 #4–#5.
 - [ ] Bổ sung phút từng bước cho cả 3 quy trình, đối chiếu thứ tự và xác định bottleneck bằng dữ liệu.
 - [ ] Hoàn thiện baseline công thao tác cho Card #2–#3 và kiểm lại mức target sau khi có số liệu.

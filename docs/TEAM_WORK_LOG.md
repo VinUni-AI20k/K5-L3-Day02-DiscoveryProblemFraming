@@ -11,22 +11,22 @@ File điều phối được bổ sung theo hướng dẫn của LabCoach mà tr
 - Quyết định hiện tại: chọn Rule, **Not Yet cho triển khai/pilot**; target dưới 90 phút công/vòng gồm kiểm/sửa/ngoại lệ. Quyền dữ liệu, mapping, cấu hình và đáp án phải được xác nhận trước pilot.
 - Việc chọn vấn đề không đồng nghĩa đã kiểm chứng pain, số liệu hoặc giải pháp.
 - Quy mô nhóm: 6 người; trưởng nhóm xác nhận trong chat ngày 2026-11-09 rằng coach đã cho phép. Đây là thông tin do trưởng nhóm cung cấp, chưa kèm thông báo của coach trong repo.
-- Bản tổng hợp và mục 2 đã merge qua PR #8/#9, main `90dcaa7`; cập nhật quyết định hiện tại ở nhánh Hưởng. Đây là quyết định điều phối theo ủy quyền, không thay cho bản ghi pitch/challenge hoặc biểu quyết của sáu người.
+- Bản tổng hợp và mục 2 đã merge qua PR #8/#9; quy trình Rule, metric và quyết định hiện tại đã công bố qua PR #10, main `1ee80b3`. Đây là quyết định điều phối theo ủy quyền, không thay cho bản ghi pitch/challenge hoặc biểu quyết của sáu người.
 
 ## 2. Phân công đã xác nhận và phụ thuộc
 
 | Người | Nhánh cá nhân | Việc chính | Sản phẩm phụ trách | Phụ thuộc để tổng hợp/chốt | Trạng thái sản phẩm |
 |---|---|---|---|---|---|
-| Hưởng | `NguyenTrongHuong-branch` | Điều phối; tổng hợp CP3, phạm vi, Problem Statement và metric | `docs/TEAM_WORK_LOG.md`; `TEAM.md`; `report/team/group_report.md` | Ghi chép CP3 thực tế; sản phẩm của 5 thành viên; dữ liệu và đáp án có người domain kiểm | Bản trước đã merge PR #8/#9; lượt này đồng bộ quyết định Rule/Not Yet theo ủy quyền và review eval Quân |
+| Hưởng | `NguyenTrongHuong-branch` | Điều phối; tổng hợp CP3, phạm vi, Problem Statement và metric | `docs/TEAM_WORK_LOG.md`; `TEAM.md`; `report/team/group_report.md` | Ghi chép CP3 thực tế; sản phẩm của 5 thành viên; dữ liệu và đáp án có người domain kiểm | Bản tổng hợp đã merge PR #8–#10; phạm vi Rule/Not Yet, metric và review eval đã công bố trên main `1ee80b3` |
 | Vinh | `vinh1811` | Mô tả quy trình thực tế, chuẩn bị dữ liệu được phép dùng, đo bottleneck và before/after | `report/assets/cp5-2A202603672-quy-trinh.md` | Phạm vi Rule đã chọn; quyền dùng dữ liệu; tách số đo, ước lượng và target; đối chiếu CP4 | CP5 nguồn đã merge PR #4; quy trình hiện tại giữ ở mục 4.1, tương lai mục 4.2 được đồng bộ với phạm vi Rule |
 | Linh | `damlinh820` | Điều phối kiểm chứng, assumption map, snapshot và tổng hợp tín hiệu phản bác | `report/assets/cp4-2A202603624-kiem-chung.md` | Actor/phạm vi; người ngoài nhóm thực sự gặp vấn đề; ghi nguồn, khi nào và cách hỏi | Main có một snapshot và tổng hợp 3 người tại `4efec2b`, gồm một lo ngại độ chính xác/trách nhiệm; bổ sung vai trò, ngày/cách hỏi và hành vi từng người |
 | Khương | `dangkhuong14` | Research giải pháp hiện có, kiểm nguồn, đối chiếu phần đã giải và khoảng trống | `report/assets/cp4-2A202603627-research.md` | Phạm vi bài toán và bước cần so sánh; link nguồn được mở và kiểm | Research nhà thầu mục 3.3 đã merge qua PR #5; liên kết chính thức đã mở kiểm |
-| Quân | `quan-branch` | Tiêu chí đánh giá, tình huống kiểm tra, đáp án đối chiếu và phương án đơn giản làm mốc so sánh | `report/assets/cp6-2A202603626-eval.md` | Phạm vi Rule; dữ liệu được phép dùng; đáp án và ngưỡng có người domain kiểm | Đã đọc bản eval 10 tình huống tại `9ccefc8`; cần sửa TC-03/TC-09, baseline thiếu nguồn và kết luận chưa có test. Nhận xét ở báo cáo nhóm mục 7; chưa tích hợp |
+| Quân | `quan-branch` | Tiêu chí đánh giá, tình huống kiểm tra, đáp án đối chiếu và phương án đơn giản làm mốc so sánh | `report/assets/cp6-2A202603626-eval.md` | Phạm vi Rule; dữ liệu được phép dùng; đáp án và ngưỡng có người domain kiểm | Bản eval tại `9ccefc8` đã được review ở mục 7 và công bố nhận xét qua PR #10; đầu nhánh `70be730` đã xóa file eval. Cần khôi phục/sửa trước tích hợp; không coi bản cũ là kết quả test |
 | Tuyên | `titus` | So sánh mức can thiệp, dữ liệu, boundary, AI Canvas/PAIR nếu phù hợp và bốn rủi ro | `report/assets/cp6-2A202603648-muc-can-thiep.md` | CP4; quy trình Vinh; đối chứng/eval Quân; quyết định Rule/Not Yet hiện tại | CP6 nguồn đã merge PR #6; rủi ro được nối với điều kiện chuyển Go, Canvas/PAIR chỉ áp dụng nhánh mở rộng |
 
 Các đường dẫn `report/assets/cp...` là đầu ra dự kiến. Khi kiểm tra ngày 2026-11-09, thư mục assets vẫn chỉ có README; Vinh/Tuyên viết phần nhóm trực tiếp, đã merge qua PR #4/#6; research Khương đã merge qua PR #5. Có sản phẩm trên nhánh riêng không đồng nghĩa đã merge hoặc đã có kết quả pilot. Các phụ thuộc là thứ cần có để tổng hợp/chốt; có thể chuẩn bị song song. Người phụ trách chịu trách nhiệm nội dung và giải thích được lập luận. Mỗi người còn thực hiện đầy đủ phần cá nhân của mình.
 
-Hưởng phụ trách tổng hợp v0/v1, metric và quyết định; cách sử dụng công cụ được ghi ở báo cáo cá nhân mục 5. Lượt hiện tại ghi quyết định điều phối theo ủy quyền trực tiếp của trưởng nhóm, giữ riêng nguồn baseline, target thiết kế và kết quả thực nghiệm. Quyết định này không xác nhận rằng đã có buổi phản biện hoặc cả sáu người đã biểu quyết.
+Hưởng phụ trách tổng hợp v0/v1, metric và quyết định; cách sử dụng công cụ được ghi ở báo cáo cá nhân mục 5. Quyết định điều phối theo ủy quyền trực tiếp của trưởng nhóm đã công bố qua PR #10; nguồn baseline, target thiết kế và kết quả thực nghiệm được giữ riêng. Quyết định này không xác nhận rằng đã có buổi phản biện hoặc cả sáu người đã biểu quyết.
 
 ## 3. Quy tắc sửa file
 
@@ -99,6 +99,8 @@ Ngày trong nhật ký dưới đây là ngày ghi nhận trong chat/kiểm tra 
 | 2026-11-09 | Theo yêu cầu Hưởng | Xác nhận bản tổng hợp và mục 2 đã merge qua PR #8/#9 | Main `90dcaa7`; cập nhật các trạng thái lịch sử “local” trong phần theo dõi hiện tại |
 | 2026-11-09 | Theo ủy quyền trực tiếp của Hưởng | Ghi quyết định điều phối: Rule cho soát trên bảng đã ghép đúng; Not Yet cho pilot; target dưới 90 phút công/vòng | Báo cáo nhóm mục 1, 4–8 và TEAM.md; không gán thành biểu quyết sáu người. Điều kiện chuyển Go/ngưỡng dừng giữ rõ ở mục 8 |
 | 2026-11-09 | Theo yêu cầu Hưởng | Fetch và review eval mới trên nhánh Quân | `9ccefc8`: 10 tình huống tổng hợp; lỗi trung vị TC-03, đơn vị tiền TC-09, baseline thiếu nguồn và target bị ghi thành kết quả; nhận xét ở mục 7, chưa merge |
+| 2026-11-09 | Theo yêu cầu Hưởng | Commit/push nhánh Hưởng, tạo và merge PR #10 sau kiểm tra; đồng bộ main và nhánh cá nhân | [PR #10](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/10): nội dung `384850c`, merge `1ee80b3`; bốn file, không conflict; công bố Rule/Not Yet và metric dưới 90 phút công/vòng |
+| 2026-11-09 | Theo yêu cầu Hưởng | Rà soát phần Hưởng sau PR #10, đối chiếu nguồn review và cập nhật trạng thái công bố | Mục 4/6.7/7 báo cáo cá nhân, TEAM.md và báo cáo nhóm được đồng bộ với `1ee80b3`; mô tả PR là nguồn review tài liệu, không gán thêm người hỏi/đáp. Đầu nhánh Quân `70be730` không còn file eval của `9ccefc8` |
 
 ## 8. Danh sách cần bổ sung trước khi nộp
 
@@ -106,9 +108,9 @@ Ngày trong nhật ký dưới đây là ngày ghi nhận trong chat/kiểm tra 
 |---|---|---|---|
 | CP3 | Bổ sung bản ghi pitch/challenge thực tế; đối chiếu cluster/OST, điểm và lý do chọn/loại | Cả nhóm; Hưởng tổng hợp | Mục 2 đã tổng hợp 18 card, cluster/OST và điểm review; hỏi–đáp giữa các thành viên cần nguồn thực tế |
 | Phạm vi | Soát trên bảng đã ghép đúng; kiểm ngưỡng, dữ liệu và đáp án trước pilot | Hưởng quyết định theo ủy quyền; Vinh xác nhận đầu vào | Đã chọn Rule và phạm vi; quyền dữ liệu/ngưỡng không được suy từ quyết định này |
-| CP4 | Kiểm sáu giả định đề xuất, bổ sung kiểm chứng người thật và đối chiếu research công cụ | Linh, Khương; nhóm xác nhận điều chỉnh | Có assumption map/research đề xuất ở bản tổng hợp local; kiểm chứng ngoài nhóm và bàn giao theo phân công được bổ sung từ nguồn thực tế |
+| CP4 | Kiểm sáu giả định, bổ sung kiểm chứng người thật và đối chiếu research công cụ | Linh, Khương; nhóm xác nhận điều chỉnh | Assumption map/research đã có trên main; repo có một snapshot và tổng hợp 3 người, cần bổ sung nguồn hành vi, vai trò, ngày và cách hỏi từng người |
 | CP5 | Đối chiếu timing nguồn Vinh; kiểm mapping và quyền dữ liệu | Vinh; Hưởng tổng hợp | v0 và quy trình tương lai đã đồng bộ phạm vi Rule; phút tương lai là ngân sách thiết kế, không phải số đo |
 | CP6 | Sửa eval, có đáp án domain; đối chiếu năm tiêu chí, bốn rủi ro và điều kiện chuyển Go | Quân, Vinh, Tuyên; Hưởng tổng hợp | Đã có quyết định Rule/Not Yet; eval nhánh Quân cần sửa theo review, không coi là test đã đạt |
-| Đóng góp | Mỗi thành viên tự ghi phần mình, dẫn sản phẩm và nguồn | Từng thành viên | Đã cập nhật phần Hưởng theo PR và sản phẩm tổng hợp local; các thành viên tự ghi phần mình |
+| Đóng góp | Mỗi thành viên tự ghi phần mình, dẫn sản phẩm và nguồn | Từng thành viên | Phần Hưởng có bằng chứng PR #2–#10 và sản phẩm trên main; các thành viên tự ghi phần mình |
 | Trình bày | Đủ mục 1–10; link nguồn/file và hình hiển thị; tên báo cáo đúng; CP7 do từng người tự viết | Hưởng rà soát; từng người kiểm phần mình | Báo cáo có khung 1–10, nội dung chưa đủ để nộp |
-| Git | Review cập nhật quyết định trên nhánh Hưởng từ main `90dcaa7` | Hưởng kiểm tra trước commit/push | Chỉ sửa bốn file hiện có; không tự merge nhánh Quân hoặc push lượt cập nhật này |
+| Git | PR #10 đã merge; rà soát ghi chú và nguồn của Hưởng trên nền main `1ee80b3` | Hưởng kiểm tra trước commit/push lượt mới | Cập nhật mới ở local, chỉ bốn file hiện có; không tự merge nhánh Quân hoặc push lượt rà soát này |

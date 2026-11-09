@@ -27,32 +27,46 @@
 | 7 | Lại Trọng Đức | Khi chuẩn bị nộp báo cáo nhóm, tôi muốn biết chính xác mục nào còn thiếu hoặc chưa đạt, để sửa xong trước hạn. | Thành viên được giao rà soát bản nháp cuối; mỗi học viên tự chịu trách nhiệm nộp link. | Bước 3: Đối chiếu từng mục trong bản nháp với yêu cầu ở nhiều tài liệu (ước tính 10 phút/lượt, chưa đo thực tế). | Chưa ghi nhận câu hỏi hoặc người hỏi. |
 | 8 | Lại Trọng Đức | Khi bắt đầu bài lab, tôi muốn xác định đúng việc cần làm và đầu ra của từng checkpoint, để bắt tay vào làm mà không bỏ sót yêu cầu. | Học viên lần đầu làm bài lab, chưa quen cấu trúc tài liệu. | Bước 2: Tìm đúng đoạn yêu cầu trong tài liệu liên quan (ước tính 7 phút/lượt, chưa đo thực tế). | Chưa ghi nhận câu hỏi hoặc người hỏi. |
 | 9 | Lại Trọng Đức | Khi đưa một nhận định nghiên cứu vào báo cáo, tôi muốn tìm lại đúng nguồn và đoạn hỗ trợ nhận định, để kiểm tra độ tin cậy trước khi sử dụng. | Thành viên phụ trách research và thành viên kiểm tra chéo bảng research CP4. | Bước 4: Đối chiếu nguồn có thực sự hỗ trợ nhận định và điều kiện áp dụng không (ước tính 4 phút/claim, chưa đo thực tế). | Chưa ghi nhận câu hỏi hoặc người hỏi. |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 10 | Nguyễn Minh Phương | Khi nhận hóa đơn điện tử đầu vào mà số lượng/đơn giá không khớp PO hoặc phiếu nhập kho, tôi muốn biết ngay chỗ lệch và người cần hỏi, để hạch toán và thanh toán đúng hạn | Kế toán công nợ phải trả ở doanh nghiệp vừa (50–300 nhân sự) | Bước 3–4: Đối chiếu 3 chiều hóa đơn–PO–phiếu nhập (10–15'/hóa đơn) và chờ mua hàng/kho giải thích chỗ lệch (giờ đến ngày) | Nghẽn thật nằm ở bước đối chiếu hay bước chờ duyệt? Doanh nghiệp vừa ở VN có PO/phiếu nhập điện tử để đối chiếu không? *(cần ghi tên người hỏi)* |
+| 11 | Nguyễn Minh Phương | Khi thu 40 bài viết của một lớp sau tiết kiểm tra, tôi muốn chấm và ghi nhận xét cụ thể cho từng em trong tuần, để học sinh sửa lỗi trước bài tiếp theo | Giáo viên Ngữ văn/Tiếng Anh THCS, 3–5 lớp × ~40 học sinh | Bước 2–3: Đọc, chấm và viết nhận xét từng bài (4–7'/bài, ~3 giờ/lớp) | Giáo viên có coi chấm bài là "pain" không, hay là trách nhiệm nghề nghiệp? *(cần ghi tên người hỏi)* |
+| 12 | Nguyễn Minh Phương | Khi đã lấy máu xong và được dặn "chờ có kết quả rồi quay lại", tôi muốn biết chính xác lúc nào có kết quả, để không phải ngồi chờ cả buổi ở hành lang | Người bệnh ngoại trú tái khám bệnh mạn tính và người nhà đi cùng | Bước 5–6: Chờ kết quả cận lâm sàng mà không biết khi nào có (55–132', BV 108 / BV Quân y 103) rồi xếp hàng lại gặp bác sĩ | Thời gian chạy máy xét nghiệm là giới hạn vật lý, vậy phần nào thật sự cải thiện được? *(cần ghi tên người hỏi)* |
 
 ### 2.2. Cluster
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A. Tìm, lọc và tổng hợp thông tin từ nhiều nguồn | #1 Bác sĩ lọc y văn, #2 Đối chiếu yêu cầu PhD, #4 Tổng hợp tài liệu ôn thi, #8 Tìm yêu cầu từng checkpoint, #9 Tìm lại nguồn cho nhận định | Thông tin có tồn tại nhưng nằm rải rác ở nhiều tài liệu; người làm phải tự đọc, lọc bản đúng/đáng tin rồi mới dùng được |
+| B. Đối chiếu dữ liệu với yêu cầu và xử lý ngoại lệ | #5 Ticket CSKH tra chính sách, #7 Rà soát báo cáo trước khi nộp, #10 Hóa đơn đầu vào bị lệch | Phải so khớp thủ công một bản với bộ quy tắc/chứng từ khác; khi lệch phải tra lại hoặc hỏi người khác |
+| C. Truyền đạt, phản hồi lặp lại cho từng cá nhân | #3 Tư vấn bệnh nhân lặp lại, #11 Giáo viên chấm và nhận xét bài | Nội dung giống nhau phần lớn nhưng vẫn phải làm lại thủ công cho từng người |
+| D. Chờ đợi / rủi ro vận hành khi thiếu thông tin trạng thái | #6 Đơn COD có nguy cơ bị từ chối, #12 Người bệnh chờ kết quả cận lâm sàng | Không biết trước trạng thái (kết quả có chưa, đơn có bị từ chối không) nên phải chờ hoặc xử lý muộn |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian người làm chuyên môn phải tự tìm, lọc và đối chiếu thông tin
+         trước khi ra quyết định (với candidate được chọn: tìm & lọc y văn 60' → <20'/lần)
+│
+├── Opportunity A (cluster A): "Tôi không biết tài liệu nào đáng tin và đúng trường hợp của mình
+│                               cho đến khi tự đọc từng bài"  ← candidate được chọn (#1)
+│     ├── "Kết quả tìm kiếm quá nhiều, phần lớn sai quần thể hoặc chất lượng thấp"
+│     └── "Không chắc khuyến cáo mình đọc còn hiệu lực hay đã có bản mới"
+├── Opportunity B (cluster B): "Tôi chỉ phát hiện chỗ lệch so với yêu cầu khi tự dò từng dòng,
+│                               và khi lệch thì không biết hỏi ai"
+├── Opportunity C (cluster C): "Tôi phải lặp lại cùng một nội dung giải thích/nhận xét
+│                               cho từng người, nên không đủ thời gian làm kỹ"
+└── Opportunity D (cluster D): "Tôi không biết trạng thái hiện tại nên phải ngồi chờ
+                                hoặc chỉ xử lý khi sự cố đã xảy ra"
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- ~~"Bác sĩ cần một chatbot tra cứu y văn"~~ — tên giải pháp, không phải pain; pain thật là mất 25' ở bước lọc bài sai quần thể/kém chất lượng.
+- ~~"Sinh viên cần ChatGPT tóm tắt slide ôn thi"~~ — nêu công cụ; pain thật là mất 3–4 giờ/môn đọc và chọn lọc từ nhiều tài liệu.
+- ~~"Kế toán cần phần mềm ERP mới"~~ — giải pháp; pain thật là không biết chỗ lệch và người cần hỏi.
+- ~~"Giáo viên cần AI chấm bài tự động"~~ — giải pháp; pain thật là 4–7'/bài để viết nhận xét cụ thể.
+- ~~"Bệnh viện cần app thông báo kết quả"~~ — giải pháp; pain thật là chờ mà không biết khi nào có kết quả.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
@@ -71,6 +85,9 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 - Tổng hợp tài liệu ôn thi (30 điểm) và Đối chiếu yêu cầu PhD (26 điểm): thấp điểm hơn bài Bác sĩ lọc y văn.
 - Tư vấn bệnh nhân lặp lại: tờ hướng dẫn in sẵn đã đủ — hợp No AI.
 - Tổng đài nắm lịch sử: không tiếp cận được nhân viên và dữ liệu ticket .
+- Hóa đơn đầu vào bị lệch (#10): nhóm không ai làm kế toán, baseline chỉ có số liệu Mỹ (Ardent Partners), chưa kiểm chứng được doanh nghiệp vừa ở VN có PO/phiếu nhập điện tử để đối chiếu.
+- Giáo viên chấm bài (#11): chưa rõ giáo viên coi đây là pain hay trách nhiệm nghề nghiệp; chưa có số giờ chấm bài riêng của VN trong TALIS 2024.
+- Người bệnh chờ kết quả cận lâm sàng (#12): phần cải thiện được chủ yếu là thông báo trạng thái và phân luồng — hợp No AI / Rule, không cần AI.
 
 **Xử lý bất đồng (nếu có):**
 

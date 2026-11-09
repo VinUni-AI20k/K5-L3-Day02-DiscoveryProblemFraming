@@ -148,10 +148,10 @@ Quy trình nháp hiện tại:
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
+| Pitch Problem Card | Pitch 3 card: hóa đơn đầu vào bị lệch, giáo viên chấm bài, người bệnh chờ kết quả cận lâm sàng (dòng #10–12 bảng pitch, báo cáo nhóm mục 2.1) | Nhóm không chọn card của tôi; lý do loại ghi ở báo cáo nhóm mục 2.4 |
 | Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
 | Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | Đề xuất 5 cluster và cây OST mẫu cho cluster "Đối chiếu chứng từ" (xem Phụ lục A) | |
+| Gom cluster / cây OST | Gom 12 candidate của nhóm thành 4 cluster và viết cây OST rút gọn, gạch các solution đội lốt (báo cáo nhóm mục 2.2–2.3; nháp ban đầu ở Phụ lục A) | Cluster A (tìm, lọc, tổng hợp thông tin) chứa candidate được chọn "Bác sĩ lọc y văn" |
 | Chọn candidate problem | | |
 | Kiểm chứng / research | Chuẩn bị bảng giải pháp đã có, câu hỏi phỏng vấn theo The Mom Test và assumption map cho top 3 (xem Phụ lục B, C) | |
 | Quy trình nhóm | | |

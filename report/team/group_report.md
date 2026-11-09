@@ -35,9 +35,10 @@
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| **A — Tổng hợp & bàn giao từ luồng thông tin phân mảnh** | `#2` Lội tin nhắn nhóm chat Zalo/Discord bị trôi · `#12` Viết biên bản & tách việc sau họp team · `#11` Tổng hợp hồ sơ bàn giao ca trực y tế · `#3` Gom và phân loại giao dịch chi tiêu đa kênh | Thông tin quan trọng (quyết định, đầu việc, y lệnh, giao dịch) nằm rải rác hoặc phi cấu trúc qua nhiều luồng/ứng dụng; người làm phải đọc lại từ đầu để lọc nhiễu và tổng hợp tránh bỏ sót |
+| **B — Đối chiếu đa nguồn & chấm/sàng lọc theo tiêu chí** | `#4` Đối chiếu nguồn & chấm 100 cặp output khi đổi prompt · `#5` Tra cứu tham số & metric từ nhiều file log thí nghiệm · `#7` Sàng lọc hàng trăm CV theo JD · `#8` Đối chiếu 3 bên (Hóa đơn – PO – Biên bản giao nhận) | Phải mở song song nhiều tài liệu/bản ghi để so khớp từng trường dữ liệu hoặc chấm điểm thủ công lặp đi lặp lại theo bộ tiêu chí chuẩn, tốn nhiều giờ công và dễ sót lỗi do mỏi mắt |
+| **C — Tiếp nhận, phân luồng & giải đáp yêu cầu lặp lại** | `#9` Phân loại & xác định ưu tiên ticket đổi trả/hoàn tiền · `#10` Trả lời câu hỏi khách hàng trùng lặp đa kênh · `#6` Gỡ lỗi cài môi trường lặp lại cho intern mới ngày đầu | Người phụ trách (CSKH, mentor) liên tục bị ngắt quãng bởi các câu hỏi, ticket hoặc sự cố quen thuộc lặp đi lặp lại, mất thời gian phân loại thủ công và trả lời lại cùng một nội dung |
+| **D — Phối hợp & định vị điểm đón thời gian thực ngoài hiện trường** | `#1` Tài xế Xanh SM và khách gọi điện báo xe đến & mô tả vị trí đón thực tế khi bị khuất tầm nhìn | Bất cân xứng thông tin vị trí thực tế giữa hai phía đang di chuyển ngoài đường (lệch ghim GPS / khuất tầm nhìn), buộc phải gọi điện mô tả điểm mốc bằng lời ngay lúc đang lái xe gây trễ chuyến và mất an toàn |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 

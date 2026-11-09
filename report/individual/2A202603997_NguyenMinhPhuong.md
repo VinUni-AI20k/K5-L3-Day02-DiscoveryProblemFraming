@@ -205,7 +205,7 @@ Tôi sẽ đánh giá và phân tích về rủi ro của sản phẩm hơn là 
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
-Vấn đề là bác sĩ tìm các nguồn paper quá lâu. Để đánh giá, nhóm dùng bộ câu hỏi gán nhãn thủ công hoặc tự động. Boundary: AI không đưa ra quyết định điều trị, không nhập thông tin định danh bệnh nhân, mọi khuyến cáo phải dẫn đoạn gốc. Mức can thiệp: Rule xong tới Workflow. Nếu trích dẫn sai hoặc không có nguồn thì quay về tra cứu thủ công trên PubMed / UpToDate.
+Vấn đề là bác sĩ tìm các nguồn paper quá lâu. Quy trình hiện tại gồm 5 bước: đặt câu hỏi chuyên môn (5'), search Google / PubMed / UpToDate (15'), scan danh sách kết quả (15'), phân loại giá trị và loại nghiên cứu kém chất lượng / sai quần thể (25'), chốt và đọc kỹ tài liệu tốt (30'). Bottleneck nằm ở bước 4; riêng phần tìm và lọc (bước 1–4) đã mất khoảng 60 phút, còn bước 5 là việc chuyên môn của bác sĩ nên giữ nguyên. Để đánh giá, nhóm dùng bộ câu hỏi gán nhãn thủ công hoặc tự động. Boundary: AI không đưa ra quyết định điều trị, không nhập thông tin định danh bệnh nhân, mọi khuyến cáo phải dẫn đoạn gốc. Mức can thiệp: Rule xong tới Workflow. Nếu trích dẫn sai hoặc không có nguồn thì quay về tra cứu thủ công trên PubMed / UpToDate. Nhóm chọn Go.
 
 ---
 

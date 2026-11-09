@@ -122,7 +122,12 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
-- CP4 — Research giải pháp hiện có và nguồn tham khảo cho bài toán đối chiếu chào giá nhà thầu.
+- **CP3 — Chuẩn bị và tham gia hội tụ vấn đề:** chuẩn bị ba Problem Cards cá nhân để trình bày, tham gia đặt câu hỏi và trao đổi lựa chọn candidate theo phân công chung của nhóm. Nhật ký pitch/phản biện thực tế được ghi riêng trong báo cáo cá nhân.
+- **CP4 — Phụ trách chính research giải pháp hiện có:** tìm hiểu các công cụ và cách làm liên quan đến đối chiếu hồ sơ chào giá nhà thầu; tổng hợp vào mục 3.3 của báo cáo nhóm.
+- **Phân tích khả năng áp dụng:** làm rõ mỗi giải pháp hỗ trợ bước nào trong quy trình, điểm mạnh, hạn chế và khoảng trống so với nhu cầu của nhóm; phân biệt phần soát số liệu trên bảng đã ghép đúng với phần gom/ghép dữ liệu khác mẫu.
+- **Nguồn tham khảo và bàn giao research:** cung cấp liên kết làm căn cứ cho các nhận định về công cụ, phối hợp tiếp nhận review nguồn; phân biệt tính năng được tài liệu mô tả với giả thuyết áp dụng cần thử nghiệm. Mục 3.3 đã được tích hợp qua PR #5; phần sửa liên kết của Hưởng được ghi riêng ở đóng góp cụ thể.
+- **CP5 — Hỗ trợ bằng chứng cho Problem Statement:** cung cấp kết quả research để Hưởng tham khảo khi tổng hợp v0, đối chiếu phương án có sẵn và làm rõ phạm vi. Đây là vai trò hỗ trợ theo phân công, không phải phụ trách chính viết Problem Statement.
+- **Công việc tiếp theo trước pilot:** tiếp tục review nguồn và công cụ khi có dữ liệu được phép sử dụng, làm rõ khả năng đáp ứng phạm vi Rule để phục vụ việc xem xét điều kiện chuyển từ Not Yet sang Go. Không coi đây là hoạt động thử nghiệm đã hoàn thành.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
@@ -141,4 +146,4 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Điều mình học được từ phần nhóm:**
 
-Học được cách cùng nhóm thu hẹp bài toán, xác định đúng điểm nghẽn và tìm hiểu giải pháp có sẵn trước khi chọn công nghệ. Qua phần research, tôi thấy không phải bài toán nào cũng cần AI; đôi khi Rule đã đủ phù hợp. Mình cũng hiểu rằng chọn được giải pháp chưa có nghĩa là có thể triển khai ngay, mà còn cần kiểm tra dữ liệu và cách đánh giá kết quả.
+[Chưa điền bằng lời của tôi: nêu điều thực sự học được từ research hoặc phối hợp nhóm. Có thể tự đối chiếu việc phân biệt tính năng sẵn có với khả năng đáp ứng dữ liệu thực tế, hoặc vì sao chọn Rule nhưng chưa cho phép pilot.]

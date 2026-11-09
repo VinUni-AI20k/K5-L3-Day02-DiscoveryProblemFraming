@@ -62,7 +62,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 #### Quy trình nháp hiện tại
 
-\`\`\`text
+```text
 PHỤ HUYNH CÓ THẮC MẮC
           |
           v
@@ -85,7 +85,7 @@ PHỤ HUYNH CÓ THẮC MẮC
           |
           v
 [7. Kết thúc / Chuyển cấp xử lý nếu chưa giải quyết được]
-\`\`\`
+```
 
 ### Problem Card #2 — Quản lý đưa đón học sinh
 

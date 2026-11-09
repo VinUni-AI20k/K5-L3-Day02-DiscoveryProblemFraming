@@ -170,7 +170,9 @@ Thời gian và số lượt trao đổi: chưa đo; cần quan sát một lần
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?** Học được cách chọn problem của các thành viên khác từ đó thấy được nhiều problem từ các lĩnh vực khác nhau và cách nhìn nhận của các thành viên.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?** Có một số lúc bản thân quên mất là nghĩ các giải pháp trước rồi mới đến vấn đề, nhưng đã khắc phục.
+
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.** Không, do các problem đưa ra đều là những vến đề gặp phải thường xuyên khi làm việc nhóm.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?** Hiện tại, trong quá trình thảo luận nhóm chưa bị solution-first. Tuy nhiên, qua bài học, tôi hiểu rằng solution-first là khi chúng ta nghĩ đến công cụ hoặc công nghệ cần xây dựng trước khi xác định rõ vấn đề thực tế. Ví dụ, khi thấy một công việc mất nhiều thời gian, chúng ta có thể nghĩ ngay đến việc sử dụng chatbot hoặc AI Agent. Tuy nhiên, trước khi đề xuất giải pháp, cần xác định ai là người gặp khó khăn, khó khăn xảy ra trong hoàn cảnh nào và quy trình hiện tại đang được thực hiện ra sao. Do đó cần phân biệt rõ problem và solution. Việc sử dụng AI không phải mục tiêu ban đầu mà phải xuất phát từ nhu cầu giải quyết một vấn đề có thật.

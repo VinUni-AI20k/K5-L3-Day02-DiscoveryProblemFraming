@@ -48,9 +48,17 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 -
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+**Điều mình học được từ phần nhóm:** 
+### NguyenXuanDat-2A202603958
+**Phần việc phụ trách:**
+CP5
 
--
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+Đã hoàn thiện phần công việc cá nhân được giao và trợ giúp bạn khác phần họ còn thắc mắc
 
-**Điều mình học được từ phần nhóm:**
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+đã hoàn thiện cp5
+**Điều mình học được từ phần nhóm:** hiểu được cách làm việc của các bạn trường khác và các ngành nghề khác
+
 
 -

@@ -28,7 +28,6 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
--
 
 ---
 
@@ -137,16 +136,17 @@ HIỆN TẠI — ~33 phút/ngày (ước lượng)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Vai trò nhóm trưởng | Fork và quản lý repo nhóm; review và merge 9 pull request (#1–#9), trong đó 7 PR từ nhánh của Tuấn Anh, Khánh và Thành. | Bài CP1–CP2 của cả 4 thành viên và bảng pitch (`group_report.md` mục 2.1) được gộp vào nhánh `main` của repo nhóm. |
+| Pitch Problem Card | Pitch 3 card của mình trong nhóm (dòng 1–3 bảng pitch, `group_report.md` mục 2.1): (1) CRO nhập và đẩy hồ sơ giải ngân online, (2) tổng kết chi tiêu cuối tháng, (3) tổng kết task cuối ngày. Đại diện nhóm lên trình bày pitch card CRO trước lab coach và các nhóm khác. | Card CRO (Card #1) trở thành candidate problem chung và là bài nhóm mang lên trình bày. |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt cho nhóm trưởng nhóm 11 (bài AI hỗ trợ người dùng ghi note task): "Note của bạn có đặt sẵn lịch thông báo không?" | Bạn ấy trả lời nhóm chưa tính tới trường hợp này. |
+| Nhận phản biện | Câu hỏi tôi nhận được từ lab coach khi lên trình bày pitch card CRO: "Liên kết với VNeID vậy mà AI agent riêng thì xử lý như thế nào?" | Tôi đã sửa gì: làm rõ phương án trên problem: đây là agent nội bộ nhưng có liên kết VNeID, nên dữ liệu hồ sơ phải lấy về từ kho dữ liệu của nhà nước và tạo kho dữ liệu local riêng. |
+| Gom cluster / cây OST | Gom 12 candidate thành 4 cluster và dựng cây OST với outcome "giảm thời gian xử lý một bộ hồ sơ giải ngân online". | Cluster và cây OST ở `group_report.md` mục 2.2–2.3; "agent nội bộ liên kết VNeID" bị gạch khỏi tầng opportunity vì đó là giải pháp. |
+| Chọn candidate problem | Với tư cách nhóm trưởng, tôi chọn card CRO làm candidate chung để tránh xung đột trong nhóm. Lý do chọn card này: actor rõ (CRO nhập liệu), quy trình 6 bước vẽ được, lặp lại đều (~1 bộ/3 ngày), đã có khách phản hồi vì xử lý chậm. | Toàn bộ nội dung nhóm trình bày (problem, quy trình, bottleneck, metric, phương án) lấy từ card CRO. |
+| Kiểm chứng / research | Chưa thực hiện: chưa phỏng vấn, survey hay research. Các con số trong card CRO là ước lượng tôi tự đưa ra, chưa được kiểm chứng. | Chưa có bằng chứng xác nhận hoặc phản bác pain, tần suất và thời lượng; cần phỏng vấn 2–3 người trực tiếp làm hồ sơ giải ngân để có baseline thật. |
+| Quy trình nhóm | Cung cấp quy trình nháp 6 bước của Card #1: nhận hồ sơ → kiểm tra giấy tờ → đọc, trích thông tin → nhập hệ thống → đẩy duyệt → sửa nếu bị trả về; bottleneck ước lượng ở bước 3–4 (~45 trong ~80 phút mỗi bộ). | Nhóm dùng quy trình này khi trình bày. |
+| Problem Statement | Nội dung lấy từ Card #1: actor là CRO nhập liệu; bottleneck ở bước đọc và nhập thông tin; impact ~10 bộ/tháng, khách phản hồi vì xử lý chậm ~2 lần/tháng, ~3/10 bộ bị trả về; metric thời gian xử lý ~80 → 40 phút/bộ, số bộ bị trả về 3 → 1/tháng, thời gian khách chờ mục tiêu ≤ 1 ngày làm việc (số liệu ước lượng, chưa đo baseline); boundary: AI chỉ hỗ trợ OCR, kiểm tra và phân loại giấy tờ, không tự duyệt hồ sơ, kiểm soát viên duyệt cuối. | Là phần problem nhóm mang lên trình bày. |
+| Mức can thiệp AI | Card #1 ban đầu đề xuất Rule trước (checklist giấy tờ + bắt buộc đủ trường khi nhập), chỉ lên Workflow nếu bước đọc giấy tờ vẫn nghẽn. Khi trình bày, nhóm gọi phương án là agent nội bộ có liên kết VNeID. Làm rõ phạm vi: AI chỉ hỗ trợ OCR và kiểm soát giấy tờ giúp CRO khi đẩy hồ sơ lên; hồ sơ cuối cùng vẫn phải qua kiểm soát viên. | Mức phù hợp là **Workflow**: quy trình có các bước cố định, AI chỉ làm bước đọc (OCR), kiểm tra và phân loại giấy tờ, kiểm soát viên vẫn duyệt cuối. Không dừng ở Rule vì Rule không đọc được giấy tờ scan. Mục đích ban đầu: giảm tải cho kiểm soát viên và giúp CRO phân loại giấy tờ. |
+| Quyết định | Cùng nhóm chốt **Go** cho phương án Workflow: AI hỗ trợ OCR, kiểm tra và phân loại giấy tờ giúp CRO, kiểm soát viên vẫn duyệt cuối. | Lý do: AI chỉ làm một bước trong quy trình cố định và kiểm soát viên vẫn duyệt cuối, nên khi AI đọc sai vẫn có người chặn lại; mục đích là giảm tải cho kiểm soát viên và giúp CRO phân loại giấy tờ. |
 
 ---
 
@@ -154,12 +154,14 @@ HIỆN TẠI — ~33 phút/ngày (ước lượng)
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Không dùng AI; tự scan 5 problem. | | | |
+| CP2 Problem Card | Nhờ AI phản biện Problem Card (kết quả ở bảng "AI đã phản biện card thế nào", mục 3; cả 3 điểm AI chỉ ra đều thuộc Card #1). | Chỉ ra khách phàn nàn "chậm" có thể do thời gian chờ (hồ sơ nằm hàng đợi, chờ bổ sung giấy tờ, chờ duyệt), không chỉ do ~80 phút CRO xử lý; chỉ ra ~3/10 bộ bị trả về vì thiếu/sai có thể xử lý bằng Rule. | AI chỉ tính impact theo khối lượng của 1 CRO (~10 bộ/tháng ≈ 13 giờ/tháng) để hỏi có đáng đầu tư công cụ mới không, chưa xét trường hợp nhiều CRO cùng gặp; tôi chỉ đồng ý một phần. | Thêm metric "thời gian khách chờ" và đo baseline trước khi kết luận bottleneck; đổi Cảm nhận nhanh từ Workflow sang Rule trước; giữ card và đưa câu hỏi "có nhiều CRO cùng gặp không" vào câu hỏi pitch cho nhóm. |
+| CP3 Cluster / cây OST | Nhờ AI gợi ý cách gom 12 candidate thành cluster và dựng cây OST từ Card #1. | Tách được giải pháp (agent liên kết VNeID, AI đọc giấy tờ scan) ra khỏi tầng opportunity. | | Tôi thấy đánh giá  của ai là đúng và không có nhận định gì|
+| CP4 Research | Không dùng AI. | | | |
+| CP5 Quy trình | Không dùng AI. | | |  |
+| CP5–6 Problem Statement | Không dùng AI. | | | |
+| CP6 Mức can thiệp / quyết định | Không dùng AI. | | | |
+| CP7 Báo cáo cá nhân | Dùng Claude Code để tổng hợp bằng chứng có trong repo (commit, PR, bảng pitch, bảng phản biện AI) vào mục 4–5, ghi lại các câu phản biện tôi cung cấp, điền phần của tôi trong `TEAM.md` và gợi ý câu hỏi tự soi cho mục 6. | Gom nhanh bằng chứng có thật trong repo; chỉ ra những ô bắt buộc phải tự làm. | AI không biết những gì diễn ra trên lớp (ai hỏi gì, kết quả CP4–CP6), nên không tự điền được các ô đó. | Tự cung cấp câu hỏi phản biện thật, tự điền các ô về kết quả nhóm và tự viết mục 6 (AI chỉ gợi ý câu hỏi tự soi). |
 
 ---
 
@@ -169,20 +171,37 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Em thấy phần lớn problem của các bạn xoay quanh việc học và làm nhóm, hay gặp nhất là thông tin nằm rải rác ở chat, LMS, email. Khi em hỏi nhóm 11 note có đặt sẵn lịch thông báo không thì nhóm bạn chưa tính tới, nên em học được là phải nghĩ hết các tình huống dùng thật của người dùng.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Có. Lúc dựng cây OST, nhóm em để "agent nội bộ liên kết VNeID" ở tầng opportunity dù đó là giải pháp. Khi nhận ra, nhóm gạch ý này đi và quay lại outcome là giảm thời gian xử lý một bộ hồ sơ giải ngân online.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Có. Khi lab coach hỏi "Liên kết với VNeID vậy mà AI agent riêng thì xử lý như thế nào?", em làm rõ dữ liệu hồ sơ phải lấy từ kho dữ liệu của nhà nước và lưu ở kho local riêng, đồng thời thu hẹp vai trò AI xuống chỉ hỗ trợ OCR, kiểm tra và phân loại giấy tờ, kiểm soát viên vẫn duyệt cuối.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Nhóm em chưa kiểm chứng: chưa phỏng vấn, survey hay research, nên chưa có kết quả nào để bất ngờ. Các con số trong card CRO vẫn là ước lượng của em, cần hỏi 2–3 người trực tiếp làm hồ sơ giải ngân để có baseline thật.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khó nhất là viết bottleneck và metric khi chưa có số đo thật. Card ghi nghẽn ở bước đọc và nhập (~45 trong ~80 phút/bộ), nhưng việc khách phản hồi chậm có thể do hồ sơ nằm chờ chứ không chỉ do nhập liệu, nên em phải thêm metric thời gian khách chờ và ghi rõ các số là ước lượng.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Em sẽ hỏi người làm hồ sơ thật trước để thay các con số ước lượng, và chuẩn bị sẵn câu trả lời về nguồn dữ liệu VNeID trước khi lên trình bày. Là nhóm trưởng, em lẽ ra nên hỏi lại khi nhóm chốt Workflow, vì card ban đầu ghi thử Rule (checklist) trước, chỉ lên Workflow nếu bước đọc giấy tờ vẫn nghẽn.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Bài toán nhóm em chọn là CRO nhập liệu phải kiểm tra, đọc và nhập hồ sơ giải ngân online lên hệ thống, nhưng xử lý chậm khiến khách phản hồi khoảng 2 lần/tháng và khoảng 3/10 bộ bị trả về vì thiếu hoặc sai. Quy trình gồm nhận hồ sơ, kiểm tra giấy tờ, đọc và trích thông tin, nhập hệ thống, đẩy duyệt và sửa nếu bị trả về, tổng khoảng 80 phút/bộ, trong đó bottleneck là bước đọc và nhập (khoảng 45 phút). Metric là giảm thời gian xử lý từ ~80 xuống 40 phút/bộ, số bộ bị trả về từ 3 xuống 1/tháng và thời gian khách chờ không quá 1 ngày làm việc, đo bằng cách ghi giờ nhận, bắt đầu và đẩy duyệt từng bộ trong 1 tháng; các số hiện vẫn là ước lượng. Boundary là AI chỉ hỗ trợ OCR, kiểm tra và phân loại giấy tờ, không tự duyệt hồ sơ; CRO kiểm tra lại các trường AI điền và kiểm soát viên duyệt cuối. Mức can thiệp là Workflow vì quy trình có các bước cố định và AI chỉ làm một bước trong đó, còn Rule (checklist) thì không đọc được giấy tờ scan. Nhóm chốt Go cho Workflow vì nếu AI đọc sai thì vẫn có người chặn lại trước khi hồ sơ được duyệt.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- [docs/01-worksheet.md](../../docs/01-worksheet.md): mẫu Job Story, Problem Card và prompt phản biện (CP1–CP2).
+- [docs/02-deliverable-example.md](../../docs/02-deliverable-example.md): bài làm mẫu (CP0).
+- [RULES.md](../../RULES.md), [RUBRIC.md](../../RUBRIC.md): quy định dùng AI và tiêu chí chấm.
+- [report/team/group_report.md](../team/group_report.md): bảng pitch của nhóm (mục 2.1).

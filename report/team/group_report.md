@@ -5,10 +5,10 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: 4Ward
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
-- Quyết định cuối: Go / Not Yet / No-Go
+- Candidate problem được chọn (1 câu): Khi có bộ hồ sơ giải ngân online mới, CRO muốn kiểm tra đủ giấy tờ và nhập lên hệ thống nhanh, để khách không phải chờ và phàn nàn vì xử lý chậm.
+- Quyết định cuối: Go
 
 ---
 
@@ -33,26 +33,32 @@
 
 ### 2.2. Cluster
 
+> Số thứ tự candidate theo bảng pitch mục 2.1.
+
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A | #2, #3, #4, #10 | Thông tin nằm rải rác ở nhiều nơi (app ngân hàng, email, chat, LMS), phải tự lục lại và gom |
+| B | #6, #7, #9 | Không nắm được ai đang làm việc gì và tiến độ đến đâu, phải nhắn hỏi lại |
+| C | #1, #5 | Phải tự đối chiếu, kiểm tra bằng tay trước khi nộp hoặc đẩy đi (đủ mục, đủ giấy tờ, nhập đúng); thiếu hoặc sai thì bị trả về hay trừ điểm |
+| D | #8, #11, #12 | Phải đọc nhiều nguồn rồi tổng hợp thành một bản có cấu trúc |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian từ lúc CRO nhận đến lúc đẩy duyệt một bộ hồ sơ giải ngân online (ước lượng hiện tại ~80 phút/bộ, chưa đo)
+├── Opportunity A: CRO mất nhiều thời gian đọc và trích thông tin từ giấy tờ để nhập hệ thống (bước 3–4, ~45/80 phút, ước lượng)
+├── Opportunity B: Hồ sơ bị trả về vì thiếu hoặc nhập sai (~3/10 bộ), mỗi lần sửa thêm ~15 phút
+└── Opportunity C: Khách chờ lâu vì hồ sơ nằm hàng đợi hoặc chờ bổ sung giấy tờ (chưa đo)
+     ✗ "Agent nội bộ liên kết VNeID"  ← solution, gạch bỏ khỏi tầng opportunity
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- "Agent nội bộ liên kết VNeID để lấy dữ liệu hồ sơ": là cách giải cho Opportunity A, không phải nhu cầu của CRO.
+- "AI đọc giấy tờ scan và điền sẵn các trường" (giả thuyết AI ở Card #1 của Trà): là giải pháp.
+- "Checklist giấy tờ + bắt buộc đủ trường khi nhập": là giải pháp Rule cho Opportunity B, để dành so sánh ở CP6.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
@@ -261,7 +267,7 @@ Vì sao:
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** Go
 
 **Lý do:**
 

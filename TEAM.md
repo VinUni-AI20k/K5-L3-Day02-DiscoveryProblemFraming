@@ -4,15 +4,15 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Candidate problem nhóm chọn (1 câu):
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Tên nhóm: CodeX
+- Candidate problem nhóm chọn (1 câu): Khi tiếp nhận một dự án outsource/maintain cũ (hoặc onboard thành viên mới) mà tài liệu cài đặt đã lỗi thời, Developer và Techlead lãng phí 4–8 tiếng để gỡ lỗi crash do xung đột thư viện/version; nhóm chọn bài toán chuẩn hóa môi trường bằng Docker (No-AI) kết hợp AI Workflow phân tích log lỗi build để giảm thời gian setup xuống dưới 30 phút.
+- Quyết định cuối (Go / Not Yet / No-Go): (Chưa quyết định)
 
 ## Thành viên
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | | | | |
+| 1 | Nguyễn Tiến Cường | 2A202603425 | Nhóm trưởng | cuong-sadboi |
 | 2 | | | | |
 | 3 | | | | |
 | 4 | | | | |
@@ -37,7 +37,30 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
+### NguyenTienCuong-2A202603425
+
+**Phần việc phụ trách:**
+
+- Nhóm trưởng điều phối nhóm CodeX, tham gia pitch và phản biện tại CP3.
+- (Sẽ cập nhật các task cụ thể sau khi nhóm chốt phân công CP4 - CP6).
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Hoàn thành báo cáo cá nhân CP1 (10 problem) và CP2 (3 Problem Card + quy trình nháp).
+- Chuẩn bị sẵn Card #1 để pitch với nhóm.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `report/individual/2A202603425_NguyenTienCuong.md`.
+- Lịch sử commit trên branch cá nhân / repo từ tài khoản `cuong-sadboi`.
+
+**Điều mình học được từ phần nhóm:**
+
+- (Sẽ điền sau khi hoàn thành phần làm việc nhóm ở CP7).
+
 ### HoVaTen-MSSV
+
+> *(Các thành viên khác rebase về và copy mục này thành tên mình để tự điền phần việc cá nhân)*
 
 **Phần việc phụ trách:**
 

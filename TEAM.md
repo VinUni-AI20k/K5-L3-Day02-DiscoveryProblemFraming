@@ -12,10 +12,10 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 |Phùng Quang trà |2A202604094|Nhóm  trưởng|https://github.com/phungtr|
-| 2 | | | | |
+| 1 | Phùng Quang Trà | 2A202604094 |Nhóm  trưởng| https://github.com/phungtr|
+| 2 | Nguyễn Tuấn Anh | 2A202604086 | Thành viên | TuanAnhNg131 |
 | 3 | Vũ Nam Khánh | 2A202604112 | Thành viên | khanhvnm |
-| 4 | Phạm Duy Thành| 2A202604075| | https://github.com/thanhtey1234|
+| 4 | Phạm Duy Thành | 2A202604075| | https://github.com/thanhtey1234|
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 

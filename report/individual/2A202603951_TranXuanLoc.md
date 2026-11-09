@@ -6,11 +6,11 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên:
-- MSSV:
-- Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm:
-- Link repo nhóm:
+- Họ tên: Trần Xuân Lộc 
+- MSSV: 2A202603951
+- Email trường (không bắt buộc, repo có thể để public): 26ai.loctx2@vinuni.edu.vn
+- Tên nhóm: NHOMSH
+- Link repo nhóm: https://github.com/duhocsinh4to10/K5-L3B-Day02-NHOMSH-DiscoveryProblemFraming/tree/main
 
 ---
 

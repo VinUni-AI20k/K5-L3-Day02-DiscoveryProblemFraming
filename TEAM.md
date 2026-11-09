@@ -67,8 +67,8 @@ Mỗi thành viên tự điền mục của mình.
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
 - Báo cáo cá nhân: `report/individual/2A202603937_BuiDangNhatNguyen.md` (commit `ae0c87c`, `2659d78`).
-- Báo cáo nhóm: Mục 1, Mục 2 (`2.1 -> 2.4` - CP3), Mục 3 (`3.1 Assumption Map`, `3.3 Research` - CP4), Mục 4 (`4.1 -> 4.3` - CP5) và Mục 6 (`6.1 -> 6.4` - CP6) trong `report/team/group_report.md`.
-- Tài liệu thiết kế chuyên môn và bộ câu hỏi phỏng vấn domain: `report/assets/2A202603937_cp5_cp6_workflow_and_ai_level.md`, `report/assets/cp4-survey-cauhoi.md`.
+- Báo cáo nhóm: Mục 1, Mục 2 (`2.1 -> 2.4` - CP3), Mục 3 (`3.3 Research` - CP4), Mục 4 (`4.1 -> 4.3` - CP5) và Mục 6 (`6.1 -> 6.4` - CP6) trong `report/team/group_report.md`.
+- Tài liệu thiết kế chuyên môn và hỗ trợ câu hỏi phỏng vấn domain: `report/assets/2A202603937_cp5_cp6_workflow_and_ai_level.md`, `report/assets/cp4-cauhoi-phongvan.md`.
 
 **Điều mình học được từ phần nhóm:**
 

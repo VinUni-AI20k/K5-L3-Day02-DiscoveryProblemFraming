@@ -126,19 +126,19 @@ Nhận yêu cầu tuyển dụng và tiêu chí
 ### Card muốn pitch nhất
 
 - Card số: 1
-- Vì sao: 
-- Câu hỏi muốn nhóm phản biện:
+- Vì sao: Có actor và thời điểm phát sinh công việc rõ ràng, thao tác lặp lại thường xuyên, kết quả có thể kiểm chứng trực tiếp bằng thời gian hoàn tất CRM và độ đầy đủ/chính xác của thông tin. Phạm vi MVP có thể giới hạn ở tạo bản nháp để nhân viên duyệt, tránh đề xuất AI thay con người quyết định.
+- Câu hỏi muốn nhóm phản biện:Đa số các cuộc gọi dạng spam để tư vấn khoản vay đều không được bắt máy hoặc có thì làm sao để đảm bảo được mô hình dự đoán đúng nhu cầu và khả năng trả của đối tượng.
 
 ### AI đã phản biện card thế nào
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| | | |
-
+| Mô tả “tệp khách hàng lớn, nhu cầu thực” chưa chứng minh pain cụ thể của người trực tiếp làm.|Đồng ý |Thu hẹp Card #1 vào thời gian nghe lại và nhập CRM sau từng cuộc gọi; xác định actor, điểm nghẽn và cách đo. |
+| Đề xuất AI ngay có thể rơi vào solution-first; một số phần chỉ cần rule hoặc cải tiến quy trình.||Đồng ý  ||Bổ sung phương án không AI cho cả ba card; chỉ dùng AI ở phần dữ liệu phi cấu trúc, không mặc định dùng Agent. |
 ---
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
-
++
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
 | Pitch Problem Card | | |

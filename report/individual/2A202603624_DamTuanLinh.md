@@ -43,7 +43,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | 2 |Người xem video tiếng nước ngoài khó tìm lại đúng đoạn có thuật ngữ cần học |Nhiều người đau, impact rộng |Tần suất gặp video không có phụ đề là bao nhiêu? Công cụ phụ đề/tìm transcript sẵn có đã đáp ứng đến đâu? |
 | 3 |HR khó tổng hợp, đối chiếu thông tin ứng viên từ nhiều hồ sơ và vòng phỏng vấn |Có nhiều nguồn thông tin không đồng nhất; mất thời gian chuẩn bị shortlist và trao đổi với trưởng bộ phận. |Quy mô tuyển dụng thực tế có đủ lớn? Có bộ tiêu chí đánh giá thống nhất và dữ liệu được phép dùng không? |
 
-### Problem Card #1 : 
+### Problem Card #1 :
 
 | Trường | Nội dung |
 |---|---|
@@ -138,7 +138,6 @@ Nhận yêu cầu tuyển dụng và tiêu chí
 ---
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
-+
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
 | Pitch Problem Card | | |

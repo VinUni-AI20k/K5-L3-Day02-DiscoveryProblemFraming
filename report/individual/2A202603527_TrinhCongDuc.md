@@ -9,8 +9,8 @@
 - Họ tên: Trịnh Công Đức
 - MSSV: 2A202603527
 - Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm:
-- Link repo nhóm:
+- Tên nhóm: BDHH
+- Link repo nhóm: https://github.com/trinhcongduc112/K5-L3A-DAY02-BDHH-DiscoveryProblemFraming
 
 ---
 

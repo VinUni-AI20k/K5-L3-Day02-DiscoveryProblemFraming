@@ -77,7 +77,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Khi tổng hợp phải giữ cùng phạm vi của baseline–target; số liệu trong báo cáo thành viên vẫn cần nguồn và quyền sử dụng được kiểm.
 - Công thức đúng không bảo đảm so đúng hạng mục; kiểm tổng tiền cần đi cùng mapping, đơn vị và truy vết.
 - Rule có thể phù hợp phần so số; hỗ trợ ghép ngữ nghĩa là bài toán mở rộng phải có đối chứng và người kiểm riêng.
-### DamTuanLinh-2A20263624
+### DamTuanLinh-2A202603624
 
 **Phần việc phụ trách:**
 
@@ -108,7 +108,8 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - **Báo cáo nhóm `report/team/group_report.md`:** Các nội dung liên quan đến nghiên cứu người dùng, xác định vấn đề, phạm vi giải pháp, mức can thiệp AI và định hướng Human-in-the-loop.
 - **Kết quả tác động:** Đóng góp bằng chứng thực tế để nhóm xem xét điều chỉnh định hướng từ AI tự động kết luận sang AI hỗ trợ đối soát hồ sơ.
 
-*Lưu ý: Các bằng chứng trên được tổng hợp từ hoạt động cá nhân đã cung cấp; chưa xác định đường dẫn file minh chứng, số mục chính xác hoặc commit/PR riêng nên không gán mã commit chưa được kiểm chứng.*
+- [Assumption map và snapshot tại e278c07](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/e278c07e098b3a8dc339a39d7d6e3dfe4b04c5e4/report/team/group_report.md); [tổng hợp phỏng vấn tại 4efec2b](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/commit/4efec2b075d78608d5365d380919f7331c9d2786): nguồn nội dung Linh cung cấp cho mục 3 báo cáo nhóm. Repo mới có một snapshot chi tiết; ngày/cách hỏi và hành vi từng người vẫn cần nguồn bổ sung.
+- [Báo cáo cá nhân](report/individual/2A202603624_DamTuanLinh.md), mục 4–6: nhật ký, cách dùng công cụ và phần hiểu bài; quyết định hiện tại là Rule/Not Yet cho pilot.
 
 **Điều mình học được từ phần nhóm:**
 

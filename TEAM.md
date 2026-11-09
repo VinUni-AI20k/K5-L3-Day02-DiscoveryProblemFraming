@@ -34,8 +34,6 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 ## Cá nhân
 
-Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
-
 ### NguyenVanNhi-2A202603697
 
 **Phần việc phụ trách:**
@@ -66,20 +64,24 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 ---
 
-### HoVaTen-MSSV
+###  Vũ Đức Minh - 2A202603673
 
 **Phần việc phụ trách:**
-
--
+- Điều phối công việc chung cả nhóm
+- Điền trường thông tin nhóm
+- Thực hiện phỏng vấn, thuyết trình ý tưởng của nhóm cho các thành viên khác trong lab
+- Phản biện cho bản Mô tả vấn đề (Problem Statement) sơ bộ
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
-
--
+- Đặt câu hỏi phản biện cho các vấn đề ban đầu
+- Thu thập phỏng vấn, thực hiện khảo sát kiểm chứng các giả định trong CP4
+- Xây dựng bản nháp Problem Statement thứ nhất
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
-
--
+- Bản nháp Problem Statement
+- [Phỏng vấn](./report/assets/cp4-interview-snapshot.md)
 
 **Điều mình học được từ phần nhóm:**
-
--
+- Không vội đề xuất giải pháp khi chưa định hình rõ vấn đề
+- Một vấn đề lớn có thể bao gồm nhiều mắt xích nhỏ, và mỗi mắt xích nhỏ có thể trở thành một bài toán của riêng nó
+- Cần cải thiện kỹ năng làm việc nhóm và sử dụng Git trong làm việc nhóm: Tình trạng người này đè file kia, conflict xảy ra liên tục làm chậm tiến độ thực hiện.

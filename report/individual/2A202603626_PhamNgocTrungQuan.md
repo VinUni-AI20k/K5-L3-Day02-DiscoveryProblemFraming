@@ -124,7 +124,7 @@ Tiếp nhận hóa đơn và chứng từ -> Kiểm tra tài liệu -> Đọc th
   - Có thực sự cần sử dụng LLM hay chỉ cần Embedding và thuật toán phân cụm?
   - Làm thế nào xác định hai report có cùng vấn đề nhưng cách diễn đạt khác nhau?
   - Cần xử lý thế nào khi AI phân loại sai hoặc không đủ độ tin cậy?
-  -  Có thể tiếp cận dữ liệu report thực tế để kiểm chứng vấn đề không? 
+  -  Có thể tiếp cận dữ liệu report thực tế để kiểm chứng vấn đề không?
   - Làm thế nào chứng minh hệ thống giúp tiết kiệm thời gian thay vì chỉ chuyển công việc từ đọc report sang kiểm tra kết quả AI?
 
 ### AI đã phản biện card thế nào
@@ -136,7 +136,7 @@ Tiếp nhận hóa đơn và chứng từ -> Kiểm tra tài liệu -> Đọc th
 | Chưa biết chính xác thời gian cho từng bước.                        |Đồng ý       | Xác định đọc, phân loại và so sánh là các bottleneck giả định; cần đo thời gian thực tế từng bước.                                                                             |
 | Chưa có baseline về chất lượng phân loại và phát hiện nội dung tương tự.                                                            |Đồng ý       | Bổ sung macro-F1, Precision@K và Recall làm metric đánh giá. Các ngưỡng chỉ là mục tiêu thử nghiệm.                                                                             |
 | AI có thể đề xuất ghép nhầm các report khác nhau.                                                            |Đồng ý       | Không tự động xóa hoặc gộp report. Nhân viên CSKH có quyền kiểm tra và quyết định cuối cùng.                                                                             |
-    
+
 ---
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)

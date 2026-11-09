@@ -7,7 +7,7 @@
 
 - Tên nhóm:
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
+- Candidate problem được chọn (1 câu): Hỗ trợ sinh viên đối chiếu bài làm với rubric, phát hiện tiêu chí chưa đáp ứng và gợi ý cải thiện trước khi nộp
 - Quyết định cuối: Go / Not Yet / No-Go
 
 ---
@@ -163,36 +163,58 @@ Hướng phù hợp hơn là:
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 
 ```text
+HIỆN TẠI — 5 bước, khoảng 55–60 phút, 5/5 bước thủ công
 
+[1. Mở bài làm + file Rubric: 5']
+   → [2. Đọc và bóc tách tiêu chí Rubric: 10']
+   → [3. Dò tìm minh chứng trong bài làm: 25'] ← BOTTLENECK CHÍNH
+   → [4. Ghi chú các điểm thiếu/lệch ra nháp: 10']
+   → [5. Bổ sung nội dung và nộp bài: 10']
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Sinh viên / Nhóm trưởng | File Rubric (PDF/Markdown) + Bản nháp bài làm (Word/PDF/Repo) | 2 cửa sổ làm việc song song | 5 phút / mỗi lần nộp bài | Thường diễn ra sát deadline (1–2 tiếng trước giờ đóng link nộp). |
+| 2 | Sinh viên | File Rubric môn học | Danh sách các tiêu chí và barem điểm cần đạt | 10 phút / lần | Rubric dài nhiều trang, cấu trúc phức tạp (tiêu chí nội dung, format, số lượng minh chứng). |
+| 3 | Sinh viên | Tiêu chí Rubric + Nội dung bài làm | Đánh giá chủ quan từng phần đã đạt hay chưa | 25 phút / lần (chiếm ~45% tổng thời gian) | **Bước nghẽn:** Phải cuộn và đọc song song giữa 2 văn bản; mỏi mắt, dễ sinh cảm giác chủ quan "nghĩ là mình đã viết đủ" nên bỏ sót. |
+| 4 | Sinh viên | Kết quả dò ở Bước 3 | Checklist các lỗi thiếu mục, sai format cần sửa | 10 phút / lần | Ghi chú vội vàng, thiếu liên kết trực tiếp tới vị trí cần bổ sung trong bài. |
+| 5 | Sinh viên | Checklist lỗi + Bài làm hiện tại | File bài làm hoàn chỉnh để nộp lên LMS | 10 phút / lần | Sát giờ nên thường chỉ sửa chắp vá các lỗi lớn, không kịp rà soát lại toàn diện. |
 
 **Bottleneck chính:**
+Bước 3 (Dò tìm minh chứng và đối chiếu từng tiêu chí Rubric với bài làm): Mất 25–30 phút. Sinh viên phải liên tục chuyển đổi ngữ cảnh (context switching) giữa tiêu chí đề bài và bài nộp dài nhiều trang. Thao tác thủ công này vừa gây mỏi mắt, vừa dễ vướng thiên kiến xác nhận (confirmation bias), dẫn đến việc bỏ sót các yêu cầu bắt buộc mà bản thân tưởng rằng đã đáp ứng.
 
 ### 4.2. Quy trình tương lai
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
 ```text
+TƯƠNG LAI — 5 bước, khoảng 18–20 phút, 2/5 bước thủ công
 
+[1. Upload bài làm + Rubric: 2']                       ← CON NGƯỜI
+   → [2. Parse & kiểm tra cấu trúc cơ bản: 1']         ← RULE (Script kiểm tra định dạng file, word count, mục lục bắt buộc)
+   → [3. Đối chiếu ngữ nghĩa & xuất Gap Analysis: 2']  ← AI (LLM map từng tiêu chí với trích dẫn minh chứng trong bài)
+   → [4. Rà soát báo cáo khoảng trống (Review Gap): 10'] ← CON NGƯỜI (HITL - kiểm tra lại các cảnh báo 'Chưa đạt' / 'Thiếu minh chứng')
+   → [5. Chỉnh sửa bài làm và nộp bài: 5']             ← CON NGƯỜI
+
+BOUNDARY:
+- AI KHÔNG tự ý chỉnh sửa nội dung bài làm hoặc ghi đè file gốc.
+- AI KHÔNG tự động nộp bài lên hệ thống LMS thay cho sinh viên.
+- AI KHÔNG đưa ra phán quyết điểm số chính thức (tránh ảo giác "chắc chắn được điểm A").
+- BẮT BUỘC AI phải trích dẫn số trang / trích đoạn văn bản làm bằng chứng khi kết luận một tiêu chí là "Đã đạt". Nếu không tìm thấy bằng chứng, gắn cờ "Cần người dùng xác nhận".
+
+PHƯƠNG ÁN QUAY VỀ:
+- Nếu AI gặp lỗi (timeout, ảo giác, nhận xét chung chung không có dẫn chứng): Sinh viên bỏ qua output của AI và sử dụng bảng checklist tiêu chuẩn do bước Rule sinh ra ở Bước 2 để tự rà soát thủ công theo cách cũ.
 ```
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 5 bước | 5 bước | Số bước tương đương nhưng bản chất thao tác nặng nhất đã được tự động hóa. |
+| Tổng thời gian | 55–60 phút | 18–20 phút | Giảm ~65% thời gian rà soát, giảm áp lực tâm lý trước deadline. |
+| Số bước thủ công | 5/5 (100%) | 3/5 (60%) | Con người chỉ làm khâu chuẩn bị input (Bước 1), thẩm định nhận định (Bước 4) và quyết định sửa (Bước 5). |
+| Bottleneck chính | Dò tìm minh chứng thủ công (25') | Sinh viên review gợi ý & chỉnh sửa (10') | Điểm nghẽn dịch chuyển sang bước gia tăng giá trị: con người tư duy và hoàn thiện bài. |
+| Rủi ro mới phát sinh | — Bỏ sót lỗi do mỏi mắt và chủ quan. | 1) AI hallucinate: báo sót nội dung dù bài đã có, hoặc xác nhận nhầm tiêu chí đạt.<br>2) Sinh viên ỷ lại, tin tưởng tuyệt đối vào nhận xét của AI mà không tự kiểm tra. | Khống chế bằng Rule lọc sơ bộ + Bắt buộc trích dẫn bằng chứng + Cảnh báo disclaimer rõ ràng. |
 
 ---
 
@@ -200,16 +222,19 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Sinh viên đại học (cá nhân hoặc nhóm trưởng) chuẩn bị nộp bài tập lớn/báo cáo kỹ thuật. |
+| **Quy trình** | Trước hạn nộp 1–2 giờ: mở Rubric và bài làm song song, đọc từng tiêu chí, tự dò tìm nội dung/minh chứng đối ứng, ghi checklist lỗi và sửa đổi trước khi nộp lên LMS/Canvas. |
+| **Bottleneck** | Bước dò tìm minh chứng và đối chiếu tiêu chí Rubric tốn 25–30 phút/lần nộp, dễ sinh cảm tính chủ quan hoặc mỏi mắt dẫn đến bỏ sót các tiêu chí phụ bắt buộc. |
+| **Impact** | Tốn 50–60 phút cho mỗi bài nộp; 2/3 sinh viên được phỏng vấn từng bị trừ 1–2 điểm do thiếu minh chứng hoặc lệch yêu cầu đề bài; gây căng thẳng tột độ sát giờ deadline. |
+| **Success Metric** (baseline → target, cách đo) | - **Thời gian rà soát:** Từ baseline 55–60' (đo thực tế) xuống target dưới 20' (đo bằng bấm giờ trong 3 lần nộp bài tiếp theo).<br>- **Tỉ lệ sót lỗi tiêu chí cứng:** Giảm từ ~30% sót lỗi format/mục bắt buộc xuống 0% trong các bài nộp thử nghiệm. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | - AI KHÔNG tự sửa file bài làm, KHÔNG tự nộp bài, KHÔNG đưa ra phán quyết điểm số chính thức thay giảng viên.<br>- BẮT BUỘC con người (sinh viên) phải thẩm định các khuyến nghị của AI trước khi quyết định chỉnh sửa bài nộp. |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
 
--
+- **Phản biện 1 (Về Metric):** AI chỉ ra rằng Success Metric hiện tại chỉ đo được yếu tố tốc độ (giảm từ 60' xuống 20') và các tiêu chí cứng (format, mục bắt buộc), chưa đo được chất lượng bài nộp thực tế (liệu điểm số có thực sự cải thiện hay không).
+  - *Nhóm đồng ý:* Sẽ bổ sung chỉ số đo lường về tỷ lệ phản hồi chính xác của AI so với nhận xét thật của giảng viên/trợ giảng trong phiên bản v1 (CP6).
+- **Phản biện 2 (Về Tiêu chí định tính):** Rubric thường có các tiêu chí trừu tượng như "lập luận chặt chẽ", "ý tưởng sáng tạo". Nếu AI nhận xét bừa về các mục này, sinh viên có thể bị định hướng sai.
+  - *Nhóm đồng ý:* Nhóm xác định ranh giới rõ ràng: AI chỉ làm nhiệm vụ kiểm tra sự hiện diện của cấu trúc luận điểm (ví dụ: có câu chủ đề và dẫn chứng hay không), tuyệt đối không phán xét độ "sáng tạo" hay "sâu sắc" thay cho con người.
 
 ---
 

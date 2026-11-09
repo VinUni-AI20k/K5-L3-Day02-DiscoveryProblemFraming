@@ -145,7 +145,7 @@ Nhận yêu cầu tuyển dụng và tiêu chí
 | Nhận phản biện | Câu hỏi tôi nhận được: Giọng vùng miền và tiếng ồn ngoại cảnh, sẽ gặp nhiều khó khăn về detech voice đặc biệt là số liệu về khoản vay, khoản trả nợ, thông tin của khách hàng, cần tối ưu mô hình như thế nào | Tôi đã sửa gì: không chỉ tối ưu một model, mà xây dựng pipeline nhận dạng giọng nói kết hợp xử lý âm thanh, fine-tuning và kiểm chứng dữ liệu tài chính. |
 | Gom cluster / cây OST | | |
 | Chọn candidate problem | | |
-| Kiểm chứng / research | | |
+| Kiểm chứng / research |Đã phỏng vấn 3 người làm về đấu thầu xây dựng | Kết quả kiểm chứng đã giúp nhóm điều chỉnh định hướng bài toán từ hệ thống AI tự động phát hiện sai lệch và đưa ra kết luận đánh giá sang công cụ AI hỗ trợ đối chiếu, rà soát hồ sơ (AI-assisted Document Review), áp dụng cơ chế Human-in-the-loop, trong đó AI đóng vai trò hỗ trợ phát hiện chênh lệch, còn chuyên viên chịu trách nhiệm kiểm chứng và đưa ra quyết định cuối cùng. |
 | Quy trình nhóm | | |
 | Problem Statement | | |
 | Mức can thiệp AI | | |
@@ -159,8 +159,8 @@ Nhận yêu cầu tuyển dụng và tiêu chí
 |---|---|---|---|---|
 | CP1 Scan |Dùng AI hỗ trợ diễn đạt và rà soát 5 ý tưởng ban đầu theo các lăng kính lặp lại, tốn thời gian và cần tổng hợp nhiều thông tin; kiểm tra cách viết Job Story. |Giúp nhận ra actor, bối cảnh và công việc cần hoàn thành trong từng ý; phát hiện các mô tả còn thiên về giải pháp. |AI lấy ví dụ không thực tế không thực sự hiểu nỗi đau khách hàng | Sửa các ví dụ theo quan điểm cá nhân + thảo luận ý kiến của mọi người |
 | CP2 Problem Card |Nhờ AI cấu trúc 3 Problem Cards, phác thảo quy trình 3–7 bước, chỉ ra bottleneck, đề xuất metric, phương án không A |Biến các ý tưởng rộng thành công việc cụ thể: nhập CRM sau cuộc gọi, tìm timestamp trong video, tổng hợp hồ sơ ứng viên; |Tương tự CP1 |Tương tự CP1 |
-| CP4 Research | |  | | |
-| CP5 Quy trình | | | | |
+| CP4 Research |Gợi ý câu hỏi xoáy sâu vào vấn đề|Câu hỏi hay dễ hiểu tập trung vào vấn đề|không có|không sửa gì phù hợp với mong muốn |
+| CP5 Quy trình |Gợi ý quy trình phù hợp đi kèm với các giải pháp công nghệ rõ ràng| | | |
 | CP5–6 Problem Statement | | | | |
 | CP6 Mức can thiệp / quyết định | | | | |
 
@@ -189,8 +189,12 @@ Khó khăn lớn nhất khi xây dựng Problem Statement là phân biệt rõ v
 Nếu làm lại tôi sẽ bắt đầu sớm hơn với vấn đề cốt lõi. Tôi sẽ phản biện nhóm mạnh hơn dựa vào những điểm yếu của AI như không thể chính xác 100%, không có khả năng chịu trách nhiệm, và đào sâu vào vấn đề cốt lõi của bài toán.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
-- Problem: Việc đối chiếu hồ sơ nhà thầu dẫn đến tốn thời gian và nguy cơ bỏ sót sai lệch quan trọng -> Quy trình hiện tại chuyên viên phải tổng hợp hồ sơ từ 4 nhà thầu với khoảng hơn 4000 dòng dữ liệu mỗi hồ sơ tương đương với 16000 dòng dữ liệu đối chiếu, thông qua 8 bước thủ công -> metric: Nhóm đặt mục tiêu giảm từ 5 6h xuống 1,5h cho 1 lần rà soát -> Boundary: Hệ thống không được tự ý thay đổi số liệu nhà thầu, bỏ qua dòng chưa đối chiếu được hoặc tự quyết định nhà thầu đạt hay trúng thầu, mọi trường hợp bất thường phải được chuyên viên kiểm tra và xác nhận-> Mức can thiệp AI: Nhóm nhận thấy việc so sánh dữ liệu số đã có cấu trúc không nhất thiết cần AI, vì có thể giải quyết hiệu quả bằng Rule-based Automation như Excel Formula, Conditional Formatting và Power Query.-> Quyết định Nhóm đề xuất GO với Rule-based Automation và NOT YET đối với AI, ưu tiên thử nghiệm trên hồ sơ thực tế để đánh giá hiệu quả trước khi quyết định mở rộng sang AI Workflow hoặc Agent.
+
+Vấn đề của nhóm là chuyên viên mất nhiều công soát chênh lệch khối lượng và đơn giá trong bảng chào giá nhà thầu. Quy trình đã chọn bắt đầu từ bảng ghép đúng mã, đơn vị và phiên bản, sau đó kiểm đầu vào, tính chênh lệch, rà cảnh báo và xác nhận kết quả trước trình. Baseline riêng phần soát là 5–6 giờ/vòng theo Vinh, còn target là dưới 90 phút công/vòng gồm kiểm, sửa và ngoại lệ; công gom được báo riêng. Boundary yêu cầu giữ số gốc, không bỏ dòng chưa xử lý, không tự chọn hoặc loại nhà thầu và phải truy được kết quả về nguồn. Nhóm chọn Rule vì dữ liệu đã có cấu trúc và phép so số có quy tắc kiểm được, còn ghép file sai mẫu là hướng mở rộng. Quyết định hiện tại là Not Yet cho pilot, chờ quyền dữ liệu, mapping, cấu hình và đáp án được xác nhận. Nếu nhận sai mapping hoặc bỏ sót chênh đã biết thì dừng dùng output để trình; sau hai vòng mà vẫn từ 90 phút/vòng trở lên hoặc không tốt hơn No AI cải tiến thì dừng mở rộng và quay về phương án đã kiểm.
+
 ---
 ## 7. Tài liệu tham khảo
 
--
+- [Báo cáo nhóm](../team/group_report.md), mục 3 và 6–8: nguồn kiểm chứng được cung cấp, Rule và Not Yet cho pilot.
+- [Cập nhật phỏng vấn tại 4efec2b](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/commit/4efec2b075d78608d5365d380919f7331c9d2786); [TEAM.md](../../TEAM.md): nguồn ghi nhận đóng góp và giới hạn bằng chứng.
+- [PR #10](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/10), [PR #11](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/11): phạm vi và quyết định đã công bố.

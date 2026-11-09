@@ -261,39 +261,111 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 ## 6. Mức can thiệp AI (CP6)
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
+**Bài toán:** Kiểm tra chênh lệch khối lượng, đơn giá và các thông tin bất thường trong hồ sơ chào giá gói thầu cơ điện
 
-Bài của nhóm nằm ở ô:
+**Bối cảnh:**
 
-Vì sao:
+Một gói thầu có khoảng 4.100 dòng BOQ, 4 nhà thầu tham gia chào giá, tương đương khoảng 16.000 dòng cần đối chiếu mỗi vòng
+Theo dữ liệu từ Problem Card cá nhân, quá trình kiểm tra mất khoảng 5–6 giờ/vòng và một gói thầu có thể trải qua 2 vòng chào giá
 
-### 6.2. So sánh 4 mức
+**Đánh giá các công đoạn:**
 
-| Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
+| Công đoạn | Độ mơ hồ | Độ phức tạp | Nhận định |
+|---|---|---|---|
+| So khối lượng chào với BOQ | Thấp | Cao về khối lượng dữ liệu | Có thể sử dụng công thức và Rule |
+| Phát hiện đơn giá chênh lệch | Trung bình | Trung bình | Rule phát hiện, con người đánh giá nguyên nhân |
+| Gom file đúng mẫu | Thấp | Trung bình | Power Query, Macro |
+| Ghép file sai mẫu | Cao | Cao | Workflow kết hợp AI hỗ trợ đối chiếu ngữ nghĩa |
+| Đánh giá hồ sơ năng lực | Cao | Cao | AI trích xuất bằng chứng, chuyên viên quyết định |
+
+**Vị trí của bài toán chính:** Độ mơ hồ thấp khi bảng đã ghép đúng mã/đơn vị và quy tắc rõ; nhiều nguồn/bước phụ thuộc nhau tạo độ phức tạp tích hợp. Số dòng lớn riêng nó không chứng minh cần Agent.
+
+Khó khăn chính không nằm ở việc cần AI suy luận mà nằm ở số lượng dòng phải kiểm tra lớn, thao tác thủ công lặp lại và nguy cơ bỏ sót các chênh lệch
+
+### 6.2. So sánh bốn mức can thiệp
+
+| Mức | Phương án | Khả năng giải quyết | Hạn chế | Lựa chọn |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| No AI | Chuẩn hóa mẫu, checklist mã/đơn vị/phiên bản, phân công kiểm và quản lý BOQ chung; soát thủ công theo cách đã cải tiến | Có thể đủ khi phạm vi nhỏ hoặc công soát sau cải tiến đạt mục tiêu | Cần đo công còn lại sau cải tiến, không mặc định bằng hiện trạng 5–6 giờ/vòng | Đối chứng cần thử trước khi chọn Rule |
+| Rule | Sử dụng Excel Formula, Conditional Formatting, Power Query để phát hiện chênh lệch | Có thể kiểm tra toàn bộ dòng đã khớp mã, tự động tính chênh khối lượng và đơn giá | Cần dữ liệu được ghép đúng, chưa tự hiểu file sai mẫu | **Ưu tiên cho bài toán chính** |
+| Workflow | Kết hợp bước nhập dữ liệu, kiểm tra, tổng hợp và xuất báo cáo, bổ sung AI khi cần xử lý dữ liệu phi cấu trúc | Giảm thao tác giữa các bước, hỗ trợ xử lý nhà thầu chào sai mẫu | Phụ thuộc dữ liệu đầu vào và khả năng đối chiếu | Cân nhắc cho bài toán mở rộng |
+| Agent | Hệ thống tự lựa chọn công cụ, phân tích hồ sơ và thực hiện nhiều bước | Linh hoạt với tác vụ có nhiều ngoại lệ | Chi phí cao, khó kiểm soát, nguy cơ kết luận sai | Chưa cần thiết |
 
-**Mức chọn:**
+**Mức lựa chọn đề xuất: Rule-based Automation**
 
-**Vì sao không chọn mức đơn giản hơn:**
+**Lý do:**
+
+- Chênh lệch khối lượng có thể xác định chính xác bằng phép tính
+- Chênh lệch đơn giá có thể phát hiện bằng công thức và ngưỡng cảnh báo
+- Không cần sử dụng LLM để xử lý dữ liệu số đã có cấu trúc
+- Dễ kiểm thử, giải thích kết quả và đối chiếu với file gốc
+- Giảm chi phí và rủi ro so với phương án dùng Agent
+
+**Trường hợp có thể sử dụng AI:**
+
+Khi nhà thầu gửi bảng chào giá không theo mẫu, mô tả hạng mục khác cách diễn đạt trong BOQ, AI có thể đề xuất ghép các dòng tương ứng theo ý nghĩa
+Đây là công đoạn thuộc Problem Card #2, không phải bước so sánh số liệu của Problem Card #1
 
 ### 6.3. AI Canvas rút gọn
 
+Phương án Rule chính không cần AI Canvas theo worksheet. Bảng dưới là bản chuẩn bị riêng cho hướng mở rộng ghép file sai mẫu nếu sau này có bằng chứng cần AI; không tính lợi ích của hướng này vào target soát Rule.
+
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| **Prediction** | Với file sai mẫu, AI đề xuất mã BOQ hoặc hạng mục tương ứng cho từng dòng chào giá dựa trên nội dung mô tả |
+| **Judgment** | Chuyên viên KTKT kiểm tra mã dòng, quy cách, đơn vị tính, khối lượng và sự phù hợp của đề xuất |
+| **Action** | Hệ thống tạo bảng đối chiếu và danh sách dòng bất thường, chuyên viên xác nhận trước khi sử dụng |
+| **Outcome** | Giảm thời gian kiểm tra và ghép bảng, không bỏ sót dòng chênh khối lượng, tổng tiền khớp file gốc |
+| **Input** | BOQ gốc, bảng chào giá của nhà thầu, mã hạng mục, mô tả, đơn vị tính, khối lượng và đơn giá |
+| **Feedback** | Các dòng được chuyên viên chấp nhận, chỉnh sửa hoặc từ chối, kết quả soát lại trên gói thầu đã có đáp án |
 
-### 6.4. Hai câu hỏi của Google PAIR
+**Điểm can thiệp chính:**
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+- Rule phát hiện chênh lệch số liệu
+- AI hỗ trợ đối chiếu mô tả hạng mục không đồng nhất
+- Chuyên viên KTKT kiểm tra và xác nhận kết quả
+- Lãnh đạo tiếp tục chịu trách nhiệm phê duyệt theo quy trình
+
+**Boundary:**
+
+- Không tự động kết luận nhà thầu đạt hoặc không đạt
+- Không tự động lựa chọn nhà thầu trúng thầu
+- Không thay đổi file chào giá gốc
+- Không tự sửa khối lượng hoặc đơn giá do nhà thầu cung cấp
+- Không tự ghép các dòng thiếu căn cứ đối chiếu
+- Không sử dụng dữ liệu hồ sơ ngoài phạm vi được cấp quyền
+- Các trường hợp thiếu mã, trùng mã hoặc không khớp tổng tiền phải được chuyển cho chuyên viên kiểm tra
+- Khi hệ thống không thể xác định kết quả đáng tin cậy, quay về quy trình kiểm tra thủ công
+
+### 6.4. Hai câu hỏi Google PAIR
+
+Các câu trả lời sau phục vụ hướng mở rộng có AI và cần actor xác nhận. Không coi chúng là bằng chứng nhóm đã chọn hoặc thử AI trong phạm vi Rule.
+
+**1. Người dùng muốn được hỗ trợ hay giao hẳn việc cho hệ thống?**
+
+Đề xuất kết hợp cả hai cách tùy theo công đoạn
+Đối với việc so sánh khối lượng, đơn giá và tổng tiền theo các công thức đã xác định, có thể tự động hóa hoàn toàn bước tính toán
+Đối với việc ghép file sai mẫu, nhận diện hạng mục tương đương và đánh giá nguyên nhân chênh lệch, hệ thống chỉ đưa ra gợi ý và bằng chứng để chuyên viên xác minh
+Cách tiếp cận này giúp giảm thao tác lặp lại nhưng vẫn giữ trách nhiệm chuyên môn và quyết định ở con người
+Đây là đề xuất thiết kế, cần được xác nhận với người trực tiếp xử lý hồ sơ
+
+**2. AI sai kiểu nào tệ hơn, báo nhầm hay bỏ sót?**
+Đối với bài toán này, bỏ sót một chênh lệch quan trọng có thể gây hậu quả lớn hơn vì ảnh hưởng đến việc so sánh giá trị chào thầu
+
+- False Positive: Cảnh báo dòng bất thường nhưng thực tế có lý do hợp lệ, khiến chuyên viên phải kiểm tra thêm
+- False Negative: Không phát hiện dòng chênh lệch thực sự, khiến thông tin bất thường không được đưa ra xem xét
+
+Do đó, ưu tiên phát hiện đầy đủ các chênh lệch khối lượng có thể xác định bằng công thức
+Đối với đơn giá, cảnh báo bất thường không đồng nghĩa với đơn giá sai, mà chỉ là tín hiệu cần người phụ trách kiểm tra
+
+**Phương án kiểm soát:**
+
+- Đối chiếu theo mã dòng và đơn vị tính
+- Kiểm tra toàn bộ chênh lệch khối lượng bằng Rule
+- Không tự động bỏ qua những dòng chưa ghép được
+- Lưu giá trị gốc, giá trị tính toán và lý do cảnh báo
+- Kiểm tra tổng giá trị sau khi ghép bảng
+- Chuyên viên xác nhận kết quả trước khi trình lãnh đạo
 
 ---
 
@@ -331,26 +403,78 @@ Vì sao:
 
 ### 8.1. Bốn rủi ro
 
-| Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
+| Rủi ro | Mức độ sơ bộ | Lý do và bằng chứng | Phương án xử lý |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value Risk** | Thấp đến trung bình | Đã có dấu hiệu thực tế về khối lượng khoảng 16.000 dòng/vòng và thời gian kiểm tra 5–6 giờ/vòng, nhưng chưa đo hiệu quả của phương án mới | Thử nghiệm trên gói thầu cũ và so sánh thời gian trước/sau |
+| **Usability Risk** | Trung bình | Chuyên viên quen sử dụng Excel, hệ thống mới có thể gây khó khăn nếu thay đổi cấu trúc làm việc | Giữ định dạng Excel quen thuộc, hiển thị rõ dòng sai lệch và cho phép kiểm tra thủ công |
+| **Feasibility Risk** | Trung bình | Công thức có thể xử lý dữ liệu đúng mã dòng, nhưng file sai mẫu và mã hạng mục không khớp có thể gây lỗi | Tách bước kiểm tra cấu trúc, bước ghép dữ liệu và bước phát hiện chênh lệch |
+| **Viability Risk** | Trung bình | Giải pháp Rule có chi phí triển khai tương đối thấp, nhưng cần duy trì quy tắc và bảo mật dữ liệu chào giá | Ưu tiên công cụ sẵn có, phân quyền truy cập, đo chi phí vận hành và thời gian tiết kiệm |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định đề xuất cá nhân: GO với Rule-based Automation cho Problem Card #1**
 
+Đây là đề xuất của người phụ trách để nhóm review, không phải quyết định chung hoặc kết quả pilot. Trước thử cần xác nhận quyền dùng dữ liệu, mapping/đơn vị/phiên bản, ngưỡng và đáp án được người domain duyệt. Baseline được dẫn theo báo cáo Vinh, không thay kiểm chứng CP4 ngoài nhóm.
+**Đối với AI: NOT YET**
 **Lý do:**
 
-**Nếu Go — pilot nhỏ nhất:**
+Problem Card #1 đã có dấu hiệu thực tế rõ ràng về khối lượng dữ liệu, thời gian xử lý và những chênh lệch cần phát hiện
+Các phép so sánh khối lượng và đơn giá có thể thực hiện bằng công thức khi dữ liệu đã được ghép đúng mã dòng
+Vì vậy, chưa có lý do đủ mạnh để sử dụng AI hoặc Agent thay cho Rule ở công đoạn này
+AI có thể được nghiên cứu thêm cho việc xử lý file sai mẫu và đối chiếu mô tả hạng mục, nhưng cần kiểm chứng riêng lợi ích so với Power Query hoặc các quy tắc ghép dữ liệu
 
-**Nếu Not Yet — cần kiểm chứng gì trước:**
+**Pilot nhỏ nhất nếu GO:**
 
-**Nếu No-Go — nên làm gì thay AI:**
+Sử dụng một bộ hồ sơ chào giá đã xử lý trước đây, gồm 4 nhà thầu, khoảng 4.100 dòng BOQ và hai vòng chào giá nếu dữ liệu đầy đủ
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+**Các bước thử nghiệm:**
+
+1. Chuẩn bị BOQ và bảng chào giá gốc
+2. Chuẩn hóa mã hạng mục và kiểm tra đơn vị tính
+3. Sử dụng Rule phát hiện chênh lệch khối lượng
+4. Tính toán chênh lệch đơn giá theo ngưỡng được thống nhất
+5. Xuất danh sách dòng cần kiểm tra
+6. Đối chiếu kết quả với bảng đã được chuyên viên rà soát
+7. Đo thời gian xử lý và số trường hợp bị bỏ sót
+
+**Success Metrics:**
+
+| Metric | Baseline từ bài cá nhân | Target |
+|---|---|---|
+| Thời gian soát một vòng | 5–6 giờ/vòng | Dưới 1,5 giờ/vòng |
+| Thời gian soát một gói hai vòng | 10–12 giờ/gói | Dưới 3 giờ/gói |
+| Phát hiện chênh lệch khối lượng ở dòng khớp mã | Chưa đo số dòng bị bỏ sót | Không bỏ sót dòng có chênh lệch trong bộ kiểm thử |
+| Tổng tiền đối chiếu | Cần kiểm tra từng file gốc | Khớp 100% với các giá trị nguồn theo cùng phương pháp tính |
+| Số lần lãnh đạo hỏi lại hoặc trả lại | Khoảng 4 lần ở gói gần nhất | Không tăng so với baseline |
+
+**Điều kiện để mở rộng sang AI Workflow:**
+
+- Có các trường hợp file sai mẫu xảy ra lặp lại
+- Phương án Rule hoặc Power Query không ghép được đầy đủ dữ liệu
+- AI giúp giảm thời gian ghép bảng mà không làm sai thông tin
+- Các dòng AI ghép có thể được truy xuất và kiểm tra
+- Có người chịu trách nhiệm xác nhận kết quả
+
+**Ngưỡng dừng:**
+
+- Tổng tiền trong bảng tổng hợp không khớp với file gốc mà không giải thích được
+- Hệ thống bỏ sót chênh lệch khối lượng trong dữ liệu đã khớp mã
+- Không phát hiện hoặc không cảnh báo các dòng thiếu mã, trùng mã hay không ghép được
+- Sau tối đa hai vòng pilot cùng phạm vi soát, nếu tổng công xử lý + kiểm/sửa/ngoại lệ vẫn từ 90 phút/vòng trở lên hoặc không tốt hơn No AI cải tiến thì dừng mở rộng và rà soát lại phương án
+- Khi tổng chi phí thiết lập/vận hành/kiểm tra vượt lợi ích thời gian tiết kiệm quy đổi theo cách tính được nhóm duyệt trước pilot thì dừng mở rộng
+- Không đảm bảo quyền truy cập và bảo mật hồ sơ chào giá
+
+**Phương án quay về:**
+
+Tiếp tục sử dụng file Excel gốc, công thức kiểm tra và quy trình rà soát thủ công của chuyên viên KTKT
+Không sử dụng kết quả ghép dữ liệu chưa xác minh để tính toán hoặc trình lãnh đạo
+
+**Kết luận:**
+
+Bài toán có cơ sở để tự động hóa vì khối lượng dữ liệu lớn, thao tác lặp lại và có chỉ số thời gian thực tế
+Tuy nhiên, giải pháp phù hợp nhất với Problem Card #1 là Rule-based Automation thay vì AI Agent
+Việc sử dụng AI chỉ nên triển khai ở các bước cần hiểu nội dung phi cấu trúc, đặc biệt khi xử lý bảng chào giá không theo mẫu hoặc tài liệu hồ sơ năng lực
+Quyết định cuối cùng vẫn cần được nhóm xác nhận dựa trên kết quả kiểm chứng và đánh giá của các actor liên quan
 
 ---
 

@@ -129,36 +129,70 @@ Tổng hợp:
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 
 ```text
-
+cp5-workflow-current.jpeg
 ```
+![Current Workflow](../assets/cp5-workflow-current.jpeg)
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1. Tìm và mở lại tài liệu | Sinh viên | Slide, giáo trình trên Drive; ghi chú trên Notion | Tài liệu của 1 môn đã mở sẵn | ~20'/môn, 6 môn/đợt ôn |  |
+| 2. Đọc lướt, xác định các chương | Sinh viên | Tài liệu đã mở, danh mục môn | Danh sách chương cần tóm tắt | ~10'/môn | Danh mục chương của giảng viên là mốc đối chiếu về sau |
+| 3. Tóm tắt từng chương thành ý chính  | Sinh viên | Slide + giáo trình + ghi chú của từng chương (thứ tự dựa trên danh sách chương) | Ý chính từng chương | ~90-120'/môn (trong tổng 2-3 giờ) | Đọc lại và chọn ý, chưa tách rõ “đọc” với “viết”. Có thể đọc chiếm phần lớn thời gian |
+| 4. Đánh dấu phần mình chưa nắm | Sinh viên | Bản tóm tắt ý chính từng chương | Bản tóm tắt có đánh dấu chỗ yếu | ~10'/môn | Dựa vào cảm giác chủ quan |
+| 5. Gộp lại thành đề cương | Sinh viên | Bản tóm tắt đã đánh dấu | Đề cương 1 môn | ~15'/môn |  |
+| 6. Xuất ra để ôn | Sinh viên | Đề cương | File/trang dùng để ôn | ~5'/môn | Chưa rõ định dạng (Notion, PDF, giấy) |
 
-**Bottleneck chính:**
+**Bottleneck chính:** Bước 3, tóm tắt từng chương: khoảng 90-120 phút trong tổng ~2,5 giờ/môn (chiếm khoảng 60-70%).  
+Lý do là bottleneck:
+- Bước lớn nhất theo thời lượng.
+- Là bước duy nhất vừa phải đọc nhiều tài liệu, vừa phải chọn ý, nên đúng chỗ công cụ tóm tắt có thể hỗ trợ.
+
 
 ### 4.2. Quy trình tương lai
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
 ```text
-
+cp5-workflow-future.jpeg
 ```
+![Future Workflow](../assets/cp5-workflow-future.jpeg)
+
+| Bước | Loại | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
+|---:|---|---|---|---|---|---|
+| 1. Gom tài liệu 1 môn | Rule/script | Công cụ | Slide, giáo trình trên Drive; ghi chú trên Notion | Thư mục môn + danh mục file | ~5' (hiện ~20') | Việc cố định, không cần hiểu nội dung. Cần quyền truy cập Drive và Notion. Chưa chắc làm được tự động hoàn toàn |
+| 2. Lấy danh sách chương chuẩn | Con người | Sinh viên | Đề cương môn học của giảng viên | Danh sách chương chuẩn | ~5' (hiện ~10') | Để sinh viên làm, không để AI tự suy ra chương. Đây là mốc kiểm tra độ phủ. Thời gian giảm xuống nếu có đề cương từ giảng viên. Nếu không có thì giữ nguyên như hiện tại |
+| 3. Tóm tắt từng chương | AI | AI | Thư mục môn + danh mục file (từ bước 1) + Danh sách chương chuẩn (từ bước 2) | Bản nháp tóm tắt từng chương (có chỉ nguồn) | ~10' (hiện 90-120') | Bước thay thế bottleneck cũ. Bắt buộc chỉ rõ nguồn để sinh viên kiểm tra |
+| 4. Đối chiếu độ phủ | Rule/script | Công cụ | Bản nháp tóm tắt từng chương (từ bước 3) + Danh sách chương chuẩn (từ bước 2) | Danh sách chương còn thiếu | ~2' | So khớp tên chương, không cần AI |
+| 5. Duyệt, sửa, đánh dấu phần chưa nắm | Con người (boundary) | Sinh viên | Bản nháp tóm tắt từng chương (từ bước 3) + Danh sách chương còn thiếu (từ bước 4) + Thư mục môn + danh mục file (từ bước 1, để đối chiếu nguồn) | Bản tóm tắt đã duyệt, có đánh dấu chỗ yếu | ~25' | Gộp bước “duyệt” với bước “đánh dấu” cũ. Bottleneck mới. Gộp hai việc thực hiện cùng một lượt đọc, chưa đo riêng từng việc. Nếu khi đo riêng bước nào chiếm nhiều thời gian hơn thì Bottleneck mới sẽ ở bước đó |
+| 6. Gộp và xuất đề cương | Con người | Sinh viên | Bản tóm tắt đã duyệt, có đánh dấu chỗ yếu (từ bước 5) | Đề cương 1 môn |~8' | Dùng template đề cương có sẵn |
+
+**Tổng:** khoảng 55 phút/môn (hiện khoảng 150 phút). Mục tiêu là dưới 60 phút/môn.  
+
+**Boundary: AI không được làm gì**
+- Không tự quyết định chương nào được bỏ qua.
+- Không tự đánh dấu một chủ đề là “đã nắm”. Việc này chỉ sinh viên làm.
+- Không thêm kiến thức ngoài tài liệu đã gom (để tránh bịa).
+- Không sửa hoặc xóa tài liệu gốc.
+- Không để sinh viên dùng bản nháp để ôn khi chưa qua bước 5.
+
+**Phương án quay về**
+| Tình huống | Làm gì |
+|---:|---|
+| AI tóm sai, sót ý hoặc quá nhạt ở một chương | Bỏ bản nháp chương đó, sinh viên tự tóm theo template đề cương cũ. Chương còn lại giữ nguyên |
+| Bước 4 báo nhiều chương thiếu | Chạy lại bước 3 cho các chương đó. Nếu vẫn thiếu, tự tóm tay |
+| AI hoặc script ngừng hoạt động | Quay về quy trình hiện tại ở mục 4.1 (khoảng 150 phút/môn). Mất thời gian nhưng không mất đề cương |
+
+**Bottleneck mới**: Bước 5: sinh viên duyệt, sửa, đánh dấu phần chưa nắm (~25 phút). Chấp nhận được vì đây là điểm kiểm soát chất lượng. Nếu rút ngắn quá mức thì AI sai không bị phát hiện, và đó chính là rủi ro lớn nhất của candidate này.
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 6 | 6 | Số bước không giảm. Cái đổi là ai làm từng bước . Bước “đánh dấu phần chưa nắm” được gộp vào bước duyệt, nhưng thêm 2 bước mới là lấy danh sách chương chuẩn và đối chiếu độ phủ |
+| Tổng thời gian | ~150 phút/môn (2,5 giờ), 6 môn ≈ 15 giờ | ~55 phút/môn, 6 môn ≈ 5,5 giờ | Giảm khoảng 95 phút/môn (khoảng 63%). Đạt mục tiêu dưới 60 phút/môn của card. Số “trước” có thể lên 180 phút nếu bước tóm tắt mất 120 phút. Số “sau” chưa ai thử, nên cần bấm giờ thật |
+| Số bước thủ công | 6 trên 6 (toàn bộ do sinh viên làm tay) | 3 trên 6 (bước 2, 5, 6) | Rule/script làm 2 bước (gom file, đối chiếu chương), AI làm 1 bước (tóm tắt). Thời gian làm tay còn ~38 phút trong tổng 55 phút |
+| Bottleneck chính | Bước tóm tắt từng chương, ~90-120 phút (60-70% tổng thời gian) | Bước sinh viên duyệt, sửa, đánh dấu, ~25 phút (~45% tổng thời gian) | Bottleneck chuyển từ “tự tạo nội dung” sang “kiểm tra nội dung”. Chấp nhận được vì đây là điểm kiểm soát chất lượng, không nên rút ngắn thêm |
+| Rủi ro mới phát sinh | Không có rủi ro từ AI. Rủi ro hiện có: tự tóm tắt bị sót chương mà không biết | 1. AI tóm sai, sót ý hoặc bịa<br>2. Sinh viên tin bản nháp mà duyệt qua loa<br>3. Script gom file lỗi hoặc thiếu quyền truy cập<br>4. Tên chương trong slide không khớp đề cương, script đối chiếu sai<br>5. Phụ thuộc vào công cụ bên ngoài | Cách giảm: bắt buộc AI chỉ rõ nguồn (slide/trang), có bước đối chiếu độ phủ chương, có phương án quay về (tự tóm theo template cũ). Rủi ro 2 là rủi ro nguy hiểm nhất, vì mất hết lợi ích nếu duyệt hời hợt |
 
 ---
 
@@ -166,16 +200,20 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Sinh viên đại học tự dựng đề cương ôn thi cho nhiều môn (khoảng 6 môn/kỳ) từ slide, giáo trình và ghi chú nằm rải ở Drive, Notion |
+| **Quy trình** | Mỗi đợt ôn thi, với từng môn, sinh viên tìm và mở lại tài liệu, đọc lướt để xác định các chương, tóm tắt từng chương thành ý chính, đánh dấu phần chưa nắm, gộp thành đề cương rồi xuất ra để ôn |
+| **Bottleneck** | Bước tóm tắt từng chương mất khoảng 90-120 phút/môn (60-70% tổng thời gian), vì sinh viên phải đọc lại toàn bộ tài liệu rồi tự chọn ý chính. Giả định, chưa bấm giờ, chưa tách riêng “đọc” và “viết” |
+| **Impact** | Khoảng 150 phút/môn, 6 môn ≈ 15 giờ mỗi đợt ôn thi. Càng gần ngày thi càng dồn việc, dễ bỏ sót chương và ôn dàn trải |
+| **Success Metric** (baseline → target, cách đo) | Giảm thời gian dựng đề cương từ khoảng 150 phút xuống dưới 60 phút/môn; không bỏ sót chương nào so với đề cương môn học của giảng viên. Cách đo: bấm giờ từng bước khi dựng đề cương 1 môn, trước và sau; đối chiếu danh sách chương trong đề cương với danh mục chương của giảng viên. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI không tự quyết định chương nào được bỏ qua; không tự đánh dấu một chủ đề là “đã nắm”; không thêm kiến thức ngoài tài liệu đã gom; không sửa hoặc xóa tài liệu gốc. Sinh viên không dùng bản nháp để ôn khi chưa duyệt xong. Nếu AI sai hoặc ngừng hoạt động, sinh viên quay về tự tóm tắt theo template cũ. |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
 
--
+| Phản biện | Đồng ý? | Cách sửa đề xuất |
+|---|---|---|
+| NotebookLM và công cụ tương tự đã làm tốt bước tóm tắt, nên problem này có thể đã được giải | Đồng ý | Thu hẹp problem thành “kiểm tra bản tóm tắt AI có phủ hết chương và đúng ý không” |
+| Sinh viên có thể duyệt bản AI qua loa, mất lợi ích kiểm soát | Đồng ý | Thêm bước đối chiếu độ phủ chương bằng script, và yêu cầu AI chỉ rõ nguồn (slide/trang) |
+| Chỉ đo thời gian là chưa đủ, đề cương ngắn nhưng sai vẫn “thắng” | Đồng ý | Giữ điều kiện “không bỏ sót chương nào”. Thêm chỉ số: mỗi người làm thử 5 câu hỏi ôn từ đề cương, đếm câu không tìm được đáp án |
 
 ---
 

@@ -138,33 +138,7 @@ HIỆN TẠI — 15-20 phút loay hoay
 | Card 2: Dữ liệu giao thông mạng xã hội rất nhiễu, AI có thể bị hallucinate | Đồng ý | Giới hạn success metric vào tính tóm tắt nhanh thay vì chỉ đường tự động hoàn toàn | 
 | Card 3: Xử lý xe máy đòi hỏi tay chân thao tác vật lý, AI không thể vặn ốc thay | Đồng ý | Đổi trọng tâm sang "chuẩn đoán đúng bệnh" (Troubleshooting) thay vì sửa xe | 
 
-## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-*(Lưu ý: Các phần dưới đây là nội dung mẫu để bạn điền dựa trên thực tế thảo luận của nhóm).*
-
-| Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm | 
-| ----- | ----- | ----- | 
-| Pitch Problem Card | Trình bày Card số 1 về quản lý API Token | Nhóm thấy thiết thực nhưng quyết định chọn vấn đề khác quy mô lớn hơn | 
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: "Số liệu 10 giờ/tuần này em lấy từ đâu, có áp dụng đúng bối cảnh sinh viên Việt Nam không?" | Bạn cùng nhóm đã tìm thêm báo cáo khu vực châu Á để đối chiếu | 
-| Nhận phản biện | Câu hỏi tôi nhận được: "Làm sao AI tích hợp được hệ thống billing của OpenAI khi họ bảo mật khắt khe?" | Tôi đã sửa gì: Điều chỉnh thành dùng API key read-only hoặc export log CSV thay vì cào dữ liệu trực tiếp | 
-| Gom cluster / cây OST | Hỗ trợ nhóm gom nhóm các ý tưởng về "Tối ưu hóa thời gian" | Giúp nhóm chọn ra Candidate Problem thống nhất | 
-| Chọn candidate problem | Bỏ phiếu cho vấn đề "Đọc luận văn/bài báo nghiên cứu" | Vấn đề này trở thành trọng tâm của cả nhóm | 
-| Kiểm chứng / research | Tìm kiếm 3 bài báo nghiên cứu (Keshav 2007) về thói quen đọc tài liệu | Củng cố baseline cho success metric của nhóm | 
-| Quy trình nhóm | Vẽ quy trình As-is và đánh dấu bottleneck | Xác định chính xác bước "Đọc lướt & Ghi chú" là cổ chai | 
-| Problem Statement | Viết nháp version 1 | Nhóm dựa vào đó để tinh chỉnh thành version final | 
-| Mức can thiệp AI | Đề xuất mô hình Copilot (AI hỗ trợ tóm tắt, người dùng tự quyết định) | Chốt mức can thiệp là "Human-in-the-loop" | 
-| Quyết định | Bỏ phiếu "Go, phạm vi nhỏ" | Định hình hướng giải pháp cho Day 03 | 
-
-## 5. Dùng AI
-
-| Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? | 
-| ----- | ----- | ----- | ----- | ----- | 
-| CP1 Scan | Kiểm tra lại cú pháp Job Story | Phân tách rõ ràng giữa "Động cơ" và "Kết quả" | Đôi khi nhét từ "chatbot", "AI" vào giải pháp | Tự xóa các từ khóa thiên hướng công cụ (solution-first) | 
-| CP2 Problem Card | Đóng vai người phản biện (Devil's Advocate) | Chỉ ra lỗ hổng trong việc đánh giá thời gian của Bottleneck | Yêu cầu số liệu quá hàn lâm, khó tìm thực tế | Sử dụng số liệu ước lượng cá nhân dựa trên kinh nghiệm thực tế | 
-| CP4 Research | Tóm tắt các báo cáo dài thành bullet point | Rút trích nhanh kết luận của OECD/Atlassian | Không cung cấp link gốc chính xác (Hallucination) | Tự search Google lại các keyword để lấy URL thật | 
-| CP5 Quy trình | \- | \- | \- | Tự vẽ bằng text thuần túy | 
-| CP5–6 Problem Statement | Gợi ý cách diễn đạt ngắn gọn | Giúp cô đọng câu chữ từ 5 dòng xuống 2 dòng | Bỏ sót context (bối cảnh) của người dùng | Bổ sung lại bối cảnh cụ thể vào câu statement | 
-| CP6 Mức can thiệp / quyết định | So sánh Agent và Copilot | Phân biệt rõ quyền quyết định cuối cùng thuộc về ai | Đề xuất giải pháp xây hệ thống quá phức tạp | Quyết định "Go, phạm vi nhỏ" dùng tool có sẵn | 
 
 ## 6. Reflection (CP7)
 

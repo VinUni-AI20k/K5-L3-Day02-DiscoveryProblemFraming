@@ -12,10 +12,10 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| 1 | Nguyễn Thế Văn | 2A202603474 | Leader | zannngyn |
+| 2 | LeAnhSon | 2A202603440 | Member | sonleanh0289-cmd |
+| 3 | Lưu Đăng Tuấn | 2A202603454 | Member | kegacua |
+| 4 | Hoàng Nguyên Long | 2A202603476 | Member | longhn-0108 |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 

@@ -1,5 +1,5 @@
 # Team
-
+Link Meet : https://meet.google.com/meet/sba-xvdd-hgy
 > Điền file này trên repo chung do nhóm trưởng fork. Nhóm điền phần **Thông tin nhóm** và **Thành viên**. Mỗi người tự điền phần của mình trong **Cá nhân**. Không copy file này sang repo khác.
 
 ## Thông tin nhóm

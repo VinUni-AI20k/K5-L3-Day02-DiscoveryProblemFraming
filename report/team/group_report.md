@@ -88,7 +88,7 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 | #5 Truy vết tham số thí nghiệm | 4 | 3 | 3 | 3 | 4 | 4 | 3 | 24 |
 | #6 Hỗ trợ intern cài môi trường | 4 | 3 | 3 | 3 | 4 | 3 | 4 | 24 |
 | #7 Sàng lọc CV ứng viên | 5 | 4 | 4 | 4 | 4 | 4 | 3 | 28 |
-| #8 Đối chiếu hóa đơn - PO - Giao nhận (Chọn) | 5 | 5 | 4 | 5 | 5 | 5 | 4 | 3 |
+| #8 Đối chiếu hóa đơn - PO - Giao nhận (Chọn) | 5 | 5 | 4 | 5 | 5 | 5 | 4 | 33 |
 | #9 Phân loại ticket đổi trả CSKH | 4 | 4 | 3 | 3 | 4 | 4 | 3 | 25 |
 | #10 Trả lời câu hỏi trùng CSKH | 4 | 4 | 4 | 4 | 4 | 4 | 3 | 27 |
 | #11 Bàn giao ca trực bệnh viện | 4 | 4 | 5 | 4 | 2 | 4 | 2 | 25 |
@@ -129,39 +129,41 @@ Candidate #8: Đối chiếu thông tin hóa đơn từ nhà cung cấp với đ
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 |Sai lệch hoặc thiếu thông tin giữa các chứng từ thường xuyên xảy ra, gây chậm thanh toán và phát sinh xử lý lại. |Value |5 |1 |Có - Mức 3 |
+| 2 |Các phần mềm kế toán hiện tại chưa đáp ứng đầy đủ nhu cầu đối chiếu chứng từ hoặc xử lý các trường hợp sai lệch phức tạp. |Viability |4 |1 |Có - Mức 4 |
+| 3 |Hóa đơn, PO và GRN có thể được thu thập dưới dạng dữ liệu đủ rõ ràng để trích xuất các trường thông tin cần đối chiếu. |Feasibility |5 |2 |Có - Mức 5|
+| 4 |Nhân viên kế toán có thể dễ dàng kiểm tra, xác nhận kết quả đối chiếu và chấp nhận đưa kết quả vào quy trình hiện tại. |Usability |4 |1 |Có - Mức 6 |
 
-*Điền 4–6 giả định; xóa dòng thừa.*
 
 Giả định nhóm kiểm chứng trong buổi này:
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
+Nhóm sử dụng Desk Research và Competitor/Feature Audit để tìm hiểu quy trình đối chiếu chứng từ và khả năng xử lý của phần mềm kế toán hiện có.
 
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
+Evidence snapshot – MISA AMIS:
 
 | Trường | Nội dung |
 |---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+| Nguồn |Tài liệu hướng dẫn chính thức MISA AMIS – Mua hàng theo đơn mua hàng. |
+| Quy trình quan sát |Chọn PO → Lập chứng từ mua hàng → Tự động lấy thông tin từ PO → Kiểm tra và bổ sung thông tin còn thiếu. |
+| Phát hiện |Phần mềm đã hỗ trợ liên kết dữ liệu giữa PO và chứng từ mua hàng. |
+| Insight | Cần tập trung vào các trường hợp sai lệch hoặc thiếu thông tin mà quy trình hiện tại chưa xử lý tốt. |
+
+Nguồn: MISA AMIS – Mua hàng theo đơn mua hàng (https://helpact.misa.vn/kb/muahang_theodonhang/)
 
 Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Tài liệu MISA AMIS | 2 tài liệu | Có nhiều thông tin chứng từ cần kiểm tra và liên kết giữa PO, phiếu nhập, hóa đơn. | Phần mềm đã hỗ trợ tự động lấy dữ liệu và một số thao tác kiểm tra. |
+| Phân tích quy trình | 1 quy trình | Có bước kiểm tra thông tin và bổ sung dữ liệu còn thiếu. | Chưa có bằng chứng bước này thực sự mất nhiều thời gian. |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
+
+Nhóm đã sửa problem: Thu hẹp từ "Đối chiếu toàn bộ chứng từ kế toán" thành "Phát hiện sai lệch và thiếu thông tin giữa hóa đơn, PO và GRN". Nhóm tập trung vào các trường hợp ngoại lệ thay vì những thao tác phần mềm hiện tại đã hỗ trợ.
+
+Giả định chưa có đủ bằng chứng: Tần suất sai lệch, thời gian kế toán xử lý mỗi bộ chứng từ và mức độ ảnh hưởng thực tế đến quy trình thanh toán.
 
 ### 3.3. Research giải pháp đã có
 

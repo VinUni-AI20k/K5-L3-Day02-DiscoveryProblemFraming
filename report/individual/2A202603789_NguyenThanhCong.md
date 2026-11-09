@@ -177,11 +177,11 @@ Quy trình nháp hiện tại:
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
+| Pitch Problem Card |Tôi đã trao đổi về 3 problem card, nhận được các câu hỏi liên quan đến bảo mật, và khả thi trong thị trường hiện nay |Đóng góp problem card 1: đối chiếu hóa đơn. |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: 3 câu| |
+| Nhận phản biện | Câu hỏi tôi nhận được:3 | Tôi đã sửa gì: Bài toán phân loại đồng ý có thể chỉ cần rule based mà không cần đến AI và workflow phức tạp |
 | Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
+| Chọn candidate problem | Tham gia quá trình chấm điểm của short list | Kết quả sau khi pitch nhóm,chốt được bài toán với điểm số cụ thể |
 | Kiểm chứng / research | | |
 | Quy trình nhóm | | |
 | Problem Statement | | |

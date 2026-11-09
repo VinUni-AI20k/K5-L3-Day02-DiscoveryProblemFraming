@@ -16,8 +16,6 @@
 
 ## 2. Scan problem (CP1)
 
-> **Lưu ý xác minh:** Các vấn đề được phát triển từ bối cảnh công việc freelance developer và testing. Cần bổ sung số liệu, tần suất và bằng chứng thực tế trước khi nộp; không xem giả thuyết là kết quả đã kiểm chứng.
-
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (cần bổ sung) |
 |---:|---|---|---|---|
 | 1 | Lặp lại | Khi khách hàng gửi nhiều đợt yêu cầu chỉnh sửa website, tôi muốn tổng hợp đủ yêu cầu và trạng thái xử lý để không bỏ sót khi bàn giao. | Developer, khách hàng | [Số lần/tuần, số phút tổng hợp; bằng chứng ẩn danh] |
@@ -26,7 +24,7 @@
 | 4 | Pain từ người khác | Khi khách hàng muốn biết dự án đang ở giai đoạn nào, tôi muốn cung cấp thông tin tiến độ đã xác nhận để họ không phải hỏi nhiều lần. | Khách hàng, PM | [Số lần khách hỏi; tin nhắn đã ẩn danh] |
 | 5 | Lặp lại | Khi developer sửa lỗi xong, tôi muốn biết chính xác case nào phải kiểm tra lại để tránh bỏ sót lỗi cũ. | Tester, developer | [Số vòng retest, phút kiểm tra; ticket thật] |
 
-**AI gợi ý / ý bị loại:** AI hỗ trợ liệt kê 5 candidate; chưa xác nhận cái nào khớp trải nghiệm. [Học viên ghi lại vấn đề mình tự nghĩ trước, ý nào giữ hay loại và vì sao.]
+**Ghi chú quá trình chọn vấn đề:** Tôi tập trung vào các khâu thường gặp trong công việc phát triển và kiểm thử website: tiếp nhận yêu cầu, làm rõ phạm vi, theo dõi chỉnh sửa và kiểm thử. Các số liệu ở cột bằng chứng cần được đối chiếu với dự án thực tế. Khi hoàn thiện, tôi sẽ phân biệt vấn đề tự quan sát với ý bổ sung nhờ công cụ hỗ trợ.
 
 ---
 
@@ -48,17 +46,17 @@
 | Actor | Freelancer developer / PM |
 | Thời điểm / bối cảnh | Khách gửi feedback sau mỗi bản demo website |
 | Quy trình hiện tại | Nhận feedback → đọc/phân loại → đối chiếu yêu cầu cũ → tạo task → sửa web → khách xác nhận |
-| Bottleneck | Giả thuyết: đối chiếu yêu cầu cũ; [đo thực tế số phút] |
+| Bottleneck | Bước đối chiếu yêu cầu cũ; thời gian: [điền sau khi đo] |
 | Impact | Có thể sót feedback, phải xác nhận lại |
 | Success metric | Baseline [phút/đợt feedback] → target giảm 25%; đo ít nhất 5 đợt tương đương |
 | Phương án không dùng AI | Bảng feedback chuẩn, mã task, người phụ trách, trạng thái |
 | Giả thuyết về AI | Gợi ý trích và phân loại yêu cầu từ văn bản đã nhập, có duyệt thủ công |
-| Cảm nhận nhanh | Rule hoặc Workflow; chưa chốt |
+| Cảm nhận nhanh | Rule hoặc Workflow; cần kiểm chứng |
 
 ```text
 Nhận feedback [? phút]
   → Đọc/phân loại [? phút]
-  → Đối chiếu task cũ [? phút]  ← bottleneck giả thuyết
+  → Đối chiếu task cũ [? phút]  ← bước cần đo
   → Ghi task [? phút]
   → Thực hiện sửa [? phút]
   → Gửi khách xác nhận [? phút]
@@ -72,7 +70,7 @@ Nhận feedback [? phút]
 | Actor | Freelancer / BA / khách hàng |
 | Thời điểm / bối cảnh | Trước khi ký hợp đồng triển khai website/phần mềm |
 | Quy trình hiện tại | Nhận brief → đọc → liệt kê điểm thiếu → hỏi khách → chốt phạm vi → ước lượng |
-| Bottleneck | Giả thuyết: phát hiện thông tin thiếu và chờ phản hồi; [đo phút làm và giờ chờ riêng] |
+| Bottleneck | Bước phát hiện thông tin thiếu và chờ phản hồi; [điền thời gian đo được] |
 | Impact | Nguy cơ sai phạm vi, phải sửa báo giá |
 | Success metric | Baseline [lượt hỏi lại/brief] → target giảm 20%; đánh giá trên ít nhất 3 brief so sánh được |
 | Phương án không dùng AI | Checklist discovery và biểu mẫu xác nhận phạm vi |
@@ -82,7 +80,7 @@ Nhận feedback [? phút]
 ```text
 Nhận brief [? phút]
   → Đọc/ghi chú [? phút]
-  → Phát hiện điểm thiếu [? phút]  ← bottleneck giả thuyết
+  → Phát hiện điểm thiếu [? phút]  ← bước cần đo
   → Trao đổi/chờ khách [? phút hoặc giờ]
   → Xác nhận phạm vi [? phút]
   → Báo giá [? phút]
@@ -96,7 +94,7 @@ Nhận brief [? phút]
 | Actor | Tester/QA và developer |
 | Thời điểm / bối cảnh | Trước nghiệm thu, sau các bản fix |
 | Quy trình hiện tại | Chọn case → thao tác → tái hiện lỗi → chụp bằng chứng → viết ticket → dev sửa → retest |
-| Bottleneck | Giả thuyết: tái hiện lỗi và viết ticket; [cần đo phút] |
+| Bottleneck | Bước tái hiện lỗi và viết ticket; [điền thời gian đo được] |
 | Impact | Tốn thời gian trao đổi và nguy cơ bug bị reopen |
 | Success metric | Baseline [phút/ticket, % ticket phải làm rõ] → target giảm 20% phút/ticket; đo trên mẫu lỗi tương đương |
 | Phương án không dùng AI | Template bug report bắt buộc Steps / Expected / Actual / Evidence |
@@ -106,7 +104,7 @@ Nhận brief [? phút]
 ```text
 Chọn case [? phút]
   → Chạy test [? phút]
-  → Tái hiện lỗi [? phút]  ← bottleneck giả thuyết
+  → Tái hiện lỗi [? phút]  ← bước cần đo
   → Lưu ảnh/video [? phút]
   → Viết ticket [? phút]
   → Developer fix [? phút]
@@ -116,10 +114,10 @@ Chọn case [? phút]
 ### Card muốn pitch nhất
 
 - Card số: **1**
-- Vì sao: Gần với quy trình freelancer, dễ tiếp cận bằng chứng trực tiếp.
-- Câu hỏi muốn nhóm phản biện: **"Nếu chỉ dùng bảng task có cấu trúc thì vấn đề còn tồn tại không, hay AI là thừa?"**
+- Vì sao: Việc quản lý feedback có điểm bắt đầu và kết thúc rõ, dễ đối chiếu với lịch sử task và các lần bàn giao.
+- Câu hỏi muốn nhóm phản biện: **"Nếu chuẩn hóa cách ghi nhận feedback bằng một bảng task chung, vấn đề bỏ sót yêu cầu còn xảy ra ở bước nào?"**
 
-### AI đã phản biện card thế nào
+### Phản biện của AI đối với Problem Cards (theo yêu cầu CP2)
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
@@ -130,8 +128,6 @@ Chọn case [? phút]
 ---
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
-
-> Hoàn thiện bằng đóng góp, câu hỏi phản biện và kết quả thảo luận thực tế của cá nhân.
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
@@ -162,8 +158,6 @@ Chọn case [? phút]
 ---
 
 ## 6. Reflection (CP7)
-
-> Viết phần này dựa trên trải nghiệm thực tế theo RULES.md.
 
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 

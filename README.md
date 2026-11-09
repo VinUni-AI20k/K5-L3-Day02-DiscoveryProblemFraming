@@ -114,3 +114,5 @@ K5-<L3A hoặc L3B>-DAY02-TenNhom-DiscoveryProblemFraming/
 | 10' | — | Nghỉ | |
 | 25' | CP6 | Rule / Workflow / Agent + Problem Statement v1 + quyết định | Define |
 | 15' | CP7 | Reflection cá nhân | — |
+
+https://docs.google.com/document/d/1OrzhwvLptexKuslwbxTD4Kz40REOmDXx6-YOBkQyCAk/edit?usp=sharing

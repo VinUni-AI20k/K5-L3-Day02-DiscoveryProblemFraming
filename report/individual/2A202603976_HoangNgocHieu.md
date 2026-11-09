@@ -73,7 +73,7 @@ flowchart LR
     E --> F["6 Trình bày với mentor"]
   end
   C:::bottleneck
-  classDef bottleneck fill:#fde2e2,stroke:#c0392b
+  classDef bottleneck fill:#c0392b,stroke:#c0392b
 ```
 
 ### Problem Card #2 — Đồng bộ tài liệu thiết kế hệ thống (ERD/Use Case)
@@ -104,7 +104,7 @@ flowchart LR
     F --> G["7 Sửa code"]
   end
   B:::bottleneck
-  classDef bottleneck fill:#fde2e2,stroke:#c0392b
+  classDef bottleneck fill:#c0392b,stroke:#c0392b
 ```
 
 ### Problem Card #3 — Quản lý mã nguồn và xử lý Git conflict
@@ -134,7 +134,7 @@ flowchart LR
     E --> F["6 Sửa lỗi do gộp sai"]
   end
   D:::bottleneck
-  classDef bottleneck fill:#fde2e2,stroke:#c0392b
+  classDef bottleneck fill:#c0392b,stroke:#c0392b
 ```
 
 ### Card muốn pitch nhất

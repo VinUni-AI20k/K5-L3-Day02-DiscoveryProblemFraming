@@ -81,18 +81,27 @@ Mỗi thành viên tự điền mục của mình.
 - Điều phối thời gian, quản trị repo (fork, mời collaborator, merge PR)
 - CP4 kiểm chứng: phỏng vấn 2–3 kỹ sư DevOps/SRE, viết Interview Snapshot
 - CP4 Assumption Map
+- Mục 9 (Hạn chế) và mục 10 (Tài liệu tham khảo) của báo cáo nhóm
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
--
+- Soạn bộ câu hỏi phỏng vấn theo The Mom Test cho đề log đa nguồn
+- Phỏng vấn 5 người ngoài nhóm (DevOps/SRE, quản trị hệ thống, dev backend) qua gặp trực tiếp, gọi điện và nhắn tin; tổng hợp kết quả
+- Viết Assumption Map 6 giả định, bảng tín hiệu xác nhận / phản bác, và 3 điểm nhóm sửa problem sau kiểm chứng (baseline 15–30 phút, trọng tâm sự cố ngoài giờ, siết boundary)
+- Lập bảng phân công và timeline CP3–CP6 trong `TEAM.md`
+- Quản trị repo: chia nhánh, review và merge PR, kiểm tra conflict giữa các PR
+- Viết mục 9 và mục 10 của báo cáo nhóm
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
--
+- `group_report.md` mục 3.1, 3.2, 9, 10
+- `report/assets/cp4-cauhoi-phongvan.md`, `report/assets/cp4-interview-tonghop.md`
+- Commit `29eb7e3` (CP4, PR #8), `2798a48` (phân công trong `TEAM.md`, PR #6), `4294c15` (báo cáo cá nhân, PR #2)
 
 **Điều mình học được từ phần nhóm:**
 
--
+- Hỏi về hành vi đã xảy ra ("lần sự cố gần nhất mất bao lâu") cho ra số liệu khác hẳn con số ước lượng trong card: 15–30 phút thay vì 60–90 phút
+- Người dùng không từ chối tự động hóa, nhưng chỉ chấp nhận khi có ràng buộc rõ: whitelist, rollback và giới hạn thời gian
 
 ### Trần Gia Bảo — 2A202603914
 

@@ -6,7 +6,7 @@
 |---|---|
 | [Báo cáo nhóm](group_report.md) | Dự thảo CP3–CP6: candidate, cluster, cây cơ hội, shortlist, giả định, mô phỏng kiểm chứng, 3 nguồn research, quy trình trước/sau, v0/v1, mức can thiệp, eval, rủi ro và quyết định Not Yet đề xuất. |
 | [TEAM.md](../../TEAM.md) | Ba thành viên, phân công đề xuất, thông tin đóng góp hiện có và phần cần thành viên xác nhận. |
-| [Báo cáo Trần Minh Tân](../individual/2A202603688_TranMinhTan.md) | CP1–CP2 theo kịch bản minh họa, bảng tham gia, nhật ký AI và gợi ý reflection/giải thích bài nhóm. |
+| [Báo cáo Trần Minh Tân](../individual/2A202603688_TranMinhTan.md) | CP1–CP2 theo kịch bản minh họa, bảng tham gia, nhật ký AI và reflection về quá trình chuẩn bị/giải thích bài nhóm, có ghi mức hỗ trợ AI. |
 | [Bộ eval](../assets/cp6-cv-eval-synthetic.md) | 10 ca input/đáp án giả lập, tiêu chí và bảng ghi kết quả; chưa chạy. |
 
 Vấn đề đã chọn: sàng lọc CV, thu hẹp trong dự thảo thành hỗ trợ HR trích xuất bằng chứng theo JD. HR kiểm tra và tự quyết định; không tự xếp hạng hoặc loại hồ sơ.
@@ -36,7 +36,8 @@ Vấn đề đã chọn: sàng lọc CV, thu hẹp trong dự thảo thành hỗ
 - [x] Có file cá nhân và thông tin học tập do bản thân cung cấp.
 - [x] Chuyển danh sách thành viên, ba chủ đề của Toàn và lựa chọn CV của nhóm để tổng hợp.
 - [x] Có bộ dự thảo nhóm, phân công và eval được trợ lý hỗ trợ biên soạn.
-- [ ] Tự rà phần đóng góp và viết lại reflection theo trải nghiệm của mình; nội dung hiện tại là gợi ý do AI soạn.
+- [x] Có bản diễn đạt reflection về quá trình chuẩn bị, ghi rõ hỗ trợ AI; không kể thêm hoạt động chưa diễn ra.
+- [ ] Cập nhật đóng góp và trải nghiệm nếu nhóm có trao đổi hoặc kiểm chứng thực tế sau bản bàn giao.
 - [ ] Tổng hợp góp ý của hai thành viên vào một bản nhóm chung, tránh sửa cùng đoạn cùng lúc.
 
 ## Trước khi nộp chính thức

@@ -127,8 +127,12 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 
 - Học được cách tách một vấn đề lớn thành các phần giải được bằng quy trình/công cụ có sẵn (như checklist, template, môi trường đóng gói sẵn) trước khi quyết định đưa AI vào hỗ trợ ở đúng bước nghẽn nhất.
+
+  
 ### NguyenNgocHieu - 2A202603502
 **Phần việc phụ trách:**
 - Người phản biện chính ở CP3 & CP5, đối chiếu các phương án không dùng AI (No AI / Rule), tham gia phỏng vấn kiểm chứng (CP4) và xác định Boundary an toàn (CP5–CP6).
+  
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
 Không kịp thời gian đóng góp do đến muộn

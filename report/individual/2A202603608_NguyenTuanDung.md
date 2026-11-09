@@ -26,15 +26,16 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | toàn team, leader| |
 | 3 |Tốn thời gian | một bottleneck cần cải thiện,  nhưng sau nhiều lần bàn đi bàn lại, làm đi làm lại, chức năng vẫn sai, vẫn phải làm lại. chỉ 1 thay đổi nhỏ cũng ảnh hưởng đến toàn hệ thống chức năng. vấn đề ở đây là hệ thống sai hay con người sai? khi không ai phản biện được hệ thống, nhưng liệu có phải vì theo hệ thống mà người làm không control được code mình viết ra không?
 | toàn bộ team| |
-| 4 | | | | |
-| 5 | | | | |
+| 4 | Lặp lại, Tốn thời gian | Khi quay lại một đầu việc sau khi phải chuyển sang xử lý sự cố, tôi muốn nắm lại mình đã làm đến đâu và bước tiếp theo là gì, để tiếp tục công việc mà không phải đọc lại toàn bộ thông tin từ đầu. | Lập trình viên phải chuyển đổi giữa nhiều đầu việc | Gợi ý từ AI, chưa xác nhận bằng trải nghiệm cá nhân. Cần bổ sung một lần bị gián đoạn thật, thời gian khôi phục ngữ cảnh và số lần xảy ra trong tuần. |
+| 5 | Cần đọc, tổng hợp nhiều thông tin | Khi chuẩn bị kiểm tra một bản sửa chức năng, tôi muốn xác định đúng phiên bản yêu cầu đã được thống nhất, để không kiểm tra theo tài liệu cũ hoặc bỏ sót thay đổi trong các đoạn chat. | Lập trình viên, người kiểm thử, người chốt yêu cầu | Gợi ý từ AI, chưa xác nhận bằng trải nghiệm cá nhân. Cần bổ sung một lần có yêu cầu khác nhau giữa tài liệu và chat, thời gian đối chiếu và hậu quả thực tế. |
 | 6 | | | | |
 | 7 | | | | |
 | 8 | | | | |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
--
+- AI gợi ý thêm ý #4 (khôi phục ngữ cảnh sau gián đoạn) và #5 (xác định phiên bản yêu cầu đã chốt), dựa trên bối cảnh làm việc của ba ý đầu. Hai ý này đang là candidate để cân nhắc, chưa xác nhận giữ lại. Chỉ giữ khi đối chiếu được với trải nghiệm thật và bổ sung dấu hiệu cụ thể.
+- Khi chọn, cần phân biệt #4 với #2: #4 tập trung vào thời gian cá nhân khôi phục ngữ cảnh; #2 tập trung vào việc các bên không nắm cùng trạng thái và ưu tiên. Phân biệt #5 với #3: #5 tập trung vào việc xác định yêu cầu hiện hành; #3 hiện còn nhiều nguyên nhân làm lại cần tách rõ.
 
 ---
 
@@ -119,9 +120,17 @@ Quy trình nháp hiện tại:
 
 ### AI đã phản biện card thế nào
 
+Phản biện dưới đây dựa trên ba mô tả ở CP1, tương ứng dự kiến với Card #1–#3; các card chi tiết chưa được điền. Cột “Đồng ý?” và “Đã sửa gì” cần người viết tự xác nhận sau khi đối chiếu sự việc thật.
+
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| | | |
+| Card #1: Đang gộp việc học hệ thống, tìm PIC và truy lại lý do quyết định. Bước nào thực sự gây mất thời gian nhất? | Chưa xác nhận | Chưa ghi nhận thay đổi. Gợi ý: chọn một lần cần truy lại căn cứ quyết định, tách thời gian tìm người, chờ phản hồi và đọc thông tin. |
+| Card #1: Chưa biết lý do thiết kế đã được ghi nhưng khó tìm hay chưa từng được ghi. Nếu chưa có dữ liệu, công cụ tìm kiếm cũng không thể trả lời đáng tin cậy. | Chưa xác nhận | Chưa ghi nhận thay đổi. Gợi ý: kiểm tra một quyết định cụ thể và nguồn lưu; đối chiếu phương án không dùng AI như nhật ký quyết định có người cập nhật. |
+| Card #2: “Miss thông tin” và “pending” chưa cụ thể. Leader hỏi lại có thể do trạng thái chưa cập nhật, chưa được đọc hoặc ưu tiên vừa thay đổi. | Chưa xác nhận | Chưa ghi nhận thay đổi. Gợi ý: chọn một task thật, ghi ai quyết định dừng, lý do dừng, nơi cập nhật và thời điểm đổi ưu tiên. |
+| Card #2: Chưa rõ hậu quả chính và cách đo; hỏi lại tiến độ chưa đủ chứng minh có việc bị bỏ sót. | Chưa xác nhận | Chưa ghi nhận thay đổi. Gợi ý: chọn một chỉ số như thời gian báo cáo lại, số lần làm nhầm ưu tiên hoặc số việc trễ; đối chiếu bảng task chung trước khi cân nhắc AI. |
+| Card #3: Câu hỏi “hệ thống sai hay con người sai?” quá rộng. Chưa đủ căn cứ phân biệt yêu cầu thay đổi, hiểu sai nghiệp vụ, bỏ sót phụ thuộc hay thiếu kiểm thử. | Chưa xác nhận | Chưa ghi nhận thay đổi. Gợi ý: chọn một lần sửa cụ thể, mô tả kết quả mong đợi, kết quả thực tế và bước phát hiện sai. |
+| Card #3: “Thay đổi nhỏ ảnh hưởng toàn hệ thống” chưa chỉ ra chức năng bị ảnh hưởng và thời gian làm lại. Chưa có căn cứ kết luận người viết không kiểm soát được code. | Chưa xác nhận | Chưa ghi nhận thay đổi. Gợi ý: chỉ rõ phần phụ thuộc bị bỏ sót, số vòng sửa và thời gian từng vòng; thu hẹp card về một nguyên nhân có bằng chứng. |
+| Cả ba card: Chưa có quy trình 3–7 bước kèm thời gian, baseline và target. Chưa thể xác định chắc bottleneck hoặc chọn mức can thiệp. | Chưa xác nhận | Chưa ghi nhận thay đổi. Gợi ý: dựng quy trình từ từng sự việc thật, ghi rõ số đo hay ước lượng, bổ sung phương án không dùng AI và cách đo thành công. |
 
 ---
 

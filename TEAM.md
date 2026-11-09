@@ -24,13 +24,13 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
-| CP3 — Hội tụ nhóm | Phạm Nguyễn Tất Đạt | Toàn, Quang | Cluster, cây OST, bảng chấm điểm |
-| CP4 — Kiểm chứng | Nguyễn Ngọc Toàn | Đạt | Assumption map, interview snapshot |
-| CP4 — Research | Nguyễn Tuấn Quang | Đạt | Bảng research đối thủ có link |
-| CP5 — Quy trình trước/sau | Phạm Nguyễn Tất Đạt | Quang | Sơ đồ quy trình As-Is / To-Be + bảng before/after |
-| CP5 — Problem Statement v0 | Phạm Nguyễn Tất Đạt | Toàn | Problem Statement v0 |
-| CP6 — Mức can thiệp + Problem Statement v1 | Nguyễn Ngọc Toàn | Đạt | Ma trận mơ hồ/phức tạp, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định | Nguyễn Tuấn Quang | Đạt, Toàn | 4 rủi ro + Quyết định Go/Not Yet/No-Go |
+| CP3 — Hội tụ nhóm | Phạm Nguyễn Tất Đạt | Nguyễn Ngọc Toàn, Nguyễn Tuấn Quang | Cluster, cây OST, bảng chấm điểm |
+| CP4 — Kiểm chứng | Nguyễn Ngọc Toàn | Phạm Nguyễn Tất Đạt, Nguyễn Tuấn Quang | Assumption map, interview snapshot |
+| CP4 — Research | Nguyễn Tuấn Quang | Phạm Nguyễn Tất Đạt, Nguyễn Ngọc Toàn | Bảng research đối thủ có link |
+| CP5 — Quy trình trước/sau | Phạm Nguyễn Tất Đạt | Nguyễn Ngọc Toàn, Nguyễn Tuấn Quang | Sơ đồ quy trình As-Is / To-Be + bảng before/after |
+| CP5 — Problem Statement v0 | Phạm Nguyễn Tất Đạt | Nguyễn Ngọc Toàn, Nguyễn Tuấn Quang | Problem Statement v0 |
+| CP6 — Mức can thiệp + Problem Statement v1 | Nguyễn Ngọc Toàn | Phạm Nguyễn Tất Đạt, Nguyễn Tuấn Quang | Ma trận mơ hồ/phức tạp, AI Canvas, eval, Problem Statement v1 |
+| CP6 — Quyết định | Nguyễn Tuấn Quang | Phạm Nguyễn Tất Đạt, Nguyễn Ngọc Toàn | 4 rủi ro + Quyết định Go/Not Yet/No-Go |
 
 ## Cá nhân
 

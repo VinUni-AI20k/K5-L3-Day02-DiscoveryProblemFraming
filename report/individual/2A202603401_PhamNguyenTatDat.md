@@ -8,7 +8,7 @@
 
 - Họ tên: Phạm Nguyễn Tất Đạt
 - MSSV: 2A202603401
-- Email trường (không bắt buộc, repo có thể để public): dat.pnt202603401@sis.hust.edu.vn
+- Email trường (không bắt buộc, repo có thể để public): 
 - Tên nhóm: tido
 - Link repo nhóm:
 

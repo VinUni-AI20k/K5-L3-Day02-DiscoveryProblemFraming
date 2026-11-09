@@ -10,7 +10,7 @@
 - MSSV: 2A202603552
 - Email trường (không bắt buộc, repo có thể để public): 26ai.dungntt@vinuni.edu.vn
 - Tên nhóm: VuQuangThai
-- Link repo nhóm: https://github.com/vuThai05/K5-L3A-DAY02-VuQuangThai-2A202603545-DiscoveryProblemFraming.git
+- Link repo nhóm: https://github.com/vuThai05/K5-L3A-DAY02-NEU65-DiscoveryProblemFraming.git
 
 ---
 

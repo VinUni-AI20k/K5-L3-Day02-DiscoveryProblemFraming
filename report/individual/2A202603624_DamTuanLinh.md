@@ -39,9 +39,9 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 |Tổng hợp cập nhật thông tin CSKH|tệp khách hàng lớn, nhu cầu thực, | |
-| 2 |Sub + translate + định vị timeline | Nhiều người đau, impact rộng | |
-| 3 |Trợ lý HR tổng hợp thông tin ứng viên | | |
+| 1 |CSKH mất thời gian nghe lại cuộc gọi và cập nhật thông tin lên CRM | | |
+| 2 |Người xem video tiếng nước ngoài khó tìm lại đúng đoạn có thuật ngữ cần học | | |
+| 3 |HR khó tổng hợp, đối chiếu thông tin ứng viên từ nhiều hồ sơ và vòng phỏng vấn | | |
 
 ### Problem Card #1
 

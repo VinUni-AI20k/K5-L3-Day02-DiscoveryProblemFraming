@@ -39,9 +39,9 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 |Tổng hợp cập nhật thông tin CSKH|tệp khách hàng lớn, nhu cầu thực, | |
+| 2 |Sub + translate + định vị timeline | Nhiều người đau, impact rộng | |
+| 3 |Trợ lý HR tổng hợp thông tin ứng viên | | |
 
 ### Problem Card #1
 

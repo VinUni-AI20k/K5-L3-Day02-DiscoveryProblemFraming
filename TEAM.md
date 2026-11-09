@@ -85,4 +85,4 @@ Phụ trách chính phần CP6 và CP7: hoàn thiện ma trận lựa chọn m�
 
 **Điều mình học được từ phần nhóm:** 
 Học được cách xác định đúng ranh giới kiểm soát công nghệ (Human-in-the-loop) để tránh bẫy "solution-first", đồng thời rèn luyện kỹ năng điều phối, lắng nghe và dung hòa các góc nhìn đa chiều từ các thành viên để đạt được đồng thuận chung trong dự án.
--
+

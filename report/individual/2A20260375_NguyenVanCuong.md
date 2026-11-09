@@ -20,18 +20,15 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | Tốn thời gian | Khi tôi cần xử lý 1 ticket của khách hàng, tôi muốn được biết xem có gặp vấn đề đã gặp trước đây chưa, biết rõ cách làm luôn để giảm thời gian trao đổi, tìm kiếm cách làm  | Dev mới, Dev, khách hàng | Đọc và phân tích email (tầm 5-10 phút), hỏi lại khách hàng (trao đổi qua lại, chờ đợi mất nhiều thời gian 30p), tìm đọc tài liệu (10 phút)  |
-| 2 | Tốn thời gian | Khi phải đi khám tại bệnh viện, tôi muốn hệ thống dự đoán thời gian chờ, đề xuất khung giờ phù hợp và hướng dẫn các bước khám để giảm thời gian chờ đợi | Bệnh nhân, nhân viên tiếp đón, điều dưỡng, bác sĩ, bệnh viện. | Nghiên cứu tại Bệnh viện Quân y 103 trên 303 bệnh nhân năm 2024 ghi nhận thời gian chờ kết quả sinh hóa trung bình khoảng 98 phút.|
-| 3 | Lặp lại (Repetitive) |Khi nhận hàng trăm hóa đơn, phiếu thanh toán mỗi ngày, tôi muốn AI tự đọc, trích xuất thông tin và đối chiếu với đơn hàng để giảm nhập liệu thủ công và hạn chế sai sót.| Bộ phận Kế toán công nợ phải trả | - Theo Ardent Partners (2024), thời gian xử lý trung bình một hóa đơn AP là 9,15 ngày. |
-| 4 | Lặp lại | Tôi là 1 PM quản lý nhiều dự án, tôi muốn AI gen cho báo cáo tiến độ hàng tuần của các dự án  | PM | Khoảng 30 phút tổng hợp dữ liệu, làm slide | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
+| 1 | Tốn thời gian | Khi tôi cần xử lý 1 ticket hỗ trợ từ khách hàng, tôi muốn biết ngay vấn đề này đã từng gặp trước đây chưa và các bước xử lý chuẩn, để giảm thời gian tra cứu, tránh trao đổi lòng vòng và giải quyết sự cố nhanh chóng. | Dev mới (onboarding), Dev trực ca, khách hàng | Đọc và phân tích ticket/email mất 5–10 phút, tìm kiếm tài liệu nội bộ mất ~10 phút, hỏi lại khách hàng và chờ phản hồi mất 30–45 phút; tổng cộng mất 45–50 phút trước khi bắt đầu sửa lỗi thật sự. |
+| 2 | Tốn thời gian / Pain từ người khác | Khi phải thực hiện nhiều chỉ định khám và xét nghiệm tại bệnh viện, tôi muốn biết rõ thứ tự thực hiện tối ưu và thời gian chờ dự kiến tại từng phòng, để chủ động sắp xếp di chuyển, tránh đi lòng vòng giữa các khoa phòng và giảm bớt thời gian chờ đợi mệt mỏi. | Bệnh nhân ngoại trú, người nhà đi cùng, điều dưỡng tiếp đón / điều phối phòng khám, bác sĩ | Nghiên cứu tại Bệnh viện Quân y 103 trên 303 bệnh nhân năm 2024 ghi nhận thời gian chờ kết quả sinh hóa trung bình khoảng 98 phút; tổng thời gian khám ngoại trú kéo dài 3–4 tiếng; điều dưỡng liên tục bị ngắt quãng vì người bệnh hỏi thời gian chờ. |
+| 3 | Lặp lại (Repetitive) | Khi tiếp nhận dồn dập hàng trăm hóa đơn và chứng từ thanh toán nhiều định dạng mỗi ngày, tôi muốn nhanh chóng đối soát và phát hiện ngay các điểm sai lệch giữa chứng từ với đơn đặt hàng (PO/GRN), để xử lý thanh toán đúng hạn cho nhà cung cấp mà không phải nhập tay lặp đi lặp lại từng dòng hay chịu rủi ro thất thoát số liệu. | Kế toán công nợ phải trả (AP), kế toán trưởng, nhà cung cấp | Theo Ardent Partners (2024), thời gian xử lý thủ công trung bình một hóa đơn AP là 9,15 ngày; mỗi hóa đơn mất 15–30 phút nhập liệu và đối chiếu tay; vào kỳ chốt sổ cuối tháng nhân viên AP thường phải làm thêm giờ 2–3 tiếng/ngày. |
+| 4 | Cần đọc, tổng hợp nhiều thông tin | Khi đến hạn chốt báo cáo tiến độ tuần cho nhiều dự án song song, tôi muốn nhanh chóng nắm bắt bức tranh toàn cảnh, tiến độ thực tế các mốc bàn giao và các điểm nghẽn (blocker) phát sinh từ nhiều kênh công việc khác nhau, để kịp thời cảnh báo rủi ro cho ban giám đốc và khách hàng mà không phải mất hàng giờ thu thập, giục giã và gọt giũa dữ liệu thủ công. | Project Manager (PM), Scrum Master, Tech Lead, Ban Giám đốc / Khách hàng | PM quản lý 3–4 dự án mất 3–4 tiếng mỗi thứ Sáu chỉ để rà soát Jira/Git/email/chat, giục dev cập nhật trạng thái và tổng hợp slide báo cáo; 20–30% rủi ro/blocker phát sinh trong tuần bị phát hiện trễ do thông tin nằm rải rác. |
+| 5 | Pain từ người khác / Cần đọc, tổng hợp | Khi ứng dụng phát hành bản cập nhật mới nhận về hàng ngàn đánh giá trên App Store và Google Play, tôi muốn nhanh chóng gom nhóm các cụm phản ánh về lỗi kỹ thuật (crash, giật lag, lỗi giao dịch) và mức độ bức xúc của người dùng, để đội ngũ kỹ thuật ưu tiên vá lỗi nghiêm trọng kịp thời mà không phải cuộn đọc thủ công từng nhận xét rời rạc. | Product Owner (PO), Kỹ sư hỗ trợ ứng dụng / QA, người dùng cuối gặp lỗi | Mỗi đợt cập nhật lớn nhận 500–1.000 đánh giá/tuần; PO và QA mất 4–6 tiếng mỗi tuần đọc và phân loại thủ công; thường mất 3–4 ngày mới phát hiện ra luồng lỗi nghiêm trọng ảnh hưởng diện rộng, khiến điểm đánh giá ứng dụng bị kéo tụt từ 4.6 xuống dưới 4.0 sao. |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
--
+
 
 ---
 
@@ -49,7 +46,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi phải đi khám tại bệnh viện, tôi muốn hệ thống dự đoán thời gian chờ, đề xuất khung giờ phù hợp và hướng dẫn các bước khám, để giảm thời gian chờ đợi và di chuyển lòng vòng giữa các phòng |
+| Job Story | Khi phải thực hiện nhiều chỉ định khám và xét nghiệm tại bệnh viện, tôi muốn biết rõ thứ tự thực hiện tối ưu và thời gian chờ dự kiến tại từng phòng, để chủ động sắp xếp di chuyển, tránh đi lòng vòng giữa các khoa phòng và giảm bớt thời gian chờ đợi mệt mỏi |
 | Actor | Bệnh nhân đến khám, điều dưỡng / nhân viên tiếp đón, bác sĩ, bệnh viện |
 | Thời điểm / bối cảnh | Khi bệnh nhân đăng ký khám tại quầy hoặc qua app, trước khi vào khu chờ; bệnh viện đông bệnh nhân mỗi buổi sáng |
 | Quy trình hiện tại (3–7 bước) | 1. Bệnh nhân đến quầy đăng ký lấy số · 2. Ngồi chờ không biết bao lâu · 3. Điều dưỡng gọi theo thứ tự số · 4. Bệnh nhân di chuyển đến phòng khám · 5. Chờ tiếp tại phòng xét nghiệm hoặc chẩn đoán hình ảnh · 6. Nhận kết quả, quay lại bác sĩ · 7. Thanh toán và nhận đơn |
@@ -106,7 +103,7 @@ Vấn đề: Kiến thức nằm trong đầu dev cũ, không được lưu có 
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi nhận hàng trăm hóa đơn và phiếu thanh toán mỗi ngày, tôi muốn AI tự đọc, trích xuất thông tin và đối chiếu với đơn hàng, để giảm nhập liệu thủ công, hạn chế sai sót và rút ngắn thời gian xử lý công nợ |
+| Job Story | Khi tiếp nhận dồn dập hàng trăm hóa đơn và phiếu thanh toán mỗi ngày, tôi muốn nhanh chóng đối soát và phát hiện ngay các điểm sai lệch giữa chứng từ với đơn đặt hàng (PO/GRN), để giảm nhập liệu thủ công, hạn chế sai sót và rút ngắn thời gian xử lý công nợ |
 | Actor | Kế toán công nợ phải trả (AP), trưởng phòng kế toán, nhà cung cấp |
 | Thời điểm / bối cảnh | Hằng ngày khi hóa đơn từ nhà cung cấp đổ vào (email, scan, hệ thống ERP); đặc biệt vào cuối tháng khi khối lượng tăng đột biến |
 | Quy trình hiện tại (3–7 bước) | 1. Nhận hóa đơn qua email / scan / bản cứng · 2. Đọc và nhập tay từng trường dữ liệu vào ERP · 3. Đối chiếu với đơn đặt hàng (PO) và phiếu nhận hàng (GRN) · 4. Phát hiện sai lệch và hỏi lại nhà cung cấp hoặc bộ phận mua hàng · 5. Trưởng phòng phê duyệt · 6. Thanh toán |

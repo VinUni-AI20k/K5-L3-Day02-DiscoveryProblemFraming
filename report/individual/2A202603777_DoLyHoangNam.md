@@ -146,16 +146,16 @@ flowchart LR
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| **Pitch Problem Card** | Trình bày bài toán **Git Merge Conflict & Semantic Code Review**. Phân tích rõ rủi ro thực tế: Git hiện tại chỉ so sánh text thô, hoàn toàn không cảnh báo xung đột logic ngầm giữa các file, khiến việc merge code sát giờ demo dễ làm sập nhánh main. | Nhóm nhận thấy rõ tính cấp thiết và rủi ro sập hệ thống; thống nhất đưa bài toán vào vị trí ưu tiên số 1 của nhóm. |
+| **Phản biện bài của bạn khác** | Đặt câu hỏi phản biện cho Lê Anh Tuấn (Candidate #1): *"Đã có giải pháp nào tương tự chưa? Sản phẩm này có gì tốt hơn so với các sản phẩm đó?"* | Giúp các thành viên nhìn nhận lại rào cản cạnh tranh lớn của các đề tài khác (như bài đối chiếu bài lab dễ bị thay thế bởi template hoặc chatbot có sẵn); định hướng nhóm hội tụ về đề tài có khoảng trống thị trường thực sự. |
+| **Nhận phản biện** | Nhận 2 câu hỏi chất vấn từ nhóm:<br>1. *"Làm thế nào AI có thể biết chính xác mục đích của một đoạn code nếu không có tài liệu hoặc commit message giải thích?"* (Lê Anh Tuấn)<br>2. *"Tại sao nên sử dụng giải pháp AI của nhóm thay vì các công cụ sẵn có như GitHub Copilot hoặc Git Merge Tools?"* (Nguyễn Đức Mạnh) | **Lập luận bảo vệ & Thay đổi cụ thể:**<br>- *Trả lời câu 1:* AI phân tích cây cú pháp AST, call graph và các commit liền kề để suy luận logic, đồng thời luôn có bước Human-in-the-loop để dev xác nhận chứ AI không tự đoán mò.<br>- *Trả lời câu 2:* Git Merge Tools chỉ so sánh text thô, còn Copilot chỉ gợi ý code cục bộ; giải pháp của nhóm tập trung vào khoảng trống **Pre-merge Semantic Gatekeeper** (hiểu ý đồ nghiệp vụ và cảnh báo xung đột logic ngầm giữa các file).<br>- **Thay đổi sau phản biện:** Nhóm thống nhất bổ sung tính năng *"Pre-merge Semantic Check"* (cảnh báo sớm trước khi merge) vào quy trình tương lai. |
+| **Gom cluster / cây OST** | Cùng nhóm phân loại candidate vào cụm bài toán *"Tối ưu hóa quy trình phối hợp và chất lượng tích hợp code nhóm"*; xác định Outcome gốc: *"Giảm thiểu gián đoạn và lỗi hệ thống khi tích hợp sản phẩm nhóm"*. | Xây dựng cây Opportunity Solution Tree rõ ràng, tách bạch chuẩn xác giữa Nỗi đau/Cơ hội (Opportunity) và Tính năng/Công cụ (Solution). |
+| **Chọn candidate problem** | Cùng nhóm chấm điểm 7 tiêu chí cho shortlist; lập luận bảo vệ tính khả thi, khả năng đo lường metric và tính thực tế của bài toán Git Conflict. | Bài toán đạt điểm đánh giá cao nhất và chính thức được cả nhóm đồng thuận chọn làm đề tài chung. |
+| **Kiểm chứng / research** | Cùng bạn Mạnh thảo luận kết quả research về 3 công cụ (SemanticMerge, CodeRabbit, Copilot) để làm rõ khoảng trống thị trường. | Giúp nhóm hoàn thiện bảng research CP4 có dẫn chứng thuyết phục và link xác thực. |
+| **Quy trình nhóm** | Đóng góp ý kiến cho bạn Tuấn về các bước trong quy trình tương lai, nhấn mạnh bước Pre-merge Semantic Check và Fallback. | Quy trình CP5 của nhóm đảm bảo có bước Human-in-the-loop và phương án quay về an toàn. |
+| **Problem Statement** | Chịu trách nhiệm chính soạn thảo Problem Statement v1, xác định rõ AI intervention point và ranh giới cấm (Boundary). | Problem Statement v1 đạt chuẩn rubric với đầy đủ các trường và lý do thay đổi so với v0. |
+| **Mức can thiệp AI** | Phân tích ma trận độ mơ hồ × phức tạp; so sánh 4 mức No AI/Rule/Workflow/Agent; điền AI Canvas rút gọn và trả lời 2 câu hỏi Google PAIR. | Lập luận sắc bén bảo vệ việc chọn mức Workflow (Augment) thay vì Agent hay Rule đơn giản. |
+| **Quyết định** | Đánh giá toàn diện 4 rủi ro (Value, Usability, Feasibility, Viability); đề xuất quyết định Go kèm quy mô pilot và ngưỡng dừng (Kill criteria) cụ thể. | Nhóm có quyết định Go nhất quán, thực tế và có ngưỡng dừng đo lường được sau 4 tuần pilot. |
 
 ---
 
@@ -163,12 +163,12 @@ flowchart LR
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Gợi ý thêm các góc nhìn bài toán theo 4 lăng kính | Giúp liên hệ thêm các vấn đề về phân loại chi tiêu và khó khăn khi merge code nhóm | Gợi ý một số problem bị dính bẫy solution trá hình (như "cần một chatbot...") | Tự viết lại 100% theo chuẩn Job Story và bổ sung dấu hiệu thật đo được từ trải nghiệm của bản thân |
+| CP2 Problem Card | Đóng vai "PM hoài nghi" để phản biện 3 Problem Cards | Chỉ ra rủi ro nếu chỉ định nghĩa là "thiếu tool merge" thì sẽ trùng lặp với VS Code | Gợi ý để AI tự động merge code luôn (mức Agent) | Giữ vững ranh giới an toàn: AI chỉ đóng vai trò phân tích ngữ cảnh và đề xuất plan, con người bắt buộc phải duyệt (Workflow) |
+| CP4 Research | Tra cứu thông tin và đối chiếu tính năng của các công cụ trên thị trường | Liệt kê nhanh các công cụ như SemanticMerge, CodeRabbit và VS Code 3-way merge | Đưa ra một số nhận định chung chung về tính năng của GitHub Copilot | Tự truy cập website từng công cụ, kiểm tra tính năng thực tế để chỉ rõ khoảng trống về Semantic Conflict |
+| CP5 Quy trình | Chuyển đổi mô tả luồng công việc sang cú pháp sơ đồ Mermaid | Tạo cú pháp Mermaid nhanh chóng, chuẩn định dạng hiển thị | Gộp bước đọc diff và bước chờ đợi đồng đội thành một bước | Tách riêng bước chờ đợi đồng đội ra để làm nổi bật đây chính là nút thắt tốn thời gian nhất (15–30 phút) |
+| CP5–6 Problem Statement | Phản biện tính chặt chẽ của các trường trong Problem Statement v1 | Nhắc nhở bổ sung ranh giới cấm (Boundary) cụ thể và người chịu trách nhiệm kiểm tra | Đưa ra metric chung chung ("giúp merge nhanh hơn") | Tự đưa vào các con số định lượng cụ thể: thời gian giảm từ 35–45' về ≤ 8', bug giảm từ 15% về < 1% |
+| CP6 Mức can thiệp / quyết định | So sánh 4 mức can thiệp và gợi ý cấu trúc ngưỡng dừng đo lường | Cung cấp khung câu hỏi chuẩn của Google PAIR (Augment vs Automate, Báo nhầm vs Bỏ sót) | Đánh giá rủi ro kỹ thuật (Feasibility) là "Rất thấp" một cách quá lạc quan | Điều chỉnh rủi ro Feasibility lên mức "Trung bình" vì việc phân tích AST kết hợp LLM prompt đòi hỏi kiểm thử ngữ cảnh kỹ lưỡng |
 
 ---
 
@@ -178,30 +178,35 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 ### 6.1. Vai trò của tôi
 
--
+Trong buổi lab hôm nay, tôi đảm nhận vai trò là người đề xuất và bảo vệ đề tài chính (Git Merge Conflict & Semantic Code Review) trong nhóm B3. Tôi trực tiếp tham gia pitching, lập luận bảo vệ ý tưởng trước các câu hỏi phản biện của bạn Tuấn và bạn Mạnh. Về mặt phân công kỹ thuật, tôi chịu trách nhiệm chính hoàn thiện Checkpoint 3 (Hội tụ nhóm) và Checkpoint 6: phân tích ma trận độ mơ hồ/phức tạp, so sánh 4 mức can thiệp để chọn mô hình Workflow, thiết lập AI Canvas rút gọn, xây dựng bộ tiêu chí Eval và đánh giá 4 rủi ro để đưa ra quyết định Go kèm ngưỡng dừng pilot đo lường được.
 
 ### 6.2. Thay đổi quan điểm
 
--
+Lúc đầu ở CP1 và CP2, tôi từng cân nhắc lựa chọn bài toán "Checklist kiểm tra bài nộp lab dài" vì nghĩ rằng ai cũng sợ bị trừ điểm oan và bài toán này có phạm vi người dùng rất rộng. Tuy nhiên, khi được AI phản biện và thảo luận với nhóm, tôi nhận ra bài toán checklist lab rất dễ bị các công cụ LLM phổ thông (như ChatGPT, NotebookLM) thay thế chỉ bằng một câu prompt tóm tắt PDF. Ngược lại, bài toán Git Merge Conflict chạm đúng vào "nỗi đau kỹ thuật nhức nhối nhất" mà các công cụ hiện có (GitLens, VS Code 3-way merge) đang bỏ lọt: sự thiếu hụt ngữ cảnh nghiệp vụ và rủi ro sập server do xung đột logic ngầm. Trải nghiệm này giúp tôi hiểu rằng một bài toán tốt phải có khoảng trống giá trị thực sự chứ không chỉ là bề nổi của sự tiện lợi.
 
 ### 6.3. Giới hạn của AI
 
--
+Trong suốt buổi lab, tôi nhận thấy AI thường có xu hướng đề xuất các giải pháp mang tính "toàn năng" nhưng thiếu an toàn thực tế (ví dụ: AI từng gợi ý chọn mức Agent để tự động merge code vào nhánh main mà không cần người duyệt). Ngoài ra, khi phân tích rủi ro kỹ thuật (Feasibility), AI ban đầu đánh giá mức độ rủi ro rất thấp một cách quá lạc quan. Tôi đã phải dùng nhận định thực tế của một lập trình viên để kéo AI về thực tế: việc parse cây cú pháp AST kết hợp ngữ cảnh commit đòi hỏi kiểm thử rất khắt khe, và tuyệt đối không bao giờ được giao toàn quyền tự quyết cho AI khi liên quan đến mã nguồn nhánh main.
 
 ### 6.4. Bài học lớn nhất
 
--
+Bài học lớn nhất tôi rút ra là nguyên tắc "Problem first, not AI first". Trước đây khi nghĩ đến AI, tôi thường xuất phát từ việc "xây một con chatbot hay tool gì đó ngầu". Hôm nay, khi đi qua từng bước của Double Diamond, tôi hiểu rằng giá trị lớn nhất nằm ở việc bóc tách đúng nút thắt của quy trình (ở đây là 15–30 phút chờ đợi đồng đội giải thích code) và nhận diện đúng ranh giới của giải pháp: dừng lại ở mức Workflow để hỗ trợ con người (Augment) thay vì cố chấp tự động hóa toàn bộ (Automate).
 
 ### 6.5. Tự đánh giá
 
--
+Tôi tự đánh giá mình hoàn thành tốt 90% mục tiêu của buổi lab: từ việc scan rộng 10 problem có dấu hiệu thật, pitch thuyết phục thành công đề tài chính của nhóm, đến việc hoàn thiện bài bản toàn bộ CP6 trong báo cáo nhóm. Điểm tôi có thể làm tốt hơn là nếu có thêm thời gian, tôi muốn trực tiếp phỏng vấn thêm 2–3 bạn ở các lớp khác để thu thập thêm nhiều case xung đột code đa dạng hơn nữa.
 
 ### 6.6. Nếu làm lại từ đầu
 
--
+Nếu được làm lại từ đầu buổi lab, tôi sẽ phác thảo ngay kịch bản so sánh đối thủ (Competitive Benchmark) từ bước CP2. Việc hiểu rõ điểm yếu của GitLens và SemanticMerge từ sớm sẽ giúp việc tranh luận và hội tụ ở CP3 diễn ra nhanh chóng hơn mà không mất thời gian phân vân giữa các đề tài khác.
 
 ### 6.7. Tự giải thích chuỗi logic
 
 *Tự giải thích chuỗi problem → quy trình → metric → boundary → mức can thiệp → quyết định cho bài của nhóm bạn, bằng lời của chính bạn (coach có thể hỏi trực tiếp câu này):*
 
--
+- **Problem:** Lập trình viên trong nhóm đồ án mất 15–30 phút mỗi lần chờ đợi đồng đội trả lời để hiểu ngữ cảnh đoạn code conflict, và đối mặt với rủi ro bị xung đột logic ngầm (Semantic Conflict) giữa các file làm sập nhánh main trước giờ demo sản phẩm.
+- **Quy trình:** Khi phát hiện xung đột $\rightarrow$ Trợ lý AI đọc diff và commit context $\rightarrow$ Cảnh báo lỗi logic ngầm và sinh Action Plan 3 bước $\rightarrow$ Lập trình viên trực tiếp review và duyệt (HITL) $\rightarrow$ Chạy test kiểm tra tự động $\rightarrow$ Commit merge an toàn.
+- **Metric:** Giảm thời gian giải quyết conflict từ 35–45 phút xuống ≤ 8 phút; giảm tỷ lệ lỗi logic sau merge từ 15% về < 1%; xóa bỏ hoàn toàn thời gian chết (blocked time từ 30 phút về 0).
+- **Boundary:** AI tuyệt đối KHÔNG ĐƯỢC tự động commit code lên nhánh chính, không tự ý xóa code bảo mật/dữ liệu; bắt buộc con người phải bấm nút duyệt cuối cùng.
+- **Mức can thiệp AI:** Chọn mức **Workflow** (Augment - hỗ trợ con người ra quyết định), vì bài toán có độ mơ hồ thấp nhưng độ phức tạp cao; Rule không đủ khả năng hiểu ngữ cảnh nghiệp vụ, còn Agent thì quá nguy hiểm với mã nguồn production.
+- **Quyết định:** **Go (ở phạm vi pilot nhỏ)** cho các dự án nhóm dùng JavaScript/TypeScript trong 4 tuần; kèm **ngưỡng dừng đo lường được (Kill criteria)**: dừng giải pháp nếu tỷ lệ chấp nhận của dev < 50% hoặc tỷ lệ lỗi build tăng quá 5%.

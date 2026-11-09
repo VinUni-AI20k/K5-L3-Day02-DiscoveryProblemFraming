@@ -60,5 +60,15 @@ CP5
 đã hoàn thiện cp5
 **Điều mình học được từ phần nhóm:** hiểu được cách làm việc của các bạn trường khác và các ngành nghề khác
 
+### Nguyễn Công Hoàn_2A202603972
+**Phần việc phụ trách:** CP3,CP4
+
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì): Hoàn thiện phần việc cá nhân và đi phỏng vấn ứng viên, thảo luận vấn đề cùng nhóm
+
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào): CP3,CP4
+
+**Điều mình học được từ phần nhóm:** Ý kiến được thảo luận qua các góc nhìn khác nhau, giúp giải quyết bài toán dễ hiểu hơn.
 
 -

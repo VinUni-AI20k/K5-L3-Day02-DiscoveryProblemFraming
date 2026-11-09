@@ -182,9 +182,7 @@ Quy trình nháp hiện tại:
 | Nhận phản biện | Câu hỏi tôi nhận được:3 | Tôi đã sửa gì: Bài toán phân loại đồng ý có thể chỉ cần rule based mà không cần đến AI và workflow phức tạp |
 | Gom cluster / cây OST | | |
 | Chọn candidate problem | Tham gia quá trình chấm điểm của short list | Kết quả sau khi pitch nhóm,chốt được bài toán với điểm số cụ thể |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
+| Kiểm chứng / research | Tham gia cách desk research trong phần kiểm chứng | Có link tới nguồn tham khảo |
 | Mức can thiệp AI | | |
 | Quyết định | | |
 
@@ -194,12 +192,13 @@ Quy trình nháp hiện tại:
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Sau khi tự đưa ra ba problem về sàng lọc CV, chấm bài và sự cố giao hàng, tôi dùng AI để gợi ý thêm candidate theo các lăng kính lặp lại, tốn thời gian và tổng hợp thông tin. | AI giúp tôi mở rộng sang bài toán phân loại ticket CSKH và đối chiếu hóa đơn – PO – biên bản giao nhận. | AI gợi ý cả bài toán tổng hợp hồ sơ bệnh nhân trước khi đổi ca, nhưng không cung cấp được bằng chứng về tần suất hồ sơ thiếu hoặc phải xử lý lại trong bối cảnh tôi biết. | Tôi loại ý tưởng hồ sơ bệnh nhân; chỉ giữ #3 và #5 vì có actor, quy trình và cách đo ban đầu rõ hơn. |
+| CP2 Problem Card | Tôi dùng AI để phản biện ba Problem Card: độ cụ thể của actor, quy trình, bottleneck, metric và khả năng dùng rule thay vì AI. | AI chỉ ra actor của bài sàng lọc CV còn rộng, quy trình chưa được xác thực và bottleneck cần tách rõ. | Gợi ý của AI vẫn dựa trên các con số ước lượng; AI không thể xác minh quy trình thực tế của recruiter hay kế toán công nợ. | Tôi xác định lại actor là recruiter phụ trách tuyển dụng IT, tách bước đọc CV khỏi đối chiếu JD, đồng thời ghi rõ các điểm cần khảo sát người dùng thật. |
+| CP4 Research | Tôi dùng AI để gợi ý từ khóa và cấu trúc so sánh công cụ hiện có; sau đó tự mở tài liệu MISA AMIS được trích trong báo cáo nhóm. | AI giúp đặt câu hỏi: phần mềm đang giải bước nào, còn khoảng trống nào và bằng chứng nào còn thiếu. | AI không thể thay thế kiểm chứng hành vi người dùng; một nguồn hướng dẫn sản phẩm cũng không chứng minh thời gian xử lý hoặc tần suất sai lệch thực tế. | Tôi ghi nhận tín hiệu phản bác: MISA đã hỗ trợ liên kết PO với chứng từ mua hàng, nên problem được thu hẹp vào trường hợp sai lệch hoặc thiếu thông tin. |
+| CP5 Quy trình | Tôi dùng AI để kiểm tra xem quy trình ba bên đã thể hiện đủ actor, input, output, bottleneck, bước con người kiểm tra và phương án quay về hay chưa. | AI hữu ích như một checklist để tránh bỏ sót các thành phần của quy trình trước/sau. | AI dễ giả định các bước tự động hóa có sẵn dù chưa biết định dạng chứng từ, quyền truy cập dữ liệu và quy tắc nội bộ. | Tôi giữ nguyên nguyên tắc chỉ mô tả các bước có thể xác minh; chưa coi AI là bước tự duyệt hay tự thanh toán. |
+| CP5–6 Problem Statement | Tôi dùng AI để phản biện bản nháp Problem Statement, đặc biệt là câu hỏi metric đã đo được chưa và boundary đã rõ chưa. | AI giúp phân biệt câu mô tả problem với câu đã lẫn giải pháp. | AI không có baseline thực tế về thời gian xử lý ngoại lệ, tần suất sai lệch hoặc mức chấp nhận của kế toán. | Tôi không dùng các con số AI suy đoán làm kết luận; các số liệu này được ghi là ước lượng và cần phỏng vấn kế toán công nợ để xác minh. |
+| CP6 Mức can thiệp / quyết định | Tôi dùng AI để so sánh No AI, Rule, Workflow và Agent, đồng thời liệt kê rủi ro khi hệ thống đối chiếu sai. | AI giúp làm rõ rằng dữ liệu có quy tắc cố định có thể bắt đầu bằng Rule; AI chỉ phù hợp ở bước trích xuất hoặc giải thích ngoại lệ. | AI có xu hướng đề xuất Workflow hoặc Agent quá sớm và không chịu trách nhiệm cho quyết định tài chính. | Tôi đặt boundary: hệ thống không được tự duyệt chi, tự sửa dữ liệu hay tự gửi quyết định; kế toán công nợ phải kiểm tra mọi ngoại lệ trước khi thanh toán. |
+
 
 ---
 
@@ -209,18 +208,31 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Khi nghe bài toán #1 của bạn Hân, tôi nhận ra một problem tốt không chỉ “có vẻ tiện” mà phải xác định được actor, bước nghẽn và cách đo. Ví dụ, #1 Tài xế Xanh SM & khách gọi điện lặp lại để báo xe đến và mô tả vị trí đón khi khuất tầm nhìn, có impact lớn nhưng nhóm loại vì việc khả thi cho các thiết bị di động cho người đi xe máy chưa được tối ưu.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Nhóm có lúc nghĩ ngay đến việc dùng AI để đọc hóa đơn và tự đối chiếu chứng từ. Sau khi thảo luận, chúng tôi nhận ra chưa trả lời được phần mềm hiện có đã hỗ trợ đến đâu và AI có cần thiết cho toàn bộ quy trình hay không. Desk research về MISA AMIS cho thấy phần mềm đã có khả năng liên kết PO với chứng từ mua hàng. Vì vậy, nhóm chuyển từ ý tưởng “tự động hóa toàn bộ đối chiếu” sang tập trung vào các trường hợp ngoại lệ: chứng từ thiếu, dữ liệu không khớp hoặc cần giải trình. Điều này giúp nhóm quay lại problem trước khi bàn quá sâu về giải pháp.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Có. Ban đầu tôi nghĩ AI có thể tự đối chiếu và xác nhận hồ sơ hợp lệ để giảm thời gian cho kế toán. Khi nhận câu hỏi phản biện về rủi ro kinh tế nếu AI đối chiếu sai mà không có người kiểm tra lại, tôi nhận ra việc tự động xác nhận thanh toán là không an toàn. Một sai lệch nhỏ về số lượng, đơn giá hoặc thuế có thể dẫn đến trả thừa hoặc chậm thanh toán. Sau đó, tôi đổi hướng: AI hoặc rule chỉ nên hỗ trợ trích xuất dữ liệu, so khớp và gắn cờ điểm bất thường; kế toán công nợ vẫn là người kiểm tra và quyết định cuối cùng.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Điều làm tôi bất ngờ là các phần mềm kế toán như MISA AMIS đã hỗ trợ một phần liên kết dữ liệu từ PO sang chứng từ mua hàng. Điều này phản bác giả định ban đầu của tôi rằng kế toán phải nhập và đối chiếu hoàn toàn thủ công. Tuy nhiên, research cũng chưa chứng minh được tần suất sai lệch thực tế, thời gian xử lý ngoại lệ và mức độ khó của các chứng từ không đồng nhất. Vì vậy, nhóm cần thu hẹp problem vào việc phát hiện sai lệch hoặc thiếu thông tin thay vì khẳng định toàn bộ quy trình hiện tại đều chậm.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Điều khó nhất là tách problem khỏi solution. Ban đầu tôi dễ viết theo hướng “cần AI đối chiếu hóa đơn”, nhưng câu này đã chứa giải pháp. Sau khi sửa, tôi tập trung vào actor là kế toán công nợ, quy trình đối chiếu ba chứng từ, bottleneck ở việc kiểm tra các trường thông tin và impact là rủi ro sai thanh toán hoặc chậm xử lý. Tôi cũng thấy khó xác định metric vì hiện nhóm mới có ước lượng 3–7 phút mỗi hóa đơn, chưa có dữ liệu thực tế từ kế toán công nợ.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+
+Nếu làm lại, tôi sẽ phỏng vấn kế toán công nợ trước khi chốt candidate. Tôi cần hỏi về một lần đối chiếu gần đây, chứng từ nào thường thiếu hoặc sai, thời gian xử lý từng ngoại lệ và cách họ đang kiểm tra kết quả. Tôi cũng sẽ phản biện nhóm mạnh hơn về dữ liệu đầu vào, vì OCR hay AI chỉ hữu ích khi hóa đơn, PO và biên bản giao nhận có chất lượng đủ tốt. Nếu không có dữ liệu thật và tiêu chí đánh giá rõ, nhóm không nên vội chọn workflow AI.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
+Problem của nhóm là kế toán công nợ phải đối chiếu hóa đơn nhà cung cấp với PO và biên bản giao nhận trước khi thanh toán. Quy trình hiện tại gồm tìm ba chứng từ, kiểm tra các trường thông tin và xử lý các điểm sai lệch hoặc thiếu dữ liệu. Bottleneck nằm ở việc mở nhiều chứng từ và so khớp thủ công các trường như mã hàng, số lượng, đơn giá, thuế và tổng tiền. Metric cần đo là thời gian xử lý một bộ chứng từ ngoại lệ và tỷ lệ phát hiện đúng sai lệch trên bộ dữ liệu kiểm thử. Boundary quan trọng là hệ thống không được tự duyệt thanh toán, tự sửa dữ liệu hoặc tự gửi quyết định cho nhà cung cấp. Mức can thiệp phù hợp ban đầu là Rule hoặc Workflow có AI hỗ trợ trích xuất, nhưng luôn có kế toán kiểm tra trước khi hành động. Với bằng chứng hiện tại còn thiếu về tần suất sai lệch và hành vi người dùng, quyết định phù hợp là Not Yet cho đến khi nhóm phỏng vấn được người làm kế toán công nợ và có bộ chứng từ mẫu để kiểm thử.
 ---
 
 ## 7. Tài liệu tham khảo

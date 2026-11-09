@@ -6,7 +6,7 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên: Nguyễn Văn Hiệu
+- Họ tên: Nguyễn Văn Hiếu
 - MSSV: 2A202603746
 - Email trường (không bắt buộc, repo có thể để public): 2311063323@hunre.edu.vn
 - Tên nhóm: Nhóm E2

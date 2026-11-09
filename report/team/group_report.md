@@ -125,7 +125,7 @@ Tổng hợp:
 |---|---|---|---|---|---|
 | **Datadog Watchdog (Log Anomaly Detection & RCA)** | https://docs.datadoghq.com/watchdog/ | Bước 1, Bước 3 và một phần Bước 4 (Tự động phát hiện bất thường lưu lượng/lỗi và gợi ý tương quan giữa các dịch vụ) | Học đường cơ sở theo chu kỳ tuần rất chuẩn (giảm cảnh báo giả đầu tuần); giao diện trực quan gom nhóm mẫu lỗi tự động | Chi phí bản quyền SaaS tính theo dung lượng log rất đắt khi công ty có hàng chục nguồn log lớn; bắt buộc đẩy dữ liệu log nội bộ lên đám mây bên thứ ba (vướng quy định bảo mật của nhiều doanh nghiệp) | Học cách dùng đường cơ sở theo chu kỳ thứ/giờ (`Rule`) ở Bước 1 để lọc bỏ nhiễu đầu tuần trước khi gọi tới Agent |
 | **Dynatrace Davis AI (Causal AI & Topology Mapping)** | https://www.dynatrace.com/support/help/platform/davis-ai | Bước 4 (Truy vết nguyên nhân gốc xuyên qua các tầng hạ tầng, ứng dụng và database dựa trên đồ thị phụ thuộc) | Sử dụng Causal AI dựa trên sơ đồ kết nối thực tế (Topology) để chỉ ra điểm nghẽn gốc thay vì chỉ đoán mò tương quan thống kê | Đòi hỏi cài đặt tác nhân thu thập (OneAgent) sâu vào mọi máy chủ với chi phí doanh nghiệp rất cao; nếu thiếu cấu hình kịch bản kiểm soát thì vẫn chỉ dừng ở báo cáo nguyên nhân chứ chưa tự cô lập cục bộ theo ngưỡng an toàn | Khi thiết kế Agent điều tra đa nguồn log, không để LLM tự đoán cảm tính mà phải bắt buộc trích dẫn bằng chứng dòng log khớp mốc thời gian giữa cổng vào và dịch vụ phía sau |
-| **PagerDuty AIOps (Signal Intelligence & Auto-Remediation)** | https://support.pagerduty.com/docs/aiops-signal-intelligence-overview | Bước 1 và Bước 5 (Gom nhóm cảnh báo chống bão alert, điều phối ca trực và kích hoạt Runbook tự động khắc phục) | Có cơ chế Runbook Automation cho phép gắn kịch bản xử lý chuẩn hóa và phân quyền người duyệt (`HITL`) trên từng loại sự cố | Bản thân PagerDuty không trực tiếp đọc sâu vào nội dung hàng chục file log thô (như phân tích chuỗi URI/User-Agent dò quét lỗ hổng ở Nginx) nếu không mua kèm hệ sinh thái giám sát đắt đỏ | Áp dụng triết lý **Parameterized Runbook + HITL + 1-click Rollback**: tuyệt đối cấm Agent tự sinh lệnh shell tự do, chỉ cho phép gọi hàm cô lập cục bộ có sẵn khi `Confidence Score >= 85%` |
+| **PagerDuty AIOps (Signal Intelligence & Auto-Remediation)** | https://support.pagerduty.com/main/docs/aiops | Bước 1 và Bước 5 (Gom nhóm cảnh báo chống bão alert, điều phối ca trực và kích hoạt Runbook tự động khắc phục) | Có cơ chế Runbook Automation cho phép gắn kịch bản xử lý chuẩn hóa và phân quyền người duyệt (`HITL`) trên từng loại sự cố | Bản thân PagerDuty không trực tiếp đọc sâu vào nội dung hàng chục file log thô (như phân tích chuỗi URI/User-Agent dò quét lỗ hổng ở Nginx) nếu không mua kèm hệ sinh thái giám sát đắt đỏ | Áp dụng triết lý **Parameterized Runbook + HITL + 1-click Rollback**: tuyệt đối cấm Agent tự sinh lệnh shell tự do, chỉ cho phép gọi hàm cô lập cục bộ có sẵn khi `Confidence Score >= 85%` |
 | **OpenSearch Anomaly Detection & Grafana Loki (Open-source Self-hosted)** | https://opensearch.org/docs/latest/monitoring-plugins/ad/index/ và https://grafana.com/docs/loki/latest/ | Bước 1 và Bước 2 (Thu thập log tập trung nội bộ On-premise và phát hiện bất thường bằng thuật toán Random Cut Forest) | Mã nguồn mở, miễn phí bản quyền, chạy hoàn toàn trên máy chủ nội bộ (đảm bảo 100% quyền riêng tư dữ liệu log công ty) | Chỉ phát hiện được điểm dị biệt về mặt con số hoặc tìm kiếm khi kỹ sư tự gõ câu truy vấn; không biết tự suy luận ngữ nghĩa để nhảy từ triệu chứng ở cổng proxy sang đúng nguồn log ứng dụng/mạng liên quan và không có cơ chế tính `Confidence Score` để tự cô lập ban đêm | Dùng hạ tầng gom log nội bộ kết hợp màng lọc `Rule` làm nền tảng, sau đó đặt lớp **Agentic AI có kiểm soát (`Bounded Autonomy`)** lên trên để giải quyết bài toán tự chọn nhánh điều tra và phân quyền `Confidence Score + HITL` |
 
 ---
@@ -353,8 +353,26 @@ Vì sao:
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+**Hạn chế:**
+
+- Mẫu phỏng vấn nhỏ (5 người) và các buổi không có biên bản riêng, nên số liệu là ý chính được tổng hợp lại, chưa phải số đo từ log hay ticket.
+- Giả định #6 (Confidence Score tính từ tín hiệu kỹ thuật phân biệt được sự cố thật với lưu lượng tăng tự nhiên) chưa được kiểm chứng; đây là rủi ro kỹ thuật lớn nhất.
+- Chưa có dữ liệu log thật để đo tỷ lệ báo sai và tỷ lệ chặn nhầm của phương án đề xuất.
+
+**Hướng tiếp theo:**
+
+- Thu log lịch sử tầng Nginx của một dịch vụ không cốt lõi, gán nhãn các sự cố đã biết, rồi chạy thử công thức Confidence Score offline trước khi cho hệ thống hành động.
+- Phỏng vấn thêm người trực ca, ghi biên bản riêng từng buổi, tập trung vào sự cố ngoài giờ và cảnh báo giả.
+- Chạy pilot ở chế độ chỉ đề xuất (người duyệt bấm), sau đó mới mở quyền tự chặn tạm thời nếu đạt ngưỡng ở mục 8.
 
 ## 10. Tài liệu tham khảo
 
--
+- Rob Fitzpatrick, *The Mom Test*: https://www.momtestbook.com/
+- Teresa Torres, *Opportunity Solution Trees*: https://www.producttalk.org/opportunity-solution-trees/
+- Anthropic, *Building effective agents*: https://www.anthropic.com/research/building-effective-agents
+- Google PAIR, *People + AI Guidebook — User Needs*: https://pair.withgoogle.com/chapter/user-needs/
+- Datadog, *Watchdog*: https://docs.datadoghq.com/watchdog/
+- Dynatrace, *Davis AI*: https://www.dynatrace.com/support/help/platform/davis-ai
+- PagerDuty, *AIOps Signal Intelligence*: https://support.pagerduty.com/main/docs/aiops
+- OpenSearch, *Anomaly Detection*: https://opensearch.org/docs/latest/monitoring-plugins/ad/index/
+- Grafana Labs, *Loki Documentation*: https://grafana.com/docs/loki/latest/

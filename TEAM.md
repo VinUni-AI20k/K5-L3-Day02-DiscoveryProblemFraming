@@ -83,20 +83,20 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
-- Xây dựng và mô tả các candidate problem từ trải nghiệm học tập; tập trung vào việc tìm đúng yêu cầu/deadline mới nhất khi thông tin nằm ở nhiều kênh.
-- Phác thảo quy trình hiện tại, bottleneck, cách đo baseline và phương án Rule/Workflow trước khi cân nhắc AI.
+- Được phân công phụ trách CP4 — Kiểm chứng; hỗ trợ CP4 Research, CP5 (quy trình trước/sau và Problem Statement v0), CP6 (mức can thiệp, Problem Statement v1 và quyết định).
+- Đề xuất các candidate problem từ trải nghiệm học tập; các candidate này không phải candidate nhóm đã chọn.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- Soạn 3 candidate: tìm yêu cầu/deadline từ LMS và chat; tổng hợp tài liệu ôn tập; phân loại feedback. Candidate tìm yêu cầu/deadline đang được nhóm xem xét, chưa phải quyết định cuối.
-- Với candidate này, mô tả quy trình 6 bước từ mở đề trên LMS đến ghi checklist; xác định bước tìm và đối chiếu thông tin là bottleneck dự kiến (ước tính 10–15 phút/lần, chưa bấm giờ).
-- Đề xuất đo baseline trong 3 lần tìm, thử mục tiêu giảm trung vị thời gian ít nhất 30% và không bỏ sót yêu cầu bắt buộc. Đề xuất checklist thủ công trước; nếu thử AI thì người học vẫn phải kiểm tra nguồn gốc.
-- Các thời lượng, mục tiêu và bottleneck trên là giả thuyết cần kiểm chứng; mình chưa phỏng vấn hoặc làm research.
+- Soạn 3 candidate cá nhân: tìm yêu cầu/deadline từ LMS và chat; tổng hợp tài liệu ôn tập; phân loại feedback. Các candidate này được ghi ở mục 2.1 của báo cáo nhóm; nhóm cuối cùng chọn candidate tổng hợp action items sau cuộc họp do Vũ Nam Khánh đề xuất.
+- Với candidate nhóm đã chọn, phần việc được phân công của mình là hỗ trợ các checkpoint CP4–CP6 nêu trên. Báo cáo nhóm mô tả quy trình, mức Workflow, boundary có người duyệt bản nháp và quyết định Go cho pilot phạm vi nhỏ.
+- Trong báo cáo cá nhân, đã cập nhật mục 6.7 để giải thích chuỗi problem → quy trình → metric → boundary → Workflow → quyết định theo candidate action items đã chọn; đây là phần trình bày hiểu bài cá nhân, không thay thế bằng chứng về kết quả kiểm chứng.
+- Mình chưa phỏng vấn hoặc hoàn tất research; các phân công kiểm chứng/research và các giả định trong báo cáo vẫn cần được xác nhận bằng dữ liệu thực tế.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
-- `report/team/group_report.md`, mục 2.1, các candidate #10–12. Chưa có file minh chứng riêng trong `report/assets/` hoặc commit cụ thể để dẫn.
+- `report/team/group_report.md`, mục 2.1, các candidate #10–12 và candidate được nhóm chọn; mục 4–8 là sản phẩm chung ở các checkpoint được phân công/hỗ trợ. Chưa có file minh chứng riêng trong `report/assets/` hoặc commit cụ thể để dẫn.
 
 **Điều mình học được từ phần nhóm:**
 
-- Cần làm rõ pain và quy trình trước khi nghĩ đến giải pháp; tránh lồng giải pháp vào Problem Statement. Các ước tính phải được ghi rõ là chưa đo, cần lấy baseline và kiểm chứng trước khi kết luận. Nên thử Rule/Workflow trước AI, đồng thời xác định rõ phần nào cần con người xác nhận.
+- Cần tách candidate cá nhân đề xuất khỏi problem nhóm thống nhất chọn. Với bài toán action items sau họp, phải đo thời gian tổng hợp và kiểm tra độ chính xác của người phụ trách; Workflow chỉ tạo bản nháp, người ghi chép vẫn cần xác nhận trước khi gửi. Các con số hiện là mục tiêu/ước tính của pilot, không nên trình bày như kết quả đã kiểm chứng.

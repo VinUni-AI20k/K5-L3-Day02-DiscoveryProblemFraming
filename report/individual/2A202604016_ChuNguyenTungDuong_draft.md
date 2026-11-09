@@ -44,36 +44,36 @@ Job Story được AI hỗ trợ diễn đạt từ danh sách tôi đã chọn.
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | #1 — Sinh viên đọc nhiều file hướng dẫn để xác định bài lab cần nộp gì | Phạm vi có thể giới hạn vào lab Day 02 và đầu ra cụ thể là danh sách yêu cầu nộp bài có dẫn nguồn. | Thời gian nằm ở việc đọc, đối chiếu hay tự kiểm bài? Checklist có sẵn đã đáp ứng đến đâu? |
+| 1 | #6 — Developer mất thời gian đọc Pull Request lớn để hiểu thay đổi và xác định rủi ro | Có thể giới hạn vào một lần review, dùng diff và mã nguồn liên quan để phân tích bước đọc hiểu và nhận diện rủi ro. | “PR lớn” được xác định thế nào? Thời gian nằm ở đọc diff, tìm ngữ cảnh hay kiểm chứng rủi ro? Có thể giảm khó khăn bằng PR nhỏ hơn không? |
 | 2 | #12 — Nhân viên nhập lại thông tin khách hàng trên nhiều biểu mẫu | Có thể xác định trường dữ liệu bị lặp và theo dõi từng lần xử lý một hồ sơ. | Những biểu mẫu nào bắt buộc nhập riêng? Có lỗi thực tế và có quyền thay đổi quy trình không? |
 | 3 | #19 — Người thuê nhà kiểm tra điện, nước, dịch vụ và đối chiếu hợp đồng | Phạm vi kiểm tra theo từng khoản giúp phân biệt việc tìm điều khoản, tính toán và làm rõ chênh lệch. | Người thuê có đủ hợp đồng, chứng từ và dữ liệu tính tiền không? Bước nào thực sự tốn công nhất? |
 
-### Problem Card #1 — Vấn đề #1: Xác định yêu cầu nộp bài lab
+### Problem Card #1 — Vấn đề #6: Đọc Pull Request lớn để hiểu thay đổi và xác định rủi ro
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi chuẩn bị bài lab có nhiều file hướng dẫn, tôi muốn xác định những gì cần nộp, để chuẩn bị bài nộp đúng yêu cầu. |
-| Actor | Sinh viên lớp L3B thực hiện bài lab Day 02 — Discovery & Problem Framing trên repository nhóm. [CẦN XÁC MINH: mức quen với GitHub và cách đọc hướng dẫn của người gặp khó khăn.] |
-| Thời điểm / bối cảnh | Khi bắt đầu chuẩn bị hoặc kiểm tra bài trước khi nộp. Yêu cầu nằm trong README, CHECKPOINTS, SUBMISSION, rubric và các template; tài liệu cũng có hướng dẫn thứ tự đọc và checklist nộp bài. |
-| Quy trình hiện tại (3–7 bước) | 1. Mở README và tìm các tài liệu liên quan · 2. Đọc hướng dẫn checkpoint và nộp bài · 3. Đối chiếu các yêu cầu giữa tài liệu và template · 4. Ghi danh sách file và nội dung phải hoàn thành · 5. Kiểm tra danh sách với bài đang chuẩn bị · 6. Đọc lại nguồn khi có điểm chưa rõ. |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Giả thuyết: bước 3, ghép các yêu cầu từ nhiều tài liệu thành danh sách thống nhất; thời gian [CẦN ĐO]. Chưa xác định bước này chiếm nhiều thời gian hơn việc đọc lần đầu hay kiểm tra bài. |
-| Impact (nếu không giải thì sao) | Có thể phải đọc lại nhiều lần, bỏ sót file hoặc nhầm phần cá nhân với phần nhóm. [CẦN XÁC MINH: trường hợp thực tế, thời gian phát sinh và yêu cầu từng bị bỏ sót.] |
-| Success metric (baseline → target) | Thời gian lập danh sách yêu cầu cho cùng phạm vi lab: [CẦN ĐO: baseline, phút/lần] → [CẦN XÁC ĐỊNH: target, phút/lần]. Ghi thời điểm bắt đầu đọc và kết thúc danh sách; đồng thời đếm yêu cầu thiếu hoặc hiểu sai khi đối chiếu với tài liệu gốc. [CẦN XÁC ĐỊNH: tiêu chí chất lượng và người kiểm tra.] |
-| Phương án không dùng AI | Dùng thứ tự đọc và checklist sẵn có trong repository; bổ sung dẫn nguồn đến từng yêu cầu nếu cần. Hiệu quả còn phải so sánh với cách đọc hiện tại. |
-| Giả thuyết về AI (nếu có) | AI có thể hỗ trợ gom yêu cầu thành bản nháp có dẫn nguồn sau bước đọc tài liệu. Sinh viên kiểm từng mục với nguồn; chưa có bằng chứng cho thấy lợi ích lớn hơn thời gian kiểm và sửa nháp. |
-| Cảm nhận nhanh | Chưa biết. Cần thử checklist sẵn có trước khi cân nhắc mức can thiệp. |
+| Job Story | Khi cần review một Pull Request lớn, tôi muốn hiểu các thay đổi và rủi ro liên quan, để đưa ra nhận xét có căn cứ. |
+| Actor | Developer được giao review Pull Request và chịu trách nhiệm góp ý về thay đổi mã nguồn. [CẦN XÁC MINH: mức quen với codebase, kinh nghiệm và phạm vi trách nhiệm của reviewer.] |
+| Thời điểm / bối cảnh | Khi nhận yêu cầu review một PR có nhiều thay đổi cần đọc hiểu trước khi đưa ra nhận xét. [CẦN XÁC MINH: PR cụ thể và tiêu chí “lớn”, như phạm vi logic, số file hoặc mức liên quan giữa các module; chưa mặc định kích thước diff đồng nghĩa độ khó.] |
+| Quy trình hiện tại (3–7 bước) | 1. Đọc mô tả PR và yêu cầu liên quan nếu có · 2. Xem danh sách file và phạm vi thay đổi · 3. Đọc diff theo từng phần · 4. Lần theo mã nguồn liên quan để hiểu tác động giữa các phần · 5. Đối chiếu rủi ro dự kiến với test và kết quả kiểm tra sẵn có · 6. Ghi nhận xét có dẫn vị trí mã và các câu hỏi còn cần tác giả làm rõ. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Giả thuyết: bước 4, lần theo quan hệ giữa phần code đã đổi và phần liên quan để hiểu tác động; thời gian [CẦN ĐO]. Chưa xác định việc thiếu mô tả PR, chưa quen codebase hay phạm vi thay đổi rộng là nguyên nhân chính. |
+| Impact (nếu không giải thì sao) | Có thể kéo dài thời gian review, phải đọc lại để nối ngữ cảnh hoặc bỏ sót rủi ro khi nhận xét. [CẦN XÁC MINH: lần review thực tế, thời gian phát sinh và rủi ro từng bỏ sót; chưa có bằng chứng về lỗi sau merge do review PR lớn.] |
+| Success metric (baseline → target) | Thời gian thao tác review từ lúc bắt đầu đọc đến khi gửi lượt nhận xét: [CẦN ĐO: baseline, phút/PR] → [CẦN XÁC ĐỊNH: target, phút/PR]. Ghi riêng thời gian chờ tác giả hoặc kiểm tra tự động; so sánh các PR tương đồng về phạm vi và độ quen codebase. Kiểm chất lượng qua rủi ro hoặc nhận xét được đối chiếu với mã nguồn, test và đánh giá của người có trách nhiệm. [CẦN XÁC ĐỊNH: tiêu chí chất lượng và người kiểm tra.] |
+| Phương án không dùng AI | Đề nghị tác giả chia PR theo mục tiêu thay đổi khi có thể, viết rõ bối cảnh và phạm vi ảnh hưởng; reviewer dùng checklist và đọc theo nhóm thay đổi. Chưa biết cách này giảm được bao nhiêu công đọc hiểu trong trường hợp thực tế. |
+| Giả thuyết về AI (nếu có) | AI có thể hỗ trợ lập bản tóm tắt thay đổi có dẫn vị trí mã và gợi ý phần liên quan cần kiểm tra. Reviewer kiểm lại trong codebase và tự đưa ra nhận xét; chỉ dùng mã nguồn được phép chia sẻ. Chưa có bằng chứng lợi ích vượt thời gian kiểm và sửa bản tóm tắt. |
+| Cảm nhận nhanh | Chưa biết. Cần kiểm tra việc cải thiện mô tả, chia nhỏ PR và dùng checklist trước khi cân nhắc mức can thiệp. |
 
 Quy trình nháp — thời gian từng bước và bước nghẽn chưa được đo:
 
 ~~~text
 HIỆN TẠI (PHÁC THẢO) — tổng thời gian: [CẦN ĐO]
 
-[1 Mở README và tài liệu liên quan: CẦN ĐO]
-→ [2 Đọc hướng dẫn checkpoint và nộp bài: CẦN ĐO]
-→ [3 Đối chiếu yêu cầu giữa tài liệu và template: CẦN ĐO] ← BOTTLENECK GIẢ THUYẾT
-→ [4 Ghi danh sách file và nội dung cần nộp: CẦN ĐO]
-→ [5 Kiểm tra danh sách với bài đang chuẩn bị: CẦN ĐO]
-→ [6 Đọc lại nguồn khi chưa rõ: CẦN ĐO]
+[1 Đọc mô tả PR và yêu cầu liên quan nếu có: CẦN ĐO]
+→ [2 Xem danh sách file và phạm vi thay đổi: CẦN ĐO]
+→ [3 Đọc diff theo từng phần: CẦN ĐO]
+→ [4 Lần theo mã nguồn liên quan để hiểu tác động: CẦN ĐO] ← BOTTLENECK GIẢ THUYẾT
+→ [5 Đối chiếu rủi ro với test và kiểm tra sẵn có: CẦN ĐO]
+→ [6 Ghi nhận xét có căn cứ và câu hỏi cần làm rõ: CẦN ĐO]
 ~~~
 
 ### Problem Card #2 — Vấn đề #12: Nhập lại thông tin khách hàng
@@ -134,23 +134,23 @@ HIỆN TẠI (PHÁC THẢO) — tổng thời gian: [CẦN ĐO]
 
 ### Card muốn pitch nhất
 
-- Card số: 1 — vấn đề #1.
-- Vì sao: Phạm vi một bài lab và đầu ra là danh sách yêu cầu nộp giúp nhóm thảo luận một quy trình cụ thể.
-- Câu hỏi muốn nhóm phản biện: Nếu chỉ dùng checklist có dẫn nguồn từ các file hướng dẫn, vấn đề còn ở bước nào và bằng chứng nào cho thấy bước đó thực sự đáng giải quyết?
+- Card số: 1 — vấn đề #6.
+- Vì sao: Phạm vi một lần review PR giúp nhóm xem xét cụ thể việc đọc diff, tìm ngữ cảnh và kiểm chứng rủi ro.
+- Câu hỏi muốn nhóm phản biện: Nếu tác giả chia PR theo mục tiêu và bổ sung mô tả rõ, khó khăn nào vẫn còn khi reviewer xác định rủi ro, và bằng chứng nào cho thấy khó khăn đó đáng giải quyết?
 
 ### AI đã phản biện card thế nào
 
 > Đóng vai một Product Manager khó tính. Chỉ ra điểm yếu về actor, quy trình, bottleneck, bằng chứng thực tế, success metric và khả năng giải quyết mà không cần AI. Không viết lại Problem Card, không bịa số liệu.
 
-#### Phản biện Card #1 — Yêu cầu nộp bài lab
+#### Phản biện Card #1 — Đọc Pull Request lớn
 
 | Điểm yếu | Vì sao là điểm yếu | Câu hỏi cần xác minh |
 |---|---|---|
-| Actor chưa phân biệt người mới với người đã quen cách đọc hướng dẫn | Cùng là sinh viên L3B nhưng mức quen với GitHub và lab có thể dẫn đến khó khăn khác nhau; chưa rõ nhóm nào thực sự cần hỗ trợ. | Sinh viên nào gặp khó trong lần làm lab gần nhất, và họ vướng ở thao tác nào? |
-| Chưa chứng minh bước đối chiếu là bottleneck | Quy trình mới là phác thảo; thời gian có thể nằm ở đọc lần đầu, hiểu thuật ngữ hoặc tự kiểm bài thay vì ghép yêu cầu. | Khi quan sát một lần thực tế, bước nào mất thời gian hoặc phải làm lại nhiều nhất? |
-| Chưa có bằng chứng bỏ sót yêu cầu hoặc đọc lại gây ảnh hưởng | Có nhiều file không tự chứng minh pain đủ lớn; chưa có trường hợp cụ thể cho thấy việc này cản trở hoàn thành bài. | Yêu cầu nào từng bị hiểu sai hoặc bỏ sót, và có bản nháp hay ghi nhận nào chứng minh? |
-| Success metric chưa có baseline và tiêu chuẩn kiểm danh sách | Thời gian chưa đo và phạm vi công việc chưa thống nhất; làm nhanh hơn nhưng hiểu sai yêu cầu vẫn có thể bị xem là thành công. | Tính từ lúc nào đến lúc nào, ai kiểm độ đầy đủ và chính xác, và target dựa trên baseline nào? |
-| Chưa đánh giá checklist có sẵn trước khi cân nhắc AI | Repository đã có thứ tự đọc và checklist; thời gian kiểm bản nháp AI có thể làm mất phần thời gian tiết kiệm được. | Checklist hiện tại thiếu gì, và dùng checklist có dẫn nguồn còn để lại khó khăn cụ thể nào? |
+| Actor chưa phân biệt độ quen codebase và trách nhiệm review | Reviewer mới vào dự án và người phụ trách module có thể mất thời gian ở các bước khác nhau; chưa rõ khó khăn đến từ PR hay kiến thức nền. | Developer nào gặp khó trong lần review gần nhất, họ quen phần code đó đến đâu và được giao kiểm tra điều gì? |
+| “PR lớn” và bước nghẽn chưa được xác định bằng quan sát | Nhiều dòng đổi hoặc nhiều file chưa chắc đồng nghĩa khó hiểu; quy trình mới là phác thảo và chưa chứng minh lần theo mã liên quan là bước tốn công nhất. | PR cụ thể phức tạp ở đâu, reviewer đã đi qua những bước nào và mất nhiều thời gian nhất ở bước nào? |
+| Chưa có bằng chứng về thời gian tăng thêm hoặc rủi ro bị bỏ sót | Nhận định đọc PR lớn tốn thời gian chưa cho thấy hậu quả; cũng chưa thể quy lỗi sau merge cho chất lượng review nếu thiếu dữ liệu đối chiếu. | Có PR và lịch sử nhận xét nào cho thấy phải đọc lại, hỏi thêm ngữ cảnh hoặc bỏ sót một rủi ro cụ thể không? |
+| Metric chưa có baseline và chuẩn đánh giá chất lượng nhận xét | Review nhanh hơn có thể đi kèm nhận xét thiếu căn cứ hoặc bỏ sót; thời gian chờ phản hồi và độ quen codebase cũng có thể làm sai lệch so sánh. | Đo thời gian thao tác trên những PR nào, loại thời gian chờ ra sao và ai xác nhận nhận xét cùng rủi ro đã được kiểm tra đúng? |
+| Chưa chứng minh cần AI thay vì cải thiện cách chuẩn bị PR | Chia thay đổi theo mục tiêu, mô tả rõ và checklist có thể giảm công tìm ngữ cảnh; bản tóm tắt AI vẫn cần reviewer kiểm lại và có thể thiếu phần liên quan. | Sau khi cải thiện mô tả và chia PR khi phù hợp, bước khó nào còn lại và thời gian kiểm bản tóm tắt có làm mất lợi ích kỳ vọng không? |
 
 #### Phản biện Card #2 — Nhập lại thông tin khách hàng
 

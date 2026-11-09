@@ -44,7 +44,7 @@ Lăng kính: **Lặp lại [LL]** · **Tốn thời gian [TG]** · **Cần đọ
 - Tôi dùng AI (Claude, chế độ research) để scan 20 vấn đề trên nhiều lĩnh vực, mỗi vấn đề kèm số liệu từ một tổ chức có tên.
 - Giữ lại: 3 vấn đề #5, #10, #1 vì dễ gặp người thật để phỏng vấn, có baseline công bố, và bước nghẽn đủ hẹp để đo bằng đồng hồ.
 - Lưu ý khi dùng: nhiều số liệu là quốc tế (Ardent, AMA, Ofcom, J.D. Power, NHTSA, Clio, FMI, Siemens), đo trên mẫu Mỹ/Anh hoặc doanh nghiệp lớn, nên chỉ dùng làm căn cứ chọn đề, không dùng làm baseline Việt Nam. Một số số liệu cũ hoặc qua nguồn thứ cấp (McKinsey 2012/IDC 2009; SHRM "20% nghỉ trong 45 ngày" chưa mở được bài gốc; Ardent có hai bộ số khác nhau cho 2024).
-- *(TODO — tự điền: ý nào tôi bỏ và vì sao, theo nhận định của riêng mình.)*
+- Bỏ: một số ý AI gợi ý bị dư thừa, trùng lặp với các ý đã có nên tôi không giữ lại.
 
 ---
 
@@ -148,16 +148,16 @@ Quy trình nháp hiện tại:
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | Pitch 3 card: hóa đơn đầu vào bị lệch, giáo viên chấm bài, người bệnh chờ kết quả cận lâm sàng (dòng #10–12 bảng pitch, báo cáo nhóm mục 2.1) | Nhóm không chọn card của tôi; lý do loại ghi ở báo cáo nhóm mục 2.4 |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
+| Pitch Problem Card | Chuẩn bị 3 card (hóa đơn đầu vào bị lệch, giáo viên chấm bài, người bệnh chờ kết quả cận lâm sàng); phần trình bày do thành viên khác đảm nhận | 3 card được đưa vào bảng pitch (dòng #10–12, báo cáo nhóm mục 2.1); nhóm không chọn, lý do loại ở mục 2.4 |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt cho nhóm 1: "Thị trường đã có những sản phẩm tương tự rồi, vậy sản phẩm của bạn có gì tốt hơn của họ?" | Đẩy nhóm bạn phải so sánh với giải pháp đã có thay vì chỉ mô tả sản phẩm của mình |
+| Nhận phản biện | Câu hỏi tôi nhận được: không ghi nhận câu hỏi trực tiếp cho card của tôi | Tôi đã sửa gì: dự định bổ sung bộ test case tốt hơn cho bài toán và phân tích thêm rủi ro của khách hàng |
 | Gom cluster / cây OST | Gom 12 candidate của nhóm thành 4 cluster và viết cây OST rút gọn, gạch các solution đội lốt (báo cáo nhóm mục 2.2–2.3; nháp ban đầu ở Phụ lục A) | Cluster A (tìm, lọc, tổng hợp thông tin) chứa candidate được chọn "Bác sĩ lọc y văn" |
-| Chọn candidate problem | | |
+| Chọn candidate problem | Tham gia bỏ phiếu chọn candidate trong shortlist | Nhóm chốt "Bác sĩ lọc y văn" (31 điểm) |
 | Kiểm chứng / research | Chuẩn bị bảng giải pháp đã có, câu hỏi phỏng vấn theo The Mom Test và assumption map cho top 3 (xem Phụ lục B, C) | |
 | Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Problem Statement | Góp ý phần Boundary | Boundary: AI không quyết định điều trị, không nhập thông tin định danh bệnh nhân, mọi khuyến cáo phải dẫn đoạn gốc |
+| Mức can thiệp AI | Tham gia thảo luận chọn mức can thiệp | Nhóm chọn Workflow (Rule + DL + LLM, bác sĩ quyết định), không chọn Agent |
+| Quyết định | Tham gia thảo luận quyết định cuối | Go phạm vi hẹp: pilot trên kho chuyên khoa Răng Hàm Mặt |
 
 ---
 
@@ -165,9 +165,10 @@ Quy trình nháp hiện tại:
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | Research 20 vấn đề thực tế trên nhiều lĩnh vực, kèm số liệu có nguồn | Mở rộng ra các lĩnh vực tôi ít biết (ô tô, xây dựng, pháp lý, sản xuất); mỗi vấn đề có số liệu từ tổ chức có tên | Phần lớn số liệu là quốc tế/Mỹ; một số cũ hoặc qua nguồn thứ cấp (McKinsey 2012, SHRM); link chưa được mở kiểm tra | |
-| CP2 Problem Card | Gợi ý top 3, viết nháp 3 Problem Card và quy trình nháp | Tách được bước nghẽn và đề xuất cách đo cụ thể; chỉ ra phương án không dùng AI | Số phút trong quy trình chủ yếu là ước lượng; bước 1, 3, 6 của card 3 là giả thuyết | |
+| CP1 Scan | Dùng Claude research 20 vấn đề thực tế trên nhiều lĩnh vực, kèm số liệu có nguồn | Mở rộng ra các lĩnh vực tôi ít biết (ô tô, xây dựng, pháp lý, sản xuất); mỗi vấn đề có số liệu từ tổ chức có tên | Nội dung AI tạo ra có chỗ hơi mơ hồ; một số ý dư thừa, trùng lặp; phần lớn số liệu là quốc tế/Mỹ, link chưa mở kiểm tra | Chỉnh lại nội dung cho rõ và đúng ý mình; bỏ các ý dư thừa; ghi chú số liệu quốc tế chỉ là căn cứ chọn đề, không dùng làm baseline VN |
+| CP2 Problem Card | Gợi ý top 3, viết nháp 3 Problem Card và quy trình nháp | Tách được bước nghẽn và đề xuất cách đo cụ thể; chỉ ra phương án không dùng AI | Số phút trong quy trình chủ yếu là ước lượng; bước 1, 3, 6 của card 3 là giả thuyết | Ghi rõ trên từng quy trình là số ước lượng, cần bấm giờ thật |
 | CP4 Research | Gợi ý giải pháp đã có (MISA, Azota, Gradescope…) và câu hỏi phỏng vấn theo The Mom Test | Câu hỏi tập trung vào lần gần nhất và số phút, tránh câu "bạn có muốn…" | Chưa mở kiểm tra từng trang sản phẩm; không có trích dẫn phỏng vấn thật | |
+| CP3 Cluster / OST | Dùng ChatGPT để tạo ảnh sơ đồ cluster và cây OST | Vẽ nhanh sơ đồ từ nội dung đã có | | |
 | CP5 Quy trình | | | | |
 | CP5–6 Problem Statement | | | | |
 | CP6 Mức can thiệp / quyết định | | | | |
@@ -180,15 +181,25 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Tôi học được cách mọi người phân tích và đánh giá một bài toán khác nhau như thế nào.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Nhóm phân tích nhu cầu và tình hình thực tế rồi mới đưa ra giải pháp.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
+Có.
+
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Phải phân tích nhu cầu của nhiều tệp khách hàng.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+
+Tôi sẽ đánh giá và phân tích về rủi ro của sản phẩm hơn là chỉ tập trung vào xử lý vấn đề của người dùng.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 

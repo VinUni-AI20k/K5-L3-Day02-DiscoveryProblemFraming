@@ -5,9 +5,9 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: hihihaha
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
+- Candidate problem được chọn (1 câu): #12 — Khi lập báo cáo tuần, kỹ sư sản phẩm tại nhà máy sản xuất mạch điện tử mất khoảng 70 phút mỗi tuần để tra số lượng sản xuất và đưa số liệu vào đúng mục trong biểu mẫu.
 - Quyết định cuối: Go / Not Yet / No-Go
 
 ---
@@ -16,59 +16,68 @@
 
 ### 2.1. Pitch
 
+Các câu có nhãn **Dự kiến** là bản nháp. Sau lượt phản biện, nhóm cập nhật câu thực tế và người hỏi vào đúng dòng.
+
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 1 | Nguyen Tien Dat | Import Excel sổ quỹ: Khi làm task import Excel cho sổ quỹ tiền mặt, tôi muốn xác định đúng dữ liệu và cột ngay từ đầu, để không phải sửa lại file sau khi test | Thực tập sinh dev (MobifoneIT), mentor, BA | Map cột Excel (~40 phút/lần) | |
+| 2 | Nguyen Tien Dat | Vẽ diagram đồ án: Khi vẽ diagram cho bài tập/đồ án, tôi muốn ra đúng cấu trúc ngay bản đầu, để không phải sửa nhiều vòng theo feedback | Sinh viên năm cuối, bạn cùng nhóm | Sửa diagram theo feedback (~20–25 phút/lần, 2 vòng) | |
+| 3 | Nguyen Tien Dat | Đọc hiểu task Jira: Khi nhận task mới trên Jira, tôi muốn hiểu đúng yêu cầu và tài liệu liên quan trong một lần đọc, để không làm sai hướng rồi phải hỏi lại mentor | Thực tập sinh dev, mentor, BA | Đọc tài liệu nội bộ + đối chiếu (~35 phút/lần) | **Dự kiến – Nam:** Trong lần gần nhất, phần lớn 35 phút mất ở bước tìm tài liệu hay ở bước đối chiếu yêu cầu trên Jira? |
+| 4 | Phí Hoàng Nam | Tổng hợp đầu việc lab. Khi nhận bài lab, tôi muốn xác định các đầu việc, thứ tự thực hiện và yêu cầu nộp để bắt đầu làm mà không bỏ sót phần bắt buộc. | Học viên làm bài lab | Đọc checkpoint và tổng hợp yêu cầu từ nhiều tệp Markdown (ước tính 15 phút, cần đo lại). | **Dự kiến – Huy:** Trong 30 phút chuẩn bị bài Day 1, riêng việc đọc và tổng hợp yêu cầu mất bao lâu nếu tách thời gian tìm hiểu Colab? |
+| 5 | Phí Hoàng Nam | Tìm link Phoenix. Khi chuẩn bị gửi stand-up buổi sáng, tôi muốn tìm được link Phoenix để gửi bài trước 10 giờ và nhận XP. | Học viên cần gửi stand-up | Tìm lại tin nhắn chứa link Phoenix (khoảng 2 phút ở lần gần nhất). | |
+| 6 | Phí Hoàng Nam | Theo dõi thông báo trên Outlook và Discord. Khi kiểm tra thông báo của chương trình, tôi muốn nhận ra những thông tin có việc cần làm để không bỏ lỡ yêu cầu hoặc thời hạn. | Học viên theo dõi thông báo của chương trình | Xác định thông báo nào có việc cần làm (ước tính 7 phút, cần kiểm tra xem có phải bước dẫn đến bỏ sót hay không). | |
+| 7 | Nguyễn Bá Thành | Sau họp nhóm, tôi muốn rõ việc, người phụ trách và hạn để không phải hỏi lại. | Thành viên nhóm; nhóm trưởng | Hỏi lại thông tin sau họp: 5 lần từ 3 thành viên; chưa rõ thuộc bao nhiêu buổi. | **Dự kiến – Đạt:** Năm lượt hỏi lại xảy ra trong bao nhiêu buổi họp, và mọi người thường phải hỏi lại thông tin gì? |
+| 8 | Nguyễn Bá Thành | Sau mỗi buổi LEC, tôi muốn tìm đủ link học tập để tiếp tục làm bài. | Học viên | Tìm lại link bài giảng, GitHub và nộp bài: khoảng 10 phút/buổi. |  |
+| 9 | Nguyễn Bá Thành | Đầu ngày, tôi muốn nắm lịch và việc cần làm để chủ động sắp xếp. | Học viên; thành viên nhóm | Tổng hợp lịch học, việc nhóm, workshop/Office Hours: khoảng 10 phút/ngày. | |
+| 10 | Nguyễn Văn Huy | Khi chuẩn bị weekly report, tôi muốn xác định 3 mã lỗi test xuất hiện nhiều nhất trong tuần, để tập trung báo cáo các lỗi chính | PE tại nhà máy sản xuất mạch điện tử | Tải file Excel từ phần mềm test và lọc, xếp hạng mã lỗi mất khoảng 60 phút mỗi tuần | |
+| 11 | Nguyễn Văn Huy | Khi viết weekly report, tôi muốn xác định action phù hợp cho từng mã lỗi cũ và mới theo từng sản phẩm, để báo cáo có hướng xử lý rõ ràng | PE tại nhà máy sản xuất mạch điện tử | Viết action cho lỗi cũ mất khoảng 20 phút và lỗi mới khoảng 30 phút mỗi tuần | |
+| 12 | Nguyễn Văn Huy | Khi tổng hợp weekly report, tôi muốn tra cứu số lượng sản xuất của tuần trước và đưa dữ liệu vào đúng mục, để báo cáo đầy đủ và hạn chế nhập sai | PE tại nhà máy sản xuất mạch điện tử | Tra số lượng mất khoảng 20 phút và copy-paste dữ liệu vào form báo cáo mất khoảng 50 phút mỗi tuần | **Dự kiến – Thành:** Trong lần lập báo cáo tuần gần nhất, phần nào tốn thời gian nhất trong 50 phút điền form: tìm đúng mục, chép số liệu hay kiểm tra lại? |
 
 ### 2.2. Cluster
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A — Xử lý dữ liệu và hoàn thiện báo cáo | #1, #10, #11, #12 | Mất thời gian đối chiếu cột dữ liệu, lọc mã lỗi, xác định hướng xử lý hoặc điền số liệu vào đúng mục báo cáo. |
+| B — Làm rõ yêu cầu và đầu việc | #2, #3, #4, #7 | Phải đọc lại tài liệu, hỏi thêm hoặc sửa qua nhiều vòng để hiểu yêu cầu, việc cần làm và ai phụ trách. |
+| C — Tìm và theo dõi thông tin | #5, #6, #8, #9 | Link, lịch và thông báo nằm ở nhiều nơi, khiến người dùng mất thời gian tìm lại hoặc dễ bỏ sót việc cần làm. |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME — Giảm số phút tìm, hiểu và tổng hợp thông tin cho mỗi đầu việc
+├── Opportunity A — Mất thời gian đối chiếu, lọc và điền số liệu vào đúng chỗ
+├── Opportunity B — Phải hỏi lại hoặc sửa nhiều vòng vì yêu cầu và trách nhiệm chưa rõ
+└── Opportunity C — Mất thời gian tìm lại link, lịch và thông báo nằm rải rác
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- Form Excel dùng công thức tra cứu để tự điền số liệu (#12) là một phương án giải quyết. Vấn đề ở nhánh A là thời gian Huy mất để tra và điền số liệu.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| #12 — Tra số liệu và điền báo cáo tuần (Huy) | 5 | 5 | 3 | 5 | 4 | 4 | 3 | **29** |
+| #7 — Làm rõ đầu việc sau họp nhóm (Thành) | 5 | 3 | 3 | 3 | 4 | 4 | 5 | **27** |
+| #8 — Tìm lại link sau buổi học (Thành) | 5 | 4 | 3 | 4 | 5 | 2 | 5 | **28** |
 
-**Candidate được chọn:**
+Mức điểm phản ánh dữ kiện hiện có. #12 có thể đo riêng thời gian tra số lượng và điền biểu mẫu. Nhóm quen bối cảnh của #7 và #8 hơn, còn số liệu hiện có của cả ba đề tài cần được kiểm chứng.
 
-**Vì sao chọn:**
+**Candidate được chọn** — #12 của Nguyễn Văn Huy, đạt 29/35 điểm.
 
-**Vì sao loại các candidate còn lại:**
+**Vì sao chọn** — Công việc lặp lại hằng tuần và có số liệu ban đầu
+cho hai bước cụ thể: khoảng 20 phút tra số lượng sản xuất và 50 phút
+điền form. Nhóm có thể kiểm chứng thời gian từng bước ở CP4.
 
-**Xử lý bất đồng (nếu có):**
+**Vì sao loại #7** — Có 5 lượt hỏi lại từ 3 thành viên, nhưng chưa rõ
+xảy ra trong bao nhiêu buổi họp và làm mất thêm bao nhiêu thời gian.
+
+**Vì sao loại #8** — Ước tính 10 phút mỗi buổi đang gộp việc tìm link
+bài giảng, GitHub và nơi nộp bài. Chưa rõ bước nào chiếm nhiều thời
+gian nhất để khoanh phạm vi kiểm chứng.
 
 ---
 

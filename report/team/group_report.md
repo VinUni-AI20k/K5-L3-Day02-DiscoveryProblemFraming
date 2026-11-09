@@ -104,24 +104,42 @@ Giả định nhóm kiểm chứng trong buổi này:
 
 Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
 
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
+[Interview snapshot](report/assets/cp4-interview-snapshot.md):
 
-| Trường | Nội dung |
-|---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+| Nguồn                                                             | Số người / số mẫu | Tín hiệu xác nhận                                                                                                                                                   | Tín hiệu phản bác                                                                                                                                                                      |
+| ----------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Phỏng vấn 1 – Sinh viên gặp khó khăn về thuật ngữ song ngữ        | 1                 | Giáo trình tiếng Anh và slide tiếng Việt sử dụng cách diễn giải khác nhau; sinh viên khó thống nhất thuật ngữ và tổng hợp kiến thức để ôn thi.                      | Chưa chứng minh nhu cầu tóm tắt tự động; vấn đề cốt lõi có thể là chuẩn hóa thuật ngữ và cách diễn giải.                                                                               |
+| Phỏng vấn 2 – Sinh viên không nhận biết được lỗ hổng kiến thức    | 1                 | Đọc bản tóm tắt tạo cảm giác hiểu bài nhưng không thể vận dụng khi thi; sinh viên không biết mình còn yếu ở đâu.                                                    | Tóm tắt tài liệu đơn thuần không giải quyết được vấn đề; nhu cầu thực tế nghiêng về kiểm tra mức độ hiểu và phát hiện lỗ hổng kiến thức.                                               |
+| Phỏng vấn 3 – Sinh viên khó vận dụng công thức vào bài tập        | 1                 | Tóm tắt chỉ liệt kê công thức chưa đủ để giải bài; sinh viên cần dạng bài mẫu và hướng dẫn cách lựa chọn, áp dụng công thức.                                        | Nhu cầu có thể nằm ở luyện tập theo dạng bài và hướng dẫn giải, không phải tổng hợp tài liệu.                                                                                          |
+| Phỏng vấn 4 – Sinh viên cần tổng hợp công thức toán học chính xác | 1                 | Mất 4,5–5 giờ tổng hợp công thức cho một môn; phải chụp và nhập lại công thức thủ công. Có nhu cầu rõ về độ chính xác ký hiệu và khả năng đối chiếu số trang nguồn. | Không dám tin bản tóm tắt trên mạng vì sợ sai dấu trừ, chỉ số dưới. Nếu không bảo đảm độ chính xác, người học vẫn chọn làm thủ công.                                                   |
+| Phỏng vấn 5 – Sinh viên chỉ cần tự tổng hợp khi tài liệu thay đổi | 1                 | Mất khoảng 3 giờ tự làm đề cương khi giảng viên đổi giáo trình hoặc slide mới.                                                                                      | Khi có đề cương tốt từ khóa trước, sinh viên ưu tiên dùng lại thay vì tự tổng hợp. Nhu cầu không xuất hiện ở mọi môn học; giải pháp phải tạo giá trị vượt trội so với tài liệu có sẵn. |
 
-Tổng hợp:
+**Nhận định sau kiểm chứng**
 
-| Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
-|---|---:|---|---|
-| | | | |
+Tín hiệu xác nhận:
 
-**Nhóm đã sửa problem thế nào sau kiểm chứng:**
+- Sinh viên thực sự mất thời gian trong việc tổng hợp và hệ thống hóa tài liệu, đặc biệt với môn có nhiều công thức hoặc tài liệu mới.
+- Việc tóm tắt đơn thuần chưa đáp ứng đầy đủ nhu cầu ôn thi.
+- Độ chính xác, khả năng truy xuất về tài liệu gốc và khả năng hỗ trợ vận dụng kiến thức là những yêu cầu quan trọng.
+
+Tín hiệu phản bác:
+
+- Không phải sinh viên nào cũng cần tự tổng hợp tài liệu; đề cương từ khóa trước có thể giải quyết vấn đề với chi phí gần như bằng 0.
+- Một số pain liên quan đến kiểm tra kiến thức, luyện tập dạng bài hoặc chuẩn hóa thuật ngữ, không trực tiếp thuộc bài toán tóm tắt.
+- Sinh viên không sẵn sàng tin tưởng kết quả tự động nếu không thể kiểm chứng độ chính xác.
+
+**Nhóm đã sửa problem thế nào sau kiểm chứng?**
+
+Nhóm thu hẹp problem từ “Sinh viên mất nhiều thời gian tóm tắt tài liệu học tập trước kỳ thi” thành:
+
+> Sinh viên gặp khó khăn trong việc tự tổng hợp và hệ thống hóa kiến thức ôn thi từ các tài liệu dài, phân tán hoặc mới cập nhật, đặc biệt khi cần bảo đảm tính chính xác của công thức, thuật ngữ và khả năng đối chiếu với tài liệu gốc.
+
+Đồng thời, nhóm xác định rõ phạm vi:
+
+1. Đối tượng ưu tiên: Sinh viên có môn học sử dụng nhiều tài liệu, công thức hoặc giáo trình/slide mới mà chưa có đề cương đáng tin cậy từ khóa trước.
+2. Pain trọng tâm: Tốn thời gian tự tổng hợp kiến thức và khó bảo đảm bản tổng hợp chính xác, đầy đủ.
+3. Điều kiện để giải pháp có giá trị: Kết quả phải giữ đúng ký hiệu, thuật ngữ, có nguồn và số trang để đối chiếu.
+4. Chưa gộp vào problem chính: Kiểm tra lỗ hổng kiến thức và luyện tập dạng bài. Đây là những opportunity liên quan nhưng cần kiểm chứng riêng, vì có thể đòi hỏi một bài toán khác với tổng hợp tài liệu.
 
 ### 3.3. Research giải pháp đã có
 

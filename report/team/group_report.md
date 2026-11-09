@@ -169,9 +169,18 @@ Giả định chưa có đủ bằng chứng: Tần suất sai lệch, thời gi
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| **AWS Textract (AnalyzeExpense) + Serverless Matching** | [AWS Textract Expense](https://aws.amazon.com/textract/) · [Sample Architecture](https://github.com/aws-samples/amazon-textract-invoice-processor) | Bước 2 (Trích xuất) & Bước 3 (Đối chiếu số liệu) | Trích xuất trường chuyên sâu (Line items, Vendor, PO, Total) theo chuẩn OCR tài chính; có kiến trúc mẫu kết nối ERP/Database | Chi phí tính theo lượt gọi API; không tự giải quyết được các bất đồng ngữ cảnh phi cấu trúc (ví dụ: tên hàng viết tắt khác nhau) | Dùng OCR/IDP chuyên dụng để lấy số liệu có cấu trúc, nhưng phần đối chiếu cần rule chặt chẽ và chấp nhận ngưỡng dung sai (tolerance). |
+| **MISA meInvoice (Xử lý hóa đơn đầu vào & AI MISA AVA)** | [MISA meInvoice](https://meinvoice.vn/) | Bước 1, Bước 2 & kiểm tra tính hợp lệ cơ quan thuế | Tự động đồng bộ với Tổng cục Thuế, kiểm tra hóa đơn hủy/thay thế, tự động hạch toán vào AMIS/ERP nội địa | Chủ yếu tập trung vào đối soát thuế và hạch toán kế toán, chưa tối ưu sâu khâu 3-way matching phức tạp với biên bản giao nhận kho lẻ | Nghiệp vụ thuế và tính hợp pháp của hóa đơn có thể giải quyết bằng hệ thống sẵn có; nhóm nên tập trung vào điểm nghẽn **đối chiếu số lượng/đơn giá thực tế với PO và kho**. |
+| **Rossum.ai (IDP & Accounts Payable)** | [Rossum AP Solution](https://rossum.ai/solutions/accounts-payable/) | **Bước 2** (OCR/IDP), **Bước 3** (Line-item Matching) & **Bước 4** (Exception Handling) | Công nghệ trích xuất không phụ thuộc template (Rossum Aurora); so khớp từng dòng hàng (line-item) giữa Hóa đơn và PO; giao diện làm nổi bật điểm lệch. | Cần cấu hình ngưỡng dung sai (tolerance) phức tạp; rủi ro nhận diện sai nếu nhà cung cấp gộp nhiều mã hàng thành một dòng. | Tách bạch rõ 2 bước: Dùng AI đọc hiểu bố cục phi cấu trúc thành JSON, sau đó áp dụng **Rule kiểm tra số học và mã hàng**, không để AI tự quyết toán tiền. |
+
+
+**Kết luận research:**
+```text
+Thị trường đã có rất nhiều giải pháp từ mức Enterprise (akaBot, SAP) đến Low-code/Open-source (n8n, AWS Textract).
+Vì vậy, nhóm KHÔNG TỰ XÂY dựng công cụ trích xuất hay chatbot từ con số không.
+Hướng giải pháp hợp lý nhất: 
+Kiến trúc Workflow: OCR trích xuất -> Rule so khớp 3 bên (Hóa đơn vs PO vs Phiếu kho) -> AI phân tích lý do lệch (nếu có) -> Kế toán viên kiểm duyệt và bấm xác nhận chi.
+```
 
 ---
 

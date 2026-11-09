@@ -9,7 +9,7 @@
 - Họ tên: Nguyễn Quang Đạo
 - MSSV: 2A202603614
 - Email trường (không bắt buộc, repo có thể để public): 26ai.daonq2@vinuni.edu.vn
-- Tên nhóm: ABC404
+- Tên nhóm: abc404
 - Link repo nhóm: https://github.com/dongtranquoc951/K5-L3-Day02-Nhomabc404-DiscoveryProblemFraming.git
 
 ---
@@ -42,11 +42,11 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 ### Bảng chọn top 3
 
-| Rank | Problem                                                                                              | Vì sao chọn                                                                                                                                                                                   | Điều còn chưa chắc                                                                                                 |
-| ---: | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-|    1 | Problem #5: Kiểm tra các điều khoản bất lợi trong hợp đồng dịch vụ so với quy định chuẩn của công ty | Đây là việc tốn nhiều thời gian đọc nhất; hợp đồng gửi về liên tục; nếu sót điều khoản bất lợi (như mức đền bù tiền quá lớn hoặc thời hạn thanh toán ép uổng) thì công ty chịu thiệt hại lớn. | Cần giữ kín nội dung hợp đồng và số liệu kinh doanh của công ty khi đưa văn bản vào công cụ hỗ trợ đọc.            |
-|    2 | Problem #7: Đọc hiểu và phân loại tin nhắn/email phàn nàn của khách hàng để chuyển đúng người        | Diễn ra hàng ngày, khối lượng tin gửi về nhiều; khách chờ lâu sẽ rất bực mình; khâu đọc và đoán lỗi đang làm mất nhiều thời gian nhất.                                                        | Tin nhắn của khách nhiều khi viết quá ngắn, không dấu hoặc dùng từ ngữ địa phương khiến khó phân biệt đúng vấn đề. |
-|    3 | Problem #3: Tự động kiểm tra định dạng và hạn nộp bài tập của sinh viên trước khi khóa cổng nộp bài  | Vấn đề gần gũi trong trường học; trợ giảng và giảng viên tốn nhiều thời gian mở từng bài để nhắc nhở; quy trình kiểm tra quy cách tên file và định dạng rất rõ ràng.                          | Sinh viên có thể nộp file nén (.zip) chứa nhiều file con bên trong hoặc nộp file hỏng, cần cách xử lý phù hợp.     |
+| Rank | Problem                                                                                  | Vì sao chọn                                                                                                                                                                                   | Điều còn chưa chắc                                                                                                 |
+| ---: | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+|    1 | Kiểm tra các điều khoản bất lợi trong hợp đồng dịch vụ so với quy định chuẩn của công ty | Đây là việc tốn nhiều thời gian đọc nhất; hợp đồng gửi về liên tục; nếu sót điều khoản bất lợi (như mức đền bù tiền quá lớn hoặc thời hạn thanh toán ép uổng) thì công ty chịu thiệt hại lớn. | Cần giữ kín nội dung hợp đồng và số liệu kinh doanh của công ty khi đưa văn bản vào công cụ hỗ trợ đọc.            |
+|    2 | Đọc hiểu và phân loại tin nhắn/email phàn nàn của khách hàng để chuyển đúng người        | Diễn ra hàng ngày, khối lượng tin gửi về nhiều; khách chờ lâu sẽ rất bực mình; khâu đọc và đoán lỗi đang làm mất nhiều thời gian nhất.                                                        | Tin nhắn của khách nhiều khi viết quá ngắn, không dấu hoặc dùng từ ngữ địa phương khiến khó phân biệt đúng vấn đề. |
+|    3 | Tự động kiểm tra định dạng và hạn nộp bài tập của sinh viên trước khi khóa cổng nộp bài  | Vấn đề gần gũi trong trường học; trợ giảng và giảng viên tốn nhiều thời gian mở từng bài để nhắc nhở; quy trình kiểm tra quy cách tên file và định dạng rất rõ ràng.                          | Sinh viên có thể nộp file nén (.zip) chứa nhiều file con bên trong hoặc nộp file hỏng, cần cách xử lý phù hợp.     |
 
 ---
 
@@ -167,15 +167,21 @@ Quy trình nháp hiện tại:
 
 ### Card muốn pitch nhất
 
-- Card số:
-- Vì sao:
-- Câu hỏi muốn nhóm phản biện:
+- **Card số:** Card #1 (Kiểm tra các điều khoản bất lợi trong hợp đồng dịch vụ so với quy định chuẩn của công ty)
+- **Vì sao:**
+  - Đây là việc tốn nhiều thời gian đọc nhất (4–5 tiếng/hợp đồng), nhân viên phải làm thường xuyên và rất dễ hoa mắt đọc sót.
+  - Hậu quả nếu sót lỗi rất rõ ràng và đắt giá: ký nhầm một điều khoản phạt hay đền bù bất lợi là công ty có thể mất rất nhiều tiền.
+  - Ranh giới giải quyết rất rành mạch: máy chỉ giúp đọc quét, gom các chỗ nghi vấn và gắn cờ cảnh báo kèm số trang/số dòng, còn quyết định sửa hay ký vẫn hoàn toàn do con người quyết định.
+- **Câu hỏi muốn nhóm phản biện:**
+  1. Nếu đối tác cố tình diễn đạt câu chữ né tránh các từ khóa quen thuộc thì công cụ đọc hiểu có nhận diện ra được không?
+  2. Làm sao để đảm bảo bí mật kinh doanh khi đưa tài liệu hợp đồng nội bộ vào công cụ hỗ trợ xử lý?
 
 ### AI đã phản biện card thế nào
 
-| Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
-| ------------------ | ------- | --------- |
-|                    |         |           |
+| Điểm yếu AI chỉ ra                                                                                                                  | Đồng ý?    | Đã sửa gì                                                                                                                                                                                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hợp đồng sai một chữ là đền tiền lớn. Nếu công cụ bị sót hoặc đọc sai một câu chữ quan trọng thì người duyệt có dám tin dùng không? | Rất đồng ý | Đặt ra ranh giới dứt khoát: Công cụ tuyệt đối không được phép tự duyệt hay thay thế con người. Với mỗi cảnh báo, công cụ **bắt buộc phải trích dẫn nguyên văn số trang, số dòng và câu gốc**, kèm đường dẫn để người duyệt bấm vào xem lại câu gốc trong 1 giây trước khi quyết định. |
+| Nếu công cụ đọc sót các điều khoản cài cắm trong phụ lục cuối cùng thì sao?                                                         | Đồng ý     | Bổ sung quy trình quét toàn bộ các trang phụ lục và bảng biểu đính kèm, không chỉ đọc phần thân chính của hợp đồng.                                                                                                                                                                   |
 
 ---
 

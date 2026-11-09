@@ -45,22 +45,20 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | 2 |Tiếp nhận bệnh nhân, đặt lịch và điều phối lịch khám |Trải nghiệm thật của bản thân khi đặt lịch khám bệnh qua hotline của các cơ sở y tế trên địa bàn Thành phố Hà Nội |Có cần thiết phải áp dụng AI không hay chỉ cần hệ thống tiếp nhận thông tin |
 | 3 |Bệnh nhân quên sử dụng thuốc và điều trị theo đúng liệu trình|Có tính thực tiễn cao, trải nghiệm thực tế từ bản thân và dễ dàng phỏng vấn|Việc đồng bộ triển khai trên các bệnh nhân sẽ gặp khó khăn trong giai đoạn đầu|Không nhất thiết phải sử dụng Agent hoặc LLM cho chức năng cốt lõi. Rule-based Workflow có thể xử lý tốt việc tạo lịch và nhắc thuốc|
 
-### Problem 1: Tiếp nhận bệnh nhân, đặt lịch và điều phối lịch khám
+### Problem 1: Tự động hóa ghi chép hồ sơ bệnh án và nhập liệu lâm sàng
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi muốn đăng ký khám bệnh tại VINMEC, tôi muốn nhanh chóng tìm được chuyên khoa, bác sĩ và khung giờ phù hợp, để hoàn tất việc đặt lịch thuận tiện và giảm thời gian chờ đợi khi đến bệnh viện. |
-| Actor | Bệnh nhân (Actor chính); nhân viên tổng đài (Call Center); nhân viên lễ tân/tiếp đón; bác sĩ; điều dưỡng và nhân viên điều phối lịch khám. |
-| Thời điểm / bối cảnh | Khi bệnh nhân có nhu cầu đăng ký khám mới, đặt lịch tái khám, thay đổi hoặc hủy lịch. Quy trình diễn ra qua hotline, website, ứng dụng hoặc trực tiếp tại bệnh viện. |
-| Quy trình hiện tại (3–7 bước) | 1. Bệnh nhân tìm kiếm thông tin về chuyên khoa, bác sĩ, dịch vụ khám và chi phí.<br>2. Bệnh nhân liên hệ VINMEC qua hotline, website, ứng dụng hoặc trực tiếp để yêu cầu đặt lịch.<br>3. Nhân viên tiếp nhận xác định nhu cầu khám, thông tin bệnh nhân và chuyên khoa phù hợp.<br>4. Nhân viên kiểm tra lịch làm việc, khung giờ trống và khả năng tiếp nhận của bác sĩ/phòng khám.<br>5. Nhân viên xác nhận lịch hẹn và hướng dẫn bệnh nhân chuẩn bị trước khi khám.<br>6. Bệnh nhân đến bệnh viện, thực hiện thủ tục tiếp đón và chờ đến lượt khám.<br>7. Khi có lịch hủy, thay đổi hoặc bệnh nhân không đến, nhân viên cập nhật và điều phối lại lịch khám. |
-| Bottleneck (bước nào, mất bao nhiêu phút) | **Bước 2, 3 và 4:** Nhân viên phải tiếp nhận thông tin từ nhiều kênh, hỏi lại nhu cầu khám, xác định chuyên khoa và kiểm tra lịch trống của bác sĩ. Các thao tác này có tính lặp lại và phụ thuộc vào quá trình trao đổi giữa bệnh nhân và nhân viên. **Bước 7:** Khi có lịch hủy hoặc bệnh nhân không đến, nhân viên phải cập nhật và tìm bệnh nhân thay thế cho khung giờ trống. Thời gian cụ thể: Chưa có dữ liệu đo lường thực tế tại VINMEC. Cần đo Appointment Booking Time và thời gian xử lý một yêu cầu đổi/hủy lịch. |
-| Impact (nếu không giải thì sao) | - Bệnh nhân mất thời gian tìm kiếm thông tin và hoàn tất thủ tục đặt lịch.<br>- Tăng khối lượng công việc cho nhân viên tổng đài và tiếp đón.<br>- Có thể phát sinh sai sót khi nhập thông tin hoặc đặt nhầm chuyên khoa, bác sĩ và khung giờ.<br>- Lịch hủy hoặc bệnh nhân không đến có thể khiến khung giờ khám bị bỏ trống.<br>- Giảm hiệu suất sử dụng bác sĩ và phòng khám, đồng thời có thể kéo dài thời gian chờ của bệnh nhân. |
-| Success metric (baseline → target) | - Appointment Booking Time: Baseline cần đo → Giảm ít nhất 30%.<br>- Booking Automation Rate: Baseline chưa có → Đạt ≥ 50% đối với yêu cầu đặt lịch đơn giản.<br>- No-show Rate: Baseline cần đo → Giảm ít nhất 10% so với baseline hoặc nhóm đối chứng.<br>- Appointment Booking Success Rate: Baseline chưa có → Đạt ≥ 95%.<br>- Scheduling Accuracy: Không có trường hợp hệ thống tự ý đặt sai bác sĩ, chuyên khoa hoặc khung giờ do lỗi nghiệp vụ. |
-| Phương án không dùng AI | - Chuẩn hóa quy trình tiếp nhận và biểu mẫu đặt lịch trên tất cả các kênh.<br>- Xây dựng hệ thống quản lý lịch hẹn tập trung, đồng bộ lịch bác sĩ và phòng khám.<br>- Sử dụng Rule-based Booking để kiểm tra khung giờ trống và điều kiện đặt lịch.<br>- Tự động gửi SMS/Push Notification xác nhận và nhắc lịch.<br>- Xây dựng danh sách chờ để lấp đầy các khung giờ bị hủy. |
-| Giả thuyết về AI (nếu có) | Nếu sử dụng AI Chatbot/Voicebot kết hợp NLP/LLM, hệ thống có thể tiếp nhận yêu cầu đặt lịch qua nhiều kênh, nhận diện nhu cầu khám và trích xuất thông tin bệnh nhân. Sau đó, hệ thống kết nối Appointment Engine để kiểm tra lịch trống, đề xuất khung giờ phù hợp và hỗ trợ đặt/đổi/hủy lịch. AI cũng có thể phân tích lịch sử đặt lịch để dự báo nguy cơ No-show và hỗ trợ điều phối bệnh nhân từ danh sách chờ vào các khung giờ còn trống. Những trường hợp phức tạp hoặc có dấu hiệu cần xử lý y tế phải được chuyển cho nhân viên phụ trách. |
-| Cảm nhận nhanh | Agent + Workflow |
-
-Quy trình nháp hiện tại:
+| Job Story | Khi đang khám và trao đổi với bệnh nhân, tôi muốn ghi nhận các thông tin lâm sàng nhanh chóng và chính xác vào hồ sơ bệnh án, để giảm thời gian nhập liệu thủ công và dành nhiều thời gian hơn cho việc thăm khám. |
+| Actor | Bác sĩ khám bệnh (Actor chính); điều dưỡng, nhân viên y tế và bộ phận quản lý hồ sơ bệnh án (Actor liên quan). |
+| Thời điểm / bối cảnh | Trong và ngay sau mỗi lượt khám tại VINMEC, khi bác sĩ cần ghi nhận triệu chứng, tiền sử bệnh, kết quả thăm khám, chẩn đoán và kế hoạch điều trị vào hệ thống HIS/EMR. |
+| Quy trình hiện tại (3–7 bước) | 1. Bác sĩ tiếp nhận và trao đổi với bệnh nhân.<br>2. Bác sĩ ghi nhận triệu chứng, tiền sử bệnh và các thông tin lâm sàng.<br>3. Bác sĩ nhập thông tin vào hệ thống HIS/EMR bằng cách nhập liệu thủ công hoặc lựa chọn biểu mẫu có sẵn.<br>4. Bác sĩ hoàn thiện chẩn đoán, chỉ định xét nghiệm và kế hoạch điều trị.<br>5. Bác sĩ kiểm tra, chỉnh sửa và xác nhận hồ sơ bệnh án. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | **Bước 2 và 3:** Bác sĩ phải đồng thời tập trung trao đổi, thăm khám và ghi chép thông tin. Sau đó, bác sĩ tiếp tục nhập lại, phân loại và cập nhật dữ liệu vào HIS/EMR. Điều này tạo ra công việc hành chính lặp lại sau mỗi lượt khám. Thời gian cụ thể: Chưa có dữ liệu đo lường tại VINMEC. Cần khảo sát thời gian ghi chép và hoàn thiện hồ sơ trung bình trên mỗi lượt khám (Documentation Time). |
+| Impact (nếu không giải thì sao) | - Bác sĩ mất nhiều thời gian cho công việc hành chính thay vì tương tác với bệnh nhân.<br>- Có nguy cơ bỏ sót hoặc nhập thiếu thông tin lâm sàng.<br>- Tăng khối lượng công việc và áp lực cho đội ngũ y tế.<br>- Có thể làm giảm hiệu suất tiếp nhận bệnh nhân và kéo dài thời gian hoàn thiện hồ sơ. |
+| Success metric (baseline → target) | - Documentation Time: Baseline cần đo → Giảm ít nhất 20%.<br>- Documentation Completeness: Baseline cần đo → Đạt ≥ 95%.<br>- AI Suggestion Acceptance Rate: Baseline chưa có → Đạt ≥ 80%.<br>- Clinical Safety: Không có lỗi nghiêm trọng do AI tự động ghi vào hồ sơ chính thức mà chưa được bác sĩ xác nhận. |
+| Phương án không dùng AI | - Chuẩn hóa biểu mẫu hồ sơ bệnh án điện tử.<br>- Sử dụng template và macro để tự động điền các trường thông tin lặp lại.<br>- Tối ưu giao diện HIS/EMR nhằm giảm số thao tác nhập liệu.<br>- Phân công nhân viên hỗ trợ nhập liệu và hoàn thiện hồ sơ. |
+| Giả thuyết về AI (nếu có) | Nếu sử dụng Speech-to-Text kết hợp Medical NLP/LLM, hệ thống có thể chuyển hội thoại bác sĩ – bệnh nhân thành bản nháp hồ sơ bệnh án, tự động trích xuất và phân loại thông tin lâm sàng theo các trường dữ liệu tương ứng. Bác sĩ chỉ cần rà soát, chỉnh sửa và xác nhận trước khi lưu chính thức. |
+| Cảm nhận nhanh | Workflow + Agent |
 
 
 
@@ -78,7 +76,7 @@ Quy trình nháp hiện tại:
 | Phương án không dùng AI | - Chuẩn hóa quy trình tiếp nhận và biểu mẫu đặt lịch trên tất cả các kênh.<br>- Xây dựng hệ thống quản lý lịch hẹn tập trung, đồng bộ lịch bác sĩ và phòng khám.<br>- Sử dụng Rule-based Booking để kiểm tra khung giờ trống và điều kiện đặt lịch.<br>- Tự động gửi SMS/Push Notification xác nhận và nhắc lịch.<br>- Xây dựng danh sách chờ để lấp đầy các khung giờ bị hủy. |
 | Giả thuyết về AI (nếu có) | Nếu sử dụng AI Chatbot/Voicebot kết hợp NLP/LLM, hệ thống có thể tiếp nhận yêu cầu đặt lịch qua nhiều kênh, nhận diện nhu cầu khám và trích xuất thông tin bệnh nhân. Sau đó, hệ thống kết nối Appointment Engine để kiểm tra lịch trống, đề xuất khung giờ phù hợp và hỗ trợ đặt/đổi/hủy lịch. AI cũng có thể phân tích lịch sử đặt lịch để dự báo nguy cơ No-show và hỗ trợ điều phối bệnh nhân từ danh sách chờ vào các khung giờ còn trống. Những trường hợp phức tạp hoặc có dấu hiệu cần xử lý y tế phải được chuyển cho nhân viên phụ trách. |
 | Cảm nhận nhanh | Agent + Workflow |
-Quy trình nháp hiện tại:
+
 
 ### Problem 3: Medication Reminder Assistant
 

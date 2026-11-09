@@ -1,0 +1,190 @@
+# Báo cáo cá nhân — MSSV_HoTen
+
+> Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
+> Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
+> Mỗi thành viên một file trong `report/individual/` trên repo nhóm: copy template này thành file mới, điền, rồi commit bằng tài khoản GitHub của bạn. Không viết hộ người khác.
+
+## 1. Thông tin học viên
+
+- Họ tên: Trần Đức Duy
+- MSSV: 2A202604071
+- Email trường (không bắt buộc, repo có thể để public):
+- Tên nhóm: Delta
+- Link repo nhóm: https://github.com/liliustwocout/K5-L3B-DAY02-Delta-DiscoveryProblemFraming
+
+---
+
+## 2. Scan problem (CP1)
+
+Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng hợp nhiều thông tin** · **Pain từ người khác**.
+
+| # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
+|---:|---|---|---|---|
+| 1 | Lặp lại|Khi có điểm bài kiểm tra, giáo viên muốn chuyển điểm sổ lên hệ thống của trường (vnEdu/SMAS…), để kịp hạn mà không nhập nhầm | GV, HS |4 lớp × 40 hs/lần; kỳ trước nhập sai 5 lần |
+| 2 |Cần đọc, tổng hợp nhiều thông tin |Khi cuối học kỳ phải viết nhận xét cho từng học sinh, giáo viên muốn nắm nhanh điểm số, bài làm và thái độ cả kỳ của từng em, để viết nhận xét đúng với từng em chứ không dùng câu chung chung |GV, học sinh, phụ huynh |~160 học sinh × 2 kỳ; mất ~3 buổi tối |
+| 3 |Tốn thời gian |Khi ra đề kiểm tra giữa kỳ, giáo viên muốn có đề đúng ma trận và bản đặc tả mà tổ chuyên môn yêu cầu, để không bị trả về sửa |GV, tổ trưởng |4 giờ/đề; bị trả về 1 lần|
+| 4 |Tốn thời gian |Khi chấm bài tự luận của nhiều lớp, giáo viên muốn chấm xong trong tuần, để trả bài khi học sinh vẫn còn nhớ nội dung |GV, học sinh | 160 bài/đợt, ~4 phút/bài|
+| 5 |Lặp lại |Khi soạn kế hoạch bài dạy theo mẫu của Bộ/trường, giáo viên muốn điền đúng các mục bắt buộc, để kịp nộp duyệt đầu tuần |GV, tổ trưởng |2 bài/tuần, ~50 phút/bài |
+| 6 |Pain từ người khác |Khi tổ chuyên môn hoặc ban giám hiệu cần báo cáo tình hình lớp, giáo viên muốn có sẵn số liệu sĩ số, vắng, điểm, để nộp đúng hạn |GV, BGH | 1 lần/tháng|
+
+
+
+**Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
+
+-
+
+---
+
+## 3. Top 3 Problem Cards + quy trình nháp (CP2)
+
+### Bảng chọn top 3
+
+| Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
+|---:|---|---|---|
+| 1 | Viết nhận xét cuối kỳ cho từng học sinh (CP1 #2) | Actor rõ (GV); lặp lại 2 lần/năm; tốn ~3 buổi tối cho 160 HS; bước khó là tổng hợp nhiều nguồn về từng em nên so sánh được Rule / Workflow / Agent | Thông tin "thái độ, bài làm cả kỳ" có được ghi lại ở đâu không, hay chỉ nằm trong trí nhớ GV? Trường có cho đưa dữ liệu học sinh vào công cụ AI không? |
+| 2 | Chấm bài tự luận nhiều lớp (CP1 #4) | Tốn thời gian nhất: 160 bài × ~4 phút ≈ 10,7 giờ/đợt; ảnh hưởng trực tiếp tới học sinh (trả bài chậm) | Bài viết tay nên khó số hóa; chấm điểm cần công bằng, có thể không phù hợp để AI tham gia |
+| 3 | Nhập điểm từ sổ lên hệ thống của trường (CP1 #1) | Có bằng chứng lỗi rõ (kỳ trước nhập sai 5 lần); quy trình ngắn, dễ vẽ; dễ so sánh với phương án No AI / Rule | Có thể hệ thống đã có chức năng nhập từ Excel nên chỉ cần đổi quy trình, không cần AI |
+
+### Problem Card #1
+
+| Trường | Nội dung |
+|---|---|
+| Job Story | Khi cuối học kỳ phải viết nhận xét cho từng học sinh, giáo viên muốn nắm nhanh điểm số, bài làm và thái độ cả kỳ của từng em, để viết nhận xét đúng với từng em chứ không dùng câu chung chung |
+| Actor | Giáo viên bộ môn cấp 2 dạy 4 lớp (~160 HS). Người nhận: học sinh, phụ huynh |
+| Thời điểm / bối cảnh | Cuối mỗi học kỳ (2 lần/năm), trước hạn khóa sổ của trường, thường làm buổi tối |
+| Quy trình hiện tại (3–7 bước) | 1. Mở sổ điểm xem điểm cả kỳ của em → 2. Nhớ lại / xem ghi chú về bài làm, thái độ → 3. Viết nhận xét → 4. Nhập vào hệ thống → 5. Rà lại cả lớp, sửa các câu bị trùng *(nháp, cần kiểm lại với GV)* |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 2–3: nhớ lại từng em và viết câu riêng cho em đó, **[?] phút/HS** |
+| Impact (nếu không giải thì sao) | ~3 buổi tối mỗi kỳ; về cuối, nhận xét dễ thành câu chung chung, phụ huynh không biết con cần cải thiện gì |
+| Success metric (baseline → target) | Thời gian: 3 buổi tối (**[?] giờ**) → 1 buổi tối. Chất lượng: tỉ lệ nhận xét có ít nhất 1 chi tiết riêng của em đó **[?]%** → ≥ 90% |
+| Phương án không dùng AI | Ghi chú ngắn về từng em ngay trong kỳ (1 dòng/tuần); dùng bộ câu mẫu theo mức điểm, rồi thêm 1 chi tiết riêng |
+| Giả thuyết về AI (nếu có) | AI đọc điểm + ghi chú của GV và gợi ý bản nháp nhận xét; GV sửa và duyệt từng câu. AI không tự gửi, không tự đánh giá thái độ |
+| Cảm nhận nhanh | Workflow |
+
+Quy trình nháp hiện tại:
+
+```text
+HIỆN TẠI — ~3 buổi tối / kỳ / 160 HS ([?] giờ)
+
+[Xem điểm cả kỳ: [?]'] → [Nhớ lại bài làm, thái độ: [?]'] ← BOTTLENECK
+→ [Viết nhận xét: [?]'] ← BOTTLENECK → [Nhập hệ thống: [?]'] → [Rà cả lớp: [?]']
+```
+
+### Problem Card #2
+
+| Trường | Nội dung |
+|---|---|
+| Job Story | Khi chấm bài tự luận của nhiều lớp, giáo viên muốn chấm xong trong tuần, để trả bài khi học sinh vẫn còn nhớ nội dung |
+| Actor | Giáo viên bộ môn cấp 2 dạy 4 lớp. Người nhận: học sinh |
+| Thời điểm / bối cảnh | Sau mỗi bài kiểm tra tự luận, **[?] đợt/kỳ**; chấm bài giấy ở nhà |
+| Quy trình hiện tại (3–7 bước) | 1. Nhận bài, xếp theo lớp → 2. Đọc bài, đối chiếu barem, cho điểm → 3. Ghi lời phê → 4. Cộng điểm, ghi vào sổ → 5. Trả bài, chữa bài trên lớp *(nháp, cần kiểm lại với GV)* |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 2: đọc và cho điểm từng bài, chiếm **[?]** trong ~4 phút/bài |
+| Impact (nếu không giải thì sao) | ~640 phút ≈ 10,7 giờ/đợt; trả bài chậm thì học sinh quên nội dung, chữa bài kém hiệu quả |
+| Success metric (baseline → target) | Thời gian từ lúc thu bài đến lúc trả bài: **[?] ngày** → ≤ 7 ngày; thời gian chấm: 4 phút/bài → **[?]** phút/bài |
+| Phương án không dùng AI | Barem chi tiết hơn; chấm theo câu (chấm câu 1 cho cả xấp, rồi mới sang câu 2); lời phê dùng ký hiệu thống nhất |
+| Giả thuyết về AI (nếu có) | Chưa rõ: bài viết tay khó số hóa, và việc chấm điểm cần GV quyết định. Có thể AI chỉ hỗ trợ tổng hợp lỗi sai phổ biến để chuẩn bị chữa bài |
+| Cảm nhận nhanh | Chưa biết |
+
+Quy trình nháp hiện tại:
+
+```text
+HIỆN TẠI — 160 bài × ~4' ≈ 640' (10,7 giờ) / đợt
+
+[Xếp bài: [?]'] → [Đọc + cho điểm: [?]'/bài] ← BOTTLENECK
+→ [Ghi lời phê: [?]'/bài] → [Cộng điểm, vào sổ: [?]'] → [Trả + chữa bài]
+```
+
+### Problem Card #3
+
+| Trường | Nội dung |
+|---|---|
+| Job Story | Khi có điểm bài kiểm tra, giáo viên muốn chuyển điểm từ sổ lên hệ thống của trường (vnEdu/SMAS…), để kịp hạn mà không nhập nhầm |
+| Actor | Giáo viên bộ môn cấp 2 dạy 4 lớp. Bị ảnh hưởng: học sinh, phụ huynh xem điểm trên hệ thống |
+| Thời điểm / bối cảnh | Sau mỗi đợt kiểm tra, trước hạn nhập điểm của trường, **[?] lần/kỳ** |
+| Quy trình hiện tại (3–7 bước) | 1. Điểm nằm trong sổ chấm / trên bài → 2. Mở hệ thống, chọn lớp và cột điểm → 3. Gõ tay từng em → 4. Rà lại → 5. Lưu / khóa điểm *(nháp, cần kiểm lại với GV)* |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3: gõ tay 160 điểm/lần, **[?] phút/lớp**; đây là bước gây ra lỗi |
+| Impact (nếu không giải thì sao) | Kỳ trước nhập sai 5 lần → phải sửa, phụ huynh thấy điểm sai |
+| Success metric (baseline → target) | Số lần nhập sai: 5/kỳ → 0/kỳ; thời gian nhập: **[?] phút/lần** → **[?]** |
+| Phương án không dùng AI | Nhập điểm vào Excel theo mẫu rồi import lên hệ thống (cần kiểm tra hệ thống của trường có hỗ trợ không); hoặc in danh sách đã nhập ra để đối chiếu với sổ |
+| Giả thuyết về AI (nếu có) | Có lẽ không cần. Chỉ cân nhắc nếu phải đọc điểm từ ảnh chụp sổ viết tay |
+| Cảm nhận nhanh | Rule |
+
+Quy trình nháp hiện tại:
+
+```text
+HIỆN TẠI — 4 lớp × 40 HS = 160 điểm / lần ([?] phút)
+
+[Mở hệ thống, chọn lớp: [?]'] → [Gõ tay từng em: [?]'/lớp] ← BOTTLENECK (5 lỗi/kỳ)
+→ [Rà lại: [?]'] → [Lưu / khóa]
+```
+
+### Card muốn pitch nhất
+
+- Card số: 1
+- Vì sao: Bước khó là tổng hợp nhiều thông tin về từng em, có thể so sánh rõ giữa không dùng AI (ghi chú + câu mẫu) và Workflow (AI gợi ý nháp, GV duyệt); metric đo được; boundary rõ (AI không tự đánh giá học sinh)
+- Câu hỏi muốn nhóm phản biện: Nếu GV không ghi chú gì trong kỳ thì AI lấy dữ liệu từ đâu, và khi đó phương án không dùng AI (ghi chú hằng tuần) có phải đã giải quyết gần hết vấn đề rồi không?
+
+### AI đã phản biện card thế nào
+
+| Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
+|---|---|---|
+| Card #1: "thái độ cả kỳ" có thể không được ghi lại ở đâu cả, nên bottleneck thật có thể là thiếu dữ liệu chứ không phải viết chậm | | |
+| Card #1: actor chỉ có 1 người (mẹ). Chưa biết GV khác có mất 3 buổi tối như vậy không | | |
+| Card #1: đưa điểm và nhận xét học sinh vào công cụ AI bên ngoài có thể vi phạm quy định bảo mật dữ liệu của trường | | |
+| Card #3: hệ thống có thể đã hỗ trợ import Excel, nếu vậy thì đổi quy trình là đủ (No AI) | | |
+| Card #2: 4 phút/bài là số ước lượng hay đã bấm giờ? Cần tách ra thời gian từng bước | | |
+
+---
+
+## 4. Tôi đã tham gia phần nào (CP3 → CP7)
+
+| Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
+|---|---|---|
+| Pitch Problem Card | | |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
+| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
+| Gom cluster / cây OST | | |
+| Chọn candidate problem | | |
+| Kiểm chứng / research | | |
+| Quy trình nhóm | | |
+| Problem Statement | | |
+| Mức can thiệp AI | | |
+| Quyết định | | |
+
+---
+
+## 5. Dùng AI
+
+| Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
+|---|---|---|---|---|
+| CP1 Scan | | | | |
+| CP2 Problem Card | | | | |
+| CP4 Research | | | | |
+| CP5 Quy trình | | | | |
+| CP5–6 Problem Statement | | | | |
+| CP6 Mức can thiệp / quyết định | | | | |
+
+---
+
+## 6. Reflection (CP7)
+
+Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
+
+**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+
+**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+
+**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+
+**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+
+**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+---
+
+## 7. Tài liệu tham khảo
+
+-

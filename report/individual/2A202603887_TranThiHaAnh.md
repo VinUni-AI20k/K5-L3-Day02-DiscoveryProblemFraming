@@ -161,7 +161,7 @@ HIỆN TẠI — khoảng 15 phút/học sinh (ước tính cần kiểm chứng
 | Quy trình nhóm | Không phụ trách vẽ chính; dùng quy trình hiện tại/tương lai để xác định chỗ Rule, Agent read-only, policy và HITL | Quyết định/threshold bám đúng điểm can thiệp và fallback trong mục 4 báo cáo nhóm |
 | Problem Statement | Đối chiếu v1 với CP4: baseline khoanh vùng 15–30 phút, chưa có baseline phát hiện → cô lập ngoài giờ | Không coi target <5/<15 phút hoặc ngưỡng 60/85 là kết quả đã kiểm chứng |
 | Mức can thiệp AI | Phản biện rủi ro của quyền tự động thực thi khi score chưa hiệu chuẩn | Tách Agent điều tra/đề xuất khỏi Rule/policy cấp quyền; trước mắt chỉ shadow pilot read-only |
-| Quyết định | Đánh giá 4 rủi ro và viết quyết định, pilot, tiêu chí mở quyền, ngưỡng dừng | Chốt Not Yet cho auto-containment; quay về Rule + Workflow read-only + HITL nếu không đạt hoặc có sự cố an toàn |
+| Quyết định | Đánh giá 4 rủi ro và viết quyết định, pilot, tiêu chí mở quyền, ngưỡng dừng | Chốt Go — pilot có điều kiện theo hai giai đoạn; quay về Rule + Workflow read-only + HITL nếu không đạt hoặc có sự cố an toàn |
 
 ---
 
@@ -174,7 +174,7 @@ HIỆN TẠI — khoảng 15 phút/học sinh (ước tính cần kiểm chứng
 | CP4 Research | Hỗ trợ tìm và so sánh tài liệu chính thức của 3 công cụ | Nhanh chóng định vị các trang về baseline/RCA, topology và event orchestration | Bản nháp ban đầu suy diễn “chi phí rất cao”, “bắt buộc đưa toàn bộ log lên cloud” và gán HITL/rollback cho sản phẩm khi chưa có nguồn trực tiếp | Chỉ giữ claim được tài liệu hãng hỗ trợ; nêu rõ điều kiện APM/topology/event input và tách bài học thiết kế của nhóm khỏi tính năng sản phẩm |
 | CP5 Quy trình | Không dùng AI trực tiếp để vẽ quy trình | — | — | Tôi đọc quy trình nhóm để gắn risk và ngưỡng dừng vào đúng bước |
 | CP5–6 Problem Statement | Dùng AI rà tính nhất quán giữa kết quả phỏng vấn, baseline và target | Phát hiện 15–30 phút là thời gian khoanh vùng, không đồng nghĩa 90–120 phút phát hiện → cô lập | AI có thể trình bày target đề xuất như số đã được kiểm chứng | Ghi rõ target/ngưỡng score là giả thuyết; yêu cầu đo timestamp cùng định nghĩa trong shadow pilot |
-| CP6 Mức can thiệp / quyết định | Gợi ý lỗ hổng rủi ro và các ngưỡng pilot có thể đo | Hữu ích khi tách Value/Usability/Feasibility/Viability và xây kill criteria | Có xu hướng chọn Go vì thiết kế có nhiều guardrail dù chưa có log pilot hay thử rollback | Chốt Not Yet cho quyền tự động; chỉ Go shadow pilot read-only và dừng ngay nếu có một vi phạm an toàn nghiêm trọng |
+| CP6 Mức can thiệp / quyết định | Gợi ý lỗ hổng rủi ro và các ngưỡng pilot có thể đo | Hữu ích khi tách Value/Usability/Feasibility/Viability và xây kill criteria | Có xu hướng coi các guardrail trên giấy là đủ để triển khai production dù chưa có log pilot hay thử rollback | Tôi chốt Go cho pilot có điều kiện, không phải Go production: shadow/read-only trước, chỉ mở quyền cục bộ khi đạt cổng an toàn và dừng ngay nếu có một vi phạm nghiêm trọng |
 
 ---
 

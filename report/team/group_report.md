@@ -8,7 +8,7 @@
 - Tên nhóm: HEHEHE
 - Thành viên: xem `TEAM.md` (Bùi Đặng Nhật Nguyên, Đỗ Hoàng Vũ, Trần Gia Bảo, Trần Thị Hà Anh)
 - Candidate problem được chọn (1 câu): Kỹ sư trực ca vận hành mất 90-120 phút mỗi sự cố để lần mò thủ công qua hàng chục nguồn log rời rạc và thiếu cơ chế AI tự chủ có kiểm soát (Agentic AI phân quyền theo cột mốc `Confidence Score` kết hợp `HITL`) để vừa cô lập tức thì bất thường rõ bằng chứng vào ban đêm vừa giữ lại ca nhạy cảm chờ con người duyệt.
-- Quyết định cuối: **Not Yet** — chỉ chạy shadow pilot read-only ở tầng Nginx; chưa cho Agent tự cô lập cho đến khi có log pilot, hiệu chuẩn ngưỡng và kiểm chứng rollback.
+- Quyết định cuối: **Go — pilot có điều kiện** tại tầng Nginx, bắt đầu bằng shadow/read-only và chỉ mở auto-containment cục bộ sau khi đạt các cổng an toàn.
 
 ---
 
@@ -354,20 +354,20 @@ Vì sao:
 |---|---|---|---|
 | **Value** | Người dùng có thật sự cần và sẽ dùng không? | **TB** | 5/5 người được hỏi từng phải tra nhiều nguồn log; 2/5 thường bị gọi dậy ban đêm và đa số chấp nhận auto-block có điều kiện. Tuy nhiên phỏng vấn phản bác baseline 60–90 phút: khoanh vùng thường chỉ 15–30 phút, chưa có log chứng minh thời gian phát hiện → cô lập ngoài giờ. |
 | **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | **TB** | Người dùng yêu cầu whitelist, giới hạn thời gian chặn và rollback. Thiết kế có evidence ID, HITL và kill switch, nhưng chưa thử giao diện duyệt/hoàn tác với kỹ sư trong một ca thật và chưa biết họ có hiểu `Confidence Score` hay không. |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **Cao** | Có thể bắt đầu từ Nginx log và runbook cục bộ, nhưng chưa có tập incident gán nhãn, telemetry liên tầng, công thức score đã hiệu chuẩn hay bằng chứng rollback hoạt động. Mốc 60/85 và target <5/<15 phút hiện là giả thuyết. |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | **Cao** | Chưa đánh giá chi phí lưu trữ/quan sát, yêu cầu dữ liệu nội bộ, RBAC, audit và trách nhiệm khi chặn nhầm. Chưa chỉ định owner phê duyệt whitelist/runbook, trực kill switch và rà soát sau sự cố. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **TB** | Nginx log, Rule lọc nhiễu và runbook cục bộ cho phép bắt đầu pilot read-only với phạm vi nhỏ. Tuy nhiên chưa có tập incident gán nhãn, telemetry liên tầng hay score đã hiệu chuẩn; vì vậy mốc 60/85 và target <5/<15 phút là cổng cần kiểm chứng trước khi mở quyền tự động. |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | **TB** | Pilot giới hạn ở dữ liệu nội bộ và chưa cho phép thay đổi production trong giai đoạn shadow nên tác động ban đầu thấp. Trước giai đoạn auto-containment, nhóm phải chỉ định owner cho whitelist/runbook, RBAC, audit, kill switch và trách nhiệm rà soát sau sự cố. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** **Not Yet** đối với quyền tự động cô lập; **Go cho shadow pilot read-only** để thu bằng chứng.
+**Quyết định:** **Go — pilot có điều kiện** tại tầng Nginx.
 
-**Lý do:** Pain ngoài giờ và nhu cầu giảm alert noise đã có tín hiệu, nhưng hai rủi ro Feasibility/Viability còn cao. Nhóm chưa có baseline cùng định nghĩa, tập incident gán nhãn, score đã hiệu chuẩn hoặc kết quả thử rollback; vì vậy cho Agent tự chặn ngay không nhất quán với yêu cầu an toàn của người được phỏng vấn.
+**Lý do:** Cả 5 người được hỏi từng phải tra nhiều nguồn log, 2/5 thường bị gọi dậy ban đêm và đa số chấp nhận auto-block khi có whitelist, TTL và rollback. Bằng chứng này đủ để đầu tư vào một pilot nhỏ, có thể đảo ngược. Tuy nhiên chưa đủ để triển khai auto-containment rộng trong production, nên quyết định Go đi kèm phạm vi Nginx, triển khai theo hai giai đoạn, HITL và các cổng an toàn bắt buộc.
 
-**Nếu Go — pilot nhỏ nhất:** Chưa Go cho auto-containment ở thời điểm hiện tại.
+**Nếu Go — pilot nhỏ nhất:** **Giai đoạn 1 — Shadow/read-only:** chạy 2 tuần trên tối thiểu 30 incident/alert lịch sử hoặc phát sinh mới; Agent chỉ đề xuất nguồn log, nguyên nhân, evidence ID và runbook, còn kỹ sư duyệt và thực hiện. **Giai đoạn 2 — Auto-containment giới hạn:** chỉ mở khi giai đoạn 1 đạt 100% kết luận quan trọng có bằng chứng, Top-3 root-cause hit rate ≥80%, false-alert rate <15%, không bỏ sót sự cố nghiêm trọng và 0 vi phạm quyền/whitelist. Quyền tự động chỉ gồm rate-limit hoặc chặn tạm IP ngoài whitelist bằng runbook định trước, TTL tối đa 15 phút, self-check sau 2 phút và rollback/kill switch.
 
-**Nếu Not Yet — cần kiểm chứng gì trước:** Chạy shadow pilot read-only 2 tuần ở Nginx trên tối thiểu 30 incident/alert lịch sử hoặc phát sinh mới. Agent chỉ đề xuất nguồn log, nguyên nhân, evidence ID và runbook; kỹ sư thực hiện hoặc bác bỏ. Đo cùng một định nghĩa: thời gian phát hiện → khoanh vùng/cô lập, Top-3 root-cause hit rate, false-alert rate, số ca bỏ sót nghiêm trọng, tỷ lệ đề xuất bị bác và thời gian duyệt. Diễn tập whitelist, TTL 15 phút, audit, kill switch và rollback trong môi trường staging; chỉ đề xuất mở quyền cục bộ khi 100% kết luận có bằng chứng, Top-3 hit rate ≥80%, không bỏ sót sự cố nghiêm trọng và 0 vi phạm quyền/whitelist.
+**Nếu Not Yet — cần kiểm chứng gì trước:** Không áp dụng cho quyết định hiện tại; các nội dung cần kiểm chứng được chuyển thành cổng bắt buộc giữa hai giai đoạn của pilot Go.
 
-**Nếu No-Go — nên làm gì thay AI:** Chưa chọn No-Go; trong thời gian kiểm chứng vẫn dùng Rule cho baseline/lọc nhiễu và Workflow read-only để gom bằng chứng cho người trực.
+**Nếu No-Go — nên làm gì thay AI:** Không áp dụng cho quyết định hiện tại; nếu pilot chạm ngưỡng dừng thì quay về Rule cho baseline/lọc nhiễu và Workflow read-only để gom bằng chứng cho người trực.
 
 **Ngưỡng dừng:** Dừng pilot ngay nếu có **1** lần truy cập vượt quyền, đề xuất chặn đối tượng trong whitelist, thực thi ngoài runbook, rollback/kill switch thất bại hoặc bỏ sót một sự cố mức nghiêm trọng. Sau 2 tuần/30 mẫu, nếu Top-3 hit rate <80%, false-alert rate ≥15% hoặc median ca HITL không dưới 15 phút thì không mở quyền tự động; quay về **Rule + Workflow read-only + HITL**, sửa dữ liệu/rule rồi đánh giá lại.
 

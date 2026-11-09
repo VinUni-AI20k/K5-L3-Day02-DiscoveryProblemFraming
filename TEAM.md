@@ -4,7 +4,7 @@
 
 - Tên nhóm: HEHEHE
 - Candidate problem nhóm chọn (1 câu): Kỹ sư trực ca vận hành mất 90-120 phút mỗi sự cố để lần mò thủ công qua hàng chục nguồn log rời rạc và thiếu cơ chế AI tự chủ có kiểm soát (Agentic AI phân quyền theo cột mốc `Confidence Score` kết hợp `HITL`) để vừa cô lập tức thì bất thường rõ bằng chứng vào ban đêm vừa giữ lại ca nhạy cảm chờ con người duyệt.
-- Quyết định cuối (Go / Not Yet / No-Go): **Not Yet** cho quyền tự động cô lập; **Go cho shadow pilot read-only** ở tầng Nginx để hiệu chuẩn và kiểm chứng an toàn.
+- Quyết định cuối (Go / Not Yet / No-Go): **Go — pilot có điều kiện** tại tầng Nginx, bắt đầu bằng shadow/read-only và chỉ mở auto-containment cục bộ sau khi đạt các cổng an toàn.
 
 ## Thành viên
 
@@ -126,7 +126,7 @@ Mỗi thành viên tự điền mục của mình.
 
 - Hoàn thành CP1 với 8 Job Story và CP2 với 3 Problem Card cho scenario giáo viên dạy lập trình; pitch 3 candidate #10–#12 để nhóm so sánh với AIOps và Text-to-SQL.
 - Kiểm tra tài liệu chính thức của Datadog Watchdog, Dynatrace Davis AI và PagerDuty AIOps/Event Orchestration; sửa bảng research để tách rõ anomaly/RCA, event orchestration và quyền thực thi, đồng thời bỏ các khẳng định chi phí/bảo mật chưa có nguồn.
-- Đánh giá 4 rủi ro Value/Usability/Feasibility/Viability dựa trên tổng hợp 5 phỏng vấn; chốt **Not Yet** cho auto-containment và đề xuất shadow pilot read-only 2 tuần/30 mẫu.
+- Đánh giá 4 rủi ro Value/Usability/Feasibility/Viability dựa trên tổng hợp 5 phỏng vấn; chốt **Go — pilot có điều kiện** theo hai giai đoạn shadow/read-only và auto-containment cục bộ.
 - Viết tiêu chí mở quyền và ngưỡng dừng đo được: dừng ngay khi có vi phạm quyền/whitelist, rollback thất bại hoặc bỏ sót sự cố nghiêm trọng; nếu không đạt chất lượng thì quay về Rule + Workflow read-only + HITL.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
@@ -137,4 +137,4 @@ Mỗi thành viên tự điền mục của mình.
 
 **Điều mình học được từ phần nhóm:**
 
-- Research không chỉ để liệt kê công cụ mà phải chỉ ra công cụ giải đúng bước nào, cần dữ liệu gì và còn thiếu gì so với bài toán. Kết quả phỏng vấn cũng khiến mình đổi từ hướng “Go có điều kiện” sang “Not Yet”: pain ngoài giờ là thật, nhưng baseline 90–120 phút và các ngưỡng 60/85 chưa được log xác nhận. Với hành động có thể chặn người dùng thật, nhóm phải tách Agent đọc/đề xuất khỏi policy cấp quyền và chỉ mở quyền sau shadow pilot có tiêu chí dừng rõ ràng.
+- Research không chỉ để liệt kê công cụ mà phải chỉ ra công cụ giải đúng bước nào, cần dữ liệu gì và còn thiếu gì so với bài toán. Kết quả phỏng vấn cho thấy pain ngoài giờ là thật, đủ để nhóm **Go cho một pilot nhỏ và có thể đảo ngược**, nhưng baseline 90–120 phút và các ngưỡng 60/85 chưa được log xác nhận. Vì vậy nhóm tách Agent đọc/đề xuất khỏi policy cấp quyền, bắt đầu bằng shadow mode và chỉ mở auto-containment sau khi đạt cổng an toàn.

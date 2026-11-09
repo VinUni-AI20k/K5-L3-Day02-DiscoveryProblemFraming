@@ -220,31 +220,73 @@ Vì sao:
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
 
+### 7.1. Problem Statement v1
+
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Chuyên viên phụ trách đánh giá thầu (Phó kiến trúc sư / KTKT); Lãnh đạo dự án |
+| **Quy trình** | 1. Tiếp nhận 4 file chào giá. 2. Kiểm mẫu (file đúng/sai). 3. Gom 3 file đúng mẫu (copy × 7 sheet). 4. Ghép 1 file sai mẫu vào mã dòng BOQ. 5. Kiểm tổng tiền khớp file gốc. **[Phần gom: 6–7h]** 6. Dò từng dòng: so khối lượng chào ≠ BOQ; so đơn giá chênh >30% vs trung vị 4 nhà thầu; tô màu dòng bất thường (~4h trên ~16.000 dòng). **[Phần soát: 5–6h]** 7. Cộng phát sinh, ghi chú lý do chênh lệch. 8. Trình lãnh đạo. |
+| **Bottleneck** | **Chính (Bước 6):** Dò ~16.000 dòng (4.100 BOQ × 4 nhà thầu) bằng mắt → ~4h/vòng; rủi ro sót 1–2 dòng = sai lệch giá hàng tỷ. **Phụ (Bước 4):** Ghép file sai mẫu → ~2.5h nếu có. **Tổng:** 11–13h/vòng, 2 vòng/gói = 22–26h/gói. |
+| **Impact** | Chuyên viên mất nhiều thời gian soát thủ công; nguy cơ bỏ sót chênh lệch (sót dòng = sai hàng tỷ VND); lãnh đạo không có cơ sở dữ liệu đầy đủ để so sánh công bằng; khi phát hiện sai ở vòng 2, phải làm lại toàn bộ. |
+| **Success Metric** (baseline → target, cách đo) | **(1) Thời gian soát:** 5–6h/vòng → < 1.5h/vòng (giảm ≥75%). Cách đo: bấm giờ mở file → chạy tool → đọc output → ghi chú. **(2) Phát hiện chênh khối lượng:** ~70–80% (sót 1–2 dòng/4.100) → 100% (0 sót). Cách đo: chạy tool trên file test 100 dòng (20 chênh thật); recall = detected/20. **(3) Không báo nhầm:** 0% → ≤2% FP. Cách đo: FP / 80 dòng bình thường. **(4) Phát hiện bất thường đơn giá:** ~60–70% → ≥90%. Cách đo: detect / ground_truth. **(5) Ghi chú đầy đủ:** Mọi dòng tô màu phải có ghi chú không trống. |
+| **Boundary** | **AI/Rule KHÔNG được:** (1) Sửa khối lượng, đơn giá hay bất kỳ số liệu. (2) Tự xóa/bỏ qua dòng. (3) Kết luận nhà thầu nào đạt/rẻ/bị loại. (4) Tự gửi file. (5) Nhận dữ liệu chào giá qua công cụ chưa được cấp phép. **Con người PHẢI kiểm tra:** (a) Mọi mapping AI gợi ý (PC#2). (b) Tổng tiền phải khớp 100% file gốc. (c) Mọi dòng tô màu phải xem + ghi lý do trước khi trình. |
+| **AI intervention point** | **Bước 2 (Rule):** Kiểm mẫu tự động. **Bước 3 (Rule):** Gom Power Query. **Bước 4 (AI, tùy chọn):** Gợi ý ghép dòng sai mẫu theo ý nghĩa (PC#2, Not Yet). **Bước 7 (Rule):** Công thức tính chênh, tô màu. **Bước 8 (Con người):** HITL xem + ghi chú. |
+| **Mức chọn** | **Rule-based** cho PC#1 (soát chênh). **Not Yet** cho PC#2 (ghép sai mẫu) và AI. **No-Go** cho PC#3 (đánh giá năng lực). |
+| **Rủi ro & người kiểm tra** | **(Value Risk):** Chưa đo hiệu quả phương án mới. Xử lý: pilot trên gói cũ. **(Usability Risk):** Chuyên viên quen Excel. Xử lý: giữ định dạng quen. **(Feasibility Risk):** File sai mẫu, mã khác nhau. Xử lý: tách bước kiểm/ghép/phát hiện. **(Viability Risk):** Chi phí triển khai, bảo mật. Xử lý: ưu tiên công cụ sẵn có, phân quyền. |
 
-**Thay đổi so với v0 và lý do:**
+### 7.2. So sánh v0 (CP5) vs v1 (CP6)
 
-| Trường | v0 | v1 | Vì sao đổi |
+| Trường | v0 (CP5) | v1 (CP6) | Thay đổi / Lý do |
 |---|---|---|---|
-| | | | |
+| **Phạm vi** | Chưa rõ scope PC#1 vs PC#2 | PC#1 = bài toán chính (Rule). PC#2 = Not Yet (Workflow+AI). PC#3 = No-Go (Agent). | Làm rõ sau kiểm chứng CP4; phân tách rủi ro. |
+| **Bottleneck** | "Bước 6 dò 16.000 dòng" (chung chung) | Rõ: bước 6 (~4h) chính, bước 4 (~2.5h) phụ. Tác động: 4h/(16h) = 25% soát. | Tính toán thời gian từng bước ở CP5. |
+| **Impact** | "Khó so sánh giá công bằng" | Cụ thể: sót dòng = sai ~3 tỷ VND ở gói gần nhất. | Dữ liệu thực tế từ chuyên viên KTKT (Vinh). |
+| **Success Metric** | "Giảm ≥50%, precision ≥90%" (mơ hồ) | 5 metric rõ: thời gian <1.5h, detect 100%, FP ≤2%, ≥90% bất thường, 100% ghi chú. | Xây dựng eval framework 8 section, mỗi metric có "cách đo". |
+| **Boundary** | "Không sửa số, cần HITL" (tóm lại) | Chi tiết 5 điều AI không được + 3 khi con người phải kiểm. | Phản biện nhóm mạnh hơn về HITL ở từng bước. |
+| **Quyết định** | v0 template chưa điền | Rõ: Go (Rule-based), Not Yet (PC#2), No-Go (PC#3). | Kết quả bỏ phiếu nhóm sau CP6. |
 
-**Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
+### 7.3. Tiêu chí đánh giá (5 criteria)
 
-| # | Tiêu chí | Đạt khi | Không đạt khi |
-|---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+#### **C1: Độ chính xác phát hiện chênh khối lượng**
+| Đạt | Không đạt |
+|---|---|
+| ✅ Phát hiện **100%** dòng có khối lượng chào ≠ BOQ | ❌ Sót >5% |
+| ✅ Không báo nhầm (FP ≤2% trên dòng bình thường) | ❌ Báo nhầm >2% |
+| ✅ Ghi rõ: khối lượng chào, BOQ, chênh lệch (%, tuyệt đối) | ❌ Ghi chú mơ hồ |
+| ✅ Trace back được vị trí ở file gốc (sheet, dòng, cột) | ❌ Không ghi vị trí |
+
+#### **C2: Chính xác phát hiện bất thường đơn giá**
+| Đạt | Không đạt |
+|---|---|
+| ✅ Phát hiện **≥90%** dòng chênh >30% vs trung vị | ❌ Phát hiện <70% |
+| ✅ Ghi: đơn giá từng nhà, trung vị, %, nhà nào chênh | ❌ Ghi chung chung |
+| ✅ Mức cảnh báo rõ (CRITICAL >50%, WARNING >30%) | ❌ Không có cấp độ |
+| ✅ Ngưỡng 30% được confirm lãnh đạo | ❌ Ngưỡng chỉ ước lượng |
+
+#### **C3: Xử lý dữ liệu thiếu & định dạng sai**
+| Đạt | Không đạt |
+|---|---|
+| ✅ Phát hiện **100%** ô trống (khối lượng, đơn giá) | ❌ Bỏ sót ô trống |
+| ✅ Flag ô có ký tự không cần (khoảng trắng, tiền tệ, dấu) | ❌ Chấp nhận định dạng sai |
+| ✅ Tất cả ô flag có ghi chú giải thích | ❌ Ghi chú mơ hồ |
+| ✅ Chuyên viên sửa/skip được mà không ảnh output | ❌ Tool crash khi lỗi |
+
+#### **C4: Truy nguồn & kiểm chứng**
+| Đạt | Không đạt |
+|---|---|
+| ✅ Trace back cụ thể (sheet, row, col) trong file input | ❌ Output không ghi vị trí |
+| ✅ Ghi rõ công thức (ví dụ: Chênh% = ABS(chào−BOQ)/BOQ) | ❌ Không ghi công thức |
+| ✅ Kiểm chéo bằng tay được (input không bị thay đổi) | ❌ Tool thay input |
+| ✅ Có phương án quay về (Rule fail → ghép tay) | ❌ Không phương án B |
+
+#### **C5: Giảm thời gian + khả năng sử dụng**
+| Đạt | Không đạt |
+|---|---|
+| ✅ Thời gian ≤1.5h/vòng hoặc ≥75% giảm | ❌ Giảm <50% hoặc không đo |
+| ✅ Output xuất Excel/CSV (không format lại) | ❌ Output khó đọc |
+| ✅ Chuyên viên chạy được không cần đào tạo lâu | ❌ Cách dùng phức tạp |
+| ✅ Tool chạy máy thường (Excel, Power Query, macro) | ❌ Cần server/kỹ sư bảo trì |
+| ✅ Chuyên viên hiểu giới hạn (không tin tuyệt đối) | ❌ Tin máy, soát lơ là |
 
 ---
 

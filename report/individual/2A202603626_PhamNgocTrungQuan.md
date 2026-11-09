@@ -143,16 +143,16 @@ Tiếp nhận hóa đơn và chứng từ -> Kiểm tra tài liệu -> Đọc th
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Pitch Problem Card #1 (Soát khối lượng và đơn giá bất thường) từ bài cá nhân của Vinh. Bài toán: 4.100 BOQ × 4 nhà thầu = 16.000 dòng cần dò bằng mắt, mất ~4 giờ/vòng, rủi ro sót 1 dòng = sai hàng tỷ VND. | Nhóm chọn bài toán này làm candidate chính (Outcome: Giảm thời gian soát từ 5–6 giờ/vòng xuống <1.5 giờ). |
+| Phản biện bài của bạn khác | Câu hỏi tôi đặt: Làm sao phân biệt file đúng mẫu vs sai mẫu? Cần Rule hay AI để ghép dòng sai mẫu? Làm sao kiểm soát khi AI ghép nhầm nhưng tổng tiền vẫn khớp? | Góp phần nhóm tách PC#1 (soát) từ PC#2 (ghép) và rõ ranh giới AI/Rule/Người. |
+| Nhận phản biện | Phản biện từ nhóm/AI: Cần rõ "độ mơ hồ × độ phức tạp" cho từng công đoạn; cần Assumption Map để kiểm chứng; không được giả định AI sẽ tốt hơn Rule khi dữ liệu cấu trúc. | Tôi bổ sung: thêm Assumption Map (CP3.1), research giải pháp Excel + Procore + BuildingConnected (CP3.3), rõ quy trình trước/sau (CP4). |
+| Gom cluster / cây OST | Tham gia phân tích: gom các candidate về 1 Outcome chung: "Hỗ trợ chuyên viên KTKT so sánh và phát hiện chênh lệch hồ sơ chào giá nhanh hơn, chính xác hơn, có truy vết". | 3 candidate → 1 Outcome → tách PC#1, PC#2, PC#3 (loại). |
+| Chọn candidate problem | Chọn PC#1 (soát chênh khối lượng + đơn giá) làm bài toán chính vì: Độ mơ hồ thấp (quy tắc rõ), volume lớn, bottleneck xác định, có baseline (5–6 giờ/vòng). | Candidate được chốt; PC#2 (ghép sai mẫu) → Not Yet; PC#3 (đánh giá năng lực) → No-Go. |
+| Kiểm chứng / research | Phỏng vấn 3 chuyên viên đấu thầu: 2 xác nhận muốn sử dụng, 1 lo ngại AI ghép sai. Research: Excel Formula + Conditional Formatting (Rule), Procore Bid Leveling, BuildingConnected Bid Leveling. | Insight: Rule phù hợp cho PC#1 (không cần AI). Quy trình tương lai: Rule cho kiểm mẫu/gom/tô màu; AI tùy chọn cho ghép sai mẫu (PC#2, Not Yet). |
+| Quy trình nhóm | Vẽ quy trình hiện tại (8 bước, 11–13 giờ/vòng) vs tương lai (9 bước, 2–2.5 giờ/vòng). Xác định bottleneck chính: bước 6 dò 16.000 dòng (~4 giờ). Boundary: AI không được sửa số, tự xóa dòng, kết luận nhà thầu nào trúng thầu. | Quy trình chi tiết có Mermaid diagram, bảng công đoạn, ghi chú HITL. |
+| Problem Statement | Hoàn thành PS v0 → v1: Actor (chuyên viên KTKT, lãnh đạo), Bottleneck (bước 6: 4 giờ dò 16.000 dòng), Success Metric (5 cái: thời gian <1.5 giờ, detect 100% chênh khối lượng, FP ≤2%, detect ≥90% chênh đơn giá, 100% ghi chú). | PS rõ ràng, có "Cách đo" cho từng metric. |
+| Mức can thiệp AI | Áp dụng ma trận độ mơ hồ × độ phức tạp: So khối lượng (thấp × cao) → Rule. Phát hiện đơn giá (trung × trung) → Rule. Ghép sai mẫu (cao × cao) → Workflow+AI (Not Yet). Kết luận: **Rule-based** cho PC#1. | Tạo bộ eval framework (cp6-2A202603626-eval.md) với 8 section: phạm vi, 5 loại chênh, 5 tiêu chí, 10 test case, 7 hạn chế, 8 câu xác nhận, plan. |
+| Quyết định | Kết luận: **Go (Rule), Not Yet (PC#2), No-Go (PC#3)**. Lý do Go: khối lượng dữ liệu lớn, thao tác lặp lại, quy tắc rõ, không cần AI → phù hợp Rule. Lý do Not Yet PC#2: AI có thể giúp ghép dòng sai mẫu, nhưng cần kiểm chứng riêng. | Pilot nhỏ nhất: dùng gói thầu cũ, chạy Rule, so kết quả trước/sau, đo thời gian và số bỏ sót. |
 
 --- 
 
@@ -160,12 +160,13 @@ Tiếp nhận hóa đơn và chứng từ -> Kiểm tra tài liệu -> Đọc th
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Dùng ChatGPT để bổ sung các vấn đề | — | — | — |
+| CP2 Problem Card | Dùng ChatGPT để đưa ra các đánh giá bổ sung cho các đánh giá cá nhân| — | — | — |
+| CP3 Pitch & Hội tụ | Dùng Claude để phân tích ma trận độ mơ hồ × độ phức tạp cho từng công đoạn (kiểm mẫu, gom, ghép, so sánh, phát hiện bất thường). | Giúp tôi nhìn rõ: công đoạn nào độ mơ hồ cao (ghép sai mẫu) vs thấp (so khối lượng); độ phức tạp ở đâu (volume 16.000 dòng vs quy tắc có sẵn). | AI gợi ý dùng AI cho tất cả công đoạn; chưa gợi ý Rule riêng cho phần so sánh số liệu. | Tôi quyết định tách: PC#1 (so sánh) → Rule; PC#2 (ghép) → Workflow+AI (Not Yet); PC#3 (năng lực) → No-Go. |
+| CP4 Research | Dùng Claude để research công cụ hiện có: Excel Formula + Conditional Formatting, Procore Bid Leveling, BuildingConnected. Hỏi Claude: "Công cụ nào phù hợp nhất cho 16.000 dòng cần dò?" | AI liệt kê đầy đủ: Excel Formula (minh bạch, không cần LLM), Procore (tập trung workflow), BuildingConnected (so sánh trực quan). Tôi hiểu được excel formula là baseline đủ tốt. | AI không làm phân tích chi tiết trade-off: Excel đơn giản nhưng phải kiểm mã/đơn vị thủ công; Procore có sẵn nhưng chưa test với 16.000 dòng. | Tôi bổ sung: cần thử Excel formula trước, khi nào không đủ mới xem Procore hoặc AI. |
+| CP5 Quy trình | Dùng Claude để format quy trình hiện tại (8 bước) và tương lai (9 bước) thành Mermaid diagram và bảng chi tiết. | AI xuất Mermaid code rõ ràng, ghi rõ thời gian từng bước (hiện tại: 11–13h/vòng; tương lai: 2–2.5h/vòng). Tôi thêm vào group_report section 4. | AI gợi ý tối ưu: "Đặt ngưỡng thấp để bao quát tất cả trường hợp"; nhưng không xét: ngưỡng thấp → báo nhiều → người phải dò thêm. | Tôi điều chỉnh: ngưỡng 30% chênh đơn giá là xác định được người domain, không phải AI tự đặt. |
+| CP5–6 Problem Statement v0 → v1 | Dùng Claude để draft PS v0 (Actor, Bottleneck, Impact, Success Metric) và v1 (thêm Boundary, AI Intervention Point, Mức chọn). | AI giúp cấu trúc: C1–C5 là 5 tiêu chí rõ ràng (Độ chính xác khối lượng, chênh đơn giá, xử lý thiếu dữ liệu, truy nguồn, giảm thời gian). PS v1 có bảng so sánh v0 vs v1. | AI draft "Boundary" quá chung chung; chưa rõ từng bước HITL phải kiểm gì (mã, mô tả, đơn vị, dòng nguồn). | Tôi viết chi tiết: Boundary 5 điều AI không được + 3 khi con người phải kiểm (bước 5 duyệt AI ghép, bước 6 khớp tổng tiền, bước 8 xem dòng tô màu). |
+| CP6 Mức can thiệp / quyết định | Dùng Claude để viết Eval Framework (cp6-2A202603626-eval.md): 8 section (phạm vi, quy tắc, tiêu chí, test case, trước/sau, hạn chế, câu xác nhận, kế hoạch). | AI giúp cấu trúc đầy đủ: "5 loại chênh lệch → 5 tiêu chí đánh giá → 10 test case → cách đo từng metric". Eval framework trở thành tài liệu để đo giải pháp sau này. | AI gợi ý "ngưỡng 30% là đủ tốt"; nhưng không xét: ngưỡng này cần được domain expert (lãnh đạo) confirm, không phải AI đề xuất. | Tôi thêm ghi chú: "Ngưỡng 30% được confirm lãnh đạo" ở tiêu chí C2. Kết luận: Go (Rule), Not Yet (PC#2, AI), No-Go (PC#3, Agent). |
 
 ---
 
@@ -191,4 +192,11 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 ## 7. Tài liệu tham khảo
 
--
+- [Microsoft: Conditional Formatting in Excel](https://support.microsoft.com/en-us/excel/use-conditional-formatting-to-highlight-information-in-excel) — Sử dụng công thức và tô màu tự động để phát hiện dòng bất thường
+- [Microsoft Excel: MEDIAN Function](https://support.microsoft.com/en-au/excel/functions/median-function) — Tính trung vị 4 báo giá để phát hiện đơn giá chênh lệch
+- [Procore: Level Bids for a Bid Form](https://support.procore.com/products/online/user-guide/project-level/bidding/tutorials/level-bids-for-a-bid-form) — So sánh báo giá với ngưỡng và lưu dấu vết điều chỉnh
+- [BuildingConnected: Bid Leveling Overview](https://support.buildingconnected.com/hc/en-us/articles/47949854611219-Bid-Leveling-Overview) — Trình bày báo giá cạnh nhau, so với dự toán
+- [Google PAIR: Human-in-the-Loop ML](https://pair.withgoogle.com/) — Thiết kế hệ thống hỗ trợ (không tự động hóa) dựa trên HITL
+- Báo cáo nhóm — Day 02 Discovery & Problem Framing (GitHub): Tài liệu kiểm chứng, quy trình trước/sau, mức can thiệp AI
+- Báo cáo cá nhân — Nguyễn Văn Vinh (2A202603672): Problem Card #1, #2, #3 (soát khối lượng, ghép file sai mẫu, đánh giá năng lực)
+- Eval Framework — Phạm Ngọc Trung Quân (cp6-2A202603626-eval.md): 8 section gồm phạm vi, quy tắc, 5 tiêu chí, 10 test case, success metrics

@@ -16,114 +16,120 @@
 
 ## 2. Scan problem (CP1)
 
-| # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (cần bổ sung) |
-|---:|---|---|---|---|
-| 1 | Lặp lại | Khi khách hàng gửi nhiều đợt yêu cầu chỉnh sửa website, tôi muốn tổng hợp đủ yêu cầu và trạng thái xử lý để không bỏ sót khi bàn giao. | Developer, khách hàng | [Số lần/tuần, số phút tổng hợp; bằng chứng ẩn danh] |
-| 2 | Tốn thời gian | Khi test web app có nhiều vai trò, tôi muốn ghi rõ bước tái hiện lỗi để developer sửa đúng ngay từ lần đầu. | Tester, developer | [Số lỗi, phút viết ticket; bản ghi bug thật] |
-| 3 | Đọc / tổng hợp | Khi khách gửi brief dự án còn mơ hồ, tôi muốn làm rõ phạm vi và luồng nghiệp vụ trước khi báo giá để tránh hiểu sai yêu cầu. | Freelancer, khách hàng | [Số lượt hỏi lại, phút xử lý brief] |
-| 4 | Pain từ người khác | Khi khách hàng muốn biết dự án đang ở giai đoạn nào, tôi muốn cung cấp thông tin tiến độ đã xác nhận để họ không phải hỏi nhiều lần. | Khách hàng, PM | [Số lần khách hỏi; tin nhắn đã ẩn danh] |
-| 5 | Lặp lại | Khi developer sửa lỗi xong, tôi muốn biết chính xác case nào phải kiểm tra lại để tránh bỏ sót lỗi cũ. | Tester, developer | [Số vòng retest, phút kiểm tra; ticket thật] |
+Tôi chọn quan sát các công việc thường gặp khi nhận dự án website, làm rõ yêu cầu, phát triển và kiểm thử. Các mốc thời gian chưa có dữ liệu đo được sẽ ghi rõ là cần bổ sung thay vì ước lượng thành số liệu thực tế.
 
-**Ghi chú quá trình chọn vấn đề:** Tôi tập trung vào các khâu thường gặp trong công việc phát triển và kiểm thử website: tiếp nhận yêu cầu, làm rõ phạm vi, theo dõi chỉnh sửa và kiểm thử. Các số liệu ở cột bằng chứng cần được đối chiếu với dự án thực tế. Khi hoàn thiện, tôi sẽ phân biệt vấn đề tự quan sát với ý bổ sung nhờ công cụ hỗ trợ.
+| # | Lăng kính | Job Story | Ai chịu ảnh hưởng? | Dấu hiệu thật |
+|---:|---|---|---|---|
+| 1 | Lặp lại | Khi khách gửi phản hồi sau mỗi lần demo website, tôi muốn tổng hợp các yêu cầu theo từng lần chỉnh sửa, để không bỏ sót lúc bàn giao. | Developer, khách hàng | Có công việc nhận feedback và sửa website trong dự án freelance; **cần đối chiếu** số lần/tuần và phút tổng hợp từ dự án cụ thể. |
+| 2 | Tốn thời gian | Khi nhận brief website chưa rõ nghiệp vụ, tôi muốn xác định các yêu cầu còn thiếu trước khi báo giá, để tránh hiểu sai phạm vi. | Freelancer, khách hàng | Có công việc trao đổi yêu cầu và báo giá dự án; **cần đối chiếu** số lần phải hỏi lại và thời gian. |
+| 3 | Đọc, tổng hợp nhiều thông tin | Khi kiểm thử một web app có nhiều vai trò người dùng, tôi muốn xác định đủ bước tái hiện lỗi và kết quả mong đợi, để người sửa có thể kiểm tra lại. | Tester, developer | Có bối cảnh kiểm thử web app; **cần đối chiếu** ticket/ảnh/video và thời gian lập báo cáo lỗi. |
+| 4 | Pain từ người khác | Khi khách hỏi tiến độ dự án, tôi muốn có thông tin cập nhật theo từng hạng mục, để trả lời chính xác mà không phải kiểm lại mọi thay đổi. | Khách hàng, developer | Có công việc báo cáo tiến độ dự án; **cần đếm** số lần khách hỏi cập nhật từ tin nhắn thực tế. |
+| 5 | Lặp lại | Khi nhận thông báo một lỗi đã sửa, tôi muốn biết những trường hợp cần kiểm tra lại, để không bỏ sót lỗi cũ sau mỗi lần cập nhật. | Tester, developer | Có công việc retest sau khi fix; **cần đo** số vòng retest và số ticket mở lại. |
+| 6 | Tốn thời gian | Khi phải bàn giao website cho khách, tôi muốn có checklist các chức năng và tài khoản cần bàn giao, để tránh phải bổ sung nhiều lần. | Developer, khách hàng | [Kiểm tra các lần bàn giao, số đầu mục thiếu và thời gian bổ sung.] |
+| 7 | Đọc, tổng hợp nhiều thông tin | Khi dự án thay đổi phạm vi giữa chừng, tôi muốn đối chiếu yêu cầu mới với phần việc đã thống nhất, để xác định đâu là chỉnh sửa và đâu là phát sinh. | Freelancer, PM, khách hàng | [Tìm phiên bản brief/hợp đồng và số lần thay đổi phạm vi thực tế.] |
+| 8 | Pain từ người khác | Khi developer nhận bug report, họ muốn có đủ môi trường, bước thao tác và bằng chứng, để không phải hỏi lại tester. | Developer, tester | [Đếm các ticket từng bị yêu cầu bổ sung thông tin.] |
+
+**Cách chọn:** Tôi ưu tiên những vấn đề có quy trình rõ và có thể đo bằng thời gian xử lý, số lượt hỏi lại hoặc số ticket. Các dòng #6–#8 là hướng mở rộng, chỉ giữ nếu tìm được tình huống thực tế tương ứng.
+
+**Sử dụng công cụ hỗ trợ:** Tôi đã dùng AI để kiểm tra cách diễn đạt Job Story và phản biện danh sách. Chưa xem các gợi ý chưa kiểm chứng là bằng chứng thực tế. Ý tưởng xây một hệ thống tự quản lý toàn bộ dự án không được đưa vào danh sách vì đó là giải pháp quá rộng, không phải một pain cụ thể.
 
 ---
 
-## 3. Top 3 Problem Cards + quy trình nháp (CP2)
-
-### Bảng chọn top 3
+## 3. Top 3 Problem Cards (CP2)
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | Tổng hợp yêu cầu chỉnh sửa website | Luồng công việc rõ, dễ kiểm chứng qua dự án | Tần suất và mức thiệt hại thực tế? |
-| 2 | Làm rõ brief trước báo giá | Có tác động trực tiếp tới phạm vi, thời gian | Nguyên nhân nằm ở brief hay cách hỏi khách? |
-| 3 | Ghi nhận bug và retest | Có thể đo số phút / ticket và số vòng sửa | Bước nào chậm nhất thực sự? |
+| 1 | Tổng hợp phản hồi chỉnh sửa website (#1) | Có actor, điểm bắt đầu/kết thúc rõ và có thể đối chiếu task thực tế | Mất bao lâu mỗi lần tổng hợp? Bao nhiêu feedback bị bỏ sót? |
+| 2 | Làm rõ brief trước báo giá (#2) | Liên quan trực tiếp đến phạm vi công việc và trao đổi với khách | Thời gian chậm do thiếu brief hay do chờ phản hồi? |
+| 3 | Viết bug report khi kiểm thử (#3) | Có đầu ra rõ là ticket với bước tái hiện và bằng chứng | Bước tái hiện hay bước viết ticket mới tốn thời gian nhất? |
 
-### Problem Card #1 — Theo dõi yêu cầu chỉnh sửa
+### Problem Card #1 — Tổng hợp phản hồi chỉnh sửa website
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi nhận feedback nhiều đợt, tôi muốn theo dõi từng yêu cầu và trạng thái để bàn giao không thiếu hạng mục. |
-| Actor | Freelancer developer / PM |
-| Thời điểm / bối cảnh | Khách gửi feedback sau mỗi bản demo website |
-| Quy trình hiện tại | Nhận feedback → đọc/phân loại → đối chiếu yêu cầu cũ → tạo task → sửa web → khách xác nhận |
-| Bottleneck | Bước đối chiếu yêu cầu cũ; thời gian: [điền sau khi đo] |
-| Impact | Có thể sót feedback, phải xác nhận lại |
-| Success metric | Baseline [phút/đợt feedback] → target giảm 25%; đo ít nhất 5 đợt tương đương |
-| Phương án không dùng AI | Bảng feedback chuẩn, mã task, người phụ trách, trạng thái |
-| Giả thuyết về AI | Gợi ý trích và phân loại yêu cầu từ văn bản đã nhập, có duyệt thủ công |
-| Cảm nhận nhanh | Rule hoặc Workflow; cần kiểm chứng |
+| Job Story | Khi khách gửi nhiều đợt feedback sau demo, tôi muốn theo dõi yêu cầu và trạng thái xử lý ở một nơi, để không bỏ sót hạng mục khi bàn giao. |
+| Actor | Freelancer developer trực tiếp nhận yêu cầu và sửa website |
+| Thời điểm / bối cảnh | Sau mỗi lần gửi bản demo cho khách xem và góp ý |
+| Quy trình hiện tại | 1. Nhận phản hồi · 2. Đọc và tách từng yêu cầu · 3. Đối chiếu với feedback cũ · 4. Ghi đầu việc · 5. Chỉnh sửa website · 6. Kiểm tra và gửi khách xác nhận |
+| Bottleneck | Bước 3 — đối chiếu phản hồi mới với các yêu cầu trước đó; **chưa có thời gian đo** |
+| Impact | Có nguy cơ bỏ sót hoặc làm trùng yêu cầu, cần trao đổi lại trước bàn giao |
+| Success metric | Baseline: [phút tổng hợp/đợt, số feedback sót]; target đề xuất: giảm ít nhất 25% thời gian mà số feedback sót không tăng; đo trên ít nhất 5 đợt chỉnh sửa tương đương |
+| Phương án không dùng AI | Dùng một bảng task chung, đánh mã từng yêu cầu và cập nhật trạng thái |
+| Giả thuyết về AI | Hỗ trợ tách yêu cầu từ đoạn phản hồi đã nhập và gợi ý các yêu cầu trùng; developer vẫn xác nhận |
+| Cảm nhận nhanh | Rule trước; Workflow chỉ khi cách thủ công vẫn mất nhiều thời gian |
 
 ```text
-Nhận feedback [? phút]
-  → Đọc/phân loại [? phút]
-  → Đối chiếu task cũ [? phút]  ← bước cần đo
-  → Ghi task [? phút]
-  → Thực hiện sửa [? phút]
-  → Gửi khách xác nhận [? phút]
+HIỆN TẠI — tổng thời gian chưa đo
+
+[1 Nhận feedback: ?'] → [2 Tách yêu cầu: ?']
+→ [3 Đối chiếu yêu cầu cũ: ?']  ← BOTTLENECK CẦN KIỂM CHỨNG
+→ [4 Ghi task: ?'] → [5 Chỉnh sửa: ?']
+→ [6 Kiểm tra và xác nhận: ?']
 ```
 
 ### Problem Card #2 — Làm rõ brief trước báo giá
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi brief dự án thiếu thông tin, tôi muốn xác định câu hỏi và phạm vi cần làm rõ để báo giá có cơ sở. |
-| Actor | Freelancer / BA / khách hàng |
-| Thời điểm / bối cảnh | Trước khi ký hợp đồng triển khai website/phần mềm |
-| Quy trình hiện tại | Nhận brief → đọc → liệt kê điểm thiếu → hỏi khách → chốt phạm vi → ước lượng |
-| Bottleneck | Bước phát hiện thông tin thiếu và chờ phản hồi; [điền thời gian đo được] |
-| Impact | Nguy cơ sai phạm vi, phải sửa báo giá |
-| Success metric | Baseline [lượt hỏi lại/brief] → target giảm 20%; đánh giá trên ít nhất 3 brief so sánh được |
-| Phương án không dùng AI | Checklist discovery và biểu mẫu xác nhận phạm vi |
-| Giả thuyết về AI | Tìm điểm mơ hồ trong brief và đề xuất câu hỏi, không tự chốt yêu cầu |
-| Cảm nhận nhanh | No AI hoặc Workflow |
+| Job Story | Khi brief dự án chưa đủ thông tin, tôi muốn làm rõ các luồng nghiệp vụ và phạm vi cần xây dựng, để ước lượng công việc và báo giá phù hợp. |
+| Actor | Freelancer developer phụ trách trao đổi yêu cầu và báo giá |
+| Thời điểm / bối cảnh | Khi nhận dự án mới, trước khi chốt báo giá và hợp đồng |
+| Quy trình hiện tại | 1. Nhận brief · 2. Đọc và phân tích · 3. Ghi lại yêu cầu chưa rõ · 4. Hỏi khách · 5. Xác nhận phạm vi · 6. Ước lượng và báo giá |
+| Bottleneck | Bước 3 — xác định thông tin còn thiếu; thời gian chờ khách ở bước 4 phải đo riêng |
+| Impact | Báo giá có thể thiếu hạng mục, phải sửa nhiều lần hoặc phát sinh tranh luận khi triển khai |
+| Success metric | Baseline: [phút phân tích/brief, lượt hỏi lại]; target đề xuất: giảm 20% thời gian phân tích mà số yêu cầu bị hiểu sai không tăng; đo từ ít nhất 3 brief |
+| Phương án không dùng AI | Checklist discovery theo loại dự án, mẫu brief bắt buộc xác nhận |
+| Giả thuyết về AI | Đánh dấu các câu mơ hồ, gợi ý câu hỏi làm rõ; không tự quyết định phạm vi |
+| Cảm nhận nhanh | No AI / Rule; cân nhắc Workflow nếu brief đa dạng và quá nhiều thông tin |
 
 ```text
-Nhận brief [? phút]
-  → Đọc/ghi chú [? phút]
-  → Phát hiện điểm thiếu [? phút]  ← bước cần đo
-  → Trao đổi/chờ khách [? phút hoặc giờ]
-  → Xác nhận phạm vi [? phút]
-  → Báo giá [? phút]
+HIỆN TẠI — tách thời gian làm và thời gian chờ
+
+[1 Nhận brief: ?'] → [2 Phân tích: ?']
+→ [3 Tìm yêu cầu thiếu: ?']  ← BOTTLENECK CẦN KIỂM CHỨNG
+→ [4 Gửi câu hỏi/chờ phản hồi: ? giờ]
+→ [5 Xác nhận phạm vi: ?'] → [6 Lập báo giá: ?']
 ```
 
-### Problem Card #3 — Bug report & retest
+### Problem Card #3 — Viết bug report và tái kiểm thử
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi kiểm thử sản phẩm nhiều luồng, tôi muốn ghi lỗi tái hiện được và theo dõi lịch sử sửa để không bỏ sót khi retest. |
-| Actor | Tester/QA và developer |
-| Thời điểm / bối cảnh | Trước nghiệm thu, sau các bản fix |
-| Quy trình hiện tại | Chọn case → thao tác → tái hiện lỗi → chụp bằng chứng → viết ticket → dev sửa → retest |
-| Bottleneck | Bước tái hiện lỗi và viết ticket; [điền thời gian đo được] |
-| Impact | Tốn thời gian trao đổi và nguy cơ bug bị reopen |
-| Success metric | Baseline [phút/ticket, % ticket phải làm rõ] → target giảm 20% phút/ticket; đo trên mẫu lỗi tương đương |
-| Phương án không dùng AI | Template bug report bắt buộc Steps / Expected / Actual / Evidence |
-| Giả thuyết về AI | Hỗ trợ tóm tắt log và soạn draft bug report, tester xác nhận |
-| Cảm nhận nhanh | Rule / Workflow |
+| Job Story | Khi phát hiện lỗi trên web app, tôi muốn ghi lại các bước tái hiện và bằng chứng rõ ràng, để developer sửa đúng lỗi và tester kiểm tra lại được. |
+| Actor | Manual tester/QA kiểm thử chức năng web app |
+| Thời điểm / bối cảnh | Khi kiểm thử trước bàn giao và sau các đợt sửa lỗi |
+| Quy trình hiện tại | 1. Chạy test case · 2. Phát hiện lỗi · 3. Tái hiện lỗi · 4. Chụp ảnh/quay video · 5. Viết ticket · 6. Chuyển developer · 7. Retest |
+| Bottleneck | Bước 3 — tái hiện lỗi, hoặc bước 5 — mô tả ticket; cần bấm giờ để xác định bước chính |
+| Impact | Developer có thể phải hỏi lại, kéo dài vòng sửa và nghiệm thu |
+| Success metric | Baseline: [phút/ticket; số ticket phải bổ sung thông tin]; target đề xuất: giảm 20% thời gian lập ticket và không tăng tỷ lệ ticket bị yêu cầu làm rõ; đo trên ít nhất 10 ticket |
+| Phương án không dùng AI | Template cố định: môi trường, steps, expected, actual, bằng chứng và mức độ nghiêm trọng |
+| Giả thuyết về AI | Tóm tắt ghi chú và log thành bản ticket để tester duyệt trước khi gửi |
+| Cảm nhận nhanh | Rule trước; Workflow nếu khối lượng lỗi đủ lớn |
 
 ```text
-Chọn case [? phút]
-  → Chạy test [? phút]
-  → Tái hiện lỗi [? phút]  ← bước cần đo
-  → Lưu ảnh/video [? phút]
-  → Viết ticket [? phút]
-  → Developer fix [? phút]
-  → Retest [? phút]
+HIỆN TẠI — tổng thời gian chưa đo
+
+[1 Chạy case: ?'] → [2 Phát hiện lỗi: ?']
+→ [3 Tái hiện lỗi: ?']  ← BƯỚC CẦN ĐO
+→ [4 Lưu bằng chứng: ?'] → [5 Viết ticket: ?'] ← BƯỚC CẦN ĐO
+→ [6 Gửi developer: ?'] → [7 Retest: ?']
 ```
 
 ### Card muốn pitch nhất
 
-- Card số: **1**
-- Vì sao: Việc quản lý feedback có điểm bắt đầu và kết thúc rõ, dễ đối chiếu với lịch sử task và các lần bàn giao.
-- Câu hỏi muốn nhóm phản biện: **"Nếu chuẩn hóa cách ghi nhận feedback bằng một bảng task chung, vấn đề bỏ sót yêu cầu còn xảy ra ở bước nào?"**
+- **Card số:** 1 — Tổng hợp phản hồi chỉnh sửa website.
+- **Vì sao:** Phạm vi tương đối gọn, dễ phân tách từng bước và có thể kiểm chứng qua lịch sử yêu cầu thay đổi.
+- **Câu hỏi muốn nhóm phản biện:** Nếu dùng chung một bảng theo dõi feedback có mã yêu cầu và trạng thái, phần nào vẫn gây mất thời gian nhiều nhất?
 
-### Phản biện của AI đối với Problem Cards (theo yêu cầu CP2)
+### AI phản biện Problem Card #1
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| Chưa có số liệu chứng minh tốn thời gian | Cần tự xác minh | Để trống baseline, yêu cầu đo từ case thật |
-| Chưa chứng minh AI cần thiết | Cần kiểm chứng | Thêm phương án checklist/bảng task không AI |
-| Chưa tách thời gian làm và thời gian chờ phản hồi | Cần tự xác minh | Tách hai loại thời gian trong Card #2 |
+| Chưa có thời gian baseline, nên chưa chứng minh đây là bottleneck lớn nhất | Đồng ý | Giữ thời gian chưa đo thay vì tự gán số; xác định cần bấm giờ qua các đợt feedback |
+| Có thể chỉ cần một bảng task chung, chưa chứng minh cần AI | Đồng ý | Bổ sung phương án không AI và ưu tiên thử trước |
+| Chỉ đo thời gian nhanh hơn thì chưa đủ | Đồng ý | Thêm chỉ số số yêu cầu bị bỏ sót vào success metric |
+
+**Điểm cần xác minh sau phản biện:** Với Card #1, nếu dùng bảng task chuẩn đã giảm được phần lớn thời gian và không còn sót yêu cầu, không nên chọn AI chỉ để tăng độ phức tạp.
 
 ---
 

@@ -285,22 +285,34 @@ Vì sao:
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Sinh viên đại học các ngành kỹ thuật, khoa học tự nhiên, toán - tin ôn thi cuối kỳ các môn học có bài giảng slide dài (>150 trang), nhiều công thức và chưa có sẵn đề cương chuẩn khóa trước |
+| **Quy trình** | Tải slide PDF → Rule tách cấu trúc chương → AI trích xuất danh mục công thức LaTeX & khái niệm cốt lõi kèm `[Slide p.XX]` → Sinh viên đối chiếu ảnh slide gốc và duyệt → Rule xuất file Cheat-sheet |
+| **Bottleneck** | Bước đọc dò từng trang slide để định vị và gõ lại/chụp ảnh công thức toán sang file tổng hợp (mất 180–240 phút/môn) |
+| **Impact** | Tốn 4–5 tiếng/môn; gây kiệt sức trước ngày thi; dễ gõ sai lệch ký hiệu toán hoặc bỏ sót công thức quan trọng |
+| **Success Metric** (baseline → target, cách đo) | (1) Tổng thời gian tạo đề cương từ **240–300 phút xuống dưới 45 phút/môn** (sinh viên tự bấm giờ);<br>(2) **Tỷ lệ công thức toán chính xác >= 95%** (sinh viên chỉ cần sửa dưới 5% số công thức trong bước duyệt);<br>(3) **100% công thức trích xuất có số trang slide gốc chính xác** để đối chiếu được ngay. |
+| **Boundary** | - AI không tự ý suy diễn công thức nằm ngoài slide bài giảng.<br>- AI không tự ý thay đổi ký hiệu của giảng viên.<br>- Không tự động xuất bản nếu chưa qua bước con người duyệt (HITL). |
+| **AI intervention point** | Chen vào giữa Bước 2 (sau khi Rule đã phân tách cấu trúc slide) và Bước 4 (trước khi sinh viên tiến hành duyệt nội dung). |
+| **Mức chọn** | **Workflow** |
+| **Rủi ro & người kiểm tra** | Rủi ro AI nhận diện sai ký hiệu toán hoặc bỏ sót công thức trọng tâm → **Sinh viên tự kiểm tra và duyệt** từng mục thông qua giao diện đối chiếu với ảnh chụp slide gốc trước khi xuất bản. |
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| **Actor** | Sinh viên đại học ôn thi cuối kỳ chung chung | Thu hẹp vào sinh viên ngành kỹ thuật/toán ôn môn có slide >150 trang chưa có đề cương chuẩn khóa trước | Kết quả kiểm chứng (CP4) cho thấy sinh viên các môn xã hội hoặc môn đã có đề cương cũ thì No AI đã đủ tốt. |
+| **Success Metric** | Chỉ đo thời gian: giảm từ 270' xuống dưới 60' | Bổ sung thêm metric chất lượng: tỷ lệ công thức chính xác >= 95% và 100% trích dẫn đúng số trang | Phản biện nhận được chỉ ra nếu chỉ nhanh mà công thức sai thì sinh viên sẽ trượt môn. |
+| **Boundary & Rủi ro** | Chỉ nêu AI không tự giải bài tập | Nêu cụ thể ranh giới ký hiệu toán học và cơ chế con người kiểm tra đối chiếu qua ảnh chụp slide gốc | Đảm bảo tính khả thi và an toàn học thuật, giải tỏa triệt để nỗi sợ sai công thức của người học. |
 
+**Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
+
+| # | Tiêu chí | Đạt khi | Không đạt khi |
+|---:|---|---|---|
+| 1 | **Tính chính xác của công thức (Math Accuracy)** | Công thức trích xuất dưới dạng LaTeX đúng 100% ký hiệu, chỉ số trên/dưới, dấu toán học so với slide gốc. | Xuất hiện ký hiệu sai lệch, mất dấu âm/dương, hoặc AI tự ý đổi tên biến số so với slide. |
+| 2 | **Tính truy xuất nguồn gốc (Traceability)** | 100% các công thức và khái niệm trích xuất đều có gắn kèm thẻ số trang slide `[Slide p.XX]` dẫn đúng đến trang chứa nội dung đó. | Không có số trang, hoặc số trang trích dẫn bị lệch so với trang thực tế trong file PDF. |
+| 3 | **Độ bao phủ kiến thức trọng tâm (Coverage)** | Bao quát >= 90% các công thức, định lý và định nghĩa cốt lõi được giảng viên đóng khung hoặc tổng kết ở cuối mỗi chương. | Bỏ sót các công thức nền tảng trong slide bài giảng. |
+| 4 | **Tính cô đọng và phân loại (Structure & Conciseness)** | Nội dung trích xuất được gom nhóm rõ ràng theo từng chương/mục; độ dài bản tóm tắt chỉ chiếm từ 10–15% dung lượng slide gốc. | Trích xuất lan man toàn bộ lời dẫn, ví dụ phụ; không phân cấp được mục lục chương. |
+
+---
 **Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |

@@ -2,16 +2,16 @@
 
 Mỗi checkpoint có template và prompt mẫu tương ứng trong [docs/01-worksheet.md](docs/01-worksheet.md). Bài làm mẫu cho từng checkpoint nằm trong [docs/02-deliverable-example.md](docs/02-deliverable-example.md).
 
-| CP | Tên | Ai làm | Thời gian | Ghi vào |
-|---|---|---|---:|---|
-| CP0 | Đọc bài mẫu | Cá nhân | 15' | — |
-| CP1 | Scan 5+ problems | Cá nhân | 25' | `report/individual/MSSV_HoTen.md` mục 2 |
-| CP2 | Top 3 Problem Cards + quy trình nháp | Cá nhân | 35' | `report/individual/MSSV_HoTen.md` mục 3 |
-| CP3 | Hội tụ nhóm | Nhóm | 30' | `report/team/group_report.md` mục 2 |
-| CP4 | Kiểm chứng + research giải pháp đã có | Nhóm | 30' | `report/team/group_report.md` mục 3 |
-| CP5 | Quy trình trước/sau + Problem Statement v0 | Nhóm | 45' | `report/team/group_report.md` mục 4–5 |
-| CP6 | Mức can thiệp AI + Problem Statement v1 + quyết định | Nhóm | 25' | `report/team/group_report.md` mục 6–8 |
-| CP7 | Reflection | Cá nhân | 15' | `report/individual/MSSV_HoTen.md` mục 4–6 |
+| CP  | Tên                                                  | Ai làm  | Thời gian | Ghi vào                                   |
+| --- | ---------------------------------------------------- | ------- | --------: | ----------------------------------------- |
+| CP0 | Đọc bài mẫu                                          | Cá nhân |       15' | —                                         |
+| CP1 | Scan 5+ problems                                     | Cá nhân |       25' | `report/individual/MSSV_HoTen.md` mục 2   |
+| CP2 | Top 3 Problem Cards + quy trình nháp                 | Cá nhân |       35' | `report/individual/MSSV_HoTen.md` mục 3   |
+| CP3 | Hội tụ nhóm                                          | Nhóm    |       30' | `report/team/group_report.md` mục 2       |
+| CP4 | Kiểm chứng + research giải pháp đã có                | Nhóm    |       30' | `report/team/group_report.md` mục 3       |
+| CP5 | Quy trình trước/sau + Problem Statement v0           | Nhóm    |       45' | `report/team/group_report.md` mục 4–5     |
+| CP6 | Mức can thiệp AI + Problem Statement v1 + quyết định | Nhóm    |       25' | `report/team/group_report.md` mục 6–8     |
+| CP7 | Reflection                                           | Cá nhân |       15' | `report/individual/MSSV_HoTen.md` mục 4–6 |
 
 ---
 
@@ -28,11 +28,11 @@ Mỗi checkpoint có template và prompt mẫu tương ứng trong [docs/01-work
 - **Mục tiêu:** Mở rộng tối đa trước khi thu hẹp. Tìm ít nhất 5 problem từ trải nghiệm thật của bạn.
 - **Cần làm:**
   1. Tự scan trước, chưa dùng AI. Dùng 4 lăng kính: **Lặp lại**, **Tốn thời gian**, **Cần đọc, tổng hợp nhiều thông tin**, **Pain từ người khác**.
-  2. Viết mỗi problem theo mẫu **Job Story**: *Khi [tình huống], tôi muốn [động cơ], để [kết quả]*.
+  2. Viết mỗi problem theo mẫu **Job Story**: _Khi [tình huống], tôi muốn [động cơ], để [kết quả]_.
   3. Ghi **dấu hiệu thật** cho từng problem: mất bao lâu, mấy lần/tuần, bao nhiêu người gặp, có log/ticket/tin nhắn nào chứng minh.
   4. Sau đó mới hỏi AI gợi ý thêm (nếu muốn), và ghi lại ý nào bị bỏ vì sao.
 - **Sản phẩm:** Bảng scan có ít nhất 5 dòng trong báo cáo cá nhân, mục 2.
-- **Cần hiểu:** Khác nhau giữa *problem* ("tốn 90 phút mỗi tuần viết báo cáo") và *solution trá hình* ("thiếu một chatbot viết báo cáo").
+- **Cần hiểu:** Khác nhau giữa _problem_ ("tốn 90 phút mỗi tuần viết báo cáo") và _solution trá hình_ ("thiếu một chatbot viết báo cáo").
 - **Tự kiểm tra:**
   - [ ] Có ít nhất 5 problem, mỗi problem viết dạng Job Story.
   - [ ] Không dòng nào có chữ "AI", "chatbot", "agent" trong cột Job Story (kể cả dòng thuộc lăng kính "Cần đọc, tổng hợp nhiều thông tin": mô tả việc khó, chưa nói cách giải).
@@ -55,7 +55,7 @@ Mỗi checkpoint có template và prompt mẫu tương ứng trong [docs/01-work
 
 ---
 
-*Nghỉ 10 phút.*
+_Nghỉ 10 phút._
 
 ---
 
@@ -63,9 +63,9 @@ Mỗi checkpoint có template và prompt mẫu tương ứng trong [docs/01-work
 
 - **Mục tiêu:** Từ 9–12 candidate của cả nhóm, chọn ra **1 candidate problem** bằng lập luận, không bằng bỏ phiếu ngay.
 - **Cần làm:**
-  1. **Pitch:** mỗi người trình bày top 3, mỗi card 1–2 phút. Người nghe ghi câu hỏi phản biện. *Không dùng AI ở bước này.*
+  1. **Pitch:** mỗi người trình bày top 3, mỗi card 1–2 phút. Người nghe ghi câu hỏi phản biện. _Không dùng AI ở bước này._
   2. **Gom nhóm:** gom các candidate trùng hoặc cùng pattern thành cluster.
-  3. **Opportunity Solution Tree rút gọn:** viết 1 outcome chung mà nhóm muốn cải thiện, xếp các cluster thành các *opportunity* (pain) bên dưới. Gạch bỏ mọi thứ là *solution* đang đội lốt opportunity.
+  3. **Opportunity Solution Tree rút gọn:** viết 1 outcome chung mà nhóm muốn cải thiện, xếp các cluster thành các _opportunity_ (pain) bên dưới. Gạch bỏ mọi thứ là _solution_ đang đội lốt opportunity.
   4. **Chấm điểm:** chấm 1–5 trên 7 tiêu chí cho shortlist 3 candidate, rồi thảo luận để chốt.
 - **Sản phẩm:** Báo cáo nhóm mục 2: bảng pitch, bảng cluster, cây OST, bảng chấm điểm, candidate được chọn và lý do loại các candidate khác.
 - **Cần hiểu:** Opportunity là nhu cầu hoặc pain của người dùng. Solution là cách mình đáp ứng nó. Trộn lẫn hai thứ này là lỗi phổ biến nhất ở giai đoạn Define.
@@ -78,7 +78,7 @@ Mỗi checkpoint có template và prompt mẫu tương ứng trong [docs/01-work
 
 - **Mục tiêu:** Kiểm tra pain có thật không, người khác có gặp không, và thế giới đã giải bài này đến đâu.
 - **Cần làm:**
-  1. **Liệt kê giả định (Assumption Map):** viết 4–6 giả định quan trọng nhất của nhóm, xếp theo 2 trục *quan trọng* và *đã có bằng chứng*. Kiểm chứng giả định ở ô "quan trọng nhưng ít bằng chứng" trước.
+  1. **Liệt kê giả định (Assumption Map):** viết 4–6 giả định quan trọng nhất của nhóm, xếp theo 2 trục _quan trọng_ và _đã có bằng chứng_. Kiểm chứng giả định ở ô "quan trọng nhưng ít bằng chứng" trước.
   2. **Kiểm chứng**, chọn ít nhất 1 cách:
      - Phỏng vấn nhanh **2–3 người** (bạn học ở nhóm khác cũng được nếu họ thật sự gặp vấn đề này; có thể phỏng vấn trước buổi học) theo 3 luật của **The Mom Test**: hỏi về cuộc sống của họ chứ không hỏi về ý tưởng của mình; hỏi về hành vi cụ thể đã xảy ra chứ không hỏi giả định; nói ít hơn người được hỏi. Ghi mỗi buổi thành 1 **Interview Snapshot**.
      - Hoặc micro survey / poll **5–10 người**.
@@ -108,7 +108,7 @@ Mỗi checkpoint có template và prompt mẫu tương ứng trong [docs/01-work
 
 ---
 
-*Nghỉ 10 phút.*
+_Nghỉ 10 phút._
 
 ---
 

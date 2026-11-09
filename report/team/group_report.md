@@ -188,29 +188,82 @@ Kiến trúc Workflow: OCR trích xuất -> Rule so khớp 3 bên (Hóa đơn vs
 
 ### 4.1. Quy trình hiện tại
 
-Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
+Sơ đồ quy trình hiện tại (*tổng thời gian thao tác: **6.0–7.5 phút/bộ** với luồng khớp chuẩn; **16–22 phút thao tác/bộ + thời gian chờ** khi phát sinh ngoại lệ; tần suất ước tính **30–100 bộ chứng từ/ngày***):
 
-```text
+```mermaid
+flowchart TD
+    B1["Bước 1: Tiếp nhận hóa đơn & gom PO + GRN (1.0 phút)"] --> B2["Bước 2: Đọc & tra cứu thông tin từng chứng từ (1.5 phút)"]
+    B2 --> B3["Bước 3 - BOTTLENECK CHÍNH: Đối chiếu từng dòng hàng 3 bên (3.0 - 4.5 phút)"]
+    B3 --> D{"Khớp dữ liệu & đủ chứng từ?"}
+    D -- "Khớp 100% (~70-80% bộ)" --> B5["Bước 5: Xác nhận hợp lệ & trình Kế toán trưởng duyệt chi (0.5 phút)"]
+    D -- "Lệch số liệu / thiếu thông tin (~20-30% bộ)" --> B4["Bước 4 - BOTTLENECK PHỤ: Khoanh vùng sai lệch & xác minh với Mua hàng / Kho / NCC (10 - 15 phút + chờ)"]
+    B4 -- "Đã bổ sung / điều chỉnh chứng từ" --> B3
 
+    style B3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000
+    style B4 fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#000
 ```
 
-| Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
+| Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú & Handoff |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Nhân viên kế toán công nợ *(nhận chứng từ từ NCC, Mua hàng, Kho)* | Hóa đơn điện tử (PDF/XML qua email hoặc meInvoice), mã tham chiếu đơn mua hàng | Bộ 3 chứng từ liên quan đặt cạnh nhau: Hóa đơn + Đơn đặt hàng (PO) + Biên bản giao nhận (GRN) | **1.0 phút/bộ** · 30–100 bộ/ngày | *Handoff đầu vào:* NCC gửi hóa đơn, Mua hàng cung cấp PO, Kho chuyển phiếu/ảnh GRN; dễ thiếu GRN khi giao hàng lẻ nhiều đợt |
+| 2 | Nhân viên kế toán công nợ | Bộ 3 chứng từ ở nhiều định dạng khác nhau (PO trên phần mềm/Excel, Hóa đơn PDF/XML, GRN bản scan/ảnh chụp giấy có chữ ký tay) | Các trường thông tin cần kiểm tra đã mở sẵn trên màn hình (tên/MST NCC, danh mục hàng, số lượng thực nhận, đơn giá, VAT, tổng tiền) | **1.5 phút/bộ** · 30–100 bộ/ngày | Phần mềm kế toán (như MISA AMIS) hỗ trợ kéo dữ liệu từ PO sang chứng từ mua, nhưng GRN kho lẻ thường vẫn là ảnh chụp/phiếu giấy ghi tay số thực nhận |
+| 3 | Nhân viên kế toán công nợ | Các trường dữ liệu dòng hàng (*line-items*) trên Hóa đơn, PO và GRN | Kết luận đối chiếu từng dòng: **Khớp hoàn toàn** hoặc **Danh sách trường bị lệch / thiếu** | **3.0 – 4.5 phút/bộ** · 30–100 bộ/ngày | **🔴 BOTTLENECK CHÍNH:** Phải dò bằng mắt qua 3 cửa sổ/tài liệu; tên hàng trên hóa đơn NCC thường viết khác mã/tên nội bộ trên PO, hoặc 1 PO tách làm nhiều lần giao hàng/nhiều hóa đơn |
+| 4 | Nhân viên kế toán công nợ *(phối hợp Mua hàng, Thủ kho, NCC)* | Các điểm không khớp phát hiện ở Bước 3 (lệch số lượng giao thiếu/hàng lỗi, chênh đơn giá/chiết khấu, gộp mã hàng, thiếu chữ ký kho) | Yêu cầu giải trình gửi đúng bộ phận kèm bằng chứng; nhận lại biên bản xác nhận bổ sung hoặc hóa đơn điều chỉnh | **0 phút** *(nếu khớp)*; **10–15 phút thao tác/bộ + vài giờ chờ** *(với ~20–30% bộ ngoại lệ)* | **🟠 BOTTLENECK PHỤ (Exception Handling):** Phải chụp màn hình khoanh tay từng chỗ lệch gửi Zalo/Email hỏi lại Kho hoặc Mua hàng rồi quay lại kiểm tra từ Bước 3 |
+| 5 | Nhân viên kế toán công nợ $\rightarrow$ Kế toán trưởng | Bộ chứng từ 3 bên đã khớp đầy đủ (hoặc đã có biên bản giải trình/hóa đơn điều chỉnh hợp lệ) | Bút toán công nợ được xác nhận trên phần mềm kế toán và hồ sơ đề nghị thanh toán | **0.5 phút/bộ** · 30–100 bộ/ngày | *Handoff đầu ra:* Chuyển Kế toán trưởng / Ban giám đốc phê duyệt chi tiền theo kỳ thanh toán |
 
 **Bottleneck chính:**
+
+- **Điểm nghẽn trực tiếp trên mọi bộ chứng từ — Bước 3 (*Đối chiếu từng dòng hàng 3 bên / Line-item Matching*, mất 3.0–4.5 phút/bộ):** Dù phần mềm kế toán hiện có đã liên kết được PO với chứng từ mua hàng ở luồng chuẩn, kế toán viên vẫn phải dò mắt thủ công từng dòng vì **bất đồng định dạng và cách gọi tên** (tên hàng hóa trên hóa đơn nhà cung cấp khác tên/mã vật tư nội bộ trên PO; đơn vị tính quy đổi thùng/hộp/cái; giao hàng từng phần làm số lượng trên GRN khác PO ban đầu). Với 30–100 bộ/ngày, riêng bước dò mắt này tiêu tốn **1,5 – 7,5 giờ công/ngày** và dễ sót lỗi do mỏi mắt.
+- **Điểm nghẽn kéo dài thời gian xử lý — Bước 4 (*Xử lý ngoại lệ / Exception Handling*, mất thêm 10–15 phút thao tác/bộ bị lệch):** Khi phát hiện lệch số lượng hoặc đơn giá (ước tính ~20–30% số bộ chứng từ), kế toán phải tự trích lục, chụp ảnh khoanh vùng từng dòng sai để nhắn hỏi lại Kho/Mua hàng/NCC, làm đứt mạch công việc và gây chậm kỳ thanh toán.
 
 ### 4.2. Quy trình tương lai
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
-```text
+Sơ đồ quy trình tương lai (*kỳ vọng tổng thời gian còn **~1.6 phút/bộ** với luồng khớp chuẩn — trong đó kế toán chỉ thao tác **~1.0 phút**; và **~3.3–3.8 phút/bộ** khi xử lý ngoại lệ*):
 
+```mermaid
+flowchart TD
+    F1["Bước 1 (RULE): Tự động gom Hóa đơn + PO + GRN & kiểm tra hợp lệ thuế (~0.2 phút)"] --> F2["Bước 2 (RULE + AI): Rule đọc XML/PO; AI (OCR/IDP) bóc tách GRN scan & gợi ý khớp mã hàng (~0.3 phút)"]
+    F2 --> C1{"Độ tin cậy trích xuất đạt từ 95%?"}
+    C1 -- "Đạt (từ 95% trở lên)" --> F3["Bước 3 (RULE): Đối chiếu số học 3 bên từng dòng hàng theo ngưỡng dung sai (~0.1 phút)"]
+    C1 -. "Fallback: Ảnh GRN mờ (dưới 95%) hoặc lỗi AI" .-> FB["Phương án quay về (CON NGƯỜI): Kế toán sửa tay ô tô vàng cạnh ảnh gốc hoặc đối chiếu checklist cũ"]
+    FB --> F3
+    F3 --> C2{"Kết quả đối chiếu Rule?"}
+    C2 -- "Khớp chuẩn (~70-80% bộ)" --> F5A["Bước 5a (CON NGƯỜI - HITL): Kế toán rà nhanh màn hình song song & bấm xác nhận (~1.0 phút)"]
+    C2 -- "Có sai lệch / thiếu chứng từ (~20-30% bộ)" --> F4["Bước 4 (AI): Khoanh vùng điểm lệch trên chứng từ & soạn nháp tin nhắn/email xác minh (~0.2 phút)"]
+    F4 --> F5B["Bước 5b (CON NGƯỜI - HITL): Kế toán kiểm tra vùng lệch, duyệt gửi xác minh hoặc yêu cầu điều chỉnh (~2.5 - 3.0 phút)"]
+    F5B -- "Sau khi bổ sung chứng từ" --> F3
+    F5A --> OUT["Handoff (CON NGƯỜI): Trình Kế toán trưởng phê duyệt thanh toán"]
+
+    style F1 fill:#e3f2fd,stroke:#1565c0,stroke-width:1.5px,color:#000
+    style F3 fill:#e3f2fd,stroke:#1565c0,stroke-width:1.5px,color:#000
+    style F2 fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px,color:#000
+    style F4 fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px,color:#000
+    style F5A fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
+    style F5B fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000
+    style FB fill:#fff8e1,stroke:#f57f17,stroke-width:2px,color:#000
 ```
+
+| Bước | Phân vai xử lý | Nội dung xử lý chi tiết | Input $\rightarrow$ Output | Thời gian kỳ vọng |
+|---:|---|---|---|---|
+| 1 | **`[RULE]`** *(Hệ thống sẵn có / meInvoice)* | Tự động kiểm tra tính hợp lệ hóa đơn với cơ quan thuế (MST, trạng thái hoạt động) và gom bộ 3 chứng từ (Hóa đơn – PO – GRN) theo mã tham chiếu đơn hàng | *In:* Email/file Hóa đơn, dữ liệu PO, ảnh/file GRN<br>*Out:* Bộ hồ sơ 3 bên đã liên kết (hoặc cờ cảnh báo thiếu chứng từ ngay đầu vào) | **~0.2 phút/bộ** *(tự động)* |
+| 2 | **`[RULE + AI]`** *(OCR/IDP + LLM)* | **Rule** đọc trực tiếp trường có cấu trúc từ file XML hóa đơn và PO hệ thống; **AI (OCR/IDP)** trích xuất bảng hàng hóa từ ảnh chụp/scan GRN (kể cả ghi chú nhận hàng viết tay) sang JSON chuẩn và gợi ý ánh xạ tên hàng viết tắt của NCC với mã vật tư nội bộ trên PO | *In:* Bộ 3 chứng từ đa định dạng<br>*Out:* Bảng JSON chuẩn hóa từng dòng hàng kèm điểm tin cậy (*confidence score*) cho từng ô | **~0.3 phút/bộ** *(máy chạy)* |
+| 3 | **`[RULE]`** *(Thuật toán kiểm tra số học)* | So khớp toán học 100% chính xác trên JSON: `SL Hóa đơn = SL thực nhận GRN ≤ SL đặt PO`, `Đơn giá Hóa đơn = Đơn giá PO` (trong ngưỡng dung sai làm tròn cho phép), kiểm tra thuế suất VAT và tổng cộng thành tiền | *In:* JSON chuẩn hóa của 3 chứng từ<br>*Out:* Trạng thái **Khớp 100%** hoặc **Danh sách dòng lệch / Ô có độ tin cậy OCR thấp (< 95%)** | **~0.1 phút/bộ** *(tự động)* |
+| 4 | **`[AI]`** *(LLM hỗ trợ ngoại lệ)* | Chỉ kích hoạt với ~20–30% bộ bị Rule gắn cờ lệch/thiếu: AI khoanh vùng tọa độ dòng lệch trên ảnh chứng từ gốc, tóm tắt ngắn gọn lý do lệch (*"Dòng 2 giao thiếu 5 thùng theo GRN kho ngày 08/11"*) và soạn sẵn bản nháp tin nhắn/email xác minh cho đúng bộ phận | *In:* Kết quả báo lệch từ Bước 3 + ảnh chứng từ<br>*Out:* Tóm tắt ngoại lệ + Bản nháp yêu cầu giải trình gửi Kho / Mua hàng / NCC | **~0.2 phút/bộ lệch** *(máy chạy)* |
+| 5 | **`[CON NGƯỜI — HITL]`** *(Kế toán công nợ $\rightarrow$ Kế toán trưởng)* | Kế toán rà soát trên giao diện đối chiếu song song (chứng từ gốc đặt cạnh bảng kết quả):<br>- *Nếu khớp chuẩn:* Kiểm nhanh các trường trọng yếu và bấm **Xác nhận hạch toán**.<br>- *Nếu có ngoại lệ / ô tô vàng:* Đối chiếu vùng khoanh đỏ trên ảnh gốc, sửa tay nếu OCR nhầm hoặc bấm duyệt gửi yêu cầu xác minh. Cuối cùng trình **Kế toán trưởng** duyệt chi | *In:* Giao diện đối chiếu song song + nháp giải trình (nếu có)<br>*Out:* Bút toán công nợ được xác nhận hợp lệ hoặc yêu cầu điều chỉnh đã gửi đi | **1.0 phút/bộ** *(luồng khớp)*<br>**2.5–3.0 phút/bộ** *(luồng ngoại lệ)* |
+
+**Ranh giới kiểm soát (`Boundary`) & Điểm kiểm duyệt con người (`HITL`):**
+
+- **Những việc AI tuyệt đối KHÔNG được làm:**
+  1. **Không tự tính toán số học hoặc tự sửa/bịa số liệu:** Mọi phép tính tiền, thuế VAT và kiểm tra chênh lệch số lượng/đơn giá bắt buộc chạy bằng **Rule cố định**; AI không được tự nội suy các con số bị mờ hoặc thiếu trên GRN.
+  2. **Không tự động hạch toán công nợ, không tự phê duyệt thanh toán và không tự động gửi email/tin nhắn ra ngoài cho Nhà cung cấp:** Mọi hành động ghi sổ kế toán và giao tiếp đối ngoại đều dừng ở trạng thái *"Bản nháp chờ duyệt"*.
+- **Khi nào bắt buộc Con người kiểm tra (`HITL`):** Kế toán công nợ kiểm nhận cuối cùng trên 100% bộ hồ sơ trước khi hạch toán; đặc biệt **kiểm tra bắt buộc từng dòng** đối với mọi bộ hồ sơ có cờ báo lệch từ Rule, có trường dữ liệu độ tin cậy OCR `< 95%`, hoặc hóa đơn có giá trị lớn vượt ngưỡng quy định nội bộ.
+
+**Phương án quay về (`Fallback` khi AI sai hoặc gián đoạn):**
+
+- **Mức từng dòng / từng trường dữ liệu:** Khi ảnh chụp GRN bị nhòe, chữ ký đè lên số lượng viết tay làm điểm tin cậy OCR `< 95%`, hoặc khi AI ánh xạ tên hàng NCC sang mã hàng PO chưa chính xác $\rightarrow$ hệ thống tự động tô vàng trường dữ liệu đó, không tự chốt kết quả và mở khung ảnh gốc phóng to ngay kế bên để kế toán viên gõ sửa hoặc chọn lại mã hàng từ danh sách thả xuống (mất ~20–30 giây, không phải làm lại cả bộ).
+- **Mức toàn bộ quy trình:** Khi dịch vụ OCR/AI gặp sự cố kết nối, quá tải hoặc gặp bộ chứng từ gộp nhiều PO/nhiều lần giao hàng biến dạng phức tạp khiến trích xuất sai trên 30% số dòng $\rightarrow$ kế toán viên bấm nút *"Chuyển sang đối chiếu thủ công"* để kiểm tra và nhập liệu trực tiếp trên phân hệ Mua hàng của MISA AMIS / checklist Excel như quy trình hiện tại, đảm bảo không làm ngưng trệ tiến độ thanh toán cho nhà cung cấp.
 
 ### 4.3. Before / after
 

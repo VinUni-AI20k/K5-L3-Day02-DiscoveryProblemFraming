@@ -146,4 +146,4 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Điều mình học được từ phần nhóm:**
 
-[Chưa điền bằng lời của tôi: nêu điều thực sự học được từ research hoặc phối hợp nhóm. Có thể tự đối chiếu việc phân biệt tính năng sẵn có với khả năng đáp ứng dữ liệu thực tế, hoặc vì sao chọn Rule nhưng chưa cho phép pilot.]
+Học được cách cùng nhóm thu hẹp bài toán, xác định đúng điểm nghẽn và tìm hiểu giải pháp có sẵn trước khi chọn công nghệ. Qua phần research, tôi thấy không phải bài toán nào cũng cần AI; đôi khi Rule đã đủ phù hợp. Mình cũng hiểu rằng chọn được giải pháp chưa có nghĩa là có thể triển khai ngay, mà còn cần kiểm tra dữ liệu và cách đánh giá kết quả.

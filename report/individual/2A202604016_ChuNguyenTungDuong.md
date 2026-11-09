@@ -184,16 +184,18 @@ PHÁC THẢO — tổng thời gian: [CẦN ĐO]
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Chuẩn bị ba card #6, #12, #19, ưu tiên card đọc PR lớn; thảo luận và đối chiếu các phương án với tất cả thành viên. | Sau thảo luận, chọn shortlist ba vấn đề và đề tài tìm lại bằng chứng từ paper. |
+| Phản biện bài của bạn khác | Tham gia thảo luận và đối chiếu các đề tài cùng các thành viên. | Chưa bổ sung câu hỏi phản biện cụ thể tôi đã đặt. |
+| Nhận phản biện | AI chỉ ra actor còn rộng, chưa rõ tiêu chí “PR lớn”, thiếu baseline và chưa so sánh với chia nhỏ PR. Phản biện trực tiếp từ thành viên khác chưa được bổ sung. | Card #6 giữ bước nghẽn ở trạng thái giả thuyết, có cách đo và phương án chia nhỏ PR, cải thiện mô tả trước khi cân nhắc AI. |
+| Gom cluster / cây OST | Nhờ AI đọc CP1–CP2 của cả bốn thành viên, tổng hợp candidate có nguồn và chuẩn bị cluster, OST để review qua PR. Sau khi có shortlist, yêu cầu chuyển phạm vi OST sang tìm lại bằng chứng từ paper. | Có bảng truy vết 12 candidate, đề xuất năm cluster và OST cho problem paper trong CP3. Phân nhóm sơ bộ vẫn cần nhóm xác nhận. |
+| Chọn candidate problem | Cùng các thành viên thảo luận, đối chiếu rồi chọn top 3 và đề tài “Tìm lại bằng chứng từ paper”; yêu cầu tổng hợp CP3 theo hướng này. | Bản tổng hợp giữ điểm shortlist 33/30/25, có lý do chọn L1 và lý do chưa chọn hai candidate còn lại. |
+| Kiểm chứng / research | Nhờ AI research Zotero, Elicit và pattern RAG để chuẩn bị slide. Chưa có thông tin về việc tôi trực tiếp phỏng vấn hoặc chạy pilot. | Các nguồn được đưa vào notes và phụ lục slide. Research công cụ được tách khỏi bằng chứng về pain và kết quả thực nghiệm. |
+| Quy trình nhóm | Yêu cầu chuyển bảng quy trình trên slide thành flowchart: quy trình hiện tại, phương án ghi chú có nguồn/Zotero và nhánh AI tùy chọn. | Slide v3 có bước người học mở PDF kiểm ngữ cảnh, fallback tìm thủ công khi liên kết thiếu hoặc sai, cùng boundary về nguồn và trích dẫn. |
+| Problem Statement | Nhờ AI chuẩn bị nội dung CP5 cho slide, sau đó yêu cầu đối chiếu card gốc, shortlist và báo cáo nhóm để không dùng thời gian giả định làm baseline. | Slide nêu actor, bước nghẽn, impact giả thuyết và cách đo. Nội dung này chưa thay cho Problem Statement v0/v1 do nhóm tự chốt. |
+| Mức can thiệp AI | Yêu cầu làm rõ phương án No AI First và so sánh với Rule, Workflow, Agent. | Phương án trên slide ưu tiên ghi chú có cấu trúc và Zotero; chỉ cân nhắc mức cao hơn nếu cách đơn giản chưa đủ. Nhánh Workflow được ghi là tùy chọn, chưa triển khai. |
+| Quyết định | Yêu cầu giữ “Not Yet — Chưa đủ bằng chứng để triển khai AI” ở trạng thái đề xuất phân tích và chuẩn bị câu hỏi đáp. | Slide có bốn rủi ro, bước thử tiếp và ngưỡng dừng. Chưa ghi đây là quyết định cuối đã được cả nhóm xác nhận. |
+
+Bằng chứng phần chuẩn bị chung: [PR #6 — cluster và OST](https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/pull/6), [PR #8 — slide và tổng hợp CP3](https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/pull/8). Bản slide chỉnh tiếp là `nhom6-paper-evidence-6min-v3.pptx`, hiện xuất riêng ngoài Git.
 
 ---
 
@@ -201,12 +203,13 @@ PHÁC THẢO — tổng thời gian: [CẦN ĐO]
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | AI diễn đạt lại các vấn đề tôi đã chọn thành Job Story và phân loại lăng kính | | | |
-| CP2 Problem Card | AI phác thảo card, quy trình và phản biện để tôi kiểm tra | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Nhờ AI diễn đạt lại 10 vấn đề tôi đã chọn thành Job Story và phân loại bốn lăng kính. | Giữ mã vấn đề để đối chiếu, làm rõ actor và tách mô tả pain khỏi giải pháp. | AI không có dữ liệu trải nghiệm để xác nhận thời gian, tần suất hoặc mức ảnh hưởng. | Giữ các ký hiệu cần xác minh và cần đo; không dùng phần diễn đạt lại làm bằng chứng thực tế. |
+| CP2 Problem Card | Nhờ AI phác thảo ba card, quy trình và phản biện dưới góc nhìn PM khó tính. | Làm rõ bước nghẽn, cách đo, phương án không dùng AI và câu hỏi cần xác minh cho từng card. | Actor, bước nghẽn và thời gian chưa được kiểm qua tình huống cụ thể. Một số chú thích và cách diễn đạt ban đầu dài, thiếu tự nhiên. | Đổi ưu tiên từ vấn đề #1 sang #6, giữ #12 và #19; yêu cầu viết theo ví dụ của lab, rút gọn lời chú thích và giữ nhãn giả thuyết. |
+| CP4 Research | Nhờ AI tổng hợp tài liệu về Zotero, Elicit và RAG cho slide problem paper. | Có nguồn tham khảo và đối chiếu khả năng đã có với phương án ghi chú có nguồn. | Khả năng công cụ không chứng minh pain phổ biến hoặc giải pháp hiệu quả với người dùng của nhóm. Shortlist gọi mốc thời gian là baseline trong khi card gốc ghi là giả định. | Yêu cầu đối chiếu tài liệu, không dùng số giả định làm baseline và không tạo kết quả phỏng vấn hoặc pilot. |
+| CP5 Quy trình | Nhờ AI phác thảo quy trình trước/sau và dựng sơ đồ trên slide. | Thể hiện điểm nghẽn giả thuyết, bước con người kiểm ngữ cảnh và phương án quay về tìm thủ công. | Bản slide đầu dùng bảng nhiều chữ, chưa thể hiện luồng xử lý rõ. Quy trình vẫn chưa đối chiếu với quan sát thực tế. | Yêu cầu thay bằng flowchart có mũi tên, nhấn bước người học xác minh và ghi rõ nhánh AI chưa triển khai. |
+| CP5–6 Problem Statement | Nhờ AI soạn nội dung đề xuất cho slide, gồm actor, pain, metric và boundary. | Kết nối problem với quy trình, cách đo thời gian và kiểm chất lượng bằng chứng. | AI đã hỗ trợ soạn nội dung, không chỉ phản biện. Mục tiêu giảm 30% và quy mô pilot 10 yêu cầu/3 paper chưa có dữ liệu để xác nhận. | Yêu cầu phân biệt baseline chưa đo với target đề xuất; giữ CP4–CP6 trong báo cáo nhóm để thành viên hoàn thiện và tự chốt. |
+| CP6 Mức can thiệp / quyết định | Nhờ AI so sánh No AI/Rule/Workflow/Agent, phân tích bốn rủi ro và chuẩn bị Q&A. | Làm rõ lý do thử No AI trước, boundary về trích dẫn và điều kiện chỉ thử Workflow khi mức đơn giản chưa đủ. | Mức rủi ro và đề xuất Not Yet chưa phải kết quả kiểm chứng hay quyết định được nhóm xác nhận. | Yêu cầu ghi rõ trạng thái đề xuất, không trình bày như đang xây AI Agent hoặc đã đạt target. Chưa chốt Go cho triển khai AI. |
+| CP7 Biên tập | Cung cấp các ý trả lời về trải nghiệm của mình, nhờ AI sắp xếp và sửa câu chữ. | Tổ chức các ý về làm việc nhóm, tính khả thi, việc nghĩ đến hệ thống trích dẫn trước, thông tin về Zotero và kế hoạch đo hiệu quả. | AI không biết những việc ngoài thông tin tôi cung cấp, như câu hỏi phản biện cụ thể hoặc kết quả phỏng vấn. | Bổ sung trực tiếp những gì mình đã làm và suy nghĩ; không tạo thêm cuộc phỏng vấn, kết quả pilot hoặc câu hỏi của thành viên khác. |
 
 ---
 
@@ -216,17 +219,31 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Qua việc trao đổi với tất cả thành viên và đối chiếu các đề tài, tôi học thêm cách làm việc nhóm khi lựa chọn một vấn đề chung. Khi chọn top 3 và đề tài tìm lại bằng chứng trong paper, tôi chú ý đến tính khả thi của phương án.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Có. Nhóm từng muốn làm một hệ thống trích dẫn ngay từ đầu, tức là đã nghĩ đến cách giải trước khi làm rõ bài toán. Sau phần thảo luận và đối chiếu các đề tài, nhóm chọn vấn đề tìm lại bằng chứng trong paper để tiếp tục xem xét.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Sau khi thảo luận và đối chiếu các phương án cùng các thành viên, tôi đồng ý chọn đề tài tìm lại bằng chứng trong paper.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Tôi có bất ngờ khi biết Zotero đã có liên kết quay lại PDF. Đây là khả năng của công cụ sẵn có liên quan trực tiếp đến đề tài nhóm chọn.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Tôi đã hiểu sự khác nhau giữa baseline thực đo và target đề xuất, cũng như lý do thử No AI trước. Phần khó nhất với tôi là diễn đạt lập luận bằng lời của mình.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Nếu làm lại, tôi muốn nhóm lập kế hoạch rõ ràng để đo hiệu quả của từng cách tiếp cận. Tôi muốn việc so sánh các phương án được đưa thành một phần cụ thể trong kế hoạch làm việc của nhóm.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Bài toán nhóm chọn là sinh viên mất thời gian tìm lại bằng chứng trong paper đã đọc. Khó khăn còn nằm ở việc kiểm định nhận định bằng bằng chứng trong bài. Các vị trí trích dẫn cần được hệ thống hóa để thuận tiện khi tìm lại.
 
 ---
 

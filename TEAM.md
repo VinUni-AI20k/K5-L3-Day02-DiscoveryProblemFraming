@@ -15,7 +15,7 @@
 | 1 |Phùng Quang trà |2A202604094|Nhóm  trưởng| phungtr |
 | 2 | | | | |
 | 3 | | | | |
-| 4 | | | | |
+| 4 | Phạm Duy Thành| 2A202604075| | https://github.com/thanhtey1234|
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 

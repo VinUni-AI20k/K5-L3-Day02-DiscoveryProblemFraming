@@ -76,3 +76,27 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - Biết cách hạ quy mô một bài toán AI quá rộng (từ bot tự ghi âm/gửi tin nhắn) xuống dạng Workflow đơn giản, tập trung đúng điểm nghẽn tốn thời gian nhất.
 - Hiểu tầm quan trọng của Ranh giới (Boundary) và Human-in-the-loop (HITL) để tránh rủi ro AI đoán sai tên người làm hoặc tự bịa ra task làm trôi tin nhắn team.
+
+-
+
+### Phạm Duy Thành - 2A202604075
+
+**Phần việc phụ trách:**
+
+- Xây dựng và mô tả các candidate problem từ trải nghiệm học tập; tập trung vào việc tìm đúng yêu cầu/deadline mới nhất khi thông tin nằm ở nhiều kênh.
+- Phác thảo quy trình hiện tại, bottleneck, cách đo baseline và phương án Rule/Workflow trước khi cân nhắc AI.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Soạn 3 candidate: tìm yêu cầu/deadline từ LMS và chat; tổng hợp tài liệu ôn tập; phân loại feedback. Candidate tìm yêu cầu/deadline đang được nhóm xem xét, chưa phải quyết định cuối.
+- Với candidate này, mô tả quy trình 6 bước từ mở đề trên LMS đến ghi checklist; xác định bước tìm và đối chiếu thông tin là bottleneck dự kiến (ước tính 10–15 phút/lần, chưa bấm giờ).
+- Đề xuất đo baseline trong 3 lần tìm, thử mục tiêu giảm trung vị thời gian ít nhất 30% và không bỏ sót yêu cầu bắt buộc. Đề xuất checklist thủ công trước; nếu thử AI thì người học vẫn phải kiểm tra nguồn gốc.
+- Các thời lượng, mục tiêu và bottleneck trên là giả thuyết cần kiểm chứng; mình chưa phỏng vấn hoặc làm research.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `report/team/group_report.md`, mục 2.1, các candidate #10–12. Chưa có file minh chứng riêng trong `report/assets/` hoặc commit cụ thể để dẫn.
+
+**Điều mình học được từ phần nhóm:**
+
+- Cần làm rõ pain và quy trình trước khi nghĩ đến giải pháp; tránh lồng giải pháp vào Problem Statement. Các ước tính phải được ghi rõ là chưa đo, cần lấy baseline và kiểm chứng trước khi kết luận. Nên thử Rule/Workflow trước AI, đồng thời xác định rõ phần nào cần con người xác nhận.

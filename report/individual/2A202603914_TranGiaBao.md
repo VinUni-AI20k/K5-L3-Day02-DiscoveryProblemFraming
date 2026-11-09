@@ -8,7 +8,7 @@
 
 - Họ tên: Trần Gia Bảo
 - MSSV: 2A202603914
-- Email trường: không công khai
+- Email trường: 26ai.baotg@vinuni.edu.vn
 - Tên nhóm: HEHEHE
 - Link repo nhóm: https://github.com/hoangvu1806/K5-L3B-DAY02-HEHEHE-DiscoveryProblemFraming
 

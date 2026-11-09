@@ -236,38 +236,48 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:
+Bài của nhóm nằm ở ô: **Độ mơ hồ Trung bình–Cao × Độ phức tạp Trung bình**
 
 Vì sao:
+- **Độ mơ hồ Trung bình–Cao:** Việc rút gọn một chương slide 30–50 trang thành đề cương cô đọng, giải nghĩa biến số và thống nhất thuật ngữ song ngữ (Anh – Việt) giữa giáo trình với slide không có một bộ quy tắc `if-else` cố định (nhiều cách diễn đạt và cấu trúc tóm tắt khác nhau đều chấp nhận được). Tuy nhiên, riêng phần **ký hiệu toán học, công thức và số trang trích dẫn** lại đòi hỏi tính chính xác tuyệt đối (đúng/sai rõ ràng).
+- **Độ phức tạp Trung bình:** Quy trình thực hiện gồm 5 bước nối tiếp cố định (Chọn tài liệu $\rightarrow$ Trích xuất văn bản/OCR theo chương $\rightarrow$ Tạo bản nháp đề cương có gắn trang nguồn $\rightarrow$ Con người đối chiếu và sửa $\rightarrow$ Hoàn thiện). Luồng đi hoàn toàn xác định trước, xử lý trên một tập tài liệu đóng (slide/giáo trình của môn học), không cần hệ thống tự động lập kế hoạch đa nhánh hay tự ý gọi các hệ thống bên ngoài.
 
 ### 6.2. So sánh 4 mức
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| **No AI** (sửa quy trình) | Xin và dùng lại đề cương từ khóa trước; hoặc nhóm bạn học chia nhau mỗi người tự tóm tắt 1–2 chương theo cùng một khung mẫu (template) rồi ghép lại. | Khi môn học không đổi giáo trình/slide và đã có đề cương khóa trước đáng tin cậy (đúng như phát hiện ở Phỏng vấn #5). | Không giải quyết được khi giảng viên đổi slide/giáo trình mới, môn học ít người chia sẻ hoặc khi sinh viên vẫn phải tự đọc dò và gõ lại hàng chục công thức toán. | **Dùng ở Bước 1** (luôn kiểm tra xem có đề cương cũ tin cậy không trước khi làm mới) |
+| **Rule** | Dùng công cụ trích xuất văn bản/OCR chuyên biệt (như *Mathpix Snip*, công cụ tách chương PDF, lọc trang có công thức) để gom text và chuyển ảnh công thức sang LaTeX/Markdown kèm số trang nguồn. | Khi chỉ cần chuyển đổi định dạng tài liệu (từ ảnh/PDF sang văn bản có cấu trúc) và giữ vị trí trang nguồn. | Không tự chọn lọc được đâu là kiến thức cốt lõi cần ôn, không liên kết được ngữ cảnh giữa các trang slide và không tự đối chiếu được thuật ngữ song ngữ Anh – Việt. | **Dùng cho Bước 2** (trích xuất văn bản/OCR công thức và giữ thông tin trang nguồn) |
+| **Workflow** | Quy trình 5 bước định sẵn kết hợp **Rule + AI + Con người**: (1) Sinh viên chọn tài liệu $\rightarrow$ (2) Rule/OCR trích xuất text & công thức theo chương $\rightarrow$ (3) AI (*NotebookLM / Claude Projects / Adobe PDF Spaces*) tạo bản nháp đề cương có gắn `[Trang nguồn]` $\rightarrow$ (4) Sinh viên đối chiếu công thức, ký hiệu, hình vẽ với slide gốc và chỉnh sửa $\rightarrow$ (5) Hoàn thiện. | Khi các bước tổng hợp đã cố định, AI đóng vai trò rút ngắn bước tạo bản nháp (từ 210' xuống 20–30') và người học kiểm soát chất lượng cuối cùng. | AI/OCR có thể nhận diện sai chỉ số dưới, dấu trừ (`-`), bỏ sót điều kiện áp dụng công thức hoặc gắn lệch trang nguồn nếu người học chủ quan không kiểm tra. | **Chọn (Mức can thiệp chính)** |
+| **Agent** | Hệ thống AI tự động quét toàn bộ kho học liệu, tự quyết định phần nào quan trọng cho kỳ thi, tự tìm thêm tài liệu bên ngoài để bổ sung và xuất thẳng đề cương hoàn chỉnh mà không cần con người duyệt từng chương. | Khi bài toán có luồng hành động mở, cần tự chủ tìm kiếm nhiều nguồn ngoài và không biết trước các bước xử lý. | Dễ đưa kiến thức ngoài phạm vi thi của giảng viên, rủi ro ảo giác (hallucination) công thức toán học và lấy mất bước kiểm chứng của người học (đi ngược lại yêu cầu cốt lõi của Phỏng vấn #4). | **Không chọn** |
 
-**Mức chọn:**
+**Mức chọn:** **Workflow** (Kết hợp **No AI** ở bước sàng lọc đầu vào + **Rule/OCR** ở bước trích xuất tài liệu/công thức + **AI** ở bước tạo bản nháp đề cương theo chương có gắn trang nguồn + **Con người** kiểm chứng).
 
 **Vì sao không chọn mức đơn giản hơn:**
+- Kết quả phỏng vấn ở CP4 cho thấy: với các môn đã có đề cương khóa trước tốt, nhóm khuyến nghị dừng ngay ở **No AI** (dùng lại tài liệu cũ). Tuy nhiên, với các môn mới cập nhật slide, tài liệu song ngữ Anh – Việt hoặc nặng về công thức (Phỏng vấn #1, #4, #5), **No AI** và **Rule** thuần túy (chỉ tách file/OCR) không giải quyết được **Bottleneck 210 phút** đọc lọc ý chính, chuẩn hóa thuật ngữ và hệ thống hóa kiến thức theo chương.
+- Ngược lại, nhóm cũng không chọn **Agent** và không tự xây dựng phần mềm mới từ đầu, vì kết quả Research (mục 3.3) chỉ ra các công cụ sẵn có (*Google NotebookLM, Claude Projects, Mathpix, Adobe PDF Spaces*) đã đáp ứng tốt các mắt xích trong một **Workflow bán thủ công**.
 
 ### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| **Prediction** — AI dự đoán / tạo ra gì? | Bản nháp đề cương ôn tập theo từng chương, gồm: (1) Khái niệm và định nghĩa cốt lõi (đã đối chiếu thuật ngữ Anh – Việt), (2) Danh sách công thức toán học kèm giải nghĩa biến số và điều kiện áp dụng, (3) Trích dẫn chính xác `[Tên file, Số trang/slide]` cho từng mục. |
+| **Judgment** — con người cân nhắc, quyết định gì? | Sinh viên phán đoán và quyết định: (1) Công thức/ký hiệu toán học AI trích xuất có khớp 100% với slide gốc không, (2) Phần kiến thức nào là trọng tâm giảng viên nhấn mạnh trên lớp nhưng AI bỏ sót, (3) Nội dung nào từ hình vẽ/sơ đồ bị diễn giải sai cần sửa hoặc chép tay lại. |
+| **Action** — hành động cuối cùng là gì, ai làm? | **Sinh viên** trực tiếp chỉnh sửa, bổ sung phần thiếu/sai trên bản nháp và chốt bản đề cương cuối cùng để sử dụng cho việc ôn thi. |
+| **Outcome** — đo kết quả bằng gì? | (1) Tổng thời gian hoàn thiện đề cương (mục tiêu từ ~270 phút xuống 90–110 phút/môn); (2) Không có lỗi trọng yếu về công thức/ký hiệu trên mẫu kiểm tra sau rà soát; (3) 100% mục trong mẫu truy xuất được về đúng trang nguồn và đạt độ bao phủ theo checklist chương. |
+| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Bộ file slide bài giảng (PDF/PPTX), giáo trình môn học, đề cương môn học (Syllabus/mục lục chương) và văn bản/LaTeX đã qua bước OCR (nếu slide là ảnh chụp). **Đều có sẵn** từ học liệu môn học của sinh viên. |
+| **Feedback** — lấy phản hồi ở đâu để cải thiện? | Tỷ lệ và loại lỗi mà sinh viên phải tự sửa ở Bước 4 (số công thức bị lỗi ký hiệu, số mục thiếu điều kiện áp dụng, số ý chính bị sót so với checklist chương) để tinh chỉnh lại cách chia nhỏ file và câu lệnh (prompt) cho các chương tiếp theo. |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+- **Người dùng muốn được hỗ trợ (augment) hay giao hẳn việc (automate)? Bằng chứng:**
+  - Người dùng muốn **được hỗ trợ (Augment)**, tuyệt đối không muốn giao phó hoàn toàn (Automate).
+  - **Bằng chứng từ CP4:** Ở Phỏng vấn #4, sinh viên khẳng định *“Không dám tin bản tóm tắt trên mạng vì sợ sai dấu trừ, chỉ số dưới; nếu không bảo đảm độ chính xác thì thà tự làm thủ công”*. Ở Phỏng vấn #2, sinh viên cũng chỉ ra việc chỉ đọc một bản tóm tắt có sẵn tạo ra *“cảm giác hiểu bài giả tạo nhưng vào phòng thi không làm được bài”*. Do đó, sinh viên cần AI làm nhanh phần việc nặng nhọc (lọc nháp và gắn số trang nguồn), còn bản thân bắt buộc phải tham gia vào bước đối chiếu và rà soát công thức (vừa để đảm bảo chính xác, vừa là một lần học chủ động).
+- **AI sai kiểu nào tệ hơn, báo nhầm hay bỏ sót? Vì sao, và thiết kế đã xử lý thế nào:**
+  - **Báo nhầm (ghi sai ký hiệu công thức, sai dấu `+/-`, sai điều kiện áp dụng hoặc gán sai nghĩa thuật ngữ nhưng trình bày rất thuyết phục)** tệ hơn vì nếu sinh viên không phát hiện ra, họ sẽ học thuộc công thức sai và mất điểm trực tiếp trong bài thi. Tuy nhiên, **bỏ sót (thiếu các định lý/công thức cốt lõi của chương)** cũng gây rủi ro lệch tủ khi ôn thi.
+  - **Cách thiết kế xử lý cả hai:**
+    1. *Chống báo nhầm (sai công thức/ảo giác):* Áp dụng Boundary buộc AI chỉ trích xuất từ tài liệu đầu vào và phải gắn `[Trang nguồn]` ngay cạnh từng công thức/định nghĩa; kết hợp công cụ OCR chuyên biệt (*Mathpix*) cho trang nhiều biểu thức toán và dành hẳn **Bước 4 (40–50 phút)** để sinh viên đối chiếu trực tiếp công thức với slide gốc.
+    2. *Chống bỏ sót (thiếu ý chính):* Ở Bước 1 & 2, lập trước **Checklist các mục lớn/chương từ Syllabus/mục lục slide** để kiểm tra độ bao phủ của bản nháp; phần nào AI trích xuất lỗi hoặc thiếu nguồn thì quay về đọc và chép trực tiếp từ slide gốc (Fallback).
 
 ---
 

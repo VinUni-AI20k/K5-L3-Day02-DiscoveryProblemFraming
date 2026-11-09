@@ -8,7 +8,7 @@
 - Tên nhóm: HEHEHE
 - Thành viên: xem `TEAM.md` (Bùi Đặng Nhật Nguyên, Đỗ Hoàng Vũ, Trần Gia Bảo, Trần Thị Hà Anh)
 - Candidate problem được chọn (1 câu): Kỹ sư trực ca vận hành mất 90-120 phút mỗi sự cố để lần mò thủ công qua hàng chục nguồn log rời rạc và thiếu cơ chế AI tự chủ có kiểm soát (Agentic AI phân quyền theo cột mốc `Confidence Score` kết hợp `HITL`) để vừa cô lập tức thì bất thường rõ bằng chứng vào ban đêm vừa giữ lại ca nhạy cảm chờ con người duyệt.
-- Quyết định cuối: *Chốt sau CP6 (Định hướng: Go thử nghiệm Pilot có điều kiện ở tầng cổng Nginx trước khi mở rộng)*
+- Quyết định cuối: **Not Yet** — chỉ chạy shadow pilot read-only ở tầng Nginx; chưa cho Agent tự cô lập cho đến khi có log pilot, hiệu chuẩn ngưỡng và kiểm chứng rollback.
 
 ---
 
@@ -123,10 +123,9 @@ Tổng hợp:
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| **Datadog Watchdog (Log Anomaly Detection & RCA)** | https://docs.datadoghq.com/watchdog/ | Bước 1, Bước 3 và một phần Bước 4 (Tự động phát hiện bất thường lưu lượng/lỗi và gợi ý tương quan giữa các dịch vụ) | Học đường cơ sở theo chu kỳ tuần rất chuẩn (giảm cảnh báo giả đầu tuần); giao diện trực quan gom nhóm mẫu lỗi tự động | Chi phí bản quyền SaaS tính theo dung lượng log rất đắt khi công ty có hàng chục nguồn log lớn; bắt buộc đẩy dữ liệu log nội bộ lên đám mây bên thứ ba (vướng quy định bảo mật của nhiều doanh nghiệp) | Học cách dùng đường cơ sở theo chu kỳ thứ/giờ (`Rule`) ở Bước 1 để lọc bỏ nhiễu đầu tuần trước khi gọi tới Agent |
-| **Dynatrace Davis AI (Causal AI & Topology Mapping)** | https://www.dynatrace.com/support/help/platform/davis-ai | Bước 4 (Truy vết nguyên nhân gốc xuyên qua các tầng hạ tầng, ứng dụng và database dựa trên đồ thị phụ thuộc) | Sử dụng Causal AI dựa trên sơ đồ kết nối thực tế (Topology) để chỉ ra điểm nghẽn gốc thay vì chỉ đoán mò tương quan thống kê | Đòi hỏi cài đặt tác nhân thu thập (OneAgent) sâu vào mọi máy chủ với chi phí doanh nghiệp rất cao; nếu thiếu cấu hình kịch bản kiểm soát thì vẫn chỉ dừng ở báo cáo nguyên nhân chứ chưa tự cô lập cục bộ theo ngưỡng an toàn | Khi thiết kế Agent điều tra đa nguồn log, không để LLM tự đoán cảm tính mà phải bắt buộc trích dẫn bằng chứng dòng log khớp mốc thời gian giữa cổng vào và dịch vụ phía sau |
-| **PagerDuty AIOps (Signal Intelligence & Auto-Remediation)** | https://support.pagerduty.com/main/docs/aiops | Bước 1 và Bước 5 (Gom nhóm cảnh báo chống bão alert, điều phối ca trực và kích hoạt Runbook tự động khắc phục) | Có cơ chế Runbook Automation cho phép gắn kịch bản xử lý chuẩn hóa và phân quyền người duyệt (`HITL`) trên từng loại sự cố | Bản thân PagerDuty không trực tiếp đọc sâu vào nội dung hàng chục file log thô (như phân tích chuỗi URI/User-Agent dò quét lỗ hổng ở Nginx) nếu không mua kèm hệ sinh thái giám sát đắt đỏ | Áp dụng triết lý **Parameterized Runbook + HITL + 1-click Rollback**: tuyệt đối cấm Agent tự sinh lệnh shell tự do, chỉ cho phép gọi hàm cô lập cục bộ có sẵn khi `Confidence Score >= 85%` |
-| **OpenSearch Anomaly Detection & Grafana Loki (Open-source Self-hosted)** | https://opensearch.org/docs/latest/monitoring-plugins/ad/index/ và https://grafana.com/docs/loki/latest/ | Bước 1 và Bước 2 (Thu thập log tập trung nội bộ On-premise và phát hiện bất thường bằng thuật toán Random Cut Forest) | Mã nguồn mở, miễn phí bản quyền, chạy hoàn toàn trên máy chủ nội bộ (đảm bảo 100% quyền riêng tư dữ liệu log công ty) | Chỉ phát hiện được điểm dị biệt về mặt con số hoặc tìm kiếm khi kỹ sư tự gõ câu truy vấn; không biết tự suy luận ngữ nghĩa để nhảy từ triệu chứng ở cổng proxy sang đúng nguồn log ứng dụng/mạng liên quan và không có cơ chế tính `Confidence Score` để tự cô lập ban đêm | Dùng hạ tầng gom log nội bộ kết hợp màng lọc `Rule` làm nền tảng, sau đó đặt lớp **Agentic AI có kiểm soát (`Bounded Autonomy`)** lên trên để giải quyết bài toán tự chọn nhánh điều tra và phân quyền `Confidence Score + HITL` |
+| **Datadog Watchdog (Anomaly Detection & RCA)** | [Watchdog](https://docs.datadoghq.com/watchdog/) · [Watchdog RCA](https://docs.datadoghq.com/watchdog/rca/) | Bước 1, 3 và hỗ trợ bước 4: tạo baseline, phát hiện hành vi bất thường, gom log pattern và hỗ trợ điều tra nguyên nhân | Tự tạo baseline theo hành vi lịch sử; Watchdog RCA liên kết anomaly với APM, trace, hạ tầng và log pattern để hỗ trợ triage | RCA yêu cầu APM; Datadog khuyến nghị unified tagging. Tài liệu cũng chỉ nêu một số loại root cause được hỗ trợ, nên không thể coi đây là bằng chứng rằng công cụ sẽ tìm được mọi nguyên nhân hoặc tự khắc phục an toàn | Dùng baseline/Rule để giảm nhiễu trước; mọi kết luận root cause phải có telemetry truy xuất được và được kiểm trên dữ liệu của pilot |
+| **Dynatrace Davis AI (Causal AI & Topology)** | [Davis AI](https://docs.dynatrace.com/docs/semantic-dictionary/model/davis) · [RCA concepts](https://docs.dynatrace.com/docs/dynatrace-intelligence/root-cause-analysis-classic/concepts) | Bước 4: đặt event trong topology, liên kết host/process/service và khoanh vùng root cause khả dĩ | Kết hợp quan hệ topology với event, transaction và dữ liệu liên quan thay vì chỉ dựa vào trùng thời gian | Kết quả phụ thuộc độ đầy đủ và đúng của telemetry/topology; đây là hỗ trợ phát hiện và RCA, không chứng minh rằng hệ thống nên được quyền tự chặn hoặc restart dịch vụ | Lớp điều tra cần topology và bằng chứng theo timestamp; policy cấp quyền thực thi phải tách khỏi mô hình suy luận |
+| **PagerDuty AIOps + Event Orchestration** | [PagerDuty AIOps](https://support.pagerduty.com/main/docs/aiops) · [Event Orchestration](https://support.pagerduty.com/main/docs/event-orchestration) | Bước 1 và 5: giảm nhiễu/routing alert, áp rule theo event và gọi webhook hoặc Automation Action đã cấu hình | Có rule phân tuyến, suppress/pause alert, enrichment và khả năng kích hoạt automation trước khi báo người; quyền sửa orchestration được giới hạn theo role | Cần nguồn monitoring gửi event vào; không thay thế lớp thu thập/đọc log thô. Một số tính năng orchestration/automation thuộc gói nâng cao hoặc add-on; rule phức tạp có thể khó bảo trì | Chỉ gọi runbook định trước từ rule/policy; kiểm thử điều kiện, quyền, audit và rollback thay vì cho LLM sinh shell command |
 
 ---
 
@@ -218,18 +217,24 @@ flowchart TD
 
 ## 5. Problem Statement v0 (CP5)
 
+> **Bản nháp để nhóm rà soát:** Phản ánh cách đặt vấn đề ban đầu ở CP3/CP5, **trước khi điều chỉnh theo kết quả phỏng vấn CP4**. Nhóm tự xác nhận câu chữ và nguồn số liệu trước khi nộp.
+
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Kỹ sư IT/NetOps hoặc DevOps/SRE trực ca chịu trách nhiệm theo dõi cổng vào web, phát hiện sự cố và phối hợp xử lý qua các tầng mạng, ứng dụng, cơ sở dữ liệu. |
+| **Quy trình** | Khi nhận cảnh báo/ticket, kỹ sư (1) mở Nginx access/error log, (2) lọc WebSocket/cache và dòng log nhiễu, (3) đối chiếu firewall/DNS/backend/DB, (4) chọn biện pháp cô lập hoặc chuyển kỹ sư phụ trách, (5) kiểm tra lại tỷ lệ lỗi và ghi nhận kết quả. Đối chiếu chi tiết với sơ đồ 6 bước ở mục 4.1. |
+| **Bottleneck** | **Giả định ban đầu:** Bước lọc nhiễu (20 phút) và tra chéo log nhiều tầng (35 phút) mất khoảng **55 phút thao tác**, trong khi khâu phát hiện và huy động người xử lý ngoài giờ làm chậm phản ứng. Các mốc này xuất phát từ mô tả quy trình ban đầu, chưa phải median đo trên tập sự cố. |
+| **Impact** | Nhóm ban đầu đặt giả thuyết sự cố có thể mất **90–120 phút** từ khi bất thường xuất hiện đến lúc được cô lập; hệ quả là gián đoạn dịch vụ kéo dài, kỹ sư phải đọc nhiều nguồn log và người trực đêm bị gọi xử lý muộn. Không dùng 90–120 phút làm kết quả đã kiểm chứng. |
+| **Success Metric** (baseline → target, cách đo) | **Baseline giả định v0:** 90–120 phút từ lúc phát sinh bất thường đến khi cô lập. **Target đề xuất:** <5 phút với ca được phép tự cô lập; <15 phút với ca cần HITL. **Cách đo:** đối chiếu timestamp đầu tiên của bất thường, cảnh báo, hoàn thành cô lập và hậu kiểm trên từng incident; tách riêng độ trễ phát hiện, thời gian điều tra, thời gian chờ duyệt. Các target chưa phải số liệu đạt được. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | Không cấp quyền chạy shell tự do, không sửa/xóa log hay thay đổi production lõi; không chặn IP trong whitelist. Nếu chưa đủ bằng chứng hoặc tác động đến hệ thống dùng chung, phải chuyển kỹ sư trực ca duyệt. Chỉ cân nhắc các runbook được định nghĩa trước có khả năng hoàn tác. |
 
-Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
+**Các điểm phản biện để nhóm tự đối chiếu và quyết định:**
 
--
+- **Không đồng nhất các mốc thời gian:** 90–120 phút bao gồm phát hiện, điều tra và phản ứng; không được so trực tiếp với thời gian riêng để khoanh vùng log.
+- **Kiểm chứng giả định “điều tra quá chậm”:** Kết quả CP4 cho thấy thời gian khoanh vùng được người được hỏi mô tả thường là **15–30 phút**. Như vậy việc chỉ tập trung tối ưu truy vấn log chưa phản ánh đúng pain lớn nhất.
+- **Không mặc định tự chặn:** CP4 cũng ghi nhận đa số người được hỏi phản đối auto-block vô điều kiện, nên cần phân quyền, whitelist, TTL và rollback.
+
+**Hướng sửa v1 được đề xuất từ bằng chứng CP4:** Thu hẹp sang **phát hiện/phản ứng ngoài giờ và kiểm soát cảnh báo giả**, thay vì nói mọi ca đều mất 90–120 phút để đọc log. Mức đồng thuận và câu chữ cuối phải được nhóm xác nhận.
 
 ---
 
@@ -296,31 +301,48 @@ Vì sao:
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
 
+> **Bản nháp phục vụ nhóm review:** Căn cứ mục 3.2 (tổng hợp phỏng vấn 5 người), mục 4 (quy trình) và mục 6 (phương án Rule + Bounded Agent + HITL). Đây là **đề xuất để thành viên tự chỉnh và chốt**, không phải kết luận đã được pilot xác nhận. Các ngưỡng bên dưới là mục tiêu thử nghiệm.
+
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Kỹ sư DevOps/SRE/NetOps trực ca vận hành dịch vụ web có Nginx/WAF phía trước và nhiều nguồn log liên quan; **pilot** giới hạn ở loại sự cố có thể phản ứng cục bộ, hoàn tác được tại cổng vào. |
+| **Quy trình** | **Hiện tại:** nhận alert/ticket → xem Nginx log → lọc nhiễu → tra chéo nguồn log → quyết định chặn/escalate → hậu kiểm. **Đề xuất:** Rule lọc cảnh báo nhiễu theo khung giờ → Agent chỉ đọc và chọn nguồn log tra tiếp → hệ thống tính Confidence Score từ tín hiệu kỹ thuật, đối chiếu whitelist → hoặc gọi runbook được phép ở tầng Nginx, hoặc chuyển hồ sơ có dẫn chứng tới kỹ sư duyệt HITL → self-check, rollback và audit. |
+| **Bottleneck** | **Sau kiểm chứng:** Vấn đề trọng tâm là phản ứng chậm **ngoài giờ**, cảnh báo giả và thiếu cơ chế quyết định hành động an toàn khi không có người trực màn hình; việc tra chéo log vẫn khó nhưng không chứng minh được mọi ca mất 55 phút. Theo tổng hợp CP4, thời gian khoanh vùng tầng lỗi thường **15–30 phút**. |
+| **Impact** | Phỏng vấn 5 người ngoài nhóm: **2/5** cho biết thường xuyên bị gọi dậy ban đêm; nhiều người phải chuyển giữa dashboard và truy vấn log thủ công. Chậm cảnh báo/escalate kéo dài thời gian ảnh hưởng dịch vụ; auto-block sai có thể gây gián đoạn cho người dùng hợp lệ. Chưa có baseline định lượng đáng tin cho toàn bộ thời gian từ lúc sự cố phát sinh đến cô lập ngoài giờ. |
+| **Success Metric** (baseline → target, cách đo) | **Baseline xác nhận ở mức phỏng vấn:** khoanh vùng tầng lỗi thường **15–30 phút** (không phải toàn bộ thời gian cô lập). **Baseline phải bổ sung từ log/ticket:** median thời gian phát hiện → cô lập ngoài giờ; false-alert rate; số lần chặn nhầm. **Target pilot nhóm đề xuất:** ca đủ điều kiện tự cô lập **<5 phút**, ca cần HITL **<15 phút**, tỷ lệ cảnh báo sai **<15%**, **0 chặn nhầm** IP/dịch vụ hợp lệ. **Cách đo:** dùng timestamp sự kiện, alert, runbook, duyệt HITL, rollback và hậu kiểm; báo riêng theo loại ca và chỉ so cùng định nghĩa. |
+| **Boundary** | Agent chỉ có quyền **read-only** khi thu thập log; không tự sinh và chạy shell command, không sửa DB, không restart dịch vụ lõi. Chỉ một tập **Parameterized Runbook** được quản trị trước tại Nginx/WAF mới có quyền thay đổi. Kiểm tra whitelist và quyền phải là điều kiện chặn cứng, không phụ thuộc LLM. Nhánh **60%–<85%** hoặc ảnh hưởng dịch vụ cốt lõi cần kỹ sư duyệt **HITL**. Nhánh **≥85%** chỉ được tự áp runbook cục bộ khi không chạm whitelist, có TTL tối đa 15 phút, tự kiểm tra sau 2 phút và rollback khi không cải thiện. Dưới **60%** chỉ theo dõi; sự kiện nguy cấp theo quy tắc an toàn vẫn phải được báo động, không được bỏ qua chỉ vì score thấp. |
+| **AI intervention point** | Sau bộ lọc Rule và trước quyết định phản ứng: chọn nguồn log đọc tiếp theo ngữ cảnh, liên kết timestamp/sự kiện qua tầng, tổng hợp giả thuyết cùng ID log làm bằng chứng. Lớp Rule/policy riêng quyết định quyền thực thi; **LLM không tự chấm điểm tin cậy hay tự mở rộng quyền**. |
+| **Mức chọn** | **Định hướng CP6 của nhóm:** kết hợp **Rule + Agent có giới hạn (Bounded Autonomy) + HITL**, thử trước ở Nginx. So sánh hiệu quả và an toàn với Workflow cố định trong pilot; chưa được coi là chứng minh Agent luôn tốt hơn Workflow. |
+| **Rủi ro & người kiểm tra** | **Kết luận sai/bỏ sót tín hiệu:** DevOps/SRE đọc log ID, trace và hậu kiểm. **Confidence Score thiếu hiệu chuẩn, chặn nhầm:** người phụ trách vận hành/bảo mật kiểm thử ngưỡng, whitelist, quyền và runbook. **Prompt injection trong log / rò dữ liệu:** kỹ sư bảo mật và quản trị hệ thống kiểm RBAC, audit, giới hạn nguồn dữ liệu. **Rollback không hoạt động:** người trực ca có kill switch và theo dõi sau hành động. |
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| **Actor / phạm vi** | Kỹ sư trực nhiều tầng, mọi loại sự cố | Tập trung hệ thống web và pilot hành động cục bộ tại Nginx/WAF | Giới hạn tác động, phù hợp phạm vi thử nhỏ và đánh giá rollback |
+| **Pain chính** | Mất 90–120 phút/sự cố, thiên về tra log chậm | Phát hiện/phản ứng ngoài giờ, cảnh báo giả và quyết định chặn an toàn | CP4: khoanh vùng thường 15–30 phút, 2/5 người thường bị gọi dậy đêm |
+| **Bottleneck** | Lọc log 20 phút + tra chéo 35 phút theo giả định workflow | Tách lọc nhiễu, phát hiện muộn ngoài giờ, phối hợp nhiều tín hiệu và phê duyệt | CP4 phản bác giả định khoanh vùng thường mất 60–90 phút |
+| **Impact / baseline** | Dùng một khoảng 90–120 phút cho toàn bộ sự cố | Ghi 15–30 phút là thời gian khoanh vùng qua phỏng vấn; **chưa có baseline** ngoài giờ đến cô lập | Tránh so sánh hai loại thời gian đo khác nhau |
+| **Success metric** | Tập trung giảm tổng thời gian | Thời gian cô lập theo auto/HITL, false-alert rate, không chặn nhầm; đo bằng timestamp từng sự cố | Tốc độ một mình không đủ nếu tăng cảnh báo sai hoặc chặn nhầm |
+| **Boundary** | Không chạy shell tự do, có người duyệt trường hợp nhạy cảm | Cấm whitelist, ngưỡng 60%/85%, TTL 15 phút, self-check 2 phút, audit/rollback/kill switch | Người được phỏng vấn chỉ chấp nhận auto-block có điều kiện; thiết kế CP6 của nhóm |
+| **AI intervention point** | Chưa chỉ rõ trách nhiệm AI | AI chỉ chọn hướng tra log/tổng hợp bằng chứng; policy độc lập kiểm quyền tự thực thi | Giảm rủi ro LLM tự đánh giá quá tự tin hoặc thực hiện sai lệnh |
+| **Mức can thiệp** | Chưa chốt | Định hướng Rule + Agent giới hạn + HITL, còn cần pilot so với Workflow | Bám so sánh 4 mức CP6 nhưng chưa khẳng định đã kiểm chứng hiệu quả |
 
-**Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
+**Tiêu chí đánh giá đầu ra của AI (5 tiêu chí đề xuất):**
+
+> Áp dụng cho tập incident đã ẩn danh và có nhãn hậu kiểm do kỹ sư xác nhận. Ngưỡng là **điều kiện đạt pilot đề xuất**, không phải kết quả kiểm thử thực tế.
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | **Bằng chứng truy xuất được** | 100% nhận định kỹ thuật quan trọng có log ID/timestamp/nguồn kiểm tra lại được; thiếu chứng cứ phải nói rõ chưa xác định | Bịa log hoặc khẳng định root cause không dẫn được bằng chứng |
+| 2 | **Khoanh vùng đúng, không bỏ sót** | Top-3 nguồn nghi vấn chứa nguồn được hậu kiểm xác nhận ở ≥80% ca; recall tín hiệu cốt lõi ≥90% trên tập có nhãn | Không đạt ngưỡng hoặc bỏ sót tín hiệu dẫn tới đề xuất xử lý nguy hiểm |
+| 3 | **Lọc cảnh báo giả** | Tỷ lệ alert được hậu kiểm xác nhận là giả <15%, đồng thời không bỏ sót sự cố nghiêm trọng trong tập thử | False-alert rate ≥15% hoặc bỏ sót một sự cố nghiêm trọng |
+| 4 | **Không vượt quyền, không chặn nhầm** | **0** truy cập vượt quyền, **0** lệnh ngoài runbook, **0** chặn nhầm IP/dịch vụ hợp lệ; mọi can thiệp có TTL, audit, rollback | Dù chỉ **1** vi phạm whitelist/quyền, chặn nhầm hoặc thiếu khả năng rollback |
+| 5 | **Thời gian phản ứng có xác minh** | Ca đủ điều kiện tự cô lập <5 phút; ca HITL <15 phút từ khi bất thường xuất hiện; chỉ tính đạt nếu 4 tiêu chí an toàn/chất lượng phía trên đều đạt | Vượt mốc thời gian, không có timestamp, hoặc nhanh hơn nhưng sai/không an toàn |
+
+**Cách đo:** Đánh dấu thời điểm đầu tiên xuất hiện bất thường, alert, nhận diện nguyên nhân khả dĩ, quyết định can thiệp, áp runbook, hậu kiểm và rollback. So sánh trên cùng tập ca có nhãn, tách **thời gian khoanh vùng** khỏi **thời gian phát hiện → cô lập**. Chỉ đánh giá điều kiện auto-containment trên sự cố có ground truth xác nhận đủ điều kiện; không “đẩy” ca khó sang auto để đạt tốc độ.
+
+**Điểm cần nhóm tự xác nhận trước khi chốt:** Bộ 5 phỏng vấn mới có bản tổng hợp, không có timestamp từng sự cố; chưa có log pilot, chưa hiệu chuẩn công thức Confidence Score 40/40/20 hoặc ngưỡng 60/85. Các chỉ tiêu <5 phút, <15 phút, <15% là mục tiêu, **không phải kết quả đã đạt**. Thành viên có trách nhiệm tự kiểm tra và thống nhất câu chữ, vì `RULES.md` quy định AI chỉ được hỗ trợ phản biện Problem Statement.
 
 ---
 
@@ -330,24 +352,24 @@ Vì sao:
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **TB** | 5/5 người được hỏi từng phải tra nhiều nguồn log; 2/5 thường bị gọi dậy ban đêm và đa số chấp nhận auto-block có điều kiện. Tuy nhiên phỏng vấn phản bác baseline 60–90 phút: khoanh vùng thường chỉ 15–30 phút, chưa có log chứng minh thời gian phát hiện → cô lập ngoài giờ. |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | **TB** | Người dùng yêu cầu whitelist, giới hạn thời gian chặn và rollback. Thiết kế có evidence ID, HITL và kill switch, nhưng chưa thử giao diện duyệt/hoàn tác với kỹ sư trong một ca thật và chưa biết họ có hiểu `Confidence Score` hay không. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **Cao** | Có thể bắt đầu từ Nginx log và runbook cục bộ, nhưng chưa có tập incident gán nhãn, telemetry liên tầng, công thức score đã hiệu chuẩn hay bằng chứng rollback hoạt động. Mốc 60/85 và target <5/<15 phút hiện là giả thuyết. |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | **Cao** | Chưa đánh giá chi phí lưu trữ/quan sát, yêu cầu dữ liệu nội bộ, RBAC, audit và trách nhiệm khi chặn nhầm. Chưa chỉ định owner phê duyệt whitelist/runbook, trực kill switch và rà soát sau sự cố. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** **Not Yet** đối với quyền tự động cô lập; **Go cho shadow pilot read-only** để thu bằng chứng.
 
-**Lý do:**
+**Lý do:** Pain ngoài giờ và nhu cầu giảm alert noise đã có tín hiệu, nhưng hai rủi ro Feasibility/Viability còn cao. Nhóm chưa có baseline cùng định nghĩa, tập incident gán nhãn, score đã hiệu chuẩn hoặc kết quả thử rollback; vì vậy cho Agent tự chặn ngay không nhất quán với yêu cầu an toàn của người được phỏng vấn.
 
-**Nếu Go — pilot nhỏ nhất:**
+**Nếu Go — pilot nhỏ nhất:** Chưa Go cho auto-containment ở thời điểm hiện tại.
 
-**Nếu Not Yet — cần kiểm chứng gì trước:**
+**Nếu Not Yet — cần kiểm chứng gì trước:** Chạy shadow pilot read-only 2 tuần ở Nginx trên tối thiểu 30 incident/alert lịch sử hoặc phát sinh mới. Agent chỉ đề xuất nguồn log, nguyên nhân, evidence ID và runbook; kỹ sư thực hiện hoặc bác bỏ. Đo cùng một định nghĩa: thời gian phát hiện → khoanh vùng/cô lập, Top-3 root-cause hit rate, false-alert rate, số ca bỏ sót nghiêm trọng, tỷ lệ đề xuất bị bác và thời gian duyệt. Diễn tập whitelist, TTL 15 phút, audit, kill switch và rollback trong môi trường staging; chỉ đề xuất mở quyền cục bộ khi 100% kết luận có bằng chứng, Top-3 hit rate ≥80%, không bỏ sót sự cố nghiêm trọng và 0 vi phạm quyền/whitelist.
 
-**Nếu No-Go — nên làm gì thay AI:**
+**Nếu No-Go — nên làm gì thay AI:** Chưa chọn No-Go; trong thời gian kiểm chứng vẫn dùng Rule cho baseline/lọc nhiễu và Workflow read-only để gom bằng chứng cho người trực.
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+**Ngưỡng dừng:** Dừng pilot ngay nếu có **1** lần truy cập vượt quyền, đề xuất chặn đối tượng trong whitelist, thực thi ngoài runbook, rollback/kill switch thất bại hoặc bỏ sót một sự cố mức nghiêm trọng. Sau 2 tuần/30 mẫu, nếu Top-3 hit rate <80%, false-alert rate ≥15% hoặc median ca HITL không dưới 15 phút thì không mở quyền tự động; quay về **Rule + Workflow read-only + HITL**, sửa dữ liệu/rule rồi đánh giá lại.
 
 ---
 
@@ -355,9 +377,10 @@ Vì sao:
 
 **Hạn chế:**
 
-- Mẫu phỏng vấn nhỏ (5 người) và các buổi không có biên bản riêng, nên số liệu là ý chính được tổng hợp lại, chưa phải số đo từ log hay ticket.
 - Giả định #6 (Confidence Score tính từ tín hiệu kỹ thuật phân biệt được sự cố thật với lưu lượng tăng tự nhiên) chưa được kiểm chứng; đây là rủi ro kỹ thuật lớn nhất.
 - Chưa có dữ liệu log thật để đo tỷ lệ báo sai và tỷ lệ chặn nhầm của phương án đề xuất.
+- Kết quả hiện dựa trên 5 phỏng vấn tổng hợp, chưa có timestamp từng sự cố và chưa có log pilot; các target là ngưỡng đề xuất, không phải kết quả đã đạt.
+- Cần thống nhất owner cho dữ liệu, whitelist, runbook, audit và trực kill switch trước khi thử bất kỳ hành động thay đổi hệ thống nào.
 
 **Hướng tiếp theo:**
 
@@ -371,8 +394,8 @@ Vì sao:
 - Teresa Torres, *Opportunity Solution Trees*: https://www.producttalk.org/opportunity-solution-trees/
 - Anthropic, *Building effective agents*: https://www.anthropic.com/research/building-effective-agents
 - Google PAIR, *People + AI Guidebook — User Needs*: https://pair.withgoogle.com/chapter/user-needs/
-- Datadog, *Watchdog*: https://docs.datadoghq.com/watchdog/
-- Dynatrace, *Davis AI*: https://www.dynatrace.com/support/help/platform/davis-ai
-- PagerDuty, *AIOps Signal Intelligence*: https://support.pagerduty.com/main/docs/aiops
+- Datadog, [Watchdog](https://docs.datadoghq.com/watchdog/) và [Watchdog RCA](https://docs.datadoghq.com/watchdog/rca/).
+- Dynatrace, [Davis AI](https://docs.dynatrace.com/docs/semantic-dictionary/model/davis) và [Root cause analysis concepts](https://docs.dynatrace.com/docs/dynatrace-intelligence/root-cause-analysis-classic/concepts).
+- PagerDuty, [AIOps](https://support.pagerduty.com/main/docs/aiops), [Event Orchestration](https://support.pagerduty.com/main/docs/event-orchestration) và [Pricing tiers](https://support.pagerduty.com/main/docs/pricing-tiers).
 - OpenSearch, *Anomaly Detection*: https://opensearch.org/docs/latest/monitoring-plugins/ad/index/
 - Grafana Labs, *Loki Documentation*: https://grafana.com/docs/loki/latest/

@@ -45,17 +45,16 @@
 | Thời điểm / bối cảnh | Trước 10h sáng hàng ngày |
 | Quy trình hiện tại (3–7 bước) | 1. Assistant tự lọc hoặc nhờ AI tổng hợp 2. Assistant tự xác định thông tin cần thiết tổng hợp vào google docs 3. Assistant viết đánh giá theo góc nhìn cá nhân 4. Review và format 5. Gửi email| 
 | Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3 viêt narrative hoặc để trắng|
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
-
+| Impact (nếu không giải thì sao) | Quản lý mất nhiều thời gian tổng hợp thông tin, ảnh hưởng tiến độ công việc khác|
+| Success metric (baseline → target) | Có báo cáo ngày trước 10h, nội dung được tổng hợp khoa học, có narrative|
+| Phương án không dùng AI | Mua sẵn từ 1 đơn vị chuyên nghiệp ; tạo template cố định + checklist |
+| Giả thuyết về AI (nếu có) | AI soạn nháp, trợ lý duyệt  |
+| Cảm nhận nhanh |  Workflow |
 Quy trình nháp hiện tại:
 
-```text
-
-```
+[1 Tổng hợp tin: 30'] → [2 Phân loại: 10'] → [3 Đánh giá: 15']
+→ [4 Tổng hợp Docs: 15']  ← BOTTLENECK
+→ [5 Review + format: 10'] → [6 Gửi: 5']
 
 ### Problem Card #2 — Báo cáo tình hình marketing hàng ngày lúc 3h chiều (Problem #4)
 
@@ -155,20 +154,21 @@ Quy trình nháp hiện tại:
 
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
-**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?** Không kịp nghe 
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?** Không
 
-**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.** Không
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
-**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+**6.5. Điều khó nhất khi viết Problem Statement là gì?** Thực sự hiểu vấn đề
 
-**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?** Trưởng nhóm chưa biết điều phối nên hầu như ko thực hiện được hoạt động nhóm
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
-
+ Xác định vấn đề thông qua việc làm rõ quy trình, xác định được metric đo thành công thất bại, xác định ranh giới AI và con người từ đó đưa ra quyết định mức độ áp dụng AI để giải quyết vấn đề
+ 
 ---
 
 ## 7. Tài liệu tham khảo

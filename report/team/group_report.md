@@ -133,7 +133,6 @@ Tổng hợp:
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
 - Thay đổi từ v0 sang v1: đổi Actor từ "Bác sĩ điều trị trực tiếp" sang **bác sĩ trẻ (junior) + người muốn tìm hiểu kỹ thuật mới**.
-- Khoanh vùng AI: không được phép để sinh viên tìm bằng ChatGPT.
 
 ### 3.3. Research giải pháp đã có
 
@@ -216,7 +215,7 @@ PHƯƠNG ÁN QUAY VỀ: Trích dẫn sai hoặc không có nguồn → tra cứu
 Phản biện nhận được:
 
 - Y tế → High risk → Có thể sai ở đâu: All input (kho dữ liệu, retrieve có chuẩn hay không?). Nên có: đúng thì sao? Sai thì sao?
-- Khoanh vùng AI → không được phép sinh viên tìm bằng ChatGPT → baseline → độ chính xác, tin tưởng: có thể tin tưởng được không?
+- Sinh viên tìm bằng ChatGPT → baseline → độ chính xác, tin tưởng: có thể tin tưởng được không?
 - Về Actor: Đổi từ bác sĩ điều trị nói chung sang bác sĩ trẻ (junior) + người muốn tìm hiểu kỹ thuật mới.
 
 ---

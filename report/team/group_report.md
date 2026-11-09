@@ -26,10 +26,10 @@
 | 6 | Vũ Quang Huy | Muốn nắm bài tập và deadline sắp tới để không bỏ sót. | Sinh viên/Học sinh | Phải lội 2-3 nguồn (LMS, nhóm lớp) mỗi tuần. | "Nếu trường đổi API của LMS thì giải pháp có sập không?" (Chuẩn) |
 | 7 | Vũ Quang Huy | Muốn nắm thông tin quan trọng từ nhiều kênh thông báo của GV. | Sinh viên/Học sinh | Bỏ lỡ thông báo do trôi tin nhắn trên nhiều kênh. | "Quyền truy cập dữ liệu đa kênh cá nhân lấy ở đâu?" (Minh) |
 | 8 | Phùng Văn Thanh Cao | Muốn lên kế hoạch học tập buổi tối theo deadline, độ khó. | Sinh viên | Mất 10-20 phút xếp việc nhưng vẫn miss deadline. | "Độ khó là cảm nhận chủ quan, hệ thống đo lường kiểu gì?" (Huy) |
-| 9 | Phùng Văn Thanh Cao | Muốn tổng hợp deadline từ LMS, email, nhóm lớp. | Sinh viên | Lướt nhiều nguồn mỗi tối dễ bị sót thông tin. | "Có trùng lặp ý tưởng với bài toán quản lý deadline của Huy không?" (Chuẩn) |
+| 9 | Phùng Văn Thanh Cao | Muốn tổng hợp deadline từ LMS, email, nhóm lớp. | Sinh viên | Lướt nhiều nguồn mỗi tối dễ bị sót thông tin. | "Có trùng lặp ý tưởng với bài toán quản lý deadline của Huy không?" (Cao) |
 | 10 | Phùng Văn Thanh Cao | Muốn có hướng dẫn phân tích, từng bước tiếp cận bài khó. | Sinh viên | Tốn 1-2 tiếng kẹt lại không tìm được hướng giải. | "Làm sao ngăn chặn việc AI giải hộ luôn thay vì chỉ hướng dẫn?" (Minh) |
 | 11 | Phùng Văn Thanh Cao | Muốn tổng hợp kiến thức trọng tâm cuối ngày học. | Sinh viên | Mất 45-60 phút tự đọc lại slide. | "Nếu input là file ghi âm bài giảng thì xử lý thế nào?" (Huy) |
-| 12 | Phùng Văn Thanh Cao | Muốn theo dõi tiến độ task để không ảnh hưởng nhóm. | Sinh viên, thành viên nhóm | Nhắc nhở thủ công, trùng lặp công việc. | "Đây là vấn đề ý thức hay do thiếu công cụ quản lý?" (Chuẩn) |
+| 12 | Phùng Văn Thanh Cao | Muốn theo dõi tiến độ task để không ảnh hưởng nhóm. | Sinh viên, thành viên nhóm | Nhắc nhở thủ công, trùng lặp công việc. | "Đây là vấn đề ý thức hay do thiếu công cụ quản lý?" (Huy) |
 
 ### 2.2. Cluster
 

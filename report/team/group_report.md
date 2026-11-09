@@ -24,9 +24,9 @@
 | 4 | | | | | |
 | 5 | | | | | |
 | 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
+| 7 | Vũ Nam Khánh | Khi vừa kết thúc cuộc họp dài 1 tiếng, tôi muốn tổng hợp lại danh sách công việc (action items) kèm người phụ trách, để gửi cho từng người trong team xác nhận ngay | Bản thân, Team | Trích xuất Task + Assignee | |
+| 8 | Vũ Nam Khánh | Khi cần viết tài liệu cho một API/service mới, tôi muốn có cấu trúc tài liệu nhất quán từ source/config, để không phải viết thủ công từ đầu | Backend Developer | Viết mô tả param + response mẫu | |
+| 9 | Vũ Nam Khánh | Khi mentor cần theo dõi tiến độ công việc, họ muốn thấy báo cáo dạng hình ảnh/bảng tổng quan ngắn gọn, để nắm tình hình mà không phải nhắn hỏi từng người | Mentor, Team | Lọc task xong & blocker | |
 | 10 | | | | | |
 | 11 | | | | | |
 | 12 | | | | | |

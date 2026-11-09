@@ -83,47 +83,43 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Học viên ngoài nhóm cũng gặp lại lỗi đã từng được hỏi và mất ≥ 10 phút mỗi lần tìm lại câu trả lời, ít nhất 1 lần/tuần | Value | 5 | 2 | Phỏng vấn 3 học viên nhóm khác |
+| 2 | Hơn một nửa thời gian mỗi lần tìm nằm ở bước mở từng thread để đọc, không phải ở bước gõ từ khóa hay bước chờ coach | Value | 5 | 2 | Đếm 2 kênh log gần nhất |
+| 3 | Phần lớn lỗi bị hỏi lại đã có câu trả lời cũ trong Discord, chủ yếu do coach trả lời, tức là có dữ liệu để tìm | Feasibility | 4 | 2 | Thử trên log |
+| 4 | Khi thấy câu trả lời cũ có nguồn từ coach (qua search, FAQ hay AI), học viên tự làm theo, không hỏi lại coach để xác nhận | Usability | 4 | 1 | |
 
-*Điền 4–6 giả định; xóa dòng thừa.*
-
-Giả định nhóm kiểm chứng trong buổi này:
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
+Cách đã dùng: Interview
 
 Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
 
-| Trường | Nội dung |
-|---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+| Trường                                            | Nội dung                                                   |
+| ------------------------------------------------- | ---------------------------------------------------------- |
+| Người được hỏi (vai trò, không ghi tên thật)      | Học viên lớp L3B                                           |
+| Câu nói đáng nhớ nhất (nguyên văn)                | Tìm kiếm trên Discord nhưng không thấy, hỏi bot không được |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Nộp nhầm bài trên hệ thống LMS                             |
+| Hiện đang xử lý bằng cách nào (workaround)?       | Hỏi lab coach bằng cách tạo ticket                         |
+| Mất bao lâu, bao lần?                             | Mất tầm 10 phút, 2 lần                                     |
+| Insight / opportunity rút ra                      | Tìm kiếm hay đợi người trả lời dẫn tới delay               |
 
 Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Phỏng vấn | 2 người | Học viên bị mất thời gian khi tìm kiếm cách giải quyết vấn đề hay đợi coach xử lý | Một vài vấn đề áp dụng thread cũ vẫn xử lý được. |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
+Sử dụng AI chat bot kết hợp RAG document, thread cũ và tự động chuyển ticket lên.
 
 ### 3.3. Research giải pháp đã có
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| Tìm kiếm trong Discord | | Bước tìm kiếm theo từ khoá | Có sẵn trong Discord, tốc độ nhanh, miễn phí | Chỉ tìm theo từ khoá chính xác, nếu học viên mô tả không chính xác thì sẽ không ra | Người dùng |
+| Discord Forum gom nhóm | | Gom các ca lỗi theo chủ đề | Tốc độ nhanh, tính năng có sẵn, tìm kiếm theo keyword nếu diễn đạt không chính xác | Phụ thuộc vào việc thiết kế tag và gán tag của các bài viết trước | Gom nhóm các vấn đề cũ giúp tìm kiếm tốt hơn |
+| Chat Bot hỏi đáp | | Bước tìm kiếm lỗi và giải đáp | Có khả năng hiểu ngữ nghĩa của người dùng | Có thể hallucinate | Sử dụng LLM không có thể dẫn đến hallucinate |
 
 ---
 
@@ -138,12 +134,12 @@ Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
-|---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| ---: | ----- | ----- | ------ | -------------------- | ------- |
+|    1 |       |       |        |                      |         |
+|    2 |       |       |        |                      |         |
+|    3 |       |       |        |                      |         |
+|    4 |       |       |        |                      |         |
+|    5 |       |       |        |                      |         |
 
 **Bottleneck chính:**
 

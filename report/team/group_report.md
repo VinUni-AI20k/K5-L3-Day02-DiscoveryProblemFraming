@@ -78,7 +78,7 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 | #8 Đối chiếu bài báo cho Related Work | 4 | 4 | 4 | 5 | 3 | 4 | 4 | 28 |
 | #2 Nhiều mã đề tương đương | 4 | 3 | 2 | 3 | 2 | 3 | 3 | 20 |
 
-**Candidate được chọn:** #1, theo dõi và áp dụng văn bản quy định mới của Bộ/Sở.
+**Candidate được chọn:** #1 (problem card #3 của Khoa), theo dõi và áp dụng văn bản quy định mới của Bộ/Sở.
 
 **Vì sao chọn:** #1 có tổng cao nhất (29/35). Điểm cao nhất ở hai tiêu chí nền: Actor rõ (5) và Quy trình rõ (5), với hai vai cụ thể và 7 bước, bước nghẽn xác định rõ là bước 3-4 và bước 5. Impact đo được (4) vì có sẵn 3 chỉ số: thời gian từ lúc nhận văn bản đến lúc biết việc cần làm, số lần hỏi lại tổ trưởng, và số lỗi áp dụng sai khi duyệt đề. So sánh được 4 mức (4) vì đã mô tả được phương án không dùng AI: tóm tắt 1 trang theo mẫu cố định, tổ trưởng phân công luân phiên.
 

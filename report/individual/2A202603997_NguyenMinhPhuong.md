@@ -181,27 +181,31 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-Tôi học được cách mọi người phân tích và đánh giá một bài toán khác nhau như thế nào.
+Tôi học được cách mọi người phân tích và đánh giá một bài toán khác nhau như thế nào. Bạn Trung là bác sĩ nên có số phút thật của từng bước, còn card của tôi chủ yếu dựa vào số liệu nước ngoài. Sự khác biệt đó giúp tôi học được khả năng nghiên cứu sâu về một vấn đề ngoài lĩnh vực của mình, như y tế. Khi tham gia vào một vấn đề như vậy, tôi thấy mình học hỏi khá nhanh. Tôi cũng thấy vấn đề của Đức khá chung chung, chưa đủ để gây ấn tượng với các coach.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 
-Nhóm phân tích nhu cầu và tình hình thực tế rồi mới đưa ra giải pháp.
+Không. Lúc đầu mọi người nghĩ ra 3 vấn đề thực tế mà con người đang gặp phải trong đời sống, rồi mới đưa ra các giải pháp để xử lý các vấn đề đó. Nhóm phân tích nhu cầu và tình hình thực tế rồi mới đưa ra giải pháp. Vì đây là vấn đề về y tế nên không thể chọn full Agent được, khả năng AI sai rất cao, nên nhóm quyết định chọn Rule và Workflow.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Có. Lúc suy nghĩ cho bài toán, tôi chỉ nghĩ đối tượng đang nhắm đến là bác sĩ thôi chứ không nghĩ đến cấp bậc. Khi nghe mọi người góp ý, tôi quyết định sửa lại (đổi sang bác sĩ junior và người muốn tìm hiểu kỹ thuật mới) để phù hợp hơn với tệp khách hàng. Ngoài ra, tôi từng hỏi nhóm 1 rằng thị trường đã có sản phẩm tương tự thì sản phẩm của bạn có gì tốt hơn. Câu hỏi đó cũng đúng với bài nhóm mình: sản phẩm tương tự đã có nhưng chỉ ở nước ngoài, nên tôi muốn triển khai ở Việt Nam.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
-Có.
+Có. Tôi khá bất ngờ vì tỷ lệ câu hỏi lâm sàng mà bác sĩ không đi tìm câu trả lời (Del Fiol 2014: chỉ 51% câu hỏi được đi tìm) khá cao so với suy nghĩ của tôi. Lúc đầu ấn tượng của tôi là bác sĩ biết rất nhiều nên khả năng trả lời được tất cả câu hỏi là rất cao. Tôi cũng bất ngờ là các công cụ như OpenEvidence, UpToDate đã có nhưng khó dùng ở Việt Nam, do rào cản về ngôn ngữ rất lớn.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
-Phải phân tích nhu cầu của nhiều tệp khách hàng.
+Phải phân tích nhu cầu của nhiều tệp khách hàng. Bác sĩ junior lẫn senior đều cần tới nó, sinh viên cũng cần có các nguồn thông tin đáng tin cậy để nghiên cứu thêm. Một điểm khó khác là đặt metric: tôi muốn tối ưu thời gian, và mức 20 phút là khá phù hợp để mọi người không cảm thấy nản.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-Tôi sẽ đánh giá và phân tích về rủi ro của sản phẩm hơn là chỉ tập trung vào xử lý vấn đề của người dùng.
+Tôi sẽ đánh giá và phân tích về rủi ro của sản phẩm hơn là chỉ tập trung vào xử lý vấn đề của người dùng. Ví dụ: AI trích dẫn sai tài liệu, hoặc có những tài liệu mới xuất bản gần đây thì model có cập nhật kịp không. Tôi sẽ test trên nhiều bộ câu hỏi xem hệ thống có đề xuất đúng nhất không; lúc đó tôi phải tạo một lượng data nhất định để làm. Tôi cũng muốn phỏng vấn nhiều người hơn để có thông tin cụ thể.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Vấn đề là bác sĩ tìm các nguồn paper quá lâu. Để đánh giá, nhóm dùng bộ câu hỏi gán nhãn thủ công hoặc tự động. Boundary: AI không đưa ra quyết định điều trị, không nhập thông tin định danh bệnh nhân, mọi khuyến cáo phải dẫn đoạn gốc. Mức can thiệp: Rule xong tới Workflow. Nếu trích dẫn sai hoặc không có nguồn thì quay về tra cứu thủ công trên PubMed / UpToDate.
 
 ---
 

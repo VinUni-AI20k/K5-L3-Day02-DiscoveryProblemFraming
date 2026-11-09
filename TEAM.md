@@ -76,3 +76,31 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Khi tổng hợp phải giữ cùng phạm vi của baseline–target; số liệu trong báo cáo thành viên vẫn cần nguồn và quyền sử dụng được kiểm.
 - Công thức đúng không bảo đảm so đúng hạng mục; kiểm tổng tiền cần đi cùng mapping, đơn vị và truy vết.
 - Rule có thể phù hợp phần so số; hỗ trợ ghép ngữ nghĩa là bài toán mở rộng phải có đối chứng và người kiểm riêng.
+
+### NguyenVanVinh-2A202603672
+
+**Phần việc phụ trách:**
+
+- Quy trình trước/sau (CP5), dữ liệu domain, bottleneck và before/after.
+- Cung cấp actor, số liệu và baseline cho candidate được chọn (V1 — soát chênh khối lượng/đơn giá).
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- CP1–CP2: đưa 3 card V1, V2, V3 từ công việc đánh giá chào giá gói cơ điện; V1 được chọn với 30/35 điểm.
+- CP3: phản biện card của Hưởng (H1), Linh (L2), Quân (Q3).
+- CP5: viết mục 4 báo cáo nhóm — quy trình hiện tại 8 bước (11–13 giờ/vòng), quy trình tương lai tách Rule / AI / người, boundary, HITL, phương án quay về và bảng before/after.
+- Cung cấp baseline riêng phần soát (5–6 giờ/vòng, ~4.100 dòng × 4 nhà thầu) làm nguồn cho Problem Statement v0/v1 và CP6.
+- Research bổ trợ: Power Query chỉ gom được file cùng mẫu; Archdesk, Corten là công cụ bid leveling có sẵn (ghi ở báo cáo cá nhân).
+- Được giao trước pilot: xác nhận phạm vi, nhật ký thời gian và quyền dùng dữ liệu.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- [Báo cáo nhóm](report/team/group_report.md), mục 4 (quy trình trước/sau); mục 2.1 (card V1–V3); mục 5, 7 (baseline nguồn Vinh).
+- [PR #4](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/4), merge commit `270bb22`; commit nguồn `2f96679`.
+- [Báo cáo cá nhân](report/individual/2A202603672_NguyenVanVinh.md), mục 2–5.
+
+**Điều mình học được từ phần nhóm:**
+
+- Nên thử Rule làm mốc đối chứng trước, chỉ dùng AI khi chứng minh được Rule không đủ.
+- Phải tách bước gom khỏi bước soát; gộp lại thì baseline và target không cùng phạm vi.
+- Tổng tiền khớp không chứng minh các dòng đã được ghép đúng; cần kiểm cả mã, đơn vị và dòng nguồn.

@@ -168,16 +168,15 @@ flowchart LR
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Pitch 3 card V1 (soát chênh lệch), V2 (gom bảng), V3 (chấm năng lực) | V1 vào shortlist và được chọn |
+| Phản biện bài của bạn khác | Hỏi Hưởng (H1): "Mất công ở nhận diện nội dung hay chờ app tải, tìm kiếm sẵn có giải được đến đâu?"; hỏi Linh (L2): "Video có transcript tốt thì tìm từ khóa có đủ không?"; hỏi Quân (Q3): "Trường nào kiểm được bằng quy tắc cố định?" | Cả 3 hướng không vào shortlist (V1, L1, T1) |
+| Nhận phản biện | Review nhóm: "Tổng tiền khớp vẫn có thể che sai mapping; không lấy thời gian gom làm baseline của bước soát" | Bước duyệt kiểm mọi dòng AI ghép, không chỉ dòng tin cậy thấp; tách baseline soát (300–360 phút/vòng) khỏi gom |
+| Chọn candidate problem | Cung cấp số liệu cho V1: ~4.100 dòng × 4 nhà thầu, 5–6 giờ/vòng | V1 được 30/35 điểm, cao nhất shortlist; V2 giữ làm điều kiện đầu vào |
+| Kiểm chứng / research | Cung cấp số liệu domain cho CP4; tự research Power Query, Archdesk, Corten | Power Query chỉ gom được file cùng mẫu, khớp với việc tách V2 |
+| Quy trình nhóm | Vẽ quy trình hiện tại và tương lai (mục 4 báo cáo nhóm) | Chốt bottleneck: dò ~16.000 dòng; AI chỉ ở 1 bước, còn lại là Rule |
+| Problem Statement | Cung cấp baseline, bottleneck, boundary làm nguồn cho v0/v1 | Target v1: ≤90 phút/vòng cho phần soát |
+| Mức can thiệp AI | Card #1 đã tự kết luận Rule từ CP2 | Nhóm chọn Rule; AI mapping tách thành hướng mở rộng |
+| Quyết định | Được giao xác nhận phạm vi, nhật ký thời gian và quyền dùng dữ liệu | Nhóm đề xuất Not Yet, chờ kiểm các điều kiện này |
 
 ---
 
@@ -185,12 +184,9 @@ flowchart LR
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP2 Problem Card | Đóng vai PM hoài nghi; rà số liệu | Chỉ ra Card #1 dùng Excel là đủ; bắt số liệu lệch | Bỏ qua việc gom vẫn mất 3–4 giờ dù đúng mẫu | Card #1 đổi sang Rule; Card #2 chỉ đồng ý một phần |
+| CP4 Research | Tìm công cụ so sánh chào giá | Gợi ý Power Query, Archdesk, Corten | Đưa 1 link chết (procore.com/bidding); nguồn đều là quảng cáo nước ngoài | Tự mở từng link; Power Query chỉ gom được file cùng mẫu |
+| CP5 Quy trình | Viết nháp quy trình trước/sau | Tách rõ Rule / AI / người | Tự đặt thời gian tương lai cho khớp target | Ghi rõ là ước; kiểm tỷ lệ sai mẫu ở CP4 |
 
 ---
 
@@ -200,20 +196,41 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Khi tôi nghe top 3 problems của các bạn khác như: Hưởng, Linh, Khương, Tuyên, tôi nhận ra một problem nan giải không chỉ ở việc nó gây mất thời gian và khó khăn cho các công đoạn hay là thời gian công sức mà còn xoay quanh 3 ý chính đó là: Nó mang lại giá trị gì? Khi so sánh với thị trường nó có điểm gì vượt trội hơn và bên cạnh đó người đưa ra còn phải biết đánh giá rủi ro khi thực hiện đồng thời có 1 kế hoạch phát triển cụ thể chi tiết cho vấn đề mình muốn giải quyết. Đầu tiên về phần của Hưởng, bạn nhận thấy việc đi du lịch 1 người cần phải chuẩn bị rất nhiều bước lên lịch trình, tìm chổ ăn, ở và nhiều thứ khác quá trình này mất rất nhiều thời gian do vậy bạn đã đưa ra giải pháp tạo ra 1 ai agent tổng hợp các địa điểm nhưng bạn lại quên mất là việc này khó kiếm được nguồn đánh giá chân thực và dữ liệu về các địa điểm tốt, còn về Linh định làm phân tích khách hàng qua giọng nói nhưng bạn quên mất việc độ chính xác khi chuyển từ voice qua text còn hạn chế rất nhiều đặc biệt nếu người dùng nói giọng địa phương. Và từ đó tôi nhận ra để giải quyết 1 problem cần phải nhìn từ nhiều góc nhìn để hiểu rõ và có 1 kế hoạch giải pháp chi tiết rõ ràng rành mạch.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Có. Trong trao đổi ban đầu, tôi từng đề xuất ưu tiên những vấn đề có khả năng ứng dụng AI rõ ràng. Nhìn lại, cách tiếp cận này khiến nhóm có nguy cơ chọn công nghệ trước khi hiểu rõ vấn đề và có đủ bằng chứng.
+
+Khi rà soát bài toán nhà thầu, nhóm nhận ra cần làm rõ: các dòng dữ liệu đầu vào đã được ghép đúng mã và đơn vị hay chưa? Nếu đã ghép đúng, việc so sánh số liệu có thể xử lý bằng quy tắc (Rule), chưa nhất thiết cần AI. Còn việc ghép các mô tả khác nhau nhưng cùng ý nghĩa cần được xem xét như một bài toán riêng. Vì vậy, tôi đề xuất nhóm thử phương án không dùng AI hoặc chỉ dùng Rule làm mốc đối chứng, rồi mới đánh giá AI có thực sự mang lại giá trị hơn hay không.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Tôi chưa thay đổi hoàn toàn quan điểm, nhưng có điều chỉnh cách tiếp cận sau khi được phản biện. Cụ thể, khi xem xét bài toán so sánh báo giá nhà thầu, ý kiến cho rằng Excel đã đủ khiến tôi nhìn lại sự cần thiết của AI. Tôi nhận ra cần tách việc so sánh số liệu đã ghép đúng khỏi việc ghép các mô tả khác nhau. Vì vậy, tôi đề xuất dùng Rule làm phương án đối chứng trước. Tôi vẫn thấy AI có tiềm năng, nhưng cần chứng minh giá trị của nó trong từng phần việc cụ thể.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Điều khiến tôi bất ngờ khi rà soát bài toán là phần so sánh số liệu có thể không cần AI nếu dữ liệu đầu vào đã được ghép đúng mã và đơn vị. Trước đó, tôi chú ý nhiều đến khả năng ứng dụng AI mà chưa xem xét kỹ điều kiện này. Nhận ra đó giúp tôi chuyển trọng tâm sang kiểm chứng xem người dùng thực sự gặp khó ở bước chuẩn hóa, ghép dữ liệu hay so sánh số liệu. Tôi chưa có đủ kết quả phỏng vấn hoặc khảo sát để khẳng định bước nào là khó khăn lớn nhất.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Điều khó nhất với tôi là xác định đúng phạm vi vấn đề mà không đưa sẵn giải pháp vào câu mô tả. Trong bài toán nhà thầu, việc gom dữ liệu, ghép các dòng tương ứng và so sánh số liệu có liên quan với nhau, nên dễ bị gộp thành một vấn đề quá rộng. Bên cạnh đó, khi chưa đo được thời gian xử lý và số dòng bị bỏ sót hiện tại, tôi khó đặt mục tiêu cải thiện có căn cứ. Vì vậy, tôi cần làm rõ người gặp vấn đề, bước công việc gây khó khăn và tác động thực tế trước khi lựa chọn công nghệ hay đặt chỉ tiêu.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Nếu làm lại tôi sẽ cố gắng thực hiện bấm giờ đo thời gian thực hiện so sánh và chấm 1 bộ đấu thầu nhanh chóng ngay lập tức chính xác chứ không phải chỉ là "ước" tôi sẽ phỏng vấn và hỏi kỹ tình trạng các nhà thầu có thường xuyên sai mẫu không và các họ giải quyết để nhanh chóng xác định và làm chắc chắn luận điểm có nên sử dụng AI không.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Hiện nay việc chấm thầu, so sánh đối chiếu nhà thầu đối với các chuyên viên kinh tế kỹ thuật là vấn đề nan giải và problem mà chúng tôi đã tìm ra ở đây đó chính là mỗi 1 bộ hồ sơ mời thầu có kích thước khổng lồ đó là với hàng chục nghìn dòng dữ liệu vậy nên việc mà so sánh thủ công rất mất thời gian do đó chúng tôi đã đưa ra quy trình xử lý như sau Nhận file → gom vào bảng tổng hợp → dò từng dòng → cộng phát sinh → trình lãnh đạo. Metric được đo trực tiếp trên bộ hồ sơ mới nhất với Baseline: 5–6 giờ/vòng, tức 300–360 phút. Target: dưới 90 phút/vòng, tính cả thời gian kiểm và sửa. Cách đo: chạy trên một gói thầu cũ đã có đáp án, ghi thời gian từng vòng. Boundary và HITL: Không sửa số gốc, không tự chọn hay loại nhà thầu, không tự gửi hồ sơ. Dòng mơ hồ hoặc không khớp thì chuyển cho chuyên viên. Chuyên viên kiểm bảng trước khi trình lãnh đạo. Mức can thiệp: Rule vì Rule so khối lượng là phép trừ, so đơn giá là công thức cộng ngưỡng. Kết quả có đúng/sai rõ ràng, không cần AI suy luận. Quyết định: Not YetPhải kiểm trước 3 điều: quyền dùng dữ liệu, mapping đúng, bộ đáp án để chấm. Ngưỡng dừng: sau 2 vòng thử mà vẫn từ 90 phút trở lên, hoặc bỏ sót dù chỉ 1 dòng có trong đáp án → dừng, quay về soát thủ công hoặc phương án đơn giản hơn.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- Worksheet và bài mẫu của lab: [docs/01-worksheet.md](../../docs/01-worksheet.md), [docs/02-deliverable-example.md](../../docs/02-deliverable-example.md)
+- Intercom — Job Stories (CP1–CP2): https://www.intercom.com/blog/accidentally-invented-job-stories/
+- Anthropic — Building effective agents (phân biệt Rule / Workflow / Agent): https://www.anthropic.com/research/building-effective-agents
+- Microsoft — Power Query gom nhiều file từ thư mục (CP4): https://support.microsoft.com/en-us/excel/import-data-from-a-folder-with-multiple-files-power-query
+- Archdesk — Subcontractor Bidding & Bid Leveling (CP4): https://archdesk.com/solutions/subcontractor-bidding
+- Corten Technologies — AI Bid Leveling (CP4): https://cortentechnologies.com/ai-bid-leveling/

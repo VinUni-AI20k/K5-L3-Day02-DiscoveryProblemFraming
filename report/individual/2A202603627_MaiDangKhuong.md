@@ -176,7 +176,7 @@ flowchart TD
 |---|---|---|---|---|
 | CP1 Scan | Làm rõ và diễn đạt 5 vấn đề tôi tự đề xuất theo Job Story. | Đặt câu hỏi về actor, bước khó, thời gian và hậu quả. | Diễn đạt ban đầu có thể khiến 2 ngày/job và 10 phút/story bị hiểu là thời gian phổ biến; chưa phân biệt thiếu tham số API với thiếu mô tả tham số. | Xác nhận 2 ngày là một job cụ thể, 10 phút cho story khó; frontend hỏi lại do tài liệu thiếu mô tả tham số. |
 | CP2 Problem Card | Nhờ AI hỗ trợ cấu trúc card, vẽ quy trình nháp và phản biện từ thông tin CP1. | Giúp phân biệt tổng thời gian với thời gian từng bước và xem xét phương án không AI. | Top 3 ban đầu chưa đúng ưu tiên của tôi; có nhiều ghi chú biên tập trong nội dung báo cáo. | Tôi chốt research marketing làm card ưu tiên pitch, giữ user story e-commerce và tài liệu API, bỏ tổng hợp tài liệu VinUni khỏi top 3; yêu cầu nội dung chính trình bày theo ngôi tôi. |
-| CP4 Research | | | | |
+| CP4 Research | Dùng trợ lý hỗ trợ chuẩn bị research giải pháp hiện có cho đối chiếu chào giá nhà thầu; nguồn bàn giao tại mục 3.3 và PR #5. | Cấu trúc bảng công cụ, bước hỗ trợ, điểm mạnh và khoảng trống. | Bản nháp có tham chiếu thiếu đích; tính năng công cụ không chứng minh đạt target trên dữ liệu nhóm. | Nhật ký phân biệt phần research tôi phụ trách với việc Hưởng review/sửa bốn liên kết; giữ rõ giả thuyết áp dụng và target chưa được kiểm nghiệm. |
 | CP5 Quy trình | | | | |
 | CP5–6 Problem Statement | | | | |
 | CP6 Mức can thiệp / quyết định | | | | |

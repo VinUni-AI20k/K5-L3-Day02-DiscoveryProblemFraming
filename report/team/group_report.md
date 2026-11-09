@@ -269,11 +269,11 @@ flowchart TD
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 5 | 5 (+ 1 nhánh quay về) | Trước: cả 5 bước do kế toán làm tay (4.1). Sau: Bước 1 **Rule** gom chứng từ và kiểm tra hợp lệ thuế → Bước 2 **Rule + AI** đọc XML/PO, OCR GRN scan → Bước 3 **Rule** so khớp số học 3 bên → Bước 4 **AI** khoanh vùng lệch và soạn nháp xác minh (chỉ chạy với bộ bị lệch) → Bước 5 **Con người** kiểm và xác nhận (4.2) |
+| Tổng thời gian | Luồng khớp: 6.0–7.5 phút/bộ · Luồng ngoại lệ: 16–22 phút thao tác/bộ + vài giờ chờ · Bình quân: ~8–12 phút/bộ | Luồng khớp: ~1.6 phút/bộ (kế toán thao tác ~1.0 phút) · Luồng ngoại lệ: ~3.3–3.8 phút/bộ · Bình quân: ~1.9–2.3 phút/bộ | Bình quân tính theo tỷ lệ 70–80% bộ khớp, 20–30% bộ lệch. Thời gian **chờ** Kho / Mua hàng / NCC phản hồi gần như không giảm, vì AI chỉ soạn nháp, người vẫn duyệt gửi. Toàn bộ số liệu là ước tính ở 4.1/4.2, chưa bấm giờ thật |
+| Số bước thủ công | 5/5 | 1/5 (Bước 5 — HITL) | Kế toán vẫn kiểm nhận 100% bộ hồ sơ trước khi hạch toán. Thêm thao tác tay khi có fallback: sửa ô tô vàng (~20–30 giây/trường) hoặc chuyển hẳn sang đối chiếu thủ công khi AI gián đoạn |
+| Bottleneck chính | Bước 3: dò mắt từng dòng hàng giữa 3 chứng từ khác định dạng, 3.0–4.5 phút/bộ (1.5–7.5 giờ công/ngày). Phụ: Bước 4 xử lý ngoại lệ, 10–15 phút/bộ lệch + chờ | Bước 5b: kế toán kiểm vùng lệch và duyệt yêu cầu xác minh, 2.5–3.0 phút/bộ lệch; cộng thời gian chờ các bộ phận phản hồi | Bottleneck mới chấp nhận được vì đây chính là điểm kiểm soát tài chính (human-in-the-loop), không nên tự động hóa |
+| Rủi ro mới phát sinh | — | (1) OCR đọc sai số lượng viết tay trên GRN, hoặc AI ánh xạ sai tên hàng NCC sang mã hàng PO. (2) Kế toán tin máy, bấm xác nhận nhanh các bộ "khớp" mà không nhìn lại. (3) Nháp tin nhắn/email AI soạn sai nội dung hoặc gửi nhầm bộ phận. (4) Dữ liệu hóa đơn, NCC đi qua dịch vụ OCR/LLM bên ngoài; chi phí tính theo lượt gọi API (3.3). (5) Dịch vụ OCR/AI gián đoạn làm đứng quy trình | Cách xử lý theo 4.2: (1) ô có độ tin cậy < 95% bị tô vàng, mở ảnh gốc bên cạnh để sửa; (3) nháp chỉ ở trạng thái "chờ duyệt", không tự gửi; (5) nút "Chuyển sang đối chiếu thủ công" trên MISA AMIS / checklist Excel. Đề xuất bổ sung: (2) Kế toán trưởng kiểm mẫu ngẫu nhiên các bộ "khớp" mỗi tuần; (4) trong lab chỉ dùng chứng từ giả lập |
 
 ---
 
@@ -281,16 +281,20 @@ flowchart TD
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Nhân viên kế toán công nợ ở doanh nghiệp vừa và nhỏ (dùng phần mềm kế toán như MISA AMIS), mỗi ngày kiểm 30–100 bộ chứng từ mua hàng trước khi trình duyệt thanh toán |
+| **Quy trình** | 1. Tiếp nhận hóa đơn và gom PO + biên bản giao nhận (GRN) · 2. Đọc, tra cứu thông tin từng chứng từ (hóa đơn PDF/XML, PO trên phần mềm/Excel, GRN ảnh scan/phiếu giấy viết tay) · 3. Đối chiếu từng dòng hàng giữa 3 chứng từ · 4. Nếu lệch hoặc thiếu: khoanh vùng sai lệch, hỏi lại Mua hàng / Kho / NCC rồi đối chiếu lại · 5. Xác nhận hợp lệ, trình Kế toán trưởng duyệt chi |
+| **Bottleneck** | **Bước 3** — dò mắt từng dòng hàng qua 3 tài liệu, 3.0–4.5 phút/bộ, vì tên hàng trên hóa đơn NCC khác tên/mã nội bộ trên PO, đơn vị tính khác nhau (thùng/hộp/cái), giao hàng nhiều đợt làm số lượng GRN khác PO. Phần mềm kế toán hiện có mới liên kết được PO với chứng từ mua ở luồng chuẩn (3.2), chưa xử lý được các trường hợp này. **Phụ: Bước 4** — xử lý ngoại lệ thêm 10–15 phút thao tác/bộ lệch, cộng vài giờ chờ phản hồi |
+| **Impact** | Riêng Bước 3 tốn 1.5–7.5 giờ công/ngày. Khoảng 20–30% bộ bị lệch (6–30 bộ/ngày) tốn thêm 1–7.5 giờ công/ngày và làm chậm kỳ thanh toán. Sai lệch bị bỏ sót do mỏi mắt dẫn tới trả thừa tiền, thanh toán trễ bị phạt hợp đồng, phải điều chỉnh hóa đơn và xử lý lại |
+| **Success Metric** (baseline → target, cách đo) | (1) Thời gian thao tác của kế toán: luồng khớp 6.0–7.5 → ≤ 2 phút/bộ; luồng ngoại lệ 16–22 → ≤ 4 phút/bộ (không tính thời gian chờ bộ phận khác). Cách đo: bấm giờ 20 bộ chứng từ (trong đó ≥ 5 bộ có lệch) trước và sau pilot. (2) Tỷ lệ phát hiện sai lệch ≥ 95%. Cách đo: chạy trên bộ chứng từ giả lập có gài sẵn lỗi (lệch số lượng, đơn giá, thuế suất VAT, tổng tiền, thiếu GRN) |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI **không** tự tính tiền, thuế hay chênh lệch, **không** tự sửa hoặc nội suy số liệu bị mờ/thiếu; **không** tự hạch toán công nợ, **không** tự duyệt thanh toán, **không** tự gửi email/tin nhắn cho NCC hay bộ phận khác. Kế toán kiểm nhận 100% bộ hồ sơ trước khi hạch toán; bắt buộc kiểm từng dòng với bộ bị gắn cờ lệch, bộ có trường đọc với độ tin cậy < 95%, và hóa đơn vượt ngưỡng giá trị nội bộ. Kế toán trưởng duyệt chi cuối cùng |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
 
--
+- **Quyến (câu hỏi ở 2.1, #8):** "Rủi ro về kinh tế khi AI đối chiếu sai lệch mà không được xác nhận lại." → **Đồng ý.** Boundary quy định mọi phép so khớp tiền và số lượng chạy bằng Rule cố định, AI không quyết định khớp/lệch, và kế toán kiểm nhận 100% bộ hồ sơ trước khi hạch toán.
+- **Bằng chứng ở 3.2 (MISA AMIS đã tự lấy dữ liệu từ PO sang chứng từ mua):** "Nếu phần mềm đã liên kết PO thì pain có còn không?" → **Đồng ý một phần.** Nhóm thu hẹp bottleneck vào các trường hợp phần mềm chưa xử lý: tên hàng/đơn vị tính không khớp, giao hàng nhiều đợt, GRN là ảnh scan hoặc phiếu viết tay.
+- **AI (Claude):** "Baseline 6.0–7.5 phút/bộ và tỷ lệ ngoại lệ 20–30% đều là ước tính; chính mục 3.2 ghi chưa có bằng chứng bước này mất nhiều thời gian." → **Đồng ý.** Cần bấm giờ thật trên ít nhất 20 bộ chứng từ và đếm tỷ lệ bộ lệch trước khi chốt v1.
+- **AI (Claude):** "Metric (2) gộp chung một con số 95%. Với tiền, để lọt sai lệch (bỏ sót) tệ hơn nhiều so với báo nhầm; 95% nghĩa là cứ 20 lỗi lọt 1. Nên tách thành 2 chỉ số riêng." → **Đồng ý.** Xử lý ở Problem Statement v1 (mục 7).
+- **AI (Claude):** "Metric chỉ đo tốc độ. Nếu kế toán duyệt nhanh hơn nhưng không thực sự nhìn lại các bộ 'khớp' thì thời gian giảm mà rủi ro tăng." → **Đồng ý.** Cần thêm chỉ số chất lượng kiểm duyệt ở v1 (ví dụ: kiểm mẫu ngẫu nhiên các bộ đã duyệt).
 
 ---
 

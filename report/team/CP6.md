@@ -1,14 +1,14 @@
 # CP6 — Mức can thiệp, Problem Statement v1 và quyết định
 
-## 6. Mức can thiệp AI (CP6)
+Phụ trách: Nguyễn Hữu An.
 
-Đồng bộ với slide v3 (slide 4–8 và speaker notes) và PDF kịch bản (trang 3–6). Hữu An phụ trách CP6; Dương tổng hợp. Phương án, metric và quyết định dưới đây là đề xuất phân tích, chưa phải kết quả pilot hay quyết định cuối đã được nhóm xác nhận.
+## 6. Mức can thiệp AI (CP6)
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Giữ phân loại sơ bộ từ CP6: **mơ hồ thấp, phức tạp thấp** trong phạm vi tìm lại một bằng chứng ở paper đã đọc, có PDF gốc; không tìm paper mới hay tổng hợp nhiều nguồn. Đầu vào và thứ tự bước khá rõ, nhưng mở đúng trang chưa có nghĩa là hiểu đúng ngữ cảnh.
+Phân loại ban đầu là **mơ hồ thấp, phức tạp thấp** khi chỉ tìm lại một bằng chứng trong paper đã đọc và có PDF gốc. Đầu vào và thứ tự bước khá rõ; phần cần cân nhắc nằm ở việc bằng chứng có thật sự hỗ trợ nhận định trong đúng ngữ cảnh hay không.
 
-**[CẦN NHÓM XÁC NHẬN]** Slide không đưa ra phân loại ma trận thay thế. Quy trình có nhiều bước nối tiếp, nên cần giải thích lại tiêu chí “phức tạp thấp” theo worksheet; không dùng phân loại sơ bộ để khẳng định đã đánh giá xong.
+**Điểm cần làm rõ:** quy trình có 5 bước nối tiếp, trong khi worksheet dùng số bước và mức phối hợp để xét độ phức tạp. Nhóm cần rà lại cách xếp ô trước khi chốt phân loại.
 
 ### 6.2. So sánh 4 mức
 
@@ -58,7 +58,7 @@ Không bắt buộc với mức No AI. Nếu thử Workflow, cần làm rõ ngư
 
 ### 7.3. Tiêu chí đánh giá
 
-Chưa có kết quả. Các tiêu chí áp dụng cho No AI và dùng để so sánh nếu thử mức cao hơn; ngưỡng chất lượng cụ thể phải được nhóm chốt trước khi chạy.
+Dùng 5 tiêu chí dưới đây để đánh giá No AI và so sánh với mức cao hơn nếu thử tiếp. Ngưỡng chất lượng sẽ được chốt trước pilot.
 
 | # | Tiêu chí | Cách đo / đạt khi | Không đạt / cần ghi nhận |
 |---:|---|---|---|
@@ -85,34 +85,32 @@ Với yêu cầu không có đáp án, chấm riêng việc nhận ra thiếu c�
 | Target giảm ít nhất 30% | Mục tiêu thử nghiệm đề xuất, không phải kết quả |
 | Thời điểm, người thực hiện, người kiểm và ngưỡng chất lượng | [CẦN NHÓM XÁC NHẬN] trước khi chạy |
 
-Các số trong bản CP6 trước là dữ liệu mô phỏng do nguồn khai báo. Bản đồng bộ với slide/PDF không dùng bảng mô phỏng đó làm kết quả đánh giá hay cơ sở ra quyết định; nội dung cũ vẫn truy vết được trong lịch sử Git.
-
 ## 8. Quyết định (CP6)
 
 ### 8.1. Bốn rủi ro
 
-Đánh giá sơ bộ theo slide 7, ở phạm vi cân nhắc triển khai AI; chưa phải kết luận từ pilot hoặc đồng thuận cuối của nhóm.
+Đánh giá rủi ro khi cân nhắc triển khai AI:
 
 | Rủi ro | Câu hỏi | Mức độ | Lý do / bằng chứng hiện có |
 |---|---|---|---|
-| **Value** | Pain có thật và đủ đáng giải quyết không? | Cao | Chưa có kiểm chứng người dùng hay baseline, chưa biết ghi chú/Zotero đã đủ chưa. |
+| **Value** | Pain có thật và đủ đáng giải quyết không? | Cao | Đã trao đổi với 2 sinh viên nhưng chưa có log tác vụ, tần suất hay baseline để đánh giá mức độ pain; chưa biết ghi chú/Zotero đã đủ chưa. |
 | **Usability** | Người học có dùng và kiểm kết quả được không? | Trung bình | Công tạo ghi chú và kiểm lại có thể lớn; người học phải hiểu và giữ đúng ngữ cảnh. |
 | **Feasibility** | Có truy xuất được bằng chứng trong phạm vi dữ liệu không? | Trung bình | PDF scan, hình và bảng có thể khó tìm; chưa có thử nghiệm. Pilot ban đầu ưu tiên PDF tìm được văn bản, trường hợp khó kiểm thủ công hoặc ghi ngoài phạm vi. |
 | **Viability** | Quyền dùng tài liệu, chi phí và vận hành có phù hợp không? | Trung bình | Cần kiểm quyền sử dụng paper và tổng chi phí/công chuẩn bị; chưa có số đo để kết luận. |
 
 ### 8.2. Kết luận
 
-**Đề xuất: Not Yet — Chưa đủ bằng chứng để triển khai AI. [CẦN NHÓM XÁC NHẬN]** Quyết định này không ngăn việc kiểm chứng người dùng và thử quy trình No AI trước. Không ghi Go cho triển khai AI khi chưa có bằng chứng thực tế.
+**Đề xuất: Not Yet — Chưa đủ bằng chứng để triển khai AI.** Bước trước mắt là hoàn thiện kiểm chứng và thử No AI. Quyết định cuối sẽ được nhóm chốt sau khi xem kết quả.
 
-**Lý do:** chưa kiểm chứng pain với người dùng, chưa có baseline thực tế, và cần chứng minh No AI/Rule chưa đủ trước khi bổ sung AI. Khả năng được mô tả trong tài liệu công cụ chưa chứng minh hiệu quả cho tác vụ của nhóm.
+**Lý do:** trao đổi trải nghiệm với 2 bạn cùng lớp chưa cho biết mức độ tốn thời gian hay vị trí nghẽn thực tế. Chưa có baseline và phép so sánh cho thấy No AI/Rule không đủ; vì vậy chưa có căn cứ để triển khai AI.
 
-**Bước tiếp theo:** phỏng vấn/quan sát người phù hợp → đo baseline → thử No AI → đo kết quả. Pilot dự kiến gồm **10 yêu cầu từ 3 paper**, có yêu cầu không có đáp án; cách đo ở mục 7.4. Nếu còn bottleneck, thử Rule; nếu Rule đủ thì dừng ở đó, nếu chưa đủ mới cân nhắc Workflow để so sánh. Lịch và người thực hiện chưa được chốt, không mặc định pilot đã bắt đầu.
+**Bước tiếp theo:** bổ sung trường hợp cụ thể từ người đã trao đổi → quan sát và đo baseline → thử No AI → so sánh kết quả. Pilot dự kiến gồm **10 yêu cầu từ 3 paper**, có yêu cầu không có đáp án; cách đo ở mục 7.4. Nếu còn bottleneck, thử Rule; nếu Rule đủ thì dừng ở đó, nếu chưa đủ mới cân nhắc Workflow để so sánh. Lịch, người thực hiện và người kiểm nguồn sẽ được phân công trước pilot.
 
 **Ngưỡng dừng / điều kiện không nâng cấp:**
 
 - Nếu có một trích dẫn sai được chấp nhận, dừng dùng đầu ra AI và xem lại bước kiểm nguồn/ngữ cảnh trước khi thử tiếp.
 - Sau bộ pilot dự kiến, nếu tổng thời gian và chất lượng không tốt hơn phương án đơn giản, không nâng cấp lên AI; quay về No AI/Rule hoặc tìm thủ công, sửa quy trình rồi đo lại. Target giảm ít nhất 30% là mục tiêu thử No AI so với baseline, chưa phải kết quả đạt được.
-- Không coi pilot kết thúc nếu thiếu log, công chuẩn bị hoặc kiểm chất lượng; giữ Not Yet thay vì suy kết luận từ số liệu thiếu.
+- Chỉ đánh giá pilot khi đủ log tác vụ, thời gian chuẩn bị và kết quả kiểm chất lượng; nếu thiếu, tiếp tục giữ Not Yet.
 
 **Khi nào cân nhắc Go:** có pain thực tế và baseline đã đo, No AI/Rule chưa đủ, Workflow đem lại lợi ích về tổng công mà không giảm chất lượng, có người kiểm PDF và ngưỡng dừng. Nếu đạt, chỉ cân nhắc pilot AI nhỏ sau khi nhóm xác nhận; chưa phải Go triển khai rộng.
 
@@ -120,23 +118,23 @@ Các số trong bản CP6 trước là dữ liệu mô phỏng do nguồn khai b
 
 ## 9. Hạn chế và hướng tiếp theo
 
-### 9.1. Những điểm cần nhóm xác nhận
+### 9.1. Việc còn thiếu
 
-| Nội dung | Hiện có | Việc còn thiếu / cần xác nhận |
+| Nội dung | Hiện có | Cần bổ sung |
 |---|---|---|
-| Phản biện trực tiếp (C6) | Nhóm đã thảo luận chọn đề tài; cột câu hỏi ở mục 2.1 chưa được điền. | Mỗi thành viên bổ sung câu hỏi thật đã đặt/nhận và người hỏi; không dùng câu hỏi AI soạn làm biên bản thảo luận. |
-| Kiểm chứng người dùng (C7) | Assumption map, câu hỏi hành vi và research công cụ; chưa có phỏng vấn/survey. | [CHƯA KIỂM CHỨNG] Cần dữ liệu người thật, nguồn/cách thu thập, tín hiệu phản bác và ghi lại problem thay đổi thế nào sau kiểm chứng. |
-| Quy trình và baseline (C8, C9) | Có actor/input/output, bottleneck giả thuyết, HITL và fallback. | Quan sát quy trình thực tế, đo thời gian từng bước và công chuẩn bị; chưa đủ baseline để xác nhận target. |
-| Bộ eval và metric (C9) | Kế hoạch 10 yêu cầu/3 paper, target giảm ít nhất 30%, định nghĩa tốc độ và chất lượng. | Chuẩn bị yêu cầu/đáp án có nguồn, yêu cầu không có đáp án, log; chốt ngưỡng chất lượng và cách so sánh công bằng trước khi thử. |
-| Ma trận độ phức tạp (C10) | Giữ phân loại sơ bộ “mơ hồ thấp, phức tạp thấp” từ CP6; slide không nêu ô thay thế. | Giải thích theo worksheet vì quy trình có nhiều bước nối tiếp; chưa tự coi đây là phân loại cuối. |
-| Quyết định và pilot (C11) | Đồng bộ theo slide/PDF: Not Yet đối với triển khai AI, thử No AI trước; bốn rủi ro và ngưỡng dừng ở mục 8. | Hữu An và nhóm xác nhận quyết định, quy mô/target, lịch, người thử và người kiểm nguồn; không coi kế hoạch là pilot đã chạy. |
-| Tài liệu thuyết trình | Dùng slide v3 và PDF kịch bản làm bản ưu tiên để đồng bộ CP4–CP6. | Hai file được cung cấp riêng, chưa thay bản slide cũ trong repo. Khi chia sẻ/nộp bài cần dùng đúng phiên bản v3 và kịch bản tương ứng. |
+| Phản biện trực tiếp | Nhóm đã thảo luận chọn đề tài. | Câu hỏi thực sự đã đặt/nhận và người hỏi ở mục 2.1. |
+| Ghi chép phỏng vấn | Trao đổi trực tiếp với 2 sinh viên ngoài nhóm; ghi nhận việc dùng NotebookLM và lo ngại trích dẫn sai. | Ngày trao đổi, ghi nhận từng người, một tác vụ cụ thể và ví dụ đầu ra; tìm cả trường hợp cách hiện tại đã đủ dùng. |
+| Kinh nghiệm nội bộ | Thành viên nhóm dùng trải nghiệm bản thân để nêu và đối chiếu tình huống. | Ghi lại trường hợp cụ thể; giữ riêng với nguồn phỏng vấn ngoài nhóm. |
+| Quy trình và baseline | Có sơ đồ, actor/input/output, bước kiểm nguồn và fallback. | Quan sát thao tác thật, đo từng bước và công chuẩn bị. |
+| Bộ eval | Kế hoạch 10 yêu cầu/3 paper, target giảm ít nhất 30%, các thước đo tốc độ và chất lượng. | Yêu cầu/đáp án có nguồn, trường hợp không có đáp án, log thử và ngưỡng chất lượng. |
+| Ma trận độ phức tạp | Phân loại ban đầu là mơ hồ thấp, phức tạp thấp. | Rà lại cách áp dụng tiêu chí của worksheet cho quy trình 5 bước. |
+| Quyết định và pilot | Đề xuất Not Yet đối với triển khai AI, thử No AI trước. | Chốt quyết định, lịch, người thử và người kiểm PDF sau khi hoàn thiện dữ liệu. |
 
-### 9.2. Nguồn đồng bộ và sử dụng AI
+### 9.2. Nguồn và sử dụng AI
 
-- Nội dung ưu tiên: `nhom6-paper-evidence-6min-v3.pptx` (slide 2–7 và speaker notes) và `nhom6_kich_ban_thuyet_trinh_6_phut.pdf` (trang 2–6), do Dương cung cấp để đối chiếu. Slide 3 nêu trạng thái kiểm chứng; slide 5 mô tả pipeline; slide 6 nêu pilot/metric; slide 7 nêu rủi ro và Not Yet.
-- Bản này thay các mốc pilot, target và quyết định khác trong CP4–CP6 bằng đề xuất trong slide/PDF. Lịch sử bản trước được giữ trong Git; không dùng số mô phỏng làm kết quả thực nghiệm.
-- Có hỗ trợ AI khi tổng hợp research, dựng sơ đồ, đối chiếu nội dung và phản biện metric/boundary. Bản CP6 trước có số liệu mô phỏng do AI hỗ trợ tạo; bản đồng bộ chỉ giữ kế hoạch đo, chưa có kết quả. Nhóm phải tự kiểm quy trình, hiểu lập luận và chốt quyết định theo RULES.md.
+Nguồn nội dung gồm các báo cáo cá nhân, shortlist, tài liệu công cụ, ghi nhận trao đổi với 2 sinh viên ngoài nhóm và kinh nghiệm của thành viên nhóm. Phần thuyết trình dùng `nhom6-paper-evidence-6min-v3.pptx` cùng `nhom6_kich_ban_thuyet_trinh_6_phut.pdf`; hai file này hiện được cung cấp riêng ngoài repo.
+
+AI hỗ trợ tổng hợp tài liệu, soạn bản nháp slide/báo cáo, dựng sơ đồ và phản biện metric, boundary. Chi tiết sử dụng AI của Dương nằm trong báo cáo cá nhân, mục 5.
 
 ---
 
@@ -149,4 +147,4 @@ Các số trong bản CP6 trước là dữ liệu mô phỏng do nguồn khai b
 - [Elicit — Which workflow should I use?](https://support.elicit.com/en/articles/14757543-getting-started-with-elicit-which-workflow-should-i-use).
 - [Lewis và cộng sự (2020) — Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401).
 - [Adobe — Searching PDFs](https://helpx.adobe.com/acrobat/using/searching-pdfs.html).
-- Slide v3 và PDF kịch bản được cung cấp riêng: tên file và phần sử dụng ghi tại mục 9.2; không phải dữ liệu kiểm chứng người dùng.
+- Slide v3 và PDF kịch bản: tên file ghi tại mục 9.2.

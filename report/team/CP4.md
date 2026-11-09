@@ -1,10 +1,10 @@
 # CP4 — Kiểm chứng và research giải pháp đã có
 
-Phụ trách: Nguyễn Đức Khương Lam. Bản đồng bộ theo slide v3 và PDF kịch bản.
+Phụ trách: Nguyễn Đức Khương Lam.
 
 ## 3. Kiểm chứng + research giải pháp đã có (CP4)
 
-**[CHƯA KIỂM CHỨNG]** Nội dung đồng bộ với slide v3 (slide 2–3 và speaker notes) và PDF kịch bản (trang 2–3). Hiện có tình huống từ [Card #1 của Lam](../individual/2A202604020_NguyenDucKhuongLam.md) và research tài liệu công cụ; chưa có phỏng vấn, survey, baseline hay pilot thực nghiệm. Các số thời gian trong card không được dùng làm baseline.
+Nhóm đã trao đổi trực tiếp với 2 sinh viên cùng lớp, ngoài Nhóm 6, đồng thời tham khảo kinh nghiệm của các thành viên. Phần kiểm chứng hiện gồm lời kể trải nghiệm và research công cụ; chưa có số đo thời gian hoặc kết quả pilot. Tình huống ban đầu lấy từ [Card #1 của Lam](../individual/2A202604020_NguyenDucKhuongLam.md).
 
 ### 3.1. Assumption Map
 
@@ -22,33 +22,36 @@ Thang điểm: 1 = thấp, 5 = cao. Điểm dưới đây là đánh giá sơ b�
 
 ### 3.2. Kiểm chứng: interview/survey/evidence
 
-| Nội dung rà soát | Ghi nhận hiện có | Trạng thái |
+Tổng hợp trao đổi trực tiếp với 2 sinh viên cùng lớp, ngoài Nhóm 6:
+
+| Nội dung | Ghi nhận |
+|---|---|
+| Người được hỏi | 2 sinh viên cùng lớp, ngoài Nhóm 6. |
+| Cách thu thập | Trao đổi trực tiếp về trải nghiệm dùng công cụ khi đọc paper và trích dẫn. |
+| Thời điểm | Chưa ghi ngày trao đổi trong bản tổng hợp. |
+| Cách làm được kể lại | Các bạn thường dùng NotebookLM. |
+| Khó khăn được nêu | Lo công cụ có thể bịa hoặc đưa trích dẫn không đúng khi cố tìm dẫn chứng. |
+| Giới hạn ghi nhận | Bản tổng hợp chưa có ví dụ lỗi, ghi nhận từng người hoặc log thao tác; chưa đo thời gian. Hiện ghi nhận mối lo về trích dẫn sai, chưa xác định một lỗi cụ thể. |
+
+| Nguồn | Tín hiệu hiện có | Điều cần làm rõ |
 |---|---|---|
-| Actor / bối cảnh | Sinh viên đang đọc và tổng hợp paper nghiên cứu, cần kiểm tra lại nhận định từ paper đã đọc khi viết bảng so sánh hoặc trả lời nhóm/mentor. | Tình huống minh họa từ card; chưa phải người được phỏng vấn. |
-| Quy trình / workaround | Ghi chú → xác định paper → dò PDF → đọc ngữ cảnh → lưu vị trí nguồn. | Quy trình giả thuyết, cần quan sát lại. |
-| Thời gian / tần suất | Chưa có baseline thực nghiệm hoặc log từng bước. | [CẦN ĐO]; không sử dụng các mốc giả định trong card như số đo thật. |
-| Opportunity | Từ nhận định đã ghi, tìm lại đúng bằng chứng và giữ ngữ cảnh khi sử dụng. | Cần kiểm chứng nhu cầu và mức độ pain. |
+| Trao đổi với 2 sinh viên ngoài nhóm | Người được hỏi thường dùng NotebookLM nhưng chưa yên tâm khi lấy trích dẫn. | Xin một lần tìm dẫn chứng gần nhất, yêu cầu đã hỏi, đầu ra và cách người học kiểm nguồn; tìm cả trường hợp công cụ hoặc cách thủ công đã đủ dùng. |
+| Kinh nghiệm của thành viên Nhóm 6 | Được dùng để nêu tình huống và đối chiếu cách làm. | Chưa có ghi chép riêng trong báo cáo; không tính thành viên nhóm vào 2 người được phỏng vấn ngoài nhóm. |
+| Problem Card #1 | Nêu giả thuyết ghi chú thiếu vị trí nguồn khiến sinh viên phải dò lại PDF. | Chưa xác nhận dò PDF là bước lâu nhất; các mốc thời gian trong card vẫn là giả định. |
+| Research Zotero, Elicit và RAG | Có các cách hỗ trợ lưu nguồn, tìm thông tin và gợi ý bằng chứng. | Khả năng công cụ không thay thế phép đo trên tác vụ thực tế; cần thử xem ghi chú có nguồn/Zotero đã đủ chưa. |
 
-**Kế hoạch kiểm chứng, chưa thực hiện:** hỏi và quan sát 2–3 người ngoài nhóm có trải nghiệm phù hợp về lần tìm bằng chứng gần nhất; xem ghi chú và PDF thật, đo từng bước và tìm cả tín hiệu phản bác. Ghi Interview Snapshot theo vai trò, thời điểm và cách thu thập, không đưa thông tin cá nhân lên repo.
+**Ảnh hưởng đến bản đề xuất:** ghi nhận phỏng vấn cho thấy cần kiểm độ tin cậy của dẫn chứng, bên cạnh thời gian tìm. Vì vậy, quy trình giữ bước mở PDF gốc và đánh giá riêng vị trí nguồn với ngữ cảnh. Chưa đủ thông tin để kết luận nguyên nhân chính là ghi chú thiếu vị trí hay công cụ gợi ý sai.
 
-**Câu hỏi kiểm chứng hành vi:**
+**Câu hỏi cho lượt trao đổi tiếp theo:**
 
-1. Lần gần nhất cần tìm lại bằng chứng để viết bảng so sánh hoặc trả lời mentor là khi nào? Hãy mở ghi chú và PDF đã dùng, kể lại từng bước.
-2. Khi đó ghi chú có trang, số hình/bảng hoặc liên kết không? Bước nào mất lâu nhất, có lịch sử thao tác hay ghi nhận thời gian không?
-3. Trong tuần gần nhất đã tìm lại bao nhiêu lần? Lần nào tìm nhanh hoặc không tìm được, khác nhau ở điểm gì?
-4. Đã dùng annotation hoặc liên kết PDF lần nào? Hãy chỉ một ghi chú cụ thể và cách kiểm tra bằng chứng có thực sự hỗ trợ nhận định.
-
-| Nguồn | Số người / số mẫu | Tín hiệu hiện có | Tín hiệu phản bác / cần kiểm tra |
-|---|---|---|---|
-| Problem Card #1 | 1 card minh họa; chưa có mẫu phỏng vấn/survey | Nêu giả thuyết ghi chú thiếu vị trí nguồn và phải dò lại PDF. | Không chứng minh pain phổ biến, tần suất hay thời gian thực tế; chưa biết dò PDF có thật là bước nghẽn. |
-| Tài liệu Zotero ở mục 3.3 | Tài liệu công cụ; không phải mẫu người dùng | Có tính năng ghi chú/annotation liên kết về PDF. | Có thể đã đủ giải quyết pain mà không cần AI; chưa có thử nghiệm hiệu quả với tác vụ của nhóm. |
-| Elicit và bài RAG ở mục 3.3 | Nguồn mô tả công cụ/pattern; không phải thử nghiệm của nhóm | Có hướng hỗ trợ truy xuất và làm việc với paper. | Khả năng công cụ không chứng minh trích dẫn, ngữ cảnh hoặc hình/bảng của nhóm sẽ chính xác. |
-
-**Điều chỉnh sau rà soát tài liệu:** ưu tiên kiểm tra Zotero và ghi chú có nguồn đã đủ chưa. Chưa có kết quả người dùng để khẳng định giả thuyết hoặc sửa problem theo phỏng vấn.
+1. Lần gần nhất cần tìm lại bằng chứng là khi nào? Có thể mở yêu cầu đã hỏi, ghi chú và PDF để kể lại từng bước không?
+2. Đã gặp một trích dẫn sai cụ thể hay đang lo nguy cơ sai? Khi đó đã kiểm và xử lý thế nào?
+3. Bước nào tốn công nhất: tìm paper, định vị đoạn/hình/bảng hay đọc lại ngữ cảnh? Có thể quan sát và bấm giờ một lượt không?
+4. Có lần nào ghi chú, Zotero hoặc tìm từ khóa đã đủ đáp ứng không? Điều gì khác với lần gặp khó?
 
 ### 3.3. Research giải pháp đã có
 
-Bảng dùng các nguồn đã được liệt kê và đối chiếu trong slide v3. Đây là research khả năng công cụ, chưa phải kết quả triển khai hay đánh giá của nhóm.
+Nhóm tham khảo các công cụ và pattern dưới đây để xác định phần đã có thể giải quyết bằng công cụ sẵn có. Hiệu quả với tác vụ của nhóm sẽ được đo trong pilot.
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|

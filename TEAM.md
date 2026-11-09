@@ -19,14 +19,14 @@
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
-Phân công theo thông tin Dương xác nhận. Việc phân công kiểm chứng không có nghĩa phỏng vấn hoặc survey đã được thực hiện; trạng thái dữ liệu được ghi trong báo cáo nhóm.
+Phần kiểm chứng có trao đổi trực tiếp với 2 bạn cùng lớp ngoài Nhóm 6 và tham khảo kinh nghiệm nội bộ. Ghi nhận chi tiết nằm ở CP4 trong báo cáo nhóm.
 
 ## Phân công theo checkpoint
 
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
 | CP3 — Hội tụ nhóm | Cả bốn thành viên | Dương điều phối và tổng hợp | [Pitch, cluster, OST và shortlist](report/team/group_report.md#2-hội-tụ-nhóm-cp3) |
-| CP4 — Kiểm chứng | Nguyễn Đức Khương Lam | Dương tổng hợp tài liệu | [Assumption map và kế hoạch kiểm chứng](report/team/group_report.md#3-kiểm-chứng--research-giải-pháp-đã-có-cp4); chưa có mẫu phỏng vấn/survey thật |
+| CP4 — Kiểm chứng | Nguyễn Đức Khương Lam | Dương tổng hợp tài liệu | [Assumption map và ghi nhận trao đổi với 2 sinh viên ngoài nhóm](report/team/group_report.md#3-kiểm-chứng--research-giải-pháp-đã-có-cp4) |
 | CP4 — Research | Nguyễn Đức Khương Lam | Dương tổng hợp nguồn | [Research giải pháp đã có](report/team/group_report.md#33-research-giải-pháp-đã-có) |
 | CP5 — Quy trình trước/sau | Đồng Hữu Nguyên Khoa | Dương tích hợp báo cáo | [Quy trình và before/after](report/team/group_report.md#4-quy-trình-trướcsau-cp5) |
 | CP5 — Problem Statement v0 | Đồng Hữu Nguyên Khoa | Dương tích hợp báo cáo | [Problem Statement v0](report/team/group_report.md#5-problem-statement-v0-cp5) |
@@ -49,7 +49,7 @@ Mỗi thành viên tự ghi đóng góp và điều mình học được. Ba th�
 - Thảo luận với tất cả thành viên, đối chiếu các phương án để chọn top 3 và đề tài tìm lại bằng chứng trong paper.
 - Tổng hợp candidate từ bốn báo cáo, chuẩn bị bảng truy vết, cluster và OST có hỗ trợ AI để nhóm rà soát.
 - Gom nội dung CP4, CP5, CP6 vào đúng cấu trúc báo cáo; giữ rõ dữ liệu giả định, mô phỏng và phần cần kiểm chứng.
-- Chuẩn bị slide, yêu cầu chỉnh cách kể chuyện, sơ đồ quy trình, speaker notes và phần hỏi đáp.
+- Chuẩn bị slide, sơ đồ quy trình, speaker notes và phần hỏi đáp; đối chiếu với báo cáo nhóm.
 
 **Bằng chứng** (phần nào trong báo cáo, file hoặc commit):
 

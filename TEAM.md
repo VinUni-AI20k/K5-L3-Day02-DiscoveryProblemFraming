@@ -3,14 +3,14 @@
 ## Thông tin nhóm
 
 - Tên nhóm: HEHEHE
-- Candidate problem nhóm chọn (1 câu): Kỹ sư trực ca vận hành mất 90–120 phút mỗi sự cố để lần mò thủ công qua hàng chục nguồn log rời rạc và không thể cô lập kịp thời bất thường ngoài giờ, đặc biệt ban đêm.
-- Quyết định cuối (Go / Not Yet / No-Go): *Chốt sau CP6*
+- Candidate problem nhóm chọn (1 câu): Kỹ sư trực ca vận hành mất 90-120 phút mỗi sự cố để lần mò thủ công qua hàng chục nguồn log rời rạc và thiếu cơ chế AI tự chủ có kiểm soát (Agentic AI phân quyền theo cột mốc `Confidence Score` kết hợp `HITL`) để vừa cô lập tức thì bất thường rõ bằng chứng vào ban đêm vừa giữ lại ca nhạy cảm chờ con người duyệt.
+- Quyết định cuối (Go / Not Yet / No-Go): *Chốt sau CP6 (Định hướng: Go thử nghiệm Pilot có điều kiện với Agentic AI + Confidence Score + HITL, bắt đầu từ tầng cổng Nginx)*
 
 ## Thành viên
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | Bùi Đặng Nhật Nguyên | 2A202603937 | Owner problem, Domain expert — vẽ quy trình, AI Canvas, so sánh 4 mức AI | *(tự cập nhật)* |
+| 1 | Bùi Đặng Nhật Nguyên | 2A202603937 | Owner problem, Domain expert - vẽ quy trình, thiết kế khung quản trị Agentic AI (`Confidence Score` + `HITL`), AI Canvas, so sánh 4 mức AI | double-n-021 |
 | 2 | Đỗ Hoàng Vũ | 2A202603920 | Kiểm chứng (phỏng vấn), điều phối, quản trị repo | hoangvu1806 |
 | 3 | Trần Gia Bảo | 2A202603914 | Người viết — Problem Statement v0 và v1, 3–5 tiêu chí đánh giá | *(tự cập nhật)* |
 | 4 | Trần Thị Hà Anh | 2A202603887 | Research + Quyết định — bảng công cụ có link, 4 rủi ro, ngưỡng dừng | *(tự cập nhật)* |
@@ -50,25 +50,29 @@ Không ghi email hay số điện thoại vào bảng này, vì repo có thể �
 
 Mỗi thành viên tự điền mục của mình.
 
-### Bùi Đặng Nhật Nguyên — 2A202603937
+### Bùi Đặng Nhật Nguyên - 2A202603937
 
 **Phần việc phụ trách:**
 
 - Owner problem, domain expert vận hành hạ tầng và log đa tầng
-- CP5 vẽ quy trình hiện tại và tương lai (Mermaid)
-- CP6 ma trận mơ hồ×phức tạp, bảng so sánh 4 mức AI, AI Canvas, 2 câu PAIR
+- CP3 dẫn pitch bài toán giám sát đa nguồn log và thiết kế Agentic AI có kiểm soát (`Bounded Autonomy`)
+- CP5 vẽ quy trình hiện tại (6 bước thủ công) và quy trình tương lai (Mermaid: `Rule` lọc nhiễu -> `Agent` tự chủ điều tra -> phân nhánh theo `Confidence Score` và `HITL` -> `Self-Check & Rollback`), bảng so sánh Before/After
+- CP6 lập ma trận mơ hồ x phức tạp, bảng so sánh 4 mức AI (lập luận vì sao `Workflow` không đủ), AI Canvas, trả lời 2 câu hỏi Google PAIR
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
--
+- Hoàn thành báo cáo cá nhân CP1 (8 vấn đề vận hành log đa tầng) và CP2 (3 Problem Cards kết nối thành vòng khép kín: màng lọc nhiễu chu kỳ, Agent tự chủ theo `Confidence Score`, và nhánh bàn giao bằng chứng `HITL`).
+- Xây dựng mục 4 (Quy trình trước/sau CP5) và mục 6 (Mức can thiệp AI CP6) trong báo cáo nhóm kèm tài liệu phân tích chi tiết: thiết kế cơ chế phân quyền 3 cột mốc `Confidence Score` (`< 60%` theo dõi, `60% - < 85%` chuyển `HITL`, `>= 85%` tự thực thi kịch bản cục bộ an toàn kèm nút Hoàn tác 1 chạm) và giải đáp các câu hỏi chuyên môn hạ tầng cho nhóm.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
--
+- Báo cáo cá nhân: `report/individual/2A202603937_BuiDangNhatNguyen.md` (commit `ae0c87c`, `2659d78`).
+- Báo cáo nhóm: Mục 1, Mục 2 (`2.1 -> 2.4` - CP3), Mục 3 (`3.1 Assumption Map`, `3.3 Research` - CP4), Mục 4 (`4.1 -> 4.3` - CP5) và Mục 6 (`6.1 -> 6.4` - CP6) trong `report/team/group_report.md`.
+- Tài liệu thiết kế chuyên môn và bộ câu hỏi phỏng vấn domain: `report/assets/2A202603937_cp5_cp6_workflow_and_ai_level.md`, `report/assets/cp4-survey-cauhoi.md`.
 
 **Điều mình học được từ phần nhóm:**
 
--
+- Khi chuyển từ ý tưởng cá nhân sang bài toán nhóm, mình nhận ra muốn đưa Agentic AI vào vận hành hạ tầng thực tế thì không thể chỉ nói "cho AI tự chặn", mà phải định nghĩa rõ ranh giới tự chủ (`Bounded Autonomy`): tách bạch thời gian phát hiện trễ với thời gian điều tra, tính `Confidence Score` từ tín hiệu kỹ thuật độc lập thay vì để LLM tự đoán, khóa hành động trong kịch bản tham số hóa có sẵn (Parameterized Runbook) và luôn giữ chốt chặn `HITL` cho các dịch vụ cốt lõi.
 
 ### Đỗ Hoàng Vũ — 2A202603920
 

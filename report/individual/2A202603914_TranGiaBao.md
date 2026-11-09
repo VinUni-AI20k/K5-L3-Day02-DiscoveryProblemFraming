@@ -16,22 +16,22 @@
 
 ## 2. Scan problem (CP1)
 
-Tôi chọn quan sát các công việc thường gặp khi nhận dự án website, làm rõ yêu cầu, phát triển và kiểm thử. Các mốc thời gian chưa có dữ liệu đo được sẽ ghi rõ là cần bổ sung thay vì ước lượng thành số liệu thực tế.
+**Chủ đề khảo sát:** Ghi nhận, theo dõi và phân tích lỗi chất lượng trong xưởng sản xuất (Manufacturing Quality Control). Các vấn đề dưới đây là những tình huống cần xác minh với nhân viên QC, tổ trưởng hoặc quản lý xưởng. Chưa có kết quả phỏng vấn nên không coi chúng là những sự việc đã xảy ra tại một doanh nghiệp cụ thể.
 
 | # | Lăng kính | Job Story | Ai chịu ảnh hưởng? | Dấu hiệu thật |
 |---:|---|---|---|---|
-| 1 | Lặp lại | Khi khách gửi phản hồi sau mỗi lần demo website, tôi muốn tổng hợp các yêu cầu theo từng lần chỉnh sửa, để không bỏ sót lúc bàn giao. | Developer, khách hàng | Có công việc nhận feedback và sửa website trong dự án freelance; **cần đối chiếu** số lần/tuần và phút tổng hợp từ dự án cụ thể. |
-| 2 | Tốn thời gian | Khi nhận brief website chưa rõ nghiệp vụ, tôi muốn xác định các yêu cầu còn thiếu trước khi báo giá, để tránh hiểu sai phạm vi. | Freelancer, khách hàng | Có công việc trao đổi yêu cầu và báo giá dự án; **cần đối chiếu** số lần phải hỏi lại và thời gian. |
-| 3 | Đọc, tổng hợp nhiều thông tin | Khi kiểm thử một web app có nhiều vai trò người dùng, tôi muốn xác định đủ bước tái hiện lỗi và kết quả mong đợi, để người sửa có thể kiểm tra lại. | Tester, developer | Có bối cảnh kiểm thử web app; **cần đối chiếu** ticket/ảnh/video và thời gian lập báo cáo lỗi. |
-| 4 | Pain từ người khác | Khi khách hỏi tiến độ dự án, tôi muốn có thông tin cập nhật theo từng hạng mục, để trả lời chính xác mà không phải kiểm lại mọi thay đổi. | Khách hàng, developer | Có công việc báo cáo tiến độ dự án; **cần đếm** số lần khách hỏi cập nhật từ tin nhắn thực tế. |
-| 5 | Lặp lại | Khi nhận thông báo một lỗi đã sửa, tôi muốn biết những trường hợp cần kiểm tra lại, để không bỏ sót lỗi cũ sau mỗi lần cập nhật. | Tester, developer | Có công việc retest sau khi fix; **cần đo** số vòng retest và số ticket mở lại. |
-| 6 | Tốn thời gian | Khi phải bàn giao website cho khách, tôi muốn có checklist các chức năng và tài khoản cần bàn giao, để tránh phải bổ sung nhiều lần. | Developer, khách hàng | [Kiểm tra các lần bàn giao, số đầu mục thiếu và thời gian bổ sung.] |
-| 7 | Đọc, tổng hợp nhiều thông tin | Khi dự án thay đổi phạm vi giữa chừng, tôi muốn đối chiếu yêu cầu mới với phần việc đã thống nhất, để xác định đâu là chỉnh sửa và đâu là phát sinh. | Freelancer, PM, khách hàng | [Tìm phiên bản brief/hợp đồng và số lần thay đổi phạm vi thực tế.] |
-| 8 | Pain từ người khác | Khi developer nhận bug report, họ muốn có đủ môi trường, bước thao tác và bằng chứng, để không phải hỏi lại tester. | Developer, tester | [Đếm các ticket từng bị yêu cầu bổ sung thông tin.] |
+| 1 | Lặp lại | Khi kiểm tra một lô sản phẩm, tôi muốn ghi nhận lỗi theo cùng một quy chuẩn, để người ở ca sau hiểu đúng loại lỗi đã phát hiện. | Nhân viên QC | Cần đối chiếu 10 phiếu QC: số phiếu dùng tên lỗi khác nhau, số phút chỉnh lại thông tin. |
+| 2 | Tốn thời gian | Khi cần lập báo cáo chất lượng cuối ca, tôi muốn tổng hợp kết quả kiểm tra nhanh và đúng, để bàn giao kịp thời cho tổ trưởng. | QC, tổ trưởng | Cần bấm giờ từ lúc nhận phiếu đến khi xong báo cáo; số báo cáo/tuần. |
+| 3 | Đọc, tổng hợp nhiều thông tin | Khi một mã lỗi xuất hiện liên tiếp, tôi muốn tìm được các lô, máy và ca có cùng lỗi, để khoanh vùng phạm vi cần kiểm tra. | Quản lý chất lượng | Cần ghi nhận thời gian tra cứu, số file/sổ phải mở và số lần truy xuất. |
+| 4 | Pain từ người khác | Khi tổ trưởng nhận báo cáo lỗi, tôi muốn biết lỗi nào cần xử lý trước, để không phải hỏi lại QC về mức độ ảnh hưởng. | Tổ trưởng, QC | Cần hỏi tổ trưởng lần gần nhất phải làm rõ báo cáo; ghi số câu hỏi lại. |
+| 5 | Lặp lại | Khi chuyển ca, tôi muốn bàn giao rõ các lô đang chờ kiểm tra lại, để ca tiếp theo không xử lý trùng hoặc bỏ sót. | QC hai ca | Cần kiểm tra biên bản bàn giao và số lô bị thiếu trạng thái. |
+| 6 | Tốn thời gian | Khi phát hiện sản phẩm không đạt, tôi muốn truy lại được lô nguyên liệu liên quan, để xác định những sản phẩm khác cần kiểm tra. | QC, kho nguyên liệu | Cần đo thời gian tra lô và tỷ lệ hồ sơ thiếu mã truy xuất. |
+| 7 | Đọc, tổng hợp nhiều thông tin | Khi họp chất lượng hàng tuần, tôi muốn nhìn thấy tỷ lệ lỗi theo lô, công đoạn và ca sản xuất, để có cơ sở chọn vấn đề cần điều tra. | Quản lý xưởng | Cần đối chiếu cách tổng hợp hiện tại, số bảng dữ liệu và phút làm báo cáo. |
+| 8 | Pain từ người khác | Khi một lô hàng bị cách ly do lỗi, tôi muốn được cập nhật kết luận kiểm tra và người phê duyệt, để không xuất nhầm hàng chưa đạt. | Nhân viên kho, QC | Cần kiểm tra số lần hỏi trạng thái và số phiếu thiếu kết luận/phê duyệt. |
 
-**Cách chọn:** Tôi ưu tiên những vấn đề có quy trình rõ và có thể đo bằng thời gian xử lý, số lượt hỏi lại hoặc số ticket. Các dòng #6–#8 là hướng mở rộng, chỉ giữ nếu tìm được tình huống thực tế tương ứng.
+**Ý cần kiểm chứng trước:** #2, #3 và #5 vì có quy trình dễ quan sát, bottleneck cụ thể và có thể đo bằng phút hoặc số hồ sơ thiếu thông tin. Các chỉ số trong cột cuối là kế hoạch thu thập bằng chứng, chưa phải số liệu khảo sát.
 
-**Sử dụng công cụ hỗ trợ:** Tôi đã dùng AI để kiểm tra cách diễn đạt Job Story và phản biện danh sách. Chưa xem các gợi ý chưa kiểm chứng là bằng chứng thực tế. Ý tưởng xây một hệ thống tự quản lý toàn bộ dự án không được đưa vào danh sách vì đó là giải pháp quá rộng, không phải một pain cụ thể.
+**Ghi nhận sử dụng AI:** Tôi sử dụng AI để sắp xếp các tình huống thành Job Story và kiểm tra xem có mô tả nhầm giải pháp thành vấn đề không. Chưa có cơ sở để khẳng định các tình huống trên xuất hiện thường xuyên trong một xưởng cụ thể; cần xác minh trực tiếp.
 
 ---
 
@@ -39,100 +39,91 @@ Tôi chọn quan sát các công việc thường gặp khi nhận dự án webs
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | Tổng hợp phản hồi chỉnh sửa website (#1) | Có actor, điểm bắt đầu/kết thúc rõ và có thể đối chiếu task thực tế | Mất bao lâu mỗi lần tổng hợp? Bao nhiêu feedback bị bỏ sót? |
-| 2 | Làm rõ brief trước báo giá (#2) | Liên quan trực tiếp đến phạm vi công việc và trao đổi với khách | Thời gian chậm do thiếu brief hay do chờ phản hồi? |
-| 3 | Viết bug report khi kiểm thử (#3) | Có đầu ra rõ là ticket với bước tái hiện và bằng chứng | Bước tái hiện hay bước viết ticket mới tốn thời gian nhất? |
+| 1 | Truy tìm các lô và ca có cùng mã lỗi (#3) | Có thể đo thời gian truy xuất và số hồ sơ cần đọc; phù hợp để thu hẹp bài toán | Doanh nghiệp đã có MES hoặc báo cáo lọc theo mã lỗi chưa? |
+| 2 | Tổng hợp báo cáo chất lượng cuối ca (#2) | Công việc có đầu ra rõ, dễ so sánh trước/sau | Bước nhập dữ liệu hay kiểm số liệu mới tốn nhiều thời gian? |
+| 3 | Bàn giao lô đang chờ kiểm tra lại (#5) | Liên quan trực tiếp tới phối hợp giữa hai ca, có phương án không cần AI | Thực tế có bị bỏ sót không, hay quy trình hiện tại đã đủ? |
 
-### Problem Card #1 — Tổng hợp phản hồi chỉnh sửa website
+### Problem Card #1 — Truy xuất lịch sử lỗi theo lô, máy và ca sản xuất
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi khách gửi nhiều đợt feedback sau demo, tôi muốn theo dõi yêu cầu và trạng thái xử lý ở một nơi, để không bỏ sót hạng mục khi bàn giao. |
-| Actor | Freelancer developer trực tiếp nhận yêu cầu và sửa website |
-| Thời điểm / bối cảnh | Sau mỗi lần gửi bản demo cho khách xem và góp ý |
-| Quy trình hiện tại | 1. Nhận phản hồi · 2. Đọc và tách từng yêu cầu · 3. Đối chiếu với feedback cũ · 4. Ghi đầu việc · 5. Chỉnh sửa website · 6. Kiểm tra và gửi khách xác nhận |
-| Bottleneck | Bước 3 — đối chiếu phản hồi mới với các yêu cầu trước đó; **chưa có thời gian đo** |
-| Impact | Có nguy cơ bỏ sót hoặc làm trùng yêu cầu, cần trao đổi lại trước bàn giao |
-| Success metric | Baseline: [phút tổng hợp/đợt, số feedback sót]; target đề xuất: giảm ít nhất 25% thời gian mà số feedback sót không tăng; đo trên ít nhất 5 đợt chỉnh sửa tương đương |
-| Phương án không dùng AI | Dùng một bảng task chung, đánh mã từng yêu cầu và cập nhật trạng thái |
-| Giả thuyết về AI | Hỗ trợ tách yêu cầu từ đoạn phản hồi đã nhập và gợi ý các yêu cầu trùng; developer vẫn xác nhận |
-| Cảm nhận nhanh | Rule trước; Workflow chỉ khi cách thủ công vẫn mất nhiều thời gian |
+| Job Story | Khi một loại lỗi xuất hiện nhiều lần, tôi muốn biết những lô, máy và ca nào có lỗi tương tự, để xác định phạm vi cần kiểm tra. |
+| Actor | Nhân viên quản lý chất lượng hoặc kỹ sư QC ở xưởng sản xuất |
+| Thời điểm / bối cảnh | Khi QC báo phát hiện mã lỗi lặp lại hoặc trước cuộc họp xử lý lỗi |
+| Quy trình hiện tại | 1. Nhận mã lỗi · 2. Mở sổ/file kiểm tra · 3. Lọc các bản ghi liên quan · 4. Đối chiếu lô, máy, ca · 5. Tổng hợp kết quả · 6. Gửi quản lý |
+| Bottleneck | Bước 3–4: tìm và đối chiếu bản ghi từ nhiều nguồn; thời gian thực tế: **[cần đo]** |
+| Impact | Có thể chậm khoanh vùng lô liên quan hoặc bỏ sót bản ghi cần kiểm tra |
+| Success metric | Baseline: [phút/lần truy xuất, tỷ lệ tìm đúng]; target **đề xuất**: giảm 30% thời gian, không giảm độ đầy đủ; đo cùng 10 tình huống truy xuất |
+| Phương án không dùng AI | Chuẩn hóa bảng ghi QC, dùng bộ lọc theo mã lỗi/lô/máy/ca và bảng tổng hợp |
+| Giả thuyết về AI | Chỉ dùng khi mô tả lỗi bằng ngôn ngữ tự do không thống nhất, hỗ trợ đề xuất mã lỗi tương ứng để QC duyệt |
+| Cảm nhận nhanh | Rule trước, Workflow nếu dữ liệu mô tả tự do khiến Rule không đủ |
 
 ```text
-HIỆN TẠI — tổng thời gian chưa đo
-
-[1 Nhận feedback: ?'] → [2 Tách yêu cầu: ?']
-→ [3 Đối chiếu yêu cầu cũ: ?']  ← BOTTLENECK CẦN KIỂM CHỨNG
-→ [4 Ghi task: ?'] → [5 Chỉnh sửa: ?']
-→ [6 Kiểm tra và xác nhận: ?']
+HIỆN TẠI — thời gian từng bước cần khảo sát
+[1 Nhận mã lỗi: ?'] → [2 Mở hồ sơ: ?']
+→ [3 Tìm bản ghi: ?'] → [4 Đối chiếu lô/máy/ca: ?']  ← NGHI VẤN BOTTLENECK
+→ [5 Tổng hợp: ?'] → [6 Gửi quản lý: ?']
 ```
 
-### Problem Card #2 — Làm rõ brief trước báo giá
+### Problem Card #2 — Lập báo cáo chất lượng cuối ca
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi brief dự án chưa đủ thông tin, tôi muốn làm rõ các luồng nghiệp vụ và phạm vi cần xây dựng, để ước lượng công việc và báo giá phù hợp. |
-| Actor | Freelancer developer phụ trách trao đổi yêu cầu và báo giá |
-| Thời điểm / bối cảnh | Khi nhận dự án mới, trước khi chốt báo giá và hợp đồng |
-| Quy trình hiện tại | 1. Nhận brief · 2. Đọc và phân tích · 3. Ghi lại yêu cầu chưa rõ · 4. Hỏi khách · 5. Xác nhận phạm vi · 6. Ước lượng và báo giá |
-| Bottleneck | Bước 3 — xác định thông tin còn thiếu; thời gian chờ khách ở bước 4 phải đo riêng |
-| Impact | Báo giá có thể thiếu hạng mục, phải sửa nhiều lần hoặc phát sinh tranh luận khi triển khai |
-| Success metric | Baseline: [phút phân tích/brief, lượt hỏi lại]; target đề xuất: giảm 20% thời gian phân tích mà số yêu cầu bị hiểu sai không tăng; đo từ ít nhất 3 brief |
-| Phương án không dùng AI | Checklist discovery theo loại dự án, mẫu brief bắt buộc xác nhận |
-| Giả thuyết về AI | Đánh dấu các câu mơ hồ, gợi ý câu hỏi làm rõ; không tự quyết định phạm vi |
-| Cảm nhận nhanh | No AI / Rule; cân nhắc Workflow nếu brief đa dạng và quá nhiều thông tin |
+| Job Story | Khi kết thúc ca sản xuất, tôi muốn tổng hợp số lượng kiểm tra, loại lỗi và số lượng không đạt, để tổ trưởng có báo cáo chính xác trước khi bàn giao. |
+| Actor | Nhân viên QC phụ trách báo cáo cuối ca |
+| Thời điểm / bối cảnh | Cuối mỗi ca, khi số liệu nằm trong các phiếu kiểm tra hoặc file riêng |
+| Quy trình hiện tại | 1. Thu phiếu · 2. Kiểm tra thông tin thiếu · 3. Nhập/tổng hợp số liệu · 4. Đối chiếu tổng · 5. Làm báo cáo · 6. Gửi tổ trưởng |
+| Bottleneck | Bước 3: nhập và cộng gộp số liệu; thời gian thực tế: **[cần đo]** |
+| Impact | Có thể gửi báo cáo muộn hoặc sai tỷ lệ lỗi nếu nhập liệu không nhất quán |
+| Success metric | Baseline: [phút/báo cáo, số lỗi nhập liệu]; target **đề xuất**: giảm 30% thời gian và không tăng sai số; đo trên 10 báo cáo |
+| Phương án không dùng AI | Mẫu Excel chuẩn với dropdown mã lỗi, validation và công thức tổng hợp |
+| Giả thuyết về AI | Đọc mô tả lỗi tự do hoặc phiếu scan để hỗ trợ nhập dữ liệu, người dùng kiểm lại |
+| Cảm nhận nhanh | No AI / Rule có thể đã đủ |
 
 ```text
-HIỆN TẠI — tách thời gian làm và thời gian chờ
-
-[1 Nhận brief: ?'] → [2 Phân tích: ?']
-→ [3 Tìm yêu cầu thiếu: ?']  ← BOTTLENECK CẦN KIỂM CHỨNG
-→ [4 Gửi câu hỏi/chờ phản hồi: ? giờ]
-→ [5 Xác nhận phạm vi: ?'] → [6 Lập báo giá: ?']
+HIỆN TẠI — thời gian từng bước cần khảo sát
+[1 Thu phiếu: ?'] → [2 Kiểm tra: ?']
+→ [3 Nhập/tổng hợp: ?']  ← NGHI VẤN BOTTLENECK
+→ [4 Đối chiếu: ?'] → [5 Tạo báo cáo: ?'] → [6 Gửi: ?']
 ```
 
-### Problem Card #3 — Viết bug report và tái kiểm thử
+### Problem Card #3 — Bàn giao lô hàng cần kiểm tra lại giữa các ca
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi phát hiện lỗi trên web app, tôi muốn ghi lại các bước tái hiện và bằng chứng rõ ràng, để developer sửa đúng lỗi và tester kiểm tra lại được. |
-| Actor | Manual tester/QA kiểm thử chức năng web app |
-| Thời điểm / bối cảnh | Khi kiểm thử trước bàn giao và sau các đợt sửa lỗi |
-| Quy trình hiện tại | 1. Chạy test case · 2. Phát hiện lỗi · 3. Tái hiện lỗi · 4. Chụp ảnh/quay video · 5. Viết ticket · 6. Chuyển developer · 7. Retest |
-| Bottleneck | Bước 3 — tái hiện lỗi, hoặc bước 5 — mô tả ticket; cần bấm giờ để xác định bước chính |
-| Impact | Developer có thể phải hỏi lại, kéo dài vòng sửa và nghiệm thu |
-| Success metric | Baseline: [phút/ticket; số ticket phải bổ sung thông tin]; target đề xuất: giảm 20% thời gian lập ticket và không tăng tỷ lệ ticket bị yêu cầu làm rõ; đo trên ít nhất 10 ticket |
-| Phương án không dùng AI | Template cố định: môi trường, steps, expected, actual, bằng chứng và mức độ nghiêm trọng |
-| Giả thuyết về AI | Tóm tắt ghi chú và log thành bản ticket để tester duyệt trước khi gửi |
-| Cảm nhận nhanh | Rule trước; Workflow nếu khối lượng lỗi đủ lớn |
+| Job Story | Khi giao ca, tôi muốn biết lô nào đang chờ kiểm tra lại, ai phụ trách và hạn xử lý, để ca sau tiếp tục đúng công việc chưa hoàn thành. |
+| Actor | Nhân viên QC ca trước, QC ca sau và tổ trưởng |
+| Thời điểm / bối cảnh | Cuối ca khi còn lô chưa có kết luận đạt/không đạt |
+| Quy trình hiện tại | 1. Rà soát lô đang mở · 2. Tìm phiếu liên quan · 3. Xác định trạng thái · 4. Ghi danh sách bàn giao · 5. Trao đổi với ca sau · 6. Ca sau xác nhận |
+| Bottleneck | Bước 2–4: tìm và tổng hợp trạng thái từ hồ sơ; thời gian thực tế: **[cần đo]** |
+| Impact | Có nguy cơ kiểm tra trùng, quên lô hoặc bàn giao thiếu người chịu trách nhiệm |
+| Success metric | Baseline: [phút/bàn giao; số lô thiếu trạng thái]; target **đề xuất**: giảm 25% thời gian, không còn lô thiếu mã hoặc người phụ trách; đo tối thiểu 10 lần bàn giao |
+| Phương án không dùng AI | Sổ bàn giao điện tử với mã lô, trạng thái bắt buộc và chữ ký xác nhận |
+| Giả thuyết về AI | Tóm tắt ghi chú bất thường cho ca sau; không tự thay đổi trạng thái duyệt lô |
+| Cảm nhận nhanh | Rule; chưa có bằng chứng cần AI |
 
 ```text
-HIỆN TẠI — tổng thời gian chưa đo
-
-[1 Chạy case: ?'] → [2 Phát hiện lỗi: ?']
-→ [3 Tái hiện lỗi: ?']  ← BƯỚC CẦN ĐO
-→ [4 Lưu bằng chứng: ?'] → [5 Viết ticket: ?'] ← BƯỚC CẦN ĐO
-→ [6 Gửi developer: ?'] → [7 Retest: ?']
+HIỆN TẠI — thời gian từng bước cần khảo sát
+[1 Rà lô: ?'] → [2 Tìm phiếu: ?']
+→ [3 Xác định trạng thái: ?'] → [4 Lập danh sách: ?'] ← NGHI VẤN BOTTLENECK
+→ [5 Bàn giao: ?'] → [6 Xác nhận: ?']
 ```
 
 ### Card muốn pitch nhất
 
-- **Card số:** 1 — Tổng hợp phản hồi chỉnh sửa website.
-- **Vì sao:** Phạm vi tương đối gọn, dễ phân tách từng bước và có thể kiểm chứng qua lịch sử yêu cầu thay đổi.
-- **Câu hỏi muốn nhóm phản biện:** Nếu dùng chung một bảng theo dõi feedback có mã yêu cầu và trạng thái, phần nào vẫn gây mất thời gian nhiều nhất?
+- **Card số:** 1 — Truy xuất lịch sử lỗi theo lô, máy và ca.
+- **Vì sao:** Phạm vi rõ ràng, có khả năng đo bằng thời gian tìm hồ sơ và mức độ đầy đủ của kết quả. Có thể kiểm chứng ngay trên dữ liệu QC đã ẩn danh.
+- **Câu hỏi muốn nhóm phản biện:** Nếu xưởng đã lưu dữ liệu vào một file chuẩn và có chức năng lọc theo mã lỗi, còn lý do gì khiến việc truy xuất vẫn chậm?
 
-### AI phản biện Problem Card #1
+### AI đã phản biện card thế nào
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| Chưa có thời gian baseline, nên chưa chứng minh đây là bottleneck lớn nhất | Đồng ý | Giữ thời gian chưa đo thay vì tự gán số; xác định cần bấm giờ qua các đợt feedback |
-| Có thể chỉ cần một bảng task chung, chưa chứng minh cần AI | Đồng ý | Bổ sung phương án không AI và ưu tiên thử trước |
-| Chỉ đo thời gian nhanh hơn thì chưa đủ | Đồng ý | Thêm chỉ số số yêu cầu bị bỏ sót vào success metric |
-
-**Điểm cần xác minh sau phản biện:** Với Card #1, nếu dùng bảng task chuẩn đã giảm được phần lớn thời gian và không còn sót yêu cầu, không nên chọn AI chỉ để tăng độ phức tạp.
+| Chưa có bằng chứng cho thấy xưởng thực sự mất nhiều thời gian truy xuất | Đồng ý | Giữ baseline cần đo, đề nghị khảo sát tình huống truy xuất gần nhất |
+| Cùng một lỗi không đồng nghĩa cùng một nguyên nhân | Đồng ý | Chỉ đề xuất khoanh vùng bản ghi, không tự kết luận nguyên nhân gốc |
+| Bộ lọc và bảng dữ liệu chuẩn có thể giải quyết phần lớn vấn đề | Đồng ý | Đưa Rule làm phương án thử trước, chưa mặc định dùng AI |
 
 ---
-
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
@@ -188,4 +179,4 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 - [Đề bài CHECKPOINTS](../../CHECKPOINTS.md)
 - [Quy định sử dụng AI](../../RULES.md)
 - [Rubric](../../RUBRIC.md)
-- [Bổ sung nguồn tài liệu thực tế sau khi xác minh]
+- [Bổ sung nguồn tài liệu hoặc hồ sơ QC được phép sử dụng sau khi xác minh]

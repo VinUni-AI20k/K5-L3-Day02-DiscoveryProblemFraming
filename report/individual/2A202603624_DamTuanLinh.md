@@ -141,8 +141,8 @@ Nhận yêu cầu tuyển dụng và tiêu chí
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
 | Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: |Làm sao để xác nhận nhu cầu thực của người đăng bài (phản biện nhóm tê liệt về dự án kết nối kinh doanh đồ ăn và người mua trong khu cư dân) |
+| Nhận phản biện | Câu hỏi tôi nhận được: Giọng vùng miền và tiếng ồn ngoại cảnh, sẽ gặp nhiều khó khăn về detech voice đặc biệt là số liệu về khoản vay, khoản trả nợ, thông tin của khách hàng, cần tối ưu mô hình như thế nào | Tôi đã sửa gì: không chỉ tối ưu một model, mà xây dựng pipeline nhận dạng giọng nói kết hợp xử lý âm thanh, fine-tuning và kiểm chứng dữ liệu tài chính. |
 | Gom cluster / cây OST | | |
 | Chọn candidate problem | | |
 | Kiểm chứng / research | | |
@@ -157,9 +157,9 @@ Nhận yêu cầu tuyển dụng và tiêu chí
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
+| CP1 Scan |Dùng AI hỗ trợ diễn đạt và rà soát 5 ý tưởng ban đầu theo các lăng kính lặp lại, tốn thời gian và cần tổng hợp nhiều thông tin; kiểm tra cách viết Job Story. |Giúp nhận ra actor, bối cảnh và công việc cần hoàn thành trong từng ý; phát hiện các mô tả còn thiên về giải pháp. |AI lấy ví dụ không thực tế không thực sự hiểu nỗi đau khách hàng | Sửa các ví dụ theo quan điểm cá nhân + thảo luận ý kiến của mọi người |
+| CP2 Problem Card |Nhờ AI cấu trúc 3 Problem Cards, phác thảo quy trình 3–7 bước, chỉ ra bottleneck, đề xuất metric, phương án không A |Biến các ý tưởng rộng thành công việc cụ thể: nhập CRM sau cuộc gọi, tìm timestamp trong video, tổng hợp hồ sơ ứng viên; |Tương tự CP1 |Tương tự CP1 |
+| CP4 Research | |  | | |
 | CP5 Quy trình | | | | |
 | CP5–6 Problem Statement | | | | |
 | CP6 Mức can thiệp / quyết định | | | | |

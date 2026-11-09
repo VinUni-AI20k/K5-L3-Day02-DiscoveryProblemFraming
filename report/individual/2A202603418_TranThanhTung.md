@@ -8,8 +8,8 @@
 - Họ tên: Trần Thanh Tùng
 - MSSV: 2A202603418
 - Email trường: 26ai.tungtt@vinuni.edu.vn
-- Tên nhóm: 
-- Link repo nhóm:
+- Tên nhóm: AZEZ
+- Link repo nhóm: https://github.com/hhuydaugg/K5-L3A-DAY02-AZEZ-DiscoveryProblemFraming
 
 ---
 
@@ -28,7 +28,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | 7 | Cần đọc, tổng hợp nhiều thông tin | Khi gặp lỗi ngoại lệ (exception) trong file log lớn, tôi muốn xác định chính xác dòng dữ liệu gây lỗi và ngữ cảnh biến số, để sửa đúng chỗ mà không phải in log thủ công hàng nghìn dòng | Sinh viên làm bài lab thực hành xử lý dữ liệu | Trung bình mất 40–45 phút mỗi lần lần vết lỗi từ file log server hơn 10.000 dòng; tuần trước phải nhờ bạn cùng lớp soi hộ mới tìm ra giá trị bị null ở dòng 4.200 |
 | 8 | Pain từ người khác | Khi gửi bản nháp báo cáo tiến độ cho giảng viên hướng dẫn, tôi muốn nhận được phản hồi định hướng vào đúng các mục trọng tâm, để sửa bài đúng ý mà không phải chờ đến buổi gặp trực tiếp | Giảng viên hướng dẫn (ngại đọc bản nháp dài dòng) và sinh viên làm đồ án | Thầy hướng dẫn nhận xét thẳng là 2 bản nháp trước viết lan man khó theo dõi, thầy phải hẹn gặp trực tiếp 45 phút để nắn lại cấu trúc |
 | 9 | Pain từ người khác | Khi người dùng gửi phản hồi lỗi giao diện hoặc tính năng qua form khảo sát tự do, người làm sản phẩm muốn gom nhóm nhanh các phản ánh cùng lỗi, để ưu tiên sửa lỗi gây ức chế nhất trước | Sinh viên phụ trách sản phẩm/testing trong dự án môn học | Đợt thử nghiệm nội bộ vừa rồi thu về 42 câu trả lời ngắn, tôi phải ngồi đọc từng dòng trên Google Sheets mất hơn 2 tiếng mới gom cụm được các lỗi giao diện |
-| 10 | Pain từ người khác | Khi tài xế xe taxi điện báo sự cố cạn pin khẩn cấp (< 5%) trên đường, điều phối viên muốn có ngay danh sách trạm sạc khả dụng gần nhất kèm chỉ dẫn an toàn, để hướng dẫn tài xế kịp thời tránh xe chết máy giữa đường | Điều phối viên tổng đài nội bộ và tài xế taxi điện | Qua phỏng vấn một anh điều phối viên vận hành: mỗi ca sự cố mất 12–15 phút xử lý thủ công (tra bản đồ, gọi điện kiểm tra, nhắn tin); mỗi ca trực cao điểm gặp 3–4 ca khẩn cấp |
+| 10 | Pain từ người khác | Khi tài xế xe taxi điện báo sự cố cạn pin khẩn cấp (< 5%) trên đường, điều phối viên muốn có ngay danh sách trạm sạc khả dụng gần nhất kèm chỉ dẫn an toàn, để hướng dẫn tài xế kịp thời tránh xe chết máy giữa đường | Điều phối viên tổng đài nội bộ và tài xế taxi điện | Số liệu thực tế từ phỏng vấn anh N. (điều phối viên vận hành GSM): mỗi ca mất 12–15 phút xử lý thủ công (tra bản đồ, đo km, gõ tin nhắn); ca cao điểm gặp 3–4 ca khẩn cấp. Khớp với chính sách cứu hộ xe hết pin của VinFast ([VinFast Cứu hộ 24/7](https://vinfastauto.com/vn_vi/dich-vu-cuu-ho-xe-dien-vinfast-247)) và áp lực trạm sạc theo chính sách V-Green ([vgreen.net](https://vgreen.net)) |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
@@ -58,8 +58,8 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Thời điểm / bối cảnh | Trong ca trực, khi tài xế đang chạy đón khách thì xe tụt pin xuống dưới 5%, tài xế hoảng gọi về tổng đài nhờ cứu hộ |
 | Quy trình hiện tại (5 bước) | 1. Nghe máy tiếp nhận cuộc gọi khẩn cấp từ tài xế (khoảng 2 phút)<br>2. Nhập biển số lên màn hình quản lý xe để xem toạ độ GPS và mức pin còn lại (khoảng 2 phút)<br>3. Mở app bản đồ trạm sạc trên điện thoại/web khác, tự đo khoảng cách và tìm xem trạm nào gần nhất còn trụ sạc trống (5–6 phút) ← **BOTTLENECK 1**<br>4. Tự gõ tay tin nhắn SMS chỉ dẫn địa chỉ trạm sạc và các lưu ý an toàn như tắt điều hoà, đi chậm (3–4 phút) ← **BOTTLENECK 2**<br>5. Bấm gửi SMS hoặc gọi lại đọc đường đi cho tài xế, sau đó theo dõi xe trên màn hình (2 phút) |
 | Bottleneck | Bước 3 (tra cứu thủ công trạm sạc còn trụ trống: mất 5–6 phút do phải chuyển qua lại giữa 2 hệ thống) và Bước 4 (ngồi gõ tay từng chữ tin nhắn chỉ dẫn an toàn: mất 3–4 phút). Tổng cộng xử lý một ca mất 14–17 phút |
-| Impact | Mất 14–17 phút cho mỗi xe gặp nạn; giờ cao điểm một ca trực có thể gặp 3–4 ca; nếu xe chết máy giữa đường sẽ gây ùn tắc giao thông, tốn 500k–1 triệu tiền cẩu xe về xưởng, tài xế bị trừ điểm phục vụ và khách hủy chuyến |
-| Success metric | **Baseline:** 15 phút cho mỗi ca xử lý sự cố (dữ liệu phỏng vấn điều phối viên ca trực).<br>**Target:** Giảm tổng thời gian xử lý xuống dưới 5 phút; thời gian soạn chỉ dẫn an toàn giảm xuống dưới 30 giây.<br>**Cách đo:** Đồng hồ hệ thống bấm giờ từ lúc mở ticket sự cố đến khi tin nhắn chỉ dẫn được bấm gửi đi |
+| Impact | Mất 14–17 phút cho mỗi xe gặp nạn; giờ cao điểm một ca trực có thể gặp 3–4 ca; nếu xe chết máy giữa đường sẽ gây ùn tắc giao thông, tốn 500k–1 triệu tiền cẩu xe về xưởng theo quy trình cứu hộ xe kéo RSA ([Chính sách cứu hộ VinFast](https://vinfastauto.com/vn_vi/dich-vu-cuu-ho-xe-dien-vinfast-247)), tài xế bị trừ điểm phục vụ và khách hủy chuyến |
+| Success metric | **Baseline:** 15 phút cho mỗi ca xử lý sự cố (ghi nhận phỏng vấn điều phối viên ca trực; đối chiếu với quy trình tiếp nhận tổng đài cứu hộ VinFast 1900 23 23 89).<br>**Target:** Giảm tổng thời gian xử lý xuống dưới 5 phút; thời gian soạn chỉ dẫn an toàn giảm xuống dưới 30 giây.<br>**Cách đo:** Đồng hồ hệ thống bấm giờ từ lúc mở ticket sự cố đến khi tin nhắn chỉ dẫn được bấm gửi đi |
 | Phương án không dùng AI | In sẵn danh sách địa chỉ các trạm sạc theo từng khu vực ra bảng giấy: chỉ giúp nhớ địa chỉ nhanh hơn một chút, nhưng hoàn toàn không biết trạm đó lúc này còn trụ trống hay không và vẫn phải tự gõ tin nhắn |
 | Giả thuyết về AI | Hệ thống dùng Rule tính khoảng cách để lọc ra 2 trạm sạc gần nhất còn trụ trống $\rightarrow$ AI đọc thông tin xe (dòng xe VF5/VF e34, mức pin, vị trí đường) để soạn sẵn 1 đoạn tin nhắn chỉ dẫn an toàn ngắn gọn $\rightarrow$ Điều phối viên nhìn lướt kiểm tra 15 giây rồi bấm nút gửi luôn |
 | Cảm nhận nhanh | **Workflow** (Dùng Rule lọc trạm sạc theo khoảng cách + AI điền sẵn nội dung tin nhắn + Điều phối viên duyệt và gửi) |
@@ -204,4 +204,7 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 ## 7. Tài liệu tham khảo
 
--
+1. **Chính sách Dịch vụ Cứu hộ Xe điện VinFast 24/7:** Quy trình tiếp nhận cứu hộ qua tổng đài 1900 23 23 89 và dịch vụ xe kéo cứu hộ RSA khi xe cạn pin trên đường: https://vinfastauto.com/vn_vi/dich-vu-cuu-ho-xe-dien-vinfast-247
+2. **Công ty Phát triển Trạm sạc Toàn cầu V-Green:** Quy định hạ tầng trạm sạc, phí sạc quá giờ chống chiếm dụng trụ và chính sách sạc ưu đãi giờ thấp điểm (22h–6h) cho taxi điện GSM: https://vgreen.net
+3. **Bài báo CafeF về hạ tầng và áp lực trạm sạc xe điện tại Việt Nam:** Phân tích nhu cầu sạc của các hãng xe dịch vụ và xung đột giờ cao điểm tại đô thị: https://cafef.vn/cuoc-dua-tram-sac-xe-dien-tai-viet-nam-188240405101524319.chn
+4. **Quy chế và Rubric môn học K5-L3 Discovery & Problem Framing:** Repo đề bài và hướng dẫn chuẩn mực đánh giá: https://github.com/VinUni-AI20k/K5-L3-Day02-DiscoveryProblemFraming.git

@@ -7,7 +7,7 @@
 
 - Tên nhóm:D3
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
+- Candidate problem được chọn (1 câu): Khi nhận được hóa đơn từ nhà cung cấp, nhân viên kế toán công nợ muốn đối chiếu thông tin với đơn đặt hàng (PO) và biên bản giao nhận, để đảm bảo tính chính xác trước khi thanh toán. Đối chiếu thông tin hóa đơn từ nhà cung cấp với đơn đặt hàng (PO) và biên bản giao nhận hàng (Kế toán công nợ - Candidate #8).
 - Quyết định cuối: Go / Not Yet / No-Go
 
 ---
@@ -45,31 +45,81 @@
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian người làm việc phải tự tổng hợp, đối chiếu và xử lý lặp lại thông tin bằng tay,
+         mà không tăng tỷ lệ bỏ sót việc hoặc đánh giá sai
+├── Opportunity A (Cluster A): Thông tin quan trọng nằm rải rác, phi cấu trúc ở nhiều luồng nên phải đọc lại từ đầu mới lọc ra được, dễ bỏ sót
+│   ├── #2  Câu chốt, deadline, việc được giao chìm giữa hàng trăm tin nhắn; lội ngược tìm tin gốc khoảng 10 phút/lần/nhóm
+│   ├── #12 Sau họp phải viết lại biên bản và tách việc, khoảng 20 phút/buổi, dễ ghi nhầm người phụ trách hoặc thiếu hạn chót
+│   ├── #11 Khi nhận ca phải đọc, đối chiếu hồ sơ, y lệnh, kết quả đang chờ từ nhiều nguồn, 15–20 phút, hay sót thay đổi thuốc
+│   └── #3  Giao dịch QR chỉ hiện tên người nhận, phải nhớ lại ngữ cảnh và nhập tay từng khoản, khoảng 20 phút/tuần
+├── Opportunity B (Cluster B): Phải mở song song nhiều tài liệu hoặc bản ghi để so khớp, chấm thủ công theo tiêu chí, tốn giờ công và dễ sót lỗi
+│   ├── #4  Mỗi lần đổi prompt phải đối chiếu nguồn và chấm tay 100 cặp câu trả lời, khoảng 150 phút/lần, 2 lần/tuần
+│   ├── #5  Mở từng file log để chép tay tham số và metric, khoảng 15 phút/lần; mất log thì phải chạy lại
+│   ├── #7  Đọc từng CV để so với yêu cầu công việc, khoảng 3–5 phút/CV
+│   └── #8  Đối chiếu 3 chứng từ (hóa đơn, đơn đặt hàng, biên bản giao nhận), khoảng 3–7 phút/hóa đơn
+└── Opportunity C (Cluster C): Người phụ trách liên tục bị ngắt quãng bởi câu hỏi, ticket, sự cố quen thuộc, phải phân loại và trả lời lại cùng một nội dung
+    ├── #9  Phải hiểu nội dung, xác định mức ưu tiên từng yêu cầu đổi trả/hoàn tiền để chuyển đúng bộ phận, 3–6 phút/ticket
+    ├── #10 Khách hỏi cùng một loại câu hỏi qua nhiều kênh, phải trả lời tay từng lần và khó giữ câu trả lời nhất quán
+    └── #6  Intern mới gặp cùng các lỗi cài môi trường, mỗi người mất 60–120 phút, người hướng dẫn bị hỏi lại 10–15 phút/câu
 ```
+
+Không đưa vào cây:
+
+- **Cluster D (#1, đón khách khuất tầm nhìn):** pain về phối hợp vị trí theo thời gian thực giữa hai bên đang di chuyển ngoài đường, không phải tổng hợp, đối chiếu hay xử lý thông tin lặp lại, nên không phục vụ outcome trên. Nhóm giữ lại như một hướng riêng nếu muốn đổi outcome.
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- ✗ "AI tóm tắt nhóm chat" (#2): đây là tính năng. Pain thật là câu chốt, deadline bị chìm giữa hàng trăm tin nhắn.
+- ✗ "Kết nối, truy cập dữ liệu ngân hàng để tự phân loại chi tiêu" (#3): đây là giải pháp. Pain thật là giao dịch QR thiếu ngữ cảnh, phải nhớ và nhập tay.
+- ✗ "Dùng LLM để chấm, kiểm tra output của mô hình" (#4): đây là cách làm. Pain thật là chấm tay lâu và hai người chấm lệch nhau.
+- ✗ "Chatbot hỗ trợ intern hoặc trả lời khách" (#6, #10): đây là công cụ. Pain thật là trả lời lặp lại cùng một câu hỏi.
+- ✗ "AI sàng lọc CV" (#7): đây là công cụ. Pain thật là đọc và đối chiếu từng CV với yêu cầu công việc.
+- ✗ "AI đối chiếu chứng từ" (#8): đây là giải pháp. Pain thật là đối chiếu tay 3 loại chứng từ, dễ sót sai lệch.
+- ✗ "Dùng tai nghe để gọi khi lái xe" (#1): đây là cách làm. Pain thật là phải liên lạc và mô tả vị trí bằng lời trong lúc đang lái.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| #1 Khớp điểm đón Xanh SM | 4 | 3 | 3 | 3 | 2 | 2 | 4 | 21 |
+| #2 Tóm tắt chat Zalo/Discord | 4 | 4 | 4 | 3 | 5 | 4 | 4 | 28 |
+| #3 Gom sao kê ngân hàng/ví | 4 | 4 | 3 | 3 | 3 | 3 | 4 | 24 |
+| #4 Đánh giá cặp câu prompt AI | 4 | 4 | 4 | 4 | 4 | 4 | 3 | 27 |
+| #5 Truy vết tham số thí nghiệm | 4 | 3 | 3 | 3 | 4 | 4 | 3 | 24 |
+| #6 Hỗ trợ intern cài môi trường | 4 | 3 | 3 | 3 | 4 | 3 | 4 | 24 |
+| #7 Sàng lọc CV ứng viên | 5 | 4 | 4 | 4 | 4 | 4 | 3 | 28 |
+| #8 Đối chiếu hóa đơn - PO - Giao nhận (Chọn) | 5 | 5 | 4 | 5 | 5 | 5 | 4 | 3 |
+| #9 Phân loại ticket đổi trả CSKH | 4 | 4 | 3 | 3 | 4 | 4 | 3 | 25 |
+| #10 Trả lời câu hỏi trùng CSKH | 4 | 4 | 4 | 4 | 4 | 4 | 3 | 27 |
+| #11 Bàn giao ca trực bệnh viện | 4 | 4 | 5 | 4 | 2 | 4 | 2 | 25 |
+| #12 Biên bản & việc sau họp team | 5 | 4 | 4 | 4 | 5 | 4 | 4 | 30 |
 
 **Candidate được chọn:**
+Candidate #8: Đối chiếu thông tin hóa đơn từ nhà cung cấp với đơn đặt hàng (PO) và biên bản giao nhận hàng (Nguyễn Thành Công).
 
 **Vì sao chọn:**
+1. **Actor và quy trình cực kỳ chuẩn xác và rõ ràng (5/5):** Kế toán công nợ thực hiện 3-way matching theo bộ 3 chứng từ cố định (Hóa đơn - PO - Phiếu giao nhận).
+2. **Impact đo lường được ngay bằng thời gian và tiền bạc (5/5):** Mỗi hóa đơn mất 3–7 phút đối chiếu thủ công; rủi ro trả thừa tiền hoặc chậm thanh toán phạt vi phạm hợp đồng có tác động tài chính trực tiếp và rõ ràng.
+3. **Cực kỳ vừa sức trong khuôn khổ bài lab (5/5):** Dữ liệu dạng chứng từ, file PDF/ảnh scan/bảng tính hoàn toàn giả lập hoặc thu thập mẫu thực tế được mà không vi phạm bảo mật nhạy cảm.
+4. **Thể hiện trọn vẹn sự so sánh 4 mức độ can thiệp AI (5/5):**
+   - *No AI:* Bảng checklist và mẫu form cứng đối chiếu bằng mắt.
+   - *Rule:* Viết script/macro đối chiếu trực tiếp các trường số liệu khi dữ liệu đã ở dạng bảng Excel/CSV.
+   - *Workflow:* OCR trích xuất trường dữ liệu từ PDF/ảnh hóa đơn -> Rule so khớp số lượng/đơn giá -> AI tóm tắt giải trình điểm lệch -> Kế toán kiểm tra xác nhận duyệt chi.
+   - *Agent:* Tự động quét email lấy hóa đơn, tự vào kho lấy phiếu giao hàng, tự quyết định chi tiền (Rủi ro rất cao về tài chính nếu thiếu người duyệt).
 
 **Vì sao loại các candidate còn lại:**
+- **#1 (Khớp điểm đón Xanh SM):** Thuộc bài toán GPS/thời gian thực/an toàn giao thông ngoài thực địa, không thể làm và test trong bài lab, khó can thiệp bằng mô hình ngôn ngữ thông thường.
+- **#3 (Gom sao kê ví/ngân hàng) & #11 (Bàn giao ca trực bệnh viện):** Vướng rào cản rất lớn về chính sách bảo mật dữ liệu nhạy cảm (tài chính cá nhân, hồ sơ bệnh án). Nhóm thiếu domain sâu về lâm sàng và không có quyền truy cập hệ thống bệnh viện thật.
+- **#5, #6:** Mang tính đặc thù cá nhân trong phòng lab/nội bộ team lập trình, quy trình phụ thuộc nhiều vào từng hệ thống máy, khó chuẩn hóa và impact không đủ lớn.
+- **#2, #12 (Tóm tắt chat / họp team):** Mặc dù điểm số cao (28-30) và vừa sức, nhưng thị trường đã có quá nhiều giải pháp sẵn có (Zoom AI, Teams recap, Slack AI), khó tạo ra sự khác biệt và ranh giới đo lường "thế nào là tóm tắt tốt" mang tính chủ quan.
+- **#7 (Sàng lọc CV) & #9, #10 (CSKH):** Sàng lọc CV tiềm ẩn thiên kiến đạo đức (bias) và khó có ground-truth chuẩn để đánh giá "độ phù hợp", trong khi đối chiếu hóa đơn có ground-truth 100% rõ ràng (khớp số tiền, khớp mã hàng, khớp số lượng).
 
 **Xử lý bất đồng (nếu có):**
+- Ban đầu một số thành viên đề xuất chọn **#12 (Biên bản họp)** vì bản thân ai cũng gặp hằng tuần, và **#11 (Bàn giao ca trực)** vì có impact an toàn con người rất lớn.
+- Sau khi thảo luận phản biện, nhóm thống nhất:
+  - #11 có rủi ro quá lớn về tính khả thi và bảo mật (Feasibility & Viability).
+  - #12 khó xác định tiêu chí đúng/sai tuyệt đối (chất lượng biên bản phụ thuộc cảm tính).
+  - #8 (Đối chiếu hóa đơn) đạt điểm đồng thuận cao nhất vì có tính khách quan (số liệu khớp hoặc không khớp), bài toán tài chính rõ ràng và làm rõ nét vai trò của người kiểm duyệt (Human-in-the-loop). Nhóm nhất trí chọn **#8** làm bài toán chung để đi tiếp vào CP4.
 
 ---
 

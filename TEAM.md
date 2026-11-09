@@ -47,7 +47,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- Mỗi candidate của mình có đủ Job Story, Actor, bottleneck và ước tính thời gian. Candidate #1 là candidate nhóm ghi nhận được chọn.
+- Mỗi candidate của mình có đủ Job Story, Actor, bottleneck và ước tính thời gian. Candidate #1 (Problem card #3 của tôi) là candidate nhóm ghi nhận được chọn.
 - Đặt 3 câu hỏi phản biện: với #4 của Khánh (có thực sự cần AI không khi leader phải tự nắm tình hình nhóm), với #7 của Huy (đã có công cụ ghi log thì có cần gom lại kết quả không), với #9 của Huy (công cụ quản lý tài liệu tham khảo có tối ưu hơn không).
 - Mục 2.2–2.4: 4 cluster A–D, #12 để riêng; cây OST với 1 outcome, 4 opportunity và 5 ý solution bị gạch; bảng chấm 3 candidate (#1: 29, #8: 28, #2: 20). Mình dùng AI để soạn nháp, sau đó rà lại, chỉnh lời ở dòng #12, chỉnh điểm số và quyết định chọn #1.
 - Nhận 2 câu hỏi phản biện: của Khánh về mã đề (sao không chỉ đổi số trong đề đã soạn), và câu hỏi về việc cần người duyệt sau khi dùng AI ở #1.

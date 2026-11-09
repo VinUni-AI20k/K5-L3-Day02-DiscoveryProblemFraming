@@ -58,7 +58,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Success metric (baseline → target) | Thời gian phản hồi trung bình: 5–10 phút xuống dưới 2 phút đối với câu hỏi thông thường; tỷ lệ câu trả lời chính xác đạt ít nhất 95% trên bộ câu hỏi kiểm thử. |
 | Phương án không dùng AI | Xây dựng trang FAQ, phân loại câu hỏi và chuẩn hóa câu trả lời theo từng chủ đề. |
 | Giả thuyết về AI (nếu có) | Chatbot sử dụng RAG để truy xuất thông tin từ tài liệu chính thức của nhà trường, sau đó tạo câu trả lời bằng ngôn ngữ tự nhiên. Nếu không tìm thấy thông tin đáng tin cậy, chatbot chuyển câu hỏi cho nhân viên phụ trách. |
-| Cảm nhận nhanh | Workflow + AI (RAG) |
+| Cảm nhận nhanh | Workflow + AI (RAG) + Database|
 
 #### Quy trình nháp hiện tại
 

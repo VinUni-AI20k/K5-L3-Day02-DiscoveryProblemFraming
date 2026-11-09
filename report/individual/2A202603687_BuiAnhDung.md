@@ -1,6 +1,6 @@
 # Báo cáo cá nhân — 2A202603687_BuiAnhDung
 
-**Chủ đề của nhóm:** Học tập, nghiên cứu và làm dự án AI/ML của sinh viên (đọc và tổng hợp paper/tài liệu, gỡ lỗi code, làm việc nhóm trên Git, huấn luyện và triển khai mô hình, ôn tập kiến thức AI).
+**Chủ đề của nhóm:** Làm sạch và chuẩn hóa dữ liệu dạng bảng (CSV) trước khi huấn luyện mô hình, trong bối cảnh sinh viên làm bài lab và dự án AI/ML (nằm trong lĩnh vực học tập, nghiên cứu và làm dự án AI/ML của sinh viên).
 
 ## 1. Thông tin học viên
 
@@ -140,12 +140,12 @@ HIỆN TẠI — ước lượng 30–40 phút/lần đánh giá
 | Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: "AI tóm tắt sai công thức thì ai phát hiện?" (hỏi bài đọc paper của Anh) | Ghi ở group_report mục 2.1, hàng 1 |
 | Nhận phản biện | Câu hỏi tôi nhận được: "AI xóa nhầm dòng hợp lệ hoặc rò rỉ train/test thì sao?"; "MLflow hoặc W&B đã giải rồi, vì sao còn cần?" | Tôi đã sửa gì: thu hẹp Actor về dữ liệu CSV, thêm boundary AI không tự xóa dữ liệu (xem mục 3, bảng AI phản biện) |
 | Gom cluster / cây OST | Đề xuất cluster A/B/C và danh sách ý bị gạch vì là solution đội lốt opportunity | group_report mục 2.2, 2.3 |
-| Chọn candidate problem | Chấm điểm shortlist và đề xuất chọn #7 (làm sạch dữ liệu) | group_report mục 2.4; chờ nhóm xác nhận |
-| Kiểm chứng / research | (chưa làm, thuộc CP4) | |
-| Quy trình nhóm | (chưa làm, thuộc CP5) | |
-| Problem Statement | (chưa làm, thuộc CP5–6) | |
-| Mức can thiệp AI | (chưa làm, thuộc CP6) | |
-| Quyết định | (chưa làm, thuộc CP6) | |
+| Chọn candidate problem | Chấm điểm shortlist và đề xuất chọn #7 (làm sạch dữ liệu) | group_report mục 2.4; #7 là candidate được chọn |
+| Kiểm chứng / research | Phỏng vấn 1 tech lead (AI Engineer intern) và hỏi một số bạn để chấm Assumption Map; tìm công cụ có sẵn (ydata-profiling, Great Expectations, OpenRefine) và hai khảo sát ngành (Anaconda 2020, CrowdFlower 2016) | group_report mục 3: đổi giả định Impact thành khoảng 26–40%, thêm metric "phát hiện sớm", kết luận công cụ có sẵn chưa phủ lỗi lạ nên giữ hướng Workflow |
+| Quy trình nhóm | Vẽ quy trình hiện tại 6 bước (~170', bottleneck bước 2–3), quy trình tương lai 8 bước (~51') có Rule, AI, con người, boundary và phương án quay về; bảng before/after | group_report mục 4: nhóm thấy rõ AI chỉ chen vào bước 3 và 5, người duyệt ở bước 4 và 7 |
+| Problem Statement | Viết v0, nhờ AI chỉ lỗ hổng rồi chọn sửa 3 điểm (cách đo baseline/target, metric chất lượng, boundary có ngưỡng); viết v1 kèm bảng thay đổi so với v0 và 3 tiêu chí đánh giá (phát hiện đủ lỗi, tối ưu thời gian, con người kiểm soát) | group_report mục 5 và 7 |
+| Mức can thiệp AI | Đặt bài vào ô độ mơ hồ cao × độ phức tạp thấp, so sánh 4 mức, chọn Workflow, điền AI Canvas và 2 câu hỏi PAIR | group_report mục 6: chốt Workflow, AI chỉ ở bước 3 và 5 |
+| Quyết định | Chấm 4 rủi ro và đề xuất Go (pilot nhỏ) với ngưỡng dừng đo được | group_report mục 8; các ngưỡng 90', 20%, 5% là giá trị ban đầu, cần điều chỉnh sau khi có số đo thật |
 
 ---
 
@@ -155,10 +155,10 @@ HIỆN TẠI — ước lượng 30–40 phút/lần đánh giá
 |---|---|---|---|---|
 | CP1 Scan | | | | |
 | CP2 Problem Card | Nhờ AI phản biện 2 card đầu | Chỉ ra Actor "làm sạch dữ liệu" quá rộng, rủi ro AI xóa nhầm/rò rỉ dữ liệu, metric tuyệt đối | Với Card #2, AI nói thiếu lý do không dùng MLflow/W&B; tôi không đồng ý vì card chưa khẳng định cần AI | Thu hẹp Actor, thêm boundary, đổi metric; giữ nguyên Card #2 và bổ sung điều kiện "công cụ có sẵn đủ thì không cần AI" |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP4 Research | Tìm công cụ có sẵn và khảo sát ngành về thời gian làm sạch dữ liệu | Tìm nhanh nguồn, và chỉ ra tín hiệu phản bác (Anaconda cho riêng làm sạch ~26%, thấp hơn 30–40% nhóm giả định) | Con số CrowdFlower được diễn đạt không thống nhất giữa các bài ("60% thời gian" hay "60% người trả lời chọn tốn thời gian nhất"); các nguồn đều là thứ cấp; link ydata là trang của bản cũ | Ghi cả hai cách diễn đạt, đánh dấu nguồn thứ cấp, thêm bằng chứng từ phỏng vấn tech lead, tự kiểm lại link |
+| CP5 Quy trình | Dựng khung quy trình từ danh sách các giai đoạn xử lý dữ liệu | Có sẵn khung 7 giai đoạn và mức chậm từng giai đoạn để tham chiếu | Lần đầu viết theo quy trình toàn ngành (có huấn luyện, gán nhãn) nên rộng hơn phạm vi bài | Yêu cầu viết lại theo hướng before/after cho một lần làm sạch một dataset (6 bước) và tự viết quy tắc quy trình tương lai |
+| CP5–6 Problem Statement | Nhờ AI chỉ lỗ hổng của v0 (không để AI viết lại) | Chỉ ra baseline và target chưa có cơ sở đo, metric chất lượng không có baseline, boundary thiếu ngưỡng và người kiểm | Ngưỡng 5% và 20% AI đề xuất chưa có cơ sở; nhiều lỗ hổng cùng lúc, không phân biệt mức ưu tiên | Chọn sửa 3 lỗ hổng quan trọng nhất trước, các điểm còn lại để CP6; ghi các ngưỡng là "giá trị ban đầu" |
+| CP6 Mức can thiệp / quyết định | Hỏi cách làm ma trận, so sánh 4 mức và AI Canvas | Giải thích hai trục của ma trận và gợi ý nội dung từng ô để tôi đối chiếu với quy trình 4.2 | Lúc đầu AI trộn lẫn độ mơ hồ (về đầu ra) với việc đầu vào đa dạng; một lần AI chèn nhầm và làm lặp một số mục của báo cáo nhóm | Đối chiếu lại định nghĩa trong tài liệu, chọn ô độ mơ hồ cao × độ phức tạp thấp; tự chọn tên tiêu chí 3 (con người kiểm soát) và kiểm lại cấu trúc file sau khi AI sửa |
 
 ---
 
@@ -168,20 +168,39 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Nghe Anh và Cường, tôi thấy nhóm có hai hướng khác nhau: Anh nghiêng về đọc tài liệu và chạy thí nghiệm trên GPU, Cường nghiêng về tái lập thí nghiệm và phối hợp trong nhóm. Tôi học được rằng nhiều pain nghe có vẻ khác nhau nhưng cùng một kiểu "việc lặp lại tốn thời gian", và không phải pain nào cũng cần AI vì có cái đã có công cụ sẵn như nvidia-smi, MLflow hay git. Khi gom cluster, card của tôi và của Cường nằm gần nhau ở nhóm ghi lại và tái lập thí nghiệm.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Có. Khi lập cây OST, nhiều ý đầu tiên là giải pháp, như "dùng LLM tóm tắt paper", "dashboard theo dõi GPU", "agent tự giải merge conflict". Nhóm nhận ra khi cố viết chúng thành nhu cầu của người dùng mà không được nhắc tên công cụ. Chúng tôi gạch bỏ và viết lại thành pain. Với bài của tôi cũng vậy: lúc đầu tôi nghĩ ngay đến "AI làm sạch dữ liệu", đến khi research mới thấy công cụ có sẵn đã phủ phần phát hiện lỗi phổ biến, nên chỗ cần AI thu hẹp lại ở lỗi lạ và code xử lý nháp.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Có. Ở mục 6.1 tôi từng viết độ phức tạp là "trung bình" vì có 6 bước, và coi việc đầu vào không rõ là độ mơ hồ. Sau khi đối chiếu định nghĩa trong tài liệu (độ mơ hồ nói về đầu ra có đáp án đúng rõ hay không, độ phức tạp tính cả số nguồn dữ liệu), tôi đổi thành độ mơ hồ cao và độ phức tạp thấp vì chỉ có một file CSV. Trước đó, khi bị phản biện Actor "làm sạch dữ liệu" quá rộng, tôi cũng thu hẹp về dữ liệu dạng bảng.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Có hai điều làm tôi chú ý. Một là khảo sát Anaconda 2020 cho riêng làm sạch dữ liệu khoảng 26%, thấp hơn mức 30–40% mà tech lead nói và nhóm giả định, nên tôi đổi Impact thành một khoảng có nguồn. Hai là tech lead nói lỗi bị sót vì có quá nhiều trường hợp và chỉ lộ khi chạy kiểm thử rồi đọc log. Tức nỗi đau không chỉ là chậm mà còn là phát hiện muộn, nên nhóm thêm metric "phát hiện sớm" bên cạnh thời gian xử lý.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khó nhất là viết Success Metric có đủ baseline, target và cách đo, vì baseline khoảng 170 phút chỉ là ước lượng của một người. Tôi phải nghĩ cách đo thật: làm tay và bấm giờ, cài sẵn lỗi đã biết để đếm tỉ lệ lỗi tìm ra. Phần Boundary cũng khó, vì phải cân giữa việc AI không được làm gì và lúc nào người phải dừng lại kiểm tra; ngưỡng 5% tôi đặt còn là giá trị ban đầu, chưa có cơ sở.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Tôi sẽ bấm giờ làm sạch thật 2–3 dataset ngay từ đầu để có baseline thay vì ước lượng, và phỏng vấn thêm sinh viên thật vì mới hỏi được một tech lead. Tôi cũng sẽ phản biện mạnh hơn ở việc công cụ có sẵn đã đủ chưa, nhất là với candidate #4 và #8 của nhóm đang gần trùng nhau, để nhóm chọn dựa trên bằng chứng sớm hơn.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Sinh viên làm ML mất nhiều thời gian làm sạch dữ liệu CSV, nhất là bước kiểm tra lỗi và viết code xử lý. Quy trình hiện tại có 6 bước, khoảng 170 phút, bottleneck ở bước 2–3 (khoảng 100 phút). Metric là giảm từ khoảng 170 phút xuống dưới 60 phút mỗi dataset, tỉ lệ lỗi tìm ra không thấp hơn làm tay, đo bằng bấm giờ và lỗi cài sẵn. Boundary: AI không tự xóa, sửa hay chạy code, luôn giữ bản gốc, người duyệt ở bước 4 và 7 và dừng lại khi một bước đổi hơn 5%. Mức can thiệp là Workflow: Rule quét lỗi phổ biến, AI chỉ gợi ý lỗi lạ và soạn nháp code, vì công cụ có sẵn chưa phủ lỗi lạ còn Agent thì thừa. Quyết định là Go với pilot nhỏ; nếu sau 2 tuần thời gian vẫn trên 90 phút hoặc sót lỗi nhiều hơn làm tay thì quay về Rule và checklist.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- Anaconda, State of Data Science 2020, qua HPCwire: https://www.hpcwire.com/bigdatawire/2020/07/06/data-prep-still-dominates-data-scientists-time-survey-finds/
+- CrowdFlower Data Science Report 2016, qua ADTmag: https://adtmag.com/articles/2016/03/25/data-science-report.aspx
+- ydata-profiling: https://docs.profiling.ydata.ai/4.5/getting-started/quickstart/
+- Great Expectations (GX Core): https://docs.greatexpectations.io/docs/core/introduction/gx_overview
+- OpenRefine: https://openrefine.org
+- Báo cáo nhóm: ../team/group_report.md

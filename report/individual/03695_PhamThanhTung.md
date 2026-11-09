@@ -1,4 +1,6 @@
-# Báo cáo cá nhân — PhamThanhTung_2A202603695
+# Báo cáo cá nhân — Phạm Thanh Tùng (2A202603695)
+
+> Bài viết theo bố cục phần cá nhân trong `02-deliverable-example(1).md`. Chỉ ghi những nội dung của tôi; không viết thay phần nhóm. Các mốc thời gian chưa đo thực tế được ghi là dự kiến và cần kiểm chứng.
 
 > **Lưu ý trước khi nộp:** Các thời lượng/tần suất dưới đây là bản nháp theo quy trình học tập phổ biến. Tôi cần đối chiếu lại bằng lịch sử LMS, tin nhắn nhóm và trải nghiệm thực tế của mình; chỉ giữ lại số liệu đúng với những gì đã xảy ra.
 
@@ -11,6 +13,8 @@
 - Link repo nhóm:https://github.com/nashtran001/K5-L3A-DAY02-C204T1-DiscoveryProblemFraming/tree/main
 
 ---
+
+# Phần cá nhân (của Phạm Thanh Tùng)
 
 ## 2. Scan problem (CP1)
 
@@ -29,7 +33,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 ---
 
-## 3. Top 3 Problem Cards + quy trình nháp (CP2)
+## 3. Top 3 Problem Cards (CP2)
 
 ### Bảng chọn top 3
 
@@ -39,7 +43,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | 2 | Theo dõi phân công, tiến độ khi làm bài nhóm | Ảnh hưởng trực tiếp đến chất lượng/nộp đúng hạn; bottleneck nằm ở bước cập nhật phân công. | Cần hỏi các thành viên xem họ có cùng gặp vấn đề không. |
 | 3 | Rà format và checklist trước khi nộp báo cáo Markdown | Phạm vi nhỏ, có quy trình rõ và có thể cải thiện ngay cả khi không dùng AI. | Cần ghi lại thời gian sửa lỗi và loại lỗi thường gặp qua một lần nộp thật. |
 
-### Problem Card #1
+### Problem Card #1 — Tổng hợp deadline và yêu cầu bài tập
 
 | Trường | Nội dung |
 |---|---|
@@ -64,7 +68,7 @@ Quy trình nháp hiện tại:
 5. Gần deadline, mở lại các nguồn để kiểm tra            5 phút
 ```
 
-### Problem Card #2
+### Problem Card #2 — Theo dõi tiến độ bài nhóm
 
 | Trường | Nội dung |
 |---|---|
@@ -90,7 +94,7 @@ Quy trình nháp hiện tại:
 6. Sửa, hoàn thiện và nộp                                15 phút
 ```
 
-### Problem Card #3
+### Problem Card #3 — Kiểm tra báo cáo trước khi nộp
 
 | Trường | Nội dung |
 |---|---|
@@ -131,43 +135,72 @@ Quy trình nháp hiện tại:
 
 ---
 
-## 4. Tôi đã tham gia phần nào
+## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-| Hoạt động | Tôi đã làm gì? | Kết quả |
+| Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| CP1 — Tìm vấn đề | Tôi liệt kê các vấn đề mình gặp trong lúc học, làm bài nhóm và nộp bài. | Tôi thấy việc kiểm tra deadline và theo dõi công việc nhóm mất thời gian vì thông tin nằm ở nhiều chỗ. |
-| CP2 — Viết Problem Card | Tôi chọn 3 vấn đề để phân tích rõ hơn, viết các bước hiện tại và tìm bước nào mất nhiều thời gian nhất. | Tôi muốn tập trung vào vấn đề kiểm tra deadline từ LMS, nhóm chat và file đề bài. |
-| CP3 — Pitch | Tôi đưa ra 3 candidate số 10, 11 và 12. | Cả 3 đều liên quan đến việc không bỏ sót công việc, nhưng giải quyết ở những thời điểm khác nhau. |
-| CP3 — Nhận phản biện | Ở candidate 10, tôi nhận được ý kiến cần xác định chính xác công việc nào là của người dùng. | Tôi thấy chỉ gom thông tin thôi chưa đủ, còn phải phân biệt việc nào mình cần làm và kiểm tra lại deadline. |
+| Pitch Problem Card | Tôi đưa ra 3 candidate số 10, 11, 12. Trong đó tôi muốn tập trung vào việc kiểm tra deadline từ LMS, nhóm chat và file đề bài. | Nhóm có thêm 3 vấn đề liên quan đến theo dõi công việc cá nhân, tiến độ bài nhóm và chia đầu việc. |
+| Phản biện bài của bạn khác | Chưa có thông tin cụ thể về câu hỏi tôi đã hỏi các bạn khác. | **Cần bổ sung** câu hỏi thực tế nếu tôi đã phản biện. |
+| Nhận phản biện | Candidate 10 được góp ý: cần xác định chính xác công việc nào thuộc về người dùng. | Tôi thấy không thể chỉ tổng hợp hết thông báo; phải phân biệt việc của tôi và việc của người khác, kèm nguồn để kiểm tra lại. |
+| Gom cluster / cây OST | Tôi thấy 3 candidate của mình đều liên quan đến việc không bỏ sót công việc, nhưng ở các bước khác nhau. | Đây là nhận xét cá nhân; **chưa có thông tin** về phần tôi trực tiếp làm trong cây OST của nhóm. |
+| Chọn candidate problem | Cá nhân tôi ưu tiên candidate 10 vì phải xem nhiều nguồn mới biết đủ deadline và việc cần làm. | **Chưa xác nhận** candidate cuối cùng nhóm chọn. |
+| Kiểm chứng / research | Tôi đã nêu các nguồn có thể kiểm tra lại như LMS, lịch sử chat và đề bài. | Các mốc thời gian trong Problem Card vẫn là ước tính; **chưa có dữ liệu phỏng vấn/đo thực tế** để kết luận. |
+| Quy trình nhóm | Tôi mô tả quy trình hiện tại: mở LMS, xem chat, đọc đề bài, ghi lại deadline rồi kiểm tra trước khi nộp. | Xác định bước cần cải thiện là đọc và đối chiếu yêu cầu nằm ở nhiều nơi. |
+| Problem Statement | Tôi xác định actor là sinh viên, bottleneck là phải đối chiếu nhiều nguồn và dễ bỏ sót yêu cầu. | Đây là hướng đề xuất từ candidate 10, **chưa phải Problem Statement cuối của nhóm**. |
+| Mức can thiệp AI | Tôi đề xuất có thể dùng AI tạo nháp checklist, còn deadline và yêu cầu cần người dùng kiểm tra lại. | Chưa nên chọn Agent ngay; cần so sánh với cách tạo checklist thủ công hoặc dùng rule. |
+| Quyết định | Tôi muốn kiểm chứng candidate 10 trước khi quyết định có cần AI hay không. | **Chưa có thông tin** về quyết định Go / Not Yet / No-Go của nhóm. |
 
-### Ba candidate tôi đưa ra
+---
 
-| # | Vấn đề | Khó khăn chính |
-|---:|---|---|
-| 10 | Khi phải kiểm tra deadline từ LMS, nhóm chat và file đề bài, tôi muốn có danh sách các việc cần làm để không bỏ sót việc quan trọng. | Phải vào nhiều nơi để xem thông báo, đọc lại đề và tự tổng hợp công việc. |
-| 11 | Khi làm bài nhóm, tôi muốn biết ai đã làm gì và phần nào còn thiếu trước deadline. | Tiến độ nằm rải rác trong tin nhắn, phải đọc lại và hỏi các thành viên. |
-| 12 | Khi nhóm mới nhận đề bài, tôi muốn chia yêu cầu dài thành các việc cụ thể để mọi người phân công cân bằng hơn. | Khó chia đều công việc vì mỗi phần có độ khó, thời gian làm và yêu cầu khác nhau. |
+## 5. Dùng AI
 
-Trong 3 ý tưởng này, tôi muốn ưu tiên **candidate 10** vì đây là vấn đề tôi dễ gặp khi học. Mỗi lần cần kiểm tra việc phải nộp, tôi phải mở LMS, xem nhóm chat rồi đọc lại file đề bài. Nếu thông tin cập nhật ở nhiều nơi thì rất dễ bỏ sót hoặc hiểu thiếu yêu cầu.
-
-Phần tôi còn phải làm rõ là cách xác định đúng công việc của từng người. Ví dụ trong nhóm chat có nhiều thông báo, nhưng không phải thông báo nào cũng là việc tôi phải làm. Nếu sau này có checklist thì vẫn cần ghi rõ nguồn thông tin để người dùng tự kiểm tra lại.
-
-## 5. Tôi đã dùng AI như thế nào
-
-| Checkpoint | Tôi dùng AI để làm gì? | AI giúp được gì? | Điểm chưa ổn | Tôi chỉnh lại |
+| Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 | Nhờ AI xem lại các Job Story mình đã viết. | Giúp tôi nhận ra câu nào đang nói nhiều về giải pháp hơn là vấn đề. | Có những gợi ý quá chung chung, không rõ người gặp vấn đề là ai. | Tôi giữ những vấn đề liên quan trực tiếp đến việc học và làm bài của mình. |
-| CP2 | Nhờ AI phản biện 3 Problem Card. | Giúp tôi xác định rõ bước nào đang mất thời gian và cần đo kết quả bằng gì. | Thời gian ước tính chưa phải bằng chứng thực tế. | Tôi ghi rõ các số liệu cần kiểm tra lại từ LMS, tin nhắn và quá trình làm bài. |
-| CP3 | Nhờ AI hỗ trợ viết gọn lại 3 candidate và so sánh các ý tưởng. | Giúp tôi nhìn rõ sự khác nhau giữa kiểm tra deadline, theo dõi tiến độ và chia việc. | AI có thể đưa ra điểm đánh giá nhưng chưa có đủ bằng chứng để khẳng định. | Tôi chỉ dùng làm gợi ý, không coi đó là điểm chấm chính thức của nhóm. |
+| CP1 Scan | Tôi dùng AI để xem lại các Job Story đã liệt kê. | Giúp tôi nhận ra vấn đề nào đang nói về nhu cầu thật, vấn đề nào chỉ là ý tưởng làm công cụ. | Một số gợi ý quá rộng, không rõ ai gặp vấn đề và bước nào đang khó. | Tôi giữ các tình huống liên quan trực tiếp đến học tập, làm bài nhóm và nộp bài. |
+| CP2 Problem Card | Tôi nhờ AI phản biện 3 Problem Card. | AI gợi ý tách rõ actor, quy trình, bottleneck và cách đo kết quả. | Các mốc thời gian AI đưa ra hoặc tôi ước tính chưa phải số liệu đã kiểm chứng. | Tôi đánh dấu cần xác thực từ LMS, nhóm chat và lịch sử làm bài; không coi số nháp là bằng chứng thật. |
+| CP3 Pitch | Tôi dùng AI hỗ trợ diễn đạt gọn lại candidate 10, 11 và 12. | Giúp phân biệt kiểm tra deadline, theo dõi tiến độ và chia việc khi nhóm mới nhận đề. | AI có thể gợi ý chấm điểm dù chưa có bằng chứng đủ rõ. | Tôi chỉ xem điểm là đề xuất, không ghi thành kết quả chấm chính thức của nhóm. |
+| CP4 Research | Chưa có thông tin xác nhận tôi đã dùng AI để research công cụ cụ thể. | Có thể dùng để lập danh sách những cách xử lý hiện có. | Không thể biết một công cụ có thực sự đọc được LMS hoặc chat chỉ qua lời AI nói. | Nếu dùng, tôi cần kiểm tra lại nguồn và quyền truy cập trước khi ghi vào báo cáo. |
+| CP5 Quy trình | Tôi đã mô tả quy trình thủ công và bước đối chiếu giữa nhiều nguồn trong Problem Card. | AI hỗ trợ trình bày quy trình theo từng bước. | Nếu viết quá chung thì không thấy đúng bước nào đang tốn thời gian. | Tôi giữ rõ bước đọc, đối chiếu yêu cầu và ghi deadline, thay vì chỉ ghi 'thông tin phân tán'. |
+| CP5–6 Problem Statement | Tôi dùng các góp ý để xem lại cách mô tả vấn đề. | Giúp tôi chú ý đến metric và boundary, không chỉ nói cần hệ thống checklist. | Dễ nhảy sang giải pháp AI trước khi chứng minh pain. | Tôi ưu tiên việc xác định đúng người, đúng deadline, đúng yêu cầu và cho người dùng kiểm tra. |
+| CP6 Mức can thiệp / quyết định | Chưa có bằng chứng tôi đã dùng AI để chốt mức can thiệp hoặc quyết định của nhóm. | Có thể so sánh No AI, Rule, Workflow và Agent. | AI không thể thay nhóm quyết định khi chưa kiểm chứng dữ liệu thật. | Tôi chưa ghi Go/No-Go hay mức AI thành quyết định chính thức. |
 
-Tôi dùng AI để hỗ trợ viết và xem lại nội dung, còn các vấn đề đưa ra đều xuất phát từ những việc tôi đang quan tâm. Tôi không muốn để AI tự quyết định vấn đề nào là tốt nhất vì vẫn cần xem lại trải nghiệm thực tế và ý kiến của mọi người.
+---
 
-## 6. Reflection
+## 6. Reflection (CP7)
 
-Lúc đầu tôi nghĩ chỉ cần tạo một hệ thống checklist để tổng hợp các công việc là có thể giải quyết được việc bỏ sót deadline. Nhưng khi phân tích kỹ hơn, tôi thấy vấn đề không chỉ là gom thông tin mà còn phải xác định đúng việc cần làm, deadline và yêu cầu của từng bài.
+> **Phần này cần tự viết bằng trải nghiệm thật, tối thiểu 200 từ cho câu 6.1–6.6 (không tính 6.7), theo yêu cầu của mẫu.** Dưới đây là câu hỏi và những ý đã có trong báo cáo của tôi để tôi tự hoàn thiện, không phải bài reflection viết hộ.
 
-Tôi cũng thấy candidate 10, 11 và 12 khá giống nhau vì đều liên quan đến quản lý công việc. Tuy nhiên, candidate 10 là theo dõi công việc cá nhân, candidate 11 là xem tiến độ của nhóm, còn candidate 12 là chia việc khi mới nhận đề. Nếu làm cả 3 cùng lúc thì phạm vi sẽ khá rộng và khó kiểm tra hiệu quả.
+**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-Điểm tôi còn thiếu là bằng chứng cụ thể. Một số thời gian trong Problem Card mới là ước tính, chưa có số liệu đo lại. Nếu làm tiếp, tôi muốn thử ghi thời gian mỗi lần kiểm tra deadline, xem có bao nhiêu nguồn phải mở và có từng bỏ sót yêu cầu nào không. Sau đó mới so sánh việc ghi checklist thủ công với cách có AI hỗ trợ.
+_Gợi ý từ tình huống đã có:_ Tôi có thể so sánh các vấn đề theo dõi deadline, tiến độ và chia việc của mình với vấn đề những bạn khác trình bày. Cần bổ sung điều tôi thực sự nghe và học được.
 
-Qua bài này tôi hiểu là trước khi nghĩ đến làm một công cụ AI, mình cần tìm đúng vấn đề và xác định rõ bước nào đang gây khó khăn. Không phải vấn đề nào cũng cần AI, đôi khi một cách ghi chú hoặc checklist rõ ràng đã có thể giúp ích rồi.
+**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+_Gợi ý từ bài của tôi:_ Lúc đầu tôi muốn có hệ thống tự tạo checklist. Sau khi được góp ý, tôi thấy cần xác định đúng công việc của từng người trước. Cần kể lại tình huống nhóm thực tế nếu có.
+
+**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+
+_Gợi ý từ phản biện candidate 10:_ "Xác định cách công việc chính xác của người đó". Tôi cần viết rõ mình đã thay đổi gì trong cách hiểu vấn đề và có đổi ý hay không.
+
+**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+_Chưa có kết quả kiểm chứng thật được cung cấp._ Tôi cần tự ghi hoạt động đã làm, số người/số mẫu và điều rút ra; nếu chưa làm thì nói rõ chưa làm.
+
+**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+
+_Gợi ý từ báo cáo:_ Khó phân biệt vấn đề "phải mở nhiều nơi" với nguyên nhân khiến tôi bỏ sót thông tin; còn phải xác định đúng actor, bước nghẽn và cách đo.
+
+**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+
+_Gợi ý từ báo cáo:_ Tôi muốn đo lại thời gian, xem lại các nguồn đã kiểm tra và hỏi rõ ai chịu trách nhiệm cho từng việc trước khi đề xuất checklist hoặc AI.
+
+**6.7. Hiểu bài:** Giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+_Tự hoàn thiện sau khi nhóm chốt candidate. Hiện chưa có quyết định cuối nên tôi không tự điền thành kết quả nhóm._
+
+---
+
+## 7. Tài liệu tham khảo
+
+- [Repo nhóm — Discovery & Problem Framing](https://github.com/nashtran001/K5-L3A-DAY02-C204T1-DiscoveryProblemFraming)
+- Nguồn để đối chiếu khi kiểm chứng: thông báo LMS, file đề bài, lịch sử nhóm chat (chưa đính kèm bằng chứng).

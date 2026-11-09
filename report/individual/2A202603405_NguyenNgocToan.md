@@ -136,16 +136,16 @@ AI (Claude) đóng vai "PM hoài nghi" theo prompt trong worksheet.
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Pitch 3 card: #4 Tester hỏi lặp lại (card chính), #5 Tìm tài liệu/quyết định cũ, #6 Setup môi trường project mới | Card #4 vào shortlist, xếp thứ 2 với 31 điểm (sau card #1 của Đạt, 33 điểm) |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: (1) Hỏi Đạt về card Xanh SM: "Dữ liệu định vị và cuốc xe là của nội bộ hãng, làm sao mình lấy được data để kiểm chứng?" (2) Hỏi Đạt về card đồ án: "Sinh viên ngại dùng tool là do thói quen, có bot hướng dẫn thì các bạn có chịu duy trì không?" (3) Hỏi Quang về card phỏng vấn tiếng Anh: "ChatGPT hay Elsa Speak đã làm việc này rất tốt, điểm khác biệt là gì?" | Cả 3 candidate này đều không vào shortlist; câu hỏi (1) chỉ ra rủi ro Feasibility (không tiếp cận được dữ liệu), câu (3) chỉ ra đã có giải pháp sẵn trên thị trường |
+| Nhận phản biện | Câu hỏi tôi nhận được: (1) Đạt hỏi card #4: "Chỉ 25–50% câu là câu cũ, viết một trang FAQ Notion chuẩn thì có giải quyết được 80% mà không cần AI không?" (2) Đạt hỏi card #5: "Impact chỉ 5–30 phút/tuần, có đáng xây hệ thống AI riêng không?" (3) Quang hỏi card #6: "Tần suất vào project mới rất thấp, tổng impact cả năm có đủ lớn không?" | Tôi đã sửa gì: Chấp nhận phản biện (1): phần câu hỏi lặp lại của card #4 giải được bằng No AI (FAQ), nên đồng ý để nhóm loại card #4 khỏi lựa chọn cuối. Phản biện (2), (3) trùng với điểm "Điều còn chưa chắc" tôi đã ghi ở CP2, nên không đề xuất #5, #6 vào shortlist |
+| Gom cluster / cây OST | Hỗ trợ Đạt ở CP3: xếp 3 card của tôi vào cluster (#4, #5 vào cluster A "Năng suất & cộng tác nhóm kỹ thuật"; #6 vào cluster B "Onboarding & quy trình cá nhân") | Cluster A chứa candidate được chọn (#1) |
+| Chọn candidate problem | Cùng nhóm chấm điểm shortlist 3 candidate (#1, #4, #7); cùng Quang phản biện ý tưởng ban đầu của card #1 (AI xử lý audio real-time, ngắt lời cuộc họp) | Nhóm đổi phạm vi: không can thiệp real-time bằng giọng nói, chỉ xử lý transcript sau mỗi block tranh luận 15 phút hoặc khi team yêu cầu (mục "Xử lý bất đồng") |
+| Kiểm chứng / research | Người chính phần kiểm chứng CP4: lập Assumption Map (5 giả định, chọn #1 và #2 để kiểm trước) và phỏng vấn 3 người (1 Tech Lead, 2 đồng nghiệp/sinh viên làm đồ án capstone) | Ghi được tín hiệu phản bác: 1/3 cảnh báo AI kết luận "nên chọn A" sẽ gây tự ái → nhóm sửa problem: AI không được kết luận thay, chỉ sinh ma trận đối chiếu |
+| Quy trình nhóm | Không phụ trách chính (Đạt và Quang làm). Tôi đọc lại và góp ý: __ | __ |
+| Problem Statement | Hỗ trợ Đạt viết Problem Statement v0: __ | __ |
+| Mức can thiệp AI | Người chính CP6: ma trận độ mơ hồ × độ phức tạp, bảng so sánh 4 mức, AI Canvas, 2 câu hỏi PAIR, Problem Statement v1 và tiêu chí đánh giá | Nhóm chọn mức có con người duyệt (Human-in-the-loop); 3 tiêu chí đánh giá: đầy đủ, đối xứng, không ảo giác |
+| Quyết định | Hỗ trợ Quang chấm 4 rủi ro và ra quyết định: __ | Quyết định Go, pilot trên transcript 1 buổi họp giả lập; ngưỡng dừng: đồng tình dưới 60% hoặc review quá 12 phút → quay về facilitator + template |
 
 ---
 
@@ -155,10 +155,10 @@ AI (Claude) đóng vai "PM hoài nghi" theo prompt trong worksheet.
 |---|---|---|---|---|
 | CP1 Scan | Gợi ý khoảng 15 vấn đề theo 3 bối cảnh (học tập, văn phòng, Software Engineer) và tìm số liệu ngành (Stack Overflow 2024, Atlassian DevEx 2025, Microsoft Work Trend Index 2023) | Gợi ý được vấn đề sát công việc SWE, kèm link nguồn | Có 1 số liệu (16% flaky test ở Google) AI không kiểm được nguồn gốc; 2 ý gợi ý (tìm tài liệu cũ, tìm thông báo lớp) trùng pattern | Thay ý "tìm thông báo lớp" bằng "PR chờ review"; không dùng số liệu chưa kiểm được |
 | CP2 Problem Card | Soạn khung Problem Card và quy trình nháp; hỏi trắc nghiệm để tôi ước lượng số liệu; đề xuất cách chia số phút cho từng bước dựa trên tổng thời gian tôi ước lượng (tôi xác nhận khớp); đóng vai "PM hoài nghi" | Chỉ ra actor card #1 quá rộng; nhận ra PR được review dưới 4 giờ là tín hiệu phản bác | Ban đầu xếp "PR chờ review" vào top 3 trước khi có số liệu; khi có số liệu thì pain nhỏ | Thu hẹp actor card #1 xuống Tester/QA; thay card PR bằng "Tìm tài liệu cũ"; không đồng ý đổi bottleneck card #1 sang bước 5 |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP4 Research | (Kiểm chứng) Nhờ AI rà Assumption Map và phần phỏng vấn | Chỉ ra số người phỏng vấn ghi lệch nhau (2 và 3), chỉ có 1 snapshot cho 3 buổi; lời khen ("hoan nghênh") không phải bằng chứng theo The Mom Test; giả định #2 (AI trích xuất chính xác) không kiểm được bằng phỏng vấn; thiếu giả định Viability về việc công ty có cho gửi transcript họp lên API bên ngoài | Khi viết lại câu tổng hợp phỏng vấn, AI dùng cách diễn đạt khẳng định quá mức so với ghi chép ("kể lại lần họp gần nhất") và phải tự sửa lại; AI không biết nội dung các buổi phỏng vấn nên không điền được snapshot #2, #3 | __ |
+| CP5 Quy trình | Nhờ AI đọc lại quy trình trước/sau và Problem Statement v0 của nhóm | Chỉ ra các chỗ không khớp: target thời gian bế tắc "dưới 5 phút" (before/after) và "dưới 8 phút" (v0); số bước thủ công ghi 2 nhưng sơ đồ có 3 bước con người làm; tổng thời gian 85 và 90 phút giữa các file; bottleneck mô tả cảm xúc chứ chưa phải một bước | AI chỉ đọc file, không biết bối cảnh thảo luận thật của nhóm | __ |
+| CP5–6 Problem Statement | Nhờ AI chỉ ra lỗ hổng Problem Statement v1 và tiêu chí đánh giá | Impact ghi "mỗi tuần" (v0) và "mỗi buổi" (v1) mâu thuẫn; tiêu chí 2 (mỗi phương án phải có nhược điểm) mâu thuẫn tiêu chí 3 (không bịa); "suy luận logic" là kẽ hở cho bịa đặt; chỉ số hài lòng ≥ 4.2/5 không có baseline | AI sửa thẳng vào group_report thay vì chỉ phản biện, trái RULES.md (CP5–6 chỉ dùng AI để phản biện) | __ |
+| CP6 Mức can thiệp / quyết định | Nhờ AI phản biện mức can thiệp và 4 rủi ro | Chỉ ra thiết kế (các bước cố định, AI làm 1 bước) theo định nghĩa của đề là Workflow chứ không phải Agent; ma trận đang xếp "hiểu ngữ nghĩa" vào độ phức tạp thay vì độ mơ hồ; Value và Viability đang chấm lạc quan khi mới có 3 người phỏng vấn và chưa biết quy định công ty về dữ liệu họp | __ | __ |
 
 ---
 
@@ -184,4 +184,9 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 ## 7. Tài liệu tham khảo
 
--
+- Stack Overflow Developer Survey 2024 — Professional Developers: https://survey.stackoverflow.co/2024/professional-developers (61% developer mất hơn 30 phút/ngày tìm câu trả lời; 53% cho rằng chờ câu trả lời làm gián đoạn công việc)
+- Atlassian, State of Developer Experience 2025: https://www.atlassian.com/blog/developer/developer-experience-report-2025 (tìm thông tin là trở ngại số 1)
+- Microsoft Work Trend Index 2023, "Will AI Fix Work?": https://www.microsoft.com/en-us/worklab/work-trend-index/will-ai-fix-work
+- Rob Fitzpatrick, *The Mom Test* — dùng cho câu hỏi phỏng vấn CP4.
+- Intercom, Jobs-to-be-Done (Job Story) — dùng cho CP1.
+- Anthropic, *Building Effective Agents* — định nghĩa Workflow và Agent dùng ở CP6: https://www.anthropic.com/engineering/building-effective-agents

@@ -197,19 +197,17 @@ Theo dõi tiến độ
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-| Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
+| Hoạt động | Tôi đã làm gì? | Kết quả / Tác động đến công việc nhóm |
 |---|---|---|
-| Pitch Problem Card | Chuẩn bị và trình bày vấn đề về việc mất thời gian tổng hợp báo cáo công việc định kỳ. | Đưa ra một candidate problem để nhóm thảo luận và đánh giá. |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: [Điền câu hỏi thực tế bạn đã hỏi thành viên khác]. | Giúp người trình bày xem xét thêm tính cụ thể, bằng chứng và phạm vi vấn đề. |
-| Nhận phản biện | Câu hỏi tôi nhận được: [Điền câu hỏi thực tế]. Tôi đã sửa gì: [Điền thay đổi thực tế]. | Giúp điều chỉnh Problem Card và làm rõ những điểm còn thiếu. |
-| Gom cluster / cây OST | Tham gia phân nhóm các vấn đề có điểm chung như xử lý thông tin, tổng hợp báo cáo, quản lý công việc và phối hợp nội bộ. | Hỗ trợ nhóm nhìn thấy các chủ đề chung và mối liên hệ giữa những vấn đề được đề xuất. |
-| Chọn candidate problem | Đề xuất ưu tiên vấn đề tổng hợp báo cáo định kỳ vì có tính lặp lại và có thể đo thời gian xử lý. | Cung cấp một phương án để nhóm đánh giá và so sánh với các candidate problem khác. |
-| Kiểm chứng / research | [Điền hoạt động thực tế: phỏng vấn, khảo sát, quan sát hoặc tìm tài liệu. Ghi rõ số người và nguồn]. | [Điền kết quả thực tế, bằng chứng thu thập được và điều đã thay đổi sau kiểm chứng]. |
-| Quy trình nhóm | Tham gia trao đổi về quy trình hiện tại, các bước thực hiện và những điểm có thể gây tốn thời gian. | Hỗ trợ nhóm hình dung quy trình và xác định các bước cần kiểm chứng. |
-| Problem Statement | Đề xuất tập trung vào khó khăn khi tổng hợp dữ liệu từ nhiều nguồn để hoàn thành báo cáo đúng hạn. | Giúp giới hạn vấn đề vào một tình huống và một nhóm người dùng cụ thể. |
-| Mức can thiệp AI | Đề xuất so sánh phương án không dùng AI như Excel, Power Query với phương án AI hỗ trợ đọc và tổng hợp tài liệu. | Giúp nhóm cân nhắc mức độ cần thiết của AI thay vì mặc định sử dụng AI. |
-| Quyết định | [Điền candidate problem cuối cùng mà nhóm đã chọn và vai trò của bạn trong quyết định]. | [Điền lý do lựa chọn và ảnh hưởng của quyết định tới bài nhóm]. |
-
+| Pitch Problem Card | Chuẩn bị và trình bày vấn đề mất nhiều thời gian khi tổng hợp báo cáo công việc định kỳ từ nhiều nguồn dữ liệu. | Đưa ra vấn đề cá nhân để nhóm thảo luận và đánh giá. |
+| Critique others | Đặt câu hỏi về đối tượng gặp vấn đề, mức độ ảnh hưởng và bằng chứng thực tế của các vấn đề được trình bày. | Giúp người trình bày xem xét tính cụ thể, bằng chứng và phạm vi của vấn đề. |
+| Receive critique | Lắng nghe góp ý và xem xét lại tính cụ thể, bằng chứng của vấn đề tổng hợp báo cáo. | Giúp nhận ra những điểm còn thiếu và cần làm rõ trong Problem Card. |
+| Gom cluster / cây OST |  |  |
+| Kiểm chứng / research |  |  |
+| Group process | Thảo luận về quy trình hiện tại, các bước thực hiện và những công đoạn tốn nhiều thời gian. | Giúp hình dung quy trình và xác định những bước cần tìm hiểu thêm. |
+| Problem Statement | Đề xuất tập trung vào vấn đề khó khăn khi tổng hợp dữ liệu từ nhiều nguồn để hoàn thành báo cáo định kỳ đúng hạn. | Thu hẹp vấn đề vào một tình huống và nhóm người dùng cụ thể. |
+| AI intervention level | Đề xuất so sánh các công cụ không sử dụng AI (như Excel, Power Query) với phương án sử dụng AI để hỗ trợ đọc và tổng hợp tài liệu. | Giúp nhóm đánh giá mức độ cần thiết của AI thay vì mặc định AI là giải pháp. |
+| Quyết định |  |  |
 ---
 
 ## 5. Dùng AI

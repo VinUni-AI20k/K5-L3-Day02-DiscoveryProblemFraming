@@ -1,5 +1,34 @@
 # Bàn giao báo cáo nhóm Kyori
 
+## Làm việc trên nhánh riêng
+
+Theo yêu cầu bổ sung của nhóm, mỗi thành viên làm bài trên một nhánh riêng rồi đề nghị nhóm trưởng review trước khi gộp vào `main`.
+
+- Trần Minh Tân: `docs/minhtantran99-day02-report`.
+- Vũ Thanh Toàn: đề xuất `docs/vuthanhtoan-day02-report`.
+- Phạm Cát Tân: đề xuất `docs/phamcattan-day02-report`.
+
+Hai commit đầu `d4a81cb` và `bfd1ec4` đã được push trực tiếp lên `main` trước yêu cầu này. Nhánh Trần Minh Tân được tạo sau từ lịch sử đó; không coi đây là bằng chứng rằng hai commit ban đầu đã qua review nhánh. Những thay đổi tiếp theo sẽ commit trên nhánh riêng. Không reset hoặc force-push nhánh chung.
+
+Hai thành viên còn lại thực hiện từ bản làm việc sạch:
+
+```powershell
+git switch main
+git pull origin main
+# Toàn dùng nhánh sau; Phạm Cát Tân thay bằng docs/phamcattan-day02-report
+git switch -c docs/vuthanhtoan-day02-report
+```
+
+Sau khi điền file cá nhân, chỉ stage những file mình thực sự sửa. Ví dụ cho Toàn:
+
+```powershell
+git add report/individual/2A202603654_VuThanhToan.md
+git commit -m "docs: thêm báo cáo cá nhân Vũ Thanh Toàn"
+git push -u origin docs/vuthanhtoan-day02-report
+```
+
+Nếu có sửa `TEAM.md`, kiểm diff và stage thêm file đó trước commit. Phạm Cát Tân dùng file `2A202603678_PhamCatTan.md`, nhánh và tên commit tương ứng. Mở Pull Request **trong repo Kyori**, base `main`, compare nhánh cá nhân; không mở PR về repo đề bài. Nhóm trưởng review và gộp sau khi kiểm nội dung. Nếu nhóm có quy định review riêng thì áp dụng quy định đó.
+
 ## Nội dung đã có để các thành viên kéo về
 
 | File | Nội dung |

@@ -1,4 +1,4 @@
-# Báo cáo cá nhân — MSSV_HoTen
+# Báo cáo cá nhân — 2A202603614_NguyenQuangDao
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -189,16 +189,16 @@ Quy trình nháp hiện tại:
 
 | Hoạt động                  | Tôi đã làm gì?         | Kết quả / ảnh hưởng tới bài nhóm |
 | -------------------------- | ---------------------- | -------------------------------- |
-| Pitch Problem Card         |                        |                                  |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt:    |                                  |
-| Nhận phản biện             | Câu hỏi tôi nhận được: | Tôi đã sửa gì:                   |
-| Gom cluster / cây OST      |                        |                                  |
-| Chọn candidate problem     |                        |                                  |
-| Kiểm chứng / research      |                        |                                  |
-| Quy trình nhóm             |                        |                                  |
-| Problem Statement          |                        |                                  |
-| Mức can thiệp AI           |                        |                                  |
-| Quyết định                 |                        |                                  |
+| Pitch Problem Card         | Trình bày 3 candidate problem (#1 Kiểm tra điều khoản hợp đồng, #2 Phân loại tin nhắn phàn nàn, #3 Kiểm tra quy cách nộp bài của sinh viên), trong đó pitch sâu Card #1. | Đóng góp 3 candidate đầu tiên vào bảng Pitch 18 ý của nhóm (Mục 2.1 `group_report.md`). |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: Với candidate #5 (giải thích lại câu hỏi cũ), phần tốn 30–60 phút là do phải tìm lại câu trả lời cũ hay do phải ngồi giải thích lại từ đầu, và liệu các câu hỏi có đủ giống nhau để viết sẵn 1 chỗ không? | Giúp nhóm tách bạch 2 giả định quan trọng (#2 về thời gian giải thích lại và #4 về mức độ giống nhau của câu hỏi) để đưa vào Assumption Map và khảo sát ở CP4. |
+| Nhận phản biện             | Câu hỏi tôi nhận được: Với Card #1 (kiểm tra hợp đồng), nhóm không có hợp đồng thật dài 30–40 trang và không có luật sư nội bộ để kiểm chứng ngay trong buổi lab thì đo baseline thế nào? | Tôi đã sửa gì: Đồng ý rút Card #1 khỏi shortlist của nhóm vì khó kiểm chứng thực nghiệm trong phạm vi một buổi lab và chuyển sang ủng hộ candidate #5 có sẵn đối tượng khảo sát. |
+| Gom cluster / cây OST      | Cùng nhóm gom các candidate #1, #3 vào Cluster C (Kiểm tra, phát hiện lỗi/sai lệch) và #2 vào Cluster B (Yêu cầu lặp lại xử lý bằng tay); rà lại câu chữ của #3 để tách phần giải pháp ("tự động kiểm tra") ra khỏi pain thật. | Hoàn thiện 4 nhánh Opportunity trên cây OST (Mục 2.2, 2.3) không bị lẫn tên công cụ hay tính năng. |
+| Chọn candidate problem     | Tham gia thảo luận và chấm điểm 7 tiêu chí cho 3 bài trong shortlist (#5, #8, #15). | Thống nhất chọn candidate #5 (đạt 30/35 điểm, cao nhất nhóm và dễ đối chiếu từ mức No AI). |
+| Kiểm chứng / research      | Phụ trách chính phần **CP4 — Research giải pháp đã có**: tìm kiếm, mở kiểm tra trực tiếp và đối chiếu 3 giải pháp (Slack Workflow Builder trả lời FAQ bằng emoji, Notion Q&A / Notion Agent, Slack AI). | Hoàn thành bảng Research có link ở Mục 3.3 `group_report.md`; chỉ ra rằng mọi công cụ (kể cả AI) đều đòi hỏi phải có tài liệu FAQ nguồn chuẩn trước, làm cơ sở để nhóm hạ xuống phương án pilot FAQ (No AI). |
+| Quy trình nhóm             | Đối chiếu kết quả research với quy trình tương lai ở Mục 4.2 để bổ sung bước cập nhật câu hỏi mới vào FAQ và phương án quay về khi người hỏi không tìm thấy câu trả lời. | Quy trình tương lai (No AI) rõ từng bước của con người, có bước duy trì FAQ hàng tuần. |
+| Problem Statement          | Phụ trách viết **Problem Statement v1** và bảng đối chiếu thay đổi giữa v0 và v1 (Mục 7 `group_report.md`). | Cập nhật baseline thời gian từ `30–60 phút/lần` xuống `15–30 phút/lần` theo dữ liệu survey 10 người; bổ sung chỉ số tần suất bị hỏi lại và điều kiện Boundary nếu về sau thêm AI. |
+| Mức can thiệp AI           | Phụ trách chính **Mục 6**: đặt bài toán lên ma trận độ mơ hồ × độ phức tạp, lập bảng so sánh 4 mức (`No AI` / `Rule` / `Workflow` / `Agent`), điền AI Canvas rút gọn, trả lời 2 câu hỏi Google PAIR và viết 5 tiêu chí đánh giá (eval). | Chốt lựa chọn **No AI** (trang FAQ dùng chung) kèm lập luận rõ ràng vì sao chưa cần lên mức Rule/Workflow/Agent khi chưa có bằng chứng FAQ viết tay không đủ. |
+| Quyết định                 | Cùng nhóm rà soát 4 rủi ro (Value, Usability, Feasibility, Viability) từ kết quả research & mức can thiệp để chốt ngưỡng dừng cho đợt pilot 2 tuần. | Thống nhất quyết định **Go, phạm vi nhỏ (pilot FAQ, No AI)** kèm ngưỡng dừng định lượng sau 2 tuần và 4 tuần (Mục 8). |
 
 ---
 
@@ -206,12 +206,12 @@ Quy trình nháp hiện tại:
 
 | Checkpoint                     | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 | ------------------------------ | ---------------------- | ----------------- | -------------------------- | ----------------------------------- |
-| CP1 Scan                       |                        |                   |                            |                                     |
-| CP2 Problem Card               |                        |                   |                            |                                     |
-| CP4 Research                   |                        |                   |                            |                                     |
-| CP5 Quy trình                  |                        |                   |                            |                                     |
-| CP5–6 Problem Statement        |                        |                   |                            |                                     |
-| CP6 Mức can thiệp / quyết định |                        |                   |                            |                                     |
+| CP1 Scan                       | Nhờ AI gợi ý thêm các tình huống công việc lặp lại và cần đọc hiểu nhiều thông tin sau khi đã tự liệt kê các ý đầu tiên. | Gợi ý nhanh các bối cảnh văn phòng đa dạng (như rà soát điều khoản hợp đồng, phân loại phản ánh khách hàng). | AI hay đề xuất thẳng giải pháp kiểu "làm chatbot tự động trả lời khách" hoặc "tự động viết email đàm phán hợp đồng" thay vì mô tả nỗi đau (pain). | Loại bỏ ý tự động viết email đàm phán vì rủi ro pháp lý cao; viết lại toàn bộ thành Job Story tập trung vào bước tốn thời gian đọc/kiểm tra thủ công, không nhắc tới từ "AI" hay "chatbot". |
+| CP2 Problem Card               | Nhờ AI đóng vai "PM hoài nghi" để phản biện lỗ hổng trong Problem Card #1 (rà soát hợp đồng). | Chỉ ra sát điểm yếu: hợp đồng sai một chữ là thiệt hại lớn, nếu công cụ bỏ sót điều khoản ở phụ lục hoặc trích sai thì người duyệt không dám tin. | Ban đầu AI gợi ý mục tiêu giảm thời gian xuống chỉ còn vài giây và tự động sửa văn bản hợp đồng. | Đặt lại ranh giới (Boundary) dứt khoát: công cụ chỉ gắn cờ cảnh báo kèm trích dẫn nguyên văn số trang, số dòng và quét cả phụ lục; con người giữ 100% quyền quyết định, mục tiêu thực tế là dưới 20 phút/hợp đồng. |
+| CP4 Research                   | Nhờ AI gợi ý danh sách các công cụ/tính năng phổ biến đang giải quyết việc hỏi đáp lặp lại trong nhóm làm việc. | Đưa ra nhanh các tên tuổi sát bài toán như Slack Workflow Builder, Notion Q&A và Slack AI để định hướng tìm kiếm. | AI có xu hướng tóm tắt chung chung ưu điểm quảng cáo của nhà cung cấp và đôi khi đưa link tài liệu cũ hoặc nói quá về khả năng tự động trả lời của AI. | Tự mở từng đường dẫn chính thức (`slack.com`, `notion.com`) để kiểm chứng: ghi rõ Notion Q&A hiện hiển thị là Notion Agent và chỉ trả lời được khi workspace đã có sẵn tài liệu đầy đủ; chỉ ra số liệu tiết kiệm thời gian của Slack AI là tự công bố nội bộ và tính năng nằm ở gói trả phí. |
+| CP5 Quy trình                  | Dùng AI phác thảo nhanh khung bảng before/after từ dữ kiện candidate #5. | Giúp kẻ bảng và tách các bước Input / Output nhanh chóng. | Bản nháp ban đầu giữ nguyên con số ước lượng cảm tính `30–60 phút/lần` và chưa làm rõ ai là người cập nhật FAQ khi có câu hỏi mới. | Đối chiếu với kết quả survey 10 người ở CP4 để ghi chú lại mức phổ biến là `15–30 phút/lần`, bổ sung nhánh thêm câu trả lời mới vào FAQ và người rà soát định kỳ hàng tuần. |
+| CP5–6 Problem Statement        | Nhờ AI soát lỗi logic giữa Problem Statement v0 và v1 xem đã đủ các trường bắt buộc của CP6 chưa. | Nhắc kiểm tra sự nhất quán giữa các trường Bottleneck, Impact và Success Metric. | AI chỉ gợi ý đo mỗi "thời gian trả lời giảm xuống", chưa phản ánh được việc người hỏi có thực sự mở FAQ ra tra hay không. | Bổ sung thêm chỉ số thứ hai vào Success Metric của v1: đo cả **số lần bị hỏi lại câu đã có trong FAQ** (từ `1–2 lần/tuần` xuống `≤ 1 lần/2 tuần`) để kiểm chứng hành vi dùng thật trong đợt pilot. |
+| CP6 Mức can thiệp / quyết định | Nhờ AI liệt kê thử phương án cho cả 4 mức (`No AI`, `Rule`, `Workflow`, `Agent`) và gợi ý khung AI Canvas. | Giúp hình dung rõ nếu lên mức Rule (gắn emoji trên Slack) hay Workflow thì quy trình sẽ vận hành ra sao. | AI thường có xu hướng khuyến khích chọn mức Workflow có tích hợp mô hình ngôn ngữ (RAG trên FAQ) ngay từ đầu. | Quyết định giữ ở mức **No AI** (trang FAQ dùng chung) vì nhóm mới ở giai đoạn kiểm chứng giả định người hỏi có chịu tự tra hay không; đồng thời bổ sung quy tắc an toàn cho Google PAIR: nếu sau này thêm AI thì lỗi "báo nhầm với giọng chắc chắn" nguy hiểm hơn "bỏ sót", nên không chắc phải chuyển cho người. |
 
 ---
 
@@ -237,4 +237,8 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 ## 7. Tài liệu tham khảo
 
--
+- Slack, "4 simple ways to save time with Workflow Builder": https://slack.com/resources/using-slack/4-simple-ways-to-save-time-with-workflow-builder
+- Notion, "Get answers about work content faster with Q&A" (Notion Agent): https://www.notion.com/help/guides/get-answers-about-content-faster-with-q-and-a
+- Slack, "Slack AI features & AI assistants": https://slack.com/intl/en-au/features/ai
+- Rob Fitzpatrick, *The Mom Test* (3 nguyên tắc kiểm chứng giả định qua hành vi thật).
+- Google PAIR, *People + AI Guidebook* (nguyên tắc Augment vs. Automate và đánh đổi Báo nhầm vs. Bỏ sót).

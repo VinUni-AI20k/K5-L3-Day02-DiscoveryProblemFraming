@@ -10,7 +10,7 @@
 - MSSV: 2A202603568
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: 
-- Link repo nhóm: 
+- Link repo nhóm: https://github.com/olivercuongnguyen-ca/K5-L3A-DAY02-NguyenHoangCuong-2A202603568-DiscoveryProblemFraming
 
 ---
 
@@ -20,17 +20,17 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
+| 1 | Tốn thời gian | Khi kết thúc buổi học, tôi muốn viết nhận xét cá nhân hóa cho từng học viên mà không phải dành quá nhiều thời gian cho việc soạn báo cáo lặp lại, để phụ huynh nắm được tiến độ học tập | Giáo viên, CM, phụ huynh  | Khoảng 30 phút sau mỗi buổi cho lớp 15-20 học viên, 1-2 buổi/ngày |
+| 2 | Cần đọc, tổng hợp nhiều thông tin | Khi nhận yêu cầu từ nhiều phòng ban, tôi muốn tổng hợp và phát hiện các yêu cầu mâu thuẫn, để thiết kế hệ thống đúng ngay từ đầu | PM, BA, manager, các trưởng bộ phận, kho, QA/QC, bảo trì | Làm việc với 4-6 phòng ban; mất 1-2 ngày tổng hợp SOP, biên bản họp và file Excel; thường có yêu cầu mâu thuẫn cần xác nhận lại |
+| 3 | Pain từ người khác | Khi quy trình nghiệp vụ thay đổi trong lúc dự án đang phát triển, tôi muốn nhanh chóng xác định các chức năng, dữ liệu và tài liệu bị ảnh hưởng, để hệ thống luôn bám sát quy trình thực tế | PM, BA, manager, developer, các trưởng bộ phận | hệ thống thường cập nhật chậm hơn 1-2 tuần so với quy trình; người dùng phải vận hành quy trình mới trên hệ thống cũ dẫn đến phát sinh lỗi chức năng và sai lệch dữ liệu, mỗi tuần mất thêm khoảng 4-8 giờ để đối soát, làm sạch dữ liệu |
+| 4 | Lặp lại | Khi tới giờ standup, tôi muốn có sẵn update hôm qua, để không phải nhớ lại | PM | 15 phút/ngày |
+| 5 | | Khi cuối tháng, tôi muốn có KPI từ nhiều dashboard trong một bảng, để báo cáo tháng | PM, manager | Mỗi tháng khoảng 2 tiếng |
 | 6 | | | | |
 | 7 | | | | |
 | 8 | | | | |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
-
+AI gợi ý break down job story #2 để làm rõ hơn mục đích thiết kế đúng **ngay từ đầu**
 -
 
 ---

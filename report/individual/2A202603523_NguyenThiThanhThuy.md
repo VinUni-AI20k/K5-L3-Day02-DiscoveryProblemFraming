@@ -10,7 +10,7 @@
 - MSSV: 2A202603523
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: NonTech
-- Link repo nhóm: https://github.com/nghongsan/K5-L3A-DAY02-NonTech-DiscoveryProblemFraming
+- Link repo nhóm:
 
 ---
 
@@ -158,10 +158,10 @@ Thời gian và số lượt trao đổi: chưa đo; cần quan sát một lần
 |---|---|---|---|---|
 | CP1 Scan |Gợi ý các vấn đề thường gặp trong việc làm việc nhóm theo bốn lăng kính: lặp lại, tốn thời gian, cần đọc và tổng hợp nhiều thông tin, pain từ người khác. |Mở rộng danh sách vấn đề và hỗ trợ diễn đạt Job Story theo cấu trúc Khi – Tôi muốn – Để. |Một số vấn đề AI gợi ý chưa có bằng chứng thực tế và có thể chỉ là giả định. |Chỉ giữ lại các vấn đề phù hợp với bối cảnh công việc văn phòng, đồng thời đánh dấu những thông tin cần quan sát hoặc kiểm chứng. |
 | CP2 Problem Card |Hỗ trợ chọn Top 3 và phân tích quy trình, bottleneck, impact và success metric. |Giúp chia một công việc thành các bước cụ thể và nhận diện những bước có khả năng gây tốn thời gian. |AI có thể giả định quy trình giống nhau ở mọi doanh nghiệp và đưa ra thời gian xử lý không có căn cứ. |Không sử dụng số liệu AI tự giả định làm dữ liệu thật. Để thời gian baseline ở trạng thái cần đo và bổ sung bằng chứng thực tế. |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP4 Research |Hỗ trợ xây dựng câu hỏi phỏng vấn và gợi ý cách phân nhóm thông tin thu thập được. |Giúp tổ chức câu hỏi theo bối cảnh, hành vi hiện tại, khó khăn và ảnh hưởng của vấn đề |AI có thể đưa ra kết luận quá rộng từ số lượng người tham gia khảo sát nhỏ. |Phân biệt dữ kiện thực tế với giả thuyết, ghi rõ số lượng người tham gia và không khái quát vượt quá dữ liệu. |
+| CP5 Quy trình |Hỗ trợ mô tả quy trình hiện tại và xác định các bước có khả năng trở thành bottleneck. |Giúp trình bày quy trình theo thứ tự và nhìn thấy các bước cần phân tích thêm. |Quy trình AI đề xuất có thể bỏ qua bước phê duyệt, trao đổi hoặc xử lý ngoại lệ trong thực tế. |Đối chiếu từng bước với quy trình người dùng thực sự thực hiện và điều chỉnh theo bằng chứng. |
+| CP5–6 Problem Statement |Kiểm tra tính rõ ràng của Problem Statement và phân biệt problem với solution. |Giúp phát hiện câu mô tả quá rộng, thiếu actor, bối cảnh hoặc đang đưa giải pháp vào phần mô tả vấn đề. |AI có thể đề xuất nội dung nghe hợp lý nhưng không phản ánh đúng trải nghiệm người dùng. |Chỉnh sửa theo actor, tình huống, khó khăn và kết quả người dùng mong muốn. |
+| CP6 Mức can thiệp / quyết định |Hỗ trợ so sánh các mức No AI, Rule, Workflow và Agent. |Giúp hiểu rằng không phải vấn đề nào cũng cần AI và có thể bắt đầu từ phương án đơn giản. |AI có thể ưu tiên công nghệ mà chưa cân nhắc chi phí, rủi ro, dữ liệu và khả năng triển khai. |Ưu tiên phương án đơn giản nhất đáp ứng yêu cầu; chỉ chọn AI khi có lý do rõ ràng và giá trị bổ sung có thể kiểm chứng. |
 
 ---
 
@@ -171,16 +171,17 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?** Học được cách chọn problem của các thành viên khác từ đó thấy được nhiều problem từ các lĩnh vực khác nhau và cách nhìn nhận của các thành viên.
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?** Có một số lúc bản thân quên mất là nghĩ các giải pháp trước rồi mới đến vấn đề, nhưng đã khắc phục.
-
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.** Không, do các problem đưa ra đều là những vến đề gặp phải thường xuyên khi làm việc nhóm.
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?** 
+**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?** Hiện tại, trong quá trình thảo luận nhóm chưa bị solution-first. Tuy nhiên, qua bài học, tôi hiểu rằng solution-first là khi chúng ta nghĩ đến công cụ hoặc công nghệ cần xây dựng trước khi xác định rõ vấn đề thực tế. Ví dụ, khi thấy một công việc mất nhiều thời gian, chúng ta có thể nghĩ ngay đến việc sử dụng chatbot hoặc AI Agent. Tuy nhiên, trước khi đề xuất giải pháp, cần xác định ai là người gặp khó khăn, khó khăn xảy ra trong hoàn cảnh nào và quy trình hiện tại đang được thực hiện ra sao. Do đó cần phân biệt rõ problem và solution. Việc sử dụng AI không phải mục tiêu ban đầu mà phải xuất phát từ nhu cầu giải quyết một vấn đề có thật.
 
-**6.5. Điều khó nhất khi viết Problem Statement là gì?** Điểm cần làm rõ là phân biệt giữa việc nhận góp ý rải rác, việc tổng hợp chúng và việc quyết định nên sửa theo ý kiến nào. Metric cũng chưa thể chốt thành số cụ thể vì chưa có baseline về thời gian tổng hợp hoặc số góp ý bị bỏ sót
+**6.5. Điều khó nhất khi viết Problem Statement là gì?** Điều khó nhất khi viết Problem Statement là xác định và diễn đạt vấn đề một cách cụ thể, thay vì chỉ mô tả chung chung về một công việc hoặc đưa ra giải pháp ngay từ đầu. Để viết được một Problem Statement rõ ràng, cần xác định người gặp vấn đề (Actor), hoàn cảnh xảy ra vấn đề (Context), khó khăn thực tế (Pain) và bằng chứng chứng minh vấn đề tồn tại (Evidence).
+Ví dụ, thay vì chỉ nói rằng nhân viên mất nhiều thời gian làm báo cáo, cần làm rõ họ phải tìm kiếm và tổng hợp thông tin từ những nguồn nào, công việc diễn ra với tần suất bao nhiêu và gây ảnh hưởng như thế nào.
+Problem Statement không phải là nơi đề xuất xây dựng chatbot hay ứng dụng AI, mà là nơi mô tả chính xác vấn đề cần giải quyết. Việc xác định đúng vấn đề sẽ giúp những bước tiếp theo như xây dựng quy trình, lựa chọn metric và quyết định mức can thiệp AI có cơ sở hơn.
 
-**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?** Hiện tại, chưa có đủ thông tin về kết quả kiểm chứng của nhóm thông qua phỏng vấn, khảo sát hoặc nghiên cứu các giải pháp hiện có. Vì vậy, chưa thể đánh giá chính xác kết quả có khác với giả thuyết ban đầu hay không. Tuy nhiên, kiểm chứng là bước quan trọng để xác định vấn đề có thực sự tồn tại và có đáng để giải quyết hay không. Nếu chỉ dựa vào suy nghĩ của bản thân hoặc ý kiến của các thành viên trong nhóm, có thể đưa ra những giả định chưa chính xác về nhu cầu của người gặp vấn đề. Qua đó, cần thu thập thông tin từ người dùng hoặc các nguồn đáng tin cậy trước khi kết luận về mức độ nghiêm trọng và khả năng giải quyết vấn đề.
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình. Đầu tiên, nhóm cần xác định problem, tức là người dùng đang gặp vấn đề gì, trong hoàn cảnh nào và vấn đề đó ảnh hưởng ra sao. Tiếp theo, nhóm phân tích process để hiểu cách người dùng đang thực hiện công việc và tìm ra bước gây ra khó khăn. Sau đó, nhóm lựa chọn metric để đo lường mức độ nghiêm trọng của vấn đề và đánh giá hiệu quả sau khi cải thiện. Boundary là những giới hạn cần đặt ra, xác định AI được phép làm gì và những việc nào vẫn cần con người kiểm tra hoặc quyết định. Dựa trên những thông tin đó, nhóm lựa chọn mức can thiệp AI phù hợp, có thể không cần AI, dùng AI hỗ trợ một bước, workflow hoặc agent. Cuối cùng, nhóm đưa ra decision dựa trên bằng chứng, hiệu quả, rủi ro và tính khả thi. Như vậy, nhóm không nên bắt đầu bằng việc chọn một công nghệ AI mà cần hiểu rõ vấn đề trước rồi mới quyết định có nên sử dụng AI hay không.
 
 ---
 

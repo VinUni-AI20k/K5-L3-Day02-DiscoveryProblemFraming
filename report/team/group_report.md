@@ -77,49 +77,82 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 ### 3.1. Assumption Map
 
-| # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
-|---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-
+| **#** | **Giả định** | **Loại** | **Quan trọng** | **Đã có bằng chứng** | **Kiểm trước?** |
+|---|---|---|---:|---:|---|
+| 1 | Học sinh thực sự muốn kiểm tra bài làm trước khi nộp để phát hiện lỗi và cải thiện chất lượng bài. | Value | 5 | 4 | ✅ |
+| 2 | Giáo viên có thể cung cấp rubric đủ rõ ràng để AI đánh giá từng tiêu chí trong bài làm. | Feasibility | 5 | 2 | ✅ |
+| 3 | AI có thể đánh giá bài làm nhất quán với giáo viên khi sử dụng cùng một rubric. | Feasibility | 5 | 3 | — |
+| 4 | Bài làm và rubric có thể được tải lên để hệ thống xử lý tự động. | Feasibility | 4 | 3 | ✅ |
+| 5 | Nhà trường và giáo viên cho phép đưa dữ liệu bài làm vào công cụ AI | Viability | 4 | 1 | Hỏi sau lab |
 *Điền 4–6 giả định; xóa dòng thừa.*
 
 Giả định nhóm kiểm chứng trong buổi này:
 
+
+
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
+**Cách đã dùng:** Phỏng vấn 1 sinh viên đại học (phỏng vấn giả định để xây dựng bản nháp).
 
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
+#### Interview snapshot — Người thứ 1
 
 | Trường | Nội dung |
 |---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+| Người được hỏi (vai trò, không ghi tên thật) | Sinh viên năm 4, thường xuyên làm bài tập lớn và báo cáo môn học |
+| Câu nói đáng nhớ nhất (nguyên văn) | "Nhiều lúc mình đọc lại thấy bài khá đầy đủ rồi, nhưng vẫn không chắc đã đáp ứng hết những yêu cầu của giảng viên chưa. Đến lúc được chấm mới biết mình bị thiếu một vài ý." |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Trong lần làm báo cáo môn học gần nhất, sinh viên đã hoàn thành nội dung nhưng khi đối chiếu lại yêu cầu mới phát hiện thiếu một phần phân tích và chưa trình bày đủ một số tiêu chí được yêu cầu. |
+| Hiện đang xử lý bằng cách nào (workaround)? | Đọc lại đề bài, dùng checklist cá nhân để rà soát từng mục và nhờ bạn cùng nhóm đọc lại trước khi nộp. |
+| Mất bao lâu, bao lần? | Khoảng 30–45 phút cho mỗi lần kiểm tra. Thường phải rà soát 2 lần trước khi nộp. |
+| Insight / opportunity rút ra | Tốn thời gian, bỏ sót tiêu chí khi soát. |
 
-Tổng hợp:
+
+#### Interview snapshot — Người thứ 2
+
+| Trường | Nội dung |
+|---|---|
+| Người được hỏi (vai trò, không ghi tên thật) | Sinh viên năm 3, thường xuyên làm bài tiểu luận và bài tập cá nhân |
+| Câu nói đáng nhớ nhất (nguyên văn) | "Mình thường đưa bài cho ChatGPT đọc thử xem có ổn không, nhưng nhiều khi AI nhận xét khá chung chung, không biết cụ thể mình còn thiếu yêu cầu nào trong đề bài." |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Trong lần làm tiểu luận gần nhất, sinh viên đã dùng ChatGPT để review bài. AI đưa ra một số gợi ý về cách diễn đạt nhưng không phát hiện bài còn thiếu phần liên hệ thực tế theo yêu cầu của giảng viên. |
+| Hiện đang xử lý bằng cách nào (workaround)? | Đọc lại đề bài, tự so sánh với nội dung đã viết và sử dụng ChatGPT để kiểm tra lỗi diễn đạt, chính tả hoặc xin góp ý chung. |
+| Mất bao lâu, bao lần? | Khoảng 20–30 phút cho mỗi lần kiểm tra, thường thực hiện 2 lần trước khi nộp. |
+| Insight / opportunity rút ra | Các công cụ AI phổ biến có thể hỗ trợ nhận xét bài viết nhưng phản hồi đôi khi còn chung chung, chưa đối chiếu đầy đủ với từng tiêu chí cụ thể trong rubric, đôi lúc còn nhầm lẫn và sai thông tin. |
+
+#### Tổng hợp
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Phỏng vấn sinh viên | 2 | 2/2 đã từng mất điểm vì lệch rubric, phải rà soát nhiều lần và nhờ người khác, tool AI kiểm tra | 0/2 có tín hiệu phản bác|
+| Poll trong lớp | 6 | 4/6 từng gặp khó khăn khi tự kiểm tra bài và không chắc đã đáp ứng đủ yêu cầu của đề bài | 2/6 cho rằng tự đọc lại bài hoặc nhờ bạn bè kiểm tra là đủ |
 
-**Nhóm đã sửa problem thế nào sau kiểm chứng:**
+**Nhóm đã sửa problem:** Thu hẹp từ "tự động kiểm tra bài làm trước khi nộp" thành **"hỗ trợ sinh viên đối chiếu bài làm với rubric, phát hiện tiêu chí chưa đáp ứng và gợi ý cải thiện trước khi nộp"**.
+
+Nhóm chưa có đủ bằng chứng để kết luận AI tốt hơn phương pháp checklist, review chéo. Cần kiểm thử thêm bằng cách cho AI đánh giá một số bài đã có nhận xét của giảng viên hoặc người chấm, sau đó so sánh kết quả theo từng tiêu chí.
+
 
 ### 3.3. Research giải pháp đã có
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| **FeedbackFruits – Self-Assessment** | [FeedbackFruits](https://feedbackfruits.com/solutions/self-assessment) | Sinh viên tự đánh giá bài làm dựa trên rubric hoặc bộ tiêu chí do giảng viên thiết lập | Có sẵn quy trình self-assessment, hỗ trợ rubric tùy chỉnh và đánh giá cá nhân hoặc nhóm | Phụ thuộc vào rubric do giảng viên thiết lập; không tập trung vào việc AI phân tích sâu nội dung bài làm và chỉ ra bằng chứng cho từng tiêu chí | Cần cho sinh viên đối chiếu từng tiêu chí, không chỉ đưa ra một điểm tổng thể |
+| **Turnitin Clarity – AI Assistant** | [Turnitin Clarity](https://guides.turnitin.com/hc/en-us/articles/36917529868429-AI-Tools-with-Turnitin-Clarity) | Bước kiểm tra và cải thiện bản nháp: sinh viên có thể đính kèm rubric, đặt câu hỏi và nhận phản hồi theo yêu cầu bài tập | AI có thể tham chiếu đề bài và rubric; hỗ trợ phản hồi về nội dung, cấu trúc và chỉnh sửa bài viết | Phụ thuộc vào cách sinh viên đặt câu hỏi; việc kiểm tra từng tiêu chí một cách có hệ thống vẫn cần được thiết kế rõ ràng | Nên cung cấp kết quả theo từng tiêu chí và chỉ rõ phần nội dung liên quan trong bài làm |
+| **ChatGPT – Assessment and Feedback** | [OpenAI: Assessment and Feedback](https://help.openai.com/en/articles/8313397-how-can-chatgpt-be-used-for-assessment-and-feedback) | Phân tích bài làm, đưa ra nhận xét và gợi ý cải thiện dựa trên rubric hoặc yêu cầu được cung cấp | Linh hoạt, có thể xử lý nhiều dạng yêu cầu và đưa ra phản hồi chi tiết; dễ thử nghiệm bằng prompt | Có thể đánh giá sai hoặc thiếu nhất quán; không nên sử dụng kết quả AI làm quyết định chấm điểm cuối cùng nếu thiếu con người kiểm tra | Có thể dùng LLM làm lõi phân tích, nhưng cần yêu cầu dẫn chứng từ bài làm và giới hạn AI ở vai trò hỗ trợ |
+| **Gradescope – Rubric-based Grading** | [Gradescope](https://www.gradescope.com/) | Giảng viên đánh giá bài làm theo rubric, cung cấp phản hồi và thống kê theo từng câu hỏi/tiêu chí | Hỗ trợ rubric linh hoạt, phản hồi nhất quán và thống kê kết quả đánh giá | Tập trung chủ yếu vào quy trình chấm bài của giảng viên, không phải công cụ để sinh viên tự kiểm tra trước khi nộp | Có thể học cách cấu trúc tiêu chí đánh giá và phản hồi theo từng mục thay vì chỉ đưa ra nhận xét chung |
+
+**Kết luận research:**
+
+Các công cụ hiện có đã giải quyết được nhiều phần của bài toán: tự đánh giá theo rubric, phản hồi bằng AI và chấm bài theo tiêu chí. Vì vậy, nhóm không nên xây dựng một công cụ chấm điểm AI tổng quát.
+
+Hướng phù hợp hơn là:
+
+```Sinh viên tải bài làm + rubric → AI phân tích từng tiêu chí → Chỉ ra nội dung đã đáp ứng / chưa đáp ứng → Đưa ra bằng chứng và gợi ý chỉnh sửa → Sinh viên tự quyết định chỉnh sửa trước khi nộp.```
+
+**Khoảng trống nhóm muốn tập trung:**
+
+- Đối chiếu từng tiêu chí trong rubric với nội dung thực tế của bài làm.
+- Chỉ rõ vị trí hoặc trích đoạn làm bằng chứng cho nhận xét của AI.
+- Phân biệt rõ tiêu chí đã đáp ứng, đáp ứng một phần và chưa có bằng chứng đáp ứng.
+- Không tự động chấm điểm cuối cùng hoặc khẳng định điểm số mà giảng viên sẽ cho.
+
 
 ---
 

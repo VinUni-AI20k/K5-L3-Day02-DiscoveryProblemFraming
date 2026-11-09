@@ -225,15 +225,15 @@ Việc sử dụng AI chỉ được cân nhắc ở các bước cần xử lý
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
 | Pitch Problem Card | Chuẩn bị 3 Problem Cards gồm Multi-channel Recruitment Posting, Candidate Application Consolidation và Candidate Pipeline Tracking, ưu tiên đề tài Multi-channel Recruitment Posting dựa trên kinh nghiệm từng phát triển công cụ đăng tin tuyển dụng bằng Python và Google Sheets | Có bản phân tích cá nhân về actor, bottleneck, impact, success metrics và quy trình hiện tại để chuẩn bị trình bày |
-| Phản biện bài của bạn khác | Phản biện, góp ý với các bài, các vấn đề thực tế đã gặp khi triển khai dự án của mọi người trong nhóm | Cập nhật sau khi nghe các thành viên trình bày |
-| Nhận phản biện | | |
+| Phản biện bài của bạn khác | Phản biện một số đề tài của Linh và Khương, góp ý bổ sung quy tắc và logic để hoàn thiện hơn | Cần bổ sung câu hỏi cụ thể và điều chỉnh sau trao đổi nếu có ghi chép |
+| Nhận phản biện | Chưa có ghi chép xác nhận câu hỏi và câu trả lời thực tế | Cần bổ sung người hỏi, nội dung phản biện và điều chỉnh thực tế nếu đã trao đổi |
 | Gom cluster / cây OST | Phân loại các vấn đề tuyển dụng thành ba nhóm gồm quản lý JD và đăng tuyển, tiếp nhận hồ sơ ứng viên, theo dõi tiến độ tuyển dụng | Có cơ sở phân nhóm các vấn đề liên quan để chuẩn bị thảo luận |
 | Chọn candidate problem | Ưu tiên Multi-channel Recruitment Posting, tập trung vào việc cập nhật và đồng bộ thông tin tuyển dụng trên nhiều nền tảng | Có đề xuất vấn đề cụ thể để đưa ra thảo luận |
 | Kiểm chứng / research | Tìm hiểu các benchmark từ NIJobs, Greenhouse, Robert Walters và nghiên cứu những tính năng của Workable, Zoho Recruit, Recruitee và Base E-Hiring | Có số liệu và giải pháp tham khảo để xác định phạm vi vấn đề, chưa sử dụng dữ liệu thị trường thay thế số liệu thực tế của doanh nghiệp |
-| Quy trình nhóm | Chuẩn bị quy trình từ tiếp nhận yêu cầu tuyển dụng, xây dựng JD, đăng bài đa kênh đến kiểm tra và cập nhật khi có thay đổi | Xác định những công đoạn có khả năng xuất hiện bottleneck để tiếp tục kiểm chứng |
+| Quy trình nhóm | Tôi dùng quy trình gom/soát của Vinh làm đầu vào cho phân tích mức can thiệp tại CP6, đã tích hợp qua PR #6. | Tách so số trên bảng ghép đúng khỏi ghép file sai mẫu; phần vẽ quy trình thuộc Vinh, bản tổng hợp thuộc Hưởng. |
 | Problem Statement | Thu hẹp vấn đề từ việc đăng tin tuyển dụng thủ công sang việc khó đảm bảo tính nhất quán của thông tin tuyển dụng khi JD thay đổi trên nhiều kênh | Có định hướng Problem Statement với actor, bottleneck, impact và metric rõ ràng hơn |
-| Mức can thiệp | Phân tích các bước có thể xử lý bằng quy tắc, tự động hóa quy trình và các bước cần phân tích nội dung ngôn ngữ tự nhiên | Có cơ sở lựa chọn phương án xử lý phù hợp, tránh sử dụng công nghệ phức tạp cho các tác vụ đơn giản |
-| Quyết định | Chuẩn bị các tiêu chí đánh giá tính cần thiết, khả năng sử dụng, tính khả thi và hiệu quả kinh tế | Chưa có quyết định chính thức của nhóm, cần tiếp tục kiểm chứng trước khi kết luận |
+| Mức can thiệp | Tôi phân tích độ mơ hồ/phức tạp, so sánh No AI, Rule, Workflow và Agent; bổ sung boundary và bốn rủi ro cho hướng nhà thầu. | CP6 đã tích hợp qua PR #6; Rule phù hợp so số, còn AI mapping là hướng mở rộng cần kiểm riêng. |
+| Quyết định | Tôi đề xuất Go cho hướng Rule ở bản CP6 ban đầu; bản review sau đó phân biệt chọn hướng thiết kế với điều kiện cho phép pilot. | Quyết định hiện tại là chọn Rule nhưng Not Yet cho pilot theo PR #10/#11; chờ quyền dữ liệu, mapping, đáp án và ngưỡng được xác nhận. |
 
 ### 4.1. Phân tích và điều chỉnh vấn đề cá nhân
 
@@ -277,6 +277,7 @@ Những thay đổi quan trọng phải được người phụ trách kiểm tr
 | CP2 | Hỗ trợ xây dựng cấu trúc Problem Card, workflow và phản biện giả thuyết | Làm rõ bottleneck, impact, success metrics và phương án không sử dụng công nghệ phức tạp | Ban đầu tập trung quá nhiều vào giải pháp thay vì xác định nguyên nhân vấn đề | Điều chỉnh cách phân tích theo Problem → Bottleneck → Intervention |
 | Research | Hỗ trợ tìm kiếm số liệu tuyển dụng và những phần mềm tương tự trên thị trường | Có nguồn tham khảo về thời gian tuyển dụng, khối lượng hồ sơ và các giải pháp hiện có | Benchmark chưa phản ánh trực tiếp doanh nghiệp cụ thể, một số tính năng cần kiểm tra trực tiếp | Phân biệt benchmark với baseline, giữ các khoảng trống cần kiểm chứng |
 | Phân tích giải pháp | Hỗ trợ so sánh các cách xử lý thủ công, tự động hóa và xử lý nội dung | Xác định những bước có thể xử lý bằng quy tắc và các bước cần hiểu ngữ nghĩa | Một số đề xuất vượt quá phạm vi vấn đề và chưa có bằng chứng về hiệu quả | Thu hẹp phạm vi vào đồng bộ và kiểm tra tính nhất quán của JD |
+| Rà soát bài nộp | Nhờ trợ lý đối chiếu báo cáo nhóm, nhật ký và báo cáo cá nhân với yêu cầu checkpoint | Xác định nội dung CP6 đã tích hợp và các việc còn cần người thực hiện hoặc nhóm xác nhận | Không thể xác nhận trải nghiệm cá nhân, kết quả thảo luận hay kiểm chứng thay thành viên | Cần tự kiểm các ghi nhận, hoàn thành reflection và cùng nhóm chốt các nội dung còn mở |
 
 ---
 
@@ -284,26 +285,41 @@ Những thay đổi quan trọng phải được người phụ trách kiểm tr
 
 ### 6.1. Tôi học được gì khi nghe Top 3 Problems của các bạn khác?
 
+Khi góp ý cho đề tài của Linh và Khương, tôi tập trung vào việc bổ sung quy tắc xử lý và làm rõ các trường hợp ngoại lệ. Với bài ghi chú cuộc gọi vào CRM của Linh, một cách cụ thể hóa là quy định trường nào bắt buộc và xử lý ra sao khi cuộc gọi chưa có thông tin cho trường đó. Với bài làm rõ user story của Khương, có thể dùng một tình huống biên để kiểm xem tiêu chí nghiệm thu đã đủ rõ cho người triển khai chưa. Điểm tôi rút ra là mỗi quy tắc nên gắn với một tình huống mà người khác có thể kiểm lại
+
 ### 6.2. Nhóm có lúc nào bị solution-first không? Lúc đó nhóm nhận ra và xử lý thế nào?
+
+Trong bài đối chiếu chào giá, hướng ban đầu là dùng AI để tự động đánh giá hồ sơ. Phần kiểm chứng ghi nhận lo ngại về độ chính xác và trách nhiệm khi kết quả sai. Nhóm thu hẹp phạm vi về việc phát hiện chênh lệch để chuyên viên kiểm lại. Sau khi tách việc ghép bảng khỏi việc so số, phần soát trên dữ liệu đã ghép đúng có thể dùng công thức và quy tắc cố định
 
 ### 6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể
 
+Ở bản CP6 ban đầu, tôi đề xuất Go với Rule vì phép so khối lượng và đơn giá khá rõ khi dữ liệu đã được ghép đúng. Khi đọc bản review, tôi thấy cần tách hai việc: chọn Rule để đánh giá và quyết định đã đủ điều kiện chạy pilot hay chưa. Chẳng hạn, hai dòng ghép sai vẫn có thể cho ra cùng tổng tiền, nên chỉ kiểm tổng là chưa đủ. Tôi giữ đề xuất dùng Rule và thấy hợp lý khi hoãn pilot cho đến khi có dữ liệu được phép dùng và đáp án do người có chuyên môn duyệt
+
 ### 6.4. Kết quả kiểm chứng có làm tôi bất ngờ không? Điều gì?
+
+Chi tiết khiến tôi chú ý là trong ba ý kiến được tổng hợp, có một người lo kết quả đối chiếu có thể sai và không rõ ai chịu trách nhiệm. Hai ý kiến còn lại cho thấy họ quan tâm đến công cụ hỗ trợ. Điều tôi rút ra là nhóm cần kiểm được mỗi cảnh báo đến từ dòng nào, ai xác nhận và xử lý thế nào nếu cảnh báo sai. Phần phỏng vấn hiện chưa có đủ số liệu thời gian và tần suất để dùng làm baseline
 
 ### 6.5. Điều khó nhất khi viết Problem Statement là gì?
 
+Điều khó nhất là giữ phạm vi của vấn đề và chỉ số đo cho khớp nhau. Theo số liệu Vinh ghi lại, gom và soát cộng lại mất khoảng 11–13 giờ mỗi vòng, còn riêng phần soát mất 5–6 giờ. Phương án Rule chỉ tác động đến phần soát trên bảng đã ghép đúng, nên mục tiêu dưới 90 phút phải so với thời gian của chính bước đó. Khi đo, cần tính cả thời gian chuyên viên kiểm, sửa và xử lý ngoại lệ để biết công việc thực sự giảm bao nhiêu
+
 ### 6.6. Nếu làm lại, tôi sẽ thay đổi điều gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?
+
+Nếu làm lại, tôi sẽ làm rõ từ đầu bước nào đang gây tốn công, số liệu lấy từ đâu và phần nào đã có thể xử lý bằng cách đơn giản hơn. Với bài chào giá, tôi sẽ hỏi sớm ai kiểm việc ghép mã, ai duyệt ngưỡng cảnh báo và nhóm có quyền dùng bộ hồ sơ nào. Tôi cũng sẽ đề nghị thử cách soát có checklist trên cùng bộ dữ liệu trước, để khi so với Rule có thể thấy thời gian tiết kiệm được đến từ bước nào
 
 ### 6.7. Hiểu bài
 
 Giải thích bằng 5–8 câu theo chuỗi:
-
 Problem → Workflow → Metric → Boundary → Intervention → Decision
 
-[Tự viết theo vấn đề và quyết định cuối cùng của nhóm]
+Chuyên viên kinh tế kỹ thuật mất nhiều công dò chênh lệch khối lượng và đơn giá trong bảng chào giá đã ghép. Quy trình đề xuất kiểm mã hạng mục, đơn vị và phiên bản trước, sau đó tính chênh lệch và chuyển các dòng cần xem lại cho chuyên viên. Mốc tham chiếu là 5–6 giờ công mỗi vòng theo ghi nhận của Vinh, còn mục tiêu là dưới 90 phút gồm cả kiểm, sửa và xử lý ngoại lệ, đồng thời phát hiện đủ chênh lệch đã biết trong bộ đáp án. Chuyên viên xác nhận ngoại lệ và kết quả cuối, còn số liệu gốc và quyết định chọn nhà thầu vẫn do người có trách nhiệm quản lý. Nhóm chọn Rule cho phần so số vì dữ liệu đã có cấu trúc và công thức có thể kiểm lại từng dòng. Trạng thái pilot hiện là Not Yet, chờ xác nhận quyền sử dụng hồ sơ, dữ liệu đầu vào, đáp án và ngưỡng kiểm
+
 ---
 
 ## 7. Tài liệu tham khảo
+- [PR #6 — Phần CP6 của Tuyên](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/6): nguồn phân tích mức can thiệp, boundary và rủi ro.
+- [Báo cáo nhóm](../team/group_report.md), mục 6–8; [PR #10](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/10) và [PR #11](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/11): phạm vi Rule và trạng thái Not Yet cho pilot.
+
 **[N1] NIJobs — What's slowing down your hiring? (2025)**
 **[N2] Greenhouse — The Hire Standard, Recruiting Benchmarks (2026)**
 **[N3] Robert Walters Vietnam — Job Application Overload (2025)**

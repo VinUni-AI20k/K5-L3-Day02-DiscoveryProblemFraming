@@ -147,3 +147,27 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 
 Học được cách cùng nhóm thu hẹp bài toán, xác định đúng điểm nghẽn và tìm hiểu giải pháp có sẵn trước khi chọn công nghệ. Qua phần research, tôi thấy không phải bài toán nào cũng cần AI; đôi khi Rule đã đủ phù hợp. Mình cũng hiểu rằng chọn được giải pháp chưa có nghĩa là có thể triển khai ngay, mà còn cần kiểm tra dữ liệu và cách đánh giá kết quả.
+
+### GiapManhTuyen-2A202603648
+
+**Phần việc phụ trách:**
+
+- CP6: phân tích mức can thiệp, boundary và bốn rủi ro cho bài toán đối chiếu chào giá nhà thầu.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Viết ma trận độ mơ hồ/phức tạp và so sánh No AI / Rule / Workflow / Agent; xác định Rule cho phần so số trên bảng đã ghép đúng.
+- Phân tích AI Canvas/PAIR cho nhánh mở rộng ghép file sai mẫu, giới hạn dữ liệu, vai trò chuyên viên và phương án quay về.
+- Đề xuất Go cho hướng Rule trong bản CP6 ban đầu; bản tổng hợp của Hưởng bổ sung điều kiện dữ liệu/đáp án và chốt Not Yet cho pilot. Tôi phân biệt đề xuất cá nhân với quyết định hiện tại.
+- Cập nhật nhật ký và reflection cá nhân trên nhánh `titus` tại `7a068fa`; bản review tích hợp giữ nguyên câu trả lời 6.1–6.6.
+
+**Bằng chứng** (phần nào trong báo cáo, file nào, commit nào):
+
+- [PR #6](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/6), phần CP6 được tích hợp; [nguồn tại b650c92](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/b650c927350787f4b09e9b3285add056a946c35a/report/team/group_report.md).
+- [Báo cáo nhóm](report/team/group_report.md), mục 6–8: phân tích gốc và bản tổng hợp sau review.
+- [Báo cáo cá nhân](report/individual/2A202603648_GiapManhTuyen.md), mục 4–6; [cập nhật tại 7a068fa](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/commit/7a068fa).
+
+**Điều mình học được từ phần nhóm:**
+
+- Chọn Rule để đánh giá không đồng nghĩa đã đủ điều kiện chạy pilot; cần quyền dữ liệu, mapping, bộ đáp án và ngưỡng do người có trách nhiệm xác nhận.
+- Không gộp thời gian ghép bảng với thời gian soát khi đánh giá lợi ích của một giải pháp chỉ tác động đến phần so số.

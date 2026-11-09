@@ -145,7 +145,7 @@ Nhận yêu cầu tuyển dụng và tiêu chí
 | Nhận phản biện | Câu hỏi tôi nhận được: Giọng vùng miền và tiếng ồn ngoại cảnh, sẽ gặp nhiều khó khăn về detech voice đặc biệt là số liệu về khoản vay, khoản trả nợ, thông tin của khách hàng, cần tối ưu mô hình như thế nào | Tôi đã sửa gì: không chỉ tối ưu một model, mà xây dựng pipeline nhận dạng giọng nói kết hợp xử lý âm thanh, fine-tuning và kiểm chứng dữ liệu tài chính. |
 | Gom cluster / cây OST | | |
 | Chọn candidate problem | | |
-| Kiểm chứng / research | | |
+| Kiểm chứng / research |Đã phỏng vấn 3 người làm về đấu thầu xây dựng | Kết quả kiểm chứng đã giúp nhóm điều chỉnh định hướng bài toán từ hệ thống AI tự động phát hiện sai lệch và đưa ra kết luận đánh giá sang công cụ AI hỗ trợ đối chiếu, rà soát hồ sơ (AI-assisted Document Review), áp dụng cơ chế Human-in-the-loop, trong đó AI đóng vai trò hỗ trợ phát hiện chênh lệch, còn chuyên viên chịu trách nhiệm kiểm chứng và đưa ra quyết định cuối cùng. |
 | Quy trình nhóm | | |
 | Problem Statement | | |
 | Mức can thiệp AI | | |
@@ -159,8 +159,8 @@ Nhận yêu cầu tuyển dụng và tiêu chí
 |---|---|---|---|---|
 | CP1 Scan |Dùng AI hỗ trợ diễn đạt và rà soát 5 ý tưởng ban đầu theo các lăng kính lặp lại, tốn thời gian và cần tổng hợp nhiều thông tin; kiểm tra cách viết Job Story. |Giúp nhận ra actor, bối cảnh và công việc cần hoàn thành trong từng ý; phát hiện các mô tả còn thiên về giải pháp. |AI lấy ví dụ không thực tế không thực sự hiểu nỗi đau khách hàng | Sửa các ví dụ theo quan điểm cá nhân + thảo luận ý kiến của mọi người |
 | CP2 Problem Card |Nhờ AI cấu trúc 3 Problem Cards, phác thảo quy trình 3–7 bước, chỉ ra bottleneck, đề xuất metric, phương án không A |Biến các ý tưởng rộng thành công việc cụ thể: nhập CRM sau cuộc gọi, tìm timestamp trong video, tổng hợp hồ sơ ứng viên; |Tương tự CP1 |Tương tự CP1 |
-| CP4 Research | |  | | |
-| CP5 Quy trình | | | | |
+| CP4 Research |Gợi ý câu hỏi xoáy sâu vào vấn đề|Câu hỏi hay dễ hiểu tập trung vào vấn đề|không có|không sửa gì phù hợp với mong muốn |
+| CP5 Quy trình |Gợi ý quy trình phù hợp đi kèm với các giải pháp công nghệ rõ ràng| | | |
 | CP5–6 Problem Statement | | | | |
 | CP6 Mức can thiệp / quyết định | | | | |
 
@@ -171,17 +171,19 @@ Nhận yêu cầu tuyển dụng và tiêu chí
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Mọi người chia sẻ cho tôi về các nỗi đau khác nhau ở các ngành nghề khác nhau, tôi thấy việc nhận biết nỗi đau thực sực, ai đau, ai sẵn sàng trả tiền để không đau, mình có thể giải quyết nỗi đau của khách hàng như thế nào, có ai đã làm chưa, chi phí input output là bao nhiêu, rất nhiều câu hỏi khiến một đề tài trước đây mình nghĩ là hay ho rất nhiều công nghệ, thực tế lại khó mang lại nhiều valu cho xã hội.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Có cá nhân tôi lo lắng về mặt dữ liệu, nên tôi đi tìm dữ liệu trước xem nhưng chủ đề nào đã có dữ liệu để train thì tôi thấy chủ đề voice to text đã có sẵn dữ liệu cả tiếng Anh tiếng Việt, tuy nhiên sau đó tôi mới nghĩ voice to text giải quyết nỗi đau nào của người dùng, và tôi nghĩ tới đầu tiên là sub phim chưa có phụ đề, chuyển đoạn hội thoại thành text để note lại task nhiệm vụ, lúc đó rất mơ hồ không biết nên lựa chọn đề tài gì ứng dụng voice to text cho thực sự mang lại valu, khi đó tôi mới nhờ AI gợi ý cho tôi các đề tài hot về voice to text, sau đó tôi đã trả lời hết những câu hỏi bên trên để tìm ra dự án phù hợp nhất tạo ra nhiều valu nhất. Sau đó thì nhóm tôi cũng làm vậy tuy nhiên nhóm đã đi khảo sát thực tế để cho kết quả khách quan hơn vì bản thân chúng tôi không phải người sử dụng sản phẩm.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
-
+Tôi không đổi ý sau khi bị phản biện. Đề tài của tôi muốn làm là ứng dụng AI voice to text để phân tích cập nhật dữ liệu chăm sóc khách hàng cho Bank, tôi bị phản biện về việc mô hình không nhận diện đúng số liệu ảnh hưởng đến kết quả dự đoán đầu ra, tôi nghĩ vấn đề này có thể tối ưu được và có nhiều phương pháp phân biệt cảm xúc của khách hàng qua voice kết hợp với text nhận diện được.
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
-
+Không bất ngờ vì vấn đề chung của AI không thể thay thế được con người là vì nó không có khả năng chịu trách nhiệm cho sai sót của mình,
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
-
+Khó khăn lớn nhất khi xây dựng Problem Statement là phân biệt rõ vấn đề cốt lõi với giải pháp công nghệ, tránh tư duy solution-first (đề xuất giải pháp trước khi hiểu đầy đủ vấn đề).
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
-
+Nếu làm lại tôi sẽ bắt đầu sớm hơn với vấn đề cốt lõi. Tôi sẽ phản biện nhóm mạnh hơn dựa vào những điểm yếu của AI như không thể chính xác 100%, không có khả năng chịu trách nhiệm, và đào sâu vào vấn đề cốt lõi của bài toán.
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
 ---

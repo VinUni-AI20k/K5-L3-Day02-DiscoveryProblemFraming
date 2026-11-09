@@ -49,23 +49,18 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi nhóm đang chọn dự án và phân công công việc, tôi muốn biết chính xác năng lực thực tế của từng thành viên, để giao đúng người đúng việc và tránh giao việc vượt quá khả năng hiện tại.|
-| Actor |Trưởng nhóm / người phân công (chịu trách nhiệm chính), toàn bộ thành viên nhóm (bị ảnh hưởng)|
-| Thời điểm / bối cảnh |Giai đoạn đầu dự án nhóm (sau khi chọn ý tưởng, trước khi bắt đầu code/implement)|
-| Quy trình hiện tại (3–7 bước) |
-1. Nhóm bàn luận chọn dự án
-2. Mỗi người tự giới thiệu sơ năng lực
-3. Trưởng nhóm hỏi thêm / đoán năng lực
-4. Phân công công việc
-5. Thành viên nhận việc và bắt đầu tìm hiểu
-| Bottleneck (bước nào, mất bao nhiêu phút) |Bước 3: Hỏi thêm / đoán năng lực → mất 20–40 phút, thông tin thiếu khách quan |
-| Impact (nếu không giải thì sao) |Phân công sai → thành viên mất thêm 1–3 ngày tìm hiểu, chất lượng deliverable giảm, tinh thần nhóm bị ảnh hưởng|
-| Success metric (baseline → target) |Thời gian bước phân công: 30–60 phút → dưới 20 phút
-Tỷ lệ thành viên nhận việc phù hợp: thấp → ≥ 80% (đo bằng feedback sau 1 tuần)|
-| Phương án không dùng AI |Dùng Google Form tự đánh giá kỹ năng + mức độ tự tin (1–5) + bảng Excel tổng hợp. Sau đó dành 5–7 phút cho mỗi người làm 1 câu hỏi kỹ thuật ngắn để kiểm chứng nhanh.|
-| Giả thuyết về AI (nếu có) |AI có thể hỗ trợ tổng hợp form + gợi ý phân công dựa trên dữ liệu tự đánh giá và kết quả câu hỏi kiểm chứng. Ngoài ra đưa cho AI phân tích và gợi ý dự án nên chọn dựa trên năng lực và phân tích những yêu cầu mà dự án cần có để chọn ra dự án thích hợp cho cả nhóm|
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
-Workflow
+| Trường                                    | Nội dung                                                                 |
+| ----------------------------------------- | ------------------------------------------------------------------------ |
+| Job Story                                 | Khi nhóm đang chọn dự án và phân công công việc, tôi muốn biết chính xác năng lực thực tế của từng thành viên, để giao đúng người đúng việc và tránh giao việc vượt quá khả năng hiện tại. |
+| Actor                                     | Trưởng nhóm / người phân công (chịu trách nhiệm chính), toàn bộ thành viên nhóm (bị ảnh hưởng) |
+| Thời điểm / bối cảnh                      | Giai đoạn đầu dự án nhóm (sau khi chọn ý tưởng, trước khi bắt đầu code/implement) |
+| Quy trình hiện tại (3–7 bước)             | 1. Nhóm bàn luận chọn dự án<br>2. Mỗi người tự giới thiệu sơ năng lực<br>3. Trưởng nhóm hỏi thêm / đoán năng lực<br>4. Phân công công việc<br>5. Thành viên nhận việc và bắt đầu tìm hiểu |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3: Hỏi thêm / đoán năng lực → mất 20–40 phút, thông tin thiếu khách quan |
+| Impact (nếu không giải thì sao)           | Phân công sai → thành viên mất thêm 1–3 ngày tìm hiểu, chất lượng deliverable giảm, tinh thần nhóm bị ảnh hưởng |
+| Success metric (baseline → target)        | Thời gian bước phân công: 30–60 phút → dưới 20 phút<br>Tỷ lệ thành viên nhận việc phù hợp: thấp → ≥ 80% (đo bằng feedback sau 1 tuần) |
+| Phương án không dùng AI                   | Dùng Google Form tự đánh giá kỹ năng + mức độ tự tin (1–5) + bảng Excel tổng hợp. Sau đó dành 5–7 phút cho mỗi người làm 1 câu hỏi kỹ thuật ngắn để kiểm chứng nhanh. |
+| Giả thuyết về AI (nếu có)                 | AI có thể hỗ trợ tổng hợp form + gợi ý phân công dựa trên dữ liệu tự đánh giá và kết quả câu hỏi kiểm chứng. |
+| Cảm nhận nhanh                            | Workflow |
 Quy trình nháp hiện tại:
 [1] Bàn chọn dự án               25 phút
 [2] Tự giới thiệu năng lực       15 phút
@@ -76,22 +71,16 @@ Quy trình nháp hiện tại:
 
 | Trường | Nội dung |
 |---|---|
-| Job Story |Khi mỗi ngày phải kiểm tra nhiều nhóm lớp, nhóm dự án và các deadline, tôi muốn nhìn nhanh những việc quan trọng trong ngày, để không bỏ sót hoặc nộp muộn.|
-| Actor |Tôi|
-| Thời điểm / bối cảnh | Hàng ngày trong kỳ học (đặc biệt giai kỳ nhiều lab/project)|
-| Quy trình hiện tại (3–7 bước) |
-1. Mở lần lượt các nhóm (Zalo/Teams…)
-2. Lướt thông báo + ghi chú mental
-3. Mở lại nhiều lần trong ngày vì sợ quên
-4. Đối chiếu với lịch cá nhân / deadline
-| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3: Check lại nhiều lần vì thông tin phân tán → mất 10–15 phút|
-| Impact (nếu không giải thì sao) |Mất trung bình > 30 phút/ngày, tăng nguy cơ bỏ sót deadline, gây lo lắng|
-| Success metric (baseline → target) |Thời gian check mỗi ngày: > 30 phút → dưới 10 phút
-Số lần bỏ sót deadline trong 2 tuần: có → 0|
-| Phương án không dùng AI |Tạo 1 checklist hàng ngày (Notion/Excel) + quy ước chỉ check 2 khung giờ cố định (sáng + tối).|
-| Giả thuyết về AI (nếu có) |AI có thể tổng hợp thông báo từ nhiều nhóm thành 1 danh sách ưu tiên theo deadline.|
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
-Rule / Workflow
+| Job Story                                 | Khi mỗi ngày phải kiểm tra nhiều nhóm lớp, nhóm dự án và các deadline, tôi muốn nhìn nhanh những việc quan trọng trong ngày, để không bỏ sót hoặc nộp muộn. |
+| Actor                                     | Tôi (sinh viên)                                                          |
+| Thời điểm / bối cảnh                      | Hàng ngày trong kỳ học (đặc biệt giai kỳ nhiều lab/project)               |
+| Quy trình hiện tại (3–7 bước)             | 1. Mở lần lượt các nhóm (Zalo/Teams…)<br>2. Lướt thông báo + ghi chú mental<br>3. Mở lại nhiều lần trong ngày vì sợ quên<br>4. Đối chiếu với lịch cá nhân / deadline |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3: Check lại nhiều lần vì thông tin phân tán → mất 10–15 phút |
+| Impact (nếu không giải thì sao)           | Mất trung bình > 30 phút/ngày, tăng nguy cơ bỏ sót deadline, gây lo lắng |
+| Success metric (baseline → target)        | Thời gian check mỗi ngày: > 30 phút → dưới 10 phút<br>Số lần bỏ sót deadline trong 2 tuần: có → 0 |
+| Phương án không dùng AI                   | Tạo 1 checklist hàng ngày (Notion/Excel) + quy ước chỉ check 2 khung giờ cố định (sáng + tối). |
+| Giả thuyết về AI (nếu có)                 | AI có thể tổng hợp thông báo từ nhiều nhóm thành 1 danh sách ưu tiên theo deadline. |
+| Cảm nhận nhanh                            | Rule / Workflow |
 Quy trình nháp hiện tại:
 [1] Mở lần lượt các nhóm          7 phút
 [2] Lướt + ghi chú mental        10 phút
@@ -101,20 +90,16 @@ Quy trình nháp hiện tại:
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi phải tìm tài liệu học tập từ nhiều nguồn trong khóa học AI, tôi muốn gom nhanh những phần quan trọng, để học tập hiệu quả hơn và không lãng phí thời gian. |
-| Actor | Tôi|
-| Thời điểm / bối cảnh |Khi gặp khái niệm mới hoặc cần ôn tập trước lab/kiểm tra (2–3 lần/tuần)|
-| Quy trình hiện tại (3–7 bước) |1. Mở slide + tài liệu trên LMS
-2. Tìm thêm trên Google / group chat / GitHub
-3. Đọc lướt + quyết định cái nào quan trọng
-4. Ghi chú / lưu lại|
-| Bottleneck (bước nào, mất bao nhiêu phút) |Bước 3: Đọc lướt + lọc thông tin quan trọng từ nhiều nguồn → mất 30–50 phút |
-| Impact (nếu không giải thì sao) |Mất 1–2 giờ mỗi lần, dễ bỏ sót phần quan trọng, hiệu quả học tập giảm|
-| Success metric (baseline → target) |Thời gian tìm + lọc tài liệu: 1–2 giờ → dưới 40 phút/lần|
-| Phương án không dùng AI |Tạo template note cố định (Mục tiêu – Khái niệm chính – Ví dụ – Câu hỏi) + chỉ ưu tiên đọc tối đa 2 nguồn chính trước.|
-| Giả thuyết về AI (nếu có) |AI có thể tóm tắt nhanh nhiều nguồn và chỉ ra phần quan trọng theo mục tiêu học tập.|
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
-Workflow / Agent
+| Job Story                                 | Khi phải tìm tài liệu học tập từ nhiều nguồn trong khóa học AI, tôi muốn gom nhanh những phần quan trọng, để học tập hiệu quả hơn và không lãng phí thời gian. |
+| Actor                                     | Tôi (sinh viên)                                                          |
+| Thời điểm / bối cảnh                      | Khi gặp khái niệm mới hoặc cần ôn tập trước lab/kiểm tra (2–3 lần/tuần) |
+| Quy trình hiện tại (3–7 bước)             | 1. Mở slide + tài liệu trên LMS<br>2. Tìm thêm trên Google / group chat / GitHub<br>3. Đọc lướt + quyết định cái nào quan trọng<br>4. Ghi chú / lưu lại |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3: Đọc lướt + lọc thông tin quan trọng từ nhiều nguồn → mất 30–50 phút |
+| Impact (nếu không giải thì sao)           | Mất 1–2 giờ mỗi lần, dễ bỏ sót phần quan trọng, hiệu quả học tập giảm |
+| Success metric (baseline → target)        | Thời gian tìm + lọc tài liệu: 1–2 giờ → dưới 40 phút/lần |
+| Phương án không dùng AI                   | Tạo template note cố định (Mục tiêu – Khái niệm chính – Ví dụ – Câu hỏi) + chỉ ưu tiên đọc tối đa 2 nguồn chính trước. |
+| Giả thuyết về AI (nếu có)                 | AI có thể tóm tắt nhanh nhiều nguồn và chỉ ra phần quan trọng theo mục tiêu học tập. |
+| Cảm nhận nhanh                            | Workflow / Agent |
 Quy trình nháp hiện tại:
 [1] Mở tài liệu LMS               5 phút
 [2] Tìm thêm nguồn ngoài         30 phút

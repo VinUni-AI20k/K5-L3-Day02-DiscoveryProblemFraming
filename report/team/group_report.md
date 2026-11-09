@@ -61,17 +61,25 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| **#3 — Tóm tắt tài liệu học tập (200 trang slide ôn thi)** | 5 | 5 | 5 | 4 | 5 | 5 | 5 | **34** |
+| **#2 — Ghi nhận và phân loại chi tiêu cá nhân** | 5 | 5 | 4 | 4 | 5 | 3 | 5 | **31** |
+| **#5 — Hướng dẫn thủ tục hành chính cho người dân** | 4 | 4 | 4 | 3 | 2 | 5 | 3 | **25** |
+| **#6 — Tìm nhà cung cấp thay thế khi hết tồn kho** | 4 | 4 | 3 | 4 | 2 | 4 | 3 | **24** |
 
-**Candidate được chọn:**
+**Candidate được chọn:** **`#3` — Tóm tắt tài liệu học tập (Trích xuất công thức và kiến thức cốt lõi từ slide bài giảng khi ôn thi cuối kỳ)** *(hoặc `#2` nếu nhóm chốt chọn bài toán chi tiêu cá nhân).*
 
 **Vì sao chọn:**
+- **Actor và Domain sát sườn 100% thành viên:** Cả nhóm đều là sinh viên/học viên trực tiếp trải qua nỗi đau đọc hàng trăm trang slide trước kỳ thi; quy trình hiện tại rất rõ từng bước và có sẵn dữ liệu thật (các bộ slide môn học).
+- **Thuận lợi kiểm chứng thực tế ngay ở CP4:** Dễ dàng phỏng vấn trực tiếp người thật (các bạn học viên ở nhóm khác trong lớp theo đúng luật *The Mom Test*) và thu thập survey nhanh ngay trong 30 phút của buổi Lab mà không phải giả định.
+- **Phân tầng rõ rệt giữa No AI / Rule / Workflow / Agent:** Dễ dàng đặt lên bàn cân giữa giải pháp không dùng AI (dùng bản tóm tắt khóa trên, mục lục chuẩn), Rule (script gom text từ PDF/PPTX), và Workflow AI (trích xuất khái niệm/công thức theo chương + con người kiểm tra lại công thức toán/hình vẽ).
 
 **Vì sao loại các candidate còn lại:**
+- **Loại `#5` (Hướng dẫn thủ tục hành chính):** Dù pain point xã hội rất lớn và rất hay để so sánh giữa Decision Tree (Rule) với AI, nhưng trong khuôn khổ 4 tiếng của buổi Lab, nhóm không thể tiếp cận phỏng vấn trực tiếp "cán bộ tiếp nhận hồ sơ" thật ở CP4. Ngoài ra, bài toán có rủi ro pháp lý cao (Viability) khi văn bản pháp luật thay đổi liên tục.
+- **Loại `#6` (Tìm nhà cung cấp thay thế khi hết hàng):** Quy trình phụ thuộc nhiều vào yếu tố bên ngoài (các nhà cung cấp truyền thống không mở API tồn kho thời gian thực mà phải gọi điện/nhắn Zalo hỏi tay). Nhóm cũng khó tìm được nhân viên thu mua (Procurement) thực tế để phỏng vấn kiểm chứng ngay trong giờ Lab.
+- **Loại `#2` (Ghi nhận chi tiêu cá nhân):** Đạt điểm rất cao (32/35) và dễ kiểm chứng, nhưng trên thị trường đã có quá nhiều ứng dụng giải quyết tốt bằng Rule/tích hợp biến động số dư ngân hàng (Money Lover, MISA, app ngân hàng). Phần bottleneck thực sự còn lại chủ yếu nằm ở thói quen/động lực duy trì của người dùng hơn là bài toán kỹ thuật cần tới AI.
 
 **Xử lý bất đồng (nếu có):**
+- Một số thành viên ấn tượng với tính thực tiễn doanh nghiệp/xã hội của **`#5` (Thủ tục hành chính)** và **`#6` (Nhà cung cấp thay thế)**, trong khi thành viên khác nghiêng về **`#2` (Chi tiêu cá nhân)** và **`#3` (Tóm tắt tài liệu học tập)** vì có thể phỏng vấn người thật ngay tại lớp ở CP4. Nhóm đã thống nhất chấm điểm khách quan trên 7 tiêu chí, ưu tiên tiêu chí *"Vừa sức lab"* và *"Có thể kiểm chứng bằng hành vi người thật ngay tại lớp (CP4)"* để chốt chọn **`#3`** (và giữ `#2` làm phương án dự phòng sát nhất).
 
 ---
 

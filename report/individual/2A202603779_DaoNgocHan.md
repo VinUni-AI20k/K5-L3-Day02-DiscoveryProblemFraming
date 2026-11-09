@@ -10,7 +10,7 @@
 - MSSV: 2A202603779
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: D3
-- Link repo nhóm: https://github.com/congnt180263/K5-L3B-Day02-D3-DiscoveryProblemFraming
+- Link repo nhóm: https://github.com/congnt180263/K5-L3B-DAY02-D3-DiscoveryProblemFraming
 
 ---
 

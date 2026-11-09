@@ -171,26 +171,24 @@ Tổng: ~25 phút/buổi (rải rác ở nhiều nguồn)
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
-- Chưa có thuyết trình
+- Khi tôi nghe top 3 problems của các bạn khác, tôi thấy đa phần đều là các thao tác thủ công lặp đi lặp lại như tổng hợp tài liệu, ghi chép cuộc họp hay kiểm tra đánh giá hồ sơ. Mức đau và tần suất khác nhau, một số bài toán nghe qua hấp dẫn, nhưng khi nhìn kỹ thì đa phần đã có lời giải hoặc LLM có thể làm thay rồi.
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
-- Khi nêu problem card của nhau
-- Do phản biện của nhau nên đã nhận ra
+- Từ lúc thảo luận ý tưởng, cả nhóm thường có xu hướng nghĩ ngay đến ứng dụng AI Agent hoặc chat bot cho dự án. Sau khi phản biện chéo và kiểm tra đặt câu hỏi lại theo mẫu, cả nhóm dần nhận ra mình đã vô thức tập trung vào kết quả thay vì vấn đề, từ đó tập trung đi sâu vào vấn đề, workflow.
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
-- Có
-- Khi bị phản biện là bỏ ý 3 vì "ngưỡng năng lực quá mơ hồi", tôi đã bỏ
+- Khi pitch ý tưởng về dự án đoán ngưỡng năng lực học tập để gợi ý tài liệu phù hợp, tôi đã không nghĩ đến các metric đo lường độ hiệu quả của giải pháp mà mặc nhiên cho rằng nó sẽ hoạt động như 1 AI Agent. Nhận thấy rủi ro về tính khả thi và giá trị thực tế nên tôi đã chủ động loại bỏ.
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
-- Không
+- Kết quả phỏng vấn không làm tôi bất ngờ, vì nó là vấn đề mà nhóm tôi đã gặp và dự đoán các bạn khác trong lớp cũng sẽ gặp. Cũng do chúng tôi để ý nhiều câu hỏi bị trùng lặp trong discord đã dẫn đến ý tưởng này.
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
-- Xác định quy trình
+- Khó nhất là khi bóc tách và định lượng quy trình Before và After thành từng bước. Ngoài ra, việc xác định ranh giới can thiệp của AI cũng đòi hỏi cân nhắc kỹ và xem xét lại workflow.
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
-- Chưa có thuyết trình
+- Nếu làm lại, tôi sẽ thúc đẩy nhóm tiến hành phỏng vấn thêm nhiều hơn để có thêm nhiều dữ liệu. Nhằm thiết kế các giải pháp phù hợp và hiệu quả cho vấn đề.
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
-- Problem: Học viên gặp vấn đề với hệ thông
-- Quy trình: Học viên tự tìm kiếm trên Discord hoặc viết ticket cho lab coach
-- Metric: Thời gian xử lý 1 vấn đề
-- Boundary: AI chỉ tổng hợp từ dữ liệu được cấp quyền
-- Mức can thiệp AI: AI không được trả lời thay coach
-- Quyết định: Workflow
+- Problem: Học viên thường xuyên lãng phí từ 10 đến 15 phút để tìm lại các câu trả lời kỹ thuật cũ của Coach trên Discord hoặc phải tạo ticket chờ đợi.
+- Quy trình: Học viên phải tự lướt và đọc thủ công từng thread, trong khi quy trình mới sẽ dùng hệ thống tự động gom cụm và trích xuất đúng đoạn giải đáp liên quan nhất trước khi quyết định tạo ticket.
+- Metric: Giảm thời gian tìm kiếm từ 10-15 phút xuống dưới 2 phút.
+- Boundary: Quy định hệ thống chỉ truy xuất dữ liệu từ các kênh hỏi đáp công khai được cấp quyền.
+- Mức can thiệp AI: AI giới hạn ở workflow có con người tham gia kiểm soát, không để AI tự ý suy diễn hay trả lời thay flow.
+- Quyết định: Go có điều kiện cho giai đoạn Pilot thử nghiệm trong 2 tuần, kèm theo ngưỡng dừng định lượng nếu tỷ lệ trích dẫn sai vượt quá 5%.
 
 ---
 

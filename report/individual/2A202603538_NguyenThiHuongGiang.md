@@ -6,8 +6,8 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên:
-- MSSV:
+- Họ tên:Nguyễn Thị Hương Giang
+- MSSV:2A202603538
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm:
 - Link repo nhóm:
@@ -19,15 +19,15 @@
 Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng hợp nhiều thông tin** · **Pain từ người khác**.
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
-|---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
+## Education – Problem Statements
+
+| STT | Loại problem | Problem statement | Người liên quan | Tần suất / Thời gian / Tác động |
+|---|---|---|---|---|
+| 1 | Lặp lại | Khi kết thúc mỗi buổi học, tôi muốn tự động tổng hợp nội dung bài giảng, bài tập về nhà và gửi thông báo cho phụ huynh, để không phải soạn và gửi thông tin thủ công. | Giáo viên, phụ huynh | 2–3 lớp/ngày, khoảng 15 phút/lớp |
+| 2 | Tốn thời gian | Khi cần xây dựng thời khóa biểu cho học kỳ mới, tôi muốn tự động đề xuất lịch học dựa trên lịch rảnh của giáo viên, phòng học và số tiết của từng môn, để hạn chế trùng lịch và không phải điều chỉnh thủ công nhiều lần. | Nhân viên giáo vụ, giáo viên, ban giám hiệu | Mỗi học kỳ 1 lần, khoảng 2–3 ngày để hoàn thiện và điều chỉnh thời khóa biểu |
+| 3 | Cần đọc, tổng hợp nhiều thông tin, lặp lại | Khi kết thúc một học kỳ, tôi muốn tổng hợp điểm số, mức độ chuyên cần và kết quả học tập của từng học sinh, để xác định những em cần được hỗ trợ thêm, những em được khen thưởng và trả về báo cáo cho từng phụ huynh. | Giáo viên chủ nhiệm, ban giám hiệu | 30–40 học sinh/lớp, khoảng 2–3 giờ/lớp |
+| 4 | Đọc và tổng hợp thông tin | Quản lý việc đưa đón học sinh: Nhà trường phải tổng hợp danh sách học sinh đi xe buýt, lịch nghỉ học, tuyến xe, điểm đón/trả và thông tin người được phép đón. Khi phụ huynh thay đổi người đón, học sinh nghỉ đột xuất hoặc thay đổi điểm đón, thông tin cần được cập nhật và thông báo kịp thời để tránh nhầm lẫn hoặc bàn giao sai người. | Nhân viên phụ trách xe, giáo viên chủ nhiệm, tài xế, phụ huynh | 5–10 tuyến xe/ngày; khoảng 30–45 phút/ngày để tổng hợp, kiểm tra và cập nhật thông tin |
+| 5 | Pain từ người khác | Khi phụ huynh muốn tìm hiểu lịch học, học phí, quy định hoặc chương trình đào tạo, họ muốn nhận được câu trả lời nhanh và chính xác, để không phải liên hệ trực tiếp với nhà trường cho từng câu hỏi. | Phụ huynh, nhân viên tư vấn tuyển sinh | 20–30 câu hỏi/ngày, khoảng 5–10 phút/câu |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 

@@ -12,7 +12,7 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | | | | |
+| 1 | Lại Trọng Đức | 2A202604019 | Chuẩn bị candidate problem,hỗ trợ tổng hợp các candidate vào bảng Pitch (CP3). | laitrongduc |
 | 2 | Nguyễn Bảo Trung | 2A202604013 | Thuyết trình (Pitch) & trả lời câu hỏi phản biện & insight + problem| trungnb|
 | 3 | | | | |
 | 4 | | | | |
@@ -55,3 +55,26 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 
 - Học được từ các thành viên trong nhóm về các khía cạnh kỹ thuật (tech).
+
+### LaiTrongDuc-2A202604019
+
+**Phần việc phụ trách:**
+
+- Chuẩn bị candidate problem, Problem Card và quy trình nháp; hỗ trợ tổng hợp các candidate của mình vào bảng Pitch để nhóm có cơ sở so sánh ở CP3.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Chuẩn bị bản nháp 6 candidate dạng Job Story theo 4 lăng kính với sự hỗ trợ của AI; phân biệt dữ kiện trong repo với giả thuyết về pain và ghi rõ bằng chứng còn thiếu.
+- Chuẩn bị 3 Problem Card: rà soát phần bài còn thiếu trước khi nộp; tìm đúng yêu cầu của checkpoint; truy nguồn cho nhận định research. Mỗi card có actor, bottleneck dự kiến, success metric, phương án không dùng AI và quy trình nháp 5 bước. Các số phút được ghi rõ là ước tính cần kiểm chứng.
+- Tổng hợp 3 candidate vào mục 2.1. Pitch của báo cáo nhóm, dòng 4–6, kèm actor và bottleneck; giữ nguyên các candidate của thành viên khác.
+- Ghi lại phản biện của AI và điều chỉnh trong bản nháp: tách phạm vi các card, bổ sung cách đo, yêu cầu kiểm tra nội dung nguồn và cân nhắc phương án đơn giản trước khi chọn AI.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- [Báo cáo cá nhân](report/individual/2A202604019_LaiTrongDuc.md): mục 2 (6 candidate), mục 3 (3 Problem Card, 3 quy trình nháp và bảng phản biện của AI).
+- [Báo cáo nhóm](report/team/group_report.md): mục 2.1. Pitch, dòng 4–6, người đưa ra là Lại Trọng Đức.
+
+**Điều mình học được từ phần nhóm:**
+
+- Khi chuẩn bị candidate để nhóm so sánh, cần mô tả rõ actor và bước nghẽn; nhiều yêu cầu hoặc tài liệu chưa đủ chứng minh người dùng thực sự gặp khó khăn. Các ước tính cần được kiểm chứng trước khi dùng làm cơ sở chọn bài toán.
+- Với candidate truy nguồn, cần đối chiếu đoạn nội dung có hỗ trợ đúng nhận định hay không. Chỉ có một đường link mở được chưa đủ; cách ghi nguồn và kiểm tra chéo cũng là phương án cần cân nhắc trước khi dùng AI.

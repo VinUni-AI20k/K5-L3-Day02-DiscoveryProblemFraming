@@ -41,13 +41,39 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | Làm rõ user story e-commerce (CP1 #4) | Tôi chọn đây là vấn đề ưu tiên pitch, từ trải nghiệm trực tiếp triển khai chức năng product variant tại Genkin. | Thời gian khoảng 10 phút chỉ dành cho story khó; tôi ít phải làm lại. Cần kiểm chứng mức ảnh hưởng và tần suất. |
-| 2 | Tổng hợp tài liệu VinUni thành checklist và milestone (CP1 #2) | Tôi mất khoảng 3 tiếng trong lần tổng hợp gần nhất; cần quản lý công việc cá nhân và nhóm rõ hơn. | Tôi chưa xác định được bước nào mất nhiều thời gian nhất trong quá trình đọc slide, xem video và làm checklist. |
+| 1 | Research phục vụ content marketing (CP1 #1) | Tôi chọn vấn đề bạn tôi chia sẻ làm phần ưu tiên pitch. Một job cụ thể mất khoảng 2 ngày research; có người làm thực tế để trao đổi thêm. | Chưa biết thời gian này có phổ biến không, bước research nào mất nhiều thời gian nhất và tiêu chí đánh giá insight. |
+| 2 | Làm rõ user story e-commerce (CP1 #4) | Tôi trực tiếp gặp yêu cầu chưa rõ khi triển khai product variant tại Genkin. | Khoảng 10 phút chỉ dành cho story khó; tôi ít phải làm lại. Cần kiểm chứng mức ảnh hưởng và tần suất. |
 | 3 | Kiểm thử và mô tả API để bàn giao frontend (CP1 #5) | Tôi mất gần 15 phút/API và đã có frontend hỏi lại vì tài liệu thiếu mô tả tham số. | Chưa đo số case bỏ sót và thời gian hỏi lại; cần xem checklist có đủ giải quyết không. |
 
-Tôi không đưa research marketing và daily standup vào top 3 lần này. Tôi vẫn giữ cả hai trong bảng scan CP1.
+Tôi không đưa tổng hợp tài liệu VinUni và daily standup vào top 3 lần này. Tôi vẫn giữ cả hai trong bảng scan CP1.
 
-### Problem Card #1 — Làm rõ ràng buộc nghiệp vụ trong user story e-commerce
+### Problem Card #1 — Research làm căn cứ cho định hướng nội dung
+
+| Trường | Nội dung |
+|---|---|
+| Job Story | Khi nhận brief và tài liệu sản phẩm từ nhãn hàng, tôi muốn xác định nhu cầu thị trường, pain point/insight khách hàng và yếu tố giúp nội dung hiệu quả trên nền tảng, để xây dựng định hướng nội dung có cơ sở và kịp deadline. |
+| Actor | Người làm nội dung tại công ty truyền thông giải trí, đồng thời nhận job freelance; trường hợp được chia sẻ là bạn của tôi. |
+| Thời điểm / bối cảnh | Nhận một job với mong muốn, idea và tài liệu sản phẩm từ nhãn hàng; cần research trước khi xác định pillar/angle và viết nội dung. |
+| Quy trình hiện tại (3–7 bước) | Quy trình research nháp từ chia sẻ của bạn tôi: 1. Đọc mong muốn và tài liệu sản phẩm; 2. Research thị trường/nhu cầu; 3. Tìm thông tin khách hàng và pain point; 4. Phân tích yếu tố nội dung hiệu quả trên nền tảng; 5. Tổng hợp phát hiện làm căn cứ đề xuất pillar/angle. Các bước 2–4 có thể lặp lại hoặc đổi thứ tự. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Cụm research và tổng hợp bằng chứng (bước 2–5) là điểm nghẽn sơ bộ. Người bạn báo khoảng 2 ngày làm tập trung cho research của một job; chưa có phút từng bước, chưa biết bước con chiếm nhiều nhất. |
+| Impact (nếu không giải thì sao) | Research chiếm thời gian đáng kể trong job đã kể; người bạn phản ánh có thể trễ deadline khi nhận nhiều job và chất lượng nội dung về sau bị ảnh hưởng nếu research sơ sài. Chưa đo mức giảm chuyển đổi/viral và chưa xác lập quan hệ nhân quả. |
+| Success metric (baseline → target) | Baseline tham chiếu: 2 ngày research cho một job cụ thể. Trước pilot cần đo lại bằng phút cho phạm vi brief rõ ràng. Mục tiêu dự kiến: giảm ít nhất 25% thời gian research trên brief tương đương; mọi nhận định dùng để chốt hướng nội dung phải có nguồn hoặc được đánh dấu là giả thuyết. Người làm content kiểm độ phù hợp trước khi sử dụng. Không dùng viral/chuyển đổi làm metric chính của bước research. |
+| Phương án không dùng AI | Brief checklist để hỏi bổ sung; bảng research chuẩn có nguồn, ngày, đối tượng, phát hiện và giả thuyết; kho tài liệu tái sử dụng theo ngành/nền tảng. |
+| Giả thuyết về AI (nếu có) | Tổng hợp và nhóm bằng chứng từ nguồn được chọn, đề xuất các giả thuyết insight/angle để người làm content kiểm. Không coi suy luận AI là insight đã xác thực; không bịa dữ liệu khách hàng. Khả năng tiếp cận dữ liệu phải được kiểm tra. |
+| Cảm nhận nhanh | Chưa biết; Workflow là giả thuyết cần so sánh với template research. Chưa có lý do chọn Agent. |
+
+Quy trình nháp hiện tại (phân rã giả định; chưa xác nhận phạm vi các bước có khớp hoàn toàn với 2 ngày research):
+
+```mermaid
+flowchart TD
+  A["Đọc brief và tài liệu — T1: chưa đo"] --> B["Research thị trường — T2: chưa đo"]
+  B --> C["Tìm pain point khách hàng — T3: chưa đo"]
+  C --> D["Phân tích nền tảng — T4: chưa đo"]
+  D --> E["Tổng hợp căn cứ pillar/angle — T5: chưa đo"]
+  E -.-> N["Cụm bước 2–5: nghẽn sơ bộ, cần đo tách"]
+```
+
+### Problem Card #2 — Làm rõ ràng buộc nghiệp vụ trong user story e-commerce
 
 | Trường | Nội dung |
 |---|---|
@@ -70,32 +96,6 @@ flowchart TD
   B --> C["Hỏi và xác nhận nghiệp vụ — chưa đo riêng"]
   C --> D["Triển khai theo yêu cầu — chưa đo"]
   B -.-> N["Làm rõ story khó: khoảng 10 phút; cần tách bước"]
-  C -.-> N
-```
-
-### Problem Card #2 — Tổng hợp tài liệu học tập thành kế hoạch hành động
-
-| Trường | Nội dung |
-|---|---|
-| Job Story | Khi lập kế hoạch học tập và dự án VinUni, tôi muốn tổng hợp yêu cầu từ các tài liệu và kênh chương trình thành checklist và milestone rõ ràng, để quản lý việc cá nhân và nhóm mà không bỏ sót yêu cầu quan trọng. |
-| Actor | Học viên VinUni đồng thời tham gia quản lý công việc nhóm; trường hợp cụ thể là tôi. |
-| Thời điểm / bối cảnh | Khi cần xem lại slide, video workshop, email và tiến độ trên cohort để xác định việc phải làm. Hiện ghi việc trên giấy. |
-| Quy trình hiện tại (3–7 bước) | Quy trình nháp: 1. Tập hợp tài liệu/thông báo liên quan; 2. Đọc slide và xem lại video; 3. Rút yêu cầu thành các việc trên giấy; 4. Xếp checklist và milestone cá nhân/nhóm. |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Cụm bước 2–3: đọc/xem lại rồi chuyển thông tin thành việc cần làm. Chưa xác định riêng bước nào chiếm nhiều phút nhất. 180 phút là tổng của lần gần nhất, không phải thời gian riêng bottleneck. |
-| Impact (nếu không giải thì sao) | Mất khoảng 3 tiếng cho lần tổng hợp gần nhất; ghi giấy trực quan nhưng khó quản lý; tổng hợp chưa kỹ có nguy cơ mất ý. Chưa có bằng chứng đã trễ deadline hay số yêu cầu thực sự bỏ sót. |
-| Success metric (baseline → target) | Baseline tham chiếu: khoảng 180 phút/lần gần nhất. Mục tiêu dự kiến: giảm ít nhất 30% thời gian trên gói tài liệu tương đương (tham chiếu 126 phút), đồng thời không bỏ sót yêu cầu bắt buộc trong danh sách đối chiếu đã kiểm thủ công. Đo riêng thời gian đọc để học và thời gian trích việc/lập kế hoạch; ghi rõ khối lượng tài liệu. |
-| Phương án không dùng AI | Gom liên kết về một nơi; dùng checklist mẫu với các cột việc, nguồn, deadline, người phụ trách, trạng thái; tận dụng mục lục/timestamp nếu có. Thử cách này trước để biết phần pain còn lại. |
-| Giả thuyết về AI (nếu có) | Hỗ trợ trích yêu cầu từ tài liệu được cung cấp, gắn nguồn/trang/timestamp và soạn nháp checklist. Người học đối chiếu, xác nhận deadline và phân công; không tự suy ra deadline hay thay thế việc học nội dung. Chưa xác nhận có transcript video. |
-| Cảm nhận nhanh | Chưa biết; so sánh No AI với Workflow sau kiểm chứng. |
-
-Quy trình nháp hiện tại ( T1 + T2 + T3 + T4 ≈ 180 phút cho lần đã kể):
-
-```mermaid
-flowchart TD
-  A["Tập hợp nguồn — T1: chưa đo"] --> B["Đọc slide, xem video — T2: chưa đo"]
-  B --> C["Rút yêu cầu thành việc — T3: chưa đo"]
-  C --> D["Xếp checklist và milestone — T4: chưa đo"]
-  B -.-> N["Bước 2–3: cụm nghẽn cần tách thời gian"]
   C -.-> N
 ```
 
@@ -127,17 +127,17 @@ flowchart TD
 
 ### Card muốn pitch nhất
 
-- Card số: **1 — Làm rõ user story e-commerce (vấn đề 4 ở CP1)**.
-- Vì sao: tôi muốn đưa trải nghiệm đọc yêu cầu và triển khai product variant tại Genkin ra để nhóm phân tích, đặc biệt là các ràng buộc và tình huống biên chưa rõ.
-- Câu hỏi muốn nhóm phản biện: Với thời gian làm rõ khoảng 10 phút/story khó và ít phải làm lại, vấn đề này có đủ đáng giải không? Checklist acceptance criteria có đủ hay còn khó khăn nào cần hỗ trợ thêm?
+- Card số: **1 — Research phục vụ content marketing (vấn đề 1 ở CP1)**.
+- Vì sao: tôi muốn nhóm tìm hiểu khó khăn thực tế của bạn tôi khi nhận mong muốn, idea và tài liệu sản phẩm từ nhãn hàng rồi phải research thị trường, khách hàng và nền tảng để xác định hướng nội dung. Với một job cụ thể, phần research mất khoảng 2 ngày làm việc tập trung.
+- Câu hỏi muốn nhóm phản biện: Trong phần research, bước nào thực sự tốn thời gian và có thể cải thiện bằng template hoặc công cụ hỗ trợ? Làm thế nào rút ngắn thời gian mà vẫn giữ được căn cứ đáng tin cậy cho insight và hướng nội dung?
 
 ### AI đã phản biện card thế nào
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| Lựa chọn top 3 ban đầu ưu tiên tổng hợp tài liệu và đưa research marketing vào danh sách. | Không giữ lựa chọn ban đầu. | Tôi chọn user story e-commerce làm card ưu tiên pitch, bỏ research marketing khỏi top 3 và giữ vấn đề checklist VinUni, tài liệu API. |
-| Card 1: 10 phút/story khó và ít làm lại chưa chứng minh mức ảnh hưởng lớn. | Tôi cần kiểm chứng thêm. | Giữ đúng giới hạn số liệu và đưa mức độ đáng giải vào câu hỏi muốn nhóm phản biện. |
-| Card 2: 180 phút gộp học hiểu và lập kế hoạch. | Tôi cần đo riêng. | Chưa coi toàn bộ 180 phút là thời gian có thể cắt giảm. |
+| Card 1: hai ngày chỉ thuộc một job, chưa thể xem là thời gian research điển hình. | Đúng với thông tin bạn tôi cung cấp. | Tôi ghi rõ phạm vi một job cụ thể; chưa suy rộng cho mọi job. |
+| Card 1: chưa có số liệu chứng minh research chưa kỹ là nguyên nhân trực tiếp làm nội dung không chuyển đổi hoặc không viral. | Tôi cần kiểm chứng thêm. | Phân biệt phản ánh của bạn tôi với kết quả đã đo; dùng thời gian research và khả năng truy nguồn làm hướng đánh giá trước mắt. |
+| Card 2: 10 phút/story khó và ít làm lại chưa chứng minh mức ảnh hưởng lớn. | Tôi cần kiểm chứng thêm. | Giữ đúng giới hạn số liệu, chưa khẳng định thiệt hại lớn. |
 | Card 3: vấn đề đã xảy ra là tài liệu thiếu mô tả tham số, không phải API thiếu tham số. | Đúng với thông tin tôi cung cấp. | Giữ trọng tâm ở độ đầy đủ của tài liệu và kiểm thử. |
 
 ---
@@ -164,7 +164,7 @@ flowchart TD
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
 | CP1 Scan | Làm rõ và diễn đạt 5 vấn đề tôi tự đề xuất theo Job Story. | Đặt câu hỏi về actor, bước khó, thời gian và hậu quả. | Diễn đạt ban đầu có thể khiến 2 ngày/job và 10 phút/story bị hiểu là thời gian phổ biến; chưa phân biệt thiếu tham số API với thiếu mô tả tham số. | Xác nhận 2 ngày là một job cụ thể, 10 phút cho story khó; frontend hỏi lại do tài liệu thiếu mô tả tham số. |
-| CP2 Problem Card | Nhờ AI hỗ trợ cấu trúc card, vẽ quy trình nháp và phản biện từ thông tin CP1. | Giúp phân biệt tổng thời gian với thời gian từng bước và xem xét phương án không AI. | Top 3 ban đầu chưa đúng ưu tiên của tôi; có nhiều ghi chú biên tập trong nội dung báo cáo. | Tôi chọn vấn đề 4 làm card ưu tiên pitch, bỏ research marketing khỏi top 3; yêu cầu nội dung chính trình bày theo ngôi tôi. |
+| CP2 Problem Card | Nhờ AI hỗ trợ cấu trúc card, vẽ quy trình nháp và phản biện từ thông tin CP1. | Giúp phân biệt tổng thời gian với thời gian từng bước và xem xét phương án không AI. | Top 3 ban đầu chưa đúng ưu tiên của tôi; có nhiều ghi chú biên tập trong nội dung báo cáo. | Tôi chốt research marketing làm card ưu tiên pitch, giữ user story e-commerce và tài liệu API, bỏ tổng hợp tài liệu VinUni khỏi top 3; yêu cầu nội dung chính trình bày theo ngôi tôi. |
 | CP4 Research | | | | |
 | CP5 Quy trình | | | | |
 | CP5–6 Problem Statement | | | | |

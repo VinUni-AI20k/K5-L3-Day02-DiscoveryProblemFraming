@@ -18,9 +18,9 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
+| 1 | Phùng Quang Trà | Khi có bộ hồ sơ giải ngân online mới, CRO muốn kiểm tra đủ giấy tờ và nhập lên hệ thống nhanh, để khách không phải chờ và phàn nàn vì xử lý chậm. | CRO nhập liệu; khách hàng chờ giải ngân bị ảnh hưởng gián tiếp. | Bước 3–4: đọc, trích thông tin và nhập hệ thống, ước tính ~45/80 phút mỗi bộ (~10 bộ/tháng); ~3/10 bộ bị trả về vì thiếu/sai; chưa bấm giờ thực tế. | |
+| 2 | Phùng Quang Trà | Khi đến ngày đầu tháng, tôi muốn biết tháng trước đã chi bao nhiêu và phát sinh vào đâu, để điều chỉnh chi tiêu tháng sau. | Người dùng cá nhân quản lý chi tiêu từ nhiều app ngân hàng / ví. | Bước 3–4: chép và phân loại giao dịch từ nhiều app, ước tính ~10/23 phút mỗi tháng; chỉ tổng kết xong 1/3 tháng gần đây. | |
+| 3 | Phùng Quang Trà | Khi kết thúc ngày làm việc, tôi muốn biết task nào đã xong, chưa xong và sắp tới, để sáng hôm sau bắt đầu ngay mà không bỏ sót việc. | Nhân viên văn phòng nhận việc qua email / chat. | Bước 1: lục lại email/chat tìm việc phát sinh, ước tính ~15/33 phút mỗi ngày; bỏ sót ~2 việc/tuần. | |
 | 4 | | | | | |
 | 5 | | | | | |
 | 6 | | | | | |

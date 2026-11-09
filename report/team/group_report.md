@@ -5,9 +5,9 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: Trustmebro
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
+- Candidate problem được chọn (1 câu): Dev mới mất nhiều thời gian tìm hiểu hệ thống của công ty vì tài liệu có thể thiếu hoặc không tồn tại. Họ phải tự lần mò đọc mã nguồn hoặc hỏi đồng nghiệp, nhưng câu trả lời không phải lúc nào cũng đầy đủ, khiến quá trình làm việc chậm hơn
 - Quyết định cuối: Go / Not Yet / No-Go
 
 ---
@@ -18,9 +18,9 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
+| 1 | Lê hữu Toàn | Khi nhận câu hỏi thường gặp từ khách hàng tôi muốn tôi muốn trả lời nhanh và đúng thông tin, để khách hàng sớm đc giải quyết vấn đề | Nhân viên hỗ trợ, khách hàng | Nhân viên phải tìm lại thông tin và tự soạn câu trả lời cho các câu hỏi lặp lại | 	Câu hỏi lặp lại có thật sự gây ảnh hưởng lớn không, hay chỉ làm nhân viên mất vài phút? Có bằng chứng về số lượng và tổng thời gian mỗi tuần không?  |
+| 2 | Lê hữu Toàn | Khi cần thông tin trong nhiều tài liệu nội bộ, tôi muốn tìm được câu trả lời nhanh chóng để không bị mất nhiều thời gian | Nhân viên mới, nhân viên vận hành | Thông tin nằm rải rác trong nhiều tài liệu nên khó tìm đúng câu trả lời nhanh chóng |Đây là vấn đề thiếu công cụ tìm kiếm hay tài liệu nội bộ vốn thiếu, cũ và mâu thuẫn? Nếu câu trả lời không có trong tài liệu thì giải pháp có giúp được không? |
+| 3 | Lê hữu Toàn | khi chuẩn bị cải thiện sản phẩm, tôi muốn hiểu khách hàng đang gặp khó khăn gì để đề xuất giải quyết đúng yêu cầu | Nhóm hỗ trợ, nhóm sản phẩm | Phải đọc và tự tổng hợp nhiều phản hồi để nhận ra vấn đề khách hàng thường gặp |	Làm sao biết vấn đề khách hàng được nhắc nhiều nhất cũng là vấn đề quan trọng nhất? Nhóm có phân biệt tần suất phản hồi với mức độ ảnh hưởng không? |
 | 4 | | | | | |
 | 5 | | | | | |
 | 6 | | | | | |
@@ -44,10 +44,10 @@
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian dev mới cần để hiểu công ty và dự án trước khi bắt đầu xử lý công việc
+├── Opportunity A: Dev mới mất thời gian tìm thông tin vì tài liệu nằm rải rác ở nhiều nơi
+├── Opportunity B: Dev mới khó biết tài liệu nào đầy đủ, mới nhất và đáng tin cậy
+└── Opportunity C: Khi thiếu thông tin, dev mới khó biết cần hỏi ai và phải tự lần theo code
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
@@ -78,16 +78,14 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | dev mới thường mất nhiều thời gian để tìm hiểu cấu trúc và các vận hành hệ thống | value | 5 | 2 | có |
+| 2 | thông tin thường được rải trong nhiều tài liệu | value | 4 | 3 | có |
+| 3 | thời gian kéo dài do khó tìm thông tin | value | 4 | 2 | có |
+| 4 | sử dụng ai để tra cứu dữ liệu nội bộ |Viability| 5 | 1 |- |
 
 *Điền 4–6 giả định; xóa dòng thừa.*
 
-Giả định nhóm kiểm chứng trong buổi này:
+Giả định nhóm kiểm chứng trong buổi này:dev mới mất nhiều thời gian tìm hiểu hệ thống vì thông tin nằm rải rác; khó khăn chính là tìm đúng thông tin, và một nơi tra cứu tập trung có thể giúp họ tìm câu trả lời nhanh hơn
 
 ### 3.2. Kiểm chứng
 
@@ -129,36 +127,50 @@ Tổng hợp:
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 
 ```text
+HIỆN TẠI — khoảng 4 tiếng/lần tìm hiểu feature
+
+[1 Nhận task, xác định phần cần tìm hiểu: 15']
+→ [2 Đọc kiến trúc và quy ước dự án: 45']
+→ [3 Tìm tài liệu về feature: 60']
+→ [4 Đọc code và lần theo feature liên quan: 90'] ← BOTTLENECK
+→ [5 Hỏi đồng nghiệp, xác nhận cách hiểu: 30']
+
 
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 |Dev mới |Task được giao|Xác định feature cần tìm hiểu |Ước tính 15 phút |Xác định phạm vi cần đọc |
+| 2 | Dev mới|Tài liệu dự án |Hiểu kiến trúc và quy ước cơ bản |Ước tính 45 phút |Tài liệu có thể thiếu |
+| 3 |Dev mới |Tên feature, tài liệu liên quan |Thông tin ban đầu về feature | Ước tính 60 phút|Khó biết tài liệu nào liên quan |
+| 4 |Dev mới |Mã nguồn, feature liên quan |Hiểu flow và các phần liên đới |Ước tính 90 phút |Phải tự lần theo code |
+| 5 |Dev mới |Câu hỏi chưa rõ |Xác nhận cách hiểu |Ước tính 30 phút |Có thể phải chờ lead |
 
-**Bottleneck chính:**
+**Bottleneck chính:**Bước 4 — dev mới phải tự đọc mã nguồn và lần theo các feature liên quan, mất ước tính 90 phút. Tài liệu có thể thiếu nên khó xác định đúng luồng xử lý
 
 ### 4.2. Quy trình tương lai
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
 ```text
+TƯƠNG LAI — mục tiêu dưới 2 tiếng/lần tìm hiểu
 
+[1 Dev nhập tên feature và câu hỏi: 5']               ← CON NGƯỜI
+→ [2 Tìm tài liệu và code liên quan: 10']             ← RULE
+→ [3 Tóm tắt flow, kiến trúc và liên kết nguồn: 10']  ← AI
+→ [4 Dev kiểm tra nguồn, hỏi người hướng dẫn nếu thiếu: 30'] ← CON NGƯỜI
+→ [5 Dev đọc sâu phần liên quan và bắt đầu task: 60'] ← CON NGƯỜI
 ```
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước |5 |5 |Một số bước tìm và tổng hợp được hỗ trợ |
+| Tổng thời gian |Khoảng 4 tiếng	 |Dưới 2 tiếng	 | |
+| Số bước thủ công | 5/5|3/5 |Dev vẫn kiểm chứng và đọc phần code cần thiết |
+| Bottleneck chính |Tự tìm và lần theo code feature liên quan |Dev kiểm tra độ phù hợp của nguồn và tóm tắt |Cần xác nhận nguồn trước khi áp dụng |
+| Rủi ro mới phát sinh | |AI bỏ sót hoặc diễn giải sai flow |dev kiểm tra và hỏi người hướng dẫn khi chưa chắc chắn|
 
 ---
 
@@ -277,7 +289,9 @@ Vì sao:
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+-Khảo sát mới có 24 người, trong đó 7 người đã đi làm xác nhận gặp vấn đề này
+-Chưa kiểm chứng mục tiêu dùng AI có giúp giảm thời gian tìm hiểu xuống dưới 2 tiếng mà vẫn đảm bảo dev hiểu đúng feature hay không
+-phỏng vấn thêm dev mới, bấm giờ quy trình hiện tại và thử nghiệm trên một feature nhỏ
 
 ## 10. Tài liệu tham khảo
 

@@ -89,16 +89,16 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-
-*Điền 4–6 giả định; xóa dòng thừa.*
+| 1 | Sinh viên ôn thi cuối kỳ thực sự mất 3–5 tiếng để lật giở đọc lại toàn bộ slide (>150–200 trang) để lọc công thức/kiến thức, và họ thực sự cần một bản tóm tắt trích xuất mới thay vì dùng lại tài liệu tóm tắt có sẵn từ khóa trước (No AI). | Value | 5 | 2 | ✅ |
+| 2 | Bottleneck gây tốn thời gian nhất là bước đọc lướt, định vị và gõ lại công thức/định nghĩa cốt lõi sang file tổng hợp (chứ không phải bước học thuộc lòng hay làm bài tập). | Value | 4 | 2 | ✅ |
+| 3 | AI (Multimodal LLM / OCR) có thể đọc và trích xuất chính xác công thức toán, ký hiệu chuyên ngành và sơ đồ từ slide dạng PDF/PPTX mà không bị ảo giác (hallucination) hay viết sai công thức. | Feasibility | 5 | 2 | ✅ |
+| 4 | Sinh viên sẵn sàng tin tưởng và sử dụng bản tóm tắt do hệ thống tạo ra để ôn thi (nếu có trích dẫn số trang slide gốc đối chiếu) mà không cần phải tự lật giở đọc lại toàn bộ từng trang slide từ đầu. | Usability | 5 | 1 | ✅ |
+| 5 | Chi phí xử lý token/API trên mỗi bộ slide (150–200 trang) đủ rẻ (< 5.000 – 10.000 VNĐ/bộ môn) hoặc có thể tận dụng các mô hình/công cụ miễn phí để sinh viên sẵn sàng sử dụng. | Viability | 4 | 3 | — |
+| 6 | Slide bài giảng của trường/giảng viên không bị ràng buộc nghiêm ngặt về bản quyền hoặc bí mật đề thi, cho phép sinh viên đưa vào các công cụ AI để xử lý học tập cá nhân. | Viability | 3 | 3 | — |
 
 Giả định nhóm kiểm chứng trong buổi này:
+- **Giả định #1 (Value) & Giả định #4 (Usability):** Đây là hai giả định có **Độ quan trọng cao (5/5)** nhưng **Bằng chứng còn thấp (1–2/5)**. Nếu sinh viên có thói quen chỉ xin tài liệu khóa trên hoặc không tin tưởng bản tóm tắt tự động (vẫn phải đọc lại từ đầu vì sợ trượt môn), bài toán sẽ hoàn toàn sụp đổ. Nhóm sẽ kiểm chứng bằng phỏng vấn trực tiếp sinh viên/học viên trong lớp theo phương pháp *The Mom Test* ngay tại CP4.
+- **Giả định #3 (Feasibility):** Kiểm chứng nhanh bằng cách lấy mẫu thử 5–10 trang slide có chứa công thức toán phức tạp và sơ đồ từ tài liệu thật của các thành viên để kiểm tra khả năng trích xuất của mô hình.
 
 ### 3.2. Kiểm chứng
 

@@ -1,4 +1,4 @@
-# Báo cáo cá nhân — MSSV_HoTen
+# Báo cáo cá nhân — 2A202603552_NguyenThiThuyDung
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -199,93 +199,36 @@ flowchart TD
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.** 
 
 ### 6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?
-
-
+Ban đầu, mình nghĩ công việc nghiên cứu tài liệu của mình khá khác với những vấn đề về sự kiện NEU mà bạn cùng nhóm chia sẻ. Nhưng khi nghe bạn nói về việc tìm thông tin, tổng hợp điều kiện tham gia và theo dõi thời hạn đăng ký, mình thấy cả hai đều mất công đọc, chọn lọc và kiểm tra thông tin từ nhiều nơi. Chuyện bạn phải theo dõi lịch sự kiện cũng khá giống việc mình theo dõi lịch họp, vì thông báo nằm rải rác nên dễ bỏ sót hoặc phải tìm lại. Mình nhận ra khi nghe các bạn trình bày, nếu tìm hiểu kỹ từng bước thì có thể thấy những khó khăn chung dù đề tài khác nhau.
 
 ### 6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?
-
-**Gợi ý tự viết:**
-
-- Có lúc nào tôi hoặc nhóm muốn xây ngay AI Agent nghiên cứu thị trường không?
-- Những ý nào trong OST thực chất là solution thay vì opportunity?
-- Nhóm xử lý thế nào khi nhận ra No AI hoặc Rule có thể giải quyết một phần pain?
-- Điều gì khiến nhóm quay lại xác định vấn đề trước khi chọn giải pháp?
-
-**[Tự viết tình huống thực sự xảy ra]**
+Có lúc nhóm nghĩ ngay đến việc làm website tổng hợp thông tin hoặc dùng AI để tự nghiên cứu tài liệu. Khi cùng xem lại, mình và bạn cùng nhóm nhận ra chúng mình đang nói nhiều về thứ muốn làm nhưng chưa hiểu rõ người dùng cần gì nhất. Nhóm quay lại tách từng bước như tìm kiếm, đọc, tổng hợp và kiểm tra thông tin. Qua đó, mình học được cách chậm lại một chút trước khi chọn giải pháp, kể cả khi ý tưởng ban đầu có vẻ hấp dẫn.
 
 ### 6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.
+Ban đầu, mình cho rằng đọc tài liệu và lấy thông tin để so sánh là bước tốn thời gian nhất, với ước lượng khoảng 60 phút cho mỗi hệ thống. Khi nhận được câu hỏi mình đã đo thực tế chưa và liệu một bảng so sánh mẫu có giúp giảm thời gian không, mình nhận ra mình đang hơi chắc chắn với một con số mới chỉ là ước lượng. Mình bắt đầu cân nhắc việc dùng tiêu chí chung và bảng mẫu trước, đồng thời xem lại liệu khâu kiểm tra thông tin mới là phần gây chậm nhiều hơn. Sau lần đó, mình không còn mặc định cần AI ngay mà muốn đo thử công việc thực tế để có cơ sở lựa chọn.
 
-**Gợi ý tự viết:**
-
-- Ban đầu tôi nhận định bottleneck chính nằm ở bước đọc/trích xuất vì sao?
-- Tôi đã nhận được câu hỏi phản biện cụ thể nào?
-- Câu hỏi đó khiến tôi thay đổi quan điểm gì?
-- Tôi đã điều chỉnh Problem Card hoặc cách lựa chọn mức AI như thế nào?
-
-**[Tự viết một ví dụ thật theo cấu trúc: Quan điểm ban đầu → Phản biện → Thay đổi]**
 
 ### 6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?
-
-**Gợi ý tự viết:**
-
-- Tôi phát hiện điều gì khi nghiên cứu G2, Elicit và Consensus?
-- Những công cụ có sẵn đã giải quyết phần nào của bài toán?
-- Có điều gì tôi tưởng là pain lớn nhưng chưa có dữ liệu chứng minh không?
-- Việc thiếu phỏng vấn thực tế có làm tôi thay đổi độ tự tin vào giả định ban đầu không?
-
-**[Tự viết từ kết quả research hoặc kiểm chứng đã thực hiện]**
+Khi tìm hiểu các công cụ có sẵn, mình khá bất ngờ vì việc tìm kiếm, tổng hợp và so sánh thông tin đã được hỗ trợ ở nhiều mức độ. Điều này khiến mình nghĩ rằng nhóm nên thử tận dụng những gì đã có trước khi xây thêm một công cụ mới. Mình cũng nhận ra có công cụ hỗ trợ chưa có nghĩa là mọi khó khăn của người dùng đều được giải quyết. Vì các tình huống phỏng vấn trong bài mới là giả lập, mình vẫn thấy cần trao đổi với người dùng thật để biết nhận định của nhóm đúng đến đâu.
 
 ### 6.5. Điều khó nhất khi viết Problem Statement là gì?
-
-**Gợi ý tự viết:**
-
-- Khó khăn lớn nhất của tôi là xác định actor, bottleneck, metric hay boundary?
-- Tại sao chỉ giảm thời gian chưa đủ để đánh giá thành công?
-- Vì sao các nhận định về chức năng hệ thống phải có nguồn bằng chứng?
-- Tôi đã học được gì khi phân biệt "không tìm thấy" với "không tồn tại"?
-
-**[Tự viết trải nghiệm cá nhân]**
+Với mình, khó nhất là chuyển từ nhận xét “việc này khá mất thời gian” sang một mô tả cụ thể, có thể kiểm tra được. Cả mình và bạn cùng nhóm đều có những ước lượng ban đầu, nhưng chưa đo thì chưa thể chắc bước nào thực sự gây chậm nhất. Chẳng hạn, con số 150 phút cho một hệ thống vẫn cần được kiểm chứng. Mình cũng hiểu rằng tổng hợp nhanh hơn chỉ có ích khi thông tin đủ chính xác để người dùng dựa vào đó lựa chọn.
 
 ### 6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?
-
-**Gợi ý tự viết:**
-
-- Tôi có nên phỏng vấn BA và đo thời gian nghiên cứu thực tế ngay từ CP1–CP2 không?
-- Có nên thử phương án No AI trước khi cân nhắc AI Workflow?
-- Tôi sẽ phản biện thế nào nếu nhóm lựa chọn Agent quá sớm?
-- Tôi sẽ đặt câu hỏi nào để phân biệt pain thực tế với giả định chủ quan?
-
-**[Tự viết những thay đổi mình thực sự muốn thực hiện]**
+Nếu làm lại, mình muốn cùng bạn hỏi người dùng và quan sát một công việc thực tế ngay từ đầu. Mình sẽ hỏi kỹ hơn rằng họ mất thời gian vì tìm thông tin, vì đọc quá nhiều hay vì phải kiểm tra lại những thông tin chưa rõ. Mình cũng muốn thử cách đơn giản như bảng tổng hợp chung và danh sách kiểm tra trước khi kết luận cần AI. Dù nhóm đã chọn hướng AI hỗ trợ theo từng bước, mình đồng ý với quyết định Not Yet — cần kiểm chứng thêm trước khi triển khai.
 
 ### 6.7. Hiểu bài
-
-**Tự giải thích bằng 5–8 câu, không nhìn tài liệu, theo chuỗi:**
-
-1. **Problem:** BA nghiên cứu các hệ thống HIS/EHR/AI Agent đang gặp vấn đề gì?
-2. **Quy trình:** Quy trình hiện tại gồm những bước nào và bottleneck dự kiến nằm ở đâu?
-3. **Metric:** Baseline và target của nhóm là gì? Đo thời gian và chất lượng như thế nào?
-4. **Boundary:** AI không được tự làm gì và lúc nào BA phải kiểm tra?
-5. **Mức can thiệp AI:** Vì sao nhóm lựa chọn Workflow kết hợp Rule và HITL thay vì Agent?
-6. **Quyết định:** Vì sao nhóm lựa chọn Not Yet? Cần bằng chứng gì để quyết định Go?
-
-**[Tự diễn giải bằng 5–8 câu theo cách hiểu của mình]**
+Theo mình hiểu, bài toán nhóm chọn là việc người nghiên cứu mất nhiều thời gian tìm, đọc và so sánh thông tin từ nhiều tài liệu để lập một bảng so sánh có căn cứ. Công việc bắt đầu từ chọn đối tượng và tiêu chí so sánh, sau đó tìm tài liệu, lấy thông tin cần thiết, đối chiếu và kiểm tra lại kết quả. Nhóm đang cho rằng bước đọc và lấy thông tin mất nhiều thời gian nhất, nhưng vẫn cần đo thực tế để xác nhận. Mục tiêu dự kiến là giảm từ khoảng 150 phút xuống dưới 90 phút cho mỗi hệ thống; con số ban đầu mới là ước lượng, còn ít nhất 90% nhận định cần có nguồn hoặc được ghi rõ là chưa xác minh. Nhóm chọn để AI hỗ trợ đọc và tổng hợp theo các bước định sẵn, còn người thực hiện vẫn kiểm tra nguồn, sửa lỗi và duyệt kết quả. AI không được tự thêm thông tin hay kết luận rằng một chức năng không tồn tại chỉ vì chưa tìm thấy trong tài liệu. Mình hiểu quyết định Not Yet là nhóm cần hỏi người dùng thật và thử làm trên cùng bộ tài liệu để so sánh thời gian, độ chính xác trước khi quyết định triển khai.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
 1. VinUni AI20K. **K5 · L3 · Day 02 — Discovery & Problem Framing.** https://github.com/VinUni-AI20k/K5-L3-Day02-DiscoveryProblemFraming
-
 2. Nhóm NEU65. **Báo cáo nhóm Day 02 — Discovery & Problem Framing.** https://github.com/vuThai05/K5-L3A-DAY02-NEU65-DiscoveryProblemFraming
-
 3. G2. **Compare Software and Services.** https://www.g2.com/compare
-
 4. G2. **Researching and Customizing Software Recommendations on G2.** https://documentation.g2.com/help/docs/researching-and-customizing-software-recommendations-on-g2
-
 5. Elicit. **AI for Research & Decision-Making.** https://elicit.com/
-
 6. Elicit Help Center. **Getting Started with Elicit: Which Workflow Should I Use?** https://support.elicit.com/en/articles/14757543-getting-started-with-elicit-which-workflow-should-i-use
-
 7. Consensus Help Center. **How Consensus Works.** https://help.consensus.app/en/articles/9922673-how-consensus-works
-
 8. Consensus Help Center. **Responsible AI & Limitations.** https://help.consensus.app/en/articles/10046838-responsible-ai-limitations

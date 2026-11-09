@@ -5,8 +5,8 @@
 ## Thông tin nhóm
 
 - Tên nhóm: 3randomguy
-- Candidate problem nhóm chọn (1 câu): 
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Candidate problem nhóm chọn (1 câu): Hỗ trợ nhóm trưởng soạn nháp phần nhận định tiến độ và rủi ro tuần từ dữ liệu cập nhật phân tán
+- Quyết định cuối (Go / Not Yet / No-Go): Go
 
 ## Thành viên
 

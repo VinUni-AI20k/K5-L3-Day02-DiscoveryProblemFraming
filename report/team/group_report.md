@@ -5,14 +5,26 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
-- Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
-- Quyết định cuối: Go / Not Yet / No-Go
+- Tên nhóm: TEAMLAGI
+- Thành viên: 6 người, xem [TEAM.md](../../TEAM.md). Trưởng nhóm Nguyễn Trọng Hưởng xác nhận trong chat ngày 2026-11-09 rằng coach đã cho phép quy mô này và các thành viên đã đồng ý phân công.
+- Candidate problem được chọn (1 câu): Đối chiếu hồ sơ chào giá của các nhà thầu với yêu cầu/BOQ và giữa các nhà thầu để phát hiện chênh lệch.
+- Quyết định cuối: nhóm xác nhận sau review; bản tổng hợp mục 8 đề xuất Not Yet cho triển khai/pilot, ưu tiên kiểm phương án Rule.
+- Nguồn hướng đã chọn: trưởng nhóm cung cấp trong chat. Phạm vi đề xuất sau review là phần soát khối lượng/đơn giá trên bảng đã ghép đúng; actor và dữ liệu tham chiếu theo Vinh, quyền sử dụng và kiểm chứng CP4 được kiểm riêng.
+
+**Nguồn bản tổng hợp:** nội dung review CP5–CP6 được tổng hợp từ nhánh Vinh/Tuyên và ghi rõ đề xuất, baseline theo nguồn, giả định và target. CP3 dùng ghi chép trao đổi thực tế; CP4 dùng bằng chứng người ngoài nhóm. Theo dõi bàn giao tại [nhật ký điều phối](../../docs/TEAM_WORK_LOG.md).
 
 ---
 
 ## 2. Hội tụ nhóm (CP3)
+
+**Phần đã xác nhận:** nhóm đã thảo luận và chọn hướng ở mục 1. **Phần chưa có nguồn:** ghi chép pitch/challenge, cluster, OST, shortlist/điểm và lý do chọn–loại. Các mục 2.1–2.4 dưới đây chờ nội dung nhóm tự thực hiện và cung cấp; không suy diễn từ báo cáo CP1–CP2 thành kết quả thảo luận CP3.
+
+| Nội dung cần đưa vào báo cáo | Căn cứ cần nhóm cung cấp | Kiểm tra khi tổng hợp |
+|---|---|---|
+| Pitch và challenge | Candidate đã thực sự trình bày; ai hỏi ai; câu hỏi và điều chỉnh thực tế | Mỗi thành viên có ít nhất một câu hỏi; phân biệt card chuẩn bị với card đã pitch |
+| Cluster và OST | Cách nhóm đã gom; một outcome; các opportunity và ý đã gạch bỏ nếu có | Nhánh là nhu cầu/pain; không thay bằng tên công cụ/tính năng |
+| Shortlist và điểm | Ba candidate, điểm 1–5 theo bảy tiêu chí, căn cứ nhóm sử dụng | Chỉ tính tổng từ điểm nhóm cung cấp; không tự tạo điểm |
+| Lý do và bất đồng | Lý do nhóm chọn, loại ít nhất hai candidate khác và cách xử lý bất đồng nếu có | Chưa có ghi chép không được diễn đạt thành “không có bất đồng” |
 
 ### 2.1. Pitch
 
@@ -30,12 +42,6 @@
 | 10 | | | | | |
 | 11 | | | | | |
 | 12 | | | | | |
-| 13 | | | | | |
-| 14 | | | | | |
-| 15 | | | | | |
-| 16 | | | | | |
-| 17 | | | | | |
-| 18 | | | | | |
 
 ### 2.2. Cluster
 
@@ -50,10 +56,10 @@
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME:
+├── Opportunity A:
+├── Opportunity B:
+└── Opportunity C:
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
@@ -68,17 +74,108 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 | | | | | | | | | |
 | | | | | | | | | |
 
-**Candidate được chọn:**
+**Candidate được chọn:** Đối chiếu hồ sơ chào giá của các nhà thầu với yêu cầu/BOQ và giữa các nhà thầu để phát hiện chênh lệch. Nguồn: trưởng nhóm xác nhận trong chat; chi tiết phạm vi còn chờ chốt.
 
-**Vì sao chọn:**
+**Vì sao chọn:** Chưa có lý do do nhóm cung cấp; chờ ghi lại lập luận thực tế.
 
-**Vì sao loại các candidate còn lại:**
+**Vì sao loại các candidate còn lại:** Chưa có nội dung do nhóm cung cấp; cần lý do cho ít nhất hai candidate.
 
-**Xử lý bất đồng (nếu có):**
+**Xử lý bất đồng (nếu có):** Chưa được xác nhận.
+
+### 2.5. Bản tham khảo do AI soạn — chưa phải kết quả CP3
+
+**Nguồn và giới hạn:** bản này được soạn theo yêu cầu trưởng nhóm ngày 2026-11-09, dựa trên các candidate đã viết trong báo cáo cá nhân. Việc sắp cluster, OST, shortlist, câu hỏi và lập luận bên dưới là đề xuất của AI; chưa xác nhận nhóm từng trình bày, đặt câu hỏi hoặc đồng thuận như vậy. Không dùng phần này làm bằng chứng hoàn thành CP3 hoặc đóng góp cá nhân. Theo `RULES.md`, nhóm vẫn tự thực hiện pitch/challenge và ghi lại kết quả thực tế tại mục 2.1–2.4; việc đồng ý một bản tham khảo không thay thế hoạt động đó.
+
+#### a. Danh mục candidate đã có trong báo cáo cá nhân
+
+Các mã dưới đây chỉ phục vụ bản tham khảo, không phải thứ tự pitch. Nguồn [S-H] đến [S-T] nằm ở mục 10. Nội dung được rút gọn, không phải lời nói nguyên văn của thành viên.
+
+| Người có báo cáo | Candidate trong top 3 cá nhân | Actor/phạm vi thể hiện trong nguồn | Giới hạn khi sử dụng |
+|---|---|---|---|
+| Hưởng [S-H] | H1: tìm nội dung cũ trong chat; H2: so sánh laptop trong ngân sách; H3: tìm chỗ ở gắn với lịch trình Vũng Tàu | Người tham gia nhóm chat; người mua laptop; người phụ trách chỗ ở cho nhóm lớp | Số liệu theo trí nhớ; chưa có bấm giờ từng bước; một tuần chuẩn bị không phải công thao tác |
+| Vinh [S-V] | V1: soát khối lượng/đơn giá; V2: gom bảng chào giá, gồm file sai mẫu; V3: đối chiếu hồ sơ năng lực với tiêu chí | Chuyên viên KTKT phía chủ đầu tư; V3 có đồng nghiệp cùng chấm | Nguồn mô tả một gói thầu; cần xác nhận xuất xứ dữ liệu và quyền sử dụng; thời gian bước con có ước lượng |
+| Linh [S-L] | L1: tổng hợp/cập nhật thông tin CSKH; L2: phụ đề, dịch và định vị đoạn video; L3: tổng hợp thông tin ứng viên | CSKH; người xem tài liệu/video; HR/người tuyển dụng theo phần scan | Mới có tên top 3; các Problem Card chi tiết còn trống, chưa có baseline đủ dùng |
+| Khương [S-K] | K1: research làm căn cứ định hướng content; K2: làm rõ user story e-commerce; K3: kiểm thử và tài liệu API | Người làm content; backend developer và người nhận bàn giao frontend | Research 2 ngày thuộc một job được bạn chia sẻ; các mốc khác thuộc phạm vi cá nhân, chưa phải kiểm chứng CP4 |
+| Quân [S-Q] | Q1: phân loại/phát hiện report khách hàng trùng; Q2: onboarding và tìm tài liệu nội bộ; Q3: tổng hợp/đối soát chứng từ | CSKH; intern/quản lý; kế toán | Top 3 và Card #2 mô tả Q2 ở mức khác nhau; cần Quân xác nhận phạm vi. Một số số liệu ban đầu/giả thuyết còn cần xác minh |
+| Tuyên [S-T] | T1: đồng bộ tin tuyển dụng đa kênh khi JD đổi; T2: tập trung/chuẩn hóa hồ sơ ứng viên; T3: theo dõi trạng thái và bàn giao trong pipeline | Recruiter/HR, Hiring Manager và các bên phối hợp tuyển dụng | Báo cáo dùng benchmark bên ngoài; chưa phải baseline doanh nghiệp cụ thể hoặc bằng chứng của hướng chào giá |
+
+#### b. Câu hỏi gợi ý để nhóm tự xem xét
+
+Đây là câu hỏi do AI đề xuất trong bản tham khảo, chưa có người hỏi hoặc người nhận thực tế. Chỉ ghi vào nhật ký phản biện sau khi có nội dung thực sự diễn ra, đúng nguồn.
+
+| Candidate/phạm vi | Câu hỏi tham khảo | Lỗ hổng cần làm rõ |
+|---|---|---|
+| V1–V2: chào giá | Bảng đã ghép đúng mã dòng chưa; công thức so khối lượng/đơn giá còn bỏ trống trường hợp nào? | Tách việc chuẩn hóa/ghép dòng khỏi việc so sánh số; chưa có lý do mặc định cần AI |
+| H1: chat | Thời gian mất ở đọc/nhận diện nội dung hay chờ tải, và dữ liệu cũ có còn lấy được không? | Can thiệp tìm kiếm có thể không giảm được phần chờ của ứng dụng |
+| L1: CSKH | Lần xử lý gần nhất có những nguồn nào, phải ghi lại trường nào và mất bao nhiêu phút? | Chưa có một trường hợp hành vi cụ thể cùng baseline |
+| K1: research content | Hai ngày thuộc một brief nào, bước nào tốn nhất và người làm dùng căn cứ gì để chốt insight? | Không suy từ thời gian một job ra mọi job hoặc hiệu quả chuyển đổi |
+| Q1: report trùng | Nhóm định nghĩa trùng bằng cùng sự cố hay nội dung gần giống; ai kiểm đáp án khi hai report khác chữ? | Cần tiêu chí và đáp án; số liệu ban đầu còn cần xác minh |
+| T1: tuyển dụng đa kênh | Nếu đã có ATS/công cụ đăng đa kênh, phần chậm còn lại là cập nhật JD hay phối hợp phê duyệt? | Tránh chọn một pain mà công cụ hoặc quy trình hiện tại đã giải đủ |
+
+#### c. Phương án gom cluster tham khảo
+
+| Cluster đề xuất | Candidate | Pattern chung | Điểm cần giữ riêng |
+|---|---|---|---|
+| A — Khó truy xuất thông tin đúng lúc | H1, L2, Q2 | Thông tin có sẵn nhưng khó đến đúng nội dung cần dùng | Chat, video và tài liệu onboarding khác quyền truy cập, định dạng và cách đo |
+| B — Tổng hợp nhiều nguồn trước khi xử lý/chọn lựa | H2, H3, L1, K1, Q1 | Người phụ trách phải đọc, gom và hiểu thông tin phân tán | Không coi cùng pattern là cùng actor hoặc cùng baseline |
+| C — Chuẩn hóa và đối chiếu theo tiêu chí | V1, V2, V3, L3, Q3, T2 | Khác cấu trúc/mô tả làm tăng công tìm, ghép, kiểm thiếu hoặc sai lệch | V1 và V2 là hai bước khác nhau; hồ sơ năng lực, ứng viên và chứng từ có tiêu chí riêng |
+| D — Làm rõ nội dung để bàn giao | K2, K3 | Yêu cầu hoặc tài liệu chưa đủ rõ để người sau thực hiện | Cần phân biệt thời gian tự làm rõ, trao đổi và chờ |
+| E — Giữ thông tin nhất quán khi nhiều bên cập nhật | T1, T3 | Trạng thái/nội dung thay đổi nhưng cập nhật và bàn giao không đồng bộ | Chậm do công cụ khác chậm do trách nhiệm hoặc phê duyệt |
+
+#### d. OST tham khảo cho bước hội tụ
+
+Outcome dưới đây là định hướng đề xuất, chưa có baseline/target do nhóm chốt. Sau hội tụ cần gắn phút công với một actor, một loại tác vụ và phạm vi dữ liệu cụ thể; không dùng một metric chung cho cả 18 candidate.
+
+```text
+OUTCOME ĐỀ XUẤT: Giảm phút công tìm, tổng hợp và đối chiếu thông tin
+                cho một tác vụ cụ thể, đồng thời giữ chất lượng được kiểm từ nguồn
+├── Opportunity A: Khó lấy đúng nội dung cần dùng từ thông tin đã có
+│   └── H1, L2, Q2
+├── Opportunity B: Thông tin phân tán làm tăng công đọc và tổng hợp
+│   └── H2, H3, L1, K1, Q1
+├── Opportunity C: Dữ liệu khác cấu trúc/mô tả làm tăng công ghép và đối chiếu
+│   └── V1, V2, V3, L3, Q3, T2
+├── Opportunity D: Yêu cầu/tài liệu chưa rõ khiến bàn giao thiếu căn cứ
+│   └── K2, K3
+└── Opportunity E: Thay đổi nội dung/trạng thái không được cập nhật nhất quán
+    └── T1, T3
+```
+
+Ví dụ cách diễn đạt nên loại khỏi tầng opportunity: “chatbot tìm tài liệu”, “agent tự chấm nhà thầu”, “dashboard tuyển dụng”. Đây là ví dụ AI nêu để kiểm cách viết, không phải những ý được ghi nhận nhóm từng đưa ra hoặc gạch bỏ.
+
+#### e. Shortlist và cơ sở đánh giá tham khảo
+
+**Shortlist AI đề xuất để đối chiếu:** V1 — soát chênh lệch chào giá; H1 — tìm nội dung chat; T1 — giữ nhất quán tin tuyển dụng khi JD đổi. Chưa có căn cứ khẳng định đây là shortlist nhóm từng chọn. V2 cần được xem riêng như điều kiện đầu vào của V1, không mặc định gộp toàn bộ thời gian hai việc thành một bottleneck.
+
+| Tiêu chí nhóm cần chấm 1–5 | V1 — chào giá | H1 — chat | T1 — tin tuyển dụng |
+|---|---|---|---|
+| Actor rõ | Báo cáo Vinh nêu chuyên viên KTKT; nhóm cần chốt actor của phạm vi chung | Hưởng là người có trải nghiệm; cần thu hẹp một nhóm/nguồn | Báo cáo Tuyên nêu HR/Recruiter và các bên phối hợp; cần chọn actor chính |
+| Quy trình rõ | Có mô tả gom → soát → trình; cần tách phạm vi ghép và soát | Có bản nháp; chưa xác nhận đủ từng bước thực tế | Có mô tả đăng/cập nhật; chưa có quy trình thực tế tại một tổ chức |
+| Pain có bằng chứng | Có dữ liệu được báo cáo trong CP1–CP2; nguồn và phạm vi cần kiểm; chưa có CP4 | Có ước lượng trí nhớ và lượt không tìm được; chưa có nhật ký đo | Có benchmark được báo cáo; chưa có baseline của actor cụ thể |
+| Impact đo được | Có thể đo phút/vòng và chất lượng phát hiện trên cùng bộ hồ sơ; chưa có số đo nhóm xác nhận | Có thể đo phút/lượt và tỷ lệ tìm đúng; cần tính lượt thất bại | Có thể đo phút cập nhật/JD và số bài lệch; cần dữ liệu thực tế |
+| Vừa sức lab | Phải giới hạn hạng mục, định dạng và dữ liệu được phép dùng | Phải giới hạn một nguồn và khả năng lấy dữ liệu | Phải giới hạn kênh và quyền truy cập; tránh triển khai đa nền tảng |
+| So sánh 4 mức | Có thể đối chứng bảng/công thức với hỗ trợ ghép mô tả; chưa chọn mức | Có thể đối chứng tìm kiếm/lọc/chỉ mục với hỗ trợ ngữ nghĩa | Có thể đối chứng nguồn JD chung và Rule với hỗ trợ xử lý nội dung |
+| Nhóm hiểu domain | Có báo cáo Vinh làm đầu mối domain; không suy ra cả nhóm đã hiểu đủ | Có trải nghiệm cá nhân Hưởng; chưa xác nhận mức hiểu của cả nhóm | Tuyên mô tả kinh nghiệm công cụ tuyển dụng; chưa xác nhận cả nhóm hiểu đủ |
+
+**Điểm số và tổng:** chưa chấm. Bảng này cung cấp căn cứ và lỗ hổng để nhóm tự chấm tại mục 2.4; không tạo số nhằm làm cho hướng đã chọn có tổng cao nhất. Các nguồn benchmark chưa được mở kiểm trong lượt này nên không dùng số của chúng để chấm pain/impact của nhóm.
+
+#### f. Lập luận chọn–loại để nhóm xem xét
+
+**Vì sao hướng chào giá có thể đáng ưu tiên:** báo cáo Vinh đã mô tả actor, chuỗi hồ sơ → bảng tổng hợp → đối chiếu → trình duyệt và phân biệt file đúng/sai mẫu. Hướng này cho phép thiết kế đầu ra kiểm được tới dòng nguồn, so với yêu cầu/BOQ và giữa các nhà thầu. Có thể đặt cách làm bảng/công thức làm đối chứng để đánh giá phần còn cần hỗ trợ. Đây là lập luận đề xuất từ nội dung nguồn, chưa phải lý do đồng thuận đã ghi nhận của nhóm hoặc bằng chứng đã kiểm chứng.
+
+**Điều kiện có thể làm lập luận trên không đứng vững:** không có quyền dùng dữ liệu; không xác định được dòng tương ứng/đáp án đối chiếu; chưa tách công ghép khỏi công soát; hoặc bảng/công thức đã xử lý đủ trong phạm vi chọn. Trường hợp cuối vẫn có thể dẫn đến một bài lab chọn No AI/Rule hợp lệ; nhóm tự quyết sau kiểm chứng.
+
+**Vì sao có thể chưa ưu tiên H1 ở vòng này:** trải nghiệm tìm chat có thật theo báo cáo Hưởng, nhưng chưa tách công tìm khỏi chờ tải và chưa xác minh khả năng lấy lịch sử/tệp cũ. Hỗ trợ ngữ nghĩa có thể không xử lý phần chậm chính. Đây là điểm cần kiểm, không chứng minh hướng này không đáng giải.
+
+**Vì sao có thể chưa ưu tiên T1 ở vòng này:** báo cáo Tuyên đã lưu ý công cụ đa kênh hiện có và khác biệt giữa benchmark với baseline thực tế. Chưa biết khoảng trống sau công cụ/quy trình hiện tại là gì; cần actor, dữ liệu cập nhật JD và phạm vi kênh cụ thể. Không dùng benchmark tuyển dụng để so lớn/nhỏ trực tiếp với số liệu chào giá hoặc tìm chat.
+
+**Phần nhóm cần tự ghi tiếp:** hướng đã chọn có đúng với V1 hay gồm cả V2; shortlist thực tế; điểm và căn cứ; lý do thực sự của nhóm; các câu hỏi thực sự đã hỏi/nhận; bất đồng và cách xử lý nếu có. Không chuyển các đoạn AI đề xuất ở đây thành sự kiện quá khứ.
 
 ---
 
 ## 3. Kiểm chứng + research giải pháp đã có (CP4)
+
+**Nguồn kiểm chứng:** phần 3.1–3.2 giữ cập nhật của Linh trên main tại e278c07; số liệu domain bổ trợ theo báo cáo Vinh. Snapshot được xem trong đúng giới hạn nguồn ghi ở ghi chú review dưới đây. Mục 3.3 giữ research của Khương đã merge qua PR #5; tài liệu Microsoft bổ trợ được dẫn riêng ở mục 10.
 
 ### 3.1. Assumption Map
 
@@ -95,7 +192,7 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 Giả định nhóm kiểm chứng trong buổi này: Giả định #1 — Việc so sánh, đối chiếu HSDT thực sự tạo ra khối lượng công việc thủ công đáng kể, có thể đo được bằng thời gian xử lý và số lần phải kiểm tra lại.
 
-Lý do: Đây là giả định cốt lõi về giá trị của vấn đề. Nếu người dùng không mất nhiều thời gian hoặc đã có công cụ đáp ứng tốt, việc phát triển giải pháp mới có thể không cần thiết. 
+Lý do: Đây là giả định cốt lõi về giá trị của vấn đề. Nếu người dùng không mất nhiều thời gian hoặc đã có công cụ đáp ứng tốt, việc phát triển giải pháp mới có thể không cần thiết.
 
 ### 3.2. Kiểm chứng
 
@@ -117,6 +214,8 @@ Tổng hợp:
 | Phỏng vấn chuyên viên đấu thầu| 3|2 người xác nhận muốn sử dụng sản phẩm làm 1 công cụ hỗ trợ làm việc | 1 người nói việc đối chiếu rất phức tạp AI detech cũng có thể sai và không ai chịu trách nhiệm cho việc đó|
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**3 người được phỏng vấn, 2 người ủng hộ và 1 người lo ngại về độ chính xác, trách nhiệm, nên điều chỉnh mô hình từ AI tự động đánh giá hồ sơ sang AI hỗ trợ đối chiếu, có con người kiểm chứng (Human-in-the-loop).
+
+Ghi chú review nguồn CP4 tại main e278c07: phần Linh bổ sung ghi cách phỏng vấn 2–3 người, nhưng repo hiện thể hiện một snapshot và thiếu thời điểm/cách hỏi, số người thực tế, thời gian/tần suất và tín hiệu phản bác. Giữ nội dung người phụ trách cung cấp, đồng thời yêu cầu bổ sung nguồn trước khi dùng để xác nhận các giả định. Các giả định về trích PDF/scan thuộc hướng mở rộng, không mặc định là điều kiện của Rule so số.
 
 ### 3.3. Research giải pháp đã có
 
@@ -245,18 +344,25 @@ Kiểm tra chéo: tổng tiền khớp không chứng minh mọi dòng được 
 
 ## 5. Problem Statement v0 (CP5)
 
+Phạm vi của v0/v1 đề xuất dưới đây là **riêng phần soát**; sơ đồ mục 4 của Vinh giữ nguyên để thể hiện bối cảnh toàn luồng gom + soát. Target 2–2,5 giờ/vòng trong mục 4 là kỳ vọng cho toàn luồng có AI mapping, không dùng thay target riêng bước soát.
+
+Bản tổng hợp đề xuất từ pain và quy trình trong báo cáo Vinh; v0 giữ cách mô tả vấn đề, chưa gắn một công cụ cụ thể. Đây là nội dung chuẩn bị review, không ghi nhận nhóm đã tự viết/chốt bản này.
+
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Chuyên viên KTKT phía chủ đầu tư phụ trách soát chào giá gói cơ điện. |
+| **Quy trình** | Sau khi gom chào giá vào bảng tổng hợp, kiểm khối lượng với BOQ, so đơn giá, tổng hợp phát sinh và ghi chú trước khi trình lãnh đạo. |
+| **Bottleneck** | Dò từng dòng khối lượng và đơn giá giữa khoảng 4.100 hạng mục và 4 nhà thầu; bước 2–3 khoảng 240 phút theo phân rã ước lượng của Vinh. |
+| **Impact** | Riêng phần soát được Vinh báo cáo 5–6 giờ/vòng, hai vòng/gói. Dòng chênh bị bỏ sót có thể làm thông tin trình duyệt thiếu chính xác; khoản chênh trong một hồ sơ không được quy thành thiệt hại đã phát sinh. |
+| **Success Metric** (baseline → target, cách đo) | Baseline tham chiếu 300–360 phút/vòng theo Vinh → target đề xuất dưới 90 phút/vòng cùng phạm vi; không bỏ sót chênh khối lượng xác định được trong bộ đối chiếu. Chạy trên một bộ hồ sơ cũ được phép dùng, chuyên viên kiểm đáp án; ghi công xử lý, kiểm/sửa, kết quả và ngoại lệ cho từng vòng. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | Bảo toàn số gốc và nguồn; chuyên viên xác nhận trường hợp mơ hồ và bảng trước trình; không tự chọn/loại nhà thầu, sửa giá/khối lượng hoặc gửi hồ sơ. |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
 
--
+- Review tài liệu chỉ ra v0 cần nói rõ điều kiện mapping; không lấy thời gian gom làm baseline riêng bước soát.
+- Target thời gian phải tính cả công kiểm/sửa; các lượt không xử lý được phải báo kết quả, không chỉ chọn lượt thành công.
+- Tổng tiền khớp vẫn có thể che sai mapping; cần kiểm nguồn và bộ tình huống đổi dòng.
+- Ngưỡng và đáp án cần người domain duyệt; các điểm này được đưa vào v1 đề xuất. Phản hồi của nhóm được ghi theo trao đổi thực tế.
 
 ---
 
@@ -373,117 +479,109 @@ Do đó, ưu tiên phát hiện đầy đủ các chênh lệch khối lượng 
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
 
+Bản đề xuất sau review v0 và nguồn Vinh/Tuyên; tiêu chí dưới đây là bộ kiểm đề xuất để phối hợp Quân hoàn thiện, không phải sản phẩm Quân đã bàn giao hoặc kết quả test đã chạy.
+
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Chuyên viên KTKT phía chủ đầu tư, người domain duyệt mapping và bộ đáp án. |
+| **Quy trình** | Nhận bảng đã ghép và xác nhận cùng phiên bản/đơn vị → kiểm cổng dữ liệu → tính chênh theo quy tắc → chuyên viên kiểm/sửa → tạo bảng có nguồn → kiểm trước trình. |
+| **Bottleneck** | Dò và đối chiếu thủ công phần soát; công chuẩn hóa/ghép sai mẫu được tách riêng và ghi như điều kiện/phần mở rộng. |
+| **Impact** | Theo Vinh, riêng phần soát 300–360 phút/vòng; giảm công lặp phải đi cùng giữ chất lượng phát hiện và khả năng giải trình từ nguồn. |
+| **Success Metric** (baseline → target, cách đo) | Target ≤90 phút công/vòng cho phần soát, gồm kiểm/sửa và xử lý ngoại lệ; báo riêng thời gian chờ và công gom trước đó. Baseline tham chiếu theo Vinh cần đối chiếu nhật ký. So cùng bộ hồ sơ, cùng quy tắc và đáp án; ghi cả lượt thất bại. Bộ tiêu chí bên dưới phải đạt đồng thời, không đổi chất lượng lấy tốc độ. |
+| **Boundary** | Không sửa số gốc, tự chọn/loại nhà thầu, tự gửi hồ sơ hoặc bỏ dòng lỗi. Mapping, ngưỡng, dung sai và bảng cuối được người có trách nhiệm kiểm. Tổng tiền chỉ là một phép kiểm. |
+| **AI intervention point** | Không có trong phạm vi chính: dữ liệu đủ cấu trúc và so sánh bằng quy tắc cố định. Gợi ý mapping ngữ nghĩa là giả thuyết mở rộng, không được tính là chức năng đã chọn. |
+| **Mức chọn** | Rule — đề xuất để kiểm, so với No AI cải tiến. |
+| **Rủi ro & người kiểm tra** | Sai mapping/đơn vị/công thức, bỏ sót, cảnh báo quá nhiều, quyền dữ liệu; người domain kiểm nguồn/đáp án, Quân phụ trách bộ eval theo phân công, Hưởng tổng hợp kết quả. |
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| Quy trình | Nhận bảng đã gom | Đặt cổng kiểm mapping, đơn vị và phiên bản trước tính | Cùng tổng tiền vẫn có thể ghép sai dòng |
+| Success Metric | Giảm tổng thời gian soát | Tính kiểm/sửa, ngoại lệ và báo cả thất bại; chất lượng là điều kiện đồng thời | Tránh chuyển công sang người duyệt hoặc loại mẫu khó |
+| Boundary | Bảo toàn nguồn, người duyệt | Thêm kiểm khóa/đơn vị, ngưỡng/dung sai được duyệt và chuyển ngoại lệ | Ngưỡng hoặc kiểu dữ liệu sai có thể tạo cảnh báo sai |
+| AI intervention point / mức chọn | Không gắn giải pháp | Không có AI ở phạm vi chính; Rule đề xuất, AI mapping tách riêng | Giữ cùng phạm vi khi so giải pháp và không chọn AI vì số dòng lớn |
 
 **Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
 
+Theo hướng dẫn trường hợp Rule, năm tiêu chí sau áp dụng cho giải pháp không dùng AI.
+
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | Bao phủ và truy vết | Mọi dòng nguồn có trạng thái được đối chiếu hoặc ngoại lệ rõ; mọi kết quả truy được file/sheet/dòng và phiên bản. | Mất dòng, tự bỏ bản ghi, nhân đôi do join sai hoặc thiếu nguồn. |
+| 2 | Tính toán và đơn vị | Kết quả chênh khối lượng, giá và tổng khớp đáp án độc lập theo cùng tiền tệ/quy tắc/dung sai đã duyệt; thiếu giá, trùng khóa, khác đơn vị được cảnh báo. | Tính trên dòng không tương ứng; coi ô trống là 0; chia cho trung vị 0; tự chuyển đơn vị không có quy tắc. |
+| 3 | Phát hiện và kiểm mapping | Không bỏ sót dòng chênh khối lượng trong bộ đáp án; cảnh báo giá đúng quy tắc và có người xác minh ý nghĩa; bộ test có đổi chỗ dòng cùng tiền/cùng khối lượng. | Sót chênh đã biết hoặc chấp nhận mapping sai chỉ vì tổng tiền khớp; gán “giá sai” chỉ từ ngưỡng. |
+| 4 | Bảo toàn và kiểm trước trình | File gốc giữ nguyên; bảng kết quả có nguồn, ngoại lệ, cấu hình và xác nhận của chuyên viên; tổng tiền đối chiếu cùng cách tính. | Sửa số gốc, output không giải trình được hoặc đưa ngoại lệ mơ hồ qua cổng kiểm. |
+| 5 | Thời gian và khả năng sử dụng | Tổng công cùng phạm vi dưới 90 phút/vòng, ghi cả kiểm/sửa/ngoại lệ; chuyên viên hiểu và sửa được kết quả; mọi tiêu chí chất lượng cũng đạt. | Vượt target, chỉ nhanh do bỏ bước kiểm, hoặc chỉ báo lượt thành công để che lượt thất bại. |
+
+Bộ tình huống đề xuất cho Quân: bảng đúng mã; mã thiếu; khóa trùng; đơn vị khác; đảo vị trí dòng cùng tiền; cùng khối lượng nhưng khác mô tả; thiếu giá; trung vị giá 0; đổi phiên bản BOQ; dòng chỉ có ở một nhà thầu. Đáp án phải do người domain xác nhận trước khi dùng. Danh sách này là kế hoạch test, không phải bằng chứng các test đã đạt.
 
 ---
 
 ## 8. Quyết định (CP6)
 
+Bản review tổng hợp đề xuất, phân biệt với đề xuất cá nhân của Tuyên: Tuyên đề xuất Go cho Rule ở Card #1 và Not Yet với AI. Bản tổng hợp bổ sung điều kiện quyền dữ liệu, mapping, đối chứng và đáp án trước pilot; lựa chọn của cả nhóm được xác nhận sau trao đổi thực tế.
+
 ### 8.1. Bốn rủi ro
 
-| Rủi ro | Mức độ sơ bộ | Lý do và bằng chứng | Phương án xử lý |
+| Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value Risk** | Thấp đến trung bình | Đã có dấu hiệu thực tế về khối lượng khoảng 16.000 dòng/vòng và thời gian kiểm tra 5–6 giờ/vòng, nhưng chưa đo hiệu quả của phương án mới | Thử nghiệm trên gói thầu cũ và so sánh thời gian trước/sau |
-| **Usability Risk** | Trung bình | Chuyên viên quen sử dụng Excel, hệ thống mới có thể gây khó khăn nếu thay đổi cấu trúc làm việc | Giữ định dạng Excel quen thuộc, hiển thị rõ dòng sai lệch và cho phép kiểm tra thủ công |
-| **Feasibility Risk** | Trung bình | Công thức có thể xử lý dữ liệu đúng mã dòng, nhưng file sai mẫu và mã hạng mục không khớp có thể gây lỗi | Tách bước kiểm tra cấu trúc, bước ghép dữ liệu và bước phát hiện chênh lệch |
-| **Viability Risk** | Trung bình | Giải pháp Rule có chi phí triển khai tương đối thấp, nhưng cần duy trì quy tắc và bảo mật dữ liệu chào giá | Ưu tiên công cụ sẵn có, phân quyền truy cập, đo chi phí vận hành và thời gian tiết kiệm |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | TB | Vinh mô tả pain 5–6 giờ/vòng ở một trường hợp; cần kiểm ngoài nhóm và đo phần công còn lại sau checklist/Rule. Không suy một trường hợp thành nhu cầu thị trường. |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | TB | Giữ cách xem bảng quen thuộc có thể thuận lợi, nhưng công review phụ thuộc số cảnh báo; cần actor thử và giải thích lại một kết quả. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | Cao | Sai mapping có thể làm số tính đúng nhưng so sai dòng; nguồn hiện có là mô tả trong báo cáo, cần bộ dữ liệu/đáp án được kiểm và bài test ngoại lệ trước khi dùng. |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | Cao | Quyền dùng hồ sơ, nơi xử lý và người duy trì quy tắc cần được đơn vị sở hữu xác nhận; có tài liệu không đồng nghĩa có quyền đưa vào công cụ hoặc repo. |
 
 ### 8.2. Kết luận
 
-**Quyết định đề xuất cá nhân: GO với Rule-based Automation cho Problem Card #1**
+**Quyết định đề xuất:** **Not Yet** cho triển khai/pilot; ưu tiên kiểm điều kiện của phương án Rule. AI mapping và Agent nằm ngoài phạm vi chính. Đây là kết luận review, không ghi là quyết định đã được sáu người đồng thuận.
 
-Đây là đề xuất của người phụ trách để nhóm review, không phải quyết định chung hoặc kết quả pilot. Trước thử cần xác nhận quyền dùng dữ liệu, mapping/đơn vị/phiên bản, ngưỡng và đáp án được người domain duyệt. Baseline được dẫn theo báo cáo Vinh, không thay kiểm chứng CP4 ngoài nhóm.
-**Đối với AI: NOT YET**
-**Lý do:**
+**Lý do:** có pain được báo cáo và một phương án đơn giản có thể kiểm, nhưng hai rủi ro Cao ở dữ liệu/mapping và quyền sử dụng cần giảm trước khi Go. Không nâng mức chỉ để bài có AI.
 
-Problem Card #1 đã có dấu hiệu thực tế rõ ràng về khối lượng dữ liệu, thời gian xử lý và những chênh lệch cần phát hiện
-Các phép so sánh khối lượng và đơn giá có thể thực hiện bằng công thức khi dữ liệu đã được ghép đúng mã dòng
-Vì vậy, chưa có lý do đủ mạnh để sử dụng AI hoặc Agent thay cho Rule ở công đoạn này
-AI có thể được nghiên cứu thêm cho việc xử lý file sai mẫu và đối chiếu mô tả hạng mục, nhưng cần kiểm chứng riêng lợi ích so với Power Query hoặc các quy tắc ghép dữ liệu
+**Nếu Go — pilot nhỏ nhất:** sau khi điều kiện được đáp ứng, dùng một bộ hồ sơ cũ được phép xử lý, ưu tiên đủ bốn nhà thầu và hai vòng nếu có; bắt đầu một hạng mục để kiểm logic rồi chạy toàn vòng để so đúng baseline. Ghi thời gian tạo cấu hình lần đầu riêng với thời gian vận hành mỗi vòng, đồng thời tính công thiết lập vào đánh giá chi phí tổng.
 
-**Pilot nhỏ nhất nếu GO:**
+**Nếu Not Yet — cần kiểm chứng gì trước:** Linh tổng hợp kiểm chứng đúng actor ngoài nhóm; Khương review nguồn/công cụ; Vinh xác nhận phạm vi, nhật ký và dữ liệu được phép dùng; Quân cùng người domain duyệt bộ đáp án, dung sai/ngưỡng và trường hợp lỗi; Tuyên cập nhật bốn rủi ro theo bằng chứng; Hưởng tổng hợp để nhóm chốt.
 
-Sử dụng một bộ hồ sơ chào giá đã xử lý trước đây, gồm 4 nhà thầu, khoảng 4.100 dòng BOQ và hai vòng chào giá nếu dữ liệu đầy đủ
+**Điều kiện chuyển Go:** quyền dùng/nơi xử lý được xác nhận; đầu vào và đáp án có người domain duyệt; cấu hình/ngưỡng được kiểm; kế hoạch so cùng phạm vi và người chịu trách nhiệm rõ. Kết quả thử mới dùng để quyết định mở rộng.
 
-**Các bước thử nghiệm:**
+**Nếu No-Go — nên làm gì thay AI:** nếu không thể có dữ liệu/quyền dùng hoặc cách đơn giản đáp ứng đủ nhu cầu, giữ mẫu thống nhất, checklist và quy trình soát hiện có/công cụ sẵn có; không triển khai AI chỉ vì đã chọn một hướng bài toán.
 
-1. Chuẩn bị BOQ và bảng chào giá gốc
-2. Chuẩn hóa mã hạng mục và kiểm tra đơn vị tính
-3. Sử dụng Rule phát hiện chênh lệch khối lượng
-4. Tính toán chênh lệch đơn giá theo ngưỡng được thống nhất
-5. Xuất danh sách dòng cần kiểm tra
-6. Đối chiếu kết quả với bảng đã được chuyên viên rà soát
-7. Đo thời gian xử lý và số trường hợp bị bỏ sót
-
-**Success Metrics:**
-
-| Metric | Baseline từ bài cá nhân | Target |
-|---|---|---|
-| Thời gian soát một vòng | 5–6 giờ/vòng | Dưới 1,5 giờ/vòng |
-| Thời gian soát một gói hai vòng | 10–12 giờ/gói | Dưới 3 giờ/gói |
-| Phát hiện chênh lệch khối lượng ở dòng khớp mã | Chưa đo số dòng bị bỏ sót | Không bỏ sót dòng có chênh lệch trong bộ kiểm thử |
-| Tổng tiền đối chiếu | Cần kiểm tra từng file gốc | Khớp 100% với các giá trị nguồn theo cùng phương pháp tính |
-| Số lần lãnh đạo hỏi lại hoặc trả lại | Khoảng 4 lần ở gói gần nhất | Không tăng so với baseline |
-
-**Điều kiện để mở rộng sang AI Workflow:**
-
-- Có các trường hợp file sai mẫu xảy ra lặp lại
-- Phương án Rule hoặc Power Query không ghép được đầy đủ dữ liệu
-- AI giúp giảm thời gian ghép bảng mà không làm sai thông tin
-- Các dòng AI ghép có thể được truy xuất và kiểm tra
-- Có người chịu trách nhiệm xác nhận kết quả
-
-**Ngưỡng dừng:**
-
-- Tổng tiền trong bảng tổng hợp không khớp với file gốc mà không giải thích được
-- Hệ thống bỏ sót chênh lệch khối lượng trong dữ liệu đã khớp mã
-- Không phát hiện hoặc không cảnh báo các dòng thiếu mã, trùng mã hay không ghép được
-- Sau tối đa hai vòng pilot cùng phạm vi soát, nếu tổng công xử lý + kiểm/sửa/ngoại lệ vẫn từ 90 phút/vòng trở lên hoặc không tốt hơn No AI cải tiến thì dừng mở rộng và rà soát lại phương án
-- Khi tổng chi phí thiết lập/vận hành/kiểm tra vượt lợi ích thời gian tiết kiệm quy đổi theo cách tính được nhóm duyệt trước pilot thì dừng mở rộng
-- Không đảm bảo quyền truy cập và bảo mật hồ sơ chào giá
-
-**Phương án quay về:**
-
-Tiếp tục sử dụng file Excel gốc, công thức kiểm tra và quy trình rà soát thủ công của chuyên viên KTKT
-Không sử dụng kết quả ghép dữ liệu chưa xác minh để tính toán hoặc trình lãnh đạo
-
-**Kết luận:**
-
-Bài toán có cơ sở để tự động hóa vì khối lượng dữ liệu lớn, thao tác lặp lại và có chỉ số thời gian thực tế
-Tuy nhiên, giải pháp phù hợp nhất với Problem Card #1 là Rule-based Automation thay vì AI Agent
-Việc sử dụng AI chỉ nên triển khai ở các bước cần hiểu nội dung phi cấu trúc, đặc biệt khi xử lý bảng chào giá không theo mẫu hoặc tài liệu hồ sơ năng lực
-Quyết định cuối cùng vẫn cần được nhóm xác nhận dựa trên kết quả kiểm chứng và đánh giá của các actor liên quan
+**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+- Dừng ngay lượt xử lý khi mất/trùng dòng ngoài dự kiến, mapping không được xác nhận, tổng tiền lệch ngoài dung sai, file gốc bị đổi hoặc phát sinh truy cập ngoài quyền. Quay về file gốc và chuyên viên đối chiếu.
+- Trong tối đa hai vòng pilot đầu tiên, chỉ một trường hợp bỏ sót chênh khối lượng đã có trong đáp án hoặc nhận sai mapping trong bộ test là điều kiện dừng sử dụng output để trình; sửa và kiểm lại trước thử tiếp.
+- Sau hai vòng cùng phạm vi, nếu tổng công kiểm/sửa/ngoại lệ vẫn từ 90 phút/vòng trở lên hoặc không tốt hơn No AI cải tiến, dừng mở rộng, rà soát target/phạm vi và dùng phương án đơn giản được kiểm.
+- Khi thiếu dữ liệu hoặc đáp án cho một loại chênh lệch, chuyển loại đó cho người kiểm thay vì tự điền kết quả.
 
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+- Bản này tích hợp review nguồn Vinh/Tuyên, bộ tiêu chí đề xuất và research tài liệu công cụ; không khẳng định đã chạy pilot, phỏng vấn hoặc có đồng thuận về các bản v0/v1 được soạn trong lượt này.
+- Phạm vi đề xuất chính là soát trên bảng đã ghép đúng. Nhóm cần xác nhận phạm vi, quyền dùng dữ liệu, đáp án, dung sai/ngưỡng và nguồn thời gian; hoạt động gom/AI mapping được đo và quyết định riêng.
+- Bằng chứng CP3 và CP4 phải đến từ trao đổi/kiểm chứng thực tế. Mục 2.5 là tài liệu chuẩn bị lịch sử, không thay thế ghi chép buổi thảo luận.
+- Quân cùng người domain hoàn thiện eval; Linh bổ sung nguồn kiểm chứng, Khương đối chiếu research; Vinh/Tuyên phản hồi các điểm review. Hưởng cập nhật nội dung và `TEAM.md` theo sản phẩm được xác nhận.
+- Đánh giá lợi ích tính cả thiết lập, kiểm/sửa, xử lý ngoại lệ và lượt thất bại. Không xem target tương lai là hiệu quả đã đạt.
+- Bản tổng hợp v0/v1 và đề xuất quyết định này ở nhánh Hưởng/local. CP5 của Vinh, research của Khương và CP6 của Tuyên đã merge qua PR #4/#5/#6; bản local giữ nguyên các phần đó và ghi rõ nơi bổ sung đề xuất review.
 
 ## 10. Tài liệu tham khảo
 
--
+- [RULES.md](../../RULES.md) — giới hạn dùng AI và tính trung thực của bằng chứng.
+- [CHECKPOINTS.md](../../CHECKPOINTS.md), [Worksheet](../../docs/01-worksheet.md), [RUBRIC.md](../../RUBRIC.md), [SUBMISSION.md](../../SUBMISSION.md) — cấu trúc và điều kiện kiểm tra bài nộp.
+- [TEAM.md](../../TEAM.md), [nhật ký điều phối](../../docs/TEAM_WORK_LOG.md) — phân công, nguồn xác nhận và phần còn thiếu.
+- Trưởng nhóm Nguyễn Trọng Hưởng, trao đổi trong chat ngày 2026-11-09: cung cấp hướng đã chọn; xác nhận các thành viên đồng ý phân công và coach đã cho phép nhóm 6 người. Chưa kèm biên bản CP3 hoặc nguồn kiểm chứng CP4 trong repo.
+- **Nguồn nội bộ của bản tham khảo 2.5:** đọc trực tiếp nội dung Git tại commit `4c402eb728df47a395c4ce4da5d0e223a798fc6a` của `origin/main`. Các link dưới đây cố định theo commit để phân biệt nội dung đã đọc với bản thay đổi về sau; chưa kiểm giao diện web trong lượt này.
+- [S-H — Báo cáo Hưởng, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/202603607_NguyenTrongHuong.md).
+- [S-V — Báo cáo Vinh, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/2A202603672_NguyenVanVinh.md).
+- [S-L — Báo cáo Linh, danh sách top 3](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/2A202603624_DamTuanLinh.md).
+- [S-K — Báo cáo Khương, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/2A202603627_MaiDangKhuong.md).
+- [S-Q — Báo cáo Quân, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/2A202603626_PhamNgocTrungQuan.md).
+- [S-T — Báo cáo Tuyên, CP1–CP2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/4c402eb728df47a395c4ce4da5d0e223a798fc6a/report/individual/2A202603648_GiapManhTuyen.md).
+
+- **[V-CP5]** [Quy trình nhóm do Vinh viết tại `2f96679`](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/2f966796fadb9e2df49bc7aa96d10777595e595b/report/team/group_report.md) và [báo cáo cá nhân cùng commit](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/2f966796fadb9e2df49bc7aa96d10777595e595b/report/individual/2A202603672_NguyenVanVinh.md): nguồn baseline, phạm vi và kịch bản tương lai; đọc trực tiếp nội dung Git.
+- **[T-CP6]** [Mức can thiệp và quyết định đề xuất của Tuyên tại `b650c92`](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/b650c927350787f4b09e9b3285add056a946c35a/report/team/group_report.md): nguồn so bốn mức, boundary và rủi ro; bản tổng hợp có điều chỉnh sau review.
+- **[L-NEW]** [Báo cáo Linh tại `6f3fe68`](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/6f3fe68/report/individual/2A202603624-DamTuanLinh.md): đã điền ba card trên nhánh cá nhân; tên file nhánh còn dấu `-`, khác tên chuẩn hóa trên main. Nguồn này dùng cho câu hỏi review hiện tại, tách khỏi snapshot lịch sử mục 2.5.
+- Research công cụ: [Append](https://learn.microsoft.com/en-us/power-query/append-queries), [Merge](https://learn.microsoft.com/en-us/power-query/merge-queries-overview), [Conditional Formatting](https://support.microsoft.com/en-us/excel/use-conditional-formatting-to-highlight-information-in-excel), tài liệu Microsoft mở kiểm ngày 2026-11-09.
+- Hưởng yêu cầu trợ lý đọc, review và soạn bản tổng hợp trong chat ngày 2026-11-09; các câu hỏi, phân tích v0/v1, eval và kết luận soạn ở lượt này là đề xuất review. Việc nhóm chốt và kết quả thử được ghi theo hoạt động thực tế.
+
+- Tích hợp xác nhận ngày 2026-11-09: [PR #3](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/3), [PR #4](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/4), [PR #5](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/5), [PR #6](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/6), [PR #7](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/7), main tại `314b6d8c71bfaba38aa18e2e0745f3c5da6eb8b0`. Các mục 3.3/4/6 trong bản local giữ nguyên từ main này; v0/v1, eval và kết luận tổng hợp là đề xuất để người phụ trách/nhóm kiểm.
+
+- Nguồn CP4 mới nhất: [cập nhật Linh tại e278c07](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/e278c07e098b3a8dc339a39d7d6e3dfe4b04c5e4/report/team/group_report.md), giữ nguyên assumption map và snapshot, kèm ghi chú giới hạn khi review.

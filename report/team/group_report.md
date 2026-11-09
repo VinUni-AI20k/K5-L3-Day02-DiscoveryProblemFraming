@@ -302,18 +302,43 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:
+Bài của nhóm nằm ở ô: Độ mơ hồ Thấp × Độ phức tạp Cao 
+→ Giải pháp phù hợp nhất là Workflow nhiều bước định sẵn bằng code, có AI hỗ trợ ở các bước đọc hiểu phi cấu trúc (Deterministic Workflow with AI assistance).
 
 Vì sao:
-
+1. Về độ mơ hồ: 
+- Nghiệp vụ tài chính - kế toán có ground-truth 100% xác định: số tiền, số lượng, đơn giá và thuế suất chỉ có hai trạng thái "Khớp" hoặc "Lệch", hoàn toàn không chấp nhận việc "đoán mò" hay ảo giác (hallucination).
+- Yếu tố mơ hồ duy nhất nằm ở việc đọc hiểu chứng từ phi cấu trúc (ảnh scan/chữ viết tay trên GRN) và ánh xạ tên hàng viết tắt của nhà cung cấp về mã vật tư nội bộ. Tuy nhiên, đây là bài toán trích xuất thực thể (Information Extraction / Entity Resolution) có kết quả đối chiếu thực tế kiểm chứng được, không phải bài toán sáng tạo nội dung tự do.
+2. Về độ phức tạp (Cao):
+- Xử lý cùng lúc 3 nguồn dữ liệu ở 3 định dạng khác biệt hoàn toàn (XML/PDF hóa đơn, dữ liệu bảng PO nội bộ, ảnh chụp/scan phiếu giao nhận GRN).
+- Quy trình gồm chuỗi 5 bước liên tiếp có rẽ nhánh: gom chứng từ 
+→
+→ trích xuất JSON 
+→
+→ so khớp số học 
+→
+→ rẽ nhánh xử lý ngoại lệ (với 20–30% bộ bị lệch) 
+→
+→ giao diện đối chiếu song song cho con người duyệt chi.
+- Bắt buộc phải có sự phối hợp phân vai chặt chẽ: Rule đảm nhận tính toán số học, AI đảm nhận đọc hiểu và soạn nháp giải trình, Kế toán viên giữ quyền phê duyệt cuối cùng.
+3. Vì sao KHÔNG chọn Agent tự chủ (Autonomous Agent):
+- Nghiệp vụ kế toán công nợ đòi hỏi tính tất định (deterministic), tuân thủ nguyên tắc kiểm toán và tính giải trình pháp lý.
+- Nếu dùng Autonomous Agent để AI tự quyết định luồng đi hay tự duyệt lệnh chuyển tiền qua ngân hàng, doanh nghiệp sẽ đối mặt với rủi ro tài chính cực lớn (gian lận hoặc thất thoát dòng tiền). Do đó, toàn bộ luồng quy trình phải được "đóng cứng" bằng mã nguồn Workflow, AI chỉ đóng vai trò công cụ hỗ trợ tại các mắt xích đọc hiểu.
 ### 6.2. So sánh 4 mức
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| **No AI** (sửa quy trình) |Chuẩn hóa quy định: NCC bắt buộc ghi mã PO lên hóa đơn, Thủ kho nhập GRN điện tử trên phần mềm ngay khi nhận hàng, bỏ phiếu viết tay, Kẹp checklist in sẵn đối chiếu 3 bên.  | Khi 100% NCC tuân thủ; số lượng ít; không có hàng giao nhiều đợt hay phát sinh chứng từ giấy. | Không thể ép hàng trăm NCC bên ngoài đổi phần mềm xuất hóa đơn theo ý mình; giờ cao điểm kho vẫn dùng phiếu giấy viết tay; kế toán vẫn phải dò mắt từng dòng, không giảm được bottleneck 3.0–4.5 phút/bộ. | Dùng làm quy chuẩn đối soát, không chọn làm giải pháp chính |
+| **Rule** | Script/tính năng phần mềm kế toán (MISA AMIS) import XML hóa đơn, So khớp exact-match 100% từng ký tự mã hàng, số lượng, đơn giá giữa XML và PO nội bộ. | Chỉ đủ cho luồng chuẩn lý tưởng: có sẵn file XML, mã hàng trùng khớp 100% với PO, và GRN đã được số hóa sẵn trên hệ thống. | Đổ vỡ hoàn toàn khi gặp GRN là ảnh chụp/scan có chữ viết tay (~20–30% trường hợp); báo lỗi giả (false alert) hàng loạt khi NCC viết tắt tên hàng; không soạn được nháp giải trình ngoại lệ. | Dùng kết hợp cho Bước 1 và Bước 3 (kiểm tra hợp lệ thuế & so khớp toán học) |
+| **Workflow** | • Chuỗi 5 bước định sẵn bằng code điều phối:
+- Bước 1 (Rule): Kiểm tra hợp lệ thuế & gom chứng từ.
+- Bước 2 (Rule + AI): Đọc XML/PO; AI (OCR/IDP) trích xuất ảnh scan GRN & ánh xạ tên hàng viết tắt về mã PO 
+→
+→ chuẩn hóa thành JSON.
+- Bước 3 (Rule): Thuật toán so khớp toán học 100% trên JSON (SL HĐ = SL GRN ≤ SL PO, đơn giá, VAT, tổng tiền).
+- Bước 4 (AI): Khoanh vùng sai lệch & soạn nháp xác minh.
+- Bước 5 (HITL): Kế toán rà soát trên giao diện đối chiếu song song và bấm duyệt chi. | Các bước quy trình xác định rõ ràng, có cấu trúc rẽ nhánh cố định; cần xử lý đồng thời dữ liệu có cấu trúc (XML, PO) và phi cấu trúc (ảnh GRN, chữ viết tay, tên hàng mập mờ); cần đảm bảo tuyệt đối an toàn tài chính. | AI OCR có thể đọc nhầm chữ số mờ hoặc ánh xạ sai mã hàng; kế toán ỷ lại máy bấm duyệt nhanh. Rủi ro được kiểm soát triệt để bằng Rule tô vàng ô có độ tin cậy < 95% và bắt buộc con người kiểm duyệt 100% trước khi hạch toán. | Chọn |
+| **Agent** | AI Agent toàn quyền tự chủ: Tự quét hòm thư lấy hóa đơn, tự vào hệ thống kho và ERP tìm PO/GRN, Tự động gửi email/chat trao đổi qua lại với NCC hoặc thủ kho để giải quyết bất đồng số liệu, Tự động tạo và phê duyệt lệnh chuyển tiền ngân hàng qua cổng Open Banking mà không cần kế toán can thiệp. | Khi môi trường không có rủi ro pháp lý/tài chính | Rủi ro tài chính cực kỳ nguy hiểm: Thất thoát tiền bạc hoặc gian lận nếu Agent bị prompt injection hoặc ảo giác; vi phạm nguyên tắc kiểm soát nội bộ (phân quyền lập lệnh - duyệt lệnh); chi phí token rất cao, mất dấu vết kiểm toán (audit trail). | Không chọn |
 
 **Mức chọn:**
 

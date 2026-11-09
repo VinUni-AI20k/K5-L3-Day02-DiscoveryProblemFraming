@@ -130,6 +130,8 @@ Tổng hợp:
 
 ## 4. Quy trình trước/sau (CP5)
 
+Phần này mô tả cả gom và soát; thời gian tương lai là kỳ vọng thiết kế. Lựa chọn Rule cho riêng bước so số và giả thuyết AI cho ghép file sai mẫu cần được đánh giá theo phạm vi riêng, trước khi nhóm chốt mức can thiệp.
+
 Phạm vi: từ lúc nhận bảng chào giá của 4 nhà thầu đến lúc trình lãnh đạo, gồm 2 phần **gom** (Card #2) và **soát** (Card #1) trong báo cáo cá nhân của Nguyễn Văn Vinh. Vẽ cả phần gom vì bước soát chỉ làm được khi bảng của 4 nhà thầu đã được gom đúng theo mã dòng. Số liệu lấy từ gói thầu gần nhất; thời gian ghi "(ước)" là ước lượng từng bước, tổng gom và tổng soát là đo thật.
 
 ### 4.1. Quy trình hiện tại
@@ -177,7 +179,7 @@ flowchart LR
   F2 -->|"file đúng mẫu"| F3["3. Gom theo mã dòng<br/>⚙ Rule<br/>5'"]
   F2 -->|"file sai mẫu"| F4["4. Gợi ý ghép dòng<br/>vào mã dòng mời thầu<br/>🤖 AI<br/>5'"]
   F4 --> F5["5. Duyệt dòng AI ghép<br/>👤 Người (HITL)<br/>40' (ước)"]
-  F3 --> F6["6. Kiểm tổng tiền<br/>theo hạng mục<br/>khớp file gốc<br/>⚙ Rule<br/>2'"]
+  F3 --> F6["6. Kiểm đủ 4 nhà thầu,<br/>mapping và tổng tiền<br/>theo hạng mục<br/>khớp file gốc<br/>⚙ Rule<br/>2'"]
   F5 --> F6
   F6 -->|"khớp 100%"| F7["7. Tính chênh khối lượng,<br/>% chênh đơn giá, tô màu,<br/>cộng phát sinh<br/>⚙ Rule<br/>2'"]
   F6 -->|"không khớp"| FB["Phương án quay về:<br/>ghép tay file đó<br/>hoặc yêu cầu nhà thầu<br/>nộp lại đúng mẫu"]
@@ -216,11 +218,11 @@ Gom (bước 1–6) khoảng 1 giờ; soát (bước 7–9) khoảng 1,2 giờ.
 - Nhận dữ liệu chào giá qua công cụ AI chưa được tổ chức cho phép (dữ liệu chào giá là thông tin mật của gói thầu).
 
 **Khi nào con người phải kiểm tra (HITL):**
-- Bước 5: mọi dòng AI ghép với mức tin cậy thấp và mọi dòng "chưa ghép" phải được người duyệt trước khi dùng.
+- Bước 5: mọi mapping do AI gợi ý phải được người duyệt đối chiếu mã, mô tả, đơn vị và dòng nguồn trước khi dùng; ưu tiên dòng tin cậy thấp và xử lý riêng các dòng chưa ghép.
 - Bước 6: nếu tổng tiền bất kỳ hạng mục nào không khớp file gốc thì dừng, không sang bước 7.
 - Bước 8: mọi dòng tô màu phải được người xem và ghi lý do trước khi trình.
 
-Kiểm tra chéo: nếu AI ghép một dòng vào sai mã dòng trong cùng hạng mục, tổng tiền ở bước 6 vẫn có thể khớp, nhưng ở bước 7 dòng đó sẽ hiện chênh khối lượng và bị tô màu để người xem lại.
+Kiểm tra chéo: tổng tiền khớp không chứng minh mọi dòng được ghép đúng. Một dòng ghép sai có thể không tạo chênh khối lượng nếu hai dòng cùng khối lượng hoặc cùng đơn vị. Vì vậy chuyên viên kiểm mã, mô tả, đơn vị và dòng nguồn của mọi mapping AI trước khi sử dụng, không chỉ các gợi ý có mức tin cậy thấp; dòng mơ hồ được chuyển xử lý thủ công.
 
 **Phương án quay về:**
 - AI ghép sai, tổng tiền không khớp, hoặc AI không dùng được → chuyên viên ghép tay file sai mẫu như hiện tại (khoảng 2,5 giờ), hoặc yêu cầu nhà thầu nộp lại đúng mẫu.

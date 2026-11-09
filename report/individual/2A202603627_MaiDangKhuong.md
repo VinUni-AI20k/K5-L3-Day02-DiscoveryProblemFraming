@@ -4,7 +4,7 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên: Mai Đặng Khương
+- Họ tên: Mai Đăng Khương
 - MSSV: 2A202603627
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: TEAMLAGI

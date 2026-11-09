@@ -17,7 +17,7 @@
 | 1 | Nguyễn Trọng Hưởng | 202603607 | Trưởng nhóm, điều phối thời gian, ghi chép | trongjhuongwr |
 | 2 | Nguyễn Văn Vinh | 2A202603672 | Quy trình, dữ liệu, bottleneck và before/after | VINH1811 |
 | 3 | Đàm Tuấn Linh | 2A202603624 | Kiểm chứng, assumption map và snapshot | damlinh820 |
-| 4 | Mai Đặng Khương | 2A202603627 | Research giải pháp hiện có, kiểm nguồn | dangkhuong14 |
+| 4 | Mai Đăng Khương | 2A202603627 | Research giải pháp hiện có, kiểm nguồn | dangkhuong14 |
 | 5 | Phạm Ngọc Trung Quân | 2A202603626 | Eval, đáp án đối chiếu, phương án đơn giản | jadenphm29 |
 | 6 | Giáp Mạnh Tuyên | 2A202603648 | Mức can thiệp, boundary và bốn rủi ro | Tanashi-Titus |
 

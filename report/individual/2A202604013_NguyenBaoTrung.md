@@ -151,7 +151,7 @@ HIỆN TẠI — 15–30 phút/bệnh nhân cần tư vấn kỹ (chồng chéo 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
 | Pitch Problem Card | Đảm nhiệm thuyết trình (pitch) bài *Bác sĩ lọc y văn* và trả lời các câu hỏi khi pitch | Bài được chọn làm đề tài của nhóm Ban4 (31/35 điểm) |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt cho Đức: Xác định vị trí cần sửa và vị trí sai như thế nào, và nếu AI nhận xét sai thì xử lý thế nào? | Giúp làm rõ tiêu chí xác định lỗi trong quy trình và bổ sung phương án kiểm tra lại khi AI đưa ra nhận xét sai lệch |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt cho Đức + Duy: Xác định vị trí cần sửa, vị trí sai cũng như thế nào là slide đúng, và nếu AI nhận xét sai thì xử lý thế nào? Hỏi phương về phần thật sự cải thiện.| Giúp làm rõ tiêu chí xác định lỗi trong quy trình và bổ sung phương án kiểm tra lại khi AI đưa ra nhận xét sai lệch + làm rõ giá trị AI -> đánh giá|
 | Nhận phản biện | Câu hỏi tôi nhận được: *về cung cấp kiến thức cũ và mới cho bác sĩ + mức độ tin cậy khi bác sĩ sử dụng* | Tôi đã sửa gì: Đổi Actor từ v0 (bác sĩ điều trị nói chung) sang v1 (**bác sĩ trẻ junior + người muốn tìm hiểu kỹ thuật mới**); khoanh vùng AI không cho phép sinh viên tìm bằng ChatGPT |
 | Gom cluster / cây OST | | |
 | Chọn candidate problem | | |

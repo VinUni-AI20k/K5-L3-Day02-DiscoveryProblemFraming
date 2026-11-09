@@ -162,21 +162,35 @@ KIỂM CHỨNG KẾT QUẢ — cần đo thời gian và độ chính xác
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
+> **BẢN NHÁP THAM KHẢO — CẦN BẢO TỰ XÁC NHẬN/VIẾT LẠI TRƯỚC KHI NỘP.** Nội dung dưới đây được trợ lý AI đề xuất từ bài cá nhân và tài liệu nhóm trong repo, không phải lời kể đã được xác nhận về việc tham dự buổi họp. Quy định `RULES.md` yêu cầu chính học viên viết Reflection từ trải nghiệm thật và không dùng AI viết thay. Những gì chỉ có trong biên bản nhóm được nêu theo đúng nguồn, không biến thành ký ức cá nhân.
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Từ bảng pitch CP3 của nhóm, tôi thấy ba nhóm vấn đề rất khác nhau: AIOps xử lý sự cố hạ tầng, EdTech kiểm tra câu hỏi hoặc bài tập, và Text-to-SQL để hỏi dữ liệu kinh doanh. Điều đáng chú ý là một vấn đề nghe có vẻ khó về công nghệ chưa chắc là vấn đề cần AI nhất. Chẳng hạn, việc thống kê các lỗi lặp lại trong bài Python có thể bắt đầu bằng linter hoặc unit test; việc xem số liệu kinh doanh cũng nên so với dashboard có sẵn. Với tôi, cách so sánh theo actor, bước nghẽn, bằng chứng và phương án không AI hữu ích hơn việc lựa chọn theo tên công nghệ.
+
+**6.2. Nhóm có lúc nào bị “solution-first” không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Trong tài liệu nhóm, candidate AIOps ban đầu gắn khá chặt với phương án Agentic AI và tự cô lập sự cố. Đây là chỗ cần cảnh giác với solution-first: câu hỏi đầu tiên phải là kỹ sư đang chậm ở bước nào, không phải triển khai Agent ra sao. Báo cáo nhóm sau đó tách ba opportunity: lọc cảnh báo giả, tra chéo log đa tầng và phản ứng ngoài giờ. Việc tách này giúp mô tả nhu cầu trước, rồi mới so sánh No AI, Rule, Workflow và Agent. Tuy vậy, tôi nghĩ nhóm vẫn phải chứng minh Agent vượt được Workflow trong pilot thay vì xem đó là điều hiển nhiên.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Với hướng Text-to-SQL cá nhân, ban đầu tôi tập trung vào việc cho người dùng hỏi dữ liệu bằng ngôn ngữ tự nhiên. Khi xem lại các câu hỏi phản biện trong bảng CP3, tôi thấy cần tách vấn đề nghiệp vụ “người không biết SQL cần số liệu đúng lúc” khỏi vấn đề kỹ thuật “mô hình ánh xạ schema và JOIN”. Một dashboard hoặc công cụ BI có thể đã giải quyết phần nhu cầu tra cứu lặp lại. Vì vậy, đề xuất Text-to-SQL chỉ thuyết phục nếu xác định rõ những câu hỏi phát sinh ngoài báo cáo cố định, thời gian chờ thực tế và cách người dùng kiểm chứng kết quả. **Cần tự xác nhận:** Đây là phần rút ra khi xem tài liệu và quá trình chuẩn bị, không khẳng định tôi đã phát biểu chính xác như vậy tại buổi pitch.
+
+**6.4. Kết quả kiểm chứng có làm tôi bất ngờ không? Điều gì?**
+
+Điểm đáng chú ý nhất trong tổng hợp CP4 là thời gian khoanh vùng tầng lỗi phổ biến chỉ khoảng 15–30 phút, trong khi bản problem ban đầu dùng mốc 90–120 phút cho cả sự cố. Hai con số thực ra mô tả hai khoảng thời gian khác nhau. Ngoài ra, 2/5 người được hỏi thường bị gọi dậy giữa đêm; đa số không muốn hệ thống tự chặn vô điều kiện. Những dữ liệu này làm bài toán chuyển từ “đọc log nhanh hơn” sang “phát hiện và phản ứng ngoài giờ một cách an toàn”. Tôi không trực tiếp tham gia phỏng vấn; nhận xét này dựa trên bản tổng hợp mà nhóm đã ghi.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khó nhất là xác định metric không đánh tráo khái niệm. Thời gian từ lúc bất thường xuất hiện đến lúc có cảnh báo, thời gian kỹ sư tìm được tầng lỗi, và thời gian cô lập xong không giống nhau. Nếu dùng 15–30 phút khoanh vùng làm baseline rồi so với mục tiêu dưới 5 phút cô lập, kết quả sẽ thiếu công bằng. Tôi cũng phải phân biệt rõ điều đã có trong phỏng vấn với ngưỡng nhóm chỉ mới đề xuất, như confidence 85%, thời gian dưới 5 phút hay tỷ lệ cảnh báo sai dưới 15%. Problem Statement tốt không chỉ rõ pain mà còn nói rõ cách đo và việc hệ thống tuyệt đối không được tự làm.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+Tôi sẽ yêu cầu nhóm thống nhất định nghĩa từng mốc thời gian ngay từ trước khi chấm điểm candidate: phát hiện, khoanh vùng, cô lập và khắc phục. Với Text-to-SQL, tôi sẽ chuẩn bị thêm bằng chứng từ câu hỏi nghiệp vụ thực tế và thử so sánh với dashboard BI để không lẫn vấn đề khách hàng với thử thách kỹ thuật của developer. Với AIOps, tôi muốn hỏi kỹ cách tính confidence score: điểm này đã được hiệu chuẩn trên incident có nhãn chưa, và tại sao 85% là ngưỡng đủ để chặn? Cuối cùng, tôi sẽ đề nghị kiểm thử trong môi trường mô phỏng, có whitelist, audit và rollback, trước khi cân nhắc bất kỳ hành động tự động nào trên production.
+
+**6.7. Hiểu bài — chuỗi problem → quy trình → metric → boundary → mức can thiệp AI → quyết định**
+
+Vấn đề nhóm chọn là việc phát hiện và phản ứng sự cố hạ tầng ngoài giờ bị chậm, kèm cảnh báo giả và việc phải đối chiếu nhiều nguồn log. Trong quy trình hiện tại, kỹ sư nhận cảnh báo, lọc log, tra chéo các tầng rồi mới quyết định cô lập hoặc chuyển người phụ trách. Các chỉ số cần đo riêng gồm thời gian phát hiện, thời gian khoanh vùng, thời gian cô lập, tỷ lệ cảnh báo giả và số lần chặn nhầm. Boundary là không tự chạy shell tùy ý, không tác động IP trong whitelist hoặc hệ thống lõi, và phải có người duyệt khi chứng cứ chưa đủ. Rule xử lý lọc nhiễu theo ngưỡng; Agent được nhóm đề xuất để chọn nguồn log cần đọc tiếp, còn quyền thực thi do policy và runbook có giới hạn kiểm soát. Nếu có tự cô lập ở tầng Nginx thì hành động phải có TTL, self-check, rollback và audit. Vì chưa có kết quả pilot đầy đủ, hướng Go có điều kiện của nhóm vẫn cần được xác nhận bằng thử nghiệm và tiêu chí dừng cụ thể.
 
 ---
 

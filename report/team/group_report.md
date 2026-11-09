@@ -8,7 +8,7 @@
 - Tên nhóm:
 - Thành viên: xem `TEAM.md`
 - Candidate problem được chọn (1 câu): Tìm lại câu trả lời cũ của coach trong Discord
-- Quyết định cuối: Go / Not Yet / No-Go
+- Quyết định cuối: Go (Pilot phạm vi hẹp)
 
 ---
 
@@ -93,7 +93,7 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 Cách đã dùng: Interview
 
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
+Interview snapshot (chi tiết xem tại [`cp4-interview-snapshot-1.md`](../assets/cp4-interview-snapshot-1.md) và [`cp4-interview-snapshot-2.md`](../assets/cp4-interview-snapshot-2.md)):
 
 | Trường                                            | Nội dung                                                   |
 | ------------------------------------------------- | ---------------------------------------------------------- |
@@ -244,30 +244,30 @@ Vì sao:
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| **No AI** (sửa quy trình) | Lưu FAQ tĩnh + thủ công tìm kiếm từ khóa trên Discord | Học viên chỉ cần tra cứu danh mục tĩnh | Không tự động gom đúng ngữ cảnh thread dài | Dùng cho team ít lỗi |
+| **Rule** | Dùng Vector DB / script tìm kiếm từ khóa chính xác | Bước tìm kiếm dữ liệu thô | Không tự tổng hợp thành câu trả lời hoàn chỉnh | Dùng cho bước 1 |
+| **Workflow** | Rule tìm từ khóa → AI tổng hợp thread → Học viên duyệt và áp dụng | Các bước cố định, AI chỉ làm phần tóm tắt ngôn ngữ | Tóm tắt nhầm hoặc thiếu bước fix | **Chọn** |
+| **Agent** | AI tự quét, tự chat trả lời thay thế coach trên channel | Khi các bước tiếp theo không đoán trước được | Quá rộng, dễ bịa cách sửa lỗi gây sập hệ thống | Không chọn |
 
-**Mức chọn:**
+**Mức chọn:** Workflow
 
-**Vì sao không chọn mức đơn giản hơn:**
+**Vì sao không chọn mức đơn giản hơn:** Quan sát thực tế cho thấy học viên mất nhiều thời gian nhất ở phần đọc dọc các thread cũ rải rác trên Discord, phần mà No AI (tìm thủ công) và Rule (chỉ lọc từ khóa thô) không giải quyết được triệt để.
 
 ### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| **Prediction** — AI dự đoán / tạo ra gì? | Bản tóm tắt cách fix lỗi/hướng dẫn từ các thread cũ trên Discord |
+| **Judgment** — con người cân nhắc, quyết định gì? | Học viên tự đánh giá cách fix nào phù hợp nhất với lỗi hiện tại của mình |
+| **Action** — hành động cuối cùng là gì, ai làm? | Học viên kiểm tra và áp dụng vào mã nguồn/hệ thống |
+| **Outcome** — đo kết quả bằng gì? | Thời gian tìm kiếm lỗi; số lần phải hỏi lại coach; tỷ lệ áp dụng đúng ngay lần đầu |
+| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Lịch sử chat, thread cũ, câu hỏi của học viên trên Discord. Đều có sẵn |
+| **Feedback** — lấy phản hồi ở đâu để cải thiện? | Thao tác học viên áp dụng thành công hay thất bại; việc phải hỏi lại coach nếu AI tổng hợp sai |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng: **Augment**. Học viên cần "bản nháp/tóm tắt hướng dẫn để đọc và tự áp dụng", không ai muốn hệ thống tự động chạy câu lệnh fix lỗi thẳng lên production khi chưa kiểm chứng.
+- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào: **Bỏ sót cách fix đúng tệ hơn là gợi ý nhầm**: Nếu học viên không tìm được hướng dẫn đúng, họ sẽ lại mất thời gian đi hỏi coach và làm gián đoạn công việc. Vì vậy tiêu chí đánh giá ưu tiên "không bỏ sót ngữ cảnh xử lý có trong lịch sử Discord".
 
 ---
 
@@ -275,29 +275,34 @@ Vì sao:
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Học viên gặp lỗi kỹ thuật đã từng được hỏi trong lớp, và coach/mentor phải trả lời thủ công. Vị trí AI can thiệp: học viên, ở bước tìm lại lịch sử chat |
+| **Quy trình** | Gặp lỗi → tìm trong chat cũ (tìm thread, đọc lại) → dán log/chụp màn hình cho bot hoặc tạo ticket → chờ trả lời của coach. Quy trình tương lai: Rule tìm thread → AI tóm tắt cách fix có dẫn nguồn → học viên kiểm và áp dụng |
+| **Bottleneck** | Bước tìm lại trong chat cũ: ~15 phút/lần, vì từ khóa không khớp cách người trước mô tả lỗi, phải mở từng thread, và câu trả lời cuối của coach nằm lẫn trong nhiều tin nhắn thử–sai không được đánh dấu |
+| **Impact** | Học viên: ~15 phút/lần × 2 lần/tuần ≈ 30 phút/tuần/người, và bị chặn không làm tiếp lab được trong lúc chờ coach. Coach: phải trả lời lại câu đã từng trả lời |
+| **Success Metric** (baseline → target, cách đo) | (1) Thời gian từ lúc bắt đầu tìm đến lúc có cách sửa: ~15 phút/lần → dưới 3 phút/lần, đo bằng cách ≥ 3 học viên tự bấm giờ mỗi lần tìm trong 2 tuần. (2) Số lần học viên phải hỏi lại coach không tăng so với 2 tuần trước pilot. (3) Tỷ lệ bản tóm tắt bị học viên sửa lại hoặc bỏ dùng ≤ 30% |
+| **Boundary** | AI không trả lời thay coach khi chưa có coach duyệt. Không tự đánh dấu câu hỏi là "đã giải". Không đọc kênh riêng hoặc DM, không giữ lại log hay ảnh chụp có API key, mật khẩu. Mọi câu trả lời phải dẫn link về thread gốc, và câu trả lời mới chỉ vào FAQ sau khi coach duyệt |
+| **AI intervention point** | Sau khi đã có kết quả tìm kiếm thô (danh sách thread liên quan), trước bước học viên đọc và quyết định áp dụng |
+| **Mức chọn** | Workflow |
+| **Rủi ro & người kiểm tra** | AI tóm tắt sai ngữ cảnh hoặc bịa bước fix: học viên đối chiếu từng dòng với link nguồn và tự kiểm trước khi chạy lệnh trên máy mình; coach duyệt mọi câu trả lời mới trước khi lưu vào FAQ |
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| **Actor** | Học viên gặp lỗi và coach phải trả lời thủ công | Gốc rõ hơn: học viên gặp lỗi đã từng được hỏi, vị trí can thiệp nằm ở học viên | Phỏng vấn cho thấy lỗi chỉ hỏi lại khi đã từng có câu trả lời; hẹp lại để giải quyết đúng phạm vi có thật |
+| **Success Metric** | Chỉ đo thời gian (15' → <3') | Thêm số lần phải hỏi lại coach, và tỷ lệ bản tóm tắt bị sửa lại | Phản biện ở CP5: nhanh hơn nhưng tóm tắt sai thì vẫn hỏi lại coach, tức là không giải quyết được vấn đề |
+| **Boundary** | Không trả lời thay coach, không đánh dấu đã giải, không đọc DM | Thêm: mọi câu trả lời phải dẫn link về thread gốc, câu mới chỉ vào FAQ sau khi coach duyệt | Vì thiết chí đánh giá #1 và #3 cần kiểm chứng được, mà link nguồn là cách duy nhất để kiểm |
 
 **Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | Truy được nguồn | Mọi dòng trong bản tóm tắt đều dẫn link mở được tới thread gốc | Có dòng không có nguồn, hoặc link dẫn tới thread không nói về lỗi đó |
+| 2 | Đúng ngữ cảnh lỗi | Đọc bản tóm tắt là hiểu được lỗi đang gặp và cách fix, không phải mô tả chung chung | Phải hỏi lại "lỗi này là gì" hoặc áp dụng cho mọi lỗi |
+| 3 | Không bịa | Mọi lệnh, mọi bước fix đều truy được về một thread cũ trong dữ liệu | Có bước hoặc lệnh không xuất hiện trong lịch sử được cung cấp |
+| 4 | Dùng được ngay | Dưới 250 từ, có lệnh cụ thể và điều kiện lỗi đi kèm | Dài, lan man, hoặc chỉ nói "xem lại thread để biết chi tiết" |
+| 5 | AI intervention point | Sau bước tìm kiếm thô, trước bước học viên quyết định áp dụng | Chốt đúng chỗ AI chèn vào, để v0 và v1 cùng đo được một thứ |
+| 6 | Mức chọn | Workflow | Rule tìm từ khóa không gom được ngữ cảnh thread dài; Agent thì quá rộng |
 
 ---
 
@@ -307,31 +312,48 @@ Vì sao:
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | TB | Phần lớn người dùng cảm thấy mất thời gian vào việc tra cứu cũ. |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | Thấp | Vẫn dùng trên Discord quen thuộc. Câu trả lời đã qua coach duyệt và có link về thread gốc để học viên tự kiểm. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | TB | Có nhiều công cụ có sẵn phục vụ dự án, nhưng chưa rõ bao nhiêu lỗi đã có. |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | Thấp | Chỉ ghi nhận và trả lời câu hỏi thuộc phạm vi chương trình nhằm giải đáp thắc mắc học viên |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** Go (Phạm vi hẹp — Pilot 2 tuần)
 
-**Lý do:**
+**Lý do:** Không có rủi ro nào ở mức Cao (Value và Feasibility ở mức Trung bình, Usability và Viability ở mức Thấp). Nhóm áp dụng mức can thiệp Workflow có Human-in-the-Loop (học viên tự kiểm chứng trước khi áp dụng vào code) và phương án Fallback rõ ràng nên rủi ro vận hành được kiểm soát an toàn. Hai rủi ro mức Trung bình sẽ được kiểm chứng trực tiếp trong đợt Pilot.
 
 **Nếu Go — pilot nhỏ nhất:**
+- **Thời gian & Quy mô:** Pilot trong 2 tuần với nhóm 5–10 học viên lớp L3B khi làm bài lab.
+- **Cách triển khai:** Chưa xây bot tự động phức tạp. Khi học viên gặp lỗi:
+  1. Học viên nhập mô tả/từ khóa lỗi vào script/notebook tìm kiếm các thread liên quan trên Discord.
+  2. Sử dụng 1 Prompt chuẩn (với Gemini Flash) để tóm tắt các thread tìm được thành bản nháp hướng dẫn có kèm link nguồn.
+  3. Học viên đọc bản nháp, đối chiếu link nguồn và tự quyết định áp dụng vào máy mình.
+  4. Người tham gia tự bấm giờ, ghi nhật ký số lần phải hỏi lại coach và đánh giá bản tóm tắt theo 4 tiêu chí đầu ra.
 
 **Nếu Not Yet — cần kiểm chứng gì trước:**
 
 **Nếu No-Go — nên làm gì thay AI:**
 
 **Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+- Nếu sau 2 tuần pilot, thời gian tìm kiếm trung bình không giảm xuống dưới **5 phút/lần** (baseline là ~15 phút) → Dừng pilot, quay về tìm kiếm thủ công kết hợp tài liệu FAQ tĩnh.
+- Nếu tỷ lệ bản tóm tắt bị học viên đánh giá sai / phải bỏ qua $> 30\%$ → Dừng triển khai AI, chuyển sang giải pháp No AI (tổng hợp SOP/FAQ ghim trên Discord).
+- Nếu phát hiện AI trích xuất nhầm hoặc làm rò rỉ dữ liệu nhạy cảm (token, mật khẩu) → Dừng ngay lập tức để rà soát lại lớp lọc dữ liệu đầu vào.
 
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+### Hạn chế
+- **Phụ thuộc dữ liệu Discord:** Dữ liệu chat thô thiếu cấu trúc, nhiều từ ngữ viết tắt làm giảm độ chính xác của AI.
+- **Rủi ro Hallucination:** AI có thể tổng hợp nhầm cách fix giữa các phiên bản lỗi khác nhau.
+- **Chi phí định kỳ:** Tốn công rà soát và cập nhật kho dữ liệu (Knowledge Base) để tránh thông tin bị lỗi thời.
+
+### Hướng tiếp theo
+- **Chuẩn hóa FAQ:** Gom các lỗi lặp lại nhiều thành tài liệu SOP/FAQ cố định thay vì chỉ dùng lịch sử chat.
+- **Triển khai RAG Bot:** Dựng bot hỏi đáp nội bộ quét trên Discord/Notion cho học viên tra cứu tự động.
+- **Đo lường & Tối ưu:** Theo dõi giảm thời gian tìm kiếm và đo tỷ lệ học viên giảm hỏi lại coach.
 
 ## 10. Tài liệu tham khảo
 
--
+

@@ -46,61 +46,44 @@ Các đường dẫn sản phẩm trong `report/assets/` là đầu ra dự ki�
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
-### NguyenTrongHuong-202603607
-
-**Phần việc phụ trách:**
-
-- Điều phối sáu thành viên; quản lý phân công/log, review bàn giao và tổng hợp báo cáo nhóm, Problem Statement, metric và quyết định để nhóm kiểm/chốt.
-
-**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
-
-- Điều phối tích hợp sáu báo cáo cá nhân qua PR #2; tiếp tục yêu cầu kiểm năm nhánh và merge PR #3–#7 của bốn thành viên. Không tạo PR trùng cho Quân vì nội dung đã có trên main; giữ các bản đang sửa trên nhánh cá nhân.
-- Yêu cầu trợ lý đọc năm báo cáo, soạn mỗi người một câu hỏi bám vào card; lưu ở mục 4 báo cáo cá nhân như nội dung chuẩn bị trao đổi.
-- Sử dụng trợ lý review CP5 của Vinh và CP6 của Tuyên, xử lý conflict/tên file, khôi phục template, kiểm phạm vi diff và merge qua PR #4/#6. Review sửa logic kiểm mapping và phân biệt baseline gom + soát 11–13 giờ/vòng với riêng soát 5–6 giờ/vòng. Bản tổng hợp local giữ nội dung đã merge, bổ sung v0/v1 và điều kiện review.
-- Tổng hợp v0/v1, metric cùng phạm vi, năm tiêu chí, bốn rủi ro, điều kiện Go và ngưỡng dừng; bản trước đã merge qua PR #8/#9. Ngày 2026-11-09, tôi ủy quyền chốt hướng Rule cho phần soát và giữ Not Yet cho pilot, đồng bộ quyết định trong báo cáo nhóm và log.
-- Yêu cầu review bản eval Quân tại `9ccefc8`; nhận xét được ghi trong báo cáo nhóm mục 7, gồm sửa trung vị TC-03, đơn vị tiền TC-09, tỷ lệ thiếu nguồn và phân biệt target với kết quả đã chạy. Đây là review tài liệu, không gán cho Quân câu trả lời chưa có.
-- Kiểm research nhà thầu của Khương trong PR #5, sửa bốn tham chiếu thiếu đích thành link chính thức đã mở kiểm; giữ rõ tính năng công cụ với giả thuyết áp dụng. Phần research bổ trợ Microsoft trước đó được ghi đúng nguồn.
-- Bảo toàn nội dung thành viên khi tích hợp; sửa tên file, khoảng trắng, dấu thừa và các điểm review đã nêu trong PR. Câu hỏi chuẩn bị không được ghi thành phỏng vấn/pitch đã xảy ra.
-
-**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
-
-- [PR #2](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/2), merge commit `4c402eb`: tập hợp báo cáo cá nhân trên main.
-- [PR #3](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/3), [#4](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/4), [#5](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/5), [#6](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/6), [#7](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/7), main `314b6d8`: tích hợp mới và review.
-- [Báo cáo cá nhân](report/individual/202603607_NguyenTrongHuong.md), mục 4–5: câu hỏi review và cách dùng AI.
-- [Báo cáo nhóm](report/team/group_report.md), mục 3.3, 4–8 và 10: research, bản tổng hợp đề xuất và commit nguồn.
-- [PR #8](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/8) và [PR #9](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/9): bản tổng hợp và mục 2 đã tích hợp, main `90dcaa7`.
-- [Nhật ký điều phối](docs/TEAM_WORK_LOG.md): phân công, quyết định theo ủy quyền và review eval. Lượt cập nhật quyết định hiện tại ở local trên nhánh Hưởng; không gán commit cho phần còn đang sửa.
-
-**Điều mình học được từ phần nhóm:**
-
-- Khi tổng hợp phải giữ cùng phạm vi của baseline–target; số liệu trong báo cáo thành viên vẫn cần nguồn và quyền sử dụng được kiểm.
-- Công thức đúng không bảo đảm so đúng hạng mục; kiểm tổng tiền cần đi cùng mapping, đơn vị và truy vết.
-- Rule có thể phù hợp phần so số; hỗ trợ ghép ngữ nghĩa là bài toán mở rộng phải có đối chứng và người kiểm riêng.
 
 ### NguyenVanVinh-2A202603672
 
 **Phần việc phụ trách:**
 
-- Quy trình trước/sau (CP5), dữ liệu domain, bottleneck và before/after.
-- Cung cấp actor, số liệu và baseline cho candidate được chọn (V1 — soát chênh khối lượng/đơn giá).
+- Người chính CP5 — Quy trình trước/sau: vẽ quy trình hiện tại, quy trình tương lai và bảng before/after (mục 4 báo cáo nhóm).
+- Người cung cấp domain và dữ liệu cho candidate được chọn (V1 — soát chênh khối lượng/đơn giá): actor, quy trình thực tế, số liệu gói thầu và baseline thời gian.
+- Hỗ trợ CP5 — Problem Statement v0: cung cấp quy trình, bottleneck và baseline cho bản tổng hợp.
+- Việc được giao trước pilot (mục 8): xác nhận phạm vi, nhật ký thời gian và dữ liệu được phép dùng.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- CP1–CP2: đưa 3 card V1, V2, V3 từ công việc đánh giá chào giá gói cơ điện; V1 được chọn với 30/35 điểm.
-- CP3: phản biện card của Hưởng (H1), Linh (L2), Quân (Q3).
-- CP5: viết mục 4 báo cáo nhóm — quy trình hiện tại 8 bước (11–13 giờ/vòng), quy trình tương lai tách Rule / AI / người, boundary, HITL, phương án quay về và bảng before/after.
-- Cung cấp baseline riêng phần soát (5–6 giờ/vòng, ~4.100 dòng × 4 nhà thầu) làm nguồn cho Problem Statement v0/v1 và CP6.
-- Research bổ trợ: Power Query chỉ gom được file cùng mẫu; Archdesk, Corten là công cụ bid leveling có sẵn (ghi ở báo cáo cá nhân).
-- Được giao trước pilot: xác nhận phạm vi, nhật ký thời gian và quyền dùng dữ liệu.
+- **CP1 — Scan:** 8 problem theo đủ 4 lăng kính, lấy từ quy trình đánh giá chào giá gói cơ điện (BOQ ~4.100 dòng, 4 nhà thầu, 7 hạng mục); mỗi dòng có số đo thời gian, số dòng hoặc số lần.
+- **CP2 — Problem Card:** 3 card kèm quy trình nháp (Mermaid): V1 soát chênh lệch (5–6 giờ/vòng), V2 gom bảng chào giá (6–7 giờ/vòng), V3 chấm năng lực (3 giờ công/nhà thầu, tổng của 2 người). Dùng AI phản biện; sửa V1 từ "Rule hoặc Workflow" thành Rule.
+- **CP3 — Hội tụ:** pitch 3 card; V1 vào shortlist với 30/35 điểm, cao nhất (L1 và T1 cùng 24 điểm) và được chọn. Đặt câu hỏi phản biện cho card của Hưởng (H1), Linh (L2), Quân (Q3).
+- **CP4 — Kiểm chứng / research:** cung cấp số liệu domain bổ trợ cho mục 3. Research thêm 3 nguồn và tự mở kiểm link: Power Query (Microsoft yêu cầu các file cùng schema, nên không gom được file sai mẫu), Archdesk và Corten (công cụ bid leveling có sẵn); loại 1 link chết.
+- **CP5 — Quy trình trước/sau:** viết mục 4 báo cáo nhóm:
+  - 4.1: quy trình hiện tại 8 bước, có actor / input / output / thời gian, tổng 11–13 giờ/vòng; bottleneck chính là bước dò ~16.000 dòng (~4 giờ/vòng), bottleneck phụ là ghép file sai mẫu (2,5 giờ).
+  - 4.2: quy trình tương lai 9 bước tách Rule / AI / con người; 5 điều boundary, HITL ở 3 bước, 3 phương án quay về.
+  - 4.3: bảng before/after — từ 8/8 bước thủ công xuống 4/9; thời gian kỳ vọng ~2–2,5 giờ/vòng (ước, chưa pilot); 5 rủi ro mới kèm cách xử lý.
+- **Sau review CP5:** chấp nhận hai điểm sửa — bước duyệt phải kiểm mọi dòng AI ghép (tổng tiền khớp không chứng minh ghép đúng) và tách baseline riêng phần soát (300–360 phút/vòng) khỏi thời gian gom.
+- **CP5–CP6 — Problem Statement, mức can thiệp:** baseline 300–360 phút/vòng và target dưới 90 phút/vòng (từ mục tiêu 1,5 giờ ở Card #1) được dùng cho v0/v1; kết luận Rule của Card #1 được nhóm giữ ở CP6, AI mapping tách thành hướng mở rộng.
+- **CP7:** hoàn thành báo cáo cá nhân mục 4–6 và phần này trong `TEAM.md`.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
-- [Báo cáo nhóm](report/team/group_report.md), mục 4 (quy trình trước/sau); mục 2.1 (card V1–V3); mục 5, 7 (baseline nguồn Vinh).
-- [PR #4](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/4), merge commit `270bb22`; commit nguồn `2f96679`.
-- [Báo cáo cá nhân](report/individual/2A202603672_NguyenVanVinh.md), mục 2–5.
+- [Báo cáo nhóm](report/team/group_report.md):
+  - Mục 2.1, dòng 4–6: card V1, V2, V3; mục 2.4: bảng chấm điểm V1 30/35.
+  - Mục 4: quy trình trước/sau (4.1–4.3) do Vinh viết.
+  - Mục 5 và 7: baseline phần soát ghi nguồn "theo Vinh".
+  - Mục 8.2: việc được giao trước pilot; mục 10: nguồn [V-CP5].
+- [PR #4](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/4), merge commit `270bb22`; các commit của Vinh: `a295e96`, `cd91790`, `2f96679`.
+- [Báo cáo cá nhân](report/individual/2A202603672_NguyenVanVinh.md): mục 2 (scan), mục 3 (3 card + quy trình nháp), mục 4 (tham gia nhóm), mục 5 (dùng AI).
+- Không có file trong `report/assets/`: sơ đồ viết trực tiếp bằng Mermaid trong báo cáo.
 
 **Điều mình học được từ phần nhóm:**
 
 - Nên thử Rule làm mốc đối chứng trước, chỉ dùng AI khi chứng minh được Rule không đủ.
 - Phải tách bước gom khỏi bước soát; gộp lại thì baseline và target không cùng phạm vi.
 - Tổng tiền khớp không chứng minh các dòng đã được ghép đúng; cần kiểm cả mã, đơn vị và dòng nguồn.
+- Số liệu từ một gói thầu chỉ là điểm bắt đầu; cần bấm giờ từng bước và có bộ đáp án trước khi kết luận.

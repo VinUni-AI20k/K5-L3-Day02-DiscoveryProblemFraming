@@ -154,7 +154,7 @@ Lặp lại (2)–(5) × số giáo viên trong tổ × số văn bản/học k�
 | Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: với #4 (Khánh), hỏi có thực sự cần AI không khi leader phải tự nắm tình hình nhóm. Với #7 (Huy), hỏi nếu đã có công cụ ghi log thí nghiệm thì có cần gom lại kết quả nữa không. Với #9 (Huy), hỏi dùng công cụ quản lý tài liệu tham khảo có tối ưu hơn không. | Thêm hướng nhìn đa dạng hơn về vấn đề |
 | Nhận phản biện | Câu hỏi tôi nhận được: #2, Khánh hỏi sao không chỉ đổi số trong đề đã soạn mà phải dùng LLM. Với #1, câu hỏi là vì sao cần một người duyệt sau khi dùng AI, có tạo ra một nghề mới cho giáo viên không. | Tôi đã sửa gì: Giải thích tại sao phải sử dụng LLM (giúp đa dạng, làm văn hay hơn), giải thích tại sao cần con người in the loop |
 | Gom cluster / cây OST | triển khai cluster gom và phân tích cho nhóm | Cả nhóm đồng ý |
-| Chọn candidate problem | Chọn #1 | Mọi người trong team đồng ý |
+| Chọn candidate problem | Chọn #1 (Problem Card #3 của tôi) | Mọi người trong team đồng ý |
 | Kiểm chứng / research | | |
 | Quy trình nhóm | Phân tích đề xuất bước nào là rule, AI hay người | Thảo luận và debate cùng nhóm |
 | Problem Statement | | |

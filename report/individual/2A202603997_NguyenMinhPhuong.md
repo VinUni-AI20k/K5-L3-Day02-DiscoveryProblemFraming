@@ -137,10 +137,10 @@ Quy trình nháp hiện tại:
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| Card 1: số liệu Ardent thiên về doanh nghiệp lớn Mỹ, không dùng làm baseline VN được | | Ghi rõ baseline phải tự đo (20 hóa đơn × 2 kế toán) |
-| Card 1: nghẽn có thể ở "chờ duyệt" chứ không phải "đối chiếu" | | |
-| Card 2: giáo viên có thể không coi chấm bài là "pain"; nghẽn có thể ở viết nhận xét | | Tách bấm giờ chấm điểm và viết nhận xét |
-| Card 3: thời gian chạy máy xét nghiệm là giới hạn vật lý; phần cải thiện được có lẽ chỉ là thông báo | | Hạ "Cảm nhận nhanh" xuống No AI / Rule |
+| Card 1: số liệu Ardent thiên về doanh nghiệp lớn Mỹ, không dùng làm baseline VN được | Có | Ghi rõ baseline phải tự đo (20 hóa đơn × 2 kế toán) |
+| Card 1: nghẽn có thể ở "chờ duyệt" chứ không phải "đối chiếu" | Có | Đưa thành câu hỏi muốn nhóm phản biện và thành giả định cần kiểm chứng (bấm giờ 20 hóa đơn) |
+| Card 2: giáo viên có thể không coi chấm bài là "pain"; nghẽn có thể ở viết nhận xét | Không | Không sửa, giữ nhận định ban đầu |
+| Card 3: thời gian chạy máy xét nghiệm là giới hạn vật lý; phần cải thiện được có lẽ chỉ là thông báo | Không | Không sửa, giữ nhận định ban đầu |
 
 ---
 

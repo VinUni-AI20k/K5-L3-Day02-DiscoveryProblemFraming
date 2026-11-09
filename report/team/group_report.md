@@ -78,16 +78,13 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Các cá nhân khác cũng mất trên 15 phút/ngày cho việc viết phản hồi email| Value| 5| 3| ✅|
+| 2 | Bước tốn nhất là format lại email cho đúng chuẩn| Value| 5| 2| ✅|
+| 3 | Người viết cần đọc lại email trước khi gửi| Value| 5| 2| ✅|
+| 4 | Người dùng cần cung cấp thông tin cho công cụ (nội dung chính, ...)| Feasibility| 5| 2| ✅|
+| 5 | Người dùng cài đặt công cụ, đồng ý để AI viết email nháp| Viability| 5| 2| ✅|
 
-*Điền 4–6 giả định; xóa dòng thừa.*
-
-Giả định nhóm kiểm chứng trong buổi này:
+Giả định nhóm kiểm chứng trong buổi này: 1, 2, 3, 4, 5
 
 ### 3.2. Kiểm chứng
 
@@ -97,29 +94,34 @@ Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file 
 
 | Trường | Nội dung |
 |---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+| Người được hỏi (vai trò, không ghi tên thật) | Thành viên trong lớp|
+| Câu nói đáng nhớ nhất (nguyên văn) | "Bước khó nhất là format lại email cho vừa đúng chuẩn email công việc, vừa đầy đủ thông tin."|
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Hôm qua, phản hồi chậm do viết email lâu.|
+| Hiện đang xử lý bằng cách nào (workaround)? | Dùng chatgpt sửa format|
+| Mất bao lâu, bao lần? | Tuy việc viết email không lâu (khoảng 5 phút 1 email), nhưng nếu cần viết nhiều email sẽ mất thời gian.|
+| Insight / opportunity rút ra | Pain nằm ở chỗ phải viết email vừa đúng chuẩn, vừa đầy đủ thông tin.|
 
 Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Phỏng vấn| 3| 2/3 người viết email thủ công và đều mất nhiều thời gian nhất ở phần format email| 1 người nói tự viết email sẽ giúp bày tỏ ý kiến rõ ràng hơn|
+| Poll trong lớp| 3| 2/3 người đồng ý sử dụng công cụ soạn email phản hồi| 1 người nói không cần công cụ giúp viết email phản hồi|
 
-**Nhóm đã sửa problem thế nào sau kiểm chứng:**
+**Nhóm đã sửa problem thế nào sau kiểm chứng:** giữ nguyên thiết kế ban đầu, bao gồm đọc email gửi đến và soạn template email. Hệ thống không tự gửi email.
 
 ### 3.3. Research giải pháp đã có
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| Microsoft Copilot| https://www.microsoft.com/vi-vn/microsoft-365/outlook/ai-email-assistant| Đọc email gửi đến,tóm tắt email dài, ưu tiên thư quan trọng và đề xuất nội dung trả lời tự động.| Đa dụng| Cần trả phí để sử dụng hết các chức năng| Có thể học tập kiến trúc, tính năng|
+| Spike| https://www.spikenow.com/| Tóm tắt email, soạn thảo thông minh, tổng hợp các tin nhắn, nhiệm vụ quan trọng trên bảng tin| Biến các chuỗi email dài thành các đoạn hội thoại trực quan, dễ theo dõi giống như tin nhắn chat.| Cần trả phí| Có thể học tập kiến trúc, tính năng|
 
+Kết luận research:**
+
+```text
+Phần lớn quy trình đã có công cụ làm được nhưng cần trả phí.
+Hướng hợp lý: AI đọc email → AI soạn email nháp → Người dùng đọc và duyệt → Người dùng gửi.
 ---
 
 ## 4. Quy trình trước/sau (CP5)

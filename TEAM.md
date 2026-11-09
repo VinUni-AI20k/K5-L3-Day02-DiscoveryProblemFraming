@@ -31,7 +31,7 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | CP5 — Quy trình trước/sau | Nguyễn Xuân Đạt | Hoàng Ngọc Hiệu, Nguyễn Công Hoàn | Quy trình + bảng before/after |
 | CP5 — Problem Statement v0 | Nguyễn Xuân Đạt | Hoàng Ngọc Hiệu, Nguyễn Công Hoàn| Problem Statement v0 |
 | CP6 — Mức can thiệp + Problem Statement v1 | Hoàng Ngọc Hiệu | Nguyễn Xuân Đạt, Nguyễn Công Hoàn| Ma trận, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định | Hoàng Ngọc Hiệu | Nguyễn Xuân Đạt, Nguyễn Công Hoàn | 4 rủi ro + Go/Not Yet/No-Go |
+| CP7 — Quyết định | Hoàng Ngọc Hiệu | Nguyễn Xuân Đạt, Nguyễn Công Hoàn | 4 rủi ro + Go/Not Yet/No-Go |
 
 ## Cá nhân
 

@@ -230,10 +230,10 @@ Việc sử dụng AI chỉ được cân nhắc ở các bước cần xử lý
 | Gom cluster / cây OST | Phân loại các vấn đề tuyển dụng thành ba nhóm gồm quản lý JD và đăng tuyển, tiếp nhận hồ sơ ứng viên, theo dõi tiến độ tuyển dụng | Có cơ sở phân nhóm các vấn đề liên quan để chuẩn bị thảo luận |
 | Chọn candidate problem | Ưu tiên Multi-channel Recruitment Posting, tập trung vào việc cập nhật và đồng bộ thông tin tuyển dụng trên nhiều nền tảng | Có đề xuất vấn đề cụ thể để đưa ra thảo luận |
 | Kiểm chứng / research | Tìm hiểu các benchmark từ NIJobs, Greenhouse, Robert Walters và nghiên cứu những tính năng của Workable, Zoho Recruit, Recruitee và Base E-Hiring | Có số liệu và giải pháp tham khảo để xác định phạm vi vấn đề, chưa sử dụng dữ liệu thị trường thay thế số liệu thực tế của doanh nghiệp |
-| Quy trình nhóm | Chuẩn bị quy trình từ tiếp nhận yêu cầu tuyển dụng, xây dựng JD, đăng bài đa kênh đến kiểm tra và cập nhật khi có thay đổi | Xác định những công đoạn có khả năng xuất hiện bottleneck để tiếp tục kiểm chứng |
+| Quy trình nhóm | Tôi dùng quy trình gom/soát của Vinh làm đầu vào cho phân tích mức can thiệp tại CP6, đã tích hợp qua PR #6. | Tách so số trên bảng ghép đúng khỏi ghép file sai mẫu; phần vẽ quy trình thuộc Vinh, bản tổng hợp thuộc Hưởng. |
 | Problem Statement | Thu hẹp vấn đề từ việc đăng tin tuyển dụng thủ công sang việc khó đảm bảo tính nhất quán của thông tin tuyển dụng khi JD thay đổi trên nhiều kênh | Có định hướng Problem Statement với actor, bottleneck, impact và metric rõ ràng hơn |
-| Mức can thiệp | Phân tích các bước có thể xử lý bằng quy tắc, tự động hóa quy trình và các bước cần phân tích nội dung ngôn ngữ tự nhiên | Có cơ sở lựa chọn phương án xử lý phù hợp, tránh sử dụng công nghệ phức tạp cho các tác vụ đơn giản |
-| Quyết định | Chuẩn bị các tiêu chí đánh giá tính cần thiết, khả năng sử dụng, tính khả thi và hiệu quả kinh tế | Chưa có quyết định chính thức của nhóm, cần tiếp tục kiểm chứng trước khi kết luận |
+| Mức can thiệp | Tôi phân tích độ mơ hồ/phức tạp, so sánh No AI, Rule, Workflow và Agent; bổ sung boundary và bốn rủi ro cho hướng nhà thầu. | CP6 đã tích hợp qua PR #6; Rule phù hợp so số, còn AI mapping là hướng mở rộng cần kiểm riêng. |
+| Quyết định | Tôi đề xuất Go cho hướng Rule ở bản CP6 ban đầu; bản review sau đó phân biệt chọn hướng thiết kế với điều kiện cho phép pilot. | Quyết định hiện tại là chọn Rule nhưng Not Yet cho pilot theo PR #10/#11; chờ quyền dữ liệu, mapping, đáp án và ngưỡng được xác nhận. |
 
 ### 4.1. Phân tích và điều chỉnh vấn đề cá nhân
 
@@ -317,6 +317,9 @@ Chuyên viên kinh tế kỹ thuật mất nhiều công dò chênh lệch khố
 ---
 
 ## 7. Tài liệu tham khảo
+- [PR #6 — Phần CP6 của Tuyên](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/6): nguồn phân tích mức can thiệp, boundary và rủi ro.
+- [Báo cáo nhóm](../team/group_report.md), mục 6–8; [PR #10](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/10) và [PR #11](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/11): phạm vi Rule và trạng thái Not Yet cho pilot.
+
 **[N1] NIJobs — What's slowing down your hiring? (2025)**
 **[N2] Greenhouse — The Hire Standard, Recruiting Benchmarks (2026)**
 **[N3] Robert Walters Vietnam — Job Application Overload (2025)**

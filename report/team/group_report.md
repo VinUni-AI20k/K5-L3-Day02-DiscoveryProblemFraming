@@ -78,39 +78,33 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Kỹ sư trực ca mất trên 60 phút để khoanh vùng được tầng gây lỗi khi sự cố trải qua nhiều nguồn log | Value | 5 | 2 | Có, ưu tiên |
+| 2 | Kỹ sư chấp nhận để hệ thống tự chặn IP hoặc giới hạn tốc độ khi độ tin cậy cao | Value / Usability | 5 | 1 | Có, ưu tiên |
+| 3 | Sự cố ngoài giờ, nhất là ban đêm, bị phát hiện và xử lý trễ hơn nhiều so với giờ hành chính | Value | 4 | 2 | Có |
+| 4 | Cảnh báo giả chiếm phần đáng kể thời gian của ca trực | Value | 4 | 2 | Có |
+| 5 | Doanh nghiệp đã có log tập trung để hệ thống đọc được, không phải đăng nhập từng máy | Feasibility | 4 | 3 | Có (hỏi kèm công cụ đang dùng) |
+| 6 | Độ tin cậy có thể tính từ tín hiệu kỹ thuật (thống kê, bằng chứng liên tầng, whitelist) thay vì để mô hình tự chấm | Feasibility | 5 | 2 | Sau, cần thử nghiệm kỹ thuật |
 
-*Điền 4–6 giả định; xóa dòng thừa.*
-
-Giả định nhóm kiểm chứng trong buổi này:
+Giả định nhóm kiểm chứng trong buổi này: #1, #2, #3, #4 (quan trọng nhưng ít bằng chứng), kèm #5 qua câu hỏi về công cụ đang dùng. Giả định #6 là câu hỏi kỹ thuật, không kiểm được bằng phỏng vấn, để lại cho pilot.
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
+Cách đã dùng: **Phỏng vấn 5 người** ngoài nhóm đã từng trực sự cố hệ thống: kỹ sư DevOps/SRE đang đi làm, quản trị hệ thống, lập trình viên backend. Hình thức: gặp trực tiếp, gọi video/điện thoại và nhắn tin. Câu hỏi theo The Mom Test, chỉ hỏi về lần sự cố gần nhất đã xảy ra. Bộ câu hỏi: [cp4-cauhoi-phongvan.md](../assets/cp4-cauhoi-phongvan.md).
 
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
-
-| Trường | Nội dung |
-|---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+Interview snapshot: [Tổng hợp 5 buổi phỏng vấn](../assets/cp4-interview-tonghop.md)
 
 Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Phỏng vấn DevOps/SRE, quản trị hệ thống, dev backend | 5 | Đa số đều gặp các pain: lần mò qua nhiều nguồn log, sự cố ban đêm không ai phản ứng kịp, và cảnh báo giả. 2/5 người thường xuyên bị gọi dậy giữa đêm để xử lý sự cố. Bên cạnh Grafana/Loki/Prometheus hoặc Datadog/New Relic, vẫn có người phải ssh vào từng máy dùng grep/tail để đọc log | Thời gian khoanh vùng tầng lỗi phổ biến chỉ **15–30 phút**, thấp hơn nhiều so với giả định 60–90 phút. Đa số **không** chấp nhận cho hệ thống tự chặn vô điều kiện, chỉ đồng ý khi có whitelist, rollback và giới hạn thời gian chặn |
+| Công cụ đang dùng | 5 | Đã có log tập trung và dashboard (Grafana/Loki/Prometheus, Datadog/New Relic) nên hệ thống có nguồn dữ liệu để đọc | Một phần việc khoanh vùng đã được công cụ có sẵn hỗ trợ, nên khoảng trống thật không nằm ở việc gom log |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
+
+1. **Đổi baseline và trọng tâm bottleneck.** Khoanh vùng tầng lỗi trong giờ hành chính chỉ mất 15–30 phút, không phải 60–90 phút. Phần tốn thời gian thật là độ trễ phát hiện và phản ứng **ngoài giờ** cùng thời gian đóng cảnh báo giả. Problem Statement chuyển trọng tâm sang "sự cố ngoài giờ bị phản ứng trễ" thay vì "đọc log chậm" nói chung.
+2. **Sửa success metric.** Baseline thời gian khoanh vùng ghi 15–30 phút theo phỏng vấn. Metric chính chuyển sang thời gian từ lúc bất thường xuất hiện đến lúc cô lập xong cho các sự cố ngoài giờ, kèm số cảnh báo giả mỗi ca.
+3. **Siết boundary.** Hành động tự động chỉ được phép khi có đủ ba điều kiện người dùng yêu cầu: đối tượng không nằm trong whitelist, có rollback một chạm, và thời gian chặn có giới hạn. Mọi trường hợp khác chuyển sang người duyệt (HITL).
 
 ### 3.3. Research giải pháp đã có
 

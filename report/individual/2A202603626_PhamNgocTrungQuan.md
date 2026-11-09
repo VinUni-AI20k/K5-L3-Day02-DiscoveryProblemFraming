@@ -160,8 +160,8 @@ Tiếp nhận hóa đơn và chứng từ -> Kiểm tra tài liệu -> Đọc th
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | Dùng ChatGPT để bổ sung các vấn đề | — | — | — |
-| CP2 Problem Card | Dùng ChatGPT để đưa ra các đánh giá bổ sung cho các đánh giá cá nhân| — | — | — |
+| CP1 Scan | Dùng ChatGPT để bổ sung các vấn đề | Gợi ý thêm nhiều góc nhìn và các vấn đề liên quan đến thao tác lặp lại, tốn thời gian, xử lý nhiều thông tin. Giúp tôi có thêm lựa chọn để xem xét.| Một số ý tưởng còn khá chung chung, chưa xác định rõ đối tượng gặp vấn đề và mức độ ảnh hưởng. Một số vấn đề có thể giải quyết bằng công cụ thông thường mà chưa cần ứng dụng AI. | Tôi chọn lọc lại các ý tưởng dựa trên mức độ cần thiết, khả năng kiểm chứng và tính thực tế. Không lựa chọn vấn đề chỉ vì có thể ứng dụng AI mà ưu tiên những vấn đề có pain point rõ ràng. |
+| CP2 Problem Card | Dùng ChatGPT để đưa ra các đánh giá bổ sung cho các đánh giá cá nhân| Giúp phát hiện những điểm chưa rõ trong bài toán, đặc biệt là sự khác biệt giữa report trùng lặp và report có nội dung tương tự. Gợi ý bổ sung các metric như Precision, Recall, Macro-F1 và Precision@K. | Một số đánh giá còn mang tính lý thuyết, chưa dựa trên dữ liệu thực tế. Các ngưỡng đánh giá được đề xuất chưa có baseline để chứng minh tính phù hợp. | Tôi điều chỉnh lại các giả định, ghi rõ số liệu chưa được xác minh, bổ sung tiêu chí đánh giá và tình huống kiểm thử. Đồng thời xác định AI chỉ hỗ trợ phát hiện report liên quan, nhân viên CSKH vẫn là người quyết định việc xác nhận hoặc gộp report. |
 | CP3 Pitch & Hội tụ | Dùng Claude để phân tích ma trận độ mơ hồ × độ phức tạp cho từng công đoạn (kiểm mẫu, gom, ghép, so sánh, phát hiện bất thường). | Giúp tôi nhìn rõ: công đoạn nào độ mơ hồ cao (ghép sai mẫu) vs thấp (so khối lượng); độ phức tạp ở đâu (volume 16.000 dòng vs quy tắc có sẵn). | AI gợi ý dùng AI cho tất cả công đoạn; chưa gợi ý Rule riêng cho phần so sánh số liệu. | Tôi quyết định tách: PC#1 (so sánh) → Rule; PC#2 (ghép) → Workflow+AI (Not Yet); PC#3 (năng lực) → No-Go. |
 | CP4 Research | Dùng Claude để research công cụ hiện có: Excel Formula + Conditional Formatting, Procore Bid Leveling, BuildingConnected. Hỏi Claude: "Công cụ nào phù hợp nhất cho 16.000 dòng cần dò?" | AI liệt kê đầy đủ: Excel Formula (minh bạch, không cần LLM), Procore (tập trung workflow), BuildingConnected (so sánh trực quan). Tôi hiểu được excel formula là baseline đủ tốt. | AI không làm phân tích chi tiết trade-off: Excel đơn giản nhưng phải kiểm mã/đơn vị thủ công; Procore có sẵn nhưng chưa test với 16.000 dòng. | Tôi bổ sung: cần thử Excel formula trước, khi nào không đủ mới xem Procore hoặc AI. |
 | CP5 Quy trình | Dùng Claude để format quy trình hiện tại (8 bước) và tương lai (9 bước) thành Mermaid diagram và bảng chi tiết. | AI xuất Mermaid code rõ ràng, ghi rõ thời gian từng bước (hiện tại: 11–13h/vòng; tương lai: 2–2.5h/vòng). Tôi thêm vào group_report section 4. | AI gợi ý tối ưu: "Đặt ngưỡng thấp để bao quát tất cả trường hợp"; nhưng không xét: ngưỡng thấp → báo nhiều → người phải dò thêm. | Tôi điều chỉnh: ngưỡng 30% chênh đơn giá là xác định được người domain, không phải AI tự đặt. |
@@ -175,19 +175,19 @@ Tiếp nhận hóa đơn và chứng từ -> Kiểm tra tài liệu -> Đọc th
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
-
+- Tôi nhận ra mỗi vấn đề cần được nhìn nhận từ quy trình thực tế của người sử dụng. Không nên chỉ quan tâm đến việc ứng dụng công nghệ mà cần hiểu công việc nào đang mất nhiều thời gian và gây ra sai sót.
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
-
+-  Ban đầu, nhóm có xu hướng nghĩ đến việc sử dụng AI để xử lý dữ liệu chào giá. Tuy nhiên, sau khi phân tích quy trình, nhóm nhận thấy nhiều công đoạn có thể giải quyết bằng Excel, Power Query và các quy tắc cố định mà không cần AI.
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
-
+- Tôi nhận ra không phải bài toán nào có nhiều dữ liệu cũng cần AI. Với việc so sánh khối lượng và đơn giá theo công thức rõ ràng, Rule-based có thể phù hợp và đáng tin cậy hơn. AI chỉ nên được cân nhắc ở những công đoạn có dữ liệu khác định dạng hoặc cần hiểu ý nghĩa nội dung.
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
-
+- Nhóm đã có thông tin về quy trình đánh giá thầu, thời gian xử lý và số lượng dòng dữ liệu từ chuyên viên KTKT. Đặc biệt, việc phải kiểm tra khoảng 16.000 dòng cho thấy khối lượng công việc thủ công khá lớn. Tuy nhiên, một số chỉ số vẫn cần được kiểm chứng thêm bằng dữ liệu thử nghiệm.
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
-
+- Khó nhất là xác định chính xác công đoạn gây tốn thời gian và lượng hóa tác động của sai sót. Nhóm cần phân biệt việc ghép file, kiểm tra khối lượng và so sánh đơn giá để tránh giải quyết quá rộng hoặc chọn sai hướng.
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
-
+- Em sẽ tìm hiểu quy trình thực tế và thu thập dữ liệu mẫu sớm hơn. Đồng thời, em sẽ thử nghiệm các giải pháp đơn giản trước, đo thời gian và độ chính xác rồi mới cân nhắc bổ sung AI nếu thực sự cần thiết.
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
-
+- Qua bài tập, em hiểu rằng cần bắt đầu từ vấn đề thực tế thay vì chọn công nghệ trước. Cần phân tích quy trình, xác định bottleneck và xây dựng tiêu chí đánh giá cụ thể. Với bài toán đánh giá thầu, Rule-based phù hợp để kiểm tra số liệu theo quy tắc. AI chưa cần thiết ở giai đoạn hiện tại. Quan trọng nhất là đảm bảo kết quả có thể truy xuất, kiểm chứng và luôn có con người kiểm tra trước khi đưa ra quyết định.
 ---
 
 ## 7. Tài liệu tham khảo

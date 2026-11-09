@@ -16,22 +16,22 @@
 
 ## 2. Scan problem (CP1)
 
-**Chủ đề khảo sát:** Ghi nhận, theo dõi và phân tích lỗi chất lượng trong xưởng sản xuất (Manufacturing Quality Control). Các vấn đề dưới đây là những tình huống cần xác minh với nhân viên QC, tổ trưởng hoặc quản lý xưởng. Chưa có kết quả phỏng vấn nên không coi chúng là những sự việc đã xảy ra tại một doanh nghiệp cụ thể.
+**Bối cảnh:** Tôi từng tham gia dự án kết nối AI chạy local với cơ sở dữ liệu khách hàng. Mục tiêu của hệ thống là cho phép người dùng đặt câu hỏi bằng ngôn ngữ tự nhiên, hệ thống chuyển thành truy vấn SQL và trả lại dữ liệu phục vụ phân tích. Trong phần này, tôi tách bài toán người dùng khỏi giải pháp Text-to-SQL: điều cần tìm hiểu trước là những bước nào trong việc tra cứu và phân tích dữ liệu hiện tại đang gây khó khăn.
 
 | # | Lăng kính | Job Story | Ai chịu ảnh hưởng? | Dấu hiệu thật |
 |---:|---|---|---|---|
-| 1 | Lặp lại | Khi kiểm tra một lô sản phẩm, tôi muốn ghi nhận lỗi theo cùng một quy chuẩn, để người ở ca sau hiểu đúng loại lỗi đã phát hiện. | Nhân viên QC | Cần đối chiếu 10 phiếu QC: số phiếu dùng tên lỗi khác nhau, số phút chỉnh lại thông tin. |
-| 2 | Tốn thời gian | Khi cần lập báo cáo chất lượng cuối ca, tôi muốn tổng hợp kết quả kiểm tra nhanh và đúng, để bàn giao kịp thời cho tổ trưởng. | QC, tổ trưởng | Cần bấm giờ từ lúc nhận phiếu đến khi xong báo cáo; số báo cáo/tuần. |
-| 3 | Đọc, tổng hợp nhiều thông tin | Khi một mã lỗi xuất hiện liên tiếp, tôi muốn tìm được các lô, máy và ca có cùng lỗi, để khoanh vùng phạm vi cần kiểm tra. | Quản lý chất lượng | Cần ghi nhận thời gian tra cứu, số file/sổ phải mở và số lần truy xuất. |
-| 4 | Pain từ người khác | Khi tổ trưởng nhận báo cáo lỗi, tôi muốn biết lỗi nào cần xử lý trước, để không phải hỏi lại QC về mức độ ảnh hưởng. | Tổ trưởng, QC | Cần hỏi tổ trưởng lần gần nhất phải làm rõ báo cáo; ghi số câu hỏi lại. |
-| 5 | Lặp lại | Khi chuyển ca, tôi muốn bàn giao rõ các lô đang chờ kiểm tra lại, để ca tiếp theo không xử lý trùng hoặc bỏ sót. | QC hai ca | Cần kiểm tra biên bản bàn giao và số lô bị thiếu trạng thái. |
-| 6 | Tốn thời gian | Khi phát hiện sản phẩm không đạt, tôi muốn truy lại được lô nguyên liệu liên quan, để xác định những sản phẩm khác cần kiểm tra. | QC, kho nguyên liệu | Cần đo thời gian tra lô và tỷ lệ hồ sơ thiếu mã truy xuất. |
-| 7 | Đọc, tổng hợp nhiều thông tin | Khi họp chất lượng hàng tuần, tôi muốn nhìn thấy tỷ lệ lỗi theo lô, công đoạn và ca sản xuất, để có cơ sở chọn vấn đề cần điều tra. | Quản lý xưởng | Cần đối chiếu cách tổng hợp hiện tại, số bảng dữ liệu và phút làm báo cáo. |
-| 8 | Pain từ người khác | Khi một lô hàng bị cách ly do lỗi, tôi muốn được cập nhật kết luận kiểm tra và người phê duyệt, để không xuất nhầm hàng chưa đạt. | Nhân viên kho, QC | Cần kiểm tra số lần hỏi trạng thái và số phiếu thiếu kết luận/phê duyệt. |
+| 1 | Tốn thời gian | Khi cần xem doanh thu theo tháng hoặc theo nhóm sản phẩm, tôi muốn lấy được số liệu từ cơ sở dữ liệu mà không phải nhờ developer viết từng câu SQL, để chủ động kiểm tra tình hình kinh doanh. | Quản lý, nhân viên kinh doanh, người phụ trách dữ liệu | Cần xác minh khách đã từng nhờ kỹ thuật xuất báo cáo bao nhiêu lần và mất bao lâu. |
+| 2 | Đọc, tổng hợp nhiều thông tin | Khi một chỉ số kinh doanh thay đổi, tôi muốn đối chiếu dữ liệu từ nhiều bảng liên quan, để hiểu chỉ số đó đến từ nhóm khách hàng, đơn hàng hoặc sản phẩm nào. | Người phân tích kinh doanh, quản lý | Cần kiểm tra những báo cáo thực tế có phép JOIN/tổng hợp nhiều bảng và thời gian xử lý. |
+| 3 | Pain từ người khác | Khi yêu cầu một báo cáo dữ liệu, tôi muốn hai người cùng hiểu đúng ý nghĩa các trường như doanh thu, đơn hủy và khách hàng mới, để tránh nhận kết quả không đúng câu hỏi ban đầu. | Người yêu cầu báo cáo, developer, data analyst | Cần đối chiếu các lần làm rõ yêu cầu, sửa câu truy vấn hoặc sửa báo cáo trong dự án. |
+| 4 | Lặp lại | Khi cần theo dõi cùng một chỉ số theo ngày hoặc theo tuần, tôi muốn có kết quả cập nhật mà không phải nhờ tạo lại báo cáo từ đầu. | Quản lý, vận hành | Cần xác minh tần suất yêu cầu số liệu lặp lại và có dashboard/báo cáo tự động hay chưa. |
+| 5 | Tốn thời gian | Khi người dùng hỏi dữ liệu bằng câu thông thường, tôi muốn hệ thống hiểu đúng tên bảng, cột và quan hệ dữ liệu, để không phải sửa truy vấn nhiều lần. | Developer triển khai Text-to-SQL, người sử dụng | Quan sát trực tiếp từ dự án tích hợp AI local; cần bổ sung test case thực tế và tỷ lệ truy vấn sinh đúng. |
+| 6 | Lặp lại | Khi kết nối một mô hình AI local với cơ sở dữ liệu của khách, tôi muốn kiểm soát truy vấn được phép chạy, để tránh thao tác sai hoặc lộ dữ liệu nhạy cảm. | Developer, quản trị hệ thống, khách hàng | Cần kiểm tra cấu hình quyền của tài khoản DB, log truy vấn và các tình huống bị chặn. |
+| 7 | Đọc, tổng hợp nhiều thông tin | Khi một câu hỏi được diễn đạt theo nhiều cách, tôi muốn nhận kết quả nhất quán và có thể kiểm tra nguồn dữ liệu, để tin tưởng số liệu dùng ra quyết định. | Người dùng nghiệp vụ, người kiểm tra dữ liệu | Cần thử các cách diễn đạt tương đương và so sánh SQL/kết quả với truy vấn chuẩn. |
+| 8 | Pain từ người khác | Khi khách hàng muốn chạy AI trên hạ tầng nội bộ, tôi muốn biết rõ giới hạn phần cứng, tốc độ phản hồi và cách phân quyền, để triển khai được mà không phụ thuộc gửi dữ liệu lên dịch vụ ngoài. | IT khách hàng, developer, quản trị bảo mật | Cần bổ sung thông số máy local, thời gian phản hồi và yêu cầu bảo mật thực tế nếu được phép công khai. |
 
-**Ý cần kiểm chứng trước:** #2, #3 và #5 vì có quy trình dễ quan sát, bottleneck cụ thể và có thể đo bằng phút hoặc số hồ sơ thiếu thông tin. Các chỉ số trong cột cuối là kế hoạch thu thập bằng chứng, chưa phải số liệu khảo sát.
+**Phân biệt phạm vi trải nghiệm:** Tôi có trải nghiệm triển khai bài toán Text-to-SQL và cấu hình AI local. Các tình huống liên quan đến việc nhân viên kinh doanh phải chờ báo cáo, cách họ xem doanh thu hoặc việc báo cáo bị hiểu sai là **giả thuyết về người dùng**, cần xác nhận qua trao đổi hoặc dữ liệu công việc; không xem đây là bằng chứng khách đã gặp.
 
-**Ghi nhận sử dụng AI:** Tôi sử dụng AI để sắp xếp các tình huống thành Job Story và kiểm tra xem có mô tả nhầm giải pháp thành vấn đề không. Chưa có cơ sở để khẳng định các tình huống trên xuất hiện thường xuyên trong một xưởng cụ thể; cần xác minh trực tiếp.
+**Ý tưởng cần loại:** “Xây chatbot AI phân tích mọi dữ liệu doanh nghiệp” là một mô tả giải pháp quá rộng. Tôi giới hạn từng vấn đề vào một tác vụ, một người sử dụng và một đầu ra có thể đo được.
 
 ---
 
@@ -39,89 +39,91 @@
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | Truy tìm các lô và ca có cùng mã lỗi (#3) | Có thể đo thời gian truy xuất và số hồ sơ cần đọc; phù hợp để thu hẹp bài toán | Doanh nghiệp đã có MES hoặc báo cáo lọc theo mã lỗi chưa? |
-| 2 | Tổng hợp báo cáo chất lượng cuối ca (#2) | Công việc có đầu ra rõ, dễ so sánh trước/sau | Bước nhập dữ liệu hay kiểm số liệu mới tốn nhiều thời gian? |
-| 3 | Bàn giao lô đang chờ kiểm tra lại (#5) | Liên quan trực tiếp tới phối hợp giữa hai ca, có phương án không cần AI | Thực tế có bị bỏ sót không, hay quy trình hiện tại đã đủ? |
+| 1 | Tự lấy số liệu kinh doanh mà không phụ thuộc viết SQL (#1) | Liên quan trực tiếp tới mục tiêu của dự án Text-to-SQL, có thể kiểm tra thời gian và độ chính xác | Khách đã có BI/dashboard hoặc truy vấn mẫu đáp ứng đủ nhu cầu chưa? |
+| 2 | Hiểu đúng cấu trúc CSDL khi chuyển câu hỏi thành SQL (#5) | Có thể xây bộ test từ schema và truy vấn đúng để đo | Lỗi chủ yếu đến từ schema, prompt hay mô hình local? |
+| 3 | Kết quả phân tích nhất quán và có thể kiểm chứng (#7) | Có ảnh hưởng trực tiếp tới độ tin cậy của công cụ | Mức sai lệch hiện tại là bao nhiêu, người dùng kiểm bằng cách nào? |
 
-### Problem Card #1 — Truy xuất lịch sử lỗi theo lô, máy và ca sản xuất
+### Problem Card #1 — Truy xuất số liệu bằng ngôn ngữ tự nhiên
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi một loại lỗi xuất hiện nhiều lần, tôi muốn biết những lô, máy và ca nào có lỗi tương tự, để xác định phạm vi cần kiểm tra. |
-| Actor | Nhân viên quản lý chất lượng hoặc kỹ sư QC ở xưởng sản xuất |
-| Thời điểm / bối cảnh | Khi QC báo phát hiện mã lỗi lặp lại hoặc trước cuộc họp xử lý lỗi |
-| Quy trình hiện tại | 1. Nhận mã lỗi · 2. Mở sổ/file kiểm tra · 3. Lọc các bản ghi liên quan · 4. Đối chiếu lô, máy, ca · 5. Tổng hợp kết quả · 6. Gửi quản lý |
-| Bottleneck | Bước 3–4: tìm và đối chiếu bản ghi từ nhiều nguồn; thời gian thực tế: **[cần đo]** |
-| Impact | Có thể chậm khoanh vùng lô liên quan hoặc bỏ sót bản ghi cần kiểm tra |
-| Success metric | Baseline: [phút/lần truy xuất, tỷ lệ tìm đúng]; target **đề xuất**: giảm 30% thời gian, không giảm độ đầy đủ; đo cùng 10 tình huống truy xuất |
-| Phương án không dùng AI | Chuẩn hóa bảng ghi QC, dùng bộ lọc theo mã lỗi/lô/máy/ca và bảng tổng hợp |
-| Giả thuyết về AI | Chỉ dùng khi mô tả lỗi bằng ngôn ngữ tự do không thống nhất, hỗ trợ đề xuất mã lỗi tương ứng để QC duyệt |
-| Cảm nhận nhanh | Rule trước, Workflow nếu dữ liệu mô tả tự do khiến Rule không đủ |
+| Job Story | Khi cần biết doanh thu, số đơn hoặc hiệu quả theo giai đoạn, tôi muốn tự hỏi và lấy dữ liệu từ hệ thống, để không phải chờ người biết SQL xuất báo cáo. |
+| Actor | Quản lý hoặc nhân viên nghiệp vụ có quyền xem dữ liệu nhưng không sử dụng SQL |
+| Thời điểm / bối cảnh | Khi cần câu trả lời ngoài những báo cáo cố định đã có |
+| Quy trình hiện tại cần xác minh | 1. Người dùng xác định chỉ số cần xem · 2. Gửi yêu cầu cho người có quyền truy vấn · 3. Làm rõ điều kiện lọc · 4. Viết và chạy SQL · 5. Kiểm tra số liệu · 6. Trả kết quả |
+| Bottleneck | Có thể nằm ở bước 2–4: chờ xử lý và làm rõ yêu cầu; **chưa đo trên quy trình khách hàng** |
+| Impact | Người dùng phụ thuộc vào người kỹ thuật để lấy câu trả lời ngoài báo cáo có sẵn |
+| Success metric | Baseline: [phút từ lúc yêu cầu đến khi có số liệu, số lần phải hỏi lại]; target đề xuất: giảm 50% thời gian với câu hỏi phù hợp, độ chính xác kết quả không thấp hơn truy vấn chuẩn; thử tối thiểu 20 câu hỏi |
+| Phương án không dùng AI | Dashboard BI, báo cáo SQL định sẵn, bộ lọc và trình tạo báo cáo trực quan |
+| Giả thuyết về AI | Mô hình local hiểu câu hỏi, lập truy vấn SQL chỉ đọc, giải thích kết quả và cho người dùng kiểm tra trước khi dùng ra quyết định |
+| Cảm nhận nhanh | Workflow có bước AI; chưa chứng minh cần Agent |
 
 ```text
-HIỆN TẠI — thời gian từng bước cần khảo sát
-[1 Nhận mã lỗi: ?'] → [2 Mở hồ sơ: ?']
-→ [3 Tìm bản ghi: ?'] → [4 Đối chiếu lô/máy/ca: ?']  ← NGHI VẤN BOTTLENECK
-→ [5 Tổng hợp: ?'] → [6 Gửi quản lý: ?']
+QUY TRÌNH HIỆN TẠI — cần xác nhận với khách
+[1 Đặt câu hỏi: ?'] → [2 Gửi yêu cầu: ?']
+→ [3 Làm rõ bộ lọc: ?'] → [4 Viết/chạy SQL: ?'] ← CẦN ĐO
+→ [5 Kiểm tra số liệu: ?'] → [6 Trả kết quả: ?']
 ```
 
-### Problem Card #2 — Lập báo cáo chất lượng cuối ca
+### Problem Card #2 — Chuyển câu hỏi thành SQL đúng với schema của khách
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi kết thúc ca sản xuất, tôi muốn tổng hợp số lượng kiểm tra, loại lỗi và số lượng không đạt, để tổ trưởng có báo cáo chính xác trước khi bàn giao. |
-| Actor | Nhân viên QC phụ trách báo cáo cuối ca |
-| Thời điểm / bối cảnh | Cuối mỗi ca, khi số liệu nằm trong các phiếu kiểm tra hoặc file riêng |
-| Quy trình hiện tại | 1. Thu phiếu · 2. Kiểm tra thông tin thiếu · 3. Nhập/tổng hợp số liệu · 4. Đối chiếu tổng · 5. Làm báo cáo · 6. Gửi tổ trưởng |
-| Bottleneck | Bước 3: nhập và cộng gộp số liệu; thời gian thực tế: **[cần đo]** |
-| Impact | Có thể gửi báo cáo muộn hoặc sai tỷ lệ lỗi nếu nhập liệu không nhất quán |
-| Success metric | Baseline: [phút/báo cáo, số lỗi nhập liệu]; target **đề xuất**: giảm 30% thời gian và không tăng sai số; đo trên 10 báo cáo |
-| Phương án không dùng AI | Mẫu Excel chuẩn với dropdown mã lỗi, validation và công thức tổng hợp |
-| Giả thuyết về AI | Đọc mô tả lỗi tự do hoặc phiếu scan để hỗ trợ nhập dữ liệu, người dùng kiểm lại |
-| Cảm nhận nhanh | No AI / Rule có thể đã đủ |
+| Job Story | Khi người dùng hỏi bằng ngôn ngữ tự nhiên, tôi muốn hệ thống chọn đúng bảng, cột và quan hệ dữ liệu, để truy vấn trả đúng chỉ số mà họ hỏi. |
+| Actor | Developer triển khai hệ thống Text-to-SQL và người dùng nghiệp vụ |
+| Thời điểm / bối cảnh | Khi đưa một cơ sở dữ liệu mới vào hệ thống AI local hoặc khi người dùng đặt câu hỏi phức tạp |
+| Quy trình hiện tại | 1. Kết nối schema · 2. Xác định bảng/cột liên quan · 3. Diễn giải câu hỏi · 4. Tạo SQL · 5. Kiểm tra quyền/cú pháp · 6. Chạy và đối chiếu kết quả |
+| Bottleneck | Bước 2–4: ánh xạ ngôn ngữ nghiệp vụ sang cấu trúc bảng và điều kiện truy vấn; **cần đo bằng test case** |
+| Impact | SQL có thể chạy thành công nhưng trả sai ý nghĩa, làm người dùng hiểu sai dữ liệu |
+| Success metric | Baseline: [tỷ lệ kết quả đúng trên bộ test]; target đề xuất: tối thiểu 90% câu hỏi trong phạm vi demo khớp kết quả chuẩn; kiểm trên tối thiểu 30 câu hỏi có đáp án SQL tham chiếu |
+| Phương án không dùng AI | Từ điển dữ liệu, các truy vấn SQL mẫu, giao diện chọn trường/điều kiện |
+| Giả thuyết về AI | Chọn schema liên quan, sinh SQL và mô tả cách hiểu câu hỏi; validator và tài khoản DB chỉ đọc chặn truy vấn không hợp lệ |
+| Cảm nhận nhanh | Workflow có AI kết hợp Rule kiểm tra cú pháp/quyền |
 
 ```text
-HIỆN TẠI — thời gian từng bước cần khảo sát
-[1 Thu phiếu: ?'] → [2 Kiểm tra: ?']
-→ [3 Nhập/tổng hợp: ?']  ← NGHI VẤN BOTTLENECK
-→ [4 Đối chiếu: ?'] → [5 Tạo báo cáo: ?'] → [6 Gửi: ?']
+LUỒNG XỬ LÝ TEXT-TO-SQL — bước cần đo chất lượng
+[1 Nhận câu hỏi] → [2 Lấy schema liên quan]
+→ [3 Xác định ý định/bộ lọc]  ← CẦN KIỂM THỬ
+→ [4 Sinh SQL]  ← CẦN KIỂM THỬ
+→ [5 Validate & giới hạn quyền] → [6 Thực thi/đối chiếu]
 ```
 
-### Problem Card #3 — Bàn giao lô hàng cần kiểm tra lại giữa các ca
+### Problem Card #3 — Kiểm chứng độ tin cậy của kết quả phân tích
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi giao ca, tôi muốn biết lô nào đang chờ kiểm tra lại, ai phụ trách và hạn xử lý, để ca sau tiếp tục đúng công việc chưa hoàn thành. |
-| Actor | Nhân viên QC ca trước, QC ca sau và tổ trưởng |
-| Thời điểm / bối cảnh | Cuối ca khi còn lô chưa có kết luận đạt/không đạt |
-| Quy trình hiện tại | 1. Rà soát lô đang mở · 2. Tìm phiếu liên quan · 3. Xác định trạng thái · 4. Ghi danh sách bàn giao · 5. Trao đổi với ca sau · 6. Ca sau xác nhận |
-| Bottleneck | Bước 2–4: tìm và tổng hợp trạng thái từ hồ sơ; thời gian thực tế: **[cần đo]** |
-| Impact | Có nguy cơ kiểm tra trùng, quên lô hoặc bàn giao thiếu người chịu trách nhiệm |
-| Success metric | Baseline: [phút/bàn giao; số lô thiếu trạng thái]; target **đề xuất**: giảm 25% thời gian, không còn lô thiếu mã hoặc người phụ trách; đo tối thiểu 10 lần bàn giao |
-| Phương án không dùng AI | Sổ bàn giao điện tử với mã lô, trạng thái bắt buộc và chữ ký xác nhận |
-| Giả thuyết về AI | Tóm tắt ghi chú bất thường cho ca sau; không tự thay đổi trạng thái duyệt lô |
-| Cảm nhận nhanh | Rule; chưa có bằng chứng cần AI |
+| Job Story | Khi hỏi cùng một chỉ số theo các cách diễn đạt khác nhau, tôi muốn kết quả nhất quán và có căn cứ đối chiếu, để không quyết định dựa trên số liệu sai. |
+| Actor | Người sử dụng báo cáo, developer và người kiểm tra số liệu |
+| Thời điểm / bối cảnh | Khi nghiệm thu hoặc sử dụng Text-to-SQL cho các câu hỏi có điều kiện lọc và phép tổng hợp |
+| Quy trình hiện tại | 1. Đặt câu hỏi · 2. Sinh SQL · 3. Xem câu SQL/điều kiện · 4. Chạy truy vấn · 5. Đối chiếu báo cáo chuẩn · 6. Ghi nhận câu hỏi sai |
+| Bottleneck | Bước 3–5: kiểm tra tính đúng nghĩa của SQL và kết quả; **chưa có baseline** |
+| Impact | Người dùng có thể nhận số liệu khác nhau hoặc thiếu căn cứ để tin tưởng kết quả |
+| Success metric | Baseline: [tỷ lệ câu trả lời đúng, tỷ lệ nhất quán giữa các cách hỏi]; target đề xuất: 100% truy vấn được kiểm quyền, ít nhất 90% test case đúng và không có kết quả sai âm thầm trong tập kiểm thử |
+| Phương án không dùng AI | Báo cáo chuẩn, bộ SQL đã kiểm thử, đối chiếu thủ công |
+| Giả thuyết về AI | Hỗ trợ diễn đạt kết quả và cách hiểu câu hỏi; không tự khẳng định đúng khi không kiểm chứng được |
+| Cảm nhận nhanh | Rule kiểm định kết quả + Workflow cho việc sinh SQL và xác nhận |
 
 ```text
-HIỆN TẠI — thời gian từng bước cần khảo sát
-[1 Rà lô: ?'] → [2 Tìm phiếu: ?']
-→ [3 Xác định trạng thái: ?'] → [4 Lập danh sách: ?'] ← NGHI VẤN BOTTLENECK
-→ [5 Bàn giao: ?'] → [6 Xác nhận: ?']
+KIỂM CHỨNG KẾT QUẢ — cần đo thời gian và độ chính xác
+[1 Câu hỏi] → [2 Sinh SQL] → [3 Kiểm điều kiện]
+→ [4 Chạy SQL] → [5 Đối chiếu truy vấn chuẩn] ← BƯỚC CẦN ĐO
+→ [6 Ghi lỗi/cập nhật test case]
 ```
 
 ### Card muốn pitch nhất
 
-- **Card số:** 1 — Truy xuất lịch sử lỗi theo lô, máy và ca.
-- **Vì sao:** Phạm vi rõ ràng, có khả năng đo bằng thời gian tìm hồ sơ và mức độ đầy đủ của kết quả. Có thể kiểm chứng ngay trên dữ liệu QC đã ẩn danh.
-- **Câu hỏi muốn nhóm phản biện:** Nếu xưởng đã lưu dữ liệu vào một file chuẩn và có chức năng lọc theo mã lỗi, còn lý do gì khiến việc truy xuất vẫn chậm?
+- **Card số:** 1 — Người dùng nghiệp vụ tự truy xuất số liệu từ cơ sở dữ liệu mà không cần viết SQL.
+- **Vì sao:** Đây là mục tiêu có liên hệ rõ với dự án đã tham gia. Có thể kiểm chứng bằng câu hỏi thực tế của người dùng, thời gian chờ báo cáo và so sánh kết quả với SQL đúng.
+- **Câu hỏi muốn nhóm phản biện:** Nếu một dashboard và vài bộ lọc đã đủ để người dùng lấy phần lớn số liệu, những loại câu hỏi nào vẫn buộc họ phải nhờ người biết SQL?
 
 ### AI đã phản biện card thế nào
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| Chưa có bằng chứng cho thấy xưởng thực sự mất nhiều thời gian truy xuất | Đồng ý | Giữ baseline cần đo, đề nghị khảo sát tình huống truy xuất gần nhất |
-| Cùng một lỗi không đồng nghĩa cùng một nguyên nhân | Đồng ý | Chỉ đề xuất khoanh vùng bản ghi, không tự kết luận nguyên nhân gốc |
-| Bộ lọc và bảng dữ liệu chuẩn có thể giải quyết phần lớn vấn đề | Đồng ý | Đưa Rule làm phương án thử trước, chưa mặc định dùng AI |
+| Text-to-SQL là giải pháp, chưa phải bản thân problem | Đồng ý | Đặt problem ở nhu cầu tự tra cứu và phân tích dữ liệu của người nghiệp vụ |
+| Chưa có bằng chứng người dùng phải chờ developer trả số liệu | Đồng ý | Giữ baseline cần xác minh, đề xuất hỏi về yêu cầu báo cáo gần nhất |
+| SQL chạy được chưa chắc trả kết quả đúng | Đồng ý | Bổ sung metric độ chính xác so với truy vấn chuẩn và bước kiểm quyền |
+| Dashboard có thể đủ dùng cho các chỉ số lặp lại | Đồng ý | Nêu phương án không AI, chỉ cân nhắc Text-to-SQL cho câu hỏi linh hoạt |
 
 ---
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)

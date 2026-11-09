@@ -4,18 +4,18 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Candidate problem nhóm chọn (1 câu):
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Tên nhóm: C204T1
+- Candidate problem nhóm chọn (1 câu): **Khi** đọc lại các nhóm Zalo sau một tuần (khách, NCC, nội bộ), **tôi muốn** có bản tóm tắt các quyết định, cam kết và việc còn treo, **để** không bỏ sót việc quan trọng bị chìm trong hàng trăm tin nhắn.
+- Quyết định cuối (Go / Not Yet / No-Go): Not Yet
 
 ## Thành viên
 
-| STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
-|---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| STT | Họ và tên      | MSSV        | Vai trò trong nhóm | Tài khoản GitHub |
+| --: | -------------- | ----------- | ------------------ | ---------------- |
+|   1 | Trần Minh Nhật | 2A202603684 | Nhóm trưởng        | nashtran001      |
+|   2 |                |             |                    |                  |
+|   3 |                |             |                    |                  |
+|   4 |                |             |                    |                  |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
@@ -23,19 +23,38 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 ## Phân công theo checkpoint
 
-| Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
-|---|---|---|---|
-| CP3 — Hội tụ nhóm | | | Cluster, cây OST, bảng chấm điểm |
-| CP4 — Kiểm chứng | | | Assumption map, snapshot hoặc survey |
-| CP4 — Research | | | Bảng research có link |
-| CP5 — Quy trình trước/sau | | | Quy trình + bảng before/after |
-| CP5 — Problem Statement v0 | | | Problem Statement v0 |
-| CP6 — Mức can thiệp + Problem Statement v1 | | | Ma trận, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định | | | 4 rủi ro + Go/Not Yet/No-Go |
+| Checkpoint                                 | Người chính | Người hỗ trợ | Sản phẩm                                       |
+| ------------------------------------------ | ----------- | ------------ | ---------------------------------------------- |
+| CP3 — Hội tụ nhóm                          | Minh Nhật   |              | Cluster, cây OST, bảng chấm điểm               |
+| CP4 — Kiểm chứng                           | Thanh Tùng  |              | Assumption map, snapshot hoặc survey           |
+| CP4 — Research                             | Hải Nam     |              | Bảng research có link                          |
+| CP5 — Quy trình trước/sau                  | Thanh Tùng  | Hải Nam      | Quy trình + bảng before/after                  |
+| CP5 — Problem Statement v0                 | Việt Anh    |              | Problem Statement v0                           |
+| CP6 — Mức can thiệp + Problem Statement v1 | Việt Anh    |              | Ma trận, AI Canvas, eval, Problem Statement v1 |
+| CP6 — Quyết định                           | Việt Anh    | Minh Nhật    | 4 rủi ro + Go/Not Yet/No-Go                    |
 
 ## Cá nhân
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
+
+### TranMinhNhat-2A202603684
+
+**Phần việc phụ trách:**
+
+- Nhóm trưởng, tổng hợp thông tin và hỗ trợ ra quyết định
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Điền báo cáo, ra quyết định cuối cùng
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- group_report.md
+
+**Điều mình học được từ phần nhóm:**
+
+- Ý tưởng của bản thân nghĩ có thể tốt nhưng khi được nghe ý kiến từ những người khác sẽ khám phá ra được những điểm cần cải thiện
+
 
 ### HoangHaiNam-2A202603694
 
@@ -79,20 +98,4 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 
 - Qua quá trình làm việc nhóm, mình hiểu rõ hơn cách xác định một vấn đề thực tế và phân tích nguyên nhân trước khi đưa ra giải pháp. Mình học được cách đặt câu hỏi phản biện, kiểm chứng dữ liệu đầu vào và đánh giá tính khả thi của việc ứng dụng AI. Ngoài ra, mình nhận ra không phải vấn đề nào cũng cần dùng AI, mà cần lựa chọn giải pháp phù hợp để đảm bảo hiệu quả và hạn chế sai sót.
-### HoVaTen-MSSV
 
-**Phần việc phụ trách:**
-
--
-
-**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
-
--
-
-**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
-
--
-
-**Điều mình học được từ phần nhóm:**
-
--

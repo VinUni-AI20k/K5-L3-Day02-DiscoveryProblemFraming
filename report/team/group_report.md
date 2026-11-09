@@ -27,9 +27,9 @@
 | 7 | | | | | |
 | 8 | | | | | |
 | 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 10 | Phạm Duy Thành| Gom nhanh yêu cầu và deadline từ các nguồn (LMS, chat) để làm bài không sót việc.| Sinh viên làm bài cá nhân; bạn cùng lớp có thể bị ảnh hưởng nếu thông tin được chia sẻ không thống nhất.| Bước 2–4: tìm và đối chiếu thông tin giữa các nguồn, ước tính 10–15 phút/lần; chưa bấm giờ, cần đo ở lần làm bài tiếp theo. Thời gian chờ câu trả lời chưa tính.| |
+| 11 | Phạm Duy Thành| Tổng hợp tài liệu ôn tập (slide, ghi chú) để khoanh vùng phần chưa hiểu và học đúng trọng tâm.| Sinh viên đang tự ôn tập một chủ đề có nhiều tài liệu.| Bước 3–4: ghi chú rồi đối chiếu nội dung giữa các nguồn, ước tính 20–30 phút cho một chủ đề; chưa bấm giờ, số nguồn và độ dài tài liệu có thể làm thời gian thay đổi nhiều.| |
+| 12 | Phạm Duy Thành| Phân loại và xếp ưu tiên các feedback để chỉnh sửa bài hiệu quả, không bị sót lỗi.| Sinh viên viết/chỉnh sửa bài; người góp ý có thể cần biết phản hồi đã được tiếp nhận.| Bước 3–5: phân loại, gắn góp ý vào phần bài và xác định thứ tự, ước tính 15–25 phút/bộ góp ý; chưa đo trên một bộ phản hồi thật.| |
 
 ### 2.2. Cluster
 

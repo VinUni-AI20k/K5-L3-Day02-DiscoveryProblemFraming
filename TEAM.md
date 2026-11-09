@@ -31,7 +31,7 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
-| CP3 — Hội tụ nhóm | Hưởng điều phối/tổng hợp | Cả nhóm tự pitch, challenge và chốt | Báo cáo nhóm mục 2; thiếu ghi chép thực tế |
+| CP3 — Hội tụ nhóm | Hưởng điều phối/tổng hợp | Cả nhóm tự pitch, challenge và chốt | Báo cáo nhóm mục 2; đã dẫn nhật ký câu hỏi Vinh, các lượt còn lại cần nguồn thực tế |
 | CP4 — Kiểm chứng | Linh | Người hỗ trợ cụ thể chưa xác nhận | Mục 3.1–3.2 có assumption map, một snapshot và tổng hợp 3 người tại `4efec2b`; bổ sung ngày/cách hỏi và hành vi từng người |
 | CP4 — Research | Khương | Người hỗ trợ cụ thể chưa xác nhận | Research mục 3.3 đã merge qua PR #5; file assets riêng là tùy chọn |
 | CP5 — Quy trình trước/sau | Vinh | Hưởng tổng hợp | CP5 nguồn đã merge qua PR #4; mục 4.1 giữ bối cảnh, mục 4.2–4.3 cập nhật quy trình Rule đúng phạm vi đã chọn |
@@ -54,13 +54,15 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- Điều phối tích hợp sáu báo cáo cá nhân qua PR #2; tiếp tục yêu cầu kiểm năm nhánh và merge PR #3–#7 của bốn thành viên. Không tạo PR trùng cho Quân vì nội dung đã có trên main; giữ các bản đang sửa trên nhánh cá nhân.
+- Điều phối tích hợp sáu báo cáo qua PR #2 và các phần mới qua PR #3–#7. Ở lượt rà soát đầu chưa tạo PR riêng cho Quân vì chưa có phần mới; lượt sau đã tích hợp bản eval và báo cáo Quân qua PR #19.
 - Yêu cầu trợ lý đọc năm báo cáo, soạn mỗi người một câu hỏi bám vào card; lưu ở mục 4 báo cáo cá nhân như nội dung chuẩn bị trao đổi.
 - Sử dụng trợ lý review CP5 của Vinh và CP6 của Tuyên, xử lý conflict/tên file, khôi phục template, kiểm phạm vi diff và merge qua PR #4/#6. Review sửa logic kiểm mapping và phân biệt baseline gom + soát 11–13 giờ/vòng với riêng soát 5–6 giờ/vòng. Bản tổng hợp đã tích hợp qua PR #8–#10, bổ sung v0/v1 và điều kiện trước pilot.
 - Tổng hợp v0/v1, metric cùng phạm vi, năm tiêu chí, bốn rủi ro, điều kiện Go và ngưỡng dừng; bản trước đã merge qua PR #8/#9. Ngày 2026-11-09, tôi ủy quyền chốt hướng Rule cho phần soát và giữ Not Yet cho pilot, đồng bộ quyết định trong báo cáo nhóm và log.
 - Yêu cầu review bản eval Quân tại `9ccefc8`; nhận xét được ghi trong báo cáo nhóm mục 7, gồm sửa trung vị TC-03, đơn vị tiền TC-09, tỷ lệ thiếu nguồn và phân biệt target với kết quả đã chạy. Đây là review tài liệu, không gán cho Quân câu trả lời chưa có.
 - Kiểm research nhà thầu của Khương trong PR #5, sửa bốn tham chiếu thiếu đích thành link chính thức đã mở kiểm; giữ rõ tính năng công cụ với giả thuyết áp dụng. Phần research bổ trợ Microsoft trước đó được ghi đúng nguồn.
 - Bảo toàn nội dung thành viên khi tích hợp; sửa tên file, khoảng trắng, dấu thừa và các điểm review đã nêu trong PR. Câu hỏi chuẩn bị không được ghi thành phỏng vấn/pitch đã xảy ra.
+
+- Điều phối tích hợp tiếp PR #16–#19; sửa conflict, khôi phục các báo cáo bị nhánh Vinh xóa, giữ đủ sáu bài và loại `.idea/` khỏi kết quả. Review bổ sung đóng góp TEAM cho đủ sáu người, sửa MSSV Linh và kiểm bộ eval tổng hợp; không nhận là đã có kết quả pilot.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
@@ -70,6 +72,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - [Báo cáo nhóm](report/team/group_report.md), mục 3.3, 4–8 và 10: research, quy trình, v0/v1, quyết định đã công bố và commit nguồn.
 - [PR #8](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/8) và [PR #9](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/9): bản tổng hợp và mục 2 đã tích hợp, main `90dcaa7`.
 - [PR #10](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/10), nội dung `384850c`, merge `1ee80b3`: công bố quy trình Rule, metric dưới 90 phút công/vòng, quyết định Not Yet và review eval Quân.
+- [PR #16](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/16), [PR #17](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/17), [PR #18](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/18), [PR #19](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/19): tích hợp và review mới.
 - [Nhật ký điều phối](docs/TEAM_WORK_LOG.md): phân công, quyết định theo ủy quyền, review eval và sự kiện merge PR #10. Lượt rà soát ghi chú sau PR #10 được theo dõi riêng, không gán trước một commit cho thay đổi mới.
 
 **Điều mình học được từ phần nhóm:**
@@ -142,8 +145,8 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - [PR #5](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/5): tích hợp phần research.
 - [Báo cáo nhóm](report/team/group_report.md), mục 3.3: bảng research hiện tại sau review.
-- [Báo cáo cá nhân](report/individual/2A202603627_MaiDangKhuong.md), mục 4–5: nhật ký bàn giao và cách dùng AI; mục 6 còn phần tự hoàn thiện.
-- Các bổ sung cá nhân trong lần cập nhật này chưa có commit/PR mới; không gán chúng vào PR #5 đã merge.
+- [Báo cáo cá nhân](report/individual/2A202603627_MaiDangKhuong.md), mục 4–5: nhật ký bàn giao và cách dùng AI; mục 6 đã có nội dung phản ánh và phần hiểu bài. CP3 còn thiếu bản ghi hỏi–đáp cụ thể.
+- [PR #14](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/14) và [PR #15](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/15): bổ sung báo cáo cá nhân, đóng góp và bài học; phần research gốc vẫn dẫn PR #5.
 
 **Điều mình học được từ phần nhóm:**
 

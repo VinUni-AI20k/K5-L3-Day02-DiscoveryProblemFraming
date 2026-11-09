@@ -63,7 +63,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 Quy trình nháp hiện tại:
 
 ```text
-[Tài liệu thô] -> [Prompt AI trích xuất ý chính] -> [Nhóm tự gom cụm theo chủ đề] -> [Hoàn thiện báo cáo]
+[1. Đọc qua các bài báo cáo/tài liệu (30 phút)] -> [2. Copy các đoạn text quan trọng vào Notepad (15 phút)] -> [3. Đọc lại và lọc bớt ý trùng lặp (30 phút)] -> [4. Sắp xếp các ý theo đề mục (30 phút)] -> [5. Viết lại thành đoạn văn hoàn chỉnh (15 phút)]
 ```
 
 ### Problem Card #2
@@ -84,7 +84,7 @@ Quy trình nháp hiện tại:
 Quy trình nháp hiện tại:
 
 ```text
-[Nhập văn bản nội dung] -> [AI gợi ý cấu trúc slide/layout] -> [Chọn mẫu phù hợp] -> [Xuất bản slide]
+[1. Mở phần mềm thiết kế slide (5 phút)] -> [2. Chọn một template trống (5 phút)] -> [3. Gõ nội dung từng phần (20 phút)] -> [4. Kéo thả căn chỉnh lề, font chữ (25 phút)] -> [5. Thêm hình minh họa thủ công (10 phút)]
 ```
 
 ### Problem Card #3
@@ -105,7 +105,7 @@ Quy trình nháp hiện tại:
 Quy trình nháp hiện tại:
 
 ```text
-[Lịch sử chat thô] -> [Bot AI lọc từ khóa quyết định] -> [Xuất ra danh sách tóm tắt hành động (Action items)]
+[1. Mở ứng dụng chat nhóm (2 phút)] -> [2. Kéo cuộn ngược lại thời gian trước đó (5 phút)] -> [3. Đọc lướt qua hàng loạt tin nhắn rác (5 phút)] -> [4. Tìm kiếm các từ khóa liên quan đến task (5 phút)] -> [5. Xác nhận lại với các thành viên khác (3 phút)]
 ```
 
 ### Card muốn pitch nhất

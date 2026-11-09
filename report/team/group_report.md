@@ -5,10 +5,10 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
-- Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
-- Quyết định cuối: Go / Not Yet / No-Go
+- Tên nhóm: Nhóm 6 — L3B
+- Thành viên và phân công: xem [TEAM.md](../../TEAM.md). Khoa phụ trách CP5; Lam phụ trách CP4; An phụ trách CP6; Dương điều phối, tổng hợp nguồn, tích hợp báo cáo và làm slide.
+- Candidate problem được chọn (1 câu): Sinh viên mất thời gian tìm lại đúng đoạn, hình hoặc bảng trong paper đã đọc để xác minh nhận định.
+- Quyết định đề xuất: Not Yet — Chưa đủ bằng chứng để triển khai AI; ưu tiên thử No AI trước. Chờ nhóm xác nhận quyết định cuối.
 
 ---
 
@@ -16,7 +16,7 @@
 
 ### 2.1. Pitch
 
-Candidate tổng hợp từ CP2 của bốn báo cáo cá nhân, dùng mã truy vết ở mục 2.2. Chưa có biên bản pitch hoặc câu hỏi phản biện trực tiếp.
+Các thành viên đã thảo luận, đối chiếu các phương án rồi chọn shortlist và đề tài tìm lại bằng chứng trong paper. Bảng dưới tổng hợp candidate từ CP2 của bốn báo cáo cá nhân, dùng mã truy vết ở mục 2.2; chưa ghi lại câu hỏi phản biện cụ thể và người hỏi.
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
@@ -128,30 +128,32 @@ Mốc 10 phút/lần, trong đó 6 phút dò PDF, là số liệu giả định 
 
 ## 3. Kiểm chứng + research giải pháp đã có (CP4)
 
-**[CHƯA KIỂM CHỨNG]** CP4 hiện là bản draft: phần 3.2 rà soát một Problem Card, chưa có mẫu phỏng vấn hoặc survey thật. Các mốc thời gian và tần suất trong card là giả định, không phải baseline thực nghiệm. Nguồn: [CP4.md](CP4.md) và [Card #1 của Lam](../individual/2A202604020_NguyenDucKhuongLam.md).
+**[CHƯA KIỂM CHỨNG]** Nội dung đồng bộ với slide v3 (slide 2–3 và speaker notes) và PDF kịch bản (trang 2–3). Hiện có tình huống từ [Card #1 của Lam](../individual/2A202604020_NguyenDucKhuongLam.md) và research tài liệu công cụ; chưa có phỏng vấn, survey, baseline hay pilot thực nghiệm. Các số thời gian trong card không được dùng làm baseline.
 
 ### 3.1. Assumption Map
 
-Thang điểm: 1 = thấp, 5 = cao; ưu tiên giả định quan trọng cao nhưng ít bằng chứng.
+Thang điểm: 1 = thấp, 5 = cao. Điểm dưới đây là đánh giá sơ bộ để ưu tiên kiểm chứng, không phải số đo từ người dùng.
 
 | # | Giả định | Loại | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | Việc tìm lại bằng chứng xảy ra khoảng 3 lần/tuần, ảnh hưởng đến viết bảng so sánh và trả lời mentor. | Value | 5 | 2 | Có — đối chiếu các lần tìm trong tuần gần nhất. |
-| 2 | Thiếu vị trí nguồn trong ghi chú là nguyên nhân chính khiến bước dò PDF mất khoảng 6 phút. | Value | 5 | 2 | Có — xem ghi chú và thao tác tìm thực tế. |
-| 3 | Ghi chú kèm trang/hình/bảng và liên kết nguồn giúp hoàn tất một lượt trong tối đa 3 phút, vẫn đúng ngữ cảnh. | Usability | 5 | 1 | Có — đo thử cả thời gian và độ đúng. |
-| 4 | Zotero hỗ trợ nối annotation trong ghi chú về trang PDF. | Feasibility | 4 | 4 | Đã đối chiếu tài liệu [Zotero PDF Reader](https://www.zotero.org/support/pdf_reader); cần thử với PDF đang dùng. |
-| 5 | Công sức ghi nguồn ngay khi đọc thấp hơn thời gian tiết kiệm khi tìm lại. | Viability | 4 | 1 | Có — ghi thêm thời gian tạo ghi chú. |
+| 1 | Sinh viên cần tìm lại bằng chứng khi tổng hợp paper hoặc giải thích nhận định với nhóm/mentor. | Value | 5 | 2 | Có — hỏi về các lần tìm đã xảy ra và tần suất thực tế. |
+| 2 | Ghi chú thiếu vị trí nguồn khiến dò đúng đoạn, hình hoặc bảng trong PDF trở thành bước nghẽn. | Value | 5 | 2 | Có — quan sát ghi chú và đo từng bước; phân biệt khó định vị với khó hiểu ngữ cảnh. |
+| 3 | Ghi chú có cấu trúc và liên kết Zotero đủ giúp tìm lại bằng chứng, không cần thêm AI. | Usability | 5 | 1 | Có — thử No AI trước, đo cả tốc độ lẫn chất lượng và ngoại lệ. |
+| 4 | Zotero hỗ trợ liên kết annotation/ghi chú về trang PDF cần kiểm tra. | Feasibility | 4 | 4 | Tài liệu công cụ mô tả tính năng; cần thử với PDF và ghi chú trong phạm vi pilot. |
+| 5 | Thời gian tiết kiệm khi tìm lại lớn hơn công chuẩn bị ghi chú và kiểm chứng. | Viability | 4 | 1 | Có — tính cả chuẩn bị, tìm kiếm và xác minh; mục tiêu giảm ít nhất 30% mới là đề xuất. |
 
-**Ưu tiên kiểm chứng:** #2 và #3; nếu nghẽn ở hiểu ngữ cảnh thay vì định vị nguồn, liên kết trang chưa đủ giải quyết problem.
+**Ưu tiên kiểm chứng:** #2 và #3. Nếu điểm nghẽn nằm ở hiểu ngữ cảnh thay vì định vị nguồn, chỉ liên kết trang có thể chưa đủ.
 
-### 3.2. Kiểm chứng
+### 3.2. Kiểm chứng: interview/survey/evidence
 
-| Nội dung rà soát | Ghi nhận từ Problem Card #1 |
-|---|---|
-| Actor / bối cảnh | Rachal, sinh viên mới tham gia nhóm nghiên cứu; cần dùng lại nhận định khi viết bảng so sánh hoặc trả lời nhóm/mentor. |
-| Quy trình / workaround | Mở ghi chú → xác định paper → dò PDF → kiểm tra ngữ cảnh → ghi vị trí nguồn; đang dò lại vì ghi chú thiếu vị trí. |
-| Thời gian / tần suất | Khoảng 10 phút/lần × 3 lần/tuần = 30 phút/tuần; riêng dò PDF khoảng 6 phút/lần = 18 phút/tuần. |
-| Opportunity | Giúp đi từ nhận định đã ghi đến đúng bằng chứng trong paper, giữ được ngữ cảnh để giải thích. |
+| Nội dung rà soát | Ghi nhận hiện có | Trạng thái |
+|---|---|---|
+| Actor / bối cảnh | Sinh viên đang đọc và tổng hợp paper nghiên cứu, cần kiểm tra lại nhận định từ paper đã đọc khi viết bảng so sánh hoặc trả lời nhóm/mentor. | Tình huống minh họa từ card; chưa phải người được phỏng vấn. |
+| Quy trình / workaround | Ghi chú → xác định paper → dò PDF → đọc ngữ cảnh → lưu vị trí nguồn. | Quy trình giả thuyết, cần quan sát lại. |
+| Thời gian / tần suất | Chưa có baseline thực nghiệm hoặc log từng bước. | [CẦN ĐO]; không sử dụng các mốc giả định trong card như số đo thật. |
+| Opportunity | Từ nhận định đã ghi, tìm lại đúng bằng chứng và giữ ngữ cảnh khi sử dụng. | Cần kiểm chứng nhu cầu và mức độ pain. |
+
+**Kế hoạch kiểm chứng, chưa thực hiện:** hỏi và quan sát 2–3 người ngoài nhóm có trải nghiệm phù hợp về lần tìm bằng chứng gần nhất; xem ghi chú và PDF thật, đo từng bước và tìm cả tín hiệu phản bác. Ghi Interview Snapshot theo vai trò, thời điểm và cách thu thập, không đưa thông tin cá nhân lên repo.
 
 **Câu hỏi kiểm chứng hành vi:**
 
@@ -160,128 +162,149 @@ Thang điểm: 1 = thấp, 5 = cao; ưu tiên giả định quan trọng cao nh�
 3. Trong tuần gần nhất đã tìm lại bao nhiêu lần? Lần nào tìm nhanh hoặc không tìm được, khác nhau ở điểm gì?
 4. Đã dùng annotation hoặc liên kết PDF lần nào? Hãy chỉ một ghi chú cụ thể và cách kiểm tra bằng chứng có thực sự hỗ trợ nhận định.
 
-| Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác / cần kiểm tra |
+| Nguồn | Số người / số mẫu | Tín hiệu hiện có | Tín hiệu phản bác / cần kiểm tra |
 |---|---|---|---|
-| Problem Card #1 | 1 card; chưa có mẫu phỏng vấn | Mô tả bước dò PDF chiếm 6/10 phút và thiếu vị trí nguồn. | Chưa đủ để kết luận thiếu vị trí là nguyên nhân chính hoặc mức 10 phút đại diện cho người khác. |
-| Tài liệu Zotero tại mục 3.3 | 2 trang tài liệu; không phải mẫu người dùng | Có sẵn cách gắn ghi chú với paper và quay lại trang PDF. | Phản bác nhu cầu phải xây công cụ AI mới; chưa chứng minh người dùng đạt mục tiêu 3 phút. |
+| Problem Card #1 | 1 card minh họa; chưa có mẫu phỏng vấn/survey | Nêu giả thuyết ghi chú thiếu vị trí nguồn và phải dò lại PDF. | Không chứng minh pain phổ biến, tần suất hay thời gian thực tế; chưa biết dò PDF có thật là bước nghẽn. |
+| Tài liệu Zotero ở mục 3.3 | Tài liệu công cụ; không phải mẫu người dùng | Có tính năng ghi chú/annotation liên kết về PDF. | Có thể đã đủ giải quyết pain mà không cần AI; chưa có thử nghiệm hiệu quả với tác vụ của nhóm. |
+| Elicit và bài RAG ở mục 3.3 | Nguồn mô tả công cụ/pattern; không phải thử nghiệm của nhóm | Có hướng hỗ trợ truy xuất và làm việc với paper. | Khả năng công cụ không chứng minh trích dẫn, ngữ cảnh hoặc hình/bảng của nhóm sẽ chính xác. |
+
+**Điều chỉnh sau rà soát tài liệu:** ưu tiên kiểm tra Zotero và ghi chú có nguồn đã đủ chưa. Chưa có kết quả người dùng để khẳng định giả thuyết hoặc sửa problem theo phỏng vấn.
 
 ### 3.3. Research giải pháp đã có
 
-Các nguồn chính thức đã mở kiểm tra ngày 09/11/2026. Khoảng trống và bài học là nhận định của nhóm cho quy trình đang xét.
+Bảng dùng các nguồn đã được liệt kê và đối chiếu trong slide v3. Đây là research khả năng công cụ, chưa phải kết quả triển khai hay đánh giá của nhóm.
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| Zotero — annotation → note → trang PDF | [PDF Reader and Note Editor](https://www.zotero.org/support/pdf_reader) | Bước 3, 5: annotation đưa vào note có liên kết về trang PDF và trích dẫn. | Giữ đường dẫn từ ghi chú về bằng chứng, không cần AI. | Ghi chú cũ thiếu annotation cần bổ sung; mở đúng trang chưa đảm bảo hiểu đúng điều kiện của kết quả. | Thử mẫu: nhận định + annotation + trang/hình/bảng + ngữ cảnh; vẫn giữ bước 4 do người đọc thực hiện. |
-| Zotero — ghi chú gắn với paper | [Notes](https://www.zotero.org/support/notes) | Bước 1, 2: child note thuộc một tài liệu; nội dung note tìm được qua tìm kiếm Zotero. | Giữ ghi chú cùng paper, hỗ trợ xác định nguồn. | Chỉ gắn note với paper chưa chỉ ra đoạn bằng chứng. | Kết hợp child note với annotation; tên paper hoặc citation đơn lẻ chưa đủ. |
-| Adobe Acrobat — tìm kiếm PDF | [Searching PDFs](https://helpx.adobe.com/acrobat/using/searching-pdfs.html) | Bước 3: tìm từ/cụm từ trong PDF để định vị nội dung. | Tận dụng công cụ tìm kiếm sẵn có khi nhớ từ khóa. | Nhận định diễn đạt lại có thể không khớp từ khóa; vẫn phải đọc kết quả và ngữ cảnh. | Dùng tìm kiếm khi ghi chú chưa có liên kết; tìm thấy thì lưu ngay vị trí để dùng lần sau. |
+| Zotero — annotation, ghi chú và liên kết nguồn | [PDF Reader and Note Editor](https://www.zotero.org/support/pdf_reader), [Notes](https://www.zotero.org/support/notes) | Gắn ghi chú với paper và mở lại trang/annotation khi cần bằng chứng. | Giữ đường dẫn về PDF, không cần AI. | Ghi chú cũ thiếu vị trí phải bổ sung; mở đúng trang chưa bảo đảm hiểu đúng ngữ cảnh. | Thử nhận định + trang/hình/bảng + annotation/liên kết + ngữ cảnh trước khi thêm AI. |
+| Elicit — làm việc với paper tải lên | [Which workflow should I use?](https://support.elicit.com/en/articles/14757543-getting-started-with-elicit-which-workflow-should-i-use) | Hỏi về paper tải lên và trích thông tin theo mô tả của công cụ. | Có công cụ sẵn để tham khảo cách hỗ trợ người đọc. | Chưa kiểm hiệu quả với paper của nhóm; người học vẫn phải kiểm nguồn và ngữ cảnh. | Không mặc định công cụ có AI sẽ tốt hơn ghi chú có nguồn/Zotero. |
+| RAG — truy xuất kết hợp sinh câu trả lời | [Lewis và cộng sự (2020)](https://arxiv.org/abs/2005.11401) | Gợi ý pattern retrieval trước, sinh/gợi ý nội dung sau nếu cần thử Workflow. | Tách bước tìm ứng viên khỏi bước sinh nội dung. | Bài nghiên cứu không chứng minh độ đúng trích dẫn hay khả năng tìm hình/bảng trong PDF của nhóm. | Chỉ là nhánh tùy chọn; nguồn/vị trí phải lấy từ tài liệu và được người học xác minh. |
+
+**Phương án quay về không dùng AI:** tìm từ/cụm từ trong PDF bằng tính năng sẵn có, theo [Adobe — Searching PDFs](https://helpx.adobe.com/acrobat/using/searching-pdfs.html). Nhận định diễn đạt lại có thể không khớp từ khóa; tìm thấy vẫn phải đọc ngữ cảnh rồi lưu vị trí nguồn.
 
 ---
 
 ## 4. Quy trình trước/sau (CP5)
 
-**[CHƯA KIỂM CHỨNG]** Nội dung từ [CP5.md](CP5.md). Thời gian hiện tại là mốc giả định từ card; phương án tương lai và mốc 3 phút là kỳ vọng, chưa phải kết quả đo.
+Đồng bộ với slide v3 (slide 4–5) và PDF kịch bản (trang 3–4). **[CHƯA KIỂM CHỨNG]** Sơ đồ là phác thảo; chưa quan sát quy trình thực tế, chưa triển khai và chưa đo thời gian từng bước.
 
 ### 4.1. Quy trình hiện tại
 
 ```text
-HIỆN TẠI — 5 bước, khoảng 10 phút, 5/5 bước thủ công
+HIỆN TẠI — GIẢ THUYẾT, 5 bước chính
 
-[1 Mở ghi chú: 1'] → [2 Xác định paper: 1']
-→ [3 Dò bằng chứng trong PDF: 6'] ← BOTTLENECK
-→ [4 Kiểm tra ngữ cảnh: 1'] → [5 Ghi lại vị trí nguồn: 1']
+[1 Ghi chú] → [2 Xác định paper] → [3 Dò PDF] → [4 Đọc ngữ cảnh]
+                                      ↑                 ↓
+                          BOTTLENECK GIẢ THUYẾT   [5 Lưu vị trí nguồn]
+
+Thời gian từng bước: [CẦN ĐO]
 ```
 
-**Bottleneck chính:** Dò bằng chứng trong PDF, 6 phút/lần theo mốc giả định trong CP5.
+| Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
+|---:|---|---|---|---|---|
+| 1 | Sinh viên | Nhận định cần kiểm chứng, ghi chú đã có | Ghi chú liên quan được mở | [CẦN ĐO] | Có thể thiếu vị trí nguồn. |
+| 2 | Sinh viên | Ghi chú, tên bài hoặc citation | Paper/PDF cần đối chiếu | [CẦN ĐO] | Phạm vi là paper đã đọc. |
+| 3 | Sinh viên | Nhận định và PDF | Đoạn, hình hoặc bảng có thể chứa bằng chứng | [CẦN ĐO] | Bottleneck giả thuyết; chưa chứng minh là bước lâu nhất. |
+| 4 | Sinh viên | Bằng chứng ứng viên và phần xung quanh | Xác nhận hoặc bác bỏ nhận định theo ngữ cảnh | [CẦN ĐO] | Giữ đúng điều kiện và giới hạn của kết quả. |
+| 5 | Sinh viên | Kết quả đã đối chiếu PDF | Bằng chứng và vị trí nguồn được lưu | [CẦN ĐO] | Chưa đủ căn cứ thì ghi chưa xác minh, không dùng làm bằng chứng. |
 
-CP5.md chưa có bảng actor/input/output/handoff cho từng bước; cần nhóm bổ sung bằng mô tả quy trình đã kiểm tra thực tế.
+**Bottleneck chính cần kiểm chứng:** bước 3 — tìm đúng đoạn, hình hoặc bảng khi ghi chú không lưu vị trí nguồn. Khó định vị và khó hiểu ngữ cảnh cần được đo riêng.
 
 ### 4.2. Quy trình tương lai
 
+**No AI đề xuất:** ghi chú có cấu trúc và Zotero; người học thao tác và giữ quyền xác nhận bằng chứng. Công tạo ghi chú/liên kết khi đọc cũng phải được đo, dù diễn ra trước lượt tìm lại.
+
 ```text
-TƯƠNG LAI — 4 bước, khoảng 3 phút, 2/4 bước thủ công
+NO AI ĐỀ XUẤT — CHƯA TRIỂN KHAI, 5 bước chính
 
-[1 Mở ghi chú có liên kết paper + từ khóa: 0.5']  ← CON NGƯỜI
-→ [2 Mở đúng trang/annotation trong Zotero: 0.5'] ← RULE (annotation + page link)
-→ [3 Kiểm tra bằng chứng và ngữ cảnh: 1.5']       ← CON NGƯỜI
-→ [4 Ghi lại vị trí nguồn vào bảng so sánh: 0.5'] ← CON NGƯỜI
+[1 Nhận định cần kiểm chứng]
+               ↓
+[2 Structured notes / Zotero]
+               ↓
+[3 Mở liên kết nguồn] ── thiếu / sai ──> [Tìm thủ công trong PDF]
+               │                                    │
+               └──────────────────┬─────────────────┘
+                                  ↓
+                  [4 Sinh viên kiểm tra ngữ cảnh] ← HITL
+                                  ↓
+                  [5 Lưu bằng chứng đúng vị trí]
 
-BOUNDARY: Không tự động kết luận paper chứng minh điều gì. Người đọc phải kiểm tra
-đoạn trích, ngữ cảnh và đối chiếu với PDF gốc trước khi sử dụng bằng chứng.
-
-PHƯƠNG ÁN QUAY VỀ: Nếu annotation hoặc liên kết sai/mất,
-mở PDF gốc và tìm thủ công bằng Ctrl+F hoặc dò theo số trang.
+Không đủ căn cứ: ghi chưa tìm thấy/chưa xác minh, không chấp nhận nhận định.
+Thời gian từng bước và công chuẩn bị: [CẦN ĐO]
 ```
 
-**[CẦN NHÓM XÁC NHẬN]** CP5 ghi “2/4 bước thủ công”, nhưng sơ đồ gắn nhãn CON NGƯỜI ở bước 1, 3 và 4. CP5 gọi thao tác annotation/page link là RULE, trong khi CP6 chọn No AI và dành Rule cho script riêng. Các nhãn và số đếm được giữ theo nguồn, chưa tự điều chỉnh.
+**Boundary:** người học mở PDF gốc để kiểm nguồn, nội dung và ngữ cảnh trước khi lưu. AI không được tự tạo trích dẫn, bịa nguồn/số trang hoặc tự xác nhận bằng chứng đúng. Liên kết thiếu/sai thì tìm thủ công và vẫn qua bước kiểm tra.
+
+**OPTIONAL — CHƯA TRIỂN KHAI:** chỉ cân nhắc khi No AI và tìm kiếm theo quy tắc chưa đủ.
+
+```text
+[Nhận định + paper] → [Retrieval] → [AI gợi ý đoạn và vị trí nguồn]
+                                                    ↓
+                       [Người học mở PDF gốc để xác minh] → [Lưu kết quả]
+```
+
+Vị trí nguồn phải đến từ PDF/metadata truy xuất, không để mô hình tạo số trang. Nếu không tìm đủ căn cứ, báo chưa tìm thấy và quay về kiểm thủ công. Rule (keyword search/BM25) có thể được thử trước Workflow; Agent chưa có cơ sở để chọn.
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
-|---|---:|---:|---|
-| Số bước | 5 | 4 | Gộp thao tác xác định paper và truy cập vị trí nguồn |
-| Tổng thời gian | 10' | 3' | Target chính: tối đa 3 phút/lần |
-| Bước thủ công | 5/5 | 2/4 | Hai bước chính được hỗ trợ bởi annotation và liên kết nguồn |
-| Bottleneck | Dò bằng chứng trong PDF (6') | Kiểm tra bằng chứng và ngữ cảnh (1.5') | Bottleneck mới được giữ lại có chủ đích để đảm bảo độ chính xác |
-| Rủi ro mới | Ghi chú thiếu vị trí nguồn | Annotation sai, liên kết hỏng hoặc ghi nhầm trang | Xử lý bằng kiểm tra PDF gốc |
-| Chất lượng | Phụ thuộc vào trí nhớ và khả năng tìm kiếm | Phải tìm đúng đoạn và giữ nguyên ngữ cảnh | Không đánh đổi độ chính xác lấy tốc độ |
-
----
+|---|---|---|---|
+| Số bước chính | 5 | 5 | Theo hai pipeline trên slide; nhánh ngoại lệ và công chuẩn bị được ghi riêng. |
+| Tổng thời gian | Chưa có baseline thực nghiệm [CẦN ĐO] | Mục tiêu đề xuất giảm ít nhất 30% | Tính cả chuẩn bị, tìm kiếm và kiểm chứng cho cùng bộ tác vụ. |
+| Số bước thủ công | 5/5 bước do người học thao tác | 5/5 bước do người học thao tác, có Zotero hỗ trợ | Chưa triển khai script/AI tự động; không suy hiệu quả chỉ từ số bước. |
+| Bottleneck | Giả thuyết: dò PDF để tìm đúng bằng chứng | Kỳ vọng giảm dò lại nhờ liên kết nguồn | Chưa biết công kiểm ngữ cảnh và tạo ghi chú có triệt tiêu lợi ích không. |
+| Rủi ro mới phát sinh | Ghi chú thiếu vị trí nguồn, phải dò lại | Liên kết sai/hỏng, công chuẩn bị tăng, hiểu sai ngữ cảnh | Luôn kiểm PDF, có fallback thủ công và tính cả ngoại lệ. |
+| Chất lượng | [CẦN ĐO] | Không giảm so với baseline | Đánh giá riêng evidence hit rate, citation accuracy và context correctness. |
 
 ## 5. Problem Statement v0 (CP5)
 
-**[CHƯA KIỂM CHỨNG]** Giữ nguyên v0 và phần phản biện được ghi trong CP5. Các mốc 10 phút, 6 phút và 30–40 phút/tuần chưa có baseline thực nghiệm đính kèm.
+V0 được đồng bộ theo problem và phương án trên slide, không dùng số giả định trong card làm dữ kiện. **[CẦN NHÓM XÁC NHẬN]** Đây là bản đề xuất để nhóm tự rà soát lập luận.
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | Lam, sinh viên mới tham gia nhóm nghiên cứu, thường xuyên đọc và so sánh các paper |
-| **Quy trình** | Khi cần sử dụng lại một nhận định từ paper đã đọc: mở ghi chú, xác định paper, dò bằng chứng trong PDF, kiểm tra ngữ cảnh và ghi lại vị trí nguồn |
-| **Bottleneck** | Dò bằng chứng trong PDF mất khoảng 6 phút/lần vì ghi chú thiếu số trang, hình hoặc bảng tham chiếu |
-| **Impact** | Khoảng 30–40 phút/tuần cho 3–4 lần tìm kiếm; khó bảo vệ nhận định khi không tìm lại được bằng chứng gốc |
-| **Success Metric** | Giảm thời gian tìm bằng chứng từ khoảng 10 phút xuống tối đa 3 phút/lần. Đo bằng cách bấm giờ trong các tác vụ tìm kiếm thực tế. Đồng thời yêu cầu tìm đúng đoạn, đúng trang và giữ được ngữ cảnh |
-| **Boundary** | Ưu tiên Zotero annotation, liên kết PDF và ghi chú có cấu trúc. AI (nếu thử nghiệm sau này) chỉ gợi ý vị trí bằng chứng, không tự kết luận hoặc tạo trích dẫn chưa được kiểm chứng. Người dùng phải đối chiếu PDF gốc |
+| **Actor** | Sinh viên đang đọc và tổng hợp paper nghiên cứu, cần dùng lại nhận định từ paper đã đọc. |
+| **Quy trình** | Ghi chú → xác định paper → dò PDF → đọc ngữ cảnh → lưu vị trí nguồn. |
+| **Bottleneck** | Giả thuyết: ghi chú thiếu vị trí khiến người học phải dò lại đúng đoạn, hình hoặc bảng; cần quan sát để xác nhận bước nghẽn. |
+| **Impact** | Có thể tốn thời gian đọc lại và diễn giải sai điều kiện/giới hạn của kết quả; chưa đo mức độ hay tần suất. |
+| **Success Metric** (baseline → target, cách đo) | Baseline: chưa có số đo thực nghiệm. Target đề xuất: giảm ít nhất 30% tổng thời gian, không giảm độ đúng của nguồn và ngữ cảnh. Đo cách tìm hiện tại và No AI trên bộ tác vụ có đối chiếu PDF, tính cả chuẩn bị và xác minh. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | Ưu tiên ghi chú có cấu trúc/Zotero. Người học kiểm PDF trước khi dùng bằng chứng; thiếu/sai liên kết thì tìm thủ công. Nếu thử AI sau này, chỉ gợi ý đoạn và vị trí từ nguồn thật, không tự tạo citation hoặc xác nhận độ đúng. |
 
-**Phản biện nhận được:** AI chỉ ra rằng metric hiện tại chủ yếu đo tốc độ tìm kiếm, chưa chứng minh người dùng tìm được bằng chứng chính xác. Tìm nhanh nhưng sai đoạn hoặc mất ngữ cảnh có thể dẫn đến trích dẫn sai trong nghiên cứu.
+**Phản biện AI đã ghi nhận:** đo tốc độ chưa đủ; tìm đúng vị trí nhưng sai ngữ cảnh vẫn không đạt. Cần tính cả công tạo ghi chú, lượt thất bại và quay về thủ công để tránh chuyển công sức sang bước khác.
 
-**Nhóm đồng ý và bổ sung:** ngoài thời gian tìm kiếm, cần đo tỷ lệ tìm đúng bằng chứng (đúng đoạn, trang/hình/bảng) và khả năng giữ nguyên ngữ cảnh. Chỉ tính một lần tìm kiếm là thành công khi người dùng xác định được nguồn và xác minh được nội dung trong PDF gốc.
+**Điều chỉnh trong bản đề xuất:** tách các thước đo chất lượng và tổng thời gian, giữ bước người học xác minh. Chưa ghi nhận đây là đồng thuận của cả nhóm; cách đo cụ thể nằm ở CP6 để nhóm chốt trước khi chạy.
 
 ---
 
 ## 6. Mức can thiệp AI (CP6)
 
-Nguồn: [CP6.md](CP6.md), do Lam chuẩn bị. Giữ ngôi xưng “tôi” của tác giả ở các mục 6–8; lựa chọn cá nhân trong nguồn chưa được đổi thành tuyên bố đồng thuận của cả nhóm.
-
-Tôi tập trung vào việc tìm lại bằng chứng trong paper đã đọc để giải thích nhận định có căn cứ. Từ [CP4](https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/blob/169d1927dce2f72cae879ac35dc90e8575901c3f/report/team/CP4.md) và [quy trình ở CP5](CP5.md), tôi so sánh các mức can thiệp, xác định tiêu chí đánh giá và chọn hướng tiếp tục.
-
-**Nguồn số liệu:** Dữ liệu mô phỏng phục vụ bài lab, dựa trên CP1–CP5.
+Đồng bộ với slide v3 (slide 4–8 và speaker notes) và PDF kịch bản (trang 3–6). Hữu An phụ trách CP6; Dương tổng hợp. Phương án, metric và quyết định dưới đây là đề xuất phân tích, chưa phải kết quả pilot hay quyết định cuối đã được nhóm xác nhận.
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Tôi xếp bài toán vào ô **mơ hồ thấp, phức tạp thấp** trong phạm vi tìm lại một bằng chứng ở paper đã đọc. Tôi chỉ cần đối chiếu ghi chú với PDF đã chọn, không tổng hợp nhiều nguồn hoặc tìm paper mới. Các bước đã rõ; kết quả được kiểm tra bằng vị trí nguồn và nội dung hỗ trợ nhận định.
+Giữ phân loại sơ bộ từ CP6: **mơ hồ thấp, phức tạp thấp** trong phạm vi tìm lại một bằng chứng ở paper đã đọc, có PDF gốc; không tìm paper mới hay tổng hợp nhiều nguồn. Đầu vào và thứ tự bước khá rõ, nhưng mở đúng trang chưa có nghĩa là hiểu đúng ngữ cảnh.
 
-Điểm tôi cần giữ lại là bước đọc ngữ cảnh: mở đúng trang chưa có nghĩa là hiểu đúng kết quả.
+**[CẦN NHÓM XÁC NHẬN]** Slide không đưa ra phân loại ma trận thay thế. Quy trình có nhiều bước nối tiếp, nên cần giải thích lại tiêu chí “phức tạp thấp” theo worksheet; không dùng phân loại sơ bộ để khẳng định đã đánh giá xong.
 
 ### 6.2. So sánh 4 mức
 
-| Mức | Phương án | Đủ khi nào | Rủi ro | Lựa chọn của tôi |
+| Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** | Ghi chú kèm nhận định, trang/hình/bảng, annotation và ngữ cảnh; mở lại bằng liên kết Zotero | Ghi chú dẫn về đúng nguồn, tôi kiểm tra được nội dung | Thiếu vị trí, liên kết hỏng, hiểu sai ngữ cảnh | Chọn |
-| **Rule** | Script kiểm tra trường nguồn còn thiếu và tìm từ khóa theo quy tắc | Có nhiều thao tác lặp cần tự động hóa | Đủ trường nhưng sai nguồn; từ khóa không khớp nhận định | Chưa cần script riêng |
-| **Workflow** | Các bước cố định: nhận định + PDF → AI gợi ý đoạn kèm vị trí → tôi đối chiếu | Cách ghi chú và tìm kiếm đơn giản chưa đáp ứng nhu cầu | Đoạn liên quan nhưng không hỗ trợ nhận định | Chưa chọn |
-| **Agent** | AI tự chọn công cụ, nguồn và bước tìm tiếp theo | Các bước tìm kiếm chưa xác định trước | Phạm vi rộng, thêm chi phí và khó kiểm tra nguồn | Không chọn |
+| **No AI** | Ghi chú có cấu trúc: nhận định, paper, trang/hình/bảng, annotation/liên kết và ngữ cảnh; dùng Zotero mở lại nguồn | Người học tìm lại và xác minh được bằng chứng với tổng công phù hợp | Công chuẩn bị, thiếu/sai liên kết, hiểu sai ngữ cảnh | Ưu tiên thử trước; chưa triển khai |
+| **Rule** | Keyword search hoặc BM25 trong paper đã chọn | No AI còn nghẽn và tìm kiếm theo quy tắc đủ đáp ứng | Nhận định diễn đạt lại không khớp từ khóa; kết quả liên quan nhưng chưa đủ căn cứ | Chỉ thử khi cần; nếu đủ thì dừng ở mức này |
+| **Workflow** | Retrieval → AI gợi ý đoạn cùng vị trí nguồn → người học mở PDF xác minh → lưu kết quả | No AI/Rule chưa đủ và thử nghiệm cho thấy lợi ích về tổng thời gian, chất lượng | Trích dẫn sai, gợi ý không hỗ trợ nhận định, tăng công kiểm | Tùy chọn, chưa triển khai |
+| **Agent** | AI tự chọn công cụ/nguồn và bước tìm tiếp theo | Chỉ cân nhắc nếu có bằng chứng cần quyền tự quyết vượt Workflow | Khó kiểm nguồn, mở rộng phạm vi và tăng chi phí | Chưa có cơ sở để chọn |
 
-**Tôi chọn No AI.** Tôi sẽ ghi vị trí nguồn ngay trong ghi chú và dùng liên kết Zotero để mở lại. Nếu liên kết thiếu hoặc hỏng, tôi tìm trong PDF rồi bổ sung vị trí vừa tìm được.
+**Mức chọn để thử trước: No AI First.** Ghi chú có nguồn và liên kết Zotero xử lý trực tiếp giả thuyết thiếu vị trí. Người học vẫn kiểm ngữ cảnh và quay về tìm thủ công khi liên kết lỗi. Cách này cũng tốn công chuẩn bị, nên chưa kết luận hiệu quả trước khi đo.
 
-Lý do là cách này xử lý trực tiếp bước dò PDF trong CP2–CP5. CP4 cho thấy công cụ đã có tính năng phù hợp, còn tôi chưa có căn cứ để thêm AI. Tôi chủ yếu sửa cách ghi chú và dùng tính năng sẵn có; chưa cần script tự động, AI tạo nội dung hoặc tự quyết bước tìm kiếm. No AI là mức đơn giản nhất để bắt đầu. Mốc 3 phút được giữ làm mục tiêu đánh giá từ CP5.
+**Vì sao không chọn mức đơn giản hơn / cao hơn:** sửa cách ghi chú và dùng công cụ sẵn có là điểm bắt đầu đơn giản nhất. Chỉ nâng mức khi cách trước chưa đủ; không thêm AI nếu No AI/Rule đã giải quyết được tác vụ. Các bước hiện đã rõ, chưa có lý do giao quyền tự quyết cho Agent.
 
 ### 6.3. AI Canvas rút gọn
 
-Tôi không dùng AI để dự đoán hoặc tạo nội dung trong phương án này, nên không điền AI Canvas theo hướng dẫn dành cho mức No AI. Việc xác nhận bằng chứng vẫn do tôi thực hiện.
+Không áp dụng cho phương án No AI đang ưu tiên thử, theo hướng dẫn worksheet/rubric. Nhánh Workflow chưa được chọn hay triển khai; nếu chuyển mức, nhóm cần hoàn thiện Canvas theo dữ liệu và tác vụ thật.
 
 ### 6.4. Hai câu hỏi Google PAIR
 
-Với mức No AI, tôi không cần điền phần này. Nếu chuyển sang Workflow/Agent, tôi sẽ làm rõ người dùng muốn được hỗ trợ hay giao việc, và kiểu sai nào gây hậu quả nặng hơn.
-
----
+Không bắt buộc với mức No AI. Nếu thử Workflow, cần làm rõ người dùng muốn được hỗ trợ hay giao việc và so sánh lỗi nhận nhầm bằng chứng với lỗi bỏ sót. Người học giữ quyền chấp nhận bằng chứng, không giao quyền đó cho AI.
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
 
@@ -289,85 +312,84 @@ Với mức No AI, tôi không cần điền phần này. Nếu chuyển sang Wo
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | Tôi, trong vai sinh viên mới tham gia nhóm nghiên cứu, cần dùng lại nhận định từ paper đã đọc và có PDF gốc |
-| **Quy trình** | Mở ghi chú → xác định paper → tìm bằng chứng → kiểm tra ngữ cảnh → ghi vị trí nguồn |
-| **Bottleneck** | Dò PDF để tìm lại bằng chứng, với mốc 6 phút trong tổng 10 phút/lần ở Card #1 và CP5. Tôi giữ lưu ý từ CP4: cần phân biệt thiếu vị trí nguồn với khó hiểu ngữ cảnh. |
-| **Impact** | Với mốc 3 lượt/tuần, tổng thời gian là 30 phút, trong đó dò PDF chiếm 18 phút. Khi thiếu nguồn, tôi khó giải thích nhận định với nhóm và mentor. |
-| **Success Metric** | Từ mốc trung bình 10 phút/lần, ít nhất 9/10 tác vụ tìm đúng nguồn, đúng ngữ cảnh trong tối đa 3 phút. Trong pilot 4 tuần với 10 tác vụ, tôi sẽ bấm giờ từ mở ghi chú đến xác minh và ghi nguồn, tính cả lượt thất bại. Tôi ghi riêng công bổ sung ghi chú; tổng thời gian gồm chuẩn bị phải thấp hơn tổng thời gian tìm thủ công cho cùng bộ tác vụ. |
-| **Boundary** | Tôi đối chiếu nội dung và ngữ cảnh trong PDF trước khi dùng bằng chứng; không dùng AI tạo trích dẫn hoặc tự kết luận paper chứng minh điều gì. Nếu nguồn sai hoặc mất, tôi quay về tìm thủ công; chưa xác minh được thì ghi rõ và không dùng nhận định đó. |
-| **AI intervention point** | Không có; tôi dùng ghi chú có vị trí nguồn và tính năng Zotero |
-| **Mức chọn** | No AI |
-| **Rủi ro & người kiểm tra** | Liên kết sai, thiếu ngữ cảnh, tăng công ghi chú. Tôi kiểm tra mỗi lần sử dụng; khi đánh giá, tôi nhờ một thành viên khác đối chiếu với PDF. |
+| **Actor** | Sinh viên đang đọc và tổng hợp paper nghiên cứu; phạm vi thử là paper đã đọc và có PDF gốc được phép sử dụng. |
+| **Quy trình** | Ghi chú → xác định paper → dò PDF → đọc ngữ cảnh → lưu vị trí nguồn. Phương án thử trước: structured notes/Zotero → mở liên kết → sinh viên kiểm ngữ cảnh → lưu bằng chứng đúng vị trí. |
+| **Bottleneck** | Giả thuyết: tìm đúng đoạn, hình hoặc bảng khi ghi chú thiếu vị trí nguồn. Cần đo từng bước, tách khó định vị khỏi khó hiểu ngữ cảnh. |
+| **Impact** | Có thể tốn thời gian đọc lại và dùng kết quả sai phạm vi; chưa có baseline, tần suất hoặc mức ảnh hưởng thực nghiệm. |
+| **Success Metric** (baseline → target, cách đo) | Baseline: chưa có số đo thực nghiệm. Pilot dự kiến: 10 yêu cầu từ 3 paper được phép sử dụng, có cả yêu cầu không có đáp án. Target đề xuất: giảm ít nhất 30% tổng thời gian của No AI so với cách tìm hiện tại, tính cả chuẩn bị, tìm kiếm và xác minh, không giảm chất lượng. Đo retrieval time, evidence hit rate, citation accuracy và context correctness theo mục 7.3–7.4; báo cả tử số/mẫu số, ngoại lệ và lượt thất bại. |
+| **Boundary** | Người học mở PDF gốc để kiểm nguồn, bằng chứng và ngữ cảnh trước khi chấp nhận. AI không tự tạo trích dẫn, bịa nguồn/số trang hoặc tự xác nhận độ đúng. Thiếu căn cứ thì ghi chưa tìm thấy và kiểm thủ công; không dùng nhận định chưa xác minh. |
+| **AI intervention point** | Không có trong phương án No AI. Nhánh Workflow chỉ là tùy chọn khi mức đơn giản chưa đủ. |
+| **Mức chọn** | No AI First để kiểm chứng; chưa triển khai AI. |
+| **Rủi ro & người kiểm tra** | Liên kết sai, hiểu sai ngữ cảnh, công chuẩn bị lớn, PDF scan/hình/bảng khó truy xuất. Người học kiểm mỗi kết quả với PDF; người thực hiện pilot và người đối chiếu đáp án cần được nhóm phân công trước khi chạy. |
 
-### 7.2. Tôi thay đổi gì so với v0
+### 7.2. Thay đổi so với v0 và lý do
 
-| Trường | v0 trong CP5 | v1 | Vì sao tôi đổi |
+| Trường | v0 trong CP5 | v1 | Vì sao đổi |
 |---|---|---|---|
-| Actor | Sinh viên đọc và so sánh paper | Giới hạn paper đã đọc, có PDF gốc | Giữ phạm vi tìm lại bằng chứng |
-| Impact | 30–40 phút/tuần cho 3–4 lượt | Dùng mốc 30 phút/tuần cho 3 lượt | Thống nhất với CP1–CP2 và CP4 |
-| Success Metric | 10 → tối đa 3 phút/lần, đúng đoạn và ngữ cảnh | Ít nhất 9/10 tác vụ đạt trong pilot 4 tuần; tính ngoại lệ và tổng công ghi chú | Đánh giá cả bộ tác vụ, không bỏ qua lượt tìm thủ công hoặc công chuẩn bị |
-| Boundary | Ưu tiên Zotero; AI có thể thử sau | Chọn No AI, giữ kiểm tra PDF và cách quay về | Phù hợp với phương án tôi chọn |
+| Actor / phạm vi | Sinh viên dùng lại nhận định từ paper đã đọc | Làm rõ có PDF gốc và quyền sử dụng; pilot ban đầu ưu tiên PDF tìm được văn bản | Có nguồn để đối chiếu, tránh mặc định đã xử lý tốt scan/hình/bảng |
+| Success Metric | Target giảm ít nhất 30%, kiểm tốc độ và độ đúng | Làm rõ 10 yêu cầu/3 paper, có yêu cầu không có đáp án; định nghĩa các thước đo và tính công chuẩn bị | So sánh được tổng công và chất lượng, không bỏ lượt khó/không tìm thấy |
+| Boundary | Người học kiểm PDF; AI nếu thử chỉ gợi ý | Ghi rõ chưa tìm thấy khi thiếu căn cứ, không để AI tự tạo vị trí nguồn; có ngưỡng dừng | Tránh coi nguồn tồn tại là đủ chứng minh nhận định |
+| Mức can thiệp / người kiểm tra | Ưu tiên Zotero, AI có thể thử sau | No AI First; Workflow tùy chọn, không Agent; nhóm cần phân công người kiểm | Chỉ tăng mức khi có lợi ích đã đo và giữ quyền xác nhận ở con người |
 
 ### 7.3. Tiêu chí đánh giá
 
-Tôi dùng 5 tiêu chí cho phương án ghi chú và truy xuất nguồn:
+Chưa có kết quả. Các tiêu chí áp dụng cho No AI và dùng để so sánh nếu thử mức cao hơn; ngưỡng chất lượng cụ thể phải được nhóm chốt trước khi chạy.
 
-| # | Tiêu chí | Đạt khi | Không đạt khi |
+| # | Tiêu chí | Cách đo / đạt khi | Không đạt / cần ghi nhận |
 |---:|---|---|---|
-| 1 | Đúng nguồn | Đúng paper và vị trí trang/hình/bảng/đoạn | Nhầm paper, phiên bản hoặc vị trí |
-| 2 | Đúng bằng chứng | Nội dung thực sự hỗ trợ nhận định | Chỉ trùng từ khóa hoặc không hỗ trợ nhận định |
-| 3 | Giữ đúng ngữ cảnh | Giữ đúng đối tượng, điều kiện và giới hạn | Bỏ điều kiện hoặc khái quát vượt bằng chứng |
-| 4 | Xử lý nguồn thiếu/lỗi | Ghi rõ chưa xác minh, quay về PDF gốc | Dùng nguồn chưa kiểm tra hoặc tự tạo nguồn |
-| 5 | Thời gian | Tìm và xác minh đúng trong tối đa 3 phút | Quá 3 phút hoặc chưa xác minh được |
+| 1 | Retrieval time | Bấm giờ từ yêu cầu đến khi tìm được bằng chứng; báo trung vị thời gian mỗi yêu cầu, ghi riêng công xác minh | Chưa tìm được vẫn ghi thời gian và trạng thái; không bỏ khỏi log hoặc gán thời gian bằng 0 |
+| 2 | Evidence hit rate | Số yêu cầu có đáp án tìm được bằng chứng hợp lệ / tổng yêu cầu có đáp án | Chỉ trùng từ khóa nhưng không hỗ trợ nhận định, hoặc bỏ sót bằng chứng; chất lượng không được giảm so với baseline |
+| 3 | Citation accuracy | Số vị trí nguồn đúng / tổng trích dẫn đã lưu; đối chiếu paper và trang/đoạn/hình/bảng | Nhầm paper, vị trí, phiên bản hoặc nguồn không tồn tại |
+| 4 | Context correctness | Số nhận định dùng đúng điều kiện và giới hạn / tổng nhận định đã lưu | Đúng trang nhưng diễn giải vượt bằng chứng hoặc bỏ điều kiện áp dụng |
+| 5 | Tổng thời gian | Mục tiêu đề xuất giảm ít nhất 30% so với baseline, gồm công chuẩn bị + tìm kiếm + xác minh | Nhanh ở bước tìm nhưng tổng công không đạt mục tiêu, hoặc chất lượng giảm |
 
-Tôi tính một lượt đạt khi đáp ứng tiêu chí 1–3 và 5. Nếu nguồn thiếu hoặc lỗi, tôi áp dụng thêm tiêu chí 4. Lượt chưa xác minh được vẫn tính vào tổng 10 tác vụ và không được tính là thành công.
+Với yêu cầu không có đáp án, chấm riêng việc nhận ra thiếu căn cứ và số gợi ý sai; không đưa vào mẫu số evidence hit rate của yêu cầu có đáp án. Báo tử số/mẫu số cho các tỷ lệ; mẫu số bằng 0 thì ghi không áp dụng. Một kết quả chỉ được chấp nhận sau khi người học kiểm cả nguồn, bằng chứng và ngữ cảnh.
 
-### 7.4. Tổng hợp dữ liệu đánh giá
+### 7.4. Kế hoạch đo — chưa có kết quả thực nghiệm
 
-**[DỮ LIỆU MÔ PHỎNG — CHƯA KIỂM CHỨNG]** Bảng này là dữ liệu mô phỏng do CP6 khai báo, không phải kết quả pilot đã thực hiện. Pilot 4 tuần ở mục 8.2 vẫn là kế hoạch. Các giá trị 3,06 phút, 9/10, 10/10 và 40,6 phút được giữ nguyên theo nguồn.
+1. Chuẩn bị **10 yêu cầu từ 3 paper** được phép sử dụng, có cả yêu cầu không có đáp án. Tạo đáp án tham chiếu gồm đoạn/hình/bảng, vị trí và giới hạn áp dụng; người đọc kiểm PDF trước.
+2. Đo baseline bằng cách tìm thủ công hiện tại. Đo No AI với ghi chú có cấu trúc/Zotero; tính công chuẩn bị cho tập paper và thời gian xử lý toàn bộ yêu cầu, kể cả xác minh và fallback.
+3. Đổi thứ tự phương án giữa người thử hoặc dùng tác vụ tương đương để giảm ảnh hưởng nhớ đáp án. Ghi log từng yêu cầu, lỗi bỏ sót/nhận nhầm và kết quả kiểm ngữ cảnh.
+4. Gọi B là tổng thời gian baseline đã đo, T là tổng thời gian No AI gồm chuẩn bị. Mục tiêu đề xuất là T ≤ 0,70 × B (B > 0), đồng thời không giảm chất lượng. Chưa có giá trị B hoặc T thực nghiệm.
+5. Nếu No AI/Rule chưa đủ mới cân nhắc Workflow và so với phương án đơn giản tốt nhất. Mười yêu cầu chỉ giúp phát hiện lỗi ban đầu, chưa đủ suy rộng hiệu quả hoặc độ tin cậy cho nhiều người dùng.
 
-| Chỉ số | Giá trị |
+| Nội dung | Trạng thái hiện tại |
 |---|---|
-| Trung bình trước cải thiện | 10 phút/tác vụ; trong đó dò PDF 6 phút |
-| Trung bình sau cải thiện, gồm kiểm tra ngữ cảnh và ngoại lệ | 3,06 phút/tác vụ |
-| Đúng nguồn, đúng ngữ cảnh và tối đa 3 phút | 9/10 tác vụ |
-| Đúng nguồn/ngữ cảnh sau cả bước quay về thủ công | 10/10 tác vụ |
-| Công bổ sung ghi chú | 10 phút cho 10 tác vụ |
-| Tổng thời gian tìm | 100 → 30,6 phút |
-| Tổng sau cải thiện, gồm công bổ sung ghi chú | 40,6 phút |
+| Baseline, thời gian từng bước, công chuẩn bị | [CẦN ĐO] — chưa có baseline thực nghiệm |
+| Bộ yêu cầu, đáp án tham chiếu và log thử | Chưa có bộ thử/log đính kèm; cần nhóm chuẩn bị trước pilot |
+| Target giảm ít nhất 30% | Mục tiêu thử nghiệm đề xuất, không phải kết quả |
+| Thời điểm, người thực hiện, người kiểm và ngưỡng chất lượng | [CẦN NHÓM XÁC NHẬN] trước khi chạy |
 
-Tôi tính cả lượt mất 4,5 phút do liên kết hỏng. Vì vậy, trung bình là 3,06 phút, còn tỷ lệ đạt ngưỡng 3 phút là 9/10. Với các lượt đã có vị trí nguồn, tôi vẫn tính thời gian đọc lại ngữ cảnh.
-
-Tính cả 10 phút bổ sung ghi chú, tổng thời gian là 40,6 phút so với 100 phút ban đầu.
-
----
+Các số trong bản CP6 trước là dữ liệu mô phỏng do nguồn khai báo. Bản đồng bộ với slide/PDF không dùng bảng mô phỏng đó làm kết quả đánh giá hay cơ sở ra quyết định; nội dung cũ vẫn truy vết được trong lịch sử Git.
 
 ## 8. Quyết định (CP6)
 
 ### 8.1. Bốn rủi ro
 
-Tôi đánh giá rủi ro ở phạm vi thiết kế pilot nhỏ:
+Đánh giá sơ bộ theo slide 7, ở phạm vi cân nhắc triển khai AI; chưa phải kết luận từ pilot hoặc đồng thuận cuối của nhóm.
 
-| Rủi ro | Mức độ | Lý do |
-|---|---|---|
-| **Value** | Trung bình | Tôi mới dựa vào một trường hợp, chưa mở rộng kết luận sang người dùng khác |
-| **Usability** | Trung bình | Tôi phải duy trì ghi chú, đọc ngữ cảnh và xử lý liên kết hỏng |
-| **Feasibility** | Thấp | Tính năng cần dùng đã có; quy trình rõ, chưa cần xây mô hình hoặc hệ thống riêng |
-| **Viability** | Thấp | Tôi dùng công cụ hiện có; tính cả công ghi chú, tổng thời gian trong bộ dữ liệu vẫn thấp hơn trước |
+| Rủi ro | Câu hỏi | Mức độ | Lý do / bằng chứng hiện có |
+|---|---|---|---|
+| **Value** | Pain có thật và đủ đáng giải quyết không? | Cao | Chưa có kiểm chứng người dùng hay baseline, chưa biết ghi chú/Zotero đã đủ chưa. |
+| **Usability** | Người học có dùng và kiểm kết quả được không? | Trung bình | Công tạo ghi chú và kiểm lại có thể lớn; người học phải hiểu và giữ đúng ngữ cảnh. |
+| **Feasibility** | Có truy xuất được bằng chứng trong phạm vi dữ liệu không? | Trung bình | PDF scan, hình và bảng có thể khó tìm; chưa có thử nghiệm. Pilot ban đầu ưu tiên PDF tìm được văn bản, trường hợp khó kiểm thủ công hoặc ghi ngoài phạm vi. |
+| **Viability** | Quyền dùng tài liệu, chi phí và vận hành có phù hợp không? | Trung bình | Cần kiểm quyền sử dụng paper và tổng chi phí/công chuẩn bị; chưa có số đo để kết luận. |
 
 ### 8.2. Kết luận
 
-**[CẦN NHÓM XÁC NHẬN]** CP6 ghi lựa chọn của tác giả là Go cho pilot nhỏ dùng No AI, không phải Go triển khai AI. Chưa có biên bản xác nhận quyết định chung trong ba file nguồn. Giữ nguyên kết luận và pilot của CP6 bên dưới.
+**Đề xuất: Not Yet — Chưa đủ bằng chứng để triển khai AI. [CẦN NHÓM XÁC NHẬN]** Quyết định này không ngăn việc kiểm chứng người dùng và thử quy trình No AI trước. Không ghi Go cho triển khai AI khi chưa có bằng chứng thực tế.
 
-**Tôi chọn Go với thiết kế pilot nhỏ dùng No AI.** Ở phạm vi này, hai rủi ro Trung bình là giá trị sử dụng và khả năng duy trì ghi chú; tôi sẽ đánh giá chúng trong pilot. Phương án dùng công cụ có sẵn, chưa cần xây hệ thống mới. Tôi giữ việc kiểm tra PDF trước khi dùng bằng chứng và chưa mở rộng sang người dùng khác.
+**Lý do:** chưa kiểm chứng pain với người dùng, chưa có baseline thực tế, và cần chứng minh No AI/Rule chưa đủ trước khi bổ sung AI. Khả năng được mô tả trong tài liệu công cụ chưa chứng minh hiệu quả cho tác vụ của nhóm.
 
-**Pilot tôi đề xuất:** Trong 4 tuần, tôi chọn 10 tác vụ từ 5 paper đã đọc, gồm đoạn văn, hình và bảng. Tôi sẽ dùng mẫu ghi chú có nhận định, vị trí nguồn, annotation/liên kết và ngữ cảnh; ghi lại thời gian, đúng/sai, ngoại lệ và công chuẩn bị. Một thành viên khác đối chiếu bằng chứng với PDF theo 5 tiêu chí; tôi so sánh tổng thời gian với cách tìm thủ công trên cùng bộ tác vụ.
+**Bước tiếp theo:** phỏng vấn/quan sát người phù hợp → đo baseline → thử No AI → đo kết quả. Pilot dự kiến gồm **10 yêu cầu từ 3 paper**, có yêu cầu không có đáp án; cách đo ở mục 7.4. Nếu còn bottleneck, thử Rule; nếu Rule đủ thì dừng ở đó, nếu chưa đủ mới cân nhắc Workflow để so sánh. Lịch và người thực hiện chưa được chốt, không mặc định pilot đã bắt đầu.
 
-**Ngưỡng dừng:**
+**Ngưỡng dừng / điều kiện không nâng cấp:**
 
-- Sau 4 tuần, nếu chưa đủ 10 tác vụ hoặc dưới 9/10 tác vụ đạt đủ tiêu chí, tôi chưa mở rộng mà quay về tìm thủ công và sửa ghi chú.
-- Nếu công chuẩn bị lớn hơn hoặc bằng thời gian tiết kiệm, tôi thu hẹp các nhận định cần lưu nguồn.
-- Nếu có bằng chứng sai được dùng trước khi đối chiếu PDF, tôi dừng để sửa bước kiểm tra.
+- Nếu có một trích dẫn sai được chấp nhận, dừng dùng đầu ra AI và xem lại bước kiểm nguồn/ngữ cảnh trước khi thử tiếp.
+- Sau bộ pilot dự kiến, nếu tổng thời gian và chất lượng không tốt hơn phương án đơn giản, không nâng cấp lên AI; quay về No AI/Rule hoặc tìm thủ công, sửa quy trình rồi đo lại. Target giảm ít nhất 30% là mục tiêu thử No AI so với baseline, chưa phải kết quả đạt được.
+- Không coi pilot kết thúc nếu thiếu log, công chuẩn bị hoặc kiểm chất lượng; giữ Not Yet thay vì suy kết luận từ số liệu thiếu.
+
+**Khi nào cân nhắc Go:** có pain thực tế và baseline đã đo, No AI/Rule chưa đủ, Workflow đem lại lợi ích về tổng công mà không giảm chất lượng, có người kiểm PDF và ngưỡng dừng. Nếu đạt, chỉ cân nhắc pilot AI nhỏ sau khi nhóm xác nhận; chưa phải Go triển khai rộng.
 
 ---
 
@@ -375,27 +397,31 @@ Tôi đánh giá rủi ro ở phạm vi thiết kế pilot nhỏ:
 
 ### 9.1. Những điểm cần nhóm xác nhận
 
-| Nội dung | Ghi nhận từ nguồn | Việc còn thiếu / cần xác nhận |
+| Nội dung | Hiện có | Việc còn thiếu / cần xác nhận |
 |---|---|---|
-| Kiểm chứng người dùng (C7) | CP4 rà soát một card và có bộ câu hỏi; chưa có mẫu phỏng vấn hoặc survey. | **[CHƯA KIỂM CHỨNG]** Cần dữ liệu người thật, nguồn và cách thu thập; ghi cả tín hiệu phản bác và thay đổi problem sau kiểm chứng. |
-| Baseline và dữ liệu đánh giá (C7, C9) | CP3 nêu thời gian trong card là giả định. CP6 khai báo dữ liệu mô phỏng; pilot 4 tuần mới được đề xuất. | Không dùng các bảng mô phỏng làm bằng chứng thực nghiệm. Chưa có log đo từng tác vụ hoặc bộ 10 tác vụ/đáp án tham chiếu đính kèm. |
-| Actor (C8, C9) | CP4 dùng Rachal; v0 của CP5 dùng Lam; v1 của CP6 dùng “tôi”. | **[CẦN NHÓM XÁC NHẬN]** Thống nhất actor và bối cảnh; chưa xác định đây là cùng một trường hợp thực tế. |
-| Bước thủ công và mức can thiệp (C8, C10) | CP5 ghi 2/4 bước thủ công nhưng gắn nhãn CON NGƯỜI ở ba bước; annotation/page link được ghi RULE. CP6 gọi phương án dùng Zotero là No AI. | **[CẦN NHÓM XÁC NHẬN]** Làm rõ cách đếm bước và phân loại mức can thiệp, không tự sửa số liệu nguồn. |
-| Quy trình chi tiết (C8) | CP5 có sơ đồ ASCII, thời gian giả định, boundary, fallback và bảng before/after. | Chưa có bảng actor/input/output/handoff cho từng bước và quan sát xác nhận quy trình. |
-| Độ phức tạp (C10) | CP6 chọn “mơ hồ thấp, phức tạp thấp”; quy trình có 4–5 bước. Worksheet có gợi ý 3+ bước nối tiếp khi xét độ phức tạp cao. | **[CẦN NHÓM XÁC NHẬN]** Giải thích cách áp dụng tiêu chí độ phức tạp cho phạm vi này; chưa tự đổi ô ma trận. |
-| Phạm vi và metric v0 → v1 (C9) | CP5 dùng 3–4 lượt, 30–40 phút/tuần; CP6 thu về 3 lượt, 30 phút/tuần và ghi lý do tại mục 7.2. | Giữ cả hai phiên bản để truy vết; nhóm cần xác nhận phạm vi và đo baseline thật trước khi đánh giá target. |
-| Quyết định và pilot (C11) | CP6 ghi Go cho pilot No AI, có bốn rủi ro và ngưỡng dừng. | **[CẦN NHÓM XÁC NHẬN]** Chốt quyết định chung, người thực hiện và người đối chiếu PDF; không coi pilot là đã chạy hoặc lựa chọn cá nhân là đồng thuận của nhóm. |
+| Phản biện trực tiếp (C6) | Nhóm đã thảo luận chọn đề tài; cột câu hỏi ở mục 2.1 chưa được điền. | Mỗi thành viên bổ sung câu hỏi thật đã đặt/nhận và người hỏi; không dùng câu hỏi AI soạn làm biên bản thảo luận. |
+| Kiểm chứng người dùng (C7) | Assumption map, câu hỏi hành vi và research công cụ; chưa có phỏng vấn/survey. | [CHƯA KIỂM CHỨNG] Cần dữ liệu người thật, nguồn/cách thu thập, tín hiệu phản bác và ghi lại problem thay đổi thế nào sau kiểm chứng. |
+| Quy trình và baseline (C8, C9) | Có actor/input/output, bottleneck giả thuyết, HITL và fallback. | Quan sát quy trình thực tế, đo thời gian từng bước và công chuẩn bị; chưa đủ baseline để xác nhận target. |
+| Bộ eval và metric (C9) | Kế hoạch 10 yêu cầu/3 paper, target giảm ít nhất 30%, định nghĩa tốc độ và chất lượng. | Chuẩn bị yêu cầu/đáp án có nguồn, yêu cầu không có đáp án, log; chốt ngưỡng chất lượng và cách so sánh công bằng trước khi thử. |
+| Ma trận độ phức tạp (C10) | Giữ phân loại sơ bộ “mơ hồ thấp, phức tạp thấp” từ CP6; slide không nêu ô thay thế. | Giải thích theo worksheet vì quy trình có nhiều bước nối tiếp; chưa tự coi đây là phân loại cuối. |
+| Quyết định và pilot (C11) | Đồng bộ theo slide/PDF: Not Yet đối với triển khai AI, thử No AI trước; bốn rủi ro và ngưỡng dừng ở mục 8. | Hữu An và nhóm xác nhận quyết định, quy mô/target, lịch, người thử và người kiểm nguồn; không coi kế hoạch là pilot đã chạy. |
+| Tài liệu thuyết trình | Dùng slide v3 và PDF kịch bản làm bản ưu tiên để đồng bộ CP4–CP6. | Hai file được cung cấp riêng, chưa thay bản slide cũ trong repo. Khi chia sẻ/nộp bài cần dùng đúng phiên bản v3 và kịch bản tương ứng. |
 
-### 9.2. Ghi nhận sử dụng AI trong CP6
+### 9.2. Nguồn đồng bộ và sử dụng AI
 
-Tôi dùng AI để đối chiếu CP1–CP5, tạo bộ dữ liệu, kiểm tra phép tính và phản biện lập luận. Phần phản biện tập trung vào ba điểm: mở đúng trang chưa đủ để hiểu đúng ngữ cảnh, phải tính công ghi chú và không bỏ qua lượt tìm quá ngưỡng thời gian.
+- Nội dung ưu tiên: `nhom6-paper-evidence-6min-v3.pptx` (slide 2–7 và speaker notes) và `nhom6_kich_ban_thuyet_trinh_6_phut.pdf` (trang 2–6), do Dương cung cấp để đối chiếu. Slide 3 nêu trạng thái kiểm chứng; slide 5 mô tả pipeline; slide 6 nêu pilot/metric; slide 7 nêu rủi ro và Not Yet.
+- Bản này thay các mốc pilot, target và quyết định khác trong CP4–CP6 bằng đề xuất trong slide/PDF. Lịch sử bản trước được giữ trong Git; không dùng số mô phỏng làm kết quả thực nghiệm.
+- Có hỗ trợ AI khi tổng hợp research, dựng sơ đồ, đối chiếu nội dung và phản biện metric/boundary. Bản CP6 trước có số liệu mô phỏng do AI hỗ trợ tạo; bản đồng bộ chỉ giữ kế hoạch đo, chưa có kết quả. Nhóm phải tự kiểm quy trình, hiểu lập luận và chốt quyết định theo RULES.md.
 
 ---
 
 ## 10. Tài liệu tham khảo
 
-- [CP1–CP2](../individual/2A202604020_NguyenDucKhuongLam.md), [CP3](group_report.md), [shortlist](shortlist.md), [CP5](CP5.md).
-- [CP4](https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/blob/169d1927dce2f72cae879ac35dc90e8575901c3f/report/team/CP4.md).
-- [Worksheet](../../docs/01-worksheet.md), [checklist](../../CHECKPOINTS.md), [rubric](../../RUBRIC.md).
-- [Zotero PDF Reader](https://www.zotero.org/support/pdf_reader), [Zotero Notes](https://www.zotero.org/support/notes), [Adobe Searching PDFs](https://helpx.adobe.com/acrobat/using/searching-pdfs.html).
-- File nguồn tích hợp: [CP4.md](CP4.md), [CP5.md](CP5.md), [CP6.md](CP6.md).
+- [Card L1 — CP1–CP2 của Lam](../individual/2A202604020_NguyenDucKhuongLam.md), [shortlist](shortlist.md), [CP3 trong báo cáo nhóm](group_report.md#2-hội-tụ-nhóm-cp3).
+- [CP4](CP4.md), [CP5](CP5.md), [CP6](CP6.md); [CP4 trước khi đồng bộ](https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/blob/169d1927dce2f72cae879ac35dc90e8575901c3f/report/team/CP4.md).
+- [Worksheet](../../docs/01-worksheet.md), [checklist](../../CHECKPOINTS.md), [rubric](../../RUBRIC.md), [quy định](../../RULES.md).
+- [Zotero PDF Reader](https://www.zotero.org/support/pdf_reader), [Zotero Notes](https://www.zotero.org/support/notes).
+- [Elicit — Which workflow should I use?](https://support.elicit.com/en/articles/14757543-getting-started-with-elicit-which-workflow-should-i-use).
+- [Lewis và cộng sự (2020) — Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401).
+- [Adobe — Searching PDFs](https://helpx.adobe.com/acrobat/using/searching-pdfs.html).
+- Slide v3 và PDF kịch bản được cung cấp riêng: tên file và phần sử dụng ghi tại mục 9.2; không phải dữ liệu kiểm chứng người dùng.

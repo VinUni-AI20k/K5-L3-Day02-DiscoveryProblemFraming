@@ -178,12 +178,15 @@ PHÁC THẢO — tổng thời gian: [CẦN ĐO]
 | Metric chưa rõ điểm kết thúc | Kiểm xong phần dữ liệu sẵn có khác với giải đáp xong mọi khoản. | Khi nào coi là kiểm xong và dùng nguồn nào xác nhận kết quả? |
 | Chưa so sánh với bảng đối chiếu thông thường | Điều khoản ngắn và công thức rõ có thể chỉ cần bảng tính; AI không bổ sung được chứng từ bị thiếu. | Sau khi dùng bảng đối chiếu, phần nào vẫn cần hỗ trợ đọc hiểu? |
 
+**Điều chỉnh sau phản biện AI:** Card #6 bổ sung phương án chia nhỏ PR, mô tả rõ và checklist trước khi thử AI; card #12 ưu tiên chuẩn hóa trường và chuyển dữ liệu theo quy tắc; card #19 tách thời gian kiểm tra khỏi thời gian chờ, giữ riêng các khoản còn thiếu căn cứ. Actor, bước nghẽn và thời gian của ba card vẫn cần tình huống thực tế để xác nhận.
+
 ---
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
+| Điều phối và chia công việc | Phân công Khoa phụ trách CP5, Lam phụ trách CP4, An phụ trách CP6; tôi tổng hợp nguồn, soạn bản tổng hợp, tích hợp báo cáo và chuẩn bị slide. | Phân công được ghi tại [TEAM.md](../../TEAM.md), gắn với từng phần báo cáo và file nguồn. |
 | Pitch Problem Card | Chuẩn bị ba card #6, #12, #19, ưu tiên card đọc PR lớn; thảo luận và đối chiếu các phương án với tất cả thành viên. | Sau thảo luận, chọn shortlist ba vấn đề và đề tài tìm lại bằng chứng từ paper. |
 | Phản biện bài của bạn khác | Tham gia thảo luận và đối chiếu các đề tài cùng các thành viên. | Chưa bổ sung câu hỏi phản biện cụ thể tôi đã đặt. |
 | Nhận phản biện | AI chỉ ra actor còn rộng, chưa rõ tiêu chí “PR lớn”, thiếu baseline và chưa so sánh với chia nhỏ PR. Phản biện trực tiếp từ thành viên khác chưa được bổ sung. | Card #6 giữ bước nghẽn ở trạng thái giả thuyết, có cách đo và phương án chia nhỏ PR, cải thiện mô tả trước khi cân nhắc AI. |
@@ -194,8 +197,10 @@ PHÁC THẢO — tổng thời gian: [CẦN ĐO]
 | Problem Statement | Nhờ AI chuẩn bị nội dung CP5 cho slide, sau đó yêu cầu đối chiếu card gốc, shortlist và báo cáo nhóm để không dùng thời gian giả định làm baseline. | Slide nêu actor, bước nghẽn, impact giả thuyết và cách đo. Nội dung này chưa thay cho Problem Statement v0/v1 do nhóm tự chốt. |
 | Mức can thiệp AI | Yêu cầu làm rõ phương án No AI First và so sánh với Rule, Workflow, Agent. | Phương án trên slide ưu tiên ghi chú có cấu trúc và Zotero; chỉ cân nhắc mức cao hơn nếu cách đơn giản chưa đủ. Nhánh Workflow được ghi là tùy chọn, chưa triển khai. |
 | Quyết định | Yêu cầu giữ “Not Yet — Chưa đủ bằng chứng để triển khai AI” ở trạng thái đề xuất phân tích và chuẩn bị câu hỏi đáp. | Slide có bốn rủi ro, bước thử tiếp và ngưỡng dừng. Chưa ghi đây là quyết định cuối đã được cả nhóm xác nhận. |
+| Tích hợp CP4–CP6 | Gom các file CP4, CP5, CP6 vào mục 3–10 của báo cáo nhóm, kiểm tra cấu trúc và đối chiếu với nguồn. | [PR #13](https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/pull/13) được merge; giữ rõ số liệu mô phỏng, kế hoạch pilot và các điểm cần nhóm xác nhận. Tôi phụ trách tổng hợp, không tự chốt quyết định CP6. |
+| Slide và tài liệu thuyết trình | Chuẩn bị slide, yêu cầu chỉnh mạch trình bày, flowchart, speaker notes và câu hỏi đáp; đối chiếu bản v3 với kịch bản 6 phút. | Đã dùng slide v3 và PDF kịch bản làm bản ưu tiên để đồng bộ CP4–CP6: pilot 10 yêu cầu/3 paper, target giảm ít nhất 30% tổng thời gian và đề xuất Not Yet đối với triển khai AI; chưa có kết quả thử nghiệm hay xác nhận quyết định cuối của nhóm. |
 
-Bằng chứng phần chuẩn bị chung: [PR #6 — cluster và OST](https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/pull/6), [PR #8 — slide và tổng hợp CP3](https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/pull/8). Bản slide chỉnh tiếp là `nhom6-paper-evidence-6min-v3.pptx`, hiện xuất riêng ngoài Git.
+Bằng chứng phần chuẩn bị chung: [PR #6 — cluster và OST](https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/pull/6), [PR #8 — slide và tổng hợp CP3](https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/pull/8), [PR #13 — tích hợp CP4–CP6](https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/pull/13). [Slide đang lưu trong repo](../assets/cp6-paper-evidence-6min.pptx) là bản trước; `nhom6-paper-evidence-6min-v3.pptx` và `nhom6_kich_ban_thuyet_trinh_6_phut.pdf` hiện là các file riêng ngoài Git.
 
 ---
 
@@ -210,6 +215,7 @@ Bằng chứng phần chuẩn bị chung: [PR #6 — cluster và OST](https://gi
 | CP5–6 Problem Statement | Nhờ AI soạn nội dung đề xuất cho slide, gồm actor, pain, metric và boundary. | Kết nối problem với quy trình, cách đo thời gian và kiểm chất lượng bằng chứng. | AI đã hỗ trợ soạn nội dung, không chỉ phản biện. Mục tiêu giảm 30% và quy mô pilot 10 yêu cầu/3 paper chưa có dữ liệu để xác nhận. | Yêu cầu phân biệt baseline chưa đo với target đề xuất; giữ CP4–CP6 trong báo cáo nhóm để thành viên hoàn thiện và tự chốt. |
 | CP6 Mức can thiệp / quyết định | Nhờ AI so sánh No AI/Rule/Workflow/Agent, phân tích bốn rủi ro và chuẩn bị Q&A. | Làm rõ lý do thử No AI trước, boundary về trích dẫn và điều kiện chỉ thử Workflow khi mức đơn giản chưa đủ. | Mức rủi ro và đề xuất Not Yet chưa phải kết quả kiểm chứng hay quyết định được nhóm xác nhận. | Yêu cầu ghi rõ trạng thái đề xuất, không trình bày như đang xây AI Agent hoặc đã đạt target. Chưa chốt Go cho triển khai AI. |
 | CP7 Biên tập | Cung cấp các ý trả lời về trải nghiệm của mình, nhờ AI sắp xếp và sửa câu chữ. | Tổ chức các ý về làm việc nhóm, tính khả thi, việc nghĩ đến hệ thống trích dẫn trước, thông tin về Zotero và kế hoạch đo hiệu quả. | AI không biết những việc ngoài thông tin tôi cung cấp, như câu hỏi phản biện cụ thể hoặc kết quả phỏng vấn. | Bổ sung trực tiếp những gì mình đã làm và suy nghĩ; không tạo thêm cuộc phỏng vấn, kết quả pilot hoặc câu hỏi của thành viên khác. |
+| Tổng hợp và rà soát bài nộp | Nhờ AI tích hợp CP4–CP6, điền thông tin nhóm theo phân công tôi cung cấp và đối chiếu yêu cầu của thầy. | Giữ nguồn, kiểm tra cấu trúc, link và tính nhất quán giữa TEAM, báo cáo nhóm và nhật ký đóng góp. | Tài khoản đưa file lên Git không đủ để suy ra người phụ trách checkpoint. Bản CP6 trước khác slide/PDF về pilot, metric và mức rủi ro; số mô phỏng không phải kết quả pilot. | Tôi xác nhận phân công Khoa–CP5, Lam–CP4, An–CP6 và yêu cầu ưu tiên slide/PDF để đồng bộ báo cáo cùng ba file CP4–CP6; quyết định cuối vẫn để nhóm xác nhận. |
 
 ---
 
@@ -249,4 +255,10 @@ Bài toán nhóm chọn là sinh viên mất thời gian tìm lại bằng chứ
 
 ## 7. Tài liệu tham khảo
 
--
+- [TEAM.md — thành viên, phân công và đóng góp](../../TEAM.md).
+- [Báo cáo nhóm — CP3 đến CP6](../team/group_report.md), [shortlist](../team/shortlist.md).
+- File nguồn: [CP4](../team/CP4.md), [CP5](../team/CP5.md), [CP6](../team/CP6.md).
+- [Slide đang lưu trong repo](../assets/cp6-paper-evidence-6min.pptx). Bản v3 và PDF kịch bản được cung cấp riêng ngoài repo.
+- [Zotero — PDF Reader and Note Editor](https://www.zotero.org/support/pdf_reader).
+- [Elicit — Which workflow should I use?](https://support.elicit.com/en/articles/14757543-getting-started-with-elicit-which-workflow-should-i-use).
+- [Lewis và cộng sự — Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401).

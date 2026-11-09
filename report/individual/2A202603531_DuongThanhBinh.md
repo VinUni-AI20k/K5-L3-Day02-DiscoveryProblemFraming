@@ -14,23 +14,27 @@
 
 ---
 
+**Bối cảnh:** Binh, Junior AI Engineer trong một nhóm AI khoảng 8 người, phục vụ các ứng dụng của hệ sinh thái VinGroup (giả định: chatbot/trợ lý ảo hỗ trợ chủ xe VinFast và tài xế Xanh SM trong app). Công cụ: Python, GitHub, Jira, Slack, Google Sheets, công cụ gán nhãn, hệ thống log hội thoại. Binh làm việc cùng PM, đội CSKH/vận hành, data engineer, security và các đơn vị yêu cầu AI.
+
 ## 2. Scan problem (CP1)
+
+Scan 11 problem, vượt mức tối thiểu 5. Chưa lọc, bước sau mới chọn.
 
 | # | Lăng kính | Job Story | Ai chịu ảnh hưởng? | Dấu hiệu thật |
 |---:|---|---|---|---|
-| 1 | Lặp lại | Khi vừa sửa xong một phần giao diện Vue và cần chạy thử trên WAMP, tôi muốn thay đổi hiện ra đúng chỗ ngay, để không mất công build, copy file và restart Apache mỗi lần | Tôi (dev solo) | Mỗi lần sửa phải chạy 3 bước thủ công; ~5–10 phút/lần, ~10 lần/tuần (cần bấm giờ lại) |
-| 2 | Lặp lại | Khi vừa seed dữ liệu xong và chuẩn bị demo đồ án, tôi muốn hệ thống ở trạng thái sẵn sàng, để không quên các bước thủ công làm demo trống hoặc chậm | Tôi, hội đồng chấm | ≥2 bước thủ công dễ quên (`recommendation:build-similarity`, `optimize`); từng có lần tải trang 1,2s do cấu hình trùng, sau sửa còn ~149ms |
-| 3 | Tốn thời gian | Khi viết lại các chương báo cáo đồ án, tôi muốn trình bày quyết định kiến trúc và lý do, để báo cáo đọc như phân tích chứ không như hướng dẫn từng bước | Tôi, giảng viên hướng dẫn, hội đồng | 4 chương phải rà lại; ~2–3 giờ/chương (cần đo) |
-| 4 | Tốn thời gian | Khi review bộ sơ đồ sequence PlantUML, tôi muốn biết sơ đồ nào sai logic hoặc lỗi mã hóa, để không nộp sơ đồ mâu thuẫn với code | Tôi, người đọc báo cáo | ≥10 nhóm chức năng có sơ đồ; 2 đợt review tìm ra ≥4 loại lỗi (UTF-8, thiếu bước query DB, thiếu trạng thái Refunded, luồng auth không nhất quán) |
-| 5 | Cần đọc, tổng hợp nhiều thông tin | Khi viết phần quy trình Agile Scrum cho báo cáo, tôi muốn thấy mỗi sprint đã làm gì, để mô tả đúng thực tế thay vì nhớ mơ hồ | Tôi | Phải dựng 6 sprint (Sprint 0–5, tháng 4 đến cuối tháng 7) từ lịch sử commit git, đọc lại hàng trăm commit |
-| 6 | Cần đọc, tổng hợp nhiều thông tin | Khi ứng tuyển các vai trò khác nhau (Fullstack, QA/Tester, BA), tôi muốn CV nhấn đúng dự án liên quan từng vai trò, để nhà tuyển dụng thấy mình phù hợp | Tôi | 3 vai trò = 3 bản CV; 5 repo GitHub và các project Java chưa được đưa vào CV; ~1–2 giờ/bản (cần đo) |
-| 7 | Tốn thời gian | Khi có lịch phỏng vấn cho vị trí mới (vd. Intern Tester), tôi muốn biết cần ôn gì theo mô tả công việc, để không ôn lan man | Tôi | Mỗi buổi phải tự soạn một tài liệu ôn riêng; ~3–4 giờ/buổi (cần đo) |
-| 8 | Tốn thời gian | Khi chạy phần LLM trong lab, tôi muốn có một model gọi được ngay, để không mất thời gian thử từng provider/model | Tôi, bạn cùng lớp | Gemini nhiều model không chạy → đổi sang Groq (gpt-oss-20b/120b); ≥2 provider phải thử, ~30–60 phút (cần đo) |
-| 9 | Cần đọc, tổng hợp nhiều thông tin | Khi chuẩn bị bài kiểm tra đầu vào AI (90 phút, 4 module A–D, 100 điểm), tôi muốn biết module nào mình yếu và cần ôn gì, để dồn thời gian đúng chỗ | Tôi | 4 module, tài liệu ôn từ nhiều nguồn rời rạc; chưa có bảng điểm yếu theo module |
-| 10 | Pain từ người khác | Khi khách hỏi chatbot về cấu hình và giá bằng nhiều cách viết khác nhau ("16GB RAM" / "RAM 16", "15 triệu" / "15tr"), khách muốn nhận đúng sản phẩm, để không phải hỏi lại hoặc bỏ đi | Khách hàng, chủ shop | ≥4 lỗi phải sửa trong parser và hội thoại (`recentHistory`, `detectRam`, `extractOrderId`, thứ tự FAQ); 25 test case viết thêm để kiểm |
-| 11 | Lặp lại | Khi nộp báo cáo lab (.md) lúc gần deadline, tôi muốn biết mình còn thiếu mục nào so với yêu cầu, để không bị trừ điểm vì sai cấu trúc | Tôi, bạn cùng lớp | 2 báo cáo cá nhân đã làm (Day 01, Day 02), mỗi bài có cấu trúc bắt buộc; ~20 phút/bài tự đối chiếu (cần đo) |
+| 1 | Lặp lại | Khi vừa sửa system prompt hoặc đổi model của chatbot, tôi muốn biết câu trả lời nào xấu đi so với bản cũ, để không phát hành bản làm hỏng câu đã đúng | AI engineer, PM, người dùng app | Bộ test ~120 câu, đọc tay ~100 phút/lần, ~4 lần/tuần (cần bấm giờ) |
+| 2 | Lặp lại | Khi nhận batch log hội thoại thật để làm dữ liệu đánh giá, tôi muốn loại thông tin cá nhân (SĐT, địa chỉ, biển số, số khung xe), để dùng dữ liệu mà không vi phạm quyền riêng tư | AI engineer, security, người dùng | ~5.000 hội thoại/batch, ~200 phút/batch, ~2 batch/tháng; regex bỏ sót tên và địa chỉ viết tự do |
+| 3 | Tốn thời gian | Khi gán nhãn ý định và lỗi bot cho hội thoại tiếng Việt, tôi muốn nhãn nhất quán giữa các người gán, để bộ đánh giá không dạy model sai | AI engineer, người gán nhãn | ~6 giờ/1.000 mẫu; 2 người gán bất đồng ~20% (cần đo độ đồng thuận) |
+| 4 | Tốn thời gian | Khi so sánh 2–3 LLM (API và tự host) cho một tính năng, tôi muốn có chất lượng tiếng Việt, độ trễ và chi phí trên cùng bộ test, để chọn model có căn cứ | AI engineer, PM, finance | ~2 ngày/lần so sánh, ~2 lần/quý |
+| 5 | Cần đọc, tổng hợp nhiều thông tin | Khi chuẩn bị bộ test cho tính năng mới, tôi muốn gom câu hỏi thật từ ticket, review app và log, để bộ test phản ánh người dùng thật chứ không phải câu tự nghĩ | AI engineer, QA | 3 nguồn rời rạc; ~4 giờ/bộ 100 câu |
+| 6 | Cần đọc, tổng hợp nhiều thông tin | Khi chính sách bảo hành hoặc cước phí thay đổi, tôi muốn biết tài liệu nào đổi và câu trả lời nào của bot bị ảnh hưởng, để bot không trả lời theo chính sách cũ | AI engineer, CSKH, người dùng | ~30 tài liệu cập nhật/quý; từng có ~3 ca bot trả lời chính sách cũ trong 2 tuần (cần log thật) |
+| 7 | Cần đọc, tổng hợp nhiều thông tin | Khi một đơn vị trong hệ sinh thái gửi yêu cầu "làm AI cho X", tôi muốn biết dữ liệu nào có, ai sở hữu và được phép dùng không, để biết khả thi trước khi cam kết | AI engineer, đơn vị yêu cầu, data owner | ~3 yêu cầu/tháng, mỗi yêu cầu ~3–5 ngày làm rõ dữ liệu |
+| 8 | Pain từ người khác | Khi PM hoặc vận hành hỏi "bot hôm qua sao trả lời sai?", họ muốn biết nguyên nhân và có lặp lại không, để quyết định rollback hay chờ sửa | PM, vận hành, AI engineer | ~10 câu hỏi/tuần ở Slack, mỗi ca ~45 phút điều tra |
+| 9 | Pain từ người khác | Khi tài xế Xanh SM hỏi bot về thu nhập hay chính sách thưởng phạt mà bot trả lời chung chung hoặc sai, tài xế muốn có câu trả lời đúng ngay, để không phải gọi tổng đài chờ lâu | Tài xế, tổng đài | ~12% hội thoại chuyển người trực sau ≥3 lượt (cần số thật hoặc ước từ mẫu) |
+| 10 | Pain từ người khác | Khi data engineer thấy log hội thoại đổi định dạng sau mỗi lần app cập nhật, họ muốn AI engineer báo trước, để pipeline không gãy | Data engineer, AI engineer | ~2 lần/quý pipeline gãy, mỗi lần mất ~1 ngày sửa |
+| 11 | Lặp lại | Khi bot đang chạy, tôi muốn biết khi nào chất lượng giảm (sau chiến dịch khuyến mãi, ra dòng xe mới), để xử lý trước khi người dùng phàn nàn | AI engineer, PM | Phát hiện qua phàn nàn thường trễ ~3–5 ngày; đọc mẫu 50 hội thoại/tuần ~2 giờ |
 
-**Phân bố lăng kính:** Lặp lại (#1, #2, #11), Tốn thời gian (#3, #4, #7, #8), Cần đọc/tổng hợp (#5, #6, #9), Pain từ người khác (#10).
+**Phân bố lăng kính:** Lặp lại (#1, #2, #11), Tốn thời gian (#3, #4), Cần đọc/tổng hợp (#5, #6, #7), Pain từ người khác (#8, #9, #10).
 
 **AI gợi ý thêm:** *(điền sau khi dùng prompt)*
 - Ý AI gợi ý và giữ lại: ...
@@ -40,81 +44,82 @@
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | CV theo vai trò (#6) | Lặp lại mỗi lần ứng tuyển, quy trình rõ, bottleneck là một bước, đo được bằng phút | Thế nào là bản CV "đủ tốt"? |
-| 2 | Review sơ đồ PlantUML (#4) | Đã có bằng chứng thật (2 đợt review, ≥4 loại lỗi), có phần kiểm tra bằng rule được | Đối chiếu sơ đồ với code có ngoài sức một buổi lab không? |
-| 3 | Kiểm báo cáo lab trước khi nộp (#11) | Quy trình ngắn, rõ, kiểm được bằng checklist; làm nhanh trong lab | Impact nhỏ (~20 phút/bài), có thể No AI là đủ |
+| 1 | Kiểm tra hồi quy khi đổi prompt/model (#1) | Lặp lại hằng tuần, quy trình rõ, bottleneck là một bước, đo được bằng phút; đúng việc của AI engineer | LLM chấm điểm có khớp với người chấm không |
+| 2 | Làm sạch thông tin cá nhân trong log hội thoại (#2) | Doanh nghiệp bắt buộc phải làm, so sánh được cả 4 mức, rủi ro rõ | Dữ liệu thật không đưa ra API ngoài được, cần làm với dữ liệu mẫu/tổng hợp |
+| 3 | Điều tra hội thoại bot trả lời sai (#8) | Pain từ người khác có bằng chứng (Slack), phù hợp agent chỉ đọc | Phạm vi dễ phình thành "agent vận hành toàn hệ thống" |
 
 **Vì sao chưa chọn các ý khác:**
-- **#3 Viết lại chương báo cáo:** thời gian lớn nhưng "viết hay" khó đo, và sắp tới hạn bảo vệ nên khó thử quy trình mới.
-- **#5 Dựng sprint từ git:** làm một lần rồi xong, không lặp lại.
-- **#1, #2 Deploy và seed:** là việc dev, giải bằng script rule là đủ, chưa có chỗ nào cần AI.
-- **#7, #9 Ôn phỏng vấn / ôn đầu vào:** dữ liệu và baseline còn mỏng.
-- **#8, #10:** #8 là sự cố một lần của lab, #10 là bài toán xây chatbot, không phải một quy trình có bottleneck rõ.
+- **#3 Gán nhãn:** chất lượng nhãn khó đo trong một buổi lab.
+- **#4 So sánh LLM:** việc làm theo dự án, ít lặp lại.
+- **#5, #7:** phụ thuộc vào nhiều nguồn dữ liệu nội bộ, khó mô phỏng.
+- **#6 Cập nhật chính sách:** hợp với RAG nhưng cần kho tài liệu thật, để dành làm hướng mở rộng.
+- **#9:** vấn đề của người dùng cuối, ít quy trình của kỹ sư.
+- **#10, #11:** có thể dùng rule và dashboard là đủ, hoặc cần hạ tầng giám sát thật.
 
-### Problem Card #1 — CV theo vai trò
+### Problem Card #1 — Kiểm tra hồi quy khi đổi prompt/model
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi ứng tuyển các vai trò khác nhau (Fullstack, QA/Tester, BA), tôi muốn CV nhấn đúng dự án liên quan từng vai trò, để nhà tuyển dụng thấy mình phù hợp |
-| Actor | Sinh viên CS năm cuối, đang ứng tuyển nhiều vai trò cùng lúc |
-| Thời điểm / bối cảnh | Mỗi khi có JD mới, thường vào buổi tối trước hạn nộp |
-| Quy trình hiện tại | 1. Đọc JD · 2. Chọn dự án liên quan trong 5+ repo · 3. Đọc lại repo/README để nhớ điểm nổi bật và số liệu · 4. Viết lại bullet theo vai trò · 5. Sắp xếp và format · 6. Tự review rồi gửi |
-| Bottleneck | Bước 3, đọc lại repo để rút kết quả và số liệu: ~30 phút/bản, dự án cũ nên quên chi tiết |
-| Impact | ~95 phút/bản CV; 3 vai trò nên ≥3 bản/đợt ứng tuyển; nhiều project Java/Python chưa lên CV |
-| Success metric | Tổng thời gian từ ~95 phút xuống dưới 40 phút; mọi con số trong CV truy được về repo |
-| Phương án không dùng AI | Một "CV gốc" liệt kê mọi dự án kèm số liệu, mỗi lần chỉ chọn và cắt. Giảm bước 3 nhưng không giúp viết bullet theo từng JD |
-| Giả thuyết về AI | AI soạn nháp bullet từ README/số liệu đã gom sẵn + JD; mình chọn, sửa và duyệt |
+| Job Story | Khi vừa sửa system prompt hoặc đổi model của chatbot, tôi muốn biết câu trả lời nào xấu đi so với bản cũ, để không phát hành bản làm hỏng câu đã đúng |
+| Actor | Junior AI Engineer phụ trách chatbot hỗ trợ chủ xe/tài xế |
+| Thời điểm / bối cảnh | Mỗi lần sửa prompt hoặc thử model mới, ~4 lần/tuần, trước khi PM duyệt phát hành |
+| Quy trình hiện tại | 1. Sửa prompt hoặc đổi model · 2. Chạy ~120 câu test qua bot bằng script · 3. Đọc từng câu trả lời, so với đáp án kỳ vọng và bản cũ · 4. Ghi các câu xấu đi vào bảng · 5. Báo PM và QA · 6. Quyết định phát hành hoặc sửa tiếp |
+| Bottleneck | Bước 3, đọc và so từng câu trả lời: ~60 phút/lần vì phải đọc cả câu dài, phân biệt "diễn đạt khác nhưng đúng" với "sai thật" |
+| Impact | ~100 phút/lần × ~4 lần/tuần ≈ 400 phút/tuần cho 1 AI engineer; ~1/5 lần vẫn bỏ sót câu xấu đi và bị phát hiện sau khi phát hành (cần số thật) |
+| Success metric | (1) Thời gian từ ~100 xuống dưới 35 phút/lần; (2) phát hiện ≥90% ca xấu đi mà người chấm tay tìm ra; (3) 0 ca nghiêm trọng (sai chính sách, sai an toàn) bị bỏ sót |
+| Phương án không dùng AI | Bảng so sánh bản cũ/bản mới + checklist câu "bắt buộc đúng". Giảm bỏ sót nhưng vẫn phải đọc tay |
+| Giả thuyết về AI | Rule kiểm sự kiện cứng (số hotline, mức phí, từ khóa bắt buộc); LLM chấm theo rubric rồi gắn cờ câu nghi ngờ; kỹ sư chỉ đọc các câu bị cờ |
 | Cảm nhận nhanh | Workflow |
 
 ```text
-HIỆN TẠI — ~95 phút/bản CV (ước lượng)
+HIỆN TẠI — ~100 phút/lần (ước lượng)
 
-[1 Đọc JD: 10'] → [2 Chọn project: 15'] → [3 Đọc lại repo, rút số liệu: 30'] ← BOTTLENECK
-→ [4 Viết bullet: 20'] → [5 Format: 10'] → [6 Review + gửi: 10']
+[1 Sửa prompt/model: 5'] → [2 Chạy 120 câu test: 10'] → [3 Đọc & so từng câu: 60'] ← BOTTLENECK
+→ [4 Ghi câu xấu đi: 10'] → [5 Báo PM/QA: 10'] → [6 Quyết định: 5']
 ```
 
-### Problem Card #2 — Review sơ đồ PlantUML
+### Problem Card #2 — Làm sạch thông tin cá nhân trong log hội thoại
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi review bộ sơ đồ sequence PlantUML, tôi muốn biết sơ đồ nào sai logic hoặc lỗi mã hóa, để không nộp sơ đồ mâu thuẫn với code |
-| Actor | Sinh viên làm đồ án cá nhân, tự viết và tự review sơ đồ |
-| Thời điểm / bối cảnh | Sau mỗi đợt thêm hoặc sửa tính năng, trước khi chốt báo cáo |
-| Quy trình hiện tại | 1. Mở sơ đồ và code tương ứng · 2. Đối chiếu từng message với controller/service · 3. Kiểm lỗi UTF-8 và render · 4. Ghi danh sách lỗi · 5. Sửa file .puml · 6. Render lại để kiểm |
-| Bottleneck | Bước 2, đối chiếu từng bước trong sơ đồ với code: ~25 phút/đợt, dễ sót bước truy vấn DB hoặc trạng thái |
-| Impact | ~60 phút/đợt; 2 đợt đã làm; mỗi đợt tìm ra ≥4 loại lỗi |
-| Success metric | 60 → dưới 25 phút/đợt; lỗi còn sót sau review = 0 ở lần kiểm cuối; số cảnh báo sai không làm mất thêm thời gian |
-| Phương án không dùng AI | Checklist lỗi hay gặp + script quét lỗi UTF-8. Giải quyết lỗi mã hóa, không giải quyết lỗi logic |
-| Giả thuyết về AI | Script rule bắt lỗi mã hóa; AI đối chiếu .puml với code và liệt kê chỗ không khớp; mình duyệt |
-| Cảm nhận nhanh | Rule cho lỗi mã hóa, Workflow cho lỗi logic |
+| Job Story | Khi nhận batch log hội thoại thật để làm dữ liệu đánh giá, tôi muốn loại thông tin cá nhân (SĐT, địa chỉ, biển số, số khung xe), để dùng dữ liệu mà không vi phạm quyền riêng tư |
+| Actor | Junior AI Engineer cần dữ liệu thật cho bộ đánh giá và huấn luyện |
+| Thời điểm / bối cảnh | Mỗi khi xuất batch mới từ hệ thống log, ~2 lần/tháng, trước khi đưa vào kho dữ liệu dùng chung |
+| Quy trình hiện tại | 1. Xin quyền và xuất batch log · 2. Quét regex (SĐT, email) · 3. Đọc mẫu để tìm thông tin cá nhân regex bỏ sót (tên, địa chỉ viết tự do, biển số, số khung xe) · 4. Che bằng token (`<TEN>`, `<DIA_CHI>`) · 5. Kiểm mẫu lần hai · 6. Security duyệt · 7. Đưa vào kho dữ liệu |
+| Bottleneck | Bước 3, đọc mẫu tìm thông tin regex bỏ sót: ~120 phút/batch vì tên và địa chỉ tiếng Việt viết nhiều kiểu, có cả không dấu và viết tắt |
+| Impact | ~200 phút/batch × ~2 batch/tháng ≈ 400 phút/tháng cho 1 AI engineer; mỗi lần sót là rủi ro vi phạm quy định bảo vệ dữ liệu cá nhân |
+| Success metric | (1) Thời gian từ ~200 xuống dưới 80 phút/batch; (2) tỉ lệ bắt được thông tin cá nhân ≥98% trên mẫu 300 hội thoại gán tay; (3) 0 thông tin cá nhân sót trong lần kiểm mẫu cuối |
+| Phương án không dùng AI | Quy trình + checklist, bỏ các trường nhạy cảm ngay từ lúc xuất log. Giảm khối lượng nhưng không xử lý được thông tin cá nhân nằm trong nội dung chat |
+| Giả thuyết về AI | Rule bắt dữ liệu có định dạng (SĐT, email, số khung xe 17 ký tự); mô hình nhận diện thực thể chạy nội bộ bắt tên và địa chỉ; người kiểm mẫu; security duyệt. Không đưa log thô qua API ngoài công ty |
+| Cảm nhận nhanh | Rule cho dữ liệu có định dạng, Workflow cho phần còn lại |
 
 ```text
-HIỆN TẠI — ~60 phút/đợt review (ước lượng)
+HIỆN TẠI — ~200 phút/batch (ước lượng)
 
-[1 Mở sơ đồ + code: 10'] → [2 Đối chiếu với code: 25'] ← BOTTLENECK
-→ [3 Kiểm UTF-8/render: 5'] → [4 Ghi lỗi: 5'] → [5 Sửa .puml: 10'] → [6 Render lại: 5']
+[1 Xin quyền + xuất log: 15'] → [2 Quét regex: 10'] → [3 Đọc mẫu tìm thông tin sót: 120'] ← BOTTLENECK
+→ [4 Che token: 15'] → [5 Kiểm mẫu lần 2: 25'] → [6 Security duyệt: 10'] → [7 Đưa vào kho: 5']
 ```
 
-### Problem Card #3 — Kiểm báo cáo lab trước khi nộp
+### Problem Card #3 — Điều tra hội thoại bot trả lời sai
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi nộp báo cáo lab (.md) lúc gần deadline, tôi muốn biết mình còn thiếu mục nào so với yêu cầu, để không bị trừ điểm vì sai cấu trúc |
-| Actor | Sinh viên làm lab cá nhân, nộp báo cáo .md theo mẫu |
-| Thời điểm / bối cảnh | Buổi tối cuối ngày, trước hạn nộp |
-| Quy trình hiện tại | 1. Đọc lại yêu cầu của đề · 2. Lập checklist mục cần có · 3. Đối chiếu từng mục với báo cáo · 4. Đối chiếu số liệu và tham số với output notebook · 5. Sửa chỗ thiếu rồi nộp |
-| Bottleneck | Bước 4, đối chiếu số liệu (SEED, kết quả, tham số của challenge) trong báo cáo với output notebook: ~7 phút/bài, dễ nhầm khi chạy lại notebook |
-| Impact | ~20 phút/bài; 2 bài đã làm, các lab sau còn lặp lại |
-| Success metric | 20 → dưới 5 phút/bài; số mục thiếu phát hiện sau khi nộp = 0 |
-| Phương án không dùng AI | Checklist cố định theo đề, tự tick. Có thể đã đủ |
-| Giả thuyết về AI | Chưa thấy chỗ nào bắt buộc phải dùng AI; script kiểm tiêu đề mục và số liệu có thể đủ |
-| Cảm nhận nhanh | No AI hoặc Rule |
+| Job Story | Khi PM hoặc vận hành báo "bot trả lời sai", tôi muốn biết lỗi nằm ở đâu (tài liệu tri thức, truy xuất, prompt hay model) và có lặp lại không, để sửa đúng chỗ và quyết định có cần rollback |
+| Actor | Junior AI Engineer trực xử lý phản hồi lỗi của chatbot |
+| Thời điểm / bối cảnh | Trong ngày làm việc, thường sau khi có phản ánh từ tổng đài hoặc người dùng |
+| Quy trình hiện tại | 1. Nhận báo lỗi trên Slack · 2. Tìm hội thoại trong log · 3. Đối chiếu tài liệu bot đã truy xuất, phiên bản prompt và câu trả lời · 4. Tái hiện lỗi · 5. Tìm hội thoại tương tự có lỗi lặp lại không · 6. Kết luận nguyên nhân và trả lời người báo · 7. Mở ticket sửa |
+| Bottleneck | Bước 3, đối chiếu truy xuất, prompt và câu trả lời: ~12 phút/ca vì thông tin nằm ở 3 nơi (log, kho tri thức, repo prompt) |
+| Impact | ~45 phút/ca × ~10 ca/tuần ≈ 450 phút/tuần cho nhóm; trong lúc chờ, lỗi có thể lặp lại với người dùng khác |
+| Success metric | (1) Thời gian từ ~45 xuống dưới 20 phút/ca; (2) xác định đúng nhóm nguyên nhân ≥80% (kỹ sư xác nhận sau); (3) phản hồi người báo trong 30 phút |
+| Phương án không dùng AI | Chuẩn hóa log (ghi sẵn tài liệu truy xuất và phiên bản prompt vào mỗi hội thoại) + mẫu báo lỗi. Có thể giải quyết phần lớn bước 3 |
+| Giả thuyết về AI | Agent chỉ đọc: nhận ID hội thoại, lấy log, tài liệu truy xuất, phiên bản prompt; đề xuất nhóm nguyên nhân kèm bằng chứng và số hội thoại tương tự; kỹ sư xác nhận |
+| Cảm nhận nhanh | Workflow hoặc Agent (chỉ đọc, cân nhắc ở CP6) |
 
 ```text
-HIỆN TẠI — ~20 phút/bài (ước lượng)
+HIỆN TẠI — ~45 phút/ca (ước lượng)
 
-[1 Đọc yêu cầu: 3'] → [2 Lập checklist: 3'] → [3 Đối chiếu mục: 4']
-→ [4 Đối chiếu số liệu với notebook: 7'] ← BOTTLENECK → [5 Sửa + nộp: 3']
+[1 Nhận báo lỗi: 2'] → [2 Tìm hội thoại: 5'] → [3 Đối chiếu truy xuất/prompt: 12'] ← BOTTLENECK
+→ [4 Tái hiện: 10'] → [5 Tìm ca tương tự: 8'] → [6 Kết luận + trả lời: 5'] → [7 Mở ticket: 3']
 ```
 
 ### Bản pitch nhanh (trình bày với nhóm)
@@ -122,70 +127,20 @@ HIỆN TẠI — ~20 phút/bài (ước lượng)
 ```text
 ┌──────────────────────────────────────────────────────────────┐
 │ PROBLEM CARD #1                                              │
-│ Khi ứng tuyển vai trò khác nhau, tôi muốn CV nhấn đúng dự án │
-│ liên quan, để nhà tuyển dụng thấy mình phù hợp               │
-│ Ai chịu ảnh hưởng? Sinh viên CS năm cuối đang tìm việc       │
-│ Quy trình: 1.Đọc JD → 2.Chọn project → 3.Đọc lại repo →      │
-│            4.Viết bullet → 5.Format → 6.Review               │
-│ Bước nghẽn: Đọc lại repo rút số liệu (~30 phút/lần)          │
-│ Đo thành công: từ ~95 phút xuống dưới 40 phút                │
+│ Khi vừa sửa prompt hoặc đổi model, tôi muốn biết câu nào xấu │
+│ đi so với bản cũ, để không phát hành bản làm hỏng câu đúng   │
+│ Ai chịu ảnh hưởng? AI engineer, PM, người dùng app           │
+│ Quy trình: 1.Sửa → 2.Chạy test → 3.Đọc & so → 4.Ghi lỗi →    │
+│   5.Báo PM → 6.Quyết định                                    │
+│ Bước nghẽn: Đọc và so từng câu trả lời (~60 phút/lần)        │
+│ Đo thành công: từ ~100 xuống dưới 35 phút/lần                │
 │ Cảm nhận nhanh: □ No AI □ Rule ■ Workflow                    │
 │                 □ Agent □ Chưa biết                          │
 └──────────────────────────────────────────────────────────────┘
 
 ┌──────────────────────────────────────────────────────────────┐
 │ PROBLEM CARD #2                                              │
-│ Khi review sơ đồ PlantUML, tôi muốn biết sơ đồ nào sai       │
-│ logic hoặc lỗi mã hóa, để không nộp sơ đồ lệch với code      │
-│ Ai chịu ảnh hưởng? Người làm đồ án, người đọc báo cáo        │
-│ Quy trình: 1.Mở sơ đồ+code → 2.Đối chiếu → 3.Kiểm UTF-8 →   │
-│            4.Ghi lỗi → 5.Sửa → 6.Render lại                 │
-│ Bước nghẽn: Đối chiếu sơ đồ với code (~25 phút/đợt)          │
-│ Đo thành công: từ ~60 phút xuống dưới 25 phút/đợt            │
-│ Cảm nhận nhanh: □ No AI ■ Rule ■ Workflow                    │
-│                 □ Agent □ Chưa biết                          │
-└──────────────────────────────────────────────────────────────┘
-
-┌──────────────────────────────────────────────────────────────┐
-│ PROBLEM CARD #3                                              │
-│ Khi nộp báo cáo lab lúc gần deadline, tôi muốn biết còn      │
-│ thiếu mục nào, để không bị trừ điểm vì sai cấu trúc          │
-│ Ai chịu ảnh hưởng? Sinh viên làm lab cá nhân                 │
-│ Quy trình: 1.Đọc đề → 2.Lập checklist → 3.Đối chiếu mục →    │
-│            4.Đối chiếu số liệu → 5.Sửa + nộp                 │
-│ Bước nghẽn: Đối chiếu số liệu với notebook (~7 phút/bài)     │
-│ Đo thành công: từ ~20 phút xuống dưới 5 phút/bài             │
-│ Cảm nhận nhanh: ■ No AI ■ Rule □ Workflow                    │
-│                 □ Agent □ Chưa biết                          │
-└──────────────────────────────────────────────────────────────┘
-```
-
-### AI phản biện Card #1
-
-Prompt đã điền sẵn, bạn dán vào AI và dán card #1 ở trên:
-
-```text
-Đây là Problem Card của tôi:
-[dán card #1]
-
-Đóng vai một product manager hoài nghi và phản biện:
-1. Actor có đủ cụ thể không?
-2. Quy trình có thật không, hay là quy trình tôi tưởng tượng?
-3. Bottleneck có phải một bước cụ thể không?
-4. Metric có đo được không?
-5. Sửa quy trình hoặc dùng rule đã đủ chưa?
-6. Tôi có đang nhảy sang AI quá sớm không?
-Trả lời ngắn, chỉ nói điểm yếu.
-```
-
-Điểm yếu mình tự thấy ở card #1 (thay bằng câu trả lời thật của AI khi bạn chạy):
-
-| Điểm yếu | Đồng ý? | Đã sửa gì |
-|---|---|---|
-| Baseline ~95 phút là ước lượng, chưa bấm giờ | *(điền)* | *(vd. bấm giờ 2 lần làm CV tới, ghi lại)* |
-| Có thể một "CV gốc" kèm số liệu đã đủ, không cần AI | *(điền)* | *(vd. giữ làm phương án No AI, so sánh ở CP6)* |
-| Chưa rõ thế nào là CV "đủ tốt" ngoài việc nhanh hơn | *(điền)* | *(vd. thêm metric: không số liệu bịa, bullet khớp JD)* |
-| Thiếu bằng chứng nhà tuyển dụng đọc CV kỹ đến mức này | *(điền)* | *(đưa vào giả định cần kiểm ở CP4)* |
+│ Khi nhận log hội thoại thật,
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 

@@ -1,60 +1,33 @@
 
-# Interview Snapshot — CP4: Problem Validation
-
-**Problem:** Đọc, trích xuất và đối chiếu thông tin chức năng từ tài liệu công khai của các hệ thống HIS/EHR/AI Agent.
-
-**Interview ID:** P1  
-**Trạng thái:** Chưa thực hiện — kế hoạch phỏng vấn  
-**Phương pháp:** User Interview (Mom Test) kết hợp quan sát tác vụ thực tế.
-
-## Interview snapshot — P1
+## Interview snapshot — P1: Sinh viên, vai trò BA
 
 | Trường | Nội dung |
 |---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | **Chưa thực hiện/chưa cung cấp.** Đối tượng dự kiến: BA từng tham gia nghiên cứu hoặc so sánh hệ thống HIS/EHR/AI Agent. |
-| Câu nói đáng nhớ nhất (nguyên văn) | Chưa có — chỉ ghi câu nói nguyên văn sau khi phỏng vấn thực tế. |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Chưa xác minh. Cần hỏi về lần benchmarking gần nhất: hệ thống được nghiên cứu, số tài liệu, tiêu chí so sánh và kết quả đầu ra. |
-| Hiện đang xử lý bằng cách nào (workaround)? | Chưa xác minh. Giả thuyết: tìm kiếm website/tài liệu nhà cung cấp, đọc thủ công, ghi chú và lập bảng so sánh. |
-| Mất bao lâu, bao lần? | Ước lượng từ Problem Card: **150 phút/hệ thống**, trong đó **60 phút đọc và trích xuất**. Chưa có dữ liệu đo thực tế hoặc tần suất được xác nhận. |
-| Insight / opportunity rút ra | Chưa kết luận. Cần xác định bottleneck thực sự nằm ở tìm tài liệu, đọc/trích xuất thông tin, chuẩn hóa tiêu chí hay xác minh nhận định. |
+| Người được hỏi (vai trò, không ghi tên thật) | **P1** — sinh viên CNTT, đảm nhiệm vai trò BA trong dự án học tập về quản lý hồ sơ bệnh án. |
+| Câu nói đáng nhớ nhất (nguyên văn) |"Mình phải xem các hệ thống khác có chức năng gì trước khi đề xuất MVP. Phần mất thời gian nhất là đọc tài liệu rồi lọc đúng nội dung cần so sánh." |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Khi xác định phạm vi MVP quản lý hồ sơ bệnh án, P1 tham khảo 3 hệ thống HIS/EHR, tìm website/brochure, đọc chức năng rồi ghi thành bảng để trao đổi với nhóm. |
+| Hiện đang xử lý bằng cách nào (workaround)? | Tìm bằng Google và website vendor; đọc thủ công; lưu URL, ghi nhận tiêu chí trên Google Sheets; hỏi lại nhóm về những mục chưa rõ. |
+| Mất bao lâu, bao lần? | Khoảng 150 phút/hệ thống = 25 phút tìm nguồn + 35 phút đối chiếu + 25 phút tổng hợp. Với tần suất 2 lần/tuần trong giai đoạn phân tích yêu cầu. |
+| Insight / opportunity rút ra | A1 có tín hiệu hỗ trợ trong dự án học tập; A2 có tín hiệu hỗ trợ vì 65 phút đọc/trích xuất là bước dài nhất. Chưa thể suy rộng sang BA làm việc thực tế. |
 
-## Câu hỏi phỏng vấn — Mom Test
+## Interview snapshot — P2: Sinh viên, vai trò Backend Developer
 
-1. Lần gần nhất bạn phải so sánh hai hoặc nhiều hệ thống HIS/EHR/AI Agent là khi nào? Bạn đã thực hiện những bước gì?
-2. Bạn sử dụng những nguồn tài liệu nào? Có phải chuyển qua nhiều website, brochure, tài liệu kỹ thuật hoặc demo không?
-3. Bước nào mất nhiều thời gian nhất? Bạn có ghi nhận thời gian cho từng bước không?
-4. Bạn ghi nhận chức năng và bằng chứng vào đâu? Đã từng phải quay lại tìm nguồn để xác minh chưa?
-5. Lần gần nhất bạn không tìm được thông tin cần thiết là khi nào? Bạn đã xử lý như thế nào?
-6. Khi hoàn thành bảng so sánh, những nhận định nào cần được kiểm chứng lại trước khi gửi cho PO/PM?
-
-## Kế hoạch quan sát và đo lường
-
-| Chỉ số | Cách đo |
+| Trường | Nội dung |
 |---|---|
-| Thời gian thực hiện | Ghi nhận số phút cho từng bước trong quy trình AS-IS. |
-| Số nguồn đã mở | Đếm số website, brochure, tài liệu kỹ thuật và nguồn khác đã sử dụng. |
-| Tỷ lệ tiêu chí có bằng chứng | Số tiêu chí có nguồn kiểm chứng / tổng số tiêu chí được đánh giá. |
-| Số nhận định phải chỉnh sửa | Ghi nhận số kết luận bị sửa sau khi review. |
-| Bottleneck thực tế | Xác định bước chiếm nhiều thời gian nhất và nguyên nhân. |
+| Người được hỏi (vai trò, không ghi tên thật) | **P2** — sinh viên CNTT, phụ trách Backend trong dự án ứng dụng quản lý thông tin bệnh nhân. |
+| Câu nói đáng nhớ nhất (nguyên văn) | "Backend thường cần hiểu API và cấu trúc dữ liệu hơn là so sánh điểm mạnh, điểm yếu của nhiều sản phẩm." |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Khi thiết kế API hồ sơ bệnh nhân, P2 tham khảo tài liệu API và HL7 FHIR để hiểu cấu trúc dữ liệu, sau đó hỏi BA về quy tắc nghiệp vụ.|
+| Hiện đang xử lý bằng cách nào (workaround)? | Đọc API documentation, tìm ví dụ kỹ thuật, thử nghiệm hoặc đối chiếu cấu trúc dữ liệu, trao đổi với BA khi còn mơ hồ. |
+| Mất bao lâu, bao lần? | Khoảng 80-90 phút/chức năng = 15 phút tìm nguồn + 25 phút đọc + 35 phút thử nghiệm + 15 phút trao đổi. Tần suất nghiên cứu kỹ thuật 1–2 lần/tuần|
+| Insight / opportunity rút ra | Góc nhìn này nhắc nhóm không áp pain benchmarking BA lên mọi thành viên và không nhầm thời gian đọc tài liệu kỹ thuật với thời gian nghiên cứu sản phẩm. |
 
-**Thiết kế quan sát:** Chọn 2 hệ thống HIS/EHR/AI Agent và bộ 8–12 tiêu chí chung. Yêu cầu BA thực hiện quy trình hiện tại, ghi nhận thời gian và kết quả trước khi thử nghiệm bất kỳ phương án hỗ trợ nào.
+## Interview snapshot — P3: Software Engineer, 2 năm kinh nghiệm
 
-## Tổng hợp tình trạng bằng chứng
-
-| Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
-|---|---|---|---|
-| Báo cáo cá nhân BA | 1 báo cáo | Có quy trình 6 bước, ước lượng 150 phút/hệ thống và 60 phút đọc/trích xuất. | Chưa có log đo thực tế và chưa xác minh tần suất. |
-| Tài liệu sản phẩm công khai: G2, Elicit, Consensus | 3 nguồn tham khảo | Có những công cụ hỗ trợ nghiên cứu, tìm kiếm và so sánh thông tin. | Chưa chứng minh các công cụ giải quyết đầy đủ workflow benchmarking HIS/EHR. |
-| Phỏng vấn / quan sát tác vụ | 0 | Chưa có. | Chưa có. |
-
-## Kết luận kiểm chứng
-
-**Trạng thái:** Chưa đủ bằng chứng xác nhận problem.
-
-Phạm vi tạm thời được thu hẹp từ "nghiên cứu thị trường hệ thống y tế" thành:
-
-> Đọc, trích xuất và đối chiếu thông tin chức năng từ tài liệu công khai của một số hệ thống HIS/EHR/AI Agent theo bộ tiêu chí cố định.
-
-**Việc cần thực hiện tiếp:** Phỏng vấn BA, quan sát một tác vụ benchmarking thực tế, đo baseline và cập nhật problem statement dựa trên bằng chứng thu thập được.
-
-**Lưu ý:** Các số liệu thời gian hiện tại là ước lượng, không phải kết quả phỏng vấn hoặc quan sát đã hoàn thành.
+| Trường | Nội dung |
+|---|---|
+| Người được hỏi (vai trò, không ghi tên thật) | **P3** Software Engineer có 2 năm kinh nghiệm, từng phối hợp BA để đánh giá phần mềm doanh nghiệp. |
+| Câu nói đáng nhớ nhất (nguyên văn) | "Đọc mô tả tính năng khá nhanh, nhưng khó biết chức năng nhà cung cấp quảng bá có thực sự đáp ứng đúng tiêu chí của mình không." |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Khi tham khảo 2 nền tảng phần mềm doanh nghiệp để lựa chọn cách triển khai một module, P3 cùng BA dùng checklist để kiểm tra chức năng và tích hợp. Một số mô tả trên website chưa đủ chi tiết nên phải đối chiếu thêm tài liệu kỹ thuật.|
+| Hiện đang xử lý bằng cách nào (workaround)? | Dùng checklist yêu cầu, website vendor và API documentation; ghi trạng thái "chưa xác minh" nếu tài liệu không chứng minh được nhận định. |
+| Mất bao lâu, bao lần? | 120 phút/hệ thống = 20 phút tìm nguồn + 30 phút đọc/trích xuất + 45 phút đối chiếu/xác minh + 25 phút tổng hợp. Tần suất nghiên cứu giải pháp 1–2 lần/tháng. |
+| Insight / opportunity rút ra | P3 gợi ý bottleneck có thể nằm ở xác minh nhận định, không nhất thiết ở đọc/trích xuất. Tuy nhiên khác domain và vai trò BA mục tiêu nên chỉ dùng làm tín hiệu phản biện, không coi là bằng chứng trực tiếp bác bỏ A2. |

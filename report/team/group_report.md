@@ -7,7 +7,7 @@
 
 - Tên nhóm:
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
+- Candidate problem được chọn (1 câu): Tìm lại câu trả lời cũ của coach trong Discord
 - Quyết định cuối: Go / Not Yet / No-Go
 
 ---
@@ -16,59 +16,64 @@
 
 ### 2.1. Pitch
 
-| # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
-|---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+|   # | Người đưa ra      | Candidate (Job Story ngắn)                                                                                                                                                                                                                                        | Actor                                      | Bottleneck                                                                                                                                                                                                                        | Câu hỏi phản biện nhận được (ai hỏi)                                                                                                                           |
+| --: | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   1 | Minh Đức          | Khi viết báo cáo tuần tôi muốn tổng hợp các kết quả số liệu theo đúng format để mang trình bày, báo cáo kịp giờ và dễ đọc                                                                                                                                         | Sinh viên làm đồ án, thành viên phát triển | Viết ngắn gọn ~ 30 phút<br/>Vẽ sơ đồ ~ 30 phút<br/>Review và format ~ 30 phút                                                                                                                                                     |                                                                                                                                                                |
+|   2 | Minh Đức          | Khi tham gia họp online, tôi muốn một danh sách các ý chính, công việc để tham khảo lại                                                                                                                                                                           | Thành viên trong nhóm, Team Lead, Thư ký   | Tổng hợp theo tài liệu, theo dõi và ghi lại, thường mất 30 phút để thống nhất lại                                                                                                                                                 |                                                                                                                                                                |
+|   3 | Minh Đức          | Khi trước và sau các buổi học, tôi muốn tự động gom tất cả slide bài giảng, bài tập và tài liệu tham khảo từ các kênh rải rác về một thư mục duy nhất trên máy, để tiết kiệm thời gian tra cứu và không bị bỏ sót tài liệu được cập nhật.                         | Sinh viên                                  | Truy cập vào mỗi trang và tải tài liệu mất 10-15 phút, mất 10-15 phút để sắp xếp và đặt tên                                                                                                                                       |                                                                                                                                                                |
+|   4 | Quý Anh           | Khi chuẩn bị nộp báo cáo dự án/bài lab, tôi muốn biết bài còn thiếu mục nào so với yêu cầu, để không bị trừ điểm vì thiếu nội dung                                                                                                                                | Học viên                                   | Bước đối chiếu từng mục với yêu cầu nằm rải ở nhiều file (~30 phút/lần, 2 lần/tuần)                                                                                                                                               |                                                                                                                                                                |
+|   5 | Quý Anh           | Khi gặp lại lỗi hệ thống đã từng được hỏi, tôi muốn tìm lại câu trả lời của coach, để không phải hỏi lại                                                                                                                                                          | Học viên                                   | Bước mở từng thread Discord để đọc (~15 phút/lần, 2 lần/tuần)                                                                                                                                                                     |                                                                                                                                                                |
+|   6 | Quý Anh           | Khi tới buổi họp nhóm hằng tuần, tôi muốn nhớ lại lần trước đã chốt gì, để bắt đầu làm tiếp ngay                                                                                                                                                                  | Nhóm học viên làm dự án chung              | Bước lục tin nhắn và hỏi qua lại (~20 phút/buổi, 1 buổi/tuần)                                                                                                                                                                     |                                                                                                                                                                |
+|   7 | Việt Anh          | Khi ca sáng mở ra 35 hồ sơ mới, tôi muốn biết hồ sơ nào vượt hạn mức và cái khoản nào không khớp điều khoản bảo hiểm, để quyết định duyệt hay từ chối mà không trả nhầm tiền khách hàng                                                                           | nhân viên giám sát hồ sơ bồi thường        | Bước 3 trong quy trình 5 bước — đối chiếu từng khoản với hạn mức và điều khoản: 3 phút/hồ sơ. Tức ~105 phút/ngày, ~39 giờ/tháng/người. Đây là bước duy nhất quyết định tiền thật cho khách — sai ở đây thì công ty trả nhầm tiền. |                                                                                                                                                                |
+|   8 | Việt Anh          | Khi đã đối chiếu xong, tôi muốn hệ thống tự điền số tiền bồi thường, hạn mức còn lại và ngày trả tiền, để không phải chép tay rồi tự tính lại một lần nữa.                                                                                                        | nhân viên giám sát hồ sơ bồi thường        | Bước 3, chép số vào form, mất 1 phút mỗi hồ sơ (35 phút/ngày). Bước này ít thời gian nhất nhưng rủi ro nặng nhất, vì dễ nhập sai và lỗi chỉ lộ ra sau khi đã trả tiền cho khách.                                                  |                                                                                                                                                                |
+|   9 | Việt Anh          | Khi khách gọi hỏi hồ sơ của họ đang ở bước nào, tôi muốn bộ phận CSBH tra được ngay trạng thái và mốc trả tiền, để khách không phải chờ rồi gọi lại lần hai                                                                                                       | Nhân viên chăm sóc và hỗ trợ khách hàng    | Bước 2, tra cứu trong Claims Core, mất 3 phút mỗi cuộc gọi (tìm mã hồ sơ rồi mở từng mục lịch sử). 25 cuộc gọi/ngày × 8 phút, tức 3 giờ/ngày, 66 giờ/tháng.                                                                       |                                                                                                                                                                |
+|  10 | Nguyễn Thanh Tùng | Khi khởi tạo một dự án hoặc tính năng mới trên Jira, tôi muốn tự động sinh ra sẵn bộ sub-task chuẩn, để không phải tạo thủ công từng task cho mỗi đầu việc lặp lại hằng tuần.                                                                                     | PM                                         | Tạo thủ công hàng loạt sub-task (15-20 phút/lần)                                                                                                                                                                                  | Bài toán hoàn toàn giải được bằng Jira Automation có sẵn; quy trình đề xuất bị gượng ép và đo lường "về 0 phút" là vô lý vì PM vẫn phải rà soát, gán người.    |
+|  11 | Nguyễn Thanh Tùng | Khi cần làm báo cáo tiến độ dự án hằng tuần cho CEO, tôi muốn các biểu đồ tiến độ từ Power BI và số liệu task từ Jira được gom chung vào một khung nhìn thống nhất, để không phải mở luân phiên nhiều tab, chụp màn hình và căn chỉnh lại slide Excel/PowerPoint. | PM                                         | Tổng hợp và formatting thủ công (45 phút/lần)                                                                                                                                                                                     | Đây thuần túy là sự cố tích hợp dữ liệu và thiết kế dashboard kém; chỉ cần nhúng connector/embed link là xong chứ không cần quy trình phức tạp hay AI.         |
+|  12 | Nguyễn Thanh Tùng | Khi các bạn Dev chuẩn bị bắt đầu sprint mới, tôi muốn các ticket được giao có sẵn phần mô tả tiêu chí nghiệm thu rõ ràng từ BA/PO, chuẩn chỉnh, để họ không phải liên tục ping PM hỏi lại yêu cầu làm gián đoạn tập trung.                                        | Dev, PM, BA/PO                             | Làm rõ yêu cầu chưa chuẩn chỉnh (3-5 lần hỏi/sprint)                                                                                                                                                                              | Gốc rễ nằm ở chất lượng đầu vào của PRD sơ sài; đặt mục tiêu "0 lần hỏi" là không thực tế và nếu PM dùng AI thả context ẩu sẽ khiến AI tự "chế" sai nghiệp vụ. |
+|  13 | Giang Thái Sơn    | Khi mới vào công ty, tôi muốn nắm rõ quy trình onboarding và môi trường làm việc để sớm bắt đầu công việc được giao.                                                                                                                                              | Fresher AI                                 | Tài liệu onboarding phân tán, phải hỏi mentor nhiều lần.                                                                                                                                                                          |                                                                                                                                                                |
+|  14 | Giang Thái Sơn    | Khi tiếp nhận dự án mới, tôi muốn hiểu kiến trúc hệ thống và các công nghệ đang sử dụng để có thể tự thực hiện task.                                                                                                                                              | Fresher AI                                 | Phải đọc nhiều tài liệu và mã nguồn, khó xác định kiến thức cần ưu tiên                                                                                                                                                           |                                                                                                                                                                |
+|  15 | Giang Thái Sơn    | Khi gặp vấn đề kỹ thuật chưa biết cách xử lý, tôi muốn tìm được kiến thức và hướng dẫn phù hợp để tự giải quyết trước khi nhờ mentor.                                                                                                                             | Fresher AI                                 | Khó tìm đúng tài liệu, mất thời gian thử nhiều hướng xử lý.                                                                                                                                                                       |                                                                                                                                                                |
 
 ### 2.2. Cluster
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A - Báo cáo / tổng hợp | #1, #2, #11 | Tổng hợp dữ liệu/số liệu từ nhiều nguồn để làm báo cáo định kỳ hoặc chốt ý chính, mất nhiều thời gian format và xử lý thủ công. |
+| B - Tìm kiếm | #3, #5, #13, #14, #15 | Khó khăn trong việc tìm kiếm, gom nhóm tài liệu rải rác, tìm lại lỗi/câu trả lời cũ, tra cứu kiến thức kỹ thuật và tài liệu onboarding phân tán. |
+| C - Review | #4, #7, #8, #12 | Rà soát, đối chiếu thông tin với quy định/chuẩn mực để đảm bảo chính xác và không bỏ sót lỗi. |
+| D - Theo dõi việc | #6, #9, #10 | Theo dõi trạng thái công việc, tiến độ xử lý hồ sơ, lịch sử cuộc gọi hoặc tự động thiết lập cấu trúc công việc, ghi nhớ các nội dung đã chốt từ các buổi họp trước. |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian học viên tìm kiếm và xử lý lỗi hệ thống, hạn chế việc phải hỏi lại coach
+├── Opportunity A: Lịch sử câu hỏi và hướng dẫn sửa lỗi nằm rải rác trên các thread Discord, khó tìm từ khóa chính xác 
+├── Opportunity B: Mất nhiều thời gian đọc dọc các thread dài để chọn ra đúng hướng dẫn phù hợp 
+└── Opportunity C: Học viên không chắc chắn hướng dẫn cũ có áp dụng được cho phiên bản lỗi hiện tại hay không 
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- X "Vector DB / Bot hỏi đáp nội bộ" ← solution, gạch khỏi tầng này
+- X "AI tóm tắt lịch sử thread Discord" ← solution, gạch khỏi tầng này
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| Tìm lại câu trả lời cũ của coach trong Discord | 4 | 4 | 3 | 3 | 5 | 5 | 5 | 29 |
+| Gom Power BI và Jira vào một khung nhìn báo cáo tiến độ | 4 | 5 | 4 | 4 | 4 | 3 | 3 | 27 |
+| Nắm quy trình onboarding khi mới vào công ty | 4 | 3 | 2 | 2 | 4 | 3 | 4 | 23 |
 
-**Candidate được chọn:**
+**Candidate được chọn:** Tìm lại câu trả lời cũ của coach trong Discord
 
-**Vì sao chọn:**
+**Vì sao chọn:** Bài này còn câu hỏi thật để kiểm chứng và ai cũng đã từng hỏi lại coach.
 
-**Vì sao loại các candidate còn lại:**
+**Vì sao loại các candidate còn lại:** Gom Power BI và Jira vào một khung nhìn có lời giải đã rõ là chỉ cần nhúng connector, không còn câu hỏi để nghiên cứu, và nhóm không dùng Power BI hằng ngày nên khó kiểm chứng. Nắm quy trình onboarding có actor rõ nhưng chưa vẽ được quy trình, chưa có số lần hỏi mentor, và onboarding chỉ xảy ra một lần nên khó đo tác động.
 
-**Xử lý bất đồng (nếu có):**
+**Xử lý bất đồng (nếu có):** có bên cho rằng "Gom Power BI và Jira" có impact lớn hơn, không nên loại chỉ vì lời giải dễ thấy. Nhóm chốt giữ "Tìm lại câu trả lời cũ của coach" vì bài này còn câu hỏi thật để kiểm chứng và ai cũng đã từng hỏi lại coach; ghi hai candidate kia vào mục hướng tiếp theo.
 
 ---
 

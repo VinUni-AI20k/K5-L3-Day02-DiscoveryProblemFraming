@@ -59,13 +59,13 @@ Mỗi dòng cần ít nhất một con số: mất bao lâu, mấy lần/tuần,
 
 ### Ngân hàng gợi ý (chỉ đọc khi bí, viết lại theo trải nghiệm của bạn)
 
-| Bối cảnh | Gợi ý |
-|---|---|
-| Học tập | Tìm lại câu trả lời cũ trong Discord; đọc tài liệu dài trước deadline; không biết bài nộp thiếu mục nào; ôn tập từ nhiều nguồn rời rạc |
-| Đời sống | Theo dõi chi tiêu ở nhiều app; lên kế hoạch đi lại cho nhóm; nhắc việc định kỳ mà hay quên ngữ cảnh |
-| Thực tập / việc mới | Hỏi lại quy trình onboarding; tìm đúng người phụ trách; viết update hằng tuần; hiểu task từ nhiều thread |
-| Người đi làm | Tổng hợp báo cáo tuần; recap cuộc họp; review tài liệu dài; phân loại ticket; tìm quyết định cũ |
-| Sản phẩm đang dùng | Tìm kiếm kém; onboarding khó hiểu; thông báo sai lúc; form dài dễ nhập sai |
+| Bối cảnh            | Gợi ý                                                                                                                                  |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Học tập             | Tìm lại câu trả lời cũ trong Discord; đọc tài liệu dài trước deadline; không biết bài nộp thiếu mục nào; ôn tập từ nhiều nguồn rời rạc |
+| Đời sống            | Theo dõi chi tiêu ở nhiều app; lên kế hoạch đi lại cho nhóm; nhắc việc định kỳ mà hay quên ngữ cảnh                                    |
+| Thực tập / việc mới | Hỏi lại quy trình onboarding; tìm đúng người phụ trách; viết update hằng tuần; hiểu task từ nhiều thread                               |
+| Người đi làm        | Tổng hợp báo cáo tuần; recap cuộc họp; review tài liệu dài; phân loại ticket; tìm quyết định cũ                                        |
+| Sản phẩm đang dùng  | Tìm kiếm kém; onboarding khó hiểu; thông báo sai lúc; form dài dễ nhập sai                                                             |
 
 ### Prompt (chỉ dùng sau khi đã tự scan)
 

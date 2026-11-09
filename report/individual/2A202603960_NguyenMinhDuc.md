@@ -56,9 +56,9 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Bottleneck (bước nào, mất bao nhiêu phút) | Viết ngắn gọn ~ 30 phút<br>Vẽ sơ đồ ~ 30 phút<br>Review và format ~ 30 phút                                                                                                            |
 | Impact (nếu không giải thì sao)           | 60-90 phút/tuần cho cá nhân, nếu làm theo team thì tiết kiệm ~30 phút/tuần cho mỗi người và 30 phút/tuần cho leader tổng hợp                                                           |
 | Success metric (baseline → target)        | Tổng thời gian viết báo cáo từ                                                                                                                                                         |
-| Phương án không dùng AI                   |                                                                                                                                                                                        |
-| Giả thuyết về AI (nếu có)                 |                                                                                                                                                                                        |
-| Cảm nhận nhanh                            | No AI / Rule / Workflow / Agent / Chưa biết                                                                                                                                            |
+| Phương án không dùng AI                   | Tự động cào các commit, số liệu và tổng hợp theo template                                                                                                                              |
+| Giả thuyết về AI (nếu có)                 | AI tự động nhận diện số liệu để sinh mẫu bảng trình bày, sơ đồ                                                                                                                         |
+| Cảm nhận nhanh                            | No AI / Rule / Workflow / **Agent** / Chưa biết                                                                                                                                        |
 
 Quy trình nháp hiện tại:
 
@@ -77,9 +77,9 @@ Quy trình nháp hiện tại:
 | Bottleneck (bước nào, mất bao nhiêu phút) | Tổng hợp tài liệu, thường mất 30 phút để thống nhất lại                                                                                                                     |
 | Impact (nếu không giải thì sao)           | Mỗi thành viên 10 phút                                                                                                                                                      |
 | Success metric (baseline → target)        | Bản nháp cuối có các công việc và gạch đầu dòng tương ứng                                                                                                                   |
-| Phương án không dùng AI                   |                                                                                                                                                                             |
+| Phương án không dùng AI                   | Phân công một người viết                                                                                                                                                    |
 | Giả thuyết về AI (nếu có)                 | LLM nhận transcript thô và trích xuất                                                                                                                                       |
-| Cảm nhận nhanh                            | No AI / Rule / Workflow / Agent / Chưa biết                                                                                                                                 |
+| Cảm nhận nhanh                            | No AI / Rule / **Workflow** / **Agent** / Chưa biết                                                                                                                         |
 
 Quy trình nháp hiện tại:
 
@@ -89,19 +89,19 @@ Quy trình nháp hiện tại:
 
 ### Problem Card #3
 
-| Trường                                    | Nội dung                                    |
-| ----------------------------------------- | ------------------------------------------- |
-| Job Story                                 | Khi …, tôi muốn …, để …                     |
-| Actor                                     |                                             |
-| Thời điểm / bối cảnh                      |                                             |
-| Quy trình hiện tại (3–7 bước)             |                                             |
-| Bottleneck (bước nào, mất bao nhiêu phút) |                                             |
-| Impact (nếu không giải thì sao)           |                                             |
-| Success metric (baseline → target)        |                                             |
-| Phương án không dùng AI                   |                                             |
-| Giả thuyết về AI (nếu có)                 |                                             |
-| Cảm nhận nhanh                            | No AI / Rule / Workflow / Agent / Chưa biết |
-|                                           |                                             |
+| Trường                                    | Nội dung                                                                                                                                                                                                                                  |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Job Story                                 | Khi trước và sau các buổi học, tôi muốn tự động gom tất cả slide bài giảng, bài tập và tài liệu tham khảo từ các kênh rải rác về một thư mục duy nhất trên máy, để tiết kiệm thời gian tra cứu và không bị bỏ sót tài liệu được cập nhật. |
+| Actor                                     | Sinh viên, học viên                                                                                                                                                                                                                       |
+| Thời điểm / bối cảnh                      | Trước và sau buổi học                                                                                                                                                                                                                     |
+| Quy trình hiện tại (3–7 bước)             | Truy cập vào từng trang, tải tài liệu, sắp xếp lại, thống nhất tên                                                                                                                                                                        |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Truy cập vào mỗi trang và tải tài liệu mất 10-15 phút, mất 10-15 phút để sắp xếp và đặt tên                                                                                                                                               |
+| Impact (nếu không giải thì sao)           | Mỗi buổi mất 20-30 phút để tổng hợp tài liệu. Mất thời gian tìm kiếm khi cần thiết.                                                                                                                                                       |
+| Success metric (baseline → target)        | Thời gian tập hợp tài liệu giảm từ 20 phút / lần xuống dưới 5 phút                                                                                                                                                                        |
+| Phương án không dùng AI                   | Viết script tự động hoá và đặt tên, tuy nhiên nếu file lạ, hoặc thêm nguồn mới sẽ mất thời gian nhận diện                                                                                                                                 |
+| Giả thuyết về AI (nếu có)                 | AI tự động tải file theo bộ quy tắc viết tay,                                                                                                                                                                                             |
+| Cảm nhận nhanh                            | No AI / Rule / **Workflow** / **Agent** / Chưa biết                                                                                                                                                                                       |
+|                                           |                                                                                                                                                                                                                                           |
 
 Quy trình nháp hiện tại:
 

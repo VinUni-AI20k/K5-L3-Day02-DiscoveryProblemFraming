@@ -104,7 +104,7 @@ PHỤ HUYNH CÓ THẮC MẮC
 
 #### Quy trình nháp hiện tại
 
-\`\`\`text
+```text
 PHỤ HUYNH ĐĂNG KÝ ĐƯA ĐÓN
           |
           v
@@ -127,9 +127,9 @@ PHỤ HUYNH ĐĂNG KÝ ĐƯA ĐÓN
           |
           v
 [7. Xử lý trường hợp bất thường hoặc thiếu xác nhận]
-\`\`\`
+```
 
-**Lưu ý về an toàn:** AI không tự xác định người có quyền đón học sinh. Danh sách người được phép đón phải dựa trên thông tin phụ huynh đăng ký; các thay đổi bất thường cần nhân viên xác minh trước khi bàn giao.
+**Lưu ý:** AI không tự xác định người có quyền đón học sinh. Danh sách người được phép đón phải dựa trên thông tin phụ huynh đăng ký; các thay đổi bất thường cần nhân viên xác minh trước khi bàn giao.
 
 ### Problem Card #3 — Lập thời khóa biểu
 
@@ -148,7 +148,7 @@ PHỤ HUYNH ĐĂNG KÝ ĐƯA ĐÓN
 
 #### Quy trình nháp hiện tại
 
-\`\`\`text
+```text
 BẮT ĐẦU HỌC KỲ MỚI
           |
           v
@@ -171,12 +171,12 @@ BẮT ĐẦU HỌC KỲ MỚI
           |
           v
 [7. Công bố thời khóa biểu]
-\`\`\`
+```
 
 ### Card muốn pitch nhất
 
-- Card số:
-- Vì sao:
+- Card số: 1
+- Vì sao: dễ triển khai và giá thành thấp nhất nhóm. Card này sử dụng dữ liệu riêng của nhà trường (rule, lịch học, tư vấn...) nên sẽ cần hệ thống riêng để đảm bảo trả lời chính xác. Card này cũng có thể giải quyết một số vấn đề của card khác như lịch đưa đón, phụ huynh đăng kí đưa đón, thành tích học tập...
 - Câu hỏi muốn nhóm phản biện:
 
 ### AI đã phản biện card thế nào

@@ -1,4 +1,4 @@
-# Báo cáo cá nhân — MSSV_HoTen
+# Báo cáo cá nhân — 2A202603547 · Phan Trọng Hậu
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -16,26 +16,30 @@
 
 ## 2. Scan problem (CP1)
 
-Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng hợp nhiều thông tin** · **Pain từ người khác**.
+> **Danh sách gợi ý đang chờ duyệt.** Các problem trải trên học tập, quản lý thông tin, tài chính và sinh hoạt; chưa khẳng định đây là trải nghiệm thật của học viên. Cột cuối nêu bằng chứng cần bổ sung, không phải số liệu đã thu thập. Sau khi duyệt, chỉ giữ những vấn đề thực sự đã gặp và điền thời gian, tần suất hoặc số người từ tình huống cụ thể.
 
-| # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
-|---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
+| # | Lăng kính | Problem | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật cần bổ sung |
+|---:|---|---|---|---|---|
+| 1 | Lặp lại | Theo dõi chi tiêu cá nhân | Khi cuối tuần cần xem mình đã tiêu bao nhiêu, tôi muốn đối chiếu các khoản tiền mặt và chuyển khoản, để biết khoản nào khiến mình vượt ngân sách. | Người tự quản lý chi tiêu | Ghi thời gian tổng hợp một tuần gần nhất, số giao dịch không nhớ nội dung và nguồn đối chiếu đã che thông tin riêng tư. |
+| 2 | Lặp lại | Quên hủy dịch vụ ít sử dụng trước kỳ gia hạn | Khi gần đến ngày gia hạn các dịch vụ trả phí, tôi muốn biết dịch vụ nào mình còn dùng và khoản nào sắp bị trừ, để không tiếp tục trả tiền cho thứ không cần. | Người đăng ký các dịch vụ trả phí | Ghi số dịch vụ đang đăng ký, lần gần nhất bị trừ tiền ngoài dự tính và thời gian kiểm tra ngày gia hạn. |
+| 3 | Lặp lại | Khó dừng lướt mạng xã hội, ảnh hưởng học tập và nghỉ ngơi | Khi mở mạng xã hội để giải trí trong giờ nghỉ, tôi muốn dừng lại đúng thời gian dự định, để không lướt kéo dài làm gián đoạn việc học hoặc ngủ muộn. | Người thường lướt mạng xã hội quá thời gian dự định | Đối chiếu thời gian sử dụng ứng dụng trong 7 ngày gần nhất; ghi thời gian định dùng và thực tế ở một lần cụ thể, số lần trì hoãn việc học hoặc đi ngủ do tiếp tục lướt. Chưa có số liệu được cung cấp. |
+| 4 | Cần đọc, tổng hợp nhiều thông tin | Khó theo dõi hoạt động nằm rải rác trên nhiều kênh | Khi thông tin các hoạt động được đăng rải rác trên Facebook, Instagram, Zalo, Discord và các kênh khác, tôi muốn nắm được hoạt động phù hợp cùng thời gian, địa điểm và hạn đăng ký, để không bỏ lỡ chỉ vì không theo dõi kịp từng kênh. | Người theo dõi hoạt động từ nhiều cộng đồng | Ghi số kênh thực tế phải xem, thời gian rà thông tin và lần gần nhất biết một hoạt động quá muộn hoặc bỏ sót thay đổi. |
+| 5 | Tốn thời gian | Quyết định bữa ăn và mua thực phẩm | Khi chuẩn bị bữa tối với nguyên liệu đang có và ngân sách giới hạn, tôi muốn chọn được món phù hợp và biết cần mua thêm gì, để không mất nhiều thời gian cân nhắc hoặc mua trùng đồ. | Người tự nấu ăn | Ghi thời gian chọn món ở một lần gần nhất, số món đồ mua trùng hoặc thực phẩm bỏ đi trong tuần nếu có. |
 
-**Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
+**Nếu có dùng AI để gợi ý thêm:**
 
--
+- AI gợi ý các candidate ở nhiều bối cảnh; học viên chọn giữ chi tiêu cá nhân, gia hạn dịch vụ và bữa ăn.
+- Học viên đề xuất vấn đề khó dừng lướt mạng xã hội và sửa vấn đề theo dõi hoạt động thành thông tin rải rác trên Facebook, Instagram, Zalo, Discord…
+- Theo lựa chọn của học viên, bỏ các ý chưa chọn; danh sách cuối còn 5 problem, đã đánh lại số thứ tự. Vấn đề bữa ăn từ #6 chuyển thành #5.
+- Chưa có số liệu trải nghiệm cá nhân được cung cấp; cột cuối là hướng thu thập bằng chứng, không phải kết quả đã quan sát.
+
+**Trạng thái:** CP1 còn 5 problem được giữ. Cần bổ sung dấu hiệu thật; chưa chọn top 3, chưa triển khai CP2.
 
 ---
 
 ## 3. Top 3 Problem Cards + quy trình nháp (CP2)
+
+> Chưa thực hiện. Chờ học viên duyệt danh sách CP1 trước khi chọn top 3 và phát triển card.
 
 ### Bảng chọn top 3
 
@@ -143,8 +147,8 @@ Quy trình nháp hiện tại:
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
+| CP1 Scan | AI gợi ý và chỉnh Job Story theo phản hồi của học viên | Mở rộng phạm vi ngoài bài lab, chuẩn hóa 5 problem được giữ | Chưa có số liệu trải nghiệm cá nhân | Học viên đã chọn, loại và sửa các ý; cần bổ sung dấu hiệu thật |
+| CP2 Problem Card | Chưa thực hiện; chờ duyệt CP1 | | | |
 | CP4 Research | | | | |
 | CP5 Quy trình | | | | |
 | CP5–6 Problem Statement | | | | |

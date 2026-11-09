@@ -14,7 +14,7 @@
 |---:|---|---|---|---|
 | 1 | | | | |
 | 2 | | | | |
-| 3 | | | | |
+| 3 | Vũ Nam Khánh | 2A202604112 | Thành viên | khanhvnm |
 | 4 | | | | |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.

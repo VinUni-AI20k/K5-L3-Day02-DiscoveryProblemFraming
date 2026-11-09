@@ -33,26 +33,65 @@
 
 ### 2.2. Cluster
 
+**[CHỜ NHÓM XÁC NHẬN]** Phân nhóm sơ bộ có hỗ trợ AI, từ CP1–CP2 của bốn báo cáo trên main tại commit 71f0e47. Pitch, phản biện trực tiếp và lựa chọn cuối do các thành viên thực hiện.
+
+**Các candidate trong top 3 của từng thành viên**
+
+Mã dưới đây dùng để truy vết card gốc. Cột ưu tiên pitch ghi lựa chọn trong báo cáo cá nhân, chưa phải kết quả pitch của nhóm.
+
+| Mã | Thành viên / nguồn | Candidate CP2 và mã CP1 | Ưu tiên pitch |
+|---|---|---|---|
+| K1 | [Khoa — 2A202604000](../individual/2A202604000_DongHuuNguyenKhoa.md) | Card #1: Tìm kiếm và tổng hợp thông tin dự án; CP1 #1, #5 | Có |
+| K2 | [Khoa — 2A202604000](../individual/2A202604000_DongHuuNguyenKhoa.md) | Card #2: Truy xuất kiến thức kỹ thuật và quyết định cũ; CP1 #4, #9 | — |
+| K3 | [Khoa — 2A202604000](../individual/2A202604000_DongHuuNguyenKhoa.md) | Card #3: Hiểu backlog và làm rõ yêu cầu; CP1 #2, #7 | — |
+| D1 | [Dương — 2A202604016](../individual/2A202604016_ChuNguyenTungDuong.md) | Card #1: Đọc Pull Request lớn; CP1 #6 | Có |
+| D2 | [Dương — 2A202604016](../individual/2A202604016_ChuNguyenTungDuong.md) | Card #2: Nhập lại thông tin khách hàng; CP1 #12 | — |
+| D3 | [Dương — 2A202604016](../individual/2A202604016_ChuNguyenTungDuong.md) | Card #3: Đối chiếu chi phí thuê nhà; CP1 #19 | — |
+| L1 | [Lam — 2A202604020](../individual/2A202604020_NguyenDucKhuongLam.md) | Card #1: Tìm lại bằng chứng trong paper đã đọc; CP1 #1 | Có |
+| L2 | [Lam — 2A202604020](../individual/2A202604020_NguyenDucKhuongLam.md) | Card #2: Sàng lọc paper sát câu hỏi nghiên cứu; CP1 #3 | — |
+| L3 | [Lam — 2A202604020](../individual/2A202604020_NguyenDucKhuongLam.md) | Card #3: Đối chiếu điều kiện đánh giá giữa các paper; CP1 #7 | — |
+| A1 | [An — 2A202604024](../individual/2A202604024_NguyenHuuAn.md) | Card #1: So sánh các biến thể tín hiệu định lượng; CP1 #2 | Có |
+| A2 | [An — 2A202604024](../individual/2A202604024_NguyenHuuAn.md) | Card #2: Xác định quyết định, người phụ trách và deadline sau cuộc họp; CP1 #9 | — |
+| A3 | [An — 2A202604024](../individual/2A202604024_NguyenHuuAn.md) | Card #3: Xác định trạng thái và thông tin thiếu của đề nghị mua vật tư; CP1 #8 | — |
+
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A — Tìm và hiểu thông tin theo ngữ cảnh | K1, K2, D1, L1, L2 | Phải tìm, đọc và nối thông tin liên quan trước khi sử dụng: bối cảnh dự án, mã nguồn hoặc tài liệu nghiên cứu. Tìm lại nguồn đã biết và sàng lọc nguồn mới là các bước khác nhau, cần giữ riêng khi phân tích từng card. |
+| B — Đối chiếu kết quả nghiên cứu | L3, A1 | Nhiều chỉ số và điều kiện thử nghiệm cần được đối chiếu trước khi diễn giải khác biệt; chỉ nhìn kết quả có thể dẫn đến so sánh thiếu căn cứ. |
+| C — Làm rõ thông tin và trách nhiệm trong phối hợp | K3, A2, A3 | Thông tin để tiếp tục công việc còn thiếu hoặc mơ hồ; phải tìm đầu mối và xác nhận lại yêu cầu, trách nhiệm hoặc trạng thái xử lý. |
+| D — Nhập lặp dữ liệu khách hàng | D2 | Cùng thông tin phải điền qua nhiều biểu mẫu, sau đó kiểm tra sự nhất quán. |
+| E — Đối chiếu khoản thu với hợp đồng thuê | D3 | Người thuê phải kiểm các khoản thu bằng điều khoản và chứng từ liên quan. |
+
+A và C gom theo pattern, chưa đồng nghĩa các card là cùng một problem. D và E tạm đứng riêng vì chưa có card khác đủ gần về pain và quy trình. Nhóm cần xác nhận ranh giới cluster, nhất là việc tìm lại thông tin so với sàng lọc thông tin mới ở A.
+
+**Dữ liệu còn thiếu:** Dương chưa có số đo; Khoa chưa có baseline thực đo và các target còn là giả thuyết. Báo cáo của Lam dùng bối cảnh và số liệu giả định. An tự báo cáo tổng thời gian ở Card #1, còn thời gian phân rã và bối cảnh Card #2–#3 là ước lượng hoặc giả định. Chưa dùng các số này làm baseline chung hay bằng chứng đồng thuận của nhóm.
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
-Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
+**[CHỜ NHÓM XÁC NHẬN]** Cây minh họa cho phạm vi developer làm rõ một task trước khi triển khai, từ K1–K3 thuộc phần developer của cluster A và C. Các candidate còn lại vẫn giữ trong bảng cluster; phạm vi này chưa phải lựa chọn problem cuối cùng.
 
-```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
-```
+~~~text
+OUTCOME: Giảm thời gian developer làm rõ một task trước khi triển khai,
+         đồng thời hiểu đúng yêu cầu, phạm vi và căn cứ kỹ thuật.
+├── Opportunity 1: Thông tin dự án liên quan đến task nằm rải rác,
+│                 phải tìm và ghép lại bối cảnh. [K1]
+├── Opportunity 2: Khó tìm lại kiến trúc và lý do quyết định kỹ thuật
+│                 khi làm việc với module chưa quen. [K2]
+└── Opportunity 3: Yêu cầu và acceptance criteria chưa rõ,
+                  phải trao đổi nhiều vòng để xác nhận. [K3]
+~~~
 
-Những ý đã gạch bỏ vì là solution đội lốt opportunity:
+**Hướng đo đề xuất:** ghi thời gian xử lý chủ động từ lúc bắt đầu tìm hiểu task đến khi ghi được yêu cầu, phạm vi và căn cứ kỹ thuật liên quan; ghi riêng thời gian chờ phản hồi. Kiểm lại các nội dung này với nguồn và người phụ trách task, đánh dấu phần còn thiếu. Baseline, target và tiêu chí hoàn thành: [CẦN NHÓM XÁC ĐỊNH].
 
--
+**Các ý là solution, không đặt ở tầng Opportunity:**
+
+- AI assistant truy xuất và tổng hợp thông tin dự án — K1.
+- RAG-based Technical Knowledge Assistant — K2.
+- AI Requirements Assistant — K3.
+- Shared folders, project templates và dashboard tập trung — K1.
+- ADR, chuẩn hóa tài liệu và user story template/Definition of Ready — K2, K3.
+
+Các ý trên đã xuất hiện trong phương án ở card gốc. Chúng mô tả cách xử lý pain, chưa phải giải pháp được nhóm chọn.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 

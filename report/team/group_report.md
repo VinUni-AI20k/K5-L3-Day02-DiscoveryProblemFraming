@@ -188,7 +188,7 @@ Bước 3 (Dò tìm minh chứng và đối chiếu từng tiêu chí Rubric v�
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
 ```text
-TƯƠNG LAI — 5 bước, khoảng 18–20 phút, 2/5 bước thủ công
+TƯƠNG LAI — 5 bước, khoảng 18–20 phút, 3/5 bước thủ công
 
 [1. Upload bài làm + Rubric: 2']                       ← CON NGƯỜI
    → [2. Parse & kiểm tra cấu trúc cơ bản: 1']         ← RULE (Script kiểm tra định dạng file, word count, mục lục bắt buộc)
@@ -205,6 +205,8 @@ BOUNDARY:
 PHƯƠNG ÁN QUAY VỀ:
 - Nếu AI gặp lỗi (timeout, ảo giác, nhận xét chung chung không có dẫn chứng): Sinh viên bỏ qua output của AI và sử dụng bảng checklist tiêu chuẩn do bước Rule sinh ra ở Bước 2 để tự rà soát thủ công theo cách cũ.
 ```
+
+![Quy trình tương lai](../assets/cp5-workflow-future.png)
 
 ### 4.3. Before / after
 

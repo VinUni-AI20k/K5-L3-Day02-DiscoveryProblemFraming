@@ -50,7 +50,8 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Lên trình bày pitch card CRO (hồ sơ giải ngân online): actor là CRO nhập liệu, quy trình 6 bước, bottleneck ở bước đọc và nhập thông tin (ước lượng ~45 trong ~80 phút mỗi bộ, ~10 bộ/tháng), impact là khách phản hồi vì xử lý chậm và ~3/10 bộ bị trả về.
 - Nhận và trả lời phản biện của lab coach khi trình bày: "Liên kết với VNeID vậy mà AI agent riêng thì xử lý như thế nào?" Hướng trả lời: agent nội bộ nhưng có liên kết VNeID, dữ liệu hồ sơ lấy về từ kho dữ liệu của nhà nước và tạo kho dữ liệu local riêng.
 - Đặt câu hỏi phản biện cho nhóm trưởng nhóm 11 (bài AI hỗ trợ ghi note task): "Note của bạn có đặt sẵn lịch thông báo không?" Bạn ấy trả lời nhóm chưa tính tới trường hợp này.
-- Cùng nhóm thống nhất lại chọn candidate #7 (tổng hợp action items sau họp) làm bài nhóm và chốt quyết định Go (Pilot phạm vi nhỏ).
+- Cùng Khánh gom 12 candidate thành 4 cluster và phân tích ma trận độ mơ hồ × độ phức tạp để chọn mức Workflow cho candidate #7.
+- Cùng nhóm chọn candidate #7 (tổng hợp action items sau họp) làm bài báo cáo nhóm và chốt quyết định Go (Pilot phạm vi nhỏ); bài mang lên trình bày trước lab coach là card CRO.
 - Review và merge 11 pull request (#1–#11) để gộp bài của cả 4 thành viên vào nhánh `main`.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
@@ -60,8 +61,9 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Bảng phân công theo checkpoint trong `TEAM.md`; lịch sử pull request #1–#11 trên repo nhóm.
 
 **Điều mình học được từ phần nhóm:**
--khả năng phản biện trước các câu hỏi về vấn đề ai nội bộ và đưa ra vấn đề giải quyết nhanh chóng
--hiêu rõ nỗi đau của người dùng và nhu cầu thật sự của người dùng để tạo ra giải pháp
+
+- Khả năng phản biện trước các câu hỏi về vấn đề AI nội bộ và đưa ra hướng giải quyết nhanh chóng.
+- Hiểu rõ nỗi đau của người dùng và nhu cầu thật sự của người dùng để tạo ra giải pháp.
 
 ### Vũ Nam Khánh - 2A202604112
 
@@ -85,3 +87,25 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - Biết cách hạ quy mô một bài toán AI quá rộng (từ bot tự ghi âm/gửi tin nhắn) xuống dạng Workflow đơn giản, tập trung đúng điểm nghẽn tốn thời gian nhất.
 - Hiểu tầm quan trọng của Ranh giới (Boundary) và Human-in-the-loop (HITL) để tránh rủi ro AI đoán sai tên người làm hoặc tự bịa ra task làm trôi tin nhắn team.
+
+### Phạm Duy Thành - 2A202604075
+
+**Phần việc phụ trách:**
+
+- Được phân công phụ trách CP4 — Kiểm chứng; hỗ trợ CP4 Research, CP5 (quy trình trước/sau và Problem Statement v0), CP6 (mức can thiệp, Problem Statement v1 và quyết định).
+- Đề xuất các candidate problem từ trải nghiệm học tập; các candidate này không phải candidate nhóm đã chọn.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Soạn 3 candidate cá nhân: tìm yêu cầu/deadline từ LMS và chat; tổng hợp tài liệu ôn tập; phân loại feedback. Các candidate này được ghi ở mục 2.1 của báo cáo nhóm; nhóm cuối cùng chọn candidate tổng hợp action items sau cuộc họp do Vũ Nam Khánh đề xuất.
+- Với candidate nhóm đã chọn, phần việc được phân công của mình là hỗ trợ các checkpoint CP4–CP6 nêu trên. Báo cáo nhóm mô tả quy trình, mức Workflow, boundary có người duyệt bản nháp và quyết định Go cho pilot phạm vi nhỏ.
+- Trong báo cáo cá nhân, đã cập nhật mục 6.7 để giải thích chuỗi problem → quy trình → metric → boundary → Workflow → quyết định theo candidate action items đã chọn; đây là phần trình bày hiểu bài cá nhân, không thay thế bằng chứng về kết quả kiểm chứng.
+- Mình chưa phỏng vấn hoặc hoàn tất research; các phân công kiểm chứng/research và các giả định trong báo cáo vẫn cần được xác nhận bằng dữ liệu thực tế.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `report/team/group_report.md`, mục 2.1, các candidate #10–12 và candidate được nhóm chọn; mục 4–8 là sản phẩm chung ở các checkpoint được phân công/hỗ trợ. Chưa có file minh chứng riêng trong `report/assets/` hoặc commit cụ thể để dẫn.
+
+**Điều mình học được từ phần nhóm:**
+
+- Cần tách candidate cá nhân đề xuất khỏi problem nhóm thống nhất chọn. Với bài toán action items sau họp, phải đo thời gian tổng hợp và kiểm tra độ chính xác của người phụ trách; Workflow chỉ tạo bản nháp, người ghi chép vẫn cần xác nhận trước khi gửi. Các con số hiện là mục tiêu/ước tính của pilot, không nên trình bày như kết quả đã kiểm chứng.

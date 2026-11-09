@@ -8,9 +8,9 @@
 
 - Họ tên: Nguyễn Hữu An
 - MSSV: 2A202604024
-- Email trường (không bắt buộc, repo có thể để public):
+- Email trường (không bắt buộc, repo có thể để public): 26ai.annh2@vinuni.edu.vn
 - Tên nhóm: Nhóm 6
-- Link repo nhóm: https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming/blob/main/docs/02-deliverable-example.md
+- Link repo nhóm: https://github.com/lit1numyt/K5-L3B-DAY02-Nhom6-DiscoveryProblemFraming.git
 
 ---
 
@@ -20,136 +20,129 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-|Công việc cá nhân: nghiên cứu tín hiệu đầu tư định lượng|
-| 1 |Cần đọc, tổng hợp nhiều thông tin |Khi tôi nghiên cứu một ý tưởng đầu tư định lượng mới, tôi muốn tổng hợp kết quả của các nhánh ý tưởng gần giống mà tôi đã từng nghiên cứu để quyết định có triển khai tiếp hay không|Cá nhân tôi |Mỗi thứ hai hàng tuần, tôi thường mất một buổi sáng chỉ để khảo sát lại kết quả của các ý tưởng đã nghiên cứu, trước khi đi đến quyết định có tiếp tục triển khai ý tưởng mới hay không |
-| 2 |Cần đọc, tổng hợp nhiều thông tin |Trong khi nghiên cứu, tôi thường thử nhiều biến thể khác nhau của cùng một tín hiệu ban đầu. Tôi muốn xác định biến thể nào cho kết quả tốt hơn hoặc dẫn đến sự khác biệt đáng kể, để quyết định bước thử tiếp theo có căn cứ hơn |Cá nhân tôi |Có nhiều biến thể từ một tín hiệu gốc, mỗi biến thể lại thay đổi nhiều chỉ số trong bảng performance cùng lúc. Mỗi lần ra soát thường mất từ 15-20 phút |
-| 3 |Cần đọc, tổng hợp nhiều thông tin |Khi hoàn thành một tuần nghiên cứu ý tưởng, tôi muốn tổng hợp lại lý do thử ý tưởng, kết quả và bài học của từng hướng |Cá nhân tôi |Thường mất một buổi chiều cuối tuần để đọc lại kết quả, một số ý tưởng bị bỏ dở vì quên lý do |
-|Các vấn đề thực tế khi đi làm trong doanh nghiệp|
-| 4 | Lặp lại · Pain từ người khác | Khi nhân viên mới bắt đầu công việc, tôi muốn biết mình cần hoàn thành những thủ tục nào, xin quyền truy cập ở đâu và liên hệ ai, để có thể bắt đầu làm việc mà không phải hỏi nhiều người cùng một nội dung | Nhân viên mới, nhân sự và quản lý trực tiếp | Ước lượng giả định, chưa kiểm chứng: mỗi nhân viên mới mất 2–3 ngày làm việc để có đủ quyền truy cập; hỏi lại 5–8 lượt trong tuần đầu; nhân sự và quản lý mất tổng cộng khoảng 60 phút/người để giải đáp và nhắc xử lý. |
-| 5 | Tốn thời gian · Cần đọc, tổng hợp nhiều thông tin | Khi chuẩn bị gửi báo giá cho khách hàng, tôi muốn xác định bảng giá và chính sách chiết khấu đang có hiệu lực, để không gửi nhầm điều kiện bán hàng rồi phải đính chính | Nhân viên kinh doanh và người duyệt báo giá | Ước lượng giả định, chưa kiểm chứng: mỗi nhân viên lập 5 báo giá/tuần, mất khoảng 20 phút/báo giá để tra cứu 3 nguồn và xác nhận chính sách, tương đương 100 phút/tuần; khoảng 1/10 báo giá phải sửa vì dùng thông tin cũ. |
-| 6 | Lặp lại · Tốn thời gian | Khi tiếp nhận yêu cầu hỗ trợ của khách hàng, tôi muốn biết khách đã cung cấp thông tin gì và bộ phận nào đang xử lý, để không hỏi lại hoặc chuyển yêu cầu lòng vòng | Nhân viên chăm sóc khách hàng, bộ phận xử lý và khách hàng | Ước lượng giả định, chưa kiểm chứng: mỗi nhân viên gặp 10 yêu cầu/tuần cần phối hợp nhiều bộ phận; mất khoảng 15 phút/yêu cầu để đọc lại lịch sử và tìm người xử lý, tương đương 150 phút/tuần; mỗi yêu cầu bị chuyển 2–3 lượt. |
-| 7 | Cần đọc, tổng hợp nhiều thông tin · Tốn thời gian | Khi chuẩn bị thanh toán cho nhà cung cấp, tôi muốn xác định hoá đơn, đơn đặt hàng và biên bản giao nhận có khớp nhau không, để xử lý đúng khoản phải trả và phát hiện chênh lệch trước khi trình duyệt | Kế toán công nợ, bộ phận mua hàng và người duyệt thanh toán | Ước lượng giả định, chưa kiểm chứng: kế toán xử lý 20 bộ hồ sơ/tuần, mất khoảng 15 phút/bộ để đối chiếu, tương đương 5 giờ/tuần; khoảng 4/20 bộ thiếu chứng từ hoặc có chênh lệch, cần thêm 2 lượt liên hệ/bộ. |
-| 8 | Tốn thời gian · Pain từ người khác | Khi có đề nghị mua vật tư phục vụ công việc, tôi muốn biết đề nghị đang chờ ai duyệt và còn thiếu thông tin gì, để bổ sung hoặc nhắc đúng người trước khi ảnh hưởng tiến độ | Nhân viên đề nghị mua, bộ phận mua hàng và người phê duyệt | Ước lượng giả định, chưa kiểm chứng: bộ phận mua hàng tiếp nhận 10 đề nghị/tuần; mỗi đề nghị chờ duyệt khoảng 2 ngày làm việc và cần 2 lượt hỏi trạng thái; khoảng 3/10 đề nghị bị trả lại vì thiếu thông tin. |
-| 9 | Cần đọc, tổng hợp nhiều thông tin · Lặp lại | Khi tiếp tục triển khai sau cuộc họp dự án, tôi muốn xác định quyết định cuối cùng, người chịu trách nhiệm và hạn hoàn thành của từng đầu việc, để không làm theo phương án cũ hoặc bỏ sót cam kết | Quản lý dự án và các thành viên tham gia | Ước lượng giả định, chưa kiểm chứng: nhóm dự án 6 người họp 3 lần/tuần; sau mỗi cuộc họp, người tổng hợp mất khoảng 20 phút tìm lại và xác nhận quyết định, tương đương 60 phút/tuần; khoảng 2 đầu việc/tuần chưa rõ người phụ trách hoặc hạn hoàn thành. |
-| 10 | Tốn thời gian · Pain từ người khác | Khi khách hàng hỏi về một đơn hàng giao chậm, tôi muốn xác định đơn đang vướng ở bước xác nhận, chuẩn bị hàng hay vận chuyển, để trả lời đúng tình trạng và thống nhất bước xử lý tiếp theo | Nhân viên vận hành, kho, kinh doanh và chăm sóc khách hàng | Ước lượng giả định, chưa kiểm chứng: nhóm vận hành xử lý 5 đơn giao chậm/tuần; mỗi đơn mất khoảng 25 phút liên hệ 3 đầu mối để xác minh, tương đương 125 phút/tuần; khoảng 2/5 đơn cần xác nhận lại vì thông tin không khớp. |
+| 1 | Cần đọc, tổng hợp nhiều thông tin | Khi chuyển một giả thuyết kinh tế thành biểu thức alpha trên WorldQuant BRAIN trong giờ rảnh, tôi muốn phân biệt các trường dữ liệu có tên gần giống nhưng khác ý nghĩa, để tránh mô phỏng tín hiệu không đúng giả thuyết. | Tôi, consultant WorldQuant BRAIN, tại bước chọn trường dữ liệu. | 3/8 ý tưởng trong hai tuần phải làm lại vì hiểu sai trường dữ liệu, mất thêm 60 phút/ý tưởng.|
+| 2 | Lặp lại | Khi quay lại một ý tưởng alpha trên WorldQuant BRAIN sau vài ngày, tôi muốn biết các lần thử trước đã bác bỏ điều gì và vì sao, để tránh lặp lại biến thể đã thất bại. | Tôi, consultant WorldQuant BRAIN, tại bước quyết định thử tiếp trước khi nộp alpha. | Trong 12 phiên nghiên cứu, 4 phiên lặp lại hướng đã loại, mất 60 phút/phiên.|
+| 3 | Tốn thời gian | Khi làm lab buổi chiều sau giờ lý thuyết buổi sáng, tôi muốn nhận ra bước suy luận sai trong lời giải dù đã nhớ định nghĩa, để không mất cả buổi sửa phần không phải nguyên nhân. | Tôi, học viên chương trình tại VinUni, tại bước vận dụng khái niệm vào bài lab. |2/2 buổi lab đầu bị kẹt 40 phút vì áp dụng sai khái niệm.|
+| 4 | Cần đọc, tổng hợp nhiều thông tin | Khi rà bài lab lúc 22h trước khi ôn bài và chuẩn bị hôm sau, tôi muốn biết nhận định nào chưa được bằng chứng trong bài hỗ trợ, để tránh nộp bài đủ đề mục nhưng lập luận còn thiếu. | Tôi, học viên chương trình tại VinUni, tại bước tự kiểm tra nội dung trước khi nộp. | 2/2 bài có kết luận vượt quá dữ liệu, mỗi bài mất 40 phút sửa.|
+| 5 | Lặp lại | Khi chuẩn hóa khoản mục trong báo cáo tài chính quý của một doanh nghiệp mới, tôi muốn xác định khoản nào tương ứng với danh mục chuẩn của quỹ, để tránh gộp sai bản chất dữ liệu đầu vào nghiên cứu định lượng. | Tôi, người làm dữ liệu tại quỹ, tại bước ánh xạ khoản mục sau trích xuất. | Một đợt 10 báo cáo có 18 tên khoản mục ngoài từ điển; mất 90 phút đọc thuyết minh và sửa 4 ánh xạ ban đầu.|
+| 6 | Tốn thời gian | Khi bổ sung báo cáo năm đã kiểm toán vào kho dữ liệu của quỹ, tôi muốn xác định số kỳ trước được trình bày lại có thay đổi cách hiểu so với bản đã lưu hay không, để tránh nối hai số không cùng cơ sở vào chuỗi nghiên cứu. | Tôi và người nghiên cứu định lượng, tại bước rà chênh lệch trước khi lưu phiên bản dữ liệu mới. | Trong 6 cặp báo cáo, script báo 24 chênh lệch; mất 2 giờ đọc thuyết minh, phát hiện 3 khoản do phân loại lại.|
+| 7 | Pain từ người khác | Khi tiếp nhận yêu cầu đổi trả tại cửa hàng quần áo trực tuyến, tôi muốn hiểu khách đang phản ánh sai kích cỡ, sai hàng hay lỗi sản phẩm qua tin nhắn và ảnh, để hỏi đúng thông tin còn thiếu ngay lần đầu. | Nhân viên chăm sóc khách hàng cửa hàng nhỏ, tại bước phân loại yêu cầu đổi trả. | 1 nhân viên kể 8/30 yêu cầu tuần trước phải hỏi lại ít nhất hai vòng; “Khách nói mặc không được, lúc thì chật, lúc lại nhận sai mẫu.” |
+| 8 | Pain từ người khác | Khi nhận căn hộ thuê lúc chuyển vào, tôi muốn phân biệt hư hỏng có sẵn với dấu vết sử dụng bình thường trong ảnh bàn giao, để ghi rõ hiện trạng trước khi ký biên bản và giảm tranh cãi về tiền cọc. | Người thuê căn hộ, tại bước đối chiếu ảnh với biên bản bàn giao. | 1 người thuê mất 70 phút xem 45 ảnh nhưng bỏ sót hai vết bong sơn, khi trả phòng thì chủ phòng yêu cầu chịu trách nhiệm sơn lại. |
+| 9 | Pain từ người khác | Khi chốt báo giá in tờ rơi cho khách doanh nghiệp nhỏ, tôi muốn phát hiện yêu cầu mâu thuẫn giữa tin nhắn, bản thiết kế và ghi chú sửa cuối, để tránh báo giá sai quy cách hoặc phải in lại. | Nhân viên nhận đơn tại cơ sở in, tại bước xác nhận quy cách trước báo giá. | 1 nhân viên kể 3/15 đơn trong tuần phải xác nhận lại vì thông tin giấy hoặc số mặt không thống nhất, mất 20 phút/đơn. |
+| 10 | Pain từ người khác | Khi nhận bàn giao ca tại quán cà phê, tôi muốn phân biệt điều khách phàn nàn với giả thuyết nguyên nhân trong ghi chú về đồ uống, để ca sau kiểm tra đúng công đoạn thay vì vội đổi công thức. | Trưởng ca của một quán cà phê, tại bước rà phản hồi cuối ca. | 1 trưởng ca mất 25 phút/ngày đọc ghi chú; trong 12 phản hồi một tuần, 4 phản hồi bị gán ngay cho công thức dù chưa kiểm cách pha.|
+| 11 | Cần đọc, tổng hợp nhiều thông tin | Khi thử nghiệm các biến thể mới từ một ý tưởng alpha trên WorldQuant BRAIN, tôi muốn xác định biến thể nào cải thiện kết quả so với bản gốc hoặc giúp làm rõ giả thuyết nghiên cứu, để quyết định hướng thử nghiệm tiếp theo. | Tôi, consultant WorldQuant BRAIN, tại bước so sánh kết quả và diễn giải thay đổi giữa các biến thể. | Trong các phiên, mỗi phiên thường thử 40–80 biến thể và mất 40 phút đối chiếu chỉ số với ghi chú thay đổi; có nhiều phiên chưa chọn được hướng thử tiếp vì một chỉ số tăng nhưng chỉ số khác giảm, chưa rõ biến thể giúp hiểu thêm điều gì về giả thuyết. |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
--
+- AI hỗ trợ đề xuất và diễn đạt 10 tình huống mô phỏng: #1–#2 và #11 thuộc WorldQuant BRAIN; #3–#4 thuộc học chương trình AI thực chiến; #5–#6 thuộc dữ liệu báo cáo tài chính; #7–#10 lần lượt thuộc bán lẻ trực tuyến, thuê nhà, dịch vụ in và vận hành quán cà phê. Giữ các ý vì có bước nghẽn cụ thể, nhu cầu cốt lõi khác nhau và kiểm tra được trên tập mẫu nhỏ.
 
 ---
 
 ## 3. Top 3 Problem Cards + quy trình nháp (CP2)
 
+> Các card phát triển từ tình huống mô phỏng ở CP1. Thời gian từng bước là ước lượng để phân tích; target là mục tiêu thử nghiệm, chưa phải kết quả đã xác thực. Card #1–#3 tương ứng problem #11, #5 và #9 trong bảng scan.
+
 ### Bảng chọn top 3
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | #2 — So sánh các biến thể tín hiệu định lượng và xác định thông tin mới của từng biến thể | Gắn với công việc đang làm, mỗi lượt rà soát mất 15–20 phút; giảm thời gian đối chiếu giúp dành thêm thời gian thử ý tưởng | Liệu AI có đánh giá đúng thông tin mà mỗi biến thể đem lại; các kết quả có cùng điều kiện thử nghiệm để so sánh không |
-| 2 | #9 — Xác định quyết định, người phụ trách và deadline sau cuộc họp | Phạm vi gọn trong một cuộc họp; đầu vào và đầu ra rõ; có thể thử bằng mẫu biên bản và checklist mà chưa cần tích hợp hệ thống | Quyết định có được ghi lại đầy đủ không; thời gian xác nhận và số đầu việc thiếu thông tin mới là giả định |
-| 3 | #8 — Xác định trạng thái và thông tin còn thiếu của đề nghị mua vật tư | Có các trạng thái và người phụ trách cụ thể; có thể thử với một bảng theo dõi chung, chưa cần xây hệ thống phê duyệt | Chậm do thiếu thông tin trạng thái hay do người duyệt chưa xử lý; bảng theo dõi có được cập nhật đều không |
+| 1 | So sánh và diễn giải kết quả các biến thể alpha (#11) | Gắn với công việc nghiên cứu của tôi; bước đối chiếu mất 40 phút/phiên; có thể thử trên kết quả đã lưu của một ý tưởng, không cần chạy lại toàn bộ nghiên cứu. | Bảng so sánh có quy tắc ưu tiên rõ đã đủ chưa? Ghi chú có đủ để phân biệt thông tin mới với diễn giải chủ quan? |
+| 2 | Ánh xạ khoản mục báo cáo tài chính vào danh mục chuẩn (#5) | Có kinh nghiệm dữ liệu để xác định lỗi; phạm vi thu hẹp được vào khoản mục ngoài từ điển của một ngành; đo được thời gian và số ánh xạ sai. | Bao nhiêu trường hợp chỉ cần bổ sung từ điển? Chuyên viên có thống nhất được nhãn chuẩn khi thuyết minh thiếu thông tin không? |
+| 3 | Phát hiện yêu cầu mâu thuẫn trước khi báo giá in (#9) | Actor và thời điểm quyết định rõ; thử được trên 10 bộ yêu cầu đã ẩn danh; tác động trực tiếp đến thời gian xác nhận và độ đúng của báo giá. | Phiếu chốt quy cách có phiên bản đã giải quyết phần lớn vấn đề chưa? Có đủ lịch sử trao đổi để xác định yêu cầu nào còn hiệu lực không? |
 
-Các thời gian phân rã ở dưới là **ước lượng nháp, cần bấm giờ để xác nhận**. Card #1 dựa trên thời gian tổng 15–20 phút/lượt đã ghi ở CP1; Card #2 và #3 là bối cảnh giả định, chưa có quan sát hoặc phỏng vấn thực tế. Các target là mục tiêu pilot đề xuất, chưa phải kết quả đạt được.
-
-### Problem Card #1
+### Problem Card #1 — So sánh biến thể alpha (problem #11)
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi rà soát nhiều biến thể của cùng một tín hiệu định lượng, tôi muốn xác định biến thể nào tốt hơn và mỗi thay đổi đem lại thông tin gì, để chọn bước thử tiếp theo có căn cứ |
-| Actor | Nguyễn Hữu An — người nghiên cứu và nộp tín hiệu đầu tư định lượng |
-| Thời điểm / bối cảnh | Sau khi có kết quả thử nghiệm của một nhóm biến thể cùng tín hiệu gốc, trước khi chọn hướng nghiên cứu tiếp |
-| Quy trình hiện tại (3–7 bước) | 1. Mở kết quả tín hiệu gốc → 2. Gom biểu thức, thiết lập và kết quả các biến thể → 3. Đối chiếu thay đổi và các chỉ số performance → 4. Ghi nhận khác biệt → 5. Chọn bước thử tiếp |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3: đối chiếu nhiều thay đổi và chỉ số cùng lúc, ước lượng 8/18 phút mỗi lượt; khó tách ảnh hưởng khi một biến thể thay nhiều yếu tố |
-| Impact (nếu không giải thì sao) | Mỗi lượt rà soát mất 15–20 phút; có thể thử lại hướng cũ hoặc chọn bước tiếp theo mà chưa hiểu rõ khác biệt. Chưa có số lượt/tuần để tính tổng impact |
-| Success metric (baseline → target) | Baseline tự báo cáo: 15–20 phút/lượt; target: không quá 10 phút/lượt. Bấm giờ 5 lượt hiện tại và 5 lượt pilot có quy mô tương đương; mỗi lượt phải ghi được thay đổi, khác biệt kết quả và bước tiếp theo, mọi con số khớp dữ liệu gốc |
-| Phương án không dùng AI | Dùng bảng so sánh cố định có mã biến thể, biểu thức, thiết lập, chỉ số và ghi chú; dùng công thức tính chênh lệch so với bản gốc; mỗi thử nghiệm chỉ đổi một yếu tố khi phù hợp |
-| Giả thuyết về AI (nếu có) | AI có thể soạn nháp phần mô tả khác biệt từ bảng kết quả đã chuẩn hoá. Người nghiên cứu kiểm tra số liệu và kết luận; AI không tự suy ra quan hệ nhân quả, không tự nộp tín hiệu hoặc quyết định đầu tư |
-| Cảm nhận nhanh | Rule trước; cân nhắc Workflow có AI nếu phần diễn giải vẫn là điểm nghẽn sau khi chuẩn hoá bảng so sánh |
+| Job Story | Khi thử nghiệm các biến thể mới từ một ý tưởng alpha trên WorldQuant BRAIN, tôi muốn xác định biến thể nào cải thiện kết quả so với bản gốc hoặc giúp làm rõ giả thuyết nghiên cứu, để quyết định hướng thử nghiệm tiếp theo. |
+| Actor | Tôi, consultant WorldQuant BRAIN nghiên cứu trong giờ rảnh, trực tiếp so sánh kết quả và chọn lần thử tiếp theo. |
+| Thời điểm / bối cảnh | Sau khi có kết quả của 40–80 biến thể thuộc cùng một ý tưởng. Chỉ xét bước đọc kết quả đã lưu; không tính thời gian tạo biểu thức, chờ mô phỏng hay nộp alpha. |
+| Quy trình hiện tại (3–7 bước) | 1. Gom kết quả và ghi chú thay đổi · 2. Kiểm tra điều kiện so sánh với bản gốc · 3. Tính chênh lệch chỉ số và nhóm biến thể · 4. Đối chiếu chỉ số với thay đổi để diễn giải đánh đổi và điều học được · 5. Chọn hướng thử tiếp, ghi lý do hoặc ghi rõ chưa đủ căn cứ. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 4: khoảng 40 phút/phiên. Khó nối kết quả định lượng với giả thuyết khi nhiều chỉ số biến động trái chiều hoặc biến thể thay nhiều yếu tố cùng lúc. |
+| Impact (nếu không giải thì sao) | Ước lượng 65 phút/phiên rà kết quả, trong đó 40 phút ở bước nghẽn; có phiên chưa chốt được hướng tiếp theo. Dễ chọn biến thể chỉ vì một chỉ số đẹp hơn hoặc thử thêm mà không biết đang kiểm tra giả thuyết gì. |
+| Success metric (baseline → target) | Trên 3 bộ kết quả đã lưu, mỗi bộ 40–80 biến thể: thời gian bước 4 từ 40 xuống ≤20 phút, tổng thời gian từ 65 xuống ≤45 phút, tính cả kiểm tra và sửa. Mọi kết luận phải dẫn đúng biến thể và chỉ số; không sai số, không quy nguyên nhân khi đổi nhiều yếu tố. “Tốt hơn” phải theo chỉ số ưu tiên và giới hạn đánh đổi được ghi trước khi rà; “thông tin mới” phải nêu giả thuyết được hỗ trợ, phản bác hoặc còn chưa phân biệt được, kèm phép thử tiếp theo. Tôi kiểm từng kết luận với dữ liệu gốc; đạt cả tốc độ và chất lượng mới coi là cải thiện. |
+| Phương án không dùng AI | Excel hoặc script tính chênh lệch, lọc điều kiện, nhóm theo yếu tố thay đổi; mẫu nhật ký ghi giả thuyết, quan sát, đánh đổi và thử nghiệm tiếp theo. Cách này xử lý tốt phần số và xếp hạng theo tiêu chí định trước; phần còn khó là diễn giải ghi chú tự do, nhất là khi nhiều yếu tố cùng đổi. Phải thử cách này trước để biết còn bao nhiêu thời gian cần giảm. |
+| Giả thuyết về AI (nếu có) | AI có thể hỗ trợ diễn giải bảng chênh lệch đã tính sẵn cùng ghi chú, chỉ ra đánh đổi và câu hỏi nghiên cứu còn bỏ ngỏ. Tôi kiểm nguồn và tự chọn hướng tiếp theo; không giao AI tính lại chỉ số, tự chạy hay nộp alpha. Thử trên cùng bộ dữ liệu với phương án không AI; chưa coi kết quả mô phỏng tốt hơn là bằng chứng hiệu quả trong tương lai. |
+| Cảm nhận nhanh | Chưa biết — ưu tiên thử Rule cho phần so sánh số; chỉ cân nhắc Workflow nếu bước diễn giải vẫn nghẽn và AI vượt được cách làm có cấu trúc. |
 
 Quy trình nháp hiện tại:
 
 ```text
-HIỆN TẠI — khoảng 18 phút/lượt (phân rã ước lượng)
+HIỆN TẠI — 65 phút/phiên, sau khi đã có kết quả 40–80 biến thể
 
-[Mở kết quả gốc: 2 phút]
-→ [Gom biểu thức, thiết lập và kết quả biến thể: 4 phút]
-→ [Đối chiếu thay đổi và chỉ số: 8 phút] ← BOTTLENECK
-→ [Ghi nhận khác biệt: 2 phút]
-→ [Chọn bước thử tiếp: 2 phút]
+[1 Gom kết quả + ghi chú: 5'] → [2 Kiểm điều kiện so sánh: 5']
+→ [3 Tính chênh lệch + nhóm: 10']
+→ [4 Diễn giải đánh đổi + điều học được: 40'] ← BOTTLENECK
+→ [5 Ghi hướng thử tiếp + lý do hoặc điều chưa rõ: 5']
 ```
 
-### Problem Card #2
+### Problem Card #2 — Ánh xạ khoản mục báo cáo tài chính (problem #5)
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi tiếp tục triển khai sau cuộc họp dự án, tôi muốn xác định quyết định cuối cùng, người chịu trách nhiệm và hạn hoàn thành của từng đầu việc, để không làm theo phương án cũ hoặc bỏ sót cam kết |
-| Actor | Người phụ trách tổng hợp biên bản của một nhóm dự án 6 người; thành viên nhận việc là bên chịu ảnh hưởng |
-| Thời điểm / bối cảnh | Sau cuộc họp tiến độ, trước khi gửi danh sách đầu việc để các thành viên xác nhận; giả định 3 cuộc họp/tuần |
-| Quy trình hiện tại (3–7 bước) | 1. Gom ghi chú và tin nhắn → 2. Tách quyết định cuối cùng khỏi các phương án thảo luận → 3. Xác nhận người phụ trách và deadline → 4. Gửi danh sách đã thống nhất cho nhóm |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3: hỏi lại và xác nhận người phụ trách, deadline, ước lượng 8/20 phút xử lý chủ động mỗi cuộc họp; thời gian chờ phản hồi chưa đo |
-| Impact (nếu không giải thì sao) | Giả định mất 20 phút/cuộc họp, tương đương 60 phút/tuần cho người tổng hợp; khoảng 2 đầu việc/tuần chưa rõ người phụ trách hoặc deadline, có nguy cơ bị bỏ sót |
-| Success metric (baseline → target) | Baseline giả định: 20 phút/cuộc họp → target: không quá 10 phút. Bấm giờ xử lý chủ động ở 3 cuộc họp trước và 3 cuộc họp pilot; 100% đầu việc được giao phải có nội dung, người phụ trách và deadline được xác nhận, mục chưa chốt được đánh dấu rõ |
-| Phương án không dùng AI | Dùng một mẫu biên bản chung gồm quyết định, đầu việc, người phụ trách và deadline; dành cuối cuộc họp để đọc lại và xác nhận; lưu tại một nơi thống nhất |
-| Giả thuyết về AI (nếu có) | Chỉ thử AI trích xuất bản nháp nếu đã có ghi chú đủ nội dung và cách dùng mẫu chưa đủ hiệu quả. AI phải đánh dấu phần thiếu, không tự đặt người phụ trách hoặc deadline; người chủ trì duyệt trước khi gửi |
-| Cảm nhận nhanh | No AI — ưu tiên mẫu biên bản và bước xác nhận cuối cuộc họp |
+| Job Story | Khi chuẩn hóa khoản mục trong báo cáo tài chính quý của một doanh nghiệp mới, tôi muốn xác định khoản nào tương ứng với danh mục chuẩn của quỹ, để tránh gộp sai bản chất dữ liệu đầu vào nghiên cứu định lượng. |
+| Actor | Tôi, người làm dữ liệu có 5 năm kinh nghiệm tại quỹ, chịu trách nhiệm đề xuất ánh xạ; chuyên viên nghiên cứu duyệt trường hợp chưa rõ. |
+| Thời điểm / bối cảnh | Sau khi đã trích xuất và kiểm đúng số liệu, trước khi đưa vào kho chuẩn hóa. Phạm vi một ngành, tập trung 18 tên khoản mục ngoài từ điển trong đợt 10 báo cáo; không xử lý lỗi trích xuất. |
+| Quy trình hiện tại (3–7 bước) | 1. Lọc khoản mục chưa có trong từ điển · 2. Tìm thuyết minh liên quan · 3. Đọc phạm vi kế toán và chọn khoản mục chuẩn · 4. Đối chiếu, sửa ánh xạ · 5. Lưu ánh xạ cùng nguồn và trạng thái duyệt. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3: khoảng 50 phút/đợt để phân biệt khoản mục có tên gần giống nhưng khác bản chất hoặc phạm vi; không thể chỉ so khớp tên. |
+| Impact (nếu không giải thì sao) | Theo tình huống CP1, mất 90 phút cho một đợt và phải sửa 4/18 ánh xạ ban đầu. Nếu không phát hiện, chuỗi dữ liệu chuẩn hóa có thể gộp các khoản không tương đương, ảnh hưởng nghiên cứu phía sau. |
+| Success metric (baseline → target) | Với một đợt tương đương 18 khoản mục chưa có trong từ điển: tổng thời gian từ 90 xuống ≤60 phút; bước 3 từ 50 xuống ≤25 phút; số ánh xạ ban đầu cần sửa từ 4 xuống ≤1. Chuyên viên duyệt từng khoản theo thuyết minh; mọi ánh xạ được chấp nhận phải có nguồn. Ghi riêng số khoản chưa xác định, không tính để trống là gán đúng và không đạt nếu chỉ giảm lỗi bằng cách bỏ qua phần lớn khoản mục. |
+| Phương án không dùng AI | Mở rộng từ điển theo ngành, tên đồng nghĩa và định nghĩa; dùng quy tắc so khớp rồi chuyển ngoại lệ cho chuyên viên. Đủ với tên mới nhưng cùng nghĩa đã biết; chưa đủ khi phải đọc thuyết minh mới xác định được phạm vi. So sánh trên cùng các khoản chưa từng dùng để bổ sung từ điển. |
+| Giả thuyết về AI (nếu có) | AI có thể đối chiếu tên, định nghĩa chuẩn và đoạn thuyết minh để đề xuất ánh xạ có trích nguồn, hoặc báo chưa đủ thông tin. Chuyên viên duyệt trước khi lưu; AI không tự đổi số liệu hay tạo danh mục mới. Chỉ đáng thử nếu giảm thời gian đọc mà không tăng lỗi so với từ điển mở rộng. |
+| Cảm nhận nhanh | Workflow — giả thuyết sơ bộ cho phần ngoại lệ cần đọc ngữ cảnh; các trường hợp từ điển xử lý được giữ ở Rule. |
 
 Quy trình nháp hiện tại:
 
 ```text
-HIỆN TẠI — khoảng 20 phút/cuộc họp, 60 phút/tuần (giả định)
-Chỉ tính thời gian xử lý sau họp; chưa gồm thời gian chờ phản hồi.
+HIỆN TẠI — 90 phút/đợt, 18 khoản mục ngoài từ điển trong 10 báo cáo
 
-[Gom ghi chú và tin nhắn: 4 phút]
-→ [Tách quyết định cuối cùng: 5 phút]
-→ [Xác nhận người phụ trách và deadline: 8 phút] ← BOTTLENECK
-→ [Gửi danh sách đã thống nhất: 3 phút]
+[1 Lọc khoản mục chưa ánh xạ: 5'] → [2 Tìm thuyết minh: 15']
+→ [3 Đọc ngữ cảnh + chọn khoản mục chuẩn: 50'] ← BOTTLENECK
+→ [4 Đối chiếu + sửa: 15'] → [5 Lưu nguồn + trạng thái duyệt: 5']
 ```
 
-### Problem Card #3
+### Problem Card #3 — Mâu thuẫn yêu cầu đơn in (problem #9)
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi có đề nghị mua vật tư phục vụ công việc, tôi muốn biết đề nghị đang chờ ai duyệt và còn thiếu thông tin gì, để bổ sung hoặc nhắc đúng người trước khi ảnh hưởng tiến độ |
-| Actor | Nhân viên gửi đề nghị mua vật tư; phối hợp với đầu mối mua hàng và người phê duyệt |
-| Thời điểm / bối cảnh | Khi cần kiểm tra một đề nghị chưa có kết quả; giới hạn pilot trong một phòng ban và một luồng duyệt cố định |
-| Quy trình hiện tại (3–7 bước) | 1. Tìm lại đề nghị đã gửi → 2. Hỏi đầu mối mua hàng → 3. Xác định người đang giữ hồ sơ và thông tin thiếu → 4. Bổ sung hoặc nhắc đúng người → 5. Ghi nhận trạng thái mới |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3: lần theo trao đổi để xác định hồ sơ đang ở đâu, ước lượng 6/15 phút xử lý chủ động mỗi lượt tra cứu; thời gian chờ duyệt là phần riêng |
-| Impact (nếu không giải thì sao) | Giả định 10 đề nghị/tuần, mỗi đề nghị phát sinh 2 lượt hỏi trạng thái; nếu mỗi lượt mất 15 phút thì tổng công sức là 300 phút/tuần. Thời gian chờ duyệt khoảng 2 ngày làm việc/đề nghị, chưa xác định phần nào có thể giảm |
-| Success metric (baseline → target) | Baseline giả định: 15 phút/lượt tra cứu → target: không quá 5 phút. Bấm giờ 10 lượt trước và 10 lượt pilot; ít nhất 9/10 lượt xác định đúng trạng thái và người đang xử lý khi đối chiếu với đầu mối mua hàng. Không lấy giảm thời gian duyệt làm cam kết của pilot |
-| Phương án không dùng AI | Dùng bảng theo dõi chung có mã đề nghị, ngày gửi, trạng thái, người đang xử lý, thông tin thiếu và lần cập nhật cuối; quy định người cập nhật ở mỗi bước, người tra cứu chỉ xem các hồ sơ được phép |
-| Giả thuyết về AI (nếu có) | Chưa cần AI: trạng thái và trách nhiệm có thể biểu diễn bằng trường cố định. Nếu cần nhắc quá hạn, thử rule theo ngày và trạng thái; không tự phê duyệt hoặc thay đổi thẩm quyền |
-| Cảm nhận nhanh | No AI cho pilot bằng bảng chung; Rule nếu cần nhắc và kiểm tra trường bắt buộc |
+| Job Story | Khi chốt báo giá in tờ rơi cho khách doanh nghiệp nhỏ, tôi muốn phát hiện yêu cầu mâu thuẫn giữa tin nhắn, bản thiết kế và ghi chú sửa cuối, để tránh báo giá sai quy cách hoặc phải in lại. |
+| Actor | Nhân viên nhận đơn tại một cơ sở in nhỏ, phụ trách tổng hợp quy cách và hỏi khách xác nhận trước báo giá. |
+| Thời điểm / bối cảnh | Khách đã gửi bản thiết kế và sửa yêu cầu qua nhiều tin nhắn. Chỉ xét giấy và số mặt của đơn in tờ rơi; chưa xét tính giá hay điều phối sản xuất. |
+| Quy trình hiện tại (3–7 bước) | 1. Gom phiếu yêu cầu, thiết kế và trao đổi · 2. Đối chiếu yêu cầu theo thứ tự sửa, đánh dấu mâu thuẫn · 3. Soạn câu hỏi xác nhận · 4. Ghi phản hồi khách và cập nhật phiếu quy cách. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 2: khoảng 10 phút/đơn có mâu thuẫn, phải phân biệt yêu cầu còn hiệu lực với nội dung đã bị thay thế hoặc chưa được xác nhận. |
+| Impact (nếu không giải thì sao) | Tình huống CP1 có 3/15 đơn/tuần cần xác nhận lại, tốn 20 phút thao tác/đơn, tương đương 60 phút/tuần cho ba đơn này. Chưa tính thời gian chờ khách; báo giá sai hoặc in lại là rủi ro, chưa có số liệu thiệt hại. |
+| Success metric (baseline → target) | Trên 10 bộ yêu cầu đã ẩn danh, gồm cả đơn nhất quán và đơn có mâu thuẫn: với đơn có mâu thuẫn, thời gian thao tác từ 20 xuống ≤12 phút, bước 2 từ 10 xuống ≤4 phút. Nhân viên lập đáp án đối chiếu từ yêu cầu cuối đã được khách xác nhận; không bỏ sót mâu thuẫn giấy/số mặt, tối đa 1 cảnh báo nhầm trên 10 bộ. Tính cả thời gian kiểm tra và sửa câu hỏi; không dùng thời gian khách phản hồi để đánh giá. |
+| Phương án không dùng AI | Phiếu chốt quy cách có phiên bản, đánh dấu yêu cầu đã thay thế, checklist giấy/số mặt và bắt buộc khách xác nhận. Có thể đủ nếu khách cập nhật trực tiếp trên phiếu; vẫn tốn công khi thay đổi nằm trong câu nói mơ hồ hoặc ghi chú trên bản thiết kế. Cần đo phần còn sót sau khi áp dụng phiếu trước. |
+| Giả thuyết về AI (nếu có) | AI có thể đối chiếu nội dung và thứ tự sửa để chỉ ra hai nguồn đang mâu thuẫn, giúp nhân viên hỏi đúng điểm chưa rõ. Không mặc định tin nhắn mới nhất thay toàn bộ yêu cầu cũ; nhân viên kiểm rồi hỏi khách, không tự quyết quy cách hoặc gửi báo giá. |
+| Cảm nhận nhanh | Chưa biết — thử No AI với phiếu có phiên bản trước; chỉ cân nhắc Workflow nếu đối chiếu nội dung tự do vẫn là bước nghẽn. |
 
 Quy trình nháp hiện tại:
 
 ```text
-HIỆN TẠI — khoảng 15 phút/lượt tra cứu (giả định)
-10 đề nghị/tuần × 2 lượt hỏi/đề nghị × 15 phút = 300 phút/tuần.
-Thời gian chờ duyệt khoảng 2 ngày làm việc/đề nghị được tính riêng.
+HIỆN TẠI — 20 phút thao tác/đơn có mâu thuẫn, không tính chờ khách
 
-[Tìm lại đề nghị: 2 phút]
-→ [Hỏi đầu mối mua hàng: 3 phút]
-→ [Xác định người giữ hồ sơ và thông tin thiếu: 6 phút] ← BOTTLENECK
-→ [Bổ sung hoặc nhắc đúng người: 3 phút]
-→ [Ghi nhận trạng thái mới: 1 phút]
+[1 Gom tài liệu: 3']
+→ [2 Đối chiếu các lần sửa + đánh dấu mâu thuẫn: 10'] ← BOTTLENECK
+→ [3 Soạn câu hỏi xác nhận: 4']
+→ [4 Ghi phản hồi + cập nhật phiếu: 3']
 ```
 
 ### Card muốn pitch nhất
 
-- Card số: 1 — so sánh các biến thể tín hiệu định lượng.
-- Vì sao: Gắn trực tiếp với công việc hiện tại và đã có ước lượng tổng thời gian từ trải nghiệm cá nhân; có thể giới hạn pilot ở một tín hiệu gốc cùng các biến thể, dùng bảng kết quả sẵn có để đo trước/sau.
-- Câu hỏi muốn nhóm phản biện: Điểm nghẽn chính là gom và đối chiếu số liệu hay diễn giải kết quả? Một bảng so sánh có công thức đã đủ chưa? Nếu mỗi biến thể thay nhiều yếu tố, có thể kết luận được điều gì và điều gì chưa thể kết luận?
+- Card số: **1 — problem #11: So sánh biến thể alpha.**
+- Vì sao: gắn trực tiếp với công việc của tôi, có thể dùng kết quả đã lưu của một ý tưởng để thử nhỏ; phần khó nằm ở diễn giải đánh đổi và xác định điều học được, có thể tách khỏi phần tính toán bằng quy tắc.
+- Câu hỏi muốn nhóm phản biện: Nếu tôi đã có bảng chênh lệch, tiêu chí ưu tiên và nhật ký giả thuyết chuẩn, phần diễn giải nào vẫn mất thời gian và làm sao chứng minh hỗ trợ thêm giúp chọn phép thử có căn cứ hơn, thay vì chỉ tạo lời giải thích nghe hợp lý?
 
 ### AI đã phản biện card thế nào
 
-Các điểm dưới đây là phản biện của AI và điều chỉnh đã đưa vào bản nháp; học viên cần tự xác nhận mức đồng ý trước khi pitch.
-
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| Card #1: thay nhiều yếu tố cùng lúc không đủ để kết luận yếu tố nào gây ra thay đổi kết quả | Cần học viên xác nhận | Giới hạn đầu ra ở mô tả khác biệt; yêu cầu so sánh điều kiện thử nghiệm và không để AI tự kết luận nhân quả |
-| Card #2: thiếu thông tin từ cuộc họp thì AI không thể khôi phục chắc chắn quyết định, người phụ trách hoặc deadline | Cần học viên xác nhận | Ưu tiên mẫu biên bản và xác nhận cuối cuộc họp; yêu cầu đánh dấu phần chưa chốt thay vì tự điền |
-| Card #3: biết trạng thái không đồng nghĩa người duyệt sẽ xử lý nhanh hơn | Cần học viên xác nhận | Tách thời gian tra cứu khỏi thời gian chờ duyệt; pilot chỉ đo việc xác định đúng trạng thái và người đang xử lý |
-| Card #2 và #3 chưa có bằng chứng thực tế; các thời gian phân rã của cả 3 card chưa được đo | Cần học viên xác nhận | Gắn nhãn giả định hoặc ước lượng và bổ sung cách đo baseline trước khi đánh giá pilot |
+| Card #1: “Tốt hơn” chưa có tiêu chí; dễ chọn theo một chỉ số tăng và bỏ qua đánh đổi. | Đồng ý | Yêu cầu ghi chỉ số ưu tiên và giới hạn đánh đổi trước khi rà; chỉ so các biến thể có điều kiện tương thích với bản gốc. |
+| Card #1: “Thông tin mới” mơ hồ; thay nhiều yếu tố không cho phép kết luận nguyên nhân. | Đồng ý | Định nghĩa thông tin mới bằng giả thuyết được hỗ trợ, phản bác hoặc chưa phân biệt được; yêu cầu dẫn nguồn và nêu phép thử tiếp theo, không quy nguyên nhân khi chưa tách yếu tố. |
+| Card #1: Có thể chỉ cần bảng so sánh và nhật ký chuẩn, chưa có lý do chọn AI. | Đồng ý | Đưa Excel/script và mẫu nhật ký thành phương án đối chứng; giữ cảm nhận “Chưa biết”, chỉ thử AI ở phần diễn giải còn nghẽn. |
+| Cả ba card: Baseline chưa được đo, target giảm thời gian có thể che giấu sai sót hoặc công sửa đầu ra. | Đồng ý | Ghi rõ số liệu mô phỏng và ước lượng; bổ sung cách đo trên tập mẫu, tính cả kiểm tra/sửa và điều kiện chất lượng. Chưa tuyên bố target đã đạt. |
+| Card #2: Có thể giảm lỗi giả tạo bằng cách để mọi ánh xạ ở trạng thái chưa xác định. | Đồng ý | Ghi riêng số khoản chưa xác định; không tính bỏ qua là gán đúng; chuyên viên kiểm cả chất lượng và mức độ hoàn thành trên cùng tập khoản mục. |
+| Card #3: Tin nhắn mới nhất chưa chắc thay toàn bộ yêu cầu; tổng thời gian còn phụ thuộc khách. | Đồng ý | Giữ trạng thái chưa rõ để nhân viên hỏi khách; chỉ đo thời gian thao tác, tách thời gian chờ và không tự chốt quy cách. |
 
 ---
 

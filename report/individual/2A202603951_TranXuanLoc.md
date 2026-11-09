@@ -20,14 +20,14 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
+| 1 |Tốn thời gian |Khi làm bài tập nhóm, tôi muốn xếp lịch họp nhanh, để không phải nhắn tin hỏi từng người rảnh lúc nào|Trưởng nhóm, các thành viên |Nhóm 10 người nhắn tin trên Zalo mất 2 ngày mới chốt được 1 buổi họp chung |
+| 2 |Cần đọc, tổng hợp |Khi gần thi cuối kỳ, tôi muốn gom các ý chính từ 10 file slide bài giảng, để ôn thi nhanh hơn |Sinh viên |Mất cả buổi tối (3-4 tiếng) chỉ để mở từng file PDF copy ý ra Word |
+| 3 |Lặp lại |Khi cuối tháng, tôi muốn tổng hợp tiền ăn uống, mua sắm từ Momo và thẻ ngân hàng, để biết mình có tiêu lố tiền không |Cá nhân quản lý tài chính |Mất 30 phút mỗi Chủ nhật ngồi xem lại lịch sử trừ tiền và ghi ra sổ, excel |
+| 4 |Pain từ người khác |Khi làm trưởng nhóm, tôi muốn mọi người tự nhớ hạn nộp bài (deadline), để tôi không phải đi nhắc từng người |Trưởng nhóm |Tuần nào cũng phải tag tên 3 người trên Zalo nhóm để "đòi nợ" bài tập |
+| 5 |Lặp lại |Khi trực Fanpage cho câu lạc bộ, tôi muốn có sẵn câu trả lời cho các câu hỏi về lịch trình, để không phải gõ đi gõ lại |Ban Truyền thông / Admin |Mỗi ngày phải trả lời cùng 1 câu hỏi "Khi nào CLB tuyển thành viên?" khoảng 15 lần |
+| 6 |Cần đọc, tổng hợp |Khi mua đồ đắt tiền trên Shopee, tôi muốn lọc ra các đánh giá (review) thật, để không bị lừa mua phải hàng dỏm |Người mua hàng |Kéo đọc bình luận mất 20 phút mà vẫn hoa mắt vì nhiều bình luận khen quá mức |
+| 7 |Tốn thời gian |Khi ốm cần xin nghỉ học/nghỉ làm, tôi muốn có sẵn một mẫu email lịch sự, để gửi đi nhanh mà không sợ thầy cô/sếp chê là thiếu chuyên nghiệp |Học sinh, nhân viên |Ngồi nhìn màn hình 15 phút, gõ xong lại xóa không biết mở lời sao cho khéo |
+| 8 |Lặp lại |Khi đi ăn chung, đi du lịch với nhóm, tôi muốn tự động chia tiền sau chuyến đi, để không phải ngồi cộng trừ từng tờ hóa đơn |Người ứng tiền trước |Cuối buổi đi chơi phải ôm đống bill ngồi bấm máy tính 20 phút rất đau đầu |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 

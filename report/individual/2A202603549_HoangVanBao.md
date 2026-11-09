@@ -155,25 +155,25 @@ Quy trình nháp hiện tại: ~21 phút (cả HR và trưởng BP)
 
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5).
 
-**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?
 Nghe bài của Hoàng (họp xong gom việc, chuẩn hóa đồ án, ôn thi) và Hạ (họp Triage, phân loại bug), tôi nhận ra bài của mình và của Hạ cùng một dạng: đều là đọc một lượng lớn đầu mục (CV, ticket) rồi mới quyết định, và nhóm xếp chung vào Cluster B. Điều tôi học nhiều nhất là cách các bạn mô tả bottleneck bằng con số cụ thể. Hạ nói buổi họp 45 phút thường lố 15–20 phút, Thành nói 6 tin nhắc mỗi tuần và 2 lần phải nhắc lần hai. Pitch của tôi cũng có số (160 phút/vị trí), nhưng tôi chưa tự hỏi số đó đến từ đâu. Giờ tôi biết một con số chưa có nguồn thì chưa phải bằng chứng.
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?
 Có, và chính tôi cũng bị. Candidate #2 của tôi là “gửi thư từ chối lịch sự có nhắc đúng vị trí”, nghe như một nhu cầu nhưng thực ra tôi đã nghĩ sẵn đến việc AI viết thư. Khi Thành hỏi “mail merge kết hợp template đã giải được chưa mà phải cần AI?”, tôi nhận ra mình chưa chứng minh được template không đủ. Ở cấp nhóm, khi dựng Opportunity Solution Tree, các ý như “chatbot AI nhắn tin nhắc việc” hay “bảng Trello tự đổi màu” đều bị gạch vì là tính năng chứ không phải opportunity. Nhóm xử lý bằng cách viết lại mỗi nhánh thành một nỗi đau của người dùng.
 
-**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.
 Có. Với candidate #1 (lọc 80 CV), Hoàng hỏi: “Không có AI thì cách đơn giản nhất để giảm một nửa thời gian là gì? Có dùng form lọc trước được không?” Ban đầu tôi định bảo vệ, nhưng khi nghĩ lại thì form khảo sát 3 tiêu chí bắt buộc đặt ngay lúc ứng viên nộp hồ sơ có thể loại được rất nhiều người, không cần AI đọc CV. Với candidate #3, Hạ hỏi tôi có bằng chứng trưởng bộ phận từng phàn nàn vì không kịp đọc CV không, và tôi không có. Hai câu hỏi đó làm tôi đổi ý: đề tài của mình chưa đủ mạnh để đứng đầu shortlist.
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?
 Có. Tôi tưởng nguyên nhân trễ deadline gần như chỉ là quên hoặc trôi tin nhắn. Nhưng một thành viên phản bác thẳng: nhiều khi họ biết rõ hạn nộp, chỉ là bài môn khác dồn dập nên không kịp làm. Điều này làm giả định #2 của nhóm yếu đi nhiều hơn tôi dự đoán. Tôi cũng bất ngờ vì cả hai nhóm trưởng đều đòi được duyệt tin nhắn trước khi gửi. Tôi từng nghĩ người dùng sẽ thích tự động hóa tối đa, nhưng thực tế họ coi trọng việc giữ hòa khí hơn việc tiết kiệm vài phút.
 
-**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+6.5. Điều khó nhất khi viết Problem Statement là gì?
 Với tôi, khó nhất là buộc mình viết bottleneck mà không nhắc đến giải pháp. Khi viết các candidate, tôi quen mở đầu bằng “tôi muốn AI giúp...”, nên khi viết Problem Statement phải kiềm lại để chỉ mô tả ai đang làm gì, mất bao lâu, kẹt ở đâu. Phần Boundary cũng khó: phải quyết định AI không được làm gì (không tự gửi tin, không tự đổi deadline), trong khi theo bản năng tôi thường nghĩ AI càng làm được nhiều càng tốt. Đặt giới hạn trước rồi mới nghĩ mức can thiệp là cách làm ngược với thói quen của tôi.
 
-**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?
 Nếu làm lại, tôi sẽ mang đề tài của mình đi phỏng vấn ít nhất 2–3 người làm HR thật trước khi pitch, để có bằng chứng thay vì số ước lượng. Khi nhóm chọn bài của Thành, tôi sẽ phản biện mạnh hơn hai điểm. Thứ nhất, metric “0 lần trễ hạn” quá tuyệt đối và nằm ngoài tầm kiểm soát của công cụ. Thứ hai, nhóm chỉ đồng ý một phần với câu hỏi “Rule template có đủ chưa?”, nên tôi sẽ đề nghị thử so sánh tin nhắn mẫu với tin AI soạn trước khi kết luận cần AI. Tôi cũng sẽ hỏi kỹ hơn về việc đo baseline 45 phút/tuần vì hiện chỉ mới ước lượng.
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi _problem → quy trình → metric → boundary → mức can thiệp AI → quyết định_ của bài nhóm mình.
+6.7. Hiểu bài: giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi _problem → quy trình → metric → boundary → mức can thiệp AI → quyết định_ của bài nhóm mình.
 Nhóm trưởng sinh viên (3–5 người) giao việc xong nhưng không biết ai đã thực sự nắm deadline, vì tin nhắn trong nhóm chat bị trôi và nhiều bạn chỉ thả tim cho có. Quy trình hiện tại gồm 5 bước, từ giao việc trên nhóm chat đến kiểm tra bài nộp sát hạn, và tốn khoảng 40–50 phút/tuần của nhóm trưởng. Nút thắt nằm ở bước 3, khi nhóm trưởng phải nhắn riêng từng bạn (khoảng 20 phút/đợt, 2–3 đợt/tuần) và thường phải giục lần hai mới có phản hồi. Vì vậy nhóm đo thành công bằng việc giảm thời gian theo dõi từ 45 xuống dưới 12 phút/tuần và có tỷ lệ xác nhận nắm deadline cao trong 24h đầu. Ranh giới an toàn là AI chỉ soạn nháp tin nhắc, không tự gửi tin và không được đổi deadline, nên nhóm trưởng luôn là người duyệt và bấm gửi. Nhóm chọn mức Workflow kết hợp Rule: Rule ghi nhận ai đã bấm xác nhận, còn AI chỉ can thiệp ở bước soạn tin nhắc cho người chưa bấm sau 24h. Mức này được chọn thay vì thuần Rule vì tin nhắn mẫu lặp lại dễ bị coi là spam, và thay vì Agent vì nhắn nhầm hoặc nhắn thô lỗ sẽ làm mất hòa khí trong nhóm. Với bốn rủi ro được đánh giá thấp, quyết định là Go ở phạm vi nhỏ: pilot 2 tuần, và quay về Google Sheets nếu tỷ lệ xác nhận dưới 50% hoặc việc duyệt tin tốn thời gian hơn tự gõ.
 
 ---

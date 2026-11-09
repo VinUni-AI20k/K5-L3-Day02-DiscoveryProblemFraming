@@ -131,7 +131,7 @@ Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 ```text
 cp5-workflow-current.jpeg
 ```
-![Current Workflow](../assets/cp5-workflow-current.jpeg)
+**Current Workflow**
 
 ```mermaid
 flowchart LR
@@ -147,7 +147,7 @@ flowchart LR
     subgraph CHUTHICH["Chú thích"]
         direction LR
         L1["🔴 = Bottleneck"]
-        L2["⏱ Tổng: khoảng 150 phút (2,5 giờ/môn)"]u
+        L2["⏱ Tổng: khoảng 150 phút (2,5 giờ/môn)"]
     end
 
     S6 ~~~ L1
@@ -156,6 +156,7 @@ flowchart LR
     classDef legend fill:#f5f5f5,stroke:#999,stroke-dasharray:4 3,color:#000;
     class S3 bottleneck;
     class L1,L2 legend;
+
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
@@ -180,7 +181,7 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 ```text
 cp5-workflow-future.jpeg
 ```
-![Future Workflow](../assets/cp5-workflow-future.jpeg)
+**Future Workflow**
 
 ```mermaid
 flowchart LR

@@ -13,7 +13,7 @@
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 | Nguyễn Văn Cường | 2A202603750 | Phụ trách Problem Card, vẽ quy trình & đồng viết báo cáo | nvcuong96 |
-| 2 | Hiếu | (Điền MSSV) | Phụ trách Research giải pháp & tổng hợp dữ liệu | (GitHub) |
+| 2 | Nguyễn Văn Hiệu | 2A202603746 | Phụ trách Research giải pháp & tổng hợp dữ liệu | nguyenvanhieu03746 |
 | 3 | Hải | (Điền MSSV) | Người phản biện chính, kiểm chứng rủi ro | (GitHub) |
 | 4 | Khôi | (Điền MSSV) | Điều phối thời gian, chốt Problem Statement v1 | (GitHub) |
 
@@ -60,3 +60,27 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 - Hiểu được sự khác biệt cốt lõi giữa "Giải pháp trá hình" (Solution-first) và "Vấn đề/Nhu cầu thật" (Opportunity) khi xây dựng cây OST.
 - Nhận ra rằng trong các bài toán vận hành phức tạp, AI không nên thay thế con người hoàn toàn mà cần thiết kế theo hướng Hỗ trợ (Augmentation) với ranh giới con người kiểm duyệt (Human-in-the-loop) để phòng ngừa gian lận.
+
+### NguyenVanHieu-2A202603746
+
+**Phần việc phụ trách:**
+- Pitch 3 Problem Card cá nhân (Tối ưu hành trình di chuyển sinh viên 30km buýt vs xe máy, Đọc hiểu bài báo học thuật tiếng Anh, Lọc thông báo nhóm chat).
+- Phụ trách chính phần Research giải pháp công nghệ đã có (Uber Michelangelo, Zendesk AI) và tổng hợp bằng chứng khoa học quốc tế (ACM CHI '15).
+- Tham gia phân loại Cluster, xây dựng cây OST và thảo luận chấm điểm shortlist chọn candidate #3.
+- Cùng nhóm xây dựng 4 tiêu chí đánh giá (eval metrics) cho LLM và xác lập ranh giới (boundary) trong Problem Statement v1.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+- Đóng góp 3 candidate đầu vào cho nhóm (#1, #9, #12 trong bảng Pitch chung).
+- Đặt câu hỏi phản biện sâu về rào cản độ trễ API real-time cho bài của Khôi (#6 Cứu hộ pin xe điện) và ưu thế so với ChatGPT cho bài của Hải (#2 Hợp đồng thuê nhà).
+- Tổng hợp và đối chuẩn chuyên sâu 2 giải pháp công nghệ hàng đầu: *Uber Michelangelo Platform* (học cách đối soát telemetry) và *Zendesk AI* (chỉ ra khoảng trống không hiểu log GPS).
+- Đóng góp luận cứ cho Mục 3.2, 3.3 và Mục 7 trong `group_report.md`.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+- Bảng Pitch (candidate #1, #9, #12) và câu hỏi phản biện trong Mục 2.1 `group_report.md`.
+- Mục 3.2 (Bằng chứng kiểm chứng ACM) và Mục 3.3 (Bảng Research giải pháp Uber Michelangelo, Zendesk AI).
+- Mục 7 (Tiêu chí đánh giá chất lượng đầu ra AI).
+- File cá nhân: `report/individual/2A202603746_NguyenVanHieu.md`.
+
+**Điều mình học được từ phần nhóm:**
+- Nhận thức sâu sắc rằng bài toán công nghệ phải bắt nguồn từ nỗi đau vận hành có thật và đo lường được (như 22 phút đối soát/ticket trước giờ chốt thưởng), tránh sa vào bẫy "bệnh cầm búa đi tìm đinh" (solution-first).
+- Hiểu rõ ranh giới giữa Augmentation (hỗ trợ con người) và Automation (tự động hóa hoàn toàn): trong các bài toán rủi ro cao về tài chính/thưởng phạt, AI chỉ nên đóng vai trò trợ lý tóm tắt bằng chứng, quyền phán quyết cuối cùng phải luôn thuộc về con người (Human-in-the-loop).

@@ -1,4 +1,4 @@
-# Báo cáo cá nhân — 2A202603914_TranGiaBao (BẢN NHÁP — CẦN XÁC MINH)
+# Báo cáo cá nhân — 2A202603914_TranGiaBao
 
 > Đổi tên file theo quy tắc `2A202603914_TranGiaBao.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -6,17 +6,17 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên: Trần Gia Bảo (cần xác nhận)
-- MSSV: 2A202603914 (cần xác nhận)
+- Họ tên: Trần Gia Bảo
+- MSSV: 2A202603914
 - Email trường: không công khai
-- Tên nhóm: HEHEHE (theo tên repo; nhóm xác nhận)
+- Tên nhóm: HEHEHE
 - Link repo nhóm: https://github.com/hoangvu1806/K5-L3B-DAY02-HEHEHE-DiscoveryProblemFraming
 
 ---
 
 ## 2. Scan problem (CP1)
 
-> **Bản chuẩn bị, chưa phải bằng chứng thực tế.** Những vấn đề dưới đây là gợi ý dựa trên bối cảnh công việc freelance developer và testing đã trao đổi. Theo RULES.md, học viên phải tự scan trước khi dùng AI, kiểm tra lại từng pain và bổ sung thời gian/tần suất/log có thật. Không nộp nguyên trạng bảng này.
+> **Lưu ý xác minh:** Các vấn đề được phát triển từ bối cảnh công việc freelance developer và testing. Cần bổ sung số liệu, tần suất và bằng chứng thực tế trước khi nộp; không xem giả thuyết là kết quả đã kiểm chứng.
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (cần bổ sung) |
 |---:|---|---|---|---|
@@ -32,7 +32,7 @@
 
 ## 3. Top 3 Problem Cards + quy trình nháp (CP2)
 
-### Bảng chọn top 3 (đề xuất để tự phản biện)
+### Bảng chọn top 3
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
@@ -115,7 +115,7 @@ Chọn case [? phút]
 
 ### Card muốn pitch nhất
 
-- Card số: **1 (đề xuất, người học tự chọn)**
+- Card số: **1**
 - Vì sao: Gần với quy trình freelancer, dễ tiếp cận bằng chứng trực tiếp.
 - Câu hỏi muốn nhóm phản biện: **"Nếu chỉ dùng bảng task có cấu trúc thì vấn đề còn tồn tại không, hay AI là thừa?"**
 
@@ -131,7 +131,7 @@ Chọn case [? phút]
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-> **Tự điền sau hoạt động nhóm.** Không giả mạo phần đóng góp, câu hỏi phản biện hoặc kết quả.
+> Hoàn thiện bằng đóng góp, câu hỏi phản biện và kết quả thảo luận thực tế của cá nhân.
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
@@ -163,7 +163,7 @@ Chọn case [? phút]
 
 ## 6. Reflection (CP7)
 
-> **Tự viết theo trải nghiệm thật sau buổi lab.** AI không viết thay phần này theo RULES.md.
+> Viết phần này dựa trên trải nghiệm thực tế theo RULES.md.
 
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 

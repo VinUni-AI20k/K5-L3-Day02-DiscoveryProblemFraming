@@ -16,7 +16,7 @@
 |   2 | Phan Hoàng Phúc  | 2A202603455 | Đề xuất bài toán đồng bộ tiến độ, phụ trách kiểm chứng (Assumption Map, phỏng vấn/survey) & đánh giá mức can thiệp AI / quyết định | `bookingdilo`           |
 |   3 | Khổng Tiến Dương | 2A202603467 | Gom cluster & cây OST, phân tích luồng bàn giao code/module, phụ trách research giải pháp đã có & bộ tiêu chí đánh giá (Eval)      | `khongtienduongcv-byte` |
 |   4 | Nguyễn Vũ Hoàng  | 2A202603491 | Người phản biện chính, đối chiếu phương án không dùng AI (No AI / Rule), đóng góp ranh giới an toàn (Boundary / HITL) & kiểm chứng | `bacphan204-tech`       |
-
+|   5 | Nguyễn Ngọc Hiếu | 2A202603502 | Người phản biện , đối chiếu phương án không dùng AI (No AI / Rule), đóng góp ranh giới an toàn (Boundary / HITL) & kiểm chứng | `bacphan204-tech`   
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
 Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối thời gian, ghi chép, người phản biện chính, phụ trách kiểm chứng (phỏng vấn/survey), phụ trách research, vẽ quy trình, viết Problem Statement.

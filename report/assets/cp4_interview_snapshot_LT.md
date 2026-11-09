@@ -1,0 +1,18 @@
+# CP4 — Interview snapshot 2
+
+| Trường | Nội dung |
+|---|---|
+| Người được hỏi (vai trò) | Nhân viên content shop thời trang nữ bán lẻ (phụ trách 2 fanpage và 1 trang cá nhân bán hàng — *ghi chú nội bộ: bạn L., ẩn họ tên đầy đủ theo quy định bảo mật*) |
+| Thời điểm, cách hỏi | 09/11/2026, gọi điện trực tiếp 14 phút  |
+| Có kể giải pháp trước khi hỏi không? | Không |
+| Câu nói đáng nhớ nhất (nguyên văn) | *"Viết bài thì lâu thật, nhưng sốt ruột nhất là bài viết xong rồi mà ngồi canh sếp xem tin nhắn để duyệt, nhiều hôm lỡ cả khung giờ vàng."* |
+| Lần gần nhất gặp vấn đề | 4 ngày trước (đợt sale đầu tháng): Đăng bài bán mẫu váy sale giá 299k nhưng gõ nhầm thành 219k do bảng giá kho gửi sang cập nhật muộn. Sau khi đăng 15 phút, khách ồ ạt comment chốt đơn thì bên trực page mới phát hiện và báo lại. Mất 2 phút sửa bài nhưng shop phải chấp nhận bù lỗ cho 3 khách đầu tiên đã chốt giá nhầm. |
+| Workaround hiện tại | Mở Google Docs gõ caption, thông số size, chất liệu và giá; gửi link Docs qua Zalo cho chị chủ shop duyệt bằng cách thả tim (`❤️`); sau đó copy thủ công nội dung và kéo ảnh vào *Meta Business Suite* để đặt lịch đăng theo khung giờ. Dùng chung một file Google Sheets để theo dõi bài (Ngày, Giờ, Link ảnh, Nội dung nháp, Trạng thái, Người phụ trách). |
+| Mất bao lâu, bao lần | - **Tần suất:** 4 bài/ngày trên 2 fanpage (~25–28 bài/tuần).<br>- **Thời gian từng bước cho 1 bài:**<br>  1. Lựa ảnh kho & chỉnh màu cơ bản bằng Canva: **~15 phút/bài**.<br>  2. Soạn nội dung (hỏi số đo/chất liệu từ kho, viết caption, giá): **~20–25 phút/bài** (tổng soạn + ảnh là 35–40 phút/bài).<br>  3. Gửi link Zalo chờ chủ shop duyệt: **30 phút đến 3,5 tiếng** (lần gần nhất gửi từ 16h đến 19h30 mới được duyệt do chủ bận việc ở kho).<br>  4. Copy text, kéo ảnh và đặt lịch trên *Meta Business Suite*: **~5 phút/bài**.<br>- **Lỡ khung giờ đăng:** thỉnh thoảng xảy ra với bài bắt trend hoặc bài sale gấp do chủ duyệt chậm.<br>- **Sai giá / sai thông tin:** khoảng **1–2 lần/tháng**; thời gian sửa trên bài mất 2–5 phút nhưng tốn thời gian xử lý khiếu nại khách hàng. |
+| Tín hiệu phản bác (nếu có) | 1. **Về việc dùng AI viết bài:** Đã từng thử dùng ChatGPT nhưng không thay thế được nhiều vì văn phong AI quá chung chung, không sát đặc tính phom dáng, chất vải thực tế của shop; L. vẫn phải tự viết tay lại phần lớn nội dung mô tả sản phẩm.<br>2. **Về thao tác đăng bài:** L. đã dùng quen *Meta Business Suite* để lên lịch trước, không gặp khó khăn ở bước bấm đăng; nút thắt lớn nhất về độ trễ nằm ở **khâu phối hợp lấy số đo từ kho** và **thời gian chờ chủ shop duyệt bài**. |
+| Insight | 1. Thời gian bài bị 'tắc' lâu nhất trên thực tế không nằm ở khâu gõ chữ hay thao tác đăng bài, mà là **độ trễ lớn trong quá trình duyệt bài qua tin nhắn cá nhân (chờ từ 30 phút đến hơn 3 tiếng)**.<br>2. Nguồn gốc của các sự cố sai giá/thông số xuất phát từ việc **thiếu sự đồng bộ tức thời giữa dữ liệu kho và người viết content**, dẫn đến việc người viết phải tự đi hỏi lẻ tẻ hoặc dùng dữ liệu cũ. |
+
+## Trả lời 3 câu kiểm chứng
+- Bước chậm nhất (chờ duyệt / đăng tay / soạn bài / khác): **Chờ chủ shop duyệt bài qua Zalo** (độ trễ kéo dài nhất: **30–210 phút**) và **Lựa ảnh + Soạn nội dung** (bước tốn sức lao động nhất: **35–40 phút/bài**).
+- Có người duyệt bài không? Chờ bao lâu: **Có (chủ shop trực tiếp duyệt qua Zalo)**; thời gian chờ dao động từ **30 phút đến 3,5 tiếng** tùy vào việc chủ shop rảnh hay đang bận việc kho/khách.
+- Sai giá / sai thông tin gần nhất: khi nào, mấy lần/tháng: **Cách đây 4 ngày (nhầm giá sale 299k thành 219k), tần suất 1–2 lần/tháng**; mất khoảng 2 phút để sửa lại trên bài đăng nhưng phát sinh chi phí bù lỗ cho khách hàng.

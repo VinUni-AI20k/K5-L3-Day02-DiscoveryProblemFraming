@@ -52,12 +52,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Job Story | Khi vừa code xong môt bài tập lớn, tôi muốn công cụ tự động đọc thư mục code để tạo sẵn file readme.md và tóm tắt các hàm chính để nộp bài mà không cần phải gõ tài liệu từ đầu |
 | Actor | Sinh viên, coder |
 | Thời điểm / bối cảnh | Khi code chạy được nhưng kho lưu trữ vẫn trống, chưa có hướng dẫn cài đặt hay mô tả cấu trúc |
-| Quy trình hiện tại (3–7 bước) | Bước 1: Mở lại từng thư mục để xem cấu trúc dự án. 
-Bước 2: Kiểm tra các thư viện đã dùng để ghi lại requirements.txt 
-Bước 3: Mở các file code chính để nhớ lại luồng chạy, tham số đầu vào và tên các hàm quan trọng. 
-Bước 4: Chạy thử lại các lệnh trên Terminal để copy câu lệnh mẫu và kết quả in ra màn hình. 
-Bước 5: Mở file README.md, tự gõ mô tả dự án, kẻ khung cây thư mục và định dạng cú pháp Markdown thủ công. 
-Bước 6: Đọc soát lại, lưu file và git push|
+| Quy trình hiện tại (3–7 bước) | Bước 1: Mở lại từng thư mục để xem cấu trúc dự án.<br>Bước 2: Kiểm tra các thư viện đã dùng để ghi lại requirements.txt<br>Bước 3: Mở các file code chính để nhớ lại luồng chạy, tham số đầu vào và tên các hàm quan trọng.<br>Bước 4: Chạy thử lại các lệnh trên Terminal để copy câu lệnh mẫu và kết quả in ra màn hình.<br>Bước 5: Mở file README.md, tự gõ mô tả dự án, kẻ khung cây thư mục và định dạng cú pháp Markdown thủ công.<br>Bước 6: Đọc soát lại, lưu file và git push|
 | Bottleneck (bước nào, mất bao nhiêu phút) |Bước 3 và 5 mất 45-60 phút|
 | Impact (nếu không giải thì sao) | Gây ra bất đồng bộ trong nhóm các bạn cùng nhóm kéo code về nhưng không hiểu cấu trúc thư mục và cách dùng hàm |
 | Success metric (baseline → target) | Thời gian viết tài liệu cho 1 repo giảm từ 60-70 phút xuống còn 5-10 phút, Người khác làm theo REAMDE.md chạy được code ngay lần đầu|
@@ -94,12 +89,7 @@ Quy trình nháp hiện tại:
 | Job Story | Khi bạn trong nhóm đẩy code lên Git, tôi muốn nhận được một bản tóm tắt ngắn gọn về những thay đổi mà hành viên trong nhóm đã sửa và nó có ảnh hưởng gì đến các feature của tôi không |
 | Actor | Thành viên trong nhóm làm dự án |
 | Thời điểm / bối cảnh | Trong giai đoạn chạy nước rút làm đồ án môn học, khi các thành viên liên tục git push code lên nhánh chung vào buổi tối trước ngày báo cáo tiến độ nhưng chỉ ghi lời nhắn commit ngắn như "update", "fix bug". |
-| Quy trình hiện tại (3–7 bước) | Bước 1: Kéo (git pull) code mới của bạn cùng nhóm về máy cục bộ. 
-Bước 2: Chạy thử chương trình và phát hiện lỗi đỏ màn hình . 
-Bước 3: Mở lịch sử GitHub hoặc VS Code Git Graph để dò xem ai vừa sửa những file nào. 
-Bước 4: Mở từng file có dấu cộng/trừ để đọc bằng mắt thường xem bạn đã đổi logic gì. 
-Bước 5: Nhắn tin vào nhóm  hỏi lại bạn cho chắc chắn và chờ phản hồi. 
-Bước 6: Tự sửa lại các file code của mình cho khớp với thay đổi của bạn. |
+| Quy trình hiện tại (3–7 bước) | Bước 1: Kéo (git pull) code mới của bạn cùng nhóm về máy cục bộ.<br>Bước 2: Chạy thử chương trình và phát hiện lỗi đỏ màn hình .<br>Bước 3: Mở lịch sử GitHub hoặc VS Code Git Graph để dò xem ai vừa sửa những file nào.<br>Bước 4: Mở từng file có dấu cộng/trừ để đọc bằng mắt thường xem bạn đã đổi logic gì.<br>Bước 5: Nhắn tin vào nhóm  hỏi lại bạn cho chắc chắn và chờ phản hồi.<br>Bước 6: Tự sửa lại các file code của mình cho khớp với thay đổi của bạn.|
 | Bottleneck (bước nào, mất bao nhiêu phút) | Bước 4,5 mất 30-60 phút |
 | Impact (nếu không giải thì sao) | Chậm tiến độ cả nhóm: Mất cả buổi tối chỉ để sửa lỗi ghép nối thay vì code tính năng mới |
 | Success metric (baseline → target) |  Thời gian hiểu thay đổi & xử lý lỗi ghép code: Giảm từ 30–60 phút/lần pull → xuống còn dưới 5 phút |
@@ -135,11 +125,7 @@ Quy trình nháp hiện tại:
 | Job Story | Khi chuẩn bị đi xin intern hoặc tìm việc làm, tôi muốn AI đọc trực tiếp các dự án tôi đã làm trong local và viết thành mục trong cv để cập nhật cv mà tôi không cần tự mình tổng hợp |
 | Actor | Người cần chuẩn bị cv để xin việc |
 | Thời điểm / bối cảnh | Mùa tuyển dụng; khi tìm thấy một tin tuyển dụng (JD) ưng ý nhưng nhận ra CV hiện tại đang viết quá sơ sài, hoặc phải sửa lại cách mô tả các đồ án ở trường sao cho trúng các từ khóa kỹ thuật mà công ty đó yêu cầu |
-| Quy trình hiện tại (3–7 bước) | Bước 1: Đọc bản Mô tả công việc (JD) để gạch chân các kỹ năng và công nghệ công ty yêu cầu.
-Bước 2: Lục lại các thư mục code bài tập lớn/đồ án cũ trong máy tính hoặc trên GitHub.
-Bước 3: Mở lại code, file requirements.txt và báo cáo cũ để nhớ xem hồi đó mình dùng thư viện gì, giải quyết bài toán gì và kết quả (độ chính xác, tốc độ) ra sao. 
-Bước 4: Mở file CV , tự viết thành 3–4 câu mô tả theo văn phong chuyên nghiệp. 
-Bước 5: So sánh lại với JD xem đã đủ từ khóa chưa, chỉnh sửa độ dài câu cho vừa trang giấy rồi xuất file PDF. |
+| Quy trình hiện tại (3–7 bước) | Bước 1: Đọc bản Mô tả công việc (JD) để gạch chân các kỹ năng và công nghệ công ty yêu cầu.<br>Bước 2: Lục lại các thư mục code bài tập lớn/đồ án cũ trong máy tính hoặc trên GitHub.<br>Bước 3: Mở lại code, file requirements.txt và báo cáo cũ để nhớ xem hồi đó mình dùng thư viện gì, giải quyết bài toán gì và kết quả (độ chính xác, tốc độ) ra sao.<br>Bước 4: Mở file CV , tự viết thành 3–4 câu mô tả theo văn phong chuyên nghiệp.<br>Bước 5: So sánh lại với JD xem đã đủ từ khóa chưa, chỉnh sửa độ dài câu cho vừa trang giấy rồi xuất file PDF.|
 | Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3,4 mất 30-45 phút |
 | Impact (nếu không giải thì sao) | Ngại cá nhân hóa CV: Vì sửa mỗi bản CV mất gần cả tiếng đồng hồ nên sinh viên thường dùng 1 bản CV duy nhất rải cho mọi công ty |
 | Success metric (baseline → target) | Thời gian điều chỉnh mục Dự án trong CV theo 1 JD mới: Giảm từ 45–60 phút → xuống còn 5–10 phút, độ khớp từ khóa với JD: Đạt trên 80% các kỹ năng thực tế có trong code. |

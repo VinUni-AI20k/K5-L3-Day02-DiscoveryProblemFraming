@@ -1,10 +1,10 @@
 # CP5 — Quy trình trước/sau và Problem Statement v0
 
-Phụ trách: Đồng Hữu Nguyên Khoa. Bản đồng bộ theo slide v3 và PDF kịch bản.
+Phụ trách: Đồng Hữu Nguyên Khoa.
 
 ## 4. Quy trình trước/sau (CP5)
 
-Đồng bộ với slide v3 (slide 4–5) và PDF kịch bản (trang 3–4). **[CHƯA KIỂM CHỨNG]** Sơ đồ là phác thảo; chưa quan sát quy trình thực tế, chưa triển khai và chưa đo thời gian từng bước.
+Quy trình dưới đây là mô tả ban đầu từ Problem Card. Cần đối chiếu với một lượt tìm dẫn chứng thực tế; báo cáo hiện chưa có số đo từng bước.
 
 ### 4.1. Quy trình hiện tại
 
@@ -76,8 +76,6 @@ Vị trí nguồn phải đến từ PDF/metadata truy xuất, không để mô 
 
 ## 5. Problem Statement v0 (CP5)
 
-V0 được đồng bộ theo problem và phương án trên slide, không dùng số giả định trong card làm dữ kiện. **[CẦN NHÓM XÁC NHẬN]** Đây là bản đề xuất để nhóm tự rà soát lập luận.
-
 | Trường | Nội dung |
 |---|---|
 | **Actor** | Sinh viên đang đọc và tổng hợp paper nghiên cứu, cần dùng lại nhận định từ paper đã đọc. |
@@ -89,4 +87,4 @@ V0 được đồng bộ theo problem và phương án trên slide, không dùng
 
 **Phản biện AI đã ghi nhận:** đo tốc độ chưa đủ; tìm đúng vị trí nhưng sai ngữ cảnh vẫn không đạt. Cần tính cả công tạo ghi chú, lượt thất bại và quay về thủ công để tránh chuyển công sức sang bước khác.
 
-**Điều chỉnh trong bản đề xuất:** tách các thước đo chất lượng và tổng thời gian, giữ bước người học xác minh. Chưa ghi nhận đây là đồng thuận của cả nhóm; cách đo cụ thể nằm ở CP6 để nhóm chốt trước khi chạy.
+**Điều chỉnh sau phản biện:** tách thời gian tìm khỏi tổng công chuẩn bị và kiểm chứng; kiểm riêng độ đúng của nguồn và ngữ cảnh. Cách đo được trình bày ở mục 7.

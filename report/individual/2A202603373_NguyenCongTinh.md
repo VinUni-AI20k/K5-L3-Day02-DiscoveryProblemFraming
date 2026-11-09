@@ -22,14 +22,16 @@
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 |Lặp lại |Khi kết thúc mỗi đợt kiểm thử, tôi muốn tổng hợp toàn bộ lỗi phát sinh vào một danh sách, để không bỏ sót lỗi cần xử lý |Nam, QA, Developer |Mỗi đợt kiểm thử phải tổng hợp từ 30–50 lỗi, mất khoảng 60–90 phút |
-| 2 |Lặp lại |Khi nhận phản hồi khách hàng, tôi muốn phân loại theo từng nhóm vấn đề, để dễ theo dõi và chuyển đúng bộ phận xử lý |Nam, CSKH |Mỗi ngày tiếp nhận khoảng 50–100 phản hồi cần phân loại |
-| 3 |Cần đọc, tổng hợp nhiều thông tin |Khi có nhiều phản hồi từ khách hàng và nhân viên CSKH, tôi muốn phát hiện những vấn đề giống nhau, để xác định lỗi phổ biến và ưu tiên cải tiến |Nam, CSKH, Product Manager |Một vấn đề có thể xuất hiện trong nhiều phản hồi khác nhau, khó nhận diện thủ công |
+| 1 |Lặp lại |Khi kết thúc mỗi đợt kiểm thử, tôi muốn tổng hợp toàn bộ lỗi phát sinh vào một danh sách, để không bỏ sót lỗi cần xử lý |Nam, QA, Developer |Sau mỗi đợt kiểm thử một chức năng hoặc một phiên bản hệ thống, Nam phải tổng hợp lại các lỗi được ghi nhận từ nhiều nguồn như file Excel, công cụ quản lý công việc, tin nhắn trao đổi và phản hồi của thành viên kiểm thử. Một đợt kiểm thử có thể phát sinh khoảng 30–50 lỗi. Nam phải kiểm tra từng lỗi, loại bỏ nội dung trùng lặp, chuẩn hóa tên lỗi, bổ sung trạng thái và người phụ trách. Công việc này có thể mất khoảng 60–90 phút cho mỗi đợt tổng hợp. Đây cũng là 1 case thường gặp trong thực tế ở mỗi đợt kiểm thử của các dự án khác https://www.atlassian.com/software/jira/templates/bug-report? |
+| 2 |Lặp lại |Khi nhận phản hồi khách hàng, tôi muốn phân loại theo từng nhóm vấn đề, để dễ theo dõi và chuyển đúng bộ phận xử lý |Nam, CSKH |Mỗi ngày tiếp nhận khoảng 50–100 phản hồi cần phân loại.bao gồm các vấn đề như lỗi đăng nhập, đặt xe, thanh toán, thông tin chuyến đi hoặc thao tác trên ứng dụng. Việc phân loại phản hồi khách hàng là 1 vấn đề lớn và thường xuyên được thống kê trên các bài báo diễn đàn https://support.zendesk.com/hc/en-us/articles/4408832234394-Analyzing-the-metrics-that-matter-to-improve-customer-support |
+| 3 |Cần đọc, tổng hợp nhiều thông tin |Khi có nhiều phản hồi từ khách hàng và nhân viên CSKH, tôi muốn phát hiện những vấn đề giống nhau, để xác định lỗi phổ biến và ưu tiên cải tiến |Nam, CSKH, Product Manager |Một vấn đề có thể xuất hiện trong nhiều phản hồi khác nhau, khó nhận diện thủ công,Nếu chỉ tìm kiếm bằng từ khóa, Nam có thể bỏ sót những phản hồi có cùng nguyên nhân nhưng khác cách diễn đạt. https://www.microsoft.com/en-us/research/publication/incident-aware-duplicate-ticket-aggregation-for-cloud-systems/?utm_source=chatgpt.com |
 | 4 |Pain từ người khác |Khi nhân viên CSKH gặp lỗi trên hệ thống, họ muốn có hướng dẫn xử lý rõ ràng, để không phải liên hệ bộ phận kỹ thuật nhiều lần |Nhân viên CSKH, Developer |Nhân viên CSKH thường xuyên phải hỏi lại cách xử lý lỗi qua Slack |
 | 5 |Pain từ người khác |Khi Developer nhận yêu cầu xử lý lỗi, họ muốn nhận được mô tả đầy đủ và chính xác, để không phải hỏi lại Nam hoặc CSKH |Developer, Nam, CSKH |Developer phải yêu cầu bổ sung thông tin nhiều lần trước khi tái hiện được lỗi |
 
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
+
+AI gợi ý 
 
 -
 

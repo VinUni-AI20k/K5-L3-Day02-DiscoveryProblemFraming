@@ -13,7 +13,7 @@
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 | Phí Hoàng Nam | 2A202603435 | Nhóm trưởng, điều phối CP3 | |
-| 2 | Nguyễn Tiến Đạt | 2A202603452 | Đề xuất #1–#3 | |
+| 2 | Nguyễn Tiến Đạt | 2A202603452 | Đề xuất #1–#3; phụ trách CP6 (mức can thiệp, Problem Statement v1, quyết định) | dat73qb |
 | 3 | Nguyễn Bá Thành | 2A202603499 | Đề xuất #7–#9 | |
 | 4 | Nguyễn Văn Huy | 2A202603432 | Đề xuất #10–#12, cung cấp mô tả quy trình báo cáo tuần | |
 

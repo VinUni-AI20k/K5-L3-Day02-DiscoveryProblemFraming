@@ -181,16 +181,14 @@ AI có thể tổng hợp những dấu hiệu này để đưa ra nhận địn
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card |scan ra 7 card trong đó có từ 1-7 là không dùng ai |thêm nhiều đề tài góc nhìn với đê tài của nhóm |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: Khi Tester phát hiện lỗi mà máy Dev chạy bình thường, tôi muốn xác định nhanh khác biệt giữa 2 máy, để sửa bug không mất thời gian tranh cãi | Dev, Tester | So sánh thủ công cấu hình, version package và data test giữa 2 máy (60') | Tại sao Tester không test trên Staging có CI/CD mà test máy local? Nếu lệch do DB data/migration thì AI có vi phạm bảo mật không? |giúp cho nhóm nhận ra điểm yếu của card và giúp củng cố lựa chọn của nhóm |
+| Nhận phản biện | Câu hỏi tôi nhận được:Khi xe gặp sự cố giữa đường, muốn tìm gara/tiệm sửa xe lưu động gần nhất có thể hỗ trợ, để khắc phục nhanh không phải dắt xe đi xa | Người đi làm, tài xế công nghệ | Tìm kiếm và gọi điện liên hệ nhiều nơi để xác định thợ có sẵn sàng đến hỗ trợ lưu động không (15–30') | Đây là bài toán bản đồ/directory (No-AI), các tiệm sửa xe ven đường đa phần không dùng app, làm sao cập nhật trạng thái thợ thời gian thực?  
+Khi dùng máy tính/điện thoại lâu ngày, muốn hệ thống định kỳ kiểm tra, dọn rác, phát hiện mã độc và tối ưu tài nguyên để máy chạy ổn định | Nhân viên văn phòng, người dùng máy tính | Tự tra cứu Internet, mò mẫm Task Manager/ổ đĩa mà không biết chính xác nguyên nhân gây chậm (20–60') | Hệ điều hành đã có sẵn Task Manager, Storage Sense, Antivirus tự động. Can thiệp sâu vào tài nguyên hệ thống có nguy cơ crash OS và vi phạm bảo mật không?
+Khi xảy ra tai nạn giao thông xe chắn đường, muốn hệ thống hỗ trợ ghi nhận bằng chứng hiện trường, hồ sơ ban đầu và điều phối cứu hộ để giải phóng đường | CSGT, lực lượng cứu hộ, người tham gia giao thông | Ghi nhận bằng chứng, hoàn thiện hồ sơ và điều phối cứu hộ diễn ra tuần tự, rời rạc giữa các bên (30–60') | Bài toán phụ thuộc hoàn toàn vào thẩm quyền pháp lý của CSGT và bảo hiểm; làm sao nhóm sinh viên kiểm chứng và triển khai thực tế được trong lab? | Tôi đã sửa gì: nhận ra được các điểm yếu trong lập luận dề tài của bản thân|
+| Chọn candidate problem |góp ý kiến trong viẹc tham luận lựa chọn đề tài |giúp ích trong việc loại bỏ và lựa chọn đề tài |
+| Kiểm chứng / research |tạo Assumption Map | |
+
 
 ---
 
@@ -198,12 +196,12 @@ AI có thể tổng hợp những dấu hiệu này để đưa ra nhận địn
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan |dung ai tạo thêm card lựa chọn |hữu ích trong việc tìm kiếm thêm các đề tài và phân tích đề tài |nhiều khi không yêu cầu rõ ràng sẽ nhận các câu trả lời thừ hơacj lạc đề luôn |tự nhận định và kiểm chúng lại mục đích của bản thân khi ra yêu cầu với ai |
+| CP2 Problem Card |Dùng AI hỗ trợ phân tích và hoàn thiện Problem Card, xác định Actor, Bottleneck và Impact. |Giúp hệ thống hóa vấn đề, xác định đối tượng gặp khó khăn và hậu quả của vấn đề. |AI đôi khi đưa ra số liệu thời gian và mức độ ảnh hưởng chưa có bằng chứng thực tế. |Giữ lại những thông tin có căn cứ, không xem số liệu AI đưa ra là dữ liệu thực tế nếu chưa kiểm chứng. |
+| CP4 Research |Dùng AI hỗ trợ tìm kiếm và so sánh các giải pháp hiện có như Docker, Docker Compose và GitHub Actions. |Giúp hiểu chức năng của từng công cụ và xác định phần nào của bài toán đã được giải quyết. |AI có thể mô tả công cụ quá chung chung hoặc nhầm lẫn giữa chức năng chuẩn hóa môi trường và phân tích lỗi. |Đối chiếu với tài liệu chính thức, xác định rõ công cụ nào giải quyết bước nào và phần nào vẫn còn thiếu. |
+| CP5 Quy trình |Dùng AI hỗ trợ mô tả quy trình setup dự án hiện tại và đề xuất quy trình tương lai. |Giúp phân chia các bước, xác định bottleneck và vị trí có thể đưa AI vào hỗ trợ. |AI có thể đề xuất tự động hóa quá nhiều bước mà chưa xem xét rủi ro khi thay đổi dependency hoặc cấu hình dự án. |Giữ Developer là người kiểm tra, phê duyệt và trực tiếp thực hiện các lệnh. |
+| CP5–6 Problem Statement |Dùng AI hỗ trợ kiểm tra sáu thành phần của Problem Statement và xác định Success Metric, Boundary. |Giúp phát hiện những nội dung còn thiếu, đặc biệt là baseline, target và cách đo. |AI đôi khi viết Boundary chưa đủ cụ thể, chưa phân biệt rõ quyền đọc dữ liệu và quyền thực hiện lệnh. |Bổ sung quy định AI chỉ được đọc log và package.json, không đọc source code bảo mật, không tự chạy script quyền root. |
+| CP6 Mức can thiệp / quyết định |Dùng AI hỗ trợ so sánh No AI, Rule, Workflow và Agent, đồng thời đánh giá bốn nhóm rủi ro. |Giúp nhìn rõ ưu điểm, hạn chế và mức độ tự động hóa của từng phương án. |AI có thể thiên về tự động hóa cao mà chưa đánh giá đầy đủ rủi ro và nhu cầu thực tế. |Chọn Workflow vì chỉ cần AI phân tích và đề xuất, Developer vẫn kiểm soát hành động cuối cùng. |
 
 ---
 
@@ -212,21 +210,32 @@ AI có thể tổng hợp những dấu hiệu này để đưa ra nhận địn
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Khi nghe top 3 problems của các bạn khác, tôi nhận ra rằng mỗi người đều có những vấn đề thực tế khác nhau và không phải vấn đề nào cũng cần sử dụng AI để giải quyết. Có những bài toán ban đầu nghe rất phù hợp để phát triển thành một sản phẩm công nghệ nhưng khi phân tích kỹ lại phát sinh nhiều khó khăn. Ví dụ, bài toán tìm thợ sửa xe lưu động cần giải quyết vấn đề cập nhật trạng thái của các tiệm sửa xe, trong khi nhiều tiệm không sử dụng ứng dụng. Bài toán tối ưu máy tính cũng phải xem xét những công cụ đã có sẵn trong hệ điều hành. Qua đó, tôi học được cách nhìn nhận vấn đề từ nhu cầu thực tế của người dùng thay vì chỉ tập trung vào việc nghĩ ra một sản phẩm mới. Tôi cũng hiểu rằng cần đánh giá khả năng triển khai, dữ liệu đầu vào và những giải pháp đã tồn tại trước khi quyết định lựa chọn một đề tài.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Theo tôi, nhóm có nguy cơ rơi vào solution-first khi nghĩ đến việc kết hợp Docker với AI để giải quyết vấn đề setup dự án cũ. Ban đầu, việc sử dụng Docker để chuẩn hóa môi trường và AI để phân tích lỗi nghe có vẻ là một giải pháp hợp lý. Tuy nhiên, nếu chỉ tập trung vào công nghệ thì nhóm có thể chưa xác định chính xác Developer đang mất thời gian ở công đoạn nào. Sau khi phân tích Problem Card, nhóm nhận thấy bottleneck chính là việc dò lỗi dependency/version, đọc log và phải nhờ Senior hỗ trợ. Từ đó, nhóm phân chia rõ vai trò của từng thành phần: Docker giải quyết vấn đề khác biệt môi trường giữa các máy, còn AI Workflow hỗ trợ phân tích log và đề xuất hướng xử lý. Tôi nhận ra rằng cần xác định vấn đề và quy trình hiện tại trước, sau đó mới lựa chọn giải pháp. Một giải pháp có nhiều công nghệ không đồng nghĩa với việc nó giải quyết đúng vấn đề.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+Tôi đã thay đổi cách đánh giá một đề tài sau khi nhận được phản biện về ý tưởng kiểm tra và tối ưu máy tính định kỳ. Ban đầu, tôi cho rằng đây là một vấn đề có giá trị vì người dùng thường không biết nguyên nhân khiến máy tính chậm, đầy bộ nhớ hoặc hoạt động không ổn định. Tuy nhiên, một thành viên đã đặt câu hỏi rằng hệ điều hành hiện nay đã có Task Manager, Storage Sense và phần mềm Antivirus. Nếu xây dựng thêm một hệ thống tương tự thì liệu có thực sự cần thiết không? Ngoài ra, việc can thiệp sâu vào tài nguyên hệ thống có thể gây ra lỗi hoặc ảnh hưởng đến bảo mật. Qua phản biện này, tôi nhận ra mình đã tập trung nhiều vào giải pháp mà chưa nghiên cứu đầy đủ những công cụ đang tồn tại. Từ đó, tôi thay đổi cách lựa chọn đề tài, chú trọng hơn đến việc xác định khoảng trống mà các giải pháp hiện có chưa xử lý tốt.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Điều khiến tôi chú ý trong quá trình research là các công cụ hiện có đã giải quyết được một phần khá lớn vấn đề của nhóm. Trước đó, tôi có thể nghĩ rằng cần xây dựng một hệ thống mới để xử lý toàn bộ quá trình setup dự án. Tuy nhiên, khi tìm hiểu Docker và Docker Compose, tôi nhận thấy việc chuẩn hóa môi trường đã có những công cụ phù hợp. GitHub Actions cũng hỗ trợ tự động hóa quy trình build và kiểm thử. Vì vậy, nhóm không cần phát triển lại những chức năng đã được giải quyết tốt. Phần còn đáng quan tâm là khi quá trình build gặp lỗi, Developer vẫn phải tự đọc log, xác định nguyên nhân và tìm cách khắc phục. Đây là vị trí nhóm có thể sử dụng AI để hỗ trợ. Tuy nhiên, tôi cũng nhận thấy research tài liệu chưa đủ để khẳng định nhu cầu của người dùng. Cần có thêm phỏng vấn Developer hoặc dữ liệu setup thực tế để xác nhận mức độ phổ biến và thời gian xử lý lỗi.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+Điều khó nhất đối với tôi là xác định phạm vi vấn đề và viết Success Metric sao cho cụ thể, có thể đo lường được. Nếu chỉ viết Developer mất nhiều thời gian khi setup dự án cũ thì chưa thể hiện được nguyên nhân và mức độ ảnh hưởng. Tôi phải làm rõ Actor là Developer mới và Techlead/Senior, Bottleneck là quá trình dò lỗi dependency/version, còn Impact là thời gian bị lãng phí và tiến độ Sprint bị ảnh hưởng. Một điểm khó khác là phân biệt tổng thời gian setup 360 phút với 270 phút dành cho việc dò lỗi và xử lý vấn đề. Hai con số này có ý nghĩa khác nhau nên không thể sử dụng thay thế cho nhau. Ngoài ra, Boundary cũng cần được xác định rõ vì dữ liệu dự án outsource có thể chứa thông tin bảo mật. Tôi phải cân nhắc những dữ liệu AI được phép sử dụng và những hành động AI tuyệt đối không được thực hiện. Qua đó, tôi hiểu rằng Problem Statement không chỉ mô tả vấn đề mà còn phải có phạm vi, tiêu chí thành công và giới hạn rõ ràng.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+Nếu được thực hiện lại, tôi sẽ dành nhiều thời gian hơn cho việc kiểm chứng vấn đề trước khi nhóm quyết định giải pháp. Cụ thể, tôi muốn tìm hiểu trực tiếp từ những Developer từng tiếp nhận dự án cũ về thời gian setup, các lỗi thường gặp và số lần phải nhờ Senior hỗ trợ. Tôi cũng sẽ yêu cầu nhóm phân biệt rõ lỗi do dependency với lỗi do hệ điều hành, database, network hoặc cấu hình môi trường. Đây là điều quan trọng vì Docker không thể giải quyết tất cả các loại lỗi. Trong vai trò quản trị rủi ro, tôi sẽ phản biện mạnh hơn về vấn đề bảo mật dữ liệu đầu vào. Log lỗi đôi khi có thể chứa token, API key hoặc thông tin nội bộ, vì vậy chỉ quy định AI không được đọc source code là chưa đủ. Nhóm cần có bước kiểm tra và loại bỏ thông tin nhạy cảm trước khi gửi dữ liệu cho AI. Ngoài ra, tôi muốn nhóm xây dựng tập log lỗi mẫu có đáp án để đánh giá chất lượng AI trước khi triển khai. Điều này giúp quyết định của nhóm dựa trên kết quả kiểm thử thay vì chỉ dựa vào nhận định chủ quan.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+Bài toán của nhóm là Developer mất nhiều thời gian setup dự án cũ do tài liệu lỗi thời và xung đột dependency/version. Quy trình hiện tại khiến Developer phải tự cài đặt, đọc log, dò lỗi và thường xuyên nhờ Senior hỗ trợ. Nhóm đặt mục tiêu giảm thời gian xử lý từ 270 phút xuống tối đa 30 phút, đo bằng thời gian thực tế từ lúc bắt đầu dò lỗi đến khi build thành công. Về Boundary, AI chỉ được phân tích log và package.json, không được đọc source code bảo mật hoặc tự chạy script quyền root. Nhóm lựa chọn mức Workflow vì AI có thể phân tích lỗi và đề xuất lệnh nhưng Developer vẫn phải kiểm tra, phê duyệt và thực hiện. Cuối cùng, nhóm quyết định Go có điều kiện, thử nghiệm trong hai tuần và dừng nếu AI vi phạm ranh giới an toàn hoặc chất lượng đề xuất không đạt yêu cầu.
 
 ---
 
 ## 7. Tài liệu tham khảo
-
+Docker Documentation: Tìm hiểu cách đóng gói và chuẩn hóa môi trường ứng dụng https://docs.docker.com/get-started/?utm_source=chatgpt.com
+Docker Compose Documentation :Tìm hiểu cách quản lý nhiều service và cấu hình môi trường bằng YAML. https://docs.docker.com/compose/?utm_source=chatgpt.com
+GitHub Actions Documentation: Tìm hiểu cách tự động hóa build, test và CI/CD. https://docs.github.com/en/actions?utm_source=chatgpt.com
+The Mom Test: Tham khảo nguyên tắc phỏng vấn người dùng, tập trung vào hành vi thực tế thay vì câu trả lời giả định. https://www.momtestbook.com/?utm_source=chatgpt.com
+Google PAIR Guidebook: Tham khảo nguyên tắc thiết kế sản phẩm AI lấy con người làm trung tâm. https://pair.withgoogle.com/guidebook/?utm_source=chatgpt.com
 -

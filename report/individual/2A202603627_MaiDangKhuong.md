@@ -1,12 +1,14 @@
 # Báo cáo cá nhân — 2A202603627_MaiDangKhuong
 
-> Tôi đã ghi nhận CP1 và xây dựng bản nháp CP2. Thời gian là ước lượng từ trải nghiệm được chia sẻ, chưa bấm giờ từng bước; một số mục tiêu cần làm rõ thêm. CP3–CP7 chưa thực hiện.
+> Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
+> Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
+> Mỗi thành viên một file trong `report/individual/` trên repo nhóm: copy template này thành file mới, điền, rồi commit bằng tài khoản GitHub của bạn. Không viết hộ người khác.
 
 ## 1. Thông tin học viên
 
-- Họ tên: Mai Đặng Khương
+- Họ tên: Mai Đăng Khương
 - MSSV: 2A202603627
-- Email trường (không bắt buộc, repo có thể để public):
+- Email trường (không bắt buộc, repo có thể để public): 26ai.khuongmd@vinuni.edu.vn
 - Tên nhóm: TEAMLAGI
 - Link repo nhóm: https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming
 
@@ -146,16 +148,25 @@ flowchart TD
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Tôi chuẩn bị ba card: research marketing, làm rõ user story và tài liệu API; chọn marketing để ưu tiên pitch. | Báo cáo nhóm mục 2.1 ghi nhận K1–K3. Tôi cần bổ sung ghi chép buổi pitch thực tế; chưa dùng bản chuẩn bị làm bằng chứng đã trình bày. |
+| Phản biện bài của bạn khác | Chưa bổ sung câu hỏi tôi thực sự đã đặt và người trả lời. | Các câu hỏi về H2, Q2, T3 ở báo cáo nhóm là phân công trao đổi đề xuất, chưa phải lời nói đã diễn ra. |
+| Nhận phản biện | Chưa bổ sung câu hỏi trực tiếp từ thành viên và thay đổi sau trao đổi. | Phản biện AI ở CP2 được ghi riêng, không thay thế phản biện nhóm ở CP3. |
+| Gom cluster / cây OST | Ba card của tôi là đầu vào cho bản tổng hợp nhóm. Tôi chưa có ghi nhận mình trực tiếp vẽ cây OST. | K1 ở cluster tổng hợp nhiều nguồn; K2–K3 ở cluster thông tin bàn giao thiếu rõ ràng. Phần tổng hợp thuộc Hưởng theo báo cáo nhóm. |
+| Chọn candidate problem | Tôi chuyển phần research được giao sang candidate nhà thầu mà nhóm chọn. | Candidate hiện tại là soát khối lượng/đơn giá trên bảng đã ghép đúng mã, đơn vị và phiên bản; không gán cho tôi việc chấm điểm hay chủ trì lựa chọn. |
+| Kiểm chứng / research | Tôi phụ trách research giải pháp hiện có, sử dụng trợ lý hỗ trợ chuẩn bị mục 3.3. Nội dung đã merge qua PR #5. | Bảng research hiện có Excel Rule, Procore Bidding và Autodesk BuildingConnected. Việc kiểm chứng người dùng do Linh phụ trách, không phải hoạt động phỏng vấn của tôi. |
+| Quy trình nhóm | Tôi cung cấp đầu vào research về bước công cụ hỗ trợ và các khoảng trống. | Vinh phụ trách quy trình; Hưởng tổng hợp. Tôi không nhận phần vẽ quy trình hay số liệu baseline là kết quả của mình. |
+| Problem Statement | Phần research của tôi là một đầu vào tham khảo cho bản tổng hợp. | Hưởng tổng hợp v0/v1. Target dưới 90 phút là mục tiêu chưa kiểm nghiệm, baseline riêng phần soát 300–360 phút/vòng theo Vinh. |
+| Mức can thiệp AI | Research giúp so sánh khả năng dùng công thức/định dạng có điều kiện với công cụ bid leveling. | Bản nhóm chọn Rule; AI mapping là hướng riêng, không nằm trong phạm vi chính. Phần phân tích mức can thiệp do Tuyên phụ trách, Hưởng tổng hợp. |
+| Quyết định | Tôi ghi nhận quyết định hiện tại để thống nhất phần việc research và báo cáo cá nhân. | Chọn hướng Rule nhưng Not Yet cho triển khai/pilot; quyết định theo ủy quyền trưởng nhóm, không ghi là tôi hoặc sáu thành viên đã biểu quyết. |
+
+### Nhật ký research và bàn giao
+
+- **Nhiệm vụ:** research giải pháp đã có cho đối chiếu hồ sơ chào giá nhà thầu; xác định công cụ hỗ trợ bước nào, hạn chế và bài học áp dụng.
+- **Sản phẩm đã bàn giao:** mục 3.3 của [báo cáo nhóm](../team/group_report.md), được tích hợp qua [PR #5](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/5), theo TEAM.md và báo cáo nhóm được cung cấp.
+- **Nội dung bản tổng hợp hiện tại:** Excel công thức/Conditional Formatting để so số; Procore và BuildingConnected để đối chiếu báo giá và lưu dấu vết rà soát. Các cách áp dụng vào dữ liệu nhóm còn phải kiểm tra.
+- **Review nguồn:** TEAM.md ghi Hưởng sửa bốn tham chiếu thiếu đích thành link chính thức trong lượt review. Tôi không ghi phần sửa link này là việc tự mình đã thực hiện. Phần Microsoft bổ trợ được giữ đúng nguồn theo bản tổng hợp.
+- **Hạn chế:** tài liệu công cụ chưa chứng minh xử lý được nguyên trạng hồ sơ thực tế hoặc đạt target dưới 90 phút/vòng. Chưa có kết quả thử nghiệm do tôi thực hiện.
+- **Bàn giao tiếp theo:** kiểm lại nguồn và khả năng áp dụng khi có dữ liệu được phép sử dụng; tách điều tài liệu công cụ xác nhận khỏi giả thuyết của nhóm.
 
 ---
 
@@ -178,20 +189,38 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Khi nghe các bạn trình bày, tôi thấy mỗi người gặp những khó khăn khác nhau tùy công việc và trải nghiệm. Tôi học được rằng khi chọn vấn đề, cần làm rõ ai đang gặp khó khăn, vướng ở bước nào và có bằng chứng gì, thay vì nghĩ ngay đến giải pháp AI.
+
+**6.2. Nhóm có lúc nào bị solution-first không? Nhóm nhận ra và xử lý thế nào?**
+
+Có, nhóm nhận ra khi bắt đầu bàn về dùng AI nhưng vẫn chưa làm rõ bước nào trong quy trình thực sự gây khó khăn. Sau đó, nhóm quay lại xác định điểm nghẽn và so sánh với cách làm đơn giản hơn trước khi chọn giải pháp.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Có. Ban đầu tôi nghĩ bài toán đối chiếu chào giá cần AI. Sau khi được góp ý rằng dữ liệu đã ghép đúng thì có thể so sánh bằng công thức, tôi thấy rule phù hợp hơn và chưa cần dùng AI cho phần này.
+
+**6.4. Kết quả kiểm chứng/research có làm tôi bất ngờ không? Điều gì?**
+
+Bất ngờ khi thấy đã có các công cụ hỗ trợ so sánh chào giá nhà thầu, và ngay cả Excel cũng có thể xử lý phần soát số liệu bằng công thức. Điều này giúp tôi nhận ra cần tìm hiểu giải pháp có sẵn trước khi nghĩ đến việc xây thêm công cụ AI.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khó nhất là thu hẹp vấn đề và xác định đúng điểm nghẽn. Nhóm cần phân biệt việc gom, ghép dữ liệu với việc soát số liệu để đặt mục tiêu phù hợp, tránh gộp quá nhiều việc vào một bài toán.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+Nếu làm lại, tôi sẽ tìm hiểu các giải pháp có sẵn sớm hơn và kiểm tra nguồn kỹ hơn. Tôi cũng sẽ hỏi nhóm rõ hơn liệu công thức hoặc checklist đã đủ giải quyết vấn đề chưa, trước khi chọn dùng AI.
+
+**6.7. Hiểu bài:** tự giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi problem → quy trình → metric → boundary → mức can thiệp → quyết định.
+
+Bài toán của nhóm là giảm thời gian soát chênh lệch khối lượng và đơn giá trong hồ sơ chào giá nhà thầu. Quy trình bắt đầu từ bảng đã ghép đúng mã, đơn vị và phiên bản, sau đó so sánh số liệu và để chuyên viên kiểm tra các chênh lệch. Điểm nghẽn là việc dò và đối chiếu thủ công, hiện mất khoảng 5–6 giờ mỗi vòng theo thông tin Vinh cung cấp. Nhóm đặt mục tiêu dưới 90 phút mỗi vòng, tính cả thời gian kiểm tra, sửa và xử lý ngoại lệ. Giải pháp không được sửa dữ liệu gốc hay tự chọn, loại nhà thầu; kết quả phải truy được về nguồn và có người kiểm tra. Nhóm chọn Rule vì phần so sánh này có thể xử lý bằng quy tắc cố định, chưa cần AI. Tuy nhiên, quyết định hiện tại là Not Yet cho pilot vì cần xác nhận quyền sử dụng dữ liệu, cách ghép dòng và bộ đáp án trước khi thử nghiệm.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- [Báo cáo nhóm](../team/group_report.md), mục 2, 3.3 và 5–8: phạm vi, research, baseline/target, Rule và Not Yet.
+- [TEAM.md](../../TEAM.md): phân công và bằng chứng đóng góp.
+- [PR #5 — Research](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/5).
+- [PR #10 — Bản tổng hợp quyết định](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/pull/10).
+- Nguồn công cụ theo bảng research nhóm: [Microsoft Conditional Formatting](https://support.microsoft.com/en-us/excel/use-conditional-formatting-to-highlight-information-in-excel), [MEDIAN](https://support.microsoft.com/en-au/excel/functions/median-function), [Procore Bid Leveling](https://support.procore.com/products/online/user-guide/project-level/bidding/tutorials/level-bids-for-a-bid-form), [BuildingConnected Bid Leveling](https://support.buildingconnected.com/hc/en-us/articles/47949854611219-Bid-Leveling-Overview). Link được giữ theo bản review nhóm; không coi việc liệt kê là bằng chứng tôi đã thử công cụ.

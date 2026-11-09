@@ -133,6 +133,31 @@ cp5-workflow-current.jpeg
 ```
 ![Current Workflow](../assets/cp5-workflow-current.jpeg)
 
+```mermaid
+flowchart LR
+    S1["<b>Bước 1</b><br/>Tìm + mở tài liệu<br/>Ai: Sinh viên<br/>⏱ 20'<br/>In: Drive, Notion<br/>Out: tài liệu đã mở"]
+    S2["<b>Bước 2</b><br/>Đọc lướt, xác định chương<br/>Ai: Sinh viên<br/>⏱ 10'<br/>In: tài liệu<br/>Out: danh sách chương"]
+    S3["<b>Bước 3 🔴</b><br/>Tóm tắt từng chương<br/>Ai: Sinh viên<br/>⏱ 90-120'<br/>In: tài liệu + danh sách chương<br/>Out: ý chính từng chương"]
+    S4["<b>Bước 4</b><br/>Đánh dấu phần chưa nắm<br/>Ai: Sinh viên<br/>⏱ 10'<br/>In: bản tóm tắt<br/>Out: tóm tắt có đánh dấu"]
+    S5["<b>Bước 5</b><br/>Gộp thành đề cương<br/>Ai: Sinh viên<br/>⏱ 15'<br/>In: tóm tắt đã đánh dấu<br/>Out: đề cương 1 môn"]
+    S6["<b>Bước 6</b><br/>Xuất để ôn<br/>Ai: Sinh viên<br/>⏱ 5'<br/>In: đề cương<br/>Out: file để ôn"]
+
+    S1 --> S2 --> S3 --> S4 --> S5 --> S6
+
+    subgraph CHUTHICH["Chú thích"]
+        direction LR
+        L1["🔴 = Bottleneck"]
+        L2["⏱ Tổng: khoảng 150 phút (2,5 giờ/môn)"]u
+    end
+
+    S6 ~~~ L1
+
+    classDef bottleneck fill:#fde2e2,stroke:#d33,stroke-width:3px,color:#000;
+    classDef legend fill:#f5f5f5,stroke:#999,stroke-dasharray:4 3,color:#000;
+    class S3 bottleneck;
+    class L1,L2 legend;
+```
+
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
 | 1. Tìm và mở lại tài liệu | Sinh viên | Slide, giáo trình trên Drive; ghi chú trên Notion | Tài liệu của 1 môn đã mở sẵn | ~20'/môn, 6 môn/đợt ôn |  |
@@ -156,6 +181,44 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 cp5-workflow-future.jpeg
 ```
 ![Future Workflow](../assets/cp5-workflow-future.jpeg)
+
+```mermaid
+flowchart LR
+    F1["<b>Bước 1</b><br/>Gom tài liệu 1 môn<br/>vào một thư mục + danh mục file<br/>🔵 Rule/script<br/>⏱ 5'<br/>In: Drive, Notion<br/>Out: thư mục môn + danh mục"]
+    F2["<b>Bước 2</b><br/>Lấy danh sách chương<br/>từ đề cương môn học của giảng viên<br/>🟢 Sinh viên<br/>⏱ 5'<br/>In: đề cương môn học<br/>Out: danh sách chương chuẩn"]
+    F3["<b>Bước 3</b><br/>Tóm tắt từng chương<br/>kèm chỉ rõ nguồn (slide/trang)<br/>🟣 AI<br/>⏱ 10'<br/>In: tài liệu + danh sách chương<br/>Out: ý chính nháp từng chương"]
+    F4["<b>Bước 4</b><br/>Đối chiếu độ phủ chương<br/>🔵 Rule/script<br/>⏱ 2'<br/>In: bản nháp + danh sách chương chuẩn<br/>Out: danh sách chương còn thiếu"]
+    F5["<b>Bước 5 🔴</b><br/>Duyệt, sửa, đánh dấu phần chưa nắm<br/>🟢 Sinh viên (boundary)<br/>⏱ 25'<br/>In: bản nháp + chương còn thiếu<br/>Out: tóm tắt đã duyệt, có đánh dấu"]
+    F6["<b>Bước 6</b><br/>Gộp thành đề cương, xuất để ôn<br/>🟢 Sinh viên<br/>⏱ 8'<br/>In: tóm tắt đã duyệt<br/>Out: đề cương 1 môn"]
+
+    F1 --> F2 --> F3 --> F4 --> F5 --> F6
+    F5 -. "AI sai / sót / nhạt" .-> FB["↩ Phương án quay về:<br/>bỏ nháp chương đó,<br/>tự tóm theo template cũ"]
+    FB -.-> F6
+
+    subgraph CHUTHICH["Chú thích"]
+        direction LR
+        L1["🔵 = Rule/script"]
+        L2["🟣 = AI xử lý"]
+        L3["🟢 = Sinh viên (boundary)"]
+        L4["🔴 = Bottleneck mới"]
+        L5["⏱ Tổng: khoảng 55 phút/môn (mục tiêu, chưa đo)"]
+    end
+
+    F6 ~~~ L1
+
+    classDef rule fill:#e0ecff,stroke:#2f6fd6,color:#000;
+    classDef ai fill:#efe2ff,stroke:#7b3fd6,color:#000;
+    classDef human fill:#e0f6e5,stroke:#2e9e4f,color:#000;
+    classDef bottleneck fill:#e0f6e5,stroke:#d33,stroke-width:3px,color:#000;
+    classDef fallback fill:#fff4d6,stroke:#d6a02f,stroke-dasharray:4 3,color:#000;
+    classDef legend fill:#f5f5f5,stroke:#999,stroke-dasharray:4 3,color:#000;
+    class F1,F4 rule;
+    class F3 ai;
+    class F2,F6 human;
+    class F5 bottleneck;
+    class FB fallback;
+    class L1,L2,L3,L4,L5 legend;
+```
 
 | Bước | Loại | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|---|

@@ -112,7 +112,7 @@ Quy trình nháp hiện tại:
 | Thời điểm / bối cảnh | Đầu năm học, đầu học kỳ, trước các kỳ kiểm tra, và khi Bộ thay đổi quy định đánh giá hoặc cấu trúc đề thi. Văn bản đến qua email, hệ thống văn bản của trường hoặc nhóm Zalo, thường là PDF. |
 | Quy trình hiện tại (3–7 bước) | 1. Nhận văn bản qua email/Zalo/hệ thống của trường. 2. Đọc lướt hoặc đọc toàn văn. 3. Tìm các phần liên quan đến môn và khối mình dạy. 4. Đối chiếu với văn bản hoặc cách làm cũ để thấy điểm khác. 5. Hỏi tổ trưởng/đồng nghiệp hoặc chờ họp tổ để thống nhất cách hiểu. 6. Xác định việc cần làm (sửa ma trận đề, kế hoạch bài dạy, cách đánh giá). 7. Cập nhật tài liệu của mình. |
 | Bottleneck | Bước 3–4 (lọc phần liên quan, đối chiếu với cái cũ): ước tính ~30–60 phút/văn bản. Bước 5 (chờ họp tổ) gây độ trễ tính bằng ngày. |
-| Impact | Áp dụng chậm hoặc hiểu sai quy định mới: ma trận đề không đúng cấu trúc mới, bị tổ hoặc ban giám hiệu nhắc khi kiểm tra chuyên môn. Mỗi giáo viên trong tổ lặp lại việc đọc cùng một văn bản. Tổ phải họp riêng chỉ để "giải nghĩa" văn bản. |
+| Impact | Học sinh: học và thi sai kiến thức sai lệch (nếu công văn thay đổi kiến thức), Bất lợi trong các kỳ thi lớn, áp lực thời gian, giáo viên tốn thời gian cho cùng 1 việc. Lệch chuẩn đồng bộ giữa các giáo viên.  |
 | Success metric | Thời gian từ lúc nhận văn bản đến lúc biết việc cần làm trong 1 buổi. Số lần phải hỏi lại tổ trưởng/đồng nghiệp cho mỗi văn bản giảm ≥ 50%. Số lỗi áp dụng sai quy định bị phát hiện khi duyệt đề/kế hoạch: → 0. |
 | Phương án không dùng AI | Tổ trưởng phân công luân phiên 1 người đọc mỗi văn bản và viết tóm tắt 1 trang theo mẫu cố định: *thay đổi gì – áp dụng cho môn/khối nào – từ khi nào – việc cần làm – điều/khoản gốc*. Lưu vào sổ theo dõi văn bản dùng chung của tổ. |
 | Giả thuyết về AI (nếu có) | LLM đọc văn bản và trích ra các điểm liên quan đến đúng môn và khối của giáo viên, kèm số điều/khoản/trang gốc để giáo viên tự kiểm tra lại; có thể so sánh với văn bản cũ để chỉ ra điểm khác. Rủi ro: hiểu sai hoặc thêm nội dung không có trong văn bản, đọc lỗi bản scan. Vì vậy bắt buộc có trích dẫn nguồn và người kiểm tra lại (tổ trưởng). |
@@ -142,24 +142,24 @@ Lặp lại (2)–(5) × số giáo viên trong tổ × số văn bản/học k�
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| | | |
-
+| Chưa có đáp án cho chuyện dữ liệu học sinh. Card nhắc rủi ro AI thêm chi tiết không có trong ghi chú, nhưng không nhắc rủi ro đưa tên, điểm và ghi chú của học sinh vào một công cụ bên ngoài. | Đồng ý | Thêm một dòng về cách xử lý, ví dụ dùng mã số hoặc ẩn tên khi đưa dữ liệu vào. |
+| Phần Impact còn là khẳng định chưa có bằng chứng (“các em cùng mức độ nhận lời nhận xét khác nhau”, giáo viên phải giải đáp phụ huynh ngoài giờ). | Đồng ý | Thêm ví dụ hoặc cần kiểm chứng thêm. |
 ---
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
+| Pitch Problem Card | Đưa 3 candidate vào bảng pitch của nhóm: #1 theo dõi văn bản quy định mới, #2 ra nhiều mã đề từ ma trận, #3 viết nhận xét học sinh theo tiêu chí. Mỗi candidate có Job Story, Actor, bottleneck và ước tính thời gian. | #1 là candidate nhóm đang ghi là được chọn. |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: với #4 (Khánh), hỏi có thực sự cần AI không khi leader phải tự nắm tình hình nhóm. Với #7 (Huy), hỏi nếu đã có công cụ ghi log thí nghiệm thì có cần gom lại kết quả nữa không. Với #9 (Huy), hỏi dùng công cụ quản lý tài liệu tham khảo có tối ưu hơn không. | Thêm hướng nhìn đa dạng hơn về vấn đề |
+| Nhận phản biện | Câu hỏi tôi nhận được: #2, Khánh hỏi sao không chỉ đổi số trong đề đã soạn mà phải dùng LLM. Với #1, câu hỏi là vì sao cần một người duyệt sau khi dùng AI, có tạo ra một nghề mới cho giáo viên không. | Tôi đã sửa gì: Giải thích tại sao phải sử dụng LLM (giúp đa dạng, làm văn hay hơn), giải thích tại sao cần con người in the loop |
+| Gom cluster / cây OST | triển khai cluster gom và phân tích cho nhóm | Cả nhóm đồng ý |
+| Chọn candidate problem | Chọn #1 | Mọi người trong team đồng ý |
 | Kiểm chứng / research | | |
-| Quy trình nhóm | | |
+| Quy trình nhóm | Phân tích đề xuất bước nào là rule, AI hay người | Thảo luận và debate cùng nhóm |
 | Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Mức can thiệp AI | Hỗ trợ tìm thêm góc nhìn trực quan và debate các problem | Tham khảo ý kiến và đánh giá góc nhìn của AI |
+| Quyết định | Đóng góp các rủi ro, kết luận Go/Not Yet/No-Go | Debate và team đã chọn ra problem cuối cùng |
 
 ---
 
@@ -167,12 +167,11 @@ Lặp lại (2)–(5) × số giáo viên trong tổ × số văn bản/học k�
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Tham khảo thêm các tình huống công việc thường gặp của giáo viên để mở rộng danh sách vấn đề. | Gợi ý tình huống phụ huynh nhắn Zalo buổi tối hỏi về tình hình học tập của con. Đây là góc nhìn tôi chưa nghĩ đến ban đầu và đã giữ lại trong danh sách. | Một tình huống nghe hợp lý chưa chắc xảy ra thường xuyên hoặc đủ nghiêm trọng trong thực tế. | Tôi chỉ giữ lại những tình huống có đối tượng chịu ảnh hưởng rõ ràng và có thể tìm cách đo lường. Vấn đề phụ huynh hỏi ngoài giờ được giữ lại nhưng vẫn cần kiểm chứng tần suất. |
+| CP2 Problem Card | Nhờ phản biện các Problem Card, nhất là bottleneck, impact, metric và rủi ro khi áp dụng AI. | Giúp tôi nhận ra những điểm còn thiếu như quyền riêng tư dữ liệu học sinh, impact chưa có bằng chứng và sự khác biệt giữa bước đánh giá học sinh với bước viết nhận xét. | Một số góp ý có thể khiến mình tập trung bổ sung giải pháp hoặc tính năng, trong khi điều cần làm trước tiên là xác định vấn đề có thực sự tồn tại hay không. | Tôi xem xét lại quy trình thay vì tiếp nhận mọi gợi ý máy móc. Tôi bổ sung lưu ý về bảo mật dữ liệu và chuyển các tác động chưa có bằng chứng thành giả thuyết cần kiểm chứng. |
+| CP5 Quy trình | Tham khảo cách phân rã một công việc thành các bước nhỏ để xác định vị trí có khả năng gây tốn thời gian. | Giúp nhìn rõ mối liên hệ giữa đầu vào, các bước xử lý và đầu ra của quy trình. | Quy trình AI đề xuất có thể đầy đủ về lý thuyết nhưng chưa chắc phản ánh đúng cách giáo viên đang làm việc. | Tôi giữ các bước dựa trên quy trình đã mô tả, không thêm bước chỉ vì chúng có vẻ hợp lý. Cần phân biệt bước đánh giá mức độ học sinh với bước viết nhận xét. |
+| CP5–6 Problem Statement | Tham khảo cách diễn đạt Problem Statement tập trung vào người gặp vấn đề, bối cảnh và nhu cầu thực tế. | Giúp phát hiện những câu còn chung chung hoặc đang mô tả giải pháp nhiều hơn là mô tả vấn đề. | Cách diễn đạt có thể quá rộng, làm mất bối cảnh và đối tượng cụ thể. | Tôi ưu tiên giữ đúng đối tượng, tình huống và khó khăn cốt lõi của candidate nhóm lựa chọn, không đưa giải pháp AI vào Problem Statement quá sớm. |
+| CP6 Mức can thiệp / quyết định | Tham khảo các góc nhìn về việc AI nên hỗ trợ ở bước nào và công việc nào vẫn cần con người chịu trách nhiệm. | Giúp cân nhắc lợi ích của tự động hóa với rủi ro khi AI xử lý sai thông tin trong văn bản quy định. | Không nên mặc định có thể tự động hóa toàn bộ quy trình chỉ vì AI có khả năng đọc và tóm tắt tài liệu. | Hướng phù hợp là AI hỗ trợ lọc thông tin, chỉ ra điểm thay đổi và dẫn nguồn; giáo viên hoặc tổ trưởng vẫn kiểm tra và quyết định việc áp dụng. |
 
 ---
 
@@ -182,17 +181,31 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Khi nghe và phản biện các problem của các bạn khác, tôi nhận ra không phải công việc nào có nhiều thao tác hoặc mất thời gian cũng cần dùng AI để giải quyết. Chẳng hạn, với problem của Khánh, tôi đặt câu hỏi liệu leader có thực sự cần một giải pháp AI để nắm tình hình nhóm hay đây vốn là trách nhiệm quản lý và có thể xử lý bằng cách tổ chức công việc tốt hơn. Với problem của Huy, tôi cũng băn khoăn rằng nếu đã có công cụ ghi log thí nghiệm thì việc tổng hợp kết quả có nhất thiết phải dùng thêm AI hay không. Những câu hỏi này khiến tôi chú ý hơn đến sự khác biệt giữa một vấn đề có thật và một vấn đề phù hợp để ứng dụng AI. Tôi học được rằng cần xem xét cả giải pháp truyền thống, công cụ sẵn có và chi phí phát sinh trước khi đề xuất AI. Nếu chỉ nhìn vào khả năng công nghệ, mình rất dễ cố gắng đưa AI vào một quy trình dù lợi ích mang lại chưa đủ rõ ràng.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Nhìn lại quá trình làm bài, nguy cơ solution-first xuất hiện khi nhóm bắt đầu bàn nhiều về việc AI có thể đọc, tóm tắt hoặc so sánh văn bản như thế nào. Những khả năng đó khá hấp dẫn nên dễ khiến mọi người tập trung vào giải pháp trước. Tuy nhiên, trước khi đi sâu vào công nghệ, nhóm cần làm rõ giáo viên đang gặp khó khăn ở công đoạn nào: đọc toàn bộ văn bản, lọc nội dung liên quan đến môn và khối, đối chiếu với quy định cũ hay xác định việc cần thực hiện. Nếu chưa làm rõ điểm nghẽn thì việc đề xuất AI chỉ mới dựa trên khả năng của công nghệ. Cách tiếp cận hợp lý hơn là quay lại quy trình hiện tại, xác định đầu vào, từng bước xử lý, đầu ra và thời gian ở những bước quan trọng. Từ đó mới xem xét AI có thể hỗ trợ phần nào và phần nào vẫn cần giáo viên hoặc tổ trưởng chịu trách nhiệm.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Có. Một lần tôi nhận được câu hỏi từ Khánh về Problem Card ra nhiều mã đề: tại sao không chỉ thay đổi số trong đề đã soạn mà phải sử dụng LLM? Ban đầu, tôi nghiêng về việc dùng LLM vì nghĩ rằng nó có thể tạo ra câu hỏi đa dạng hơn và hỗ trợ diễn đạt câu hỏi tốt hơn. Tuy nhiên, câu hỏi này khiến tôi phải nhìn lại xem sự đa dạng đó có thực sự cần thiết hay không, và liệu việc thay số hoặc sử dụng ngân hàng câu hỏi có sẵn đã đủ giải quyết vấn đề chưa. Tôi vẫn cho rằng LLM có thể hữu ích trong một số trường hợp, nhưng không thể chỉ lấy lý do “AI làm được” để biện minh cho việc sử dụng nó. Ngoài ra, với câu hỏi về việc cần người duyệt sau khi AI xử lý văn bản, tôi giải thích rằng con người vẫn cần kiểm tra vì nội dung quy định có thể ảnh hưởng đến hoạt động dạy và kiểm tra. Qua phản biện, tôi nhận ra mình cần giải thích rõ giá trị của AI và giới hạn trách nhiệm của nó, thay vì chỉ nói AI giúp công việc nhanh hơn.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Ở bản báo cáo hiện tại, tôi chưa ghi lại kết quả phỏng vấn hoặc survey cụ thể, vì vậy chưa đủ cơ sở để kết luận kết quả kiểm chứng có làm tôi bất ngờ hay không. Tôi cần bổ sung thông tin thực tế ở phần này, chẳng hạn nhóm đã trao đổi với bao nhiêu giáo viên, họ thường nhận văn bản qua kênh nào, mất bao lâu để xác định nội dung liên quan và khó khăn nào được nhắc đến nhiều nhất. Điều tôi cần chú ý không chỉ là người được hỏi có đồng ý rằng việc đọc văn bản mất thời gian hay không, mà còn là tần suất vấn đề xảy ra và hậu quả khi hiểu hoặc áp dụng sai thông tin. Nếu kết quả khác với giả định ban đầu, tôi cần ghi rõ giả định nào đã thay đổi và nhóm điều chỉnh problem ra sao. **[Tôi cần thay đoạn này bằng kết quả kiểm chứng thực tế của nhóm trước khi nộp.]**
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Theo tôi, phần khó nhất là diễn đạt đúng vấn đề mà không vô tình đưa giải pháp vào ngay trong câu mô tả. Khi đã nghĩ đến việc AI có thể đọc và tóm tắt văn bản, mình rất dễ viết problem theo hướng giáo viên cần một công cụ AI để xử lý công văn. Nhưng đó đã là cách nghĩ về giải pháp, chưa chắc phản ánh đúng nhu cầu cốt lõi. Nhóm cần quay lại đối tượng là giáo viên, bối cảnh khi nhận văn bản mới, công việc họ phải thực hiện và kết quả họ muốn đạt được. Bên cạnh đó, vấn đề phải đủ cụ thể để có thể kiểm chứng và đo lường. Ví dụ, nói giáo viên “mất nhiều thời gian đọc văn bản” vẫn còn khá chung chung; cần xác định họ mất thời gian ở bước lọc nội dung liên quan, đối chiếu quy định cũ hay chờ thống nhất cách hiểu trong tổ. Khi xác định rõ những yếu tố này, Problem Statement mới có thể làm cơ sở cho các bước tiếp theo.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Nếu được làm lại, tôi sẽ dành nhiều thời gian hơn để kiểm chứng bottleneck trước khi đi đến lựa chọn giải pháp. Tôi cũng sẽ đặt câu hỏi cụ thể hơn về dữ liệu đầu vào: văn bản thường ở dạng PDF có thể tìm kiếm hay là bản scan, giáo viên có sẵn văn bản cũ để đối chiếu không và ai là người xác nhận nội dung sau khi xử lý. Đây là những yếu tố ảnh hưởng trực tiếp đến tính khả thi của giải pháp. Khi phản biện nhóm, tôi muốn đi sâu hơn vào câu hỏi liệu AI có thực sự cần thiết hay một quy trình chia sẻ tài liệu, mẫu tóm tắt chung hoặc phân công người đọc văn bản đã đủ đáp ứng nhu cầu. Tôi cũng sẽ yêu cầu nhóm làm rõ metric ngay từ đầu, tránh đặt mục tiêu giảm thời gian nhưng chưa có baseline đáng tin cậy. Qua bài này, tôi thấy việc phản biện không phải để bác bỏ ý tưởng của người khác, mà để giúp nhóm hiểu rõ vấn đề hơn và tránh đầu tư vào một giải pháp chưa được chứng minh là cần thiết.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Problem của nhóm là giáo viên mất thời gian đọc và đối chiếu các văn bản, công văn mới để xác định những thay đổi ảnh hưởng đến môn học và khối lớp mình phụ trách. Quy trình hiện tại gồm nhận văn bản, đọc nội dung, lọc thông tin liên quan, đối chiếu với quy định cũ, hỏi tổ trưởng và cuối cùng cập nhật ma trận đề hoặc kế hoạch bài dạy. Metric quan trọng là thời gian từ lúc nhận văn bản đến khi xác định được việc cần làm, cùng với số lần phải hỏi lại tổ trưởng hoặc đồng nghiệp. Boundary của AI là chỉ hỗ trợ đọc, lọc, so sánh và trích dẫn nội dung từ văn bản gốc, không tự đưa ra kết luận hoặc quyết định thay giáo viên. Mức can thiệp phù hợp là AI hỗ trợ xử lý thông tin, còn con người vẫn kiểm tra nguồn và xác nhận cách áp dụng. Vì vậy, nhóm hướng đến mô hình Human-in-the-loop, trong đó giáo viên hoặc tổ trưởng chuyên môn chịu trách nhiệm đưa ra quyết định cuối cùng.
 
 ---
 

@@ -26,14 +26,34 @@
 | 4 | Cần đọc, tổng hợp nhiều thông tin | Khó theo dõi hoạt động nằm rải rác trên nhiều kênh | Khi thông tin các hoạt động được đăng rải rác trên Facebook, Instagram, Zalo, Discord và các kênh khác, tôi muốn nắm được hoạt động phù hợp cùng thời gian, địa điểm và hạn đăng ký, để không bỏ lỡ chỉ vì không theo dõi kịp từng kênh. | Người theo dõi hoạt động từ nhiều cộng đồng | Ghi số kênh thực tế phải xem, thời gian rà thông tin và lần gần nhất biết một hoạt động quá muộn hoặc bỏ sót thay đổi. |
 | 5 | Tốn thời gian | Quyết định bữa ăn và mua thực phẩm | Khi chuẩn bị bữa tối với nguyên liệu đang có và ngân sách giới hạn, tôi muốn chọn được món phù hợp và biết cần mua thêm gì, để không mất nhiều thời gian cân nhắc hoặc mua trùng đồ. | Người tự nấu ăn | Ghi thời gian chọn món ở một lần gần nhất, số món đồ mua trùng hoặc thực phẩm bỏ đi trong tuần nếu có. |
 
+| 6 | Tốn thời gian | Khó lọc ảnh trùng, mờ và chọn bộ ảnh muốn giữ | Khi có nhiều ảnh sau một chuyến đi hoặc sự kiện, tôi muốn gom những ảnh gần giống nhau và chọn được ảnh rõ, phù hợp để giữ hoặc chia sẻ, để không phải mở so sánh từng ảnh và lưu quá nhiều ảnh không cần thiết. | Người chụp nhiều ảnh bằng điện thoại hoặc máy ảnh | Ghi một bộ ảnh thực tế: số ảnh ban đầu, thời gian lọc, số ảnh giữ lại và số lần phải khôi phục hoặc đổi lựa chọn. Chưa có số liệu cá nhân được cung cấp. |
+| 7 | Cần đọc, tổng hợp nhiều thông tin | Khó phát hiện thay đổi quan trọng giữa các phiên bản tài liệu | Khi nhận phiên bản mới của một tài liệu đã đọc, tôi muốn biết yêu cầu hoặc nội dung nào thay đổi và phần việc nào bị ảnh hưởng, để không phải đọc lại toàn bộ hoặc tiếp tục làm theo thông tin cũ. | Người làm việc với đề bài, đặc tả, kế hoạch hoặc tài liệu hướng dẫn có nhiều phiên bản | Chọn một cặp phiên bản từng xử lý; ghi độ dài tài liệu, thời gian đối chiếu, số thay đổi quan trọng và lần bỏ sót thay đổi nếu có. Chưa có dữ liệu cá nhân được cung cấp. |
+
 **Nếu có dùng AI để gợi ý thêm:**
 
 - AI gợi ý các candidate ở nhiều bối cảnh; học viên chọn giữ chi tiêu cá nhân, gia hạn dịch vụ và bữa ăn.
 - Học viên đề xuất vấn đề khó dừng lướt mạng xã hội và sửa vấn đề theo dõi hoạt động thành thông tin rải rác trên Facebook, Instagram, Zalo, Discord…
-- Theo lựa chọn của học viên, bỏ các ý chưa chọn; danh sách cuối còn 5 problem, đã đánh lại số thứ tự. Vấn đề bữa ăn từ #6 chuyển thành #5.
+- Theo lựa chọn của học viên, bỏ các ý chưa chọn; danh sách lúc đó còn 5 problem, đã đánh lại số thứ tự. Vấn đề bữa ăn từ #6 chuyển thành #5.
+- Học viên chọn thêm lọc ảnh (#6) và đối chiếu phiên bản tài liệu (#7), thay gợi ý rà video dài chưa phù hợp.
 - Chưa có số liệu trải nghiệm cá nhân được cung cấp; cột cuối là hướng thu thập bằng chứng, không phải kết quả đã quan sát.
 
-**Trạng thái:** CP1 còn 5 problem được giữ. Cần bổ sung dấu hiệu thật; chưa chọn top 3, chưa triển khai CP2.
+### Giả thuyết ứng dụng AI cho hai problem mới
+
+Các hướng sau để đánh giá tính phù hợp, chưa phải quyết định giải pháp. Job Story ở trên tập trung vào vấn đề của người dùng.
+
+**#6 — Lọc và chọn ảnh**
+
+- **Can thiệp sâu:** Phân tích đặc trưng hình ảnh để gom ảnh gần giống dù khác tên file hoặc góc chụp; đánh dấu ảnh mờ và đề xuất ảnh đại diện theo tiêu chí người dùng. Kết quả là nhóm ảnh và danh sách lựa chọn có thể thao tác trực tiếp, không chỉ nhận xét qua hội thoại.
+- **Đối chứng không dùng AI:** Sắp theo thời gian, lọc file trùng hoàn toàn và chọn ảnh thủ công. Cần kiểm chứng AI có giúp xử lý ảnh gần giống tốt hơn cách này hay không.
+- **Cách đo:** Tổng thời gian lọc cộng sửa lựa chọn, tỷ lệ đề xuất được giữ và số ảnh người dùng muốn giữ nhưng bị đánh dấu loại. Chỉ gom hoặc đánh dấu; người dùng duyệt trước khi xóa, có cách khôi phục. Chưa có baseline thật.
+
+**#7 — Đối chiếu phiên bản tài liệu**
+
+- **Can thiệp sâu:** Căn chỉnh các mục tương ứng khi bố cục thay đổi, phân biệt sửa câu chữ với thay đổi ý nghĩa, liên kết nội dung thay đổi với phần việc liên quan do người dùng cung cấp. Đầu ra là bảng thay đổi có trích đoạn và vị trí ở cả hai phiên bản để kiểm chứng.
+- **Đối chứng không dùng AI:** So sánh văn bản theo dòng hoặc dùng chế độ theo dõi thay đổi. Nếu đã đủ để phát hiện các thay đổi cần quan tâm thì chưa cần AI.
+- **Cách đo:** Tổng thời gian đối chiếu cộng kiểm lại, số thay đổi quan trọng bị bỏ sót và số cảnh báo không liên quan. Đối chiếu với danh sách thay đổi được người đọc xác nhận; không tự cập nhật tài liệu hay nhiệm vụ. Chưa có baseline thật.
+
+**Trạng thái:** Danh sách CP1 có 7 problem được học viên chọn giữ. #6 thay ý rà video bằng lọc ảnh; #7 là ý đối chiếu phiên bản tài liệu. Cần bổ sung dấu hiệu thật. CP2 chưa triển khai; cần chọn top 3 từ danh sách mới.
 
 ---
 
@@ -147,7 +167,7 @@ Quy trình nháp hiện tại:
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | AI gợi ý và chỉnh Job Story theo phản hồi của học viên | Mở rộng phạm vi ngoài bài lab, chuẩn hóa 5 problem được giữ | Chưa có số liệu trải nghiệm cá nhân | Học viên đã chọn, loại và sửa các ý; cần bổ sung dấu hiệu thật |
+| CP1 Scan | AI gợi ý và chỉnh Job Story theo phản hồi của học viên | Mở rộng phạm vi ngoài bài lab, chuẩn hóa 7 problem được giữ | Chưa có số liệu trải nghiệm cá nhân | Học viên đã chọn, loại và sửa các ý; cần bổ sung dấu hiệu thật |
 | CP2 Problem Card | Chưa thực hiện; chờ duyệt CP1 | | | |
 | CP4 Research | | | | |
 | CP5 Quy trình | | | | |

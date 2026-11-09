@@ -13,7 +13,7 @@
 | STT | Họ và tên      | MSSV        | Vai trò trong nhóm | Tài khoản GitHub |
 | --: | -------------- | ----------- | ------------------ | ---------------- |
 |   1 | Trần Minh Nhật | 2A202603684 | Nhóm trưởng        | nashtran001      |
-|   2 |                |             |                    |                  |
+|   2 | Phạm ThanhTùng | 2A202603695 | Thành viên         | thanhtunglk231   |
 |   3 |                |             |                    |                  |
 |   4 |                |             |                    |                  |
 

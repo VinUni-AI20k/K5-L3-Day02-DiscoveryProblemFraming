@@ -17,6 +17,12 @@
 
 ## 2. Scan problem (CP1)
 
+### Bối cảnh
+
+Tôi là Nguyễn Trung Duy, sinh viên Trường Đại học Công nghệ Thông tin. Trong quá trình đi học, tôi từng mất thời gian tìm tài liệu và xem lại bài giảng để ôn tập. Khi làm bài tập, có lúc tôi chưa hiểu yêu cầu, bỏ sót nội dung hoặc quên hạn nộp. Từ những việc này, tôi chọn các vấn đề mình gặp trong học tập để phân tích.
+
+### Bảng scan problem
+
 Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng hợp nhiều thông tin** · **Pain từ người khác**.
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |

@@ -148,16 +148,16 @@ HIỆN TẠI — khoảng 24 phút thao tác + 10–30 phút chờ/lần, 7–10
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
+| Pitch Problem Card | Pitch 3 card: debug lỗi runtime từ file log, lỗi cấu hình khi deploy, báo lỗi thiếu log; muốn pitch nhất card debug log. | Card debug log được nhóm chọn làm candidate (32 điểm khi chấm shortlist). |
 | Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Nhận phản biện | Câu hỏi tôi nhận được: Bình hỏi "Khi gặp lỗi backend/CSDL, có thật là dev mất 20–30 phút chỉ để đọc chữ trong file log không, hay mất thời gian ở bước mở qua lại nhiều file code để tìm nguyên nhân gốc? Và nếu chỉ dùng script/regex lọc log thì đã giải quyết được bao nhiêu %?" | Tôi đã sửa gì: thêm bước trích đoạn code quanh file:dòng vào quy trình tương lai (CP5), không chỉ lọc log; thu hẹp Actor vào lỗi kéo dài trên 15 phút, xuyên nhiều tầng. |
+| Gom cluster / cây OST | Tổ chức buổi thảo luận gom cluster (Bình gom chính) và cùng nhóm viết outcome, các opportunity của cây OST. | Card debug log nằm ở cluster C (gỡ lỗi và sàng lọc thông tin). |
+| Chọn candidate problem | Tổ chức thảo luận, cùng nhóm chấm shortlist theo 7 tiêu chí. | Nhóm đồng thuận chọn debug log; ghi lại bất đồng của Thái Hưng và Quốc Hưng. |
+| Kiểm chứng / research | Phỏng vấn trực tiếp 1 lập trình viên trên lớp; thảo luận kết quả CP4 với Bình (phụ trách chính). | Dùng kết quả CP4 để thu hẹp Actor và đặt baseline trong Problem Statement v0. |
+| Quy trình nhóm | Phụ trách chính CP5: vẽ quy trình hiện tại, quy trình tương lai và bảng before/after. | Nhóm dùng làm bản CP5; CP6 lấy quy trình tương lai làm điểm can thiệp AI. |
+| Problem Statement | Viết Problem Statement v0, nhờ AI phản biện và sửa 4 lỗ hổng. | v0 là nền cho Problem Statement v1 ở CP6. |
+| Mức can thiệp AI | Tham gia thảo luận; Thái Hưng và Quốc Hưng phụ trách chính CP6. | Nhóm chọn Workflow (Rule → AI → developer kiểm tra). |
+| Quyết định | Tham gia thảo luận 4 rủi ro. | Nhóm chốt Not Yet, kèm ngưỡng dừng sau 2 tuần và tối thiểu 20 ca lỗi. |
 
 ---
 
@@ -167,10 +167,11 @@ HIỆN TẠI — khoảng 24 phút thao tác + 10–30 phút chờ/lần, 7–10
 |---|---|---|---|---|
 | CP1 Scan | Rà bảng scan theo rubric C1 và chuyển sang bảng Markdown, sau khi đã tự scan xong (không dùng để nghĩ ra problem) | Giúp định dạng bảng Markdown nhanh chóng, rà cấu trúc Job Story và chỉ ra các dòng thiếu số liệu (dòng 1 chưa rõ 10–15 phút đo gì, dòng 6 thiếu tần suất, dòng 7 thiếu mẫu số cho 70%). | AI khuyên dòng 2 chỉ giữ một tình huống nhưng không lưu ý tình huống nào khớp với quy trình đọc stack trace của tôi; tôi chọn "lỗi logic" và chỗ lệch này đến CP2 mới lộ ra. | Tự tay điều chỉnh lại các con số, bổ sung nguồn chứng cứ thực tế (Git commit, log chat) và sửa lại dòng 5, 7 theo góc nhìn của đồng đội. |
 | CP2 Problem Card | Nội dung 3 card tôi tự làm; dùng AI đóng vai PM hoài nghi để phản biện card (yêu cầu của CP2) và chuyển nội dung sang bảng Markdown | Đóng vai PM hoài nghi rất sắc bén, chỉ ra được các điểm mù về logic giữa "lỗi logic" và "stack trace", vạch ra lỗi mâu thuẫn số phút giữa CP1 và CP2, và chỉ ra card 2, 3 bị ghi nhầm "Workflow" dù không có bước AI nào. | AI khuyên card 3 chọn No AI (template báo lỗi) trước khi biết pain thật là đồng đội thấy mất công; template bắt điền thêm thông tin có thể làm họ ngại hơn. | Sửa lại hoàn toàn nhãn mức AI (Card 2 thành Rule, Card 3 thành No AI), điều chỉnh lại quy trình đo lường thời gian debug bước 3-4 và bổ sung các nhánh phụ cho Card 2; card 3 giữ template nhưng ghi phương án dự phòng chuyển sang nút tự gom log (Rule) nếu template không đủ. |
-| CP4 Research | | | | |
-| CP5 Quy trình | Chuyển quy trình hiện tại và tương lai (theo nguyên tắc thiết kế nhóm rút ra ở CP4) sang sơ đồ Mermaid và tính bảng before/after | | | |
-| CP5–6 Problem Statement | Nhờ AI phản biện Problem Statement v0: AI chỉ ra 4 lỗ hổng (Actor, baseline/target, Boundary, phương án quay về) kèm phương án sửa, nhóm tự chọn cách sửa | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP3 Hội tụ nhóm (tổng hợp) | Nhờ AI gom card của 4 bạn vào bảng pitch, dựng cây OST và bảng chấm điểm từ số liệu trong card và ghi chép của nhóm; không dùng AI lúc pitch và phản biện | Gom nhanh 12 card; phát hiện bảng cluster thiếu 3 card của Quốc Hưng. | Không biết ai hỏi câu phản biện nào, chỉ ghi được theo nhật ký của người nhận. | Đối chiếu và xác nhận điểm số, lý do chọn và loại theo buổi thảo luận của nhóm. |
+| CP4 Research | Không dùng (CP4 do Bình phụ trách) | — | — | — |
+| CP5 Quy trình | Chuyển quy trình hiện tại và tương lai (theo nguyên tắc thiết kế nhóm rút ra ở CP4) sang sơ đồ Mermaid và tính bảng before/after | Vẽ sơ đồ Mermaid nhanh, tính sẵn bảng before/after. | Tự thêm nội dung ngoài template (dòng chú thích, bảng trùng với sơ đồ); tự suy đoán cột Input/Output và mũi tên "sửa chưa đúng". | Yêu cầu gỡ phần thêm ngoài template, giữ đúng yêu cầu của đề. |
+| CP5–6 Problem Statement | Nhờ AI phản biện Problem Statement v0: AI chỉ ra 4 lỗ hổng (Actor, baseline/target, Boundary, phương án quay về) kèm phương án sửa, nhóm tự chọn cách sửa | Chỉ ra 4 lỗ hổng: Actor quá rộng, baseline chỉ 1 người, Boundary trống, thiếu phương án quay về. | Đưa luôn phương án sửa thay vì chỉ chỉ ra lỗ hổng như đề yêu cầu. | Tự chọn cách sửa cho từng lỗ hổng. |
+| CP6 Mức can thiệp / quyết định | Nhờ AI rà CP6 (do Thái Hưng và Quốc Hưng viết) khi ghép bản final | Phát hiện mục 8 bị lặp và các chỗ CP6 dẫn số liệu phỏng vấn chưa có bảng ở CP4. | Đề xuất sửa nội dung CP6 khi chưa biết các bạn khác có phỏng vấn thêm hay không. | Giữ nguyên CP6 của hai bạn, chỉ xóa phần lặp; nhắc nhóm bổ sung bảng phỏng vấn vào CP4. |
 
 ---
 
@@ -180,20 +181,35 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Khi nghe các bạn khác trong nhóm pitch top 3 problems, tôi nhận ra mỗi người xuất phát từ một góc nhìn và lĩnh vực công việc khác nhau (có bạn làm về tài liệu, có bạn làm về triển khai). Điều này giúp tôi hiểu rằng một hệ thống công nghệ lớn không chỉ chịu nghẽn ở khâu viết code hay debug mà còn bị ảnh hưởng nặng nề bởi giao tiếp giữa các bên (như việc báo lỗi thiếu thông tin) và thao tác vận hành. Nó mở rộng góc nhìn của tôi từ việc chỉ chăm chăm nhìn vào dòng code cá nhân sang việc nhìn toàn diện bức tranh vận hành của cả team.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Có, ở giai đoạn đầu khi gom các ý tưởng, nhóm tôi có xu hướng nhao vào bàn luận ngay xem nên dùng mô hình AI nào hoặc tích hợp công cụ gì để giải quyết. Ngay sau khi nhìn nhận lại rubric và tiêu chí của giai đoạn Define, chúng tôi đã nhận ra mình đang bị sa đà vào "solution-first" trước khi định nghĩa rõ nỗi đau (pain). Nhóm đã dừng lại, quay về phân tích sâu bảng scan problem và dùng cây Opportunity Solution Tree (OST) để bóc tách rõ root cause và các opportunity thuần túy, gạch bỏ hoàn toàn các tên tool hay tính năng ra khỏi nhánh cơ hội.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Có, cụ thể là khi tôi đưa Problem Card về việc debug lỗi log hệ thống, ban đầu tôi dùng từ "lỗi logic" và đặt target thời gian quá chung chung. Sau khi đối chiếu với các câu hỏi phản biện và testcase, tôi nhận ra "lỗi logic" thuần túy thường không sinh ra stack trace, và target dưới 10 phút cho toàn bộ quy trình là bất khả thi vì riêng các bước cơ bản đã tốn thời gian. Tôi đã chủ động sửa lại Job Story thành "lỗi runtime (ngoại lệ)" và khu biệt rõ metric chỉ đo riêng cho bước tìm nguyên nhân (bước 3–4), giúp cho định hướng giải quyết sau đó chính xác hơn rất nhiều.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Kết quả phỏng vấn các bạn đồng nghiệp và tìm hiểu các công cụ thực tế khiến tôi khá bất ngờ ở chỗ: thời gian dev tốn kém nhất không nằm ở việc đọc log thuần túy, mà nằm ở việc dải stack trace quá dài chứa quá nhiều thông tin nhiễu từ các thư viện framework bên thứ ba. Ban đầu tôi nghĩ mọi người chỉ cần dùng lệnh tìm kiếm grep là đủ, nhưng thực tế qua kiểm chứng, các phiên debug kéo dài trên 15 phút đều xuất phát từ việc luồng xử lý xuyên nhiều tầng (Controller/Service/Middleware) khiến việc khoanh vùng nguyên nhân gốc rễ trở nên rất rối rắm.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Điều khó nhất là việc phải cân bằng giữa tính cụ thể của kỹ thuật và tính đo lường được của thực tế. Nếu viết quá chung chung thì Problem Statement sẽ vô nghĩa, nhưng nếu viết quá chi tiết vào giải pháp công nghệ (như bắt buộc phải dùng mô hình gì, tool gì) thì lại vi phạm ranh giới Define. Việc chốt được biên giới (Boundary) và Success Metric có baseline và target rõ ràng đòi hỏi tư duy phân rã rất chặt chẽ.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Nếu làm lại từ đầu, tôi sẽ đẩy nhanh tiến độ phỏng vấn kiểm chứng thực tế (phần CP4) ngay từ những ngày đầu thay vì chờ đến khi chốt xong Problem Card ở CP2. Việc có sẵn số liệu phỏng vấn sớm sẽ giúp việc xây dựng quy trình và metric ở các bước sau có căn cứ vững chắc hơn. Đồng thời, tôi sẽ phản biện nhóm mạnh mẽ hơn ngay từ khâu gom cluster để loại bỏ sớm các ý tưởng mang tính cảm tính hoặc thiếu số liệu định lượng rõ ràng.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Bài toán cốt lõi (problem) của nhóm là việc Backend Developer tốn nhiều thời gian (20–40 phút/lần) để đọc và phân tích dải stack trace dài khi hệ thống phát sinh ngoại lệ runtime. Từ quy trình hiện tại gồm 5 bước với điểm nghẽn nằm ở khâu đọc log thủ công, nhóm đặt ra metric cải thiện thời gian tìm nguyên nhân xuống dưới 10 phút/lần. Để kiểm soát rủi ro ảo giác của AI, nhóm thiết lập ranh giới (boundary) nghiêm ngặt: AI không được đọc raw log chứa dữ liệu nhạy cảm, chỉ được gợi ý nguyên nhân dạng [DRAFT_ONLY] và tuyệt đối không tự sửa code. Về mức độ can thiệp, nhóm chọn mức Workflow kết hợp Rule lọc nhiễu trước và LLM phân tích phía sau, luôn có con người kiểm tra (HITL). Cuối cùng, quyết định (decision) của nhóm là xây dựng giải pháp hỗ trợ phân tích log có kiểm soát an toàn thay vì tự động hóa hoàn toàn.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- Đề bài và hướng dẫn lab: `docs/01-worksheet.md`, `docs/02-deliverable-example.md`.
+- Tài liệu nhóm dùng ở CP4: [1]–[7] trong mục 10 của `report/team/group_report.md`.

@@ -9,8 +9,8 @@
 - Họ tên: Trần Thái Hưng
 - MSSV: 2A202603557
 - Email trường: 26ai.hungtt@vinuni.edu.vn
-- Tên nhóm: 
-- Link repo nhóm: 
+- Tên nhóm: BDHH
+- Link repo nhóm: https://github.com/trinhcongduc112/K5-L3A-DAY02-BDHH-DiscoveryProblemFraming
 ---
 
 ## 2. Scan problem (CP1)

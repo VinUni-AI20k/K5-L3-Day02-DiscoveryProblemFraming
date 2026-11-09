@@ -4,6 +4,8 @@
 
 - **Họ tên:** Nguyễn Quốc Hưng
 - **MSSV:** 2A202603553
+- **Tên nhóm:** BDHH
+- **Link repo nhóm:** https://github.com/trinhcongduc112/K5-L3A-DAY02-BDHH-DiscoveryProblemFraming
 
 ## 2. Scan problem (CP1)
 

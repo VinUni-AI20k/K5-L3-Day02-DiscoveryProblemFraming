@@ -7,8 +7,8 @@
 
 - Tên nhóm: BDHH
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu): 
-- Quyết định cuối: Go / Not Yet / No-Go
+- Candidate problem được chọn (1 câu): Backend developer (sinh viên/junior) mất 20–40 phút mỗi lần dò stack trace dài, nhiều nhiễu để tìm nguyên nhân các lỗi khó phải truy qua nhiều file (lỗi kết nối CSDL, lỗi logic liên tầng).
+- Quyết định cuối: Not Yet
 
 ---
 
@@ -21,15 +21,15 @@
 | 1 | [Bình] | **CV theo vai trò:** Khi ứng tuyển các vai trò khác nhau (Fullstack, QA/Tester, BA), tôi muốn CV nhấn đúng dự án liên quan từng vai trò, để nhà tuyển dụng thấy mình phù hợp. | Sinh viên CS năm cuối ứng tuyển đồng thời 2–3 vai trò (Fullstack, QA/Tester, BA), có 5+ repo đồ án cũ chưa đưa lên CV. | **Bước 3:** Lục lại code/commit/test của đồ án cũ để tìm bằng chứng kỹ thuật có thật (số API, test case, cấu hình, benchmark) — mất ~30 phút/bản (trong tổng ~95 phút) vì quên chi tiết và thiếu sẵn metric. | *(Gợi ý câu hỏi dễ gặp: Nếu đã lập file "Master Project Log" ghi sẵn số liệu chỉ mất 2 phút copy thì có thực sự cần AI nữa không, hay chỉ cần 3 bản CV mẫu cố định cho 3 role?)* |
 | 2 | [Bình] | **Review sơ đồ PlantUML:** Khi review bộ sơ đồ sequence PlantUML trước khi chốt báo cáo, tôi muốn biết sơ đồ nào sai mã hóa hoặc lệch luồng xử lý so với code, để không nộp sơ đồ mâu thuẫn với hệ thống thật. | Sinh viên làm đồ án cá nhân (6 sprint), viết báo cáo dùng PlantUML (`.puml`) cho ≥10 nhóm chức năng và sửa code backend nhiều đợt trước khi nộp. | **Bước 2:** Mở 3–4 file code (`Controller`/`Service`) đối chiếu thủ công luồng gọi hàm, truy vấn DB và trạng thái trả về với từng file `.puml` — mất ~25 phút/đợt (~2.5 phút × 10 sơ đồ, trên tổng ~60 phút/đợt) và dễ sót lỗi. | *(Gợi ý câu hỏi dễ gặp: Tần suất chỉ 2–3 đợt/học kỳ thì ROI của việc đưa vào AI có đáng không, hay dùng checklist cố định 4 lỗi + script bắt lỗi UTF-8 là đủ?)* |
 | 3 | [Bình] | **Kiểm báo cáo lab trước khi nộp:** Khi nộp báo cáo lab (`.md`) lúc gần deadline, tôi muốn biết mình còn bỏ trống mục nào hoặc ghi lệch số liệu nào so với lần chạy notebook cuối, để không bị trừ điểm vì sai sót hình thức. | Sinh viên học môn AI/ML làm báo cáo `.md` tách rời khỏi file `.ipynb`, hay chạy lại thực nghiệm sát giờ nộp làm thay đổi tham số/kết quả. | **Bước 3:** Đối chiếu thủ công số liệu (`SEED`, tham số, kết quả) giữa báo cáo `.md` và output cell của `.ipynb` — mất ~7 phút/bài (trên tổng ~20 phút/bài, micro-pain), dễ sót khi chạy lại notebook phút chót. | *(Gợi ý câu hỏi dễ gặp: Pain chỉ mất ~7 phút và kiểm tra đúng/sai tường minh, tại sao không chốt chạy xong `.ipynb` rồi mới điền kèm regex quét ô trống thay vì dùng AI?)* |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 4 | [Đức] | **Debug lỗi runtime từ file log:** Khi gặp lỗi runtime (ngoại lệ) lúc chạy backend, tôi muốn truy ra đúng dòng gây lỗi từ file log, để không phải thử sửa mò nhiều lần. | Backend developer gặp lỗi runtime 3–4 lần/tuần. | **Bước 4:** Đọc dải stack trace dài, nhiều nhiễu — 20 phút/lần (tổng khoảng 43 phút/lần). | Bình hỏi: "Khi gặp lỗi backend/CSDL, có thật là dev mất 20–30 phút chỉ để đọc chữ trong file log không, hay mất thời gian ở bước mở qua lại nhiều file code để tìm nguyên nhân gốc? Và nếu chỉ dùng script/regex lọc log thì đã giải quyết được bao nhiêu %?" |
+| 5 | [Đức] | **Lỗi cấu hình khi deploy:** Khi đưa bản cập nhật lên môi trường chạy thử vào cuối ngày, tôi muốn bản mới chạy đúng mà không sót hay sai bước cấu hình, để cuối ngày không phải ở lại sửa lỗi thao tác. | Developer trong nhóm, deploy 3–4 lần/tuần. | **Bước 3:** Cập nhật `.env` thủ công — 5 phút/lần; mỗi lần sót biến mất thêm 20–30 phút sửa (khoảng 1 lần/tuần). | — |
+| 6 | [Đức] | **Báo lỗi thiếu log:** Khi gặp sự cố, thành viên nhóm muốn báo lỗi thật nhanh mà vẫn đủ thông tin, để không phải quay lại gửi bổ sung. | Thành viên nhóm / Tester, 7–10 báo lỗi/tuần. | **Bước 4:** Tìm log và gửi lại — 5 phút thao tác, chờ 10–30 phút; 7/10 báo lỗi gần nhất thiếu log. | — |
+| 7 | [Thái Hưng] | **Báo cáo tiến độ tuần:** Khi tới thứ 5 hàng tuần, tôi muốn có sẵn bản tổng hợp tiến độ của cả team ở một file duy nhất, để kịp gửi báo cáo khoa học cho thầy hướng dẫn. | Trưởng nhóm nghiên cứu / sinh viên phụ trách tổng hợp báo cáo. | **Bước 3–4:** Tổng hợp thông tin rải rác và viết lại thành văn bản — 30–40 phút, hay sót ý khi team đông. | "Bottleneck thực chất là do lười đi gom data hay lười viết?" (theo nhật ký của Thái Hưng) |
+| 8 | [Thái Hưng] | **Đọc tóm tắt bài báo mới:** Khi nhận một bài báo nghiên cứu mới, tôi muốn nhanh chóng nắm được Abstract, Methodology và Conclusion, để đánh giá xem có nên đọc kỹ toàn bộ bài hay không. | Nghiên cứu sinh. | **Bước 3–4:** Đọc lướt để lọc ý chính — 25–30 phút/bài (bài dài 15–20 trang). | — |
+| 9 | [Thái Hưng] | **Meeting notes & phân công:** Khi vừa xong cuộc họp với thầy hướng dẫn, tôi muốn có ngay danh sách đánh giá của thầy và Action Items cho từng người, để cả team bắt tay vào làm ngay mà không bỏ sót việc. | Trưởng nhóm / người take note / cả team. | **Bước 2–4:** Gõ lại note, lọc ý và phân rã task — khoảng 30 phút, dễ sót ý. | — |
+| 10 | [Quốc Hưng] | **Chờ lấy đồ ăn ở căng tin:** Khi ăn trưa ở căng tin vào giờ đông, tôi muốn gọi món và nhận đồ ăn nhanh hơn để kịp trở lại lớp học. | Sinh viên ăn trưa tại căng tin. | Xếp hàng gọi món — khoảng 10 phút/lượt. | "Nếu giảm thời gian xếp hàng nhưng đồ ăn vẫn chế biến chậm thì có giải quyết được vấn đề không?" (theo nhật ký của Quốc Hưng) |
+| 11 | [Quốc Hưng] | **Tìm chỗ tự học ở thư viện:** Khi đến thư viện để tự học, tôi muốn biết khu vực nào còn chỗ để không phải đi qua nhiều phòng tìm bàn trống. | Sinh viên đến thư viện vào giờ đông. | Tìm bàn trống — khoảng 8 phút/lượt. | — |
+| 12 | [Quốc Hưng] | **Xếp hàng in tài liệu:** Khi cần in tài liệu trước giờ học, tôi muốn nhận bản in đúng yêu cầu mà không phải xếp hàng lâu hoặc gửi lại tệp nhiều lần. | Sinh viên dùng điểm in gần trường. | Xếp hàng chờ đến lượt — khoảng 8 phút/lượt. | — |
 
 ---
 
@@ -37,43 +37,49 @@
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| **A (Cluster 1)** | - CV theo vai trò (Problem Card #1)<br>- Báo cáo tiến độ tuần (Ảnh #1)<br>- Meeting notes & Phân công công việc (Ảnh #3) | **Báo cáo & Tổng hợp thông tin đa nguồn (Information Synthesis & Reporting):** Dữ liệu đầu vào nằm rải rác ở nhiều nơi hoặc từ nhiều người. Con người mất nhiều thời gian đọc lướt, trích lọc, cấu trúc lại và tổng hợp thành văn bản hoàn chỉnh theo một định dạng chuẩn. |
+| **A (Cluster 1)** | - CV theo vai trò (Problem Card #1)<br>- Báo cáo tiến độ tuần (Thái Hưng)<br>- Meeting notes & Phân công công việc (Thái Hưng) | **Báo cáo & Tổng hợp thông tin đa nguồn (Information Synthesis & Reporting):** Dữ liệu đầu vào nằm rải rác ở nhiều nơi hoặc từ nhiều người. Con người mất nhiều thời gian đọc lướt, trích lọc, cấu trúc lại và tổng hợp thành văn bản hoàn chỉnh theo một định dạng chuẩn. |
 | **B (Cluster 2)** | - Review sơ đồ PlantUML (Problem Card #2)<br>- Kiểm tra báo cáo lab trước khi nộp (Problem Card #3)<br>- Deploy code sai cấu hình (Candidate gốc) | **Đối chiếu chéo & Kiểm tra tính nhất quán (Consistency Checking & Verification):** Cần so sánh thủ công giữa hai hoặc nhiều nguồn thông tin (đặc tả và mã nguồn, cấu hình và môi trường, báo cáo và kết quả thực tế) để phát hiện sai lệch, thiếu sót hoặc những điểm không nhất quán. |
-| **C (Cluster 3)** | - Debug lỗi log hệ thống (Candidate gốc)<br>- Thành viên báo lỗi thiếu log (Candidate gốc)<br>- Đọc tóm tắt bài báo nghiên cứu mới (Ảnh #2)<br>- Tìm tài liệu học tập phù hợp (Ảnh #5, #6)<br>- Tự sửa lỗi bài tập ngoài giờ (Ảnh #4) | **Thu thập, Sàng lọc & Gỡ lỗi kỹ thuật (Debugging & Information Retrieval):** Đối mặt với khối lượng dữ liệu lớn hoặc nhiễu (log dài, nhiều bài báo, tài liệu học tập hoặc thông tin lỗi). Con người cần nhanh chóng tìm kiếm, sàng lọc, khoanh vùng thông tin liên quan và xác định nguyên nhân cốt lõi để đưa ra hướng xử lý phù hợp. |
+| **C (Cluster 3)** | - Debug lỗi log hệ thống (Candidate gốc)<br>- Thành viên báo lỗi thiếu log (Candidate gốc)<br>- Đọc tóm tắt bài báo nghiên cứu mới (Thái Hưng)<br>- Tìm tài liệu học tập phù hợp (Ảnh #5, #6)<br>- Tự sửa lỗi bài tập ngoài giờ (Ảnh #4) | **Thu thập, Sàng lọc & Gỡ lỗi kỹ thuật (Debugging & Information Retrieval):** Đối mặt với khối lượng dữ liệu lớn hoặc nhiễu (log dài, nhiều bài báo, tài liệu học tập hoặc thông tin lỗi). Con người cần nhanh chóng tìm kiếm, sàng lọc, khoanh vùng thông tin liên quan và xác định nguyên nhân cốt lõi để đưa ra hướng xử lý phù hợp. |
+| **D (Cluster 4)** | - Chờ lấy đồ ăn ở căng tin (Quốc Hưng)<br>- Tìm chỗ tự học ở thư viện (Quốc Hưng)<br>- Xếp hàng in tài liệu (Quốc Hưng) | **Chờ đến lượt & thiếu thông tin trạng thái ở dịch vụ trong trường:** Thời gian chờ không tạo giá trị cho sinh viên; nghẽn do xếp hàng đến lượt hoặc do không biết trước chỗ trống, tình trạng phục vụ. |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian backend developer tìm ra nguyên nhân các lỗi khó khi debug (từ 20–40 phút xuống dưới 10 phút/lần)
+├── Opportunity A: Stack trace dài, lẫn nhiều dòng của thư viện/framework, khó thấy dòng code của mình
+├── Opportunity B: Phải mở qua lại nhiều file code để đối chiếu với log mới hiểu vì sao lỗi
+└── Opportunity C: Báo lỗi từ đồng đội thiếu log và ngữ cảnh, phải hỏi lại mới bắt đầu debug được
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- "Công cụ đưa file log cho AI đọc để tìm dòng lỗi": đây là cách giải, không phải nhu cầu.
+- "Dùng Sentry để giám sát lỗi": tên công cụ, không phải pain.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| Debug lỗi runtime từ file log (Đức) | 4 | 5 | 4 | 5 | 4 | 5 | 5 | **32** |
+| Báo cáo tiến độ tuần (Thái Hưng) | 4 | 4 | 3 | 3 | 5 | 4 | 3 | 26 |
+| Review sơ đồ PlantUML (Bình) | 4 | 4 | 3 | 2 | 4 | 4 | 4 | 25 |
 
-**Candidate được chọn:**
+**Candidate được chọn:** Debug lỗi runtime từ file log (card của Đức).
 
-**Vì sao chọn:**
+**Vì sao chọn:** Impact lớn nhất (30–60 phút/lần × 3–4 lần/tuần ≈ 1,5–4 giờ/tuần), quy trình 5 bước có số phút, bottleneck cụ thể (đọc stack trace, 20 phút/lần), cả nhóm hiểu domain và có sẵn tài liệu thực nghiệm để kiểm chứng; so sánh được đủ No AI / Rule / Workflow / Agent.
 
 **Vì sao loại các candidate còn lại:**
 
-**Xử lý bất đồng (nếu có):**
+- Báo cáo tiến độ tuần: impact 50–60 phút/tuần cho 1 người, chưa chắc thầy hướng dẫn cần bản tổng hợp chi tiết, và gần trùng bài mẫu của đề.
+- Review sơ đồ PlantUML: chỉ 2–3 đợt mỗi học kỳ; checklist + script quét lỗi có thể đã đủ.
+
+**Xử lý bất đồng (nếu có):** Thái Hưng ưu tiên bài báo cáo tiến độ tuần, Quốc Hưng đề xuất bài căng tin; nhóm chốt theo tổng điểm 7 tiêu chí và đồng thuận chọn debug log.
 
 ---
-# 3. Kiểm chứng + research (CP4)
+
+## 3. Kiểm chứng + research giải pháp đã có (CP4)
 
 **Bài toán ban đầu (Problem #1):** Debug lỗi từ file log hệ thống.
 
@@ -82,22 +88,22 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 ---
 
-## Assumption Map
+### 3.1. Assumption Map
 
 | # | Giả định | Loại | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm trước? |
 | :-: | :--- | :--- | :-: | :-: | :-: |
-| 1 | Lập trình viên khác cũng mất 20 phút trở lên cho một lần debug lỗi khó, không chỉ riêng mình | Value | 5 | 1 | ✅ |
-| 2 | Khi kiểm tra trạng thái lỗi, lập trình viên chủ yếu dựa vào log/console hơn là debugger (breakpoint) | Value | 4 | 2 | ✅ |
-| 3 | Bước tốn thời gian nhất là lọc nhiễu trong log và mở đối chiếu nhiều file code trước khi biết sửa ở đâu | Value | 5 | 2 | ✅ |
-| 4 | Có thể lọc phần nhiễu của log (timestamp, ID, log cấp thấp) bằng script/parser trước khi đưa vào AI | Feasibility | 4 | 4 | ✅ ([2], [5]) |
-| 5 | AI chỉ ra được nguyên nhân từ log + code mà không báo động giả hoặc bịa (hallucination) làm mất thêm thời gian kiểm tra | Feasibility | 5 | 1 | ✅ ([2], [5]) |
+| 1 | Lập trình viên khác cũng mất 20 phút trở lên cho một lần debug lỗi khó, không chỉ riêng mình | Value | 5 | 1 | v |
+| 2 | Khi kiểm tra trạng thái lỗi, lập trình viên chủ yếu dựa vào log/console hơn là debugger (breakpoint) | Value | 4 | 2 | v |
+| 3 | Bước tốn thời gian nhất là lọc nhiễu trong log và mở đối chiếu nhiều file code trước khi biết sửa ở đâu | Value | 5 | 2 | v |
+| 4 | Có thể lọc phần nhiễu của log (timestamp, ID, log cấp thấp) bằng script/parser trước khi đưa vào AI | Feasibility | 4 | 4 | v ([2], [5]) |
+| 5 | AI chỉ ra được nguyên nhân từ log + code mà không báo động giả hoặc bịa (hallucination) làm mất thêm thời gian kiểm tra | Feasibility | 5 | 1 | v ([2], [5]) |
 | 6 | Lập trình viên / công ty chấp nhận đưa log và mã nguồn vào công cụ AI | Viability | 5 | 1 | Hỏi bạn làm backend (xem Bước 2, mục "Việc còn thiếu") |
 
 ---
 
-## Kiểm chứng
+### 3.2. Kiểm chứng
 
-### Cách kiểm chứng và giới hạn
+#### Cách kiểm chứng và giới hạn
 
 Nhóm **không phỏng vấn trực tiếp** ở vòng này. Thay vào đó, nhóm dùng 5 tài liệu đã công bố làm **bằng chứng thứ cấp** để kiểm các giả định có điểm bằng chứng thấp (#1, #2, #3, #4, #5). Các giới hạn chung:
 
@@ -107,7 +113,7 @@ Nhóm **không phỏng vấn trực tiếp** ở vòng này. Thay vào đó, nh�
 
 Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài liệu [1], bảng 5. Danh mục đầy đủ ở cuối file.
 
-### Evidence Snapshot #1 — Quan sát hành vi thực tế [1]
+#### Evidence Snapshot #1 — Quan sát hành vi thực tế [1]
 
 | Trường | Nội dung |
 | :--- | :--- |
@@ -120,7 +126,7 @@ Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài l
 | **Giới hạn** | Chỉ 11 dev, dự án mã nguồn mở, biết mình đang bị ghi hình `[1, §5]`. "Log" trong Table 5 là câu lệnh log/print do dev đặt để quan sát trạng thái chương trình (`log statements`), **không phải** đọc file log hệ thống hay stack trace `[1, §4.2, Table 5]`. Số liệu 51 phút chỉ từ 10 phiên (và một nửa trong số đó chưa sửa xong khi kết thúc phiên) `[1, §4.1]`. Không riêng lỗi CSDL. Bản dùng là preprint arXiv |
 | **Insight** | Pain có thật nhưng **phân bố rất lệch**: ít phiên debug dài gây ra phần lớn thời gian mất đi, còn lỗi nhỏ tự gõ xong thì sửa nhanh `[1, §4.1, §4.3]`. Không có một bước đơn lẻ nào là nút thắt chính `[1, §4.3]`. Thời gian đi vào việc chuyển qua lại giữa kiểm tra trạng thái, duyệt file, sửa và chạy lại (ở phiên dài, kiểm tra trạng thái chiếm 18% và duyệt file chiếm 17% thời gian, trong khi sửa code chiếm 37% và chạy test chiếm 17% `[1, Figure 7]`) |
 
-### Evidence Snapshot #2 — Khảo sát developer & lãnh đạo [3]
+#### Evidence Snapshot #2 — Khảo sát developer & lãnh đạo [3]
 
 | Trường | Nội dung |
 | :--- | :--- |
@@ -133,7 +139,7 @@ Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài l
 | **Giới hạn** | Số tự khai. Con số 17.3 giờ **gộp** cả bad code, lỗi, debug, refactor, sửa đổi và nợ kỹ thuật nên không tách được riêng thời gian debug bằng log `[3, tr.4, tr.5]`. Không đo thời gian cho một lần debug. Báo cáo do một công ty công bố, quy đổi ra "thiệt hại GDP" ($85 tỷ - $300 tỷ/năm) bằng phép tính của chính Stripe `[3, tr.3, tr.5]` |
 | **Insight** | Chỉ xác nhận ở mức chung rằng bảo trì/sửa lỗi là phần việc lớn và dev thấy nó quá nhiều. **Không xác nhận** con số 20–30 phút/lần của nhóm, nên không dùng làm bằng chứng trực tiếp cho giả định #1 |
 
-### Evidence Snapshot #3 — Khảo sát về thời gian debug [4]
+#### Evidence Snapshot #3 — Khảo sát về thời gian debug [4]
 
 | Trường | Nội dung |
 | :--- | :--- |
@@ -146,7 +152,7 @@ Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài l
 | **Giới hạn** | Phần tuyên bố miễn trừ ghi rõ đây là dự án giáo dục của sinh viên và không phải tư vấn chuyên môn `[4, slide 18 "Disclaimer"]`. Mục tiêu nêu trong tài liệu là hỗ trợ marketing cho sản phẩm RDB `[4, slide 2]`, và phụ lục A2 có dòng tính *"Potential value of Undo"* `[4, slide 15]`, cho thấy liên hệ với công cụ thương mại Undo. Dữ liệu khảo sát năm 2012, số mẫu nhỏ, đều là ước tính tự khai (mức giảm 26% là ước tính "Before/After RDBs" trong khảo sát, không phải đo thực nghiệm) `[4, slide 7]`. Chính bài [1] lưu ý các ước tính tự khai 20%–60% có thể bị phóng đại `[1, §2]` |
 | **Insight** | Cùng bậc độ lớn với bài [1] (khoảng một nửa thời gian lập trình), nhưng độ tin cậy thấp hơn. Chỉ dùng như tín hiệu phụ. Con số 26% không nên dùng để hứa hẹn hiệu quả của giải pháp |
 
-### Evidence Snapshot #4 — Thực nghiệm kỹ thuật: LLM đọc log (LogGPT) [2]
+#### Evidence Snapshot #4 — Thực nghiệm kỹ thuật: LLM đọc log (LogGPT) [2]
 
 | Trường | Nội dung |
 | :--- | :--- |
@@ -157,7 +163,7 @@ Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài l
 | **Giới hạn** | Nhiệm vụ của bài là **phát hiện bất thường trong cửa sổ log hệ thống** (siêu máy tính/Linux cluster) và giải thích cho quản trị viên hệ thống, không liên kết với mã nguồn để chỉ ra dòng code cần sửa cho lập trình viên backend `[2, §I, §IV-A, §IV-D5]`. Mô hình thử nghiệm là `gpt-3.5-turbo` với giới hạn output 100 tokens `[2, §IV-C]` |
 | **Insight** | Cung cấp kiến trúc tiền xử lý (bỏ ID/Timestamp, giữ nội dung + tham số, ép đầu ra JSON) có bằng chứng thực nghiệm chứng minh hiệu quả hơn đưa log thô `[2, §IV-D1, §IV-D2]`. Đồng thời chứng minh rủi ro ở **Giả định #5 là có thật**: nếu chỉ đưa log mà không kiểm soát nhiễu cấp thấp hoặc không có ngữ cảnh code, LLM rất dễ báo động giả và bịa cách xử lý `[2, §IV-D3, §IV-D5, §VI]` |
 
-### Evidence Snapshot #5 — Thực nghiệm LLM + stack trace + code từ repo [5]
+#### Evidence Snapshot #5 — Thực nghiệm LLM + stack trace + code từ repo [5]
 
 | Trường | Nội dung |
 | :--- | :--- |
@@ -170,7 +176,7 @@ Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài l
 | **Giới hạn** | Chỉ Java mã nguồn mở, lỗi đã sửa và ưu tiên cao; đầu vào là báo cáo Jira cùng mã nguồn đã checkout đúng phiên bản commit trước khi crash, không phải file log thô đang chạy `[5, §3.1, §4.1, §6]`. Tiêu chí "định vị đúng" là danh sách ứng viên có ít nhất một hàm trùng hàm được sửa; điểm CodeBLEU chỉ tính trên các ca đã định vị đúng `[5, §5-RQ1]`. Các tác giả ghi nhận tác tử đôi khi bịa (hallucinate) và bỏ sót hàm lỗi `[5, §5-RQ1]`. User study chỉ 16 người, mỗi người mất trung bình 20 phút/crash để phân tích 4 báo cáo, chỉ đo mức "hữu ích" cảm nhận theo thang Likert chứ **không đo thời gian tiết kiệm được hay tỷ lệ sửa đúng thực tế** `[5, §5-RQ3]` |
 | **Insight** | Chỉ cần đưa code của các hàm trong stack trace vào LLM (`DIRECT-LLM`) đã đạt được phần lớn lợi ích định vị lỗi (40.24% so với 43.09% khi duyệt thêm call graph với chi phí gấp đôi) `[5, §5-RQ1, Table 3]`, nên hướng hybrid "script trích stack trace + code → AI" là hợp lý. Tuy nhiên, khoảng 57–60% ca vẫn chưa định vị đúng hàm cần sửa và nguyên nhân gốc đầy đủ chỉ đạt 34–58% `[5, Table 3, Table 5]`, nên kết quả AI **bắt buộc phải để dev duyệt**. Bài báo không chứng minh được việc giảm thời gian debug thực tế |
 
-### Tổng hợp kết quả kiểm chứng
+#### Tổng hợp kết quả kiểm chứng
 
 | Nguồn | Loại / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác / giới hạn | Độ tin cậy |
 | :--- | :--- | :--- | :--- | :-: |
@@ -180,7 +186,7 @@ Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài l
 | **[2] Qi et al. - LogGPT (2023)** | Thực nghiệm kỹ thuật trên tập log BGL & Spirit (mẫu test 2.000 dòng) `[§IV-A]` | Tiền xử lý bỏ ID/timestamp (*content sequence*) cho F1 cao nhất (đạt tới 0.740 trên Spirit) so với để log thô `[§IV-D1, §IV-D2, Table I]`; ép đầu ra JSON giúp giải thích được nguyên nhân và cách phòng tránh `[§III-B, §IV-D5]` | Bài giải bài toán phát hiện bất thường log hệ thống, không gắn với mã nguồn; **tỷ lệ báo động giả (false positive) cao** (Precision chỉ 0.28–0.58) do log cảnh báo cấp thấp và **có hiện tượng hallucination** sinh gợi ý vô ích `[§IV-D3, §IV-D5, §VI, Table II]` | Trung bình (có thực nghiệm định lượng nhưng khác bài toán code) |
 | **[5] Fahim et al. (2025)** | Thực nghiệm 492 crash report Java + user study 16 người `[§3.1, §5-RQ3]` | Code của các hàm trong stack trace + LLM nâng tỷ lệ định vị đúng từ 10.57% lên 40.24–43.09% `[Table 3]`; người dùng chấm mức hữu ích tăng từ 3.00 → 4.59 `[Table 6]`; trích stack trace bằng regex và dựng call graph tĩnh được cho Java `[§4.1]` | Khoảng 57–60% ca vẫn không định vị đúng hàm sửa; nguyên nhân gốc đầy đủ chỉ 46–58% (chấm tay) / 34–35% (LLM-judge); tác tử đôi khi bịa `[§5-RQ1, Table 3, Table 5]`; chỉ Java mã nguồn mở, không đo thời gian tiết kiệm được `[§5-RQ3, §6]` | Trung bình khá (benchmark lớn, chưa bình duyệt; user study nhỏ) |
 
-### Trạng thái từng giả định sau kiểm chứng
+#### Trạng thái từng giả định sau kiểm chứng
 
 | # | Trạng thái | Căn cứ |
 | :-: | :-: | :--- |
@@ -191,7 +197,7 @@ Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài l
 | 5 | Ủng hộ một phần, rủi ro cao | `[5]` cho thấy kết hợp stack trace + code giúp tăng gấp 4 lần độ chính xác định vị lỗi (lên 40.24–43.09%), nhưng vẫn sai ở 57–60% trường hợp, nguyên nhân gốc đầy đủ chỉ đạt 34–58% và agent đôi khi bịa `[5, §5-RQ1, Table 3, Table 5]`. `[2]` cũng chỉ ra LLM bị tỷ lệ báo động giả cao (Precision thấp) khi gặp log cảnh báo cấp thấp và có hiện tượng hallucination sinh lời khuyên vô ích `[2, §IV-D3, §IV-D5, §VI]` |
 | 6 | Chưa kiểm thực tế | Chưa có nguồn khảo sát người dùng trực tiếp (chỉ mới có thông tin gián tiếp từ tài liệu Sentry Seer `[6]` rằng sản phẩm thương mại cam kết mặc định không dùng dữ liệu khách hàng để train model nhằm giải quyết rào cản này) |
 
-### Nhóm đã sửa problem sau bước Kiểm chứng
+#### Nhóm đã sửa problem sau bước Kiểm chứng
 
 1. **Thu hẹp phạm vi (Scope):** Dựa trên tín hiệu phản bác từ `[1]` (lỗi nhỏ vừa gõ chỉ mất khoảng 6 phút và sửa nhanh), nhóm **bỏ qua lỗi cú pháp và lỗi đơn giản**, chỉ tập trung vào **lỗi khó, phải truy qua nhiều file** (lỗi kết nối CSDL, lỗi logic liên tầng). Đây là nhóm phiên debug dài, nơi 80% thời gian debug tập trung `[1, §4.1, §4.3]`.
 2. **Điều chỉnh bottleneck:** Bottleneck không chỉ là "đọc chữ trong file log" mà là **chuyển qua lại giữa kiểm tra trạng thái (log), duyệt các file code, sửa và chạy thử** `[1, §4.3, §7]`. Một người tham gia ở `[5]` nói gọn vấn đề: *"The stack trace shows the location but not why it failed"* `[5, §5-RQ3]`. Giải pháp nhắm vào việc gom log đã lọc nhiễu và code của các hàm liên quan vào một chỗ.
@@ -201,9 +207,9 @@ Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài l
 
 ---
 
-## Bước 3 — Research giải pháp đã có
+### 3.3. Research giải pháp đã có
 
-### Sản phẩm đang dùng thật
+#### Sản phẩm đang dùng thật
 
 | Công cụ / case | Link / Nguồn | Giải bước nào? | Điểm mạnh | Khoảng trống / rủi ro | Bài học |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -212,7 +218,7 @@ Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài l
 
 *Hai sản phẩm trên được đối chiếu qua tài liệu chính thức `[6, 7]`, nhóm cần chạy thử thực tế trên bài toán lỗi CSDL để đo mức độ đáp ứng.*
 
-### Nghiên cứu / pattern
+#### Nghiên cứu / pattern
 
 | Công cụ / case | Link / Nguồn | Giải bước nào? | Điểm mạnh | Khoảng trống / rủi ro | Bài học |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -220,7 +226,7 @@ Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài l
 | **4. Reversible Debugger (RDB)** | [Reversible Debugging Software](https://www.researchgate.net/publication/345843594_Reversible_Debugging_Software_Quantify_the_time_and_cost_saved_using_reversible_debuggers) `[4]` | **Bước 3–5:** cho phép chạy ngược chương trình (backwards & forwards) để tìm nguyên nhân gốc `[4, slide 2]` | Báo cáo khảo sát ước tính giảm 26% thời gian debug (từ 50% xuống 37% thời gian lập trình) `[4, slide 7]` | Ít sản phẩm khả thi thương mại cho code phức tạp; GDB bị chậm và tốn bộ nhớ `[4, slide 2]`. Độ tin cậy của số liệu 26% thấp (khảo sát tự khai phục vụ marketing) `[4, slide 2, 7, 18]`. Dev thực tế vẫn dùng log statements 70% `[1, Table 5]` | Đừng bắt người dùng đổi sang công cụ nặng và trái thói quen; hãy bám vào thói quen đọc log và stack trace sẵn có |
 | **5. Aggregator & summative debugging tools** | https://arxiv.org/abs/2105.02162 `[1, §7]` | **Bước 3–4:** tự dự đoán các file, tài nguyên và trạng thái chương trình dev cần kiểm tra rồi gom lại một chỗ để giảm chi phí chuyển đổi qua lại giữa các hoạt động `[1, §7]` | Nhắm đúng nguyên nhân khiến phiên debug kéo dài: dev phải chuyển qua lại liên tục giữa nhiều hoạt động và nhiều file `[1, §4.3, §7]` | Mới là hướng thiết kế được nhóm tác giả đề xuất ở phần thảo luận, chưa phải sản phẩm hoàn chỉnh `[1, §7]` | Định hướng thiết kế cốt lõi: tự động gom đoạn code của các hàm xuất hiện trong stack trace hiển thị cùng với log lỗi |
 
-### Kết luận research
+#### Kết luận research
 
 - Phần "stack trace → code liên quan → nguyên nhân" đã có sản phẩm thương mại (Sentry Seer cho lỗi đã đẩy lên hệ thống giám sát `[6]`; GitHub Copilot Chat ngay trong IDE nếu người dùng tự chuẩn bị ngữ cảnh và prompt tốt `[7]`) và có bằng chứng nghiên cứu rằng chỉ cần đưa code của các hàm trong stack trace vào LLM đã cải thiện gấp 4 lần khả năng định vị lỗi `[5, §5-RQ1, Table 3]`. **Không có cơ sở để huấn luyện mô hình mới hay xây dựng hệ thống multi-agent phức tạp.**
 - Khoảng trống còn lại (suy luận, cần xác nhận bằng thử nghiệm và phỏng vấn): debug cục bộ (local) lúc đang viết code khi log chưa qua công cụ giám sát như Sentry, hoặc các dự án không muốn liên kết repo lên cloud / trả phí add-on `[6]`, trong khi việc tự lọc log, tìm các file trong stack trace và dán thủ công vào Copilot Chat vẫn tốn thao tác chuyển đổi ngữ cảnh `[1, §7; 7]`.
@@ -229,6 +235,7 @@ Quy ước trích dẫn: `[số, vị trí]`, ví dụ `[1, Table 5]` là tài l
 - **Điểm khác biệt so với ý tưởng ban đầu:** Nhóm ban đầu định làm công cụ "đưa file log cho AI đọc để tìm dòng lỗi". Sau CP4, nhờ thấy rõ rủi ro báo động giả khi chỉ đọc log ở `[2, §VI]` và hiệu quả của việc ghép code từ stack trace ở `[5, Table 3]`, nhóm chuyển sang hướng **gom log đã lọc nhiễu và code của các hàm trong stack trace vào một chỗ** (kết hợp pattern Aggregator của `[1, §7]`, tiền xử lý *content sequence* của `[2, §III-A]`, và kiến trúc `DIRECT-LLM` của `[5, §4.2.1]`), có người duyệt, và chỉ tập trung vào các phiên debug lỗi khó liên tầng.
 
 ---
+
 ## 4. Quy trình trước/sau (CP5)
 
 ### 4.1. Quy trình hiện tại
@@ -418,34 +425,14 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 **Ngưỡng dừng** (nếu sau … mà … thì quay về …): **Sau 2 tuần đánh giá và tối thiểu 20 ca lỗi có nguyên nhân gốc được xác nhận**, dừng phương án AI và quay về **Rule-only** nếu có một trong các điều kiện: (1) tỷ lệ xác định đúng nguyên nhân ưu tiên **<80%** trên ca đủ ngữ cảnh; (2) trung vị thời gian tìm đúng nguyên nhân **≥10 phút**, hoặc mức cải thiện so với Rule-only **<25%**; (3) AI đưa gợi ý thiếu căn cứ lặp lại làm tăng số lần sửa thử hoặc không được developer xác nhận. **Dừng ngay lập tức**, không chờ đủ mẫu, nếu có bất kỳ rò rỉ thông tin nhạy cảm, truy cập dữ liệu ngoài quyền, tự sửa/chạy lệnh hoặc vi phạm boundary. Nếu hết 2 tuần nhưng chưa đủ 20 ca, chưa chuyển sang Go; chỉ tiếp tục đánh giá trên dữ liệu không nhạy cảm.
 
-### 8.1. Bốn rủi ro
-
-| Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
-|---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
-
-### 8.2. Kết luận
-
-**Quyết định:** Go / Not Yet / No-Go
-
-**Lý do:**
-
-**Nếu Go — pilot nhỏ nhất:**
-
-**Nếu Not Yet — cần kiểm chứng gì trước:**
-
-**Nếu No-Go — nên làm gì thay AI:**
-
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
-
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+- Số người được phỏng vấn còn ít, phần lớn bằng chứng ở CP4 là tài liệu đã công bố; chưa khảo sát người dùng về việc chấp nhận đưa log và code vào AI (giả định #6 ở CP4).
+- Baseline 20–40 phút/lần dựa trên ước tính của nhóm và số ít người được hỏi, chưa bấm giờ trên các phiên debug thật.
+- Giá trị tăng thêm của bước AI so với Rule-only chưa được đo; cần bộ tối thiểu 20 ca lỗi có nguyên nhân đã xác nhận như mục 8.2.
+- Hướng tiếp theo: thực hiện các bước kiểm chứng ở mục 8.2 trước khi pilot; nếu AI không vượt Rule-only thì dùng Rule-only + checklist debug.
 
 ## 10. Danh mục tài liệu tham khảo
 

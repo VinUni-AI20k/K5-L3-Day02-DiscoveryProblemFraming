@@ -26,7 +26,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | 4 |Pain từ người khác |Khi làm trưởng nhóm, tôi muốn mọi người tự nhớ hạn nộp bài (deadline), để tôi không phải đi nhắc từng người |Trưởng nhóm |Tuần nào cũng phải tag tên 3 người trên Zalo nhóm để "đòi nợ" bài tập |
 | 5 |Lặp lại |Khi trực Fanpage cho câu lạc bộ, tôi muốn có sẵn câu trả lời cho các câu hỏi về lịch trình, để không phải gõ đi gõ lại |Ban Truyền thông / Admin |Mỗi ngày phải trả lời cùng 1 câu hỏi "Khi nào CLB tuyển thành viên?" khoảng 15 lần |
 | 6 |Cần đọc, tổng hợp |Khi mua đồ đắt tiền trên Shopee, tôi muốn lọc ra các đánh giá (review) thật, để không bị lừa mua phải hàng dỏm |Người mua hàng |Kéo đọc bình luận mất 20 phút mà vẫn hoa mắt vì nhiều bình luận khen quá mức |
-| 7 |Tốn thời gian |Khi ốm cần xin nghỉ học/nghỉ làm, tôi muốn có sẵn một mẫu email lịch sự, để gửi đi nhanh mà không sợ thầy cô/sếp chê là thiếu chuyên nghiệp |Học sinh, nhân viên |Ngồi nhìn màn hình 15 phút, gõ xong lại xóa không biết mở lời sao cho khéo |
+| 7 |Tốn thời gian |Khi họp nhóm xong, tôi muốn có ngay danh sách chia việc ai nấy làm, để không ai cãi nhau là chưa được giao việc |Người ghi chép |Họp 1 tiếng xong, mất thêm 20 phút ngồi ngẫm lại và gõ biên bản gửi lên nhóm |
 | 8 |Lặp lại |Khi đi ăn chung, đi du lịch với nhóm, tôi muốn tự động chia tiền sau chuyến đi, để không phải ngồi cộng trừ từng tờ hóa đơn |Người ứng tiền trước |Cuối buổi đi chơi phải ôm đống bill ngồi bấm máy tính 20 phút rất đau đầu |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
@@ -41,28 +41,32 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 |Viết tóm tắt họp nhóm (#7) |Rất hay gặp, tốn thời gian ngồi nhớ lại xem ai nhận việc gì. Có thể đo lường thời gian gõ phím. |Nếu lúc họp mọi người nói chồng chéo lên nhau thì AI có nghe và dịch đúng không? |
+| 2 |Tổng hợp tài liệu ôn thi (#2) |Sinh viên nào cũng cần. Đọc nhiều tài liệu rời rạc rất dễ nản. |AI có thể bỏ sót mất kiến thức quan trọng mà thầy cô nhấn mạnh trên lớp không? |
+| 3 |Lọc review mua hàng (#6) |Giúp quyết định nhanh chóng, tránh mất tiền oan. |Làm sao AI phân biệt được đâu là người khen thật, đâu là nick ảo được thuê để khen? |
 
 ### Problem Card #1
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Job Story | Khi họp nhóm xong, tôi muốn có ngay danh sách chia việc ai nấy làm (To-do list), để không ai quên việc hoặc cãi nhau là chưa được giao. |
+| Actor | Trưởng nhóm hoặc người phụ trách ghi chép biên bản họp. |
+| Thời điểm / bối cảnh | Ngay sau khi kết thúc buổi họp nhóm online (qua Google Meet, Zoom) hoặc họp cà phê offline. |
+| Quy trình hiện tại (3–7 bước) | 1. Vừa họp vừa ghi chú ngoệch ngoạc ra sổ/điện thoại · 2. Họp xong ngồi đọc lại đống nháp đó · 3. Hệ thống lại xem ai làm phần nào, hạn nộp khi nào · 4. Gõ thành một tin nhắn hoàn chỉnh, dễ hiểu · 5. Gửi lên nhóm Zalo/Messenger.|
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3 & 4 (Dịch từ chữ viết nháp thành văn bản chỉn chu và nhớ lại xem mình có ghi sót ý nào không): mất khoảng 20 - 30 phút. |
+| Impact (nếu không giải thì sao) |Rất lười làm. Thường vì lười nên hay gửi tóm tắt muộn, dẫn đến các thành viên khác quên mất mình phải làm gì. |
+| Success metric (baseline → target) | Giảm thời gian viết tóm tắt từ 25 phút xuống dưới 5 phút. Nội dung có đủ tên người + công việc + deadline. |
+| Phương án không dùng AI | Dùng một biểu mẫu (template) có sẵn trên Google Docs, lúc họp chỉ việc điền vào ô trống (nhưng vừa nghe vừa gõ vẫn không theo kịp tốc độ nói). |
+| Giả thuyết về AI (nếu có) |Dùng AI ghi âm lại toàn bộ buổi họp. Sau đó yêu cầu AI: "Tóm tắt cuộc nói chuyện này thành danh sách công việc, ghi rõ tên người phụ trách và hạn chót nộp bài". |
+| Cảm nhận nhanh | Workflow |
 
 Quy trình nháp hiện tại:
 
-```text
+```HIỆN TẠI — 25 phút sau mỗi buổi họp
+
+[1 Vừa họp vừa ghi nháp: 0'] → [2 Đọc lại nháp: 5'] 
+→ [3 & 4 Cố nhớ lại và gõ thành tin nhắn phân công: 15-20'] ← BOTTLENECK
+→ [5 Gửi lên Zalo: 2']
 
 ```
 
@@ -70,20 +74,24 @@ Quy trình nháp hiện tại:
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Job Story | Khi gần thi cuối kỳ, tôi muốn gom các ý chính từ nhiều file slide bài giảng vào một nơi, để ôn thi nhanh hơn mà không phải mở tới mở lui.|
+| Actor | Học sinh, Sinh viên các trường đại học, người ôn thi. |
+| Thời điểm / bối cảnh | 1–2 tuần trước kỳ thi, cần học bài nhưng lượng tài liệu (slide PDF/PowerPoint) của cả một học kỳ quá nhiều và rời rạc. |
+| Quy trình hiện tại (3–7 bước) | 1. Tải 10-15 file bài giảng từ hệ thống trường · 2. Mở lướt từng file xem chương nào quan trọng · 3. Mở sẵn file Word trắng · 4. Vừa đọc slide vừa copy/gõ lại các định nghĩa vào Word · 5. Căn chỉnh lại phông chữ cho dễ nhìn · 6. In ra để học thuộc. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 4 (Đọc và chép tay/copy các ý chính từ nhiều file sang Word): rất nhàm chán, dễ gây buồn ngủ và mất tập trung. |
+| Impact (nếu không giải thì sao) | Mất khoảng 3-4 tiếng để làm đề cương cho 1 môn. Một học kỳ thi 5 môn là mất cả tuần chỉ để ngồi chép bài, thời gian để thực sự "học thuộc" bị thu hẹp lại. |
+| Success metric (baseline → target) | Giảm thời gian làm đề cương từ 3 tiếng xuống còn khoảng 15 phút. Không bị sót các định nghĩa quan trọng trong slide. |
+| Phương án không dùng AI | Lên các hội nhóm trường xin đề cương của các anh chị khóa trước (nhưng rủi ro là đề cương cũ, hoặc bị sai kiến thức do người trước làm ẩu). |
+| Giả thuyết về AI (nếu có) | Đẩy toàn bộ 10 file bài giảng lên một công cụ AI (ví dụ: NotebookLM, ChatGPT), yêu cầu AI: "Hãy đọc tất cả file này và tạo cho tôi một đề cương ôn tập, chia theo từng chương, mỗi chương liệt kê 3 khái niệm quan trọng nhất". |
+| Cảm nhận nhanh | Workflow |
 
 Quy trình nháp hiện tại:
 
-```text
+```HIỆN TẠI — Hơn 3 tiếng/môn
+
+[1 Tải tài liệu: 5'] → [2 Đọc lướt từng file: 15'] 
+→ [3 & 4 Copy/Gõ lại định nghĩa sang Word: 120'] ← BOTTLENECK 
+→ [5 Căn chỉnh lại Word: 20'] → [6 In ấn: 5']
 
 ```
 
@@ -91,34 +99,39 @@ Quy trình nháp hiện tại:
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Job Story | Khi mua đồ đắt tiền trên mạng, tôi muốn lọc ra các đánh giá (review) thật, để không bị lừa mua phải hàng dỏm hoặc hàng bị lỗi. |
+| Actor | Người mua sắm online trên Shopee, Lazada, TikTok Shop. |
+| Thời điểm / bối cảnh | Đang định chốt đơn một món đồ công nghệ (ví dụ: tai nghe, sạc dự phòng 500k) nhưng thấy có quá nhiều bình luận, có cả 1 sao lẫn 5 sao. |
+| Quy trình hiện tại (3–7 bước) | 1. Xem số sao trung bình của sản phẩm · 2. Bấm lọc đọc các bình luận 1 sao xem người ta chê lỗi gì · 3. Bấm lọc đọc các bình luận 5 sao xem có hình ảnh/video thật không · 4. Tự cố gắng phân biệt xem đâu là nick thật, đâu là nick được thuê để khen (seeding) · 5. Quyết định mua hay bỏ. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 2 và 4 (Cuộn đọc hàng chục bình luận dài dòng và đau đầu suy luận xem người khen có đang nói thật hay không): mất rất nhiều thời gian.|
+| Impact (nếu không giải thì sao) | Tốn 20-30 phút "điều tra" cho một món hàng. Đọc nhiều quá bị loạn thông tin, đôi khi vẫn quyết định sai và mua bực vào người.|
+| Success metric (baseline → target) | Giảm thời gian đọc review từ 20 phút xuống còn 3 phút/sản phẩm. Tự tin chốt đơn hoặc bỏ qua nhanh chóng hơn.|
+| Phương án không dùng AI | Chỉ mua ở gian hàng chính hãng hoặc tìm xem video review trên YouTube/TikTok tuy nhiên video cũng có thể được nhãn hàng trả tiền để khen. |
+| Giả thuyết về AI (nếu có) | Copy toàn bộ các bình luận (cả khen lẫn chê) dán vào AI, yêu cầu: "Hãy tóm tắt 3 điểm người ta khen nhiều nhất, 2 điểm bị phàn nàn nhiều nhất. Phân tích văn phong xem có dấu hiệu bình luận giả mạo (seeding lặp từ) không".|
+| Cảm nhận nhanh | Workflow |
 
 Quy trình nháp hiện tại:
 
-```text
+```HIỆN TẠI — 25 phút/món hàng
+
+[1 Xem sao trung bình: 1'] → [2 Đọc và phân tích bình luận chê: 10'] ← BOTTLENECK 
+→ [3 Đọc bình luận khen: 5'] → [4 Tự phân biệt nick ảo: 7'] ← BOTTLENECK 
+→ [5 Quyết định chốt đơn: 2']
 
 ```
 
 ### Card muốn pitch nhất
 
-- Card số:
-- Vì sao:
-- Câu hỏi muốn nhóm phản biện:
+- Card số: 1
+- Vì sao: Quy trình làm thủ công hiện tại rất rõ ràng và đo lường được chính xác số phút tiết kiệm (từ 25 phút xuống dưới 5 phút). Đây là vấn đề chung của mọi nhóm làm việc, định hướng giải pháp Workflow rất khả thi để thực hiện ngay bằng các công cụ AI có sẵn mà không cần lập trình phức tạp.
+- Câu hỏi muốn nhóm phản biện: Liệu AI có thể nhận diện và tóm tắt chính xác công việc nếu trong lúc họp có 2-3 người nói chèn lên nhau không? Việc yêu cầu ghi âm có gây rào cản tâm lý khiến mọi người trong nhóm ngại phát biểu không?
 
 ### AI đã phản biện card thế nào
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| | | |
+| Nếu tự ý bật ghi âm toàn bộ cuộc họp của người khác thì có vi phạm quyền riêng tư và gây khó chịu không? | Rất đồng ý | Đã thêm vào quy trình bước đầu tiên: "Luôn phải thông báo và xin phép mọi người trước khi bật công cụ ghi âm". |
+|Có phải cuộc họp nào cũng chốt được công việc không? Nhỡ buổi đó toàn tán gẫu lan man thì sao?|Đồng ý| Thu hẹp lại phạm vi sử dụng: Chỉ áp dụng công cụ này cho các buổi họp rà soát và phân chia công việc, không dùng cho các buổi brainstorm ý tưởng chung chung. |
 
 ---
 

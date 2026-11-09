@@ -8,7 +8,7 @@
 
 * Email trường: (bỏ trống nếu không cần thiết)
 
-* Tên nhóm: (Điền tên nhóm của bạn, ví dụ: AI_Pioneers)
+* Tên nhóm: BacHo
 
 * Link repo nhóm: https://github.com/longhtr028/K5-L3B-DAY02-BacHo-DiscoveryProblemFraming
 

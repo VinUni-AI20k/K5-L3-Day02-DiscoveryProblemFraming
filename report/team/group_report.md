@@ -30,26 +30,32 @@
 
 ### 2.2. Cluster
 
-| Cluster | Các candidate | Pattern chung |
+| Cluster | Các candidate | Pattern chung (Bản chất công việc) |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| **A — Hỗ trợ và khai thác thông tin** | `#1` Trả lời khách hàng ngoài giờ; `#3` Tóm tắt tài liệu học tập; `#5` Hướng dẫn thủ tục hành chính; `#7` Tra cứu hướng dẫn và quy định trong Lab | Tiếp nhận yêu cầu bằng ngôn ngữ tự nhiên, tìm kiếm, tổng hợp và trình bày thông tin phù hợp với ngữ cảnh |
+| **B — Tìm kiếm và kiểm chứng thông tin** | `#6` Tìm nhà cung cấp thay thế; `#8` Kiểm chứng trích dẫn trong bài nghiên cứu; `#9` Truy xuất cấu hình và lịch sử thí nghiệm ML | Tìm thông tin từ nhiều nguồn, so sánh, kiểm tra tính chính xác và truy xuất nguồn gốc |
+| **C — Vận hành lặp lại theo quy trình** | `#2` Ghi nhận chi tiêu cá nhân; `#4` Cấp tài khoản và phân quyền nhân viên mới | Thực hiện các bước lặp lại theo quy tắc, biểu mẫu và điều kiện đã xác định |
+
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian xử lý thủ công và giảm sai sót trong các tác vụ tra cứu, kiểm chứng thông tin và vận hành lặp lại
+├── Opportunity A (từ Cluster A - #1, #3, #5, #7): Thông tin hướng dẫn/quy định dài và phân tán ở nhiều nơi, khiến người cần thông tin mất nhiều thời gian tự dò tìm hoặc phải chờ hỏi lại người phụ trách
+├── Opportunity B (từ Cluster B - #6, #8, #9): Phải đối chiếu chéo thủ công giữa nội dung/kết quả đang làm với nhiều nguồn dữ liệu gốc (paper PDF, file log thí nghiệm, hồ sơ nhà cung cấp) nên tốn thời gian và dễ nhầm lẫn nguồn
+└── Opportunity C (từ Cluster C - #2, #4): Các thao tác nhập liệu và cấp quyền theo quy tắc cố định phải làm tay lặp đi lặp lại qua nhiều bước, gây tốn thời gian và dễ bỏ sót bước
+     ✗ "Chatbot trả lời khách hàng ngoài giờ / Chatbot hỏi đáp Lab" ← solution, gạch bỏ khỏi tầng này
+     ✗ "Tool tự động kiểm tra trích dẫn / Hệ thống quản lý thí nghiệm" ← solution, gạch bỏ khỏi tầng này
+     ✗ "Script tự động cấp tài khoản và phân quyền" ← solution, gạch bỏ khỏi tầng này 
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- "Cần một Chatbot trực fanpage ngoài giờ (#1) hoặc trợ lý ảo hỏi đáp quy định Lab (#7)": Đã gạch bỏ vì đây là giải pháp công nghệ; pain thật sự là người dùng không tra cứu nhanh được câu trả lời đúng ngữ cảnh từ tài liệu sẵn có.
+- "Làm công cụ tự động kiểm tra trích dẫn (#8) / Dashboard quản lý thí nghiệm (#9)": Đã gạch bỏ vì đây là tính năng sản phẩm; pain thật sự là việc mất hàng chục phút đối chiếu thủ công số liệu/cấu hình với nguồn gốc để tránh sai lệch.
+- "Tự động hóa quy trình cấp tài khoản (#4)": Đã gạch bỏ vì "tự động hóa" là cách giải quyết; pain thật sự là thao tác tay lặp lại trên nhiều hệ thống theo một biểu mẫu cố định.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 

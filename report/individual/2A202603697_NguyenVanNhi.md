@@ -9,8 +9,8 @@
 - Họ tên: Nguyễn Văn Nhi
 - MSSV: 2A202603697
 - Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm:
-- Link repo nhóm:
+- Tên nhóm: xyz
+- Link repo nhóm: https://github.com/ducminh03/K5-L3A-DAY02-xyz-DiscoveryProblemFraming
 
 ---
 
@@ -157,16 +157,16 @@ Tôi đã đóng vai "Product Manager hoài nghi" (theo prompt mẫu ở `docs/0
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Trình bày 3 Problem Cards của mình trước nhóm (tương ứng các candidate `#7` Tra cứu hướng dẫn và quy định trong Lab; `#8` Kiểm chứng trích dẫn trong bài nghiên cứu; `#9` Truy xuất cấu hình và lịch sử thí nghiệm Ablation ML trong bảng `2.1. Pitch`). | Đóng góp 3 candidate vào danh sách 9 bài toán của nhóm, giúp hình thành Cluster A (Hỗ trợ và khai thác thông tin) và Cluster B (Tìm kiếm và kiểm chứng thông tin). |
+| Phản biện bài của bạn khác | **Câu hỏi tôi đã đặt:**<br>1. Hỏi Phạm Quỳnh Anh ở bài `#2` (Ghi nhận chi tiêu cá nhân): *"Tại sao không dùng app như Money Lover hay kiểm tra lịch sử biến động số dư ngân hàng? Rào cản lớn nhất là do bạn lười nhập liệu hay do app hiện tại khó dùng?"*<br>2. Hỏi Vũ Đức Minh ở bài `#5` (Hướng dẫn thủ tục hành chính): *"Quy định pháp luật và thủ tục hành chính thay đổi thường xuyên theo thông tư mới, làm sao đảm bảo thông tin tra cứu luôn được cập nhật chính xác và có giá trị pháp lý?"* | 1. Giúp nhóm nhìn ra bài `#2` thực chất đã được các ứng dụng quản lý chi tiêu và biến động số dư ngân hàng (Rule) giải quyết phần lớn (hạ điểm cột *So sánh 4 mức* xuống 3/5), từ đó không chọn `#2` làm bài chính.<br>2. Chỉ ra rủi ro pháp lý (Viability) và rào cản khó tiếp cận "cán bộ tiếp nhận hồ sơ" thật ngay trong giờ Lab của bài `#5` (chấm *Vừa sức lab* = 2/5), giúp nhóm loại `#5`. |
+| Nhận phản biện | **Câu hỏi tôi nhận được:**<br>1. Vũ Đức Minh hỏi ở bài `#7` (Tra cứu quy định Lab): *"Tại sao không chỉ cần ban tổ chức gộp các yêu cầu thành 1 bảng checklist duy nhất ngay đầu file CHECKPOINTS (No AI/Rule) thay vì phải xây dựng giải pháp công nghệ phức tạp?"*<br>2. Phạm Quỳnh Anh hỏi ở bài `#8` (Kiểm chứng trích dẫn NCKH): *"Đã có các phần mềm quản lý trích dẫn như Zotero hay BibTeX giải quyết việc đánh số và định dạng, việc kiểm tra độ khớp ngữ nghĩa giữa câu viết và paper gốc có thực sự làm được bằng AI với chi phí token hợp lý không?"*<br>3. Vũ Đức Minh hỏi ở bài `#9` (Thí nghiệm Ablation): *"Vấn đề này đã có các công cụ MLOps chuyên dụng như Weights & Biases (W&B) hoặc MLflow giải quyết rất tốt bằng việc lưu log tự động, liệu có cần can thiệp AI vào đây không hay chỉ là vấn đề kỷ luật dùng công cụ?"* | **Tôi đã sửa gì:**<br>1. Với `#7`: Thừa nhận giải pháp cải tổ tài liệu bằng 1 bảng Checklist tĩnh (No AI) đã giải quyết được phần lớn pain point.<br>2. Với `#8`: Tách hẳn phần đánh số/format trích dẫn giao cho Zotero/BibTeX (Rule), chỉ giữ bottleneck ở bước đối chiếu ngữ nghĩa và số liệu với paper PDF gốc.<br>3. Với `#9`: Chuyển mức can thiệp đề xuất xuống **Rule** (dùng script logging/MLflow) và đồng thuận cùng nhóm không đưa `#7, #8, #9` vào lựa chọn cuối mà dồn sức cho candidate `#3` (Tóm tắt tài liệu học tập) có độ phủ rộng hơn. |
+| Gom cluster / cây OST | Trực tiếp gom 9 candidate (`#1` → `#9`) thành 3 Cluster (A — Hỗ trợ và khai thác thông tin; B — Tìm kiếm và kiểm chứng thông tin; C — Vận hành lặp lại theo quy trình) ở mục `2.2` và xây dựng cây Opportunity Solution Tree rút gọn ở mục `2.3`. | Tách bạch rõ 3 nhánh Opportunity (nỗi đau thật) khỏi các giải pháp trá hình, gạch bỏ 3 cụm "solution đội lốt opportunity" (Chatbot trực page/hỏi đáp Lab, Tool kiểm tra trích dẫn, Script tự động cấp quyền). |
+| Chọn candidate problem | Thực hiện chấm điểm shortlist cho 4 candidate (`#3, #2, #5, #6`) trên 7 tiêu chí và viết lập luận chi tiết cho mục `2.4` (vì sao chọn `#3`, vì sao loại `#2, #5, #6` và cách xử lý bất đồng). | Giúp nhóm hội tụ có lập luận chặt chẽ về candidate **`#3` — Tóm tắt tài liệu học tập (34/35 điểm)** dựa trên ưu thế dễ kiểm chứng trực tiếp với người thật ngay tại lớp ở CP4. |
+| Kiểm chứng / research | Tham gia đóng góp câu hỏi kiểm chứng theo luật *The Mom Test*, tổng hợp tín hiệu xác nhận/phản bác từ phỏng vấn sinh viên (mục `3.2`) và **phụ trách chính mục `3.3. Research giải pháp đã có`**. | Khảo sát, kiểm tra thực tế và phân tích 5 công cụ (*Google NotebookLM, Claude Projects, Mathpix Snip, Adobe Acrobat AI Assistant, SciSpace*) trong mục `3.3`. Nhờ kết quả này, nhóm quyết định **không tự xây app mới từ đầu** mà thiết kế một Workflow tận dụng các công cụ sẵn có kèm bước kiểm chứng công thức. |
+| Quy trình nhóm | Cùng nhóm rà soát quy trình hiện tại (5 bước, ~270 phút/môn, bottleneck 210 phút ở Bước 3) và thiết kế quy trình tương lai (5 bước, mục tiêu 90–110 phút/môn) ở mục `4.1, 4.2, 4.3`. | Đảm bảo quy trình tương lai tách rõ vai trò của **Con người (Bước 1, 4, 5)**, **Rule/OCR (Bước 2)** và **AI (Bước 3)**; khóa chặt Boundary và giữ nguyên 40–50 phút ở Bước 4 để sinh viên đối chiếu công thức với slide gốc. |
+| Problem Statement | Cùng nhóm đánh giá tính nhất quán của Problem Statement v0 (mục `5`) và đóng góp phản biện về việc tách phạm vi "kho đề cương dùng chung" sang hướng phát triển tiếp theo, cũng như bổ sung tiêu chí chất lượng/độ bao phủ bên cạnh tốc độ. | Giúp Problem Statement không bị trượt phạm vi (scope creep) sang bài toán mạng xã hội chia sẻ tài liệu và tạo tiền đề nâng cấp rõ rệt từ `v0` lên `v1`. |
+| Mức can thiệp AI | **Phụ trách chính Mục 6 (`6.1, 6.2, 6.3, 6.4`)** trong `group_report.md`: phân tích ma trận Độ mơ hồ × Độ phức tạp, lập bảng so sánh 4 mức (No AI / Rule / Workflow / Agent), điền AI Canvas rút gọn và trả lời 2 câu hỏi Google PAIR. | Chứng minh thuyết phục vì sao nhóm chọn **Workflow** (kết hợp No AI ở Bước 1 + Rule/OCR ở Bước 2 + AI tạo nháp có dẫn nguồn ở Bước 3 + Con người duyệt ở Bước 4), giải thích rõ vì sao người học muốn **Augment** chứ không muốn **Automate**. |
+| Quyết định | **Phụ trách soạn thảo Mục 8 (`8.1 Bốn rủi ro`, `8.2 Kết luận`) và Mục 9 (`Hạn chế và hướng tiếp theo`)** trong `group_report.md`. | Đánh giá 4 rủi ro (Value, Usability, Feasibility, Viability), chốt quyết định **Go (phạm vi nhỏ — Pilot bán thủ công bằng công cụ sẵn có)** kèm thiết kế pilot 1 môn học và các **Ngưỡng dừng (Kill criteria)** định lượng cụ thể. |
 
 ---
 
@@ -176,10 +176,10 @@ Tôi đã đóng vai "Product Manager hoài nghi" (theo prompt mẫu ở `docs/0
 |---|---|---|---|---|
 | CP1 Scan | Rà soát lại 5 problem đã tự nghĩ theo định dạng Job Story và gợi ý bổ sung góc nhìn để phủ đủ 4 lăng kính | Giúp chuẩn hóa câu chữ theo mẫu *"Khi... tôi muốn... để..."*, kiểm tra không bị lẫn từ khóa giải pháp ("AI/chatbot") và gợi ý rõ cách định lượng dấu hiệu thật | Ban đầu AI dễ gợi ý các ý tưởng thiên về giải pháp rộng (như "hệ thống AI tự động làm Lab/chấm bài") hoặc định lượng còn chung chung | Tôi loại bỏ các gợi ý mang tính solution-first, giữ lại 5 vấn đề sát nhất với trải nghiệm làm Lab và làm nghiên cứu của bản thân, đồng thời tự gắn các con số thực tế (bị trừ 10% điểm, 5–6 file `.md`, 4–6h chạy lại GPU) |
 | CP2 Problem Card | Đóng vai "Product Manager hoài nghi" để phản biện 3 Problem Cards (#1, #3, #4) và rà soát các bước trong quy trình nháp | Chỉ ra rất trúng việc Card #2 đang gộp chung lỗi thứ tự trích dẫn với lỗi lệch nội dung paper gốc, và chỉ ra Card #3 thực chất giải quyết bằng Rule (logging/MLflow) tốt hơn AI | AI có xu hướng gợi ý dùng RAG/Agent cho cả việc tra cứu tài liệu Lab và quản lý log thí nghiệm dù quy mô chưa cần thiết | Tôi tách riêng phần thứ tự trích dẫn ở Card #2 cho Zotero/BibTeX (No AI/Rule), chỉ giữ Bottleneck ở Bước 3 (đối chiếu số liệu/nhận định với PDF gốc), và hạ mức can thiệp của Card #3 xuống **Rule** |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP4 Research | Tìm kiếm và tổng hợp các công cụ hiện có giải quyết bài toán đọc hiểu, trích xuất công thức và tóm tắt slide/PDF học thuật (Mục `3.3`) | Gợi ý nhanh danh sách các công cụ sát bài toán (*Google NotebookLM, Claude Projects, Mathpix Snip, Adobe Acrobat AI Assistant, SciSpace*) và cấu trúc bảng so sánh điểm mạnh/khoảng trống | AI dùng tên phiên bản cũ ("Claude 3.5+"), gắn tham số tracking (`?utm_source=...`) vào URL, đánh đồng khả năng đọc PDF văn bản với PDF ảnh chụp/sơ đồ và dễ tạo cảm giác "có citation là nội dung chắc chắn đúng" | Tôi tự mở kiểm tra từng link, xóa tham số rác trong URL, bỏ tên phiên bản cũ, bổ sung cảnh báo rõ ràng rằng citation trong NotebookLM không bảo đảm công thức toán đúng 100% và phân biệt rõ PDF text với PDF scan/hình ảnh |
+| CP5 Quy trình | Hỗ trợ chuẩn hóa sơ đồ quy trình ASCII trước/sau và kiểm tra tính hợp lý của bảng Before/After | Giúp trình bày sơ đồ quy trình 5 bước rõ ràng, dễ nhìn và đối chiếu nhanh tỷ lệ thời gian từng bước | Ban đầu AI có xu hướng cắt giảm quá đà thời gian bước kiểm tra của con người (chỉ để 10–15 phút review) để làm con số tổng thời gian giảm sâu đẹp mắt | Nhóm kiên quyết giữ nguyên **40–50 phút ở Bước 4** cho sinh viên đối chiếu công thức, ký hiệu và hình vẽ với slide gốc, vì phỏng vấn CP4 cho thấy nếu cắt bước kiểm tra này thì sinh viên sẽ không tin và không dùng đề cương |
+| CP5–6 Problem Statement | Đóng vai người phản biện để rà soát lỗ hổng giữa Problem Statement v0 và v1 | Đặt ra câu hỏi phản biện tốt về việc chỉ đo thời gian là chưa đủ mà cần đo chất lượng bản nháp (độ chính xác công thức, độ bao phủ, khả năng truy nguồn) | AI gợi ý mở rộng bài toán sang xây dựng "kho đề cương chuẩn dùng chung cho cả trường" ngay trong phạm vi hiện tại và đôi khi viết lồng mô tả giải pháp vào trường Quy trình của v0 | Nhóm bác bỏ việc gộp "kho đề cương chung" vào scope hiện tại (chỉ đẩy xuống mục *Hướng nối tiếp*), khóa chặt phạm vi hỗ trợ cá nhân tự tổng hợp đề cương và bổ sung phương pháp kiểm tra theo checklist + mẫu công thức |
+| CP6 Mức can thiệp / quyết định | Hỗ trợ cấu trúc hóa bảng so sánh 4 mức (No AI / Rule / Workflow / Agent), AI Canvas và rà soát 4 rủi ro (Mục `6` & Mục `8`) | Giúp hệ thống hóa lập luận trên ma trận Độ mơ hồ × Độ phức tạp và đối chiếu chặt chẽ 6 thành phần của AI Canvas | AI dễ thiên vị việc "xây dựng một pipeline/ứng dụng AI mới" thay vì tận dụng quy trình bán thủ công trên công cụ có sẵn | Tôi điều chỉnh lại quyết định thành **Go phạm vi nhỏ (Pilot bán thủ công bằng các công cụ sẵn có như NotebookLM/Claude + Mathpix, không tự code app mới)**, giữ khuyến nghị **No AI** ở Bước 1 nếu môn học đã có đề cương khóa trước tin cậy và đặt ngưỡng dừng định lượng rõ ràng |
 
 ---
 
@@ -188,21 +188,39 @@ Tôi đã đóng vai "Product Manager hoài nghi" (theo prompt mẫu ở `docs/0
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Lúc tự scan thì tôi chỉ tập trung vào bối cảnh học lab và làm nghiên cứu khoa học cũng như luận văn. Sau khi nghe bạn cùng nhóm phân tích, tôi thấy được thêm nhiều bài toán đời sống sát thực tế.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 
+Không
+
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+
+Ban đầu mình định đề xuất dùng AI để hỗ trợ quản lý và truy vết cấu hình các lần chạy mô hình. Sau đó bạn Minh phản biện: Vấn đề này đã có MLflow tự động lưu log, liệu có thật sự cần AI hay không.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
+Khi kiểm tra các công cụ NotebookLM, Claude, SciSpace, các công cụ này đã làm được 70 80% việc đọc pdf. Tuy nhiên vẫn còn chưa quá tốt trong việc đọc các công thức viết tay trên ảnh chụp.
+
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+
+Giữ đúng độ thu hẹp mà không bị lạc đề hay lẫn giải pháp
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Chưa rõ. Sẽ phản biện kỹ hơn về ranh giới giữa việc "tóm tắt để tra cứu" và "tự viết lại để ghi nhớ vào đầu"
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Bài toán xuất phát từ việc sinh viên ôn thi có các tài liệu dài, phải mất nhiều thời gian để tự tổng hợp đề cương -> Bước nghẽn lớn nhất hiện tại khi sinh viên phải đọc dò từng trang để chụp lại công thức -> Nhóm đặt mục tiêu rút ngắn thời gian, kiểm soát chất lượng checklist -> Ranh giới đặt ra là AI chỉ được tạo bản nháp từ tài liệu đầu vào trích dẫn số trang, tuyệt đối không tự thêm kiến thức AI vào. Nhóm chọn mức Workflow. Từ đánh giá 4 rủi ro đều ở mức thấp - trung bình, nhóm quyết định Go ở phạm vi nhỏ: chạy bán thủ công trên công cụ có sẵn cho môn học thật.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- Tài liệu hướng dẫn Lab Day 02: [docs/01-worksheet.md](../../docs/01-worksheet.md), [docs/02-deliverable-example.md](../../docs/02-deliverable-example.md), [docs/03-international-frameworks.md](../../docs/03-international-frameworks.md)
+- Google NotebookLM: [https://notebooklm.google/](https://notebooklm.google/)
+- Anthropic Claude (Projects): [https://claude.ai/](https://claude.ai/)
+- Mathpix Snip: [https://mathpix.com/](https://mathpix.com/)
+- Adobe Acrobat AI Assistant (PDF Spaces): [https://www.adobe.com/acrobat/generative-ai-pdf.html](https://www.adobe.com/acrobat/generative-ai-pdf.html)
+- SciSpace: [https://scispace.com/](https://scispace.com/)

@@ -5,8 +5,8 @@
 ## Thông tin nhóm
 
 - Tên nhóm: xyz
-- Candidate problem nhóm chọn (1 câu):
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Candidate problem nhóm chọn (1 câu): Sinh viên gặp khó khăn và mất nhiều thời gian (3–5 giờ/môn) để tự tổng hợp, hệ thống hóa kiến thức cốt lõi và công thức chính xác kèm trang nguồn đối chiếu từ các bộ slide/giáo trình dài (200+ trang) hoặc mới cập nhật khi chưa có đề cương khóa trước đáng tin cậy.
+- Quyết định cuối (Go / Not Yet / No-Go): Go (Phạm vi nhỏ — Triển khai Pilot quy trình Workflow bán thủ công trên công cụ có sẵn, có bước con người kiểm chứng công thức)
 
 ## Thành viên
 
@@ -24,13 +24,13 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
-| CP3 — Hội tụ nhóm | | | Cluster, cây OST, bảng chấm điểm |
-| CP4 — Kiểm chứng | | | Assumption map, snapshot hoặc survey |
-| CP4 — Research | | | Bảng research có link |
-| CP5 — Quy trình trước/sau | | | Quy trình + bảng before/after |
-| CP5 — Problem Statement v0 | | | Problem Statement v0 |
-| CP6 — Mức can thiệp + Problem Statement v1 | | | Ma trận, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định | | | 4 rủi ro + Go/Not Yet/No-Go |
+| CP3 — Hội tụ nhóm | Nguyễn Văn Nhi | Phạm Quỳnh Anh | Cluster, cây OST, bảng chấm điểm |
+| CP4 — Kiểm chứng | Vũ Đức Minh, Phạm Quỳnh Anh | | Assumption map, snapshot hoặc survey |
+| CP4 — Research | Vũ Đức Minh | | Bảng research có link |
+| CP5 — Quy trình trước/sau | Vũ Đức Minh | | Quy trình + bảng before/after |
+| CP5 — Problem Statement v0 | Vũ Đức Minh | | Problem Statement v0 |
+| CP6 — Mức can thiệp + Problem Statement v1 | Nguyễn Văn Nhi | | Ma trận, AI Canvas, eval, Problem Statement v1 |
+| CP6 — Quyết định | Nguyễn Văn Nhi | Vũ Đức Minh | 4 rủi ro + Go/Not Yet/No-Go |
 
 ## Cá nhân
 

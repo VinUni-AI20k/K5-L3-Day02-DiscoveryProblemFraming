@@ -188,22 +188,28 @@ Tổng: 30–60 phút/ngày, lặp 2–3 lần
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+
 Tôi học được cách thu hẹp phạm vi problem, xác định đúng actor, dùng bằng chứng/ con số, và tránh bắt đầu bằng giải pháp khi nghe top 3 problems của các bạn
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
 Không, nhóm tôi không bị mắc phải vấn đề "solution-first". Các thành viên luôn đi từ vấn đề đến giải pháp, ví dụ như bạn Văn Diện trình bầy vấn đề "nhắn tin trên Zalo cá nhân rất nhiều và lộn xộn", rồi mới đưa ra giải pháp.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+
 Không, tôi không đổi ý khi nghe phản biện. Tuy nhiên, dựa trên ý kiến phản biện, tôi đưa ra thêm tính năng để cải thiện ứng dụng.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
 Kết quả kiểm chứng bằng phương pháp phỏng vấn khá chính xác so với suy đoán của tôi. 
 
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+
 Tôi thấy điều khó nhất là vẽ boundary, tách problem khỏi giải pháp, chọn metric có baseline thật, và giữ phạm vi đủ hẹp
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+
 Tôi sẽ log thời gian thật 1 tuần, thu hẹp tình huống, thử template/rule trước; phản biện nhóm mạnh hơn về bằng chứng, boundary, mức can thiệp AI và điều kiện thất bại; phỏng vấn nhiều cá nhân hơn về ý tưởng.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.

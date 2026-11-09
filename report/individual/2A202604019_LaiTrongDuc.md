@@ -151,53 +151,67 @@ Codex tự rà soát ba card theo các câu hỏi “PM hoài nghi” trong work
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
+Phạm vi đóng góp được đối chiếu với [TEAM.md](../../TEAM.md) và [báo cáo nhóm](../team/group_report.md). Phân biệt phần đã có bằng chứng với kết quả chung của nhóm; không nhận là mình thực hiện những hoạt động chưa được ghi nhận.
+
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Chuẩn bị 3 Problem Card với sự hỗ trợ của AI và tổng hợp vào bảng Pitch: rà soát bài trước khi nộp, tìm yêu cầu checkpoint và truy nguồn research. Chưa có ghi nhận tôi trực tiếp thuyết trình trên lớp. | Có thêm 3 candidate với actor và bottleneck dự kiến để nhóm cân nhắc; nằm ở mục 2.1, dòng 4–6 của báo cáo nhóm. |
+| Phản biện bài của bạn khác | Chưa có câu hỏi do tôi đặt cho thành viên khác được ghi lại. Câu hỏi chuẩn bị cho trao đổi tiếp: “Với bác sĩ đã dùng phác đồ hoặc hỏi đồng nghiệp là đủ, nhóm có còn cần hỗ trợ tìm và lọc y văn không?” | Đây là câu hỏi đề xuất cần dùng khi kiểm chứng, chưa phải phản biện đã diễn ra hoặc đã làm nhóm thay đổi. |
+| Nhận phản biện | Chưa ghi nhận câu hỏi từ thành viên khác dành cho tôi. Phần CP2 có phản biện của AI: nhiều tài liệu chưa chứng minh pain; thời gian ước tính chưa phải baseline thực tế. | Bản nháp đã tách dữ kiện khỏi giả thuyết, ghi rõ số phút là ước tính và bổ sung cách kiểm chứng cho từng card. |
+| Gom cluster / cây OST | Đưa 3 candidate của mình vào danh sách Pitch; chưa có bằng chứng tôi trực tiếp gom cluster hoặc xây cây OST. | Bảng Pitch có dữ liệu đầu vào; mục 2.2 và 2.3 của báo cáo nhóm hiện chưa điền nên chưa thể nhận là đã hoàn tất hội tụ bằng cluster/OST. |
+| Chọn candidate problem | Đóng góp các phương án đầu vào để nhóm so sánh; chưa có biên bản ghi lại ý kiến chấm điểm hoặc lựa chọn riêng của tôi. | Theo mục 2.4, nhóm chọn bài bác sĩ lọc y văn với 31 điểm. Đây là kết quả chung, không phải điểm do riêng tôi chấm. |
+| Kiểm chứng / research | Chuẩn bị candidate về truy nguồn ở CP2; chưa có ghi nhận tôi trực tiếp phỏng vấn hoặc mở kiểm các nguồn research của bài y văn. | Báo cáo nhóm hiện ghi nhận 1 bác sĩ trong nhóm và bảng research OpenEvidence, UpToDate. Cần thêm người ngoài nhóm để kiểm chứng; chưa coi các thông tin này là dữ liệu do tôi tự thu thập. |
+| Quy trình nhóm | Có 3 quy trình nháp cho candidate cá nhân; chưa có bằng chứng tôi trực tiếp vẽ quy trình y văn của nhóm. | Quy trình nhóm tại mục 4 xác định bước lọc tài liệu là bottleneck 25 phút; vai trò xây quy trình trước/sau được TEAM.md ghi cho Nguyễn Bảo Trung. |
+| Problem Statement | Chuẩn bị actor, bottleneck, metric và phương án không dùng AI trong card cá nhân; chưa ghi nhận tôi trực tiếp viết Problem Statement của nhóm. | Báo cáo nhóm có v0 và v1; thay đổi chính là thu hẹp actor sang bác sĩ trẻ/người tìm hiểu kỹ thuật mới và bổ sung boundary. |
+| Mức can thiệp AI | Nêu phương án No AI hoặc Rule cho các candidate của mình để tránh mặc định dùng AI. Chưa có ghi nhận tôi trực tiếp chốt mức can thiệp cho bài y văn. | Nhóm chọn Workflow cho bài y văn, kết hợp lọc theo quy tắc, tìm kiếm theo nghĩa, hỗ trợ đọc nội dung và bác sĩ kiểm tra; không giao AI tự quyết toàn bộ luồng. |
+| Quyết định | Chưa có ghi nhận ý kiến biểu quyết riêng hoặc việc tôi trực tiếp xây ngưỡng dừng. Trong báo cáo cá nhân, tôi đối chiếu lại quyết định và giới hạn đã ghi của nhóm. | Quyết định chung là Go cho pilot hẹp trên kho Răng Hàm Mặt; khi có bịa số liệu/trích dẫn sai thì dừng và quay về tra cứu thủ công. Đây là đề xuất thử nghiệm, chưa có kết quả triển khai. |
 
 ---
 
 ## 5. Dùng AI
 
-Phần “Tôi sửa gì bằng nhận định của mình?” dưới đây là cách diễn đạt đề xuất từ những điều chỉnh đã có trong bản nháp; học viên cần xác nhận có đúng với nhận định của mình trước khi nộp.
+Nhật ký này bao gồm việc dùng Codex để chuẩn bị bản nháp CP1–CP2, tổng hợp bảng Pitch và soạn mục 4–6. Các câu ở cột cuối là cách diễn đạt đề xuất từ những điều chỉnh trong bản nháp, cần học viên xác nhận. Việc AI đọc lại báo cáo nhóm để diễn giải không đồng nghĩa học viên đã dùng AI thực hiện research, kiểm chứng hoặc xây giải pháp ở các checkpoint đó.
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | Codex đề xuất 6 candidate dựa trên tài liệu repo theo yêu cầu soạn CP1. | Cấu trúc Job Story và phân biệt dữ kiện với giả thuyết. | Chưa có trải nghiệm cá nhân để xác nhận pain; số đầu mục không chứng minh mức đau. | |
-| CP2 Problem Card | Codex soạn 3 card, quy trình và tự phản biện theo worksheet. | Actor, bước nghẽn dự kiến, phương án không dùng AI và cách đo được trình bày rõ. | Quy trình và thời gian chưa được quan sát hoặc bấm giờ thực tế. | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Nhờ Codex đề xuất 6 candidate từ bối cảnh repo và viết dạng Job Story. | Giúp tổ chức ý theo 4 lăng kính, nêu actor và câu hỏi kiểm chứng. | Số lượng tài liệu và yêu cầu không chứng minh người học thực sự gặp pain; AI chưa có trải nghiệm cá nhân của tôi. | Tôi tách dữ kiện trong repo khỏi giả thuyết về pain, ghi bằng chứng còn thiếu và giữ candidate ở mức cần kiểm chứng. Tôi loại hướng làm trợ lý cho toàn bộ bài lab vì phạm vi quá rộng và đưa giải pháp vào trước vấn đề. |
+| CP2 Problem Card | Nhờ Codex soạn 3 card, quy trình nháp và tự phản biện theo worksheet. | Giúp xác định bước nghẽn dự kiến, cách đo, phương án không dùng AI và điểm yếu của từng card. | Quy trình và số phút chưa được quan sát thực tế; card tìm yêu cầu và card rà soát bài dễ trùng phạm vi. | Tôi tách hai card theo thời điểm bắt đầu làm và trước khi nộp; ghi số phút là ước tính cần đo lại. Tôi bổ sung tiêu chí lỗi bỏ sót bên cạnh thời gian và yêu cầu đối chiếu nội dung nguồn thay vì chỉ kiểm tra link mở được. |
+| CP4 Research | Chưa ghi nhận tôi dùng AI để tìm hoặc kiểm nguồn cho bài y văn. Ở lần hoàn thiện báo cáo cá nhân này, Codex chỉ đọc lại mục 3 của báo cáo nhóm. | Giúp phân biệt dữ liệu đã ghi nhận, kết luận research và phần còn cần kiểm chứng. | Đọc bảng research không xác nhận được các claim về sản phẩm; 1 người trong nhóm chưa đủ đại diện cho người dùng mục tiêu. | Tôi ghi rõ chưa tự thu thập hoặc xác minh các dữ liệu đó, không nhận là mình đã phỏng vấn hay kiểm nguồn; cần bổ sung người ngoài nhóm và mở kiểm từng claim trước khi dùng làm căn cứ. |
+| CP5 Quy trình | Nhờ Codex đọc và diễn giải quy trình đã có trong báo cáo nhóm để hoàn thiện phần tổng kết cá nhân; chưa ghi nhận tôi dùng AI để vẽ quy trình nhóm. | Giúp phân biệt phần tìm và lọc tài liệu với phần bác sĩ đọc kỹ, kiểm tra và quyết định. | Dễ nhầm 60 phút tìm và lọc với toàn bộ 90 phút gồm cả đọc kỹ; thời gian kỳ vọng chưa phải kết quả đo. | Tôi nêu rõ mục tiêu dưới 20 phút chỉ áp dụng cho tìm và lọc, còn 30 phút đọc kỹ được giữ nguyên theo đề xuất của nhóm; không trình bày mục tiêu là hiệu quả đã đạt. |
+| CP5–6 Problem Statement | Nhờ Codex đối chiếu v0 và v1 trong báo cáo nhóm khi soạn mục 4 và 6; không coi đây là bằng chứng tôi trực tiếp viết hai bản đó. | Giúp chỉ ra thay đổi actor, boundary và mối liên hệ giữa bottleneck với metric. | Các mục tiêu 100% đúng loại/quần thể và 0 lỗi trích dẫn chưa kèm bộ mẫu hoặc kết quả đánh giá để chứng minh. | Tôi phân biệt tiêu chí mong muốn với kết quả kiểm chứng; giữ yêu cầu bác sĩ đối chiếu đoạn gốc và bổ sung nhu cầu đo trên bộ câu hỏi cụ thể trước khi kết luận giải pháp đạt. |
+| CP6 Mức can thiệp / quyết định | Nhờ Codex tóm lược lý do nhóm chọn Workflow và Go phạm vi hẹp để diễn giải trong báo cáo cá nhân. | Giúp nối mức can thiệp với vai trò con người, rủi ro và phương án quay về. | Chọn Workflow hoặc có trích dẫn chưa tự chứng minh tính an toàn hay hiệu quả; báo cáo chưa có kết quả pilot. | Tôi diễn đạt Go là cho phép thử nghiệm phạm vi hẹp, giữ bác sĩ kiểm tra và ngưỡng dừng khi trích dẫn sai; không coi đây là quyết định triển khai rộng hoặc giao AI quyết định điều trị. |
 
 ---
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
-
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+
+Từ ba candidate của Nguyễn Bảo Trung trong bảng Pitch, tôi thấy cần phân biệt nhu cầu tìm đúng thông tin với nhu cầu truyền đạt thông tin lặp lại. Bài lọc y văn đòi hỏi đối chiếu nội dung và quần thể; bài tìm PhD đòi hỏi đối chiếu điều kiện và thời hạn; bài tư vấn bệnh nhân lặp lại có thể bắt đầu bằng hướng dẫn chuẩn hóa. Điểm tôi rút ra là hai việc cùng tốn thời gian vẫn có thể cần cách can thiệp khác nhau. Khi so sánh candidate, cần nhìn vào bước nghẽn cụ thể và bằng chứng, không chỉ chủ đề nghe có vẻ quan trọng.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 
+Báo cáo chưa ghi lại một tình huống cụ thể đủ để tôi kể rằng nhóm đã mắc lỗi này rồi xử lý ra sao. Tuy nhiên, hướng xây một công cụ trả lời toàn bộ câu hỏi chuyên môn sẽ dễ khiến phạm vi vượt khỏi pain ban đầu. Điểm điều chỉnh thể hiện trong báo cáo là tập trung vào bước tìm và lọc y văn, thu hẹp actor và giữ bác sĩ đọc đoạn gốc, chốt tài liệu. Với các candidate cá nhân, tôi cũng cần giữ phương án checklist hoặc ghi nguồn thủ công để tránh mặc định mọi vấn đề đều cần AI.
+
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+
+Điều có thể đối chiếu trong bản nháp CP2 là cách xử lý các con số thời gian sau phản biện của AI. Các mốc 20, 15 và 10 phút không có dữ liệu bấm giờ nên chưa thể dùng như baseline thực tế. Bản nháp đã ghi rõ đây là ước tính, thêm cách quan sát từng bước và kiểm tra số lỗi bỏ sót. Thay đổi về cách lập luận là không dùng một con số có vẻ hợp lý để thay cho bằng chứng. Chưa có câu hỏi phản biện trực tiếp từ thành viên khác dành cho tôi được ghi lại, nên tôi không gán thay đổi này cho một cuộc trao đổi chưa có dữ liệu.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
+Điểm đáng chú ý trong báo cáo là không phải bác sĩ nào cũng cần thêm công cụ tra cứu: người đã có kinh nghiệm với ca thường quy có thể dùng phác đồ hoặc hỏi đồng nghiệp. Tín hiệu này giúp giải thích việc thu hẹp actor sang bác sĩ trẻ hoặc người tìm hiểu kỹ thuật mới. Tôi cũng cần thận trọng vì dữ liệu hiện mới ghi nhận một bác sĩ trong nhóm; chưa đủ để khẳng định nhu cầu phổ biến hay mức tiết kiệm thời gian. Chưa có trải nghiệm cá nhân được ghi lại để xác nhận cảm giác bất ngờ, nhưng đây là kết quả tôi cần chú ý khi kiểm chứng tiếp.
+
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+
+Điểm khó tôi nhận thấy là nối được actor, bottleneck và metric trong cùng một phạm vi. Với bài y văn, 60 phút là phần tìm và lọc, còn 30 phút đọc kỹ là một phần việc riêng được giữ lại. Nếu gộp hai phần, mục tiêu giảm thời gian sẽ dễ bị hiểu sai. Boundary cũng phải cụ thể: bác sĩ kiểm tra đoạn gốc và quyết định, còn AI hỗ trợ tìm và lọc. Tôi cần phân biệt rõ những mục tiêu nhóm muốn đạt với những kết quả đã được đo.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Tôi sẽ bắt đầu bằng một lần thực hiện thật cho từng candidate cá nhân, ghi thời gian từng bước và lỗi gặp phải trước khi xếp hạng. Với bài nhóm, tôi sẽ đề xuất hỏi thêm bác sĩ ngoài nhóm, gồm cả người có và không có nhu cầu hỗ trợ. Tôi sẽ hỏi rõ cách đo thời gian, bộ câu hỏi dùng để đánh giá, cách xác định tài liệu đúng quần thể và người chịu trách nhiệm kiểm tra. Tôi cũng sẽ yêu cầu hoàn thiện cluster và cây OST để lý do chọn bài có thể được theo dõi từ các candidate ban đầu, đồng thời bổ sung thời lượng pilot và tiêu chí tiếp tục sau thử nghiệm.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Theo báo cáo nhóm, bài toán là giúp bác sĩ trẻ hoặc người tìm hiểu kỹ thuật mới tìm và lọc đúng y văn cho câu hỏi chuyên môn. Quy trình hiện tại gồm đặt câu hỏi, tìm kiếm, xem kết quả, lọc chất lượng và quần thể, rồi đọc kỹ tài liệu được chọn. Bước nghẽn được ghi nhận là lọc tài liệu, khoảng 25 phút trong tổng 60 phút tìm và lọc; phần đọc kỹ thêm 30 phút được giữ nguyên. Nhóm đặt mục tiêu đưa bước lọc xuống dưới 10 phút và toàn bộ tìm, lọc xuống dưới 20 phút, kèm kiểm tra loại bài, quần thể và độ chính xác trích dẫn; đây là mục tiêu chưa được chứng minh bằng pilot. Boundary là AI không quyết định điều trị, không nhận thông tin định danh bệnh nhân và phải cung cấp đoạn nguồn để bác sĩ đối chiếu. Nhóm chọn Workflow vì luồng xử lý đã định sẵn, kết hợp quy tắc với hỗ trợ đọc nội dung, trong khi bác sĩ giữ quyền kiểm tra và quyết định. Nhóm quyết định Go cho pilot hẹp trên kho chuyên khoa Răng Hàm Mặt, với ngưỡng dừng khi phát hiện bịa số liệu hoặc trích dẫn sai và quay về tra cứu thủ công. Trước khi mở rộng, cần kiểm chứng thêm với bác sĩ ngoài nhóm và đo kết quả trên bộ câu hỏi cụ thể.
 
 ---
 

@@ -150,16 +150,16 @@ HIỆN TẠI — 15–30 phút/bệnh nhân cần tư vấn kỹ (chồng chéo 
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
+| Pitch Problem Card | Đảm nhiệm thuyết trình (pitch) bài *Bác sĩ lọc y văn* và trả lời các câu hỏi khi pitch | Bài được chọn làm đề tài của nhóm Ban4 (31/35 điểm) |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt cho Đức: Xác định vị trí cần sửa và vị trí sai như thế nào, và nếu AI nhận xét sai thì xử lý thế nào? | Giúp làm rõ tiêu chí xác định lỗi trong quy trình và bổ sung phương án kiểm tra lại khi AI đưa ra nhận xét sai lệch |
+| Nhận phản biện | Câu hỏi tôi nhận được: *về cung cấp kiến thức cũ và mới cho bác sĩ + mức độ tin cậy khi bác sĩ sử dụng* | Tôi đã sửa gì: Đổi Actor từ v0 (bác sĩ điều trị nói chung) sang v1 (**bác sĩ trẻ junior + người muốn tìm hiểu kỹ thuật mới**); khoanh vùng AI không cho phép sinh viên tìm bằng ChatGPT |
 | Gom cluster / cây OST | | |
 | Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Kiểm chứng / research | Tôi là bác sĩ trực tiếp trả lời các câu hỏi phỏng vấn/kiểm chứng | Tạo Prototype và hoàn thiện nhóm |
+| Quy trình nhóm | Tôi đóng góp quy trình ban đầu | Các thành viên trong nhóm hỗ trợ hoàn thiện quy trình |
+| Problem Statement | Đổi từ v0 sang v1: chuyển Actor sang bác sĩ trẻ junior + người muốn tìm hiểu kỹ thuật mới | nhóm góp ý hoàn thiện |
+| Mức can thiệp AI | Góp ý quy trình | Bỏ AI vào bước nào |
+| Quyết định | Chốt Go: Pilot nhỏ trên kho chuyên khoa Răng Hàm Mặt; nếu bịa số liệu trích dẫn thì cancel | |
 
 ---
 
@@ -169,10 +169,10 @@ HIỆN TẠI — 15–30 phút/bệnh nhân cần tư vấn kỹ (chồng chéo 
 |---|---|---|---|---|
 | CP1 Scan | Chuẩn hóa 10 gạch đầu dòng công việc thực tế sang mẫu Job Story và kiểm tra lỗi lẫn giải pháp vào problem | Giúp tách rõ 10 dòng trải đều cả 4 lăng kính và tách bạch bước tìm kiếm (60') với bước đọc hiểu (30') ở problem #5 | AI tự thổi phồng tần suất (gán "hàng ngày" cho việc tra cứu guideline/cập nhật phác đồ và gán cứng 30 phút thay vì khoảng 15–30 hoặc 30–60 phút tuỳ lượng bệnh nhân/mail) | Tôi tự sửa lại toàn bộ tần suất và khoảng thời gian đúng thực tế ("lặp lại mỗi khi có vấn đề", "mỗi khi có bài báo phải sub", "15–30 phút tuỳ số lượng"), đổi #7 sang tổng hợp yêu cầu tạp chí khi viết báo, và bỏ các gợi ý đụng tới tự động chẩn đoán |
 | CP2 Problem Card | Đóng vai "PM hoài nghi" đặt câu hỏi chất vấn về số phút tìm kiếm tài liệu (Card #1), lý do bộ lọc có sẵn chưa đủ (Card #2) và liệu có cần AI cho việc tư vấn lặp lại không (Card #3) | Chỉ ra chỗ ghi "60 phút tìm tài liệu" lúc đầu chưa tách rõ bước gõ từ khóa và bước sàng lọc chất lượng nghiên cứu; nhắc kiểm tra phương án No AI ở Card #3 | AI tự nhân thời gian thành "7,5 giờ/tuần" ở Card #1 trong khi việc tra cứu sâu chỉ diễn ra mỗi khi gặp ca/vấn đề cần đối chiếu; dễ gợi ý chatbot tư vấn thay bác sĩ ở Card #3 | Bỏ con số nhân tuần bị thổi phồng, đồng bộ Job Story của 3 Card khớp 100% với bảng CP1 đã sửa, điều chỉnh khung giờ Card #3 về 15–30 phút/ca tư vấn kỹ, và giữ Card #3 ở mức No AI / Rule |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP4 Research | Tìm kiếm tài liệu, bài nghiên cứu và các giải pháp đã có trên thị trường để chuẩn bị nội dung thuyết trình (pitch) | Gợi ý bài tổng quan của Del Fiol (2014) trên JAMA (0,57 câu hỏi/bệnh nhân) và giải pháp OpenEvidence | AI mô tả OpenEvidence như thể bác sĩ ở đâu cũng dùng được ngay, bỏ qua việc yêu cầu mã NPI của Mỹ và không có dữ liệu phác đồ Bộ Y tế Việt Nam | Tự kiểm tra lại điều kiện tiếp cận thực tế, bổ sung phác đồ tiếng Việt của Bộ Y tế và chỉ ra khoảng trống giải pháp tại Việt Nam khi pitch |
+| CP5 Quy trình | Hỏi AI gợi ý các kịch bản phương án quay về (fallback) khi hệ thống gặp lỗi hoặc trích dẫn sai | Liệt kê được các tình huống lỗi cơ bản (lỗi mạng, không tìm thấy bài báo) | Gợi ý chung chung kiểu CNTT là "báo người dùng thử lại sau" hoặc "gửi phản hồi cho kỹ thuật", không phù hợp với thực tế bác sĩ cần xử lý ca khám ngay | Sửa thành phương án thực tế trong lâm sàng: nếu AI không có nguồn hoặc trích dẫn sai thì bác sĩ hủy kết quả AI và quay về tra cứu thủ công trực tiếp trên PubMed / UpToDate |
+| CP5–6 Problem Statement | Rà soát các thành phần của Problem Statement và gợi ý cách đặt tiêu chí đánh giá (Eval) cho đầu ra | Nhắc nhở cấu trúc các trường và gợi ý kiểm tra nguy cơ bịa số liệu (hallucination) | AI viết Actor rất chung chung ("mọi bác sĩ lâm sàng"), tiêu chí đánh giá cảm tính ("tóm tắt chính xác, dễ hiểu") không đo lường được | Sửa Actor thành bác sĩ trẻ (junior) và người muốn tìm hiểu kỹ thuật mới, thêm Boundary cấm sinh viên dùng kiểu ChatGPT mở, và đặt tiêu chí Eval đo bằng con số cụ thể (100% đúng loại, 0 lỗi sai số liệu so với đoạn gốc) |
+| CP6 Mức can thiệp / quyết định | Nhờ AI liệt kê các khía cạnh rủi ro trong bảng 4 rủi ro (Value, Usability, Feasibility, Viability) | Gợi ý khung câu hỏi kiểm tra rủi ro theo đúng lý thuyết bài học | AI đánh giá rủi ro kỹ thuật (Feasibility) hời hợt, cho rằng đưa tài liệu vào là đọc được, bỏ qua thực tế khó khăn khi xử lý các file PDF phác đồ tiếng Việt của Bộ Y tế (nhiều bảng biểu, dễ cắt cụt câu) | Bổ sung rủi ro về độ chuẩn của kho dữ liệu đầu vào và bước retrieve, đồng thời đưa ra ngưỡng dừng cụ thể: nếu phát hiện bịa số liệu trích dẫn thì cancel ngay |
 
 ---
 
@@ -182,20 +182,36 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Khi lắng nghe top 3 problems của các thành viên trong nhóm, tôi nhận ra tuy lĩnh vực chuyên môn khác nhau nhưng bản chất các vấn đề lại có nhiều điểm tương đồng, đặc biệt là sự lúng túng và mất thời gian khi phải xử lý các nguồn thông tin phân tán. Những góc nhìn đa chiều từ các bạn đã giúp tôi đối chiếu lại vấn đề của mình dưới lăng kính khách quan hơn, từ đó hoàn thiện và làm sắc nét hơn Problem Card cá nhân.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Ngay thời điểm ban đầu khi tiếp cận vấn đề của mình, phản xạ tự nhiên của tôi là nghĩ ngay đến việc xây dựng một Chatbot để bác sĩ hỏi đáp nhanh khi gặp ca khó. Tuy nhiên, sau khi cùng nhóm vẽ chi tiết từng bước trong quy trình khám và tra cứu, tôi nhận ra bác sĩ không cần một chatbot trả lời thay quyết định chuyên môn, mà nút thắt thực sự nằm ở khâu đọc lướt để phân loại nghiên cứu chất lượng và đúng quần thể bệnh (Bước 4). Nhờ phân tích quy trình cụ thể, nhóm đã kéo lại tư duy và chuyển hướng sang xây dựng một Workflow có kiểm soát thay vì làm chatbot tự do.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Tôi đã thay đổi nhận định sau khi nhận phản biện trên lớp về đối tượng thụ hưởng (Actor). Ban đầu ở bản v0, tôi xác định Actor chung là mọi bác sĩ điều trị trực tiếp. Tuy nhiên, các câu hỏi phản biện đã chỉ ra rằng các bác sĩ có kinh nghiệm thường đã nắm rất vững phác đồ thường quy nên ít gặp nút nghẽn này. Nhận thấy phản biện rất xác đáng, tôi đã đổi Actor ở bản v1 sang nhóm bác sĩ trẻ (junior) và những người đang tìm hiểu kỹ thuật mới — nhóm đối tượng thật sự có nhu cầu cao và chịu ảnh hưởng trực tiếp nhất bởi rào cản thời gian tra cứu.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Điều làm tôi bất ngờ nhất khi kiểm chứng qua nghiên cứu y văn là con số thực tế: trung bình có 0,57 câu hỏi nảy sinh trên mỗi bệnh nhân, nhưng có tới 49% câu hỏi bị bác sĩ bỏ qua không đi tìm câu trả lời (chỉ 51% được tra cứu) do rào cản thiếu thời gian. Trước đây tôi chỉ cảm nhận sự tốn thời gian ở góc độ trải nghiệm cá nhân, nhưng số liệu này chứng minh đây là một khoảng trống rất lớn trong thực hành lâm sàng hằng ngày.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Với tôi, phần khó nhất khi viết Problem Statement là chuỗi liên kết logic: từ việc xác định ranh giới an toàn (Boundary), lên ý tưởng kiểm thử (test) xem hệ thống có thể sai ở đâu, cho đến việc tìm ra các chỉ số đo lường (Success Metric) phù hợp. Trong y tế, nếu không khoanh vùng ranh giới thật chặt chẽ thì rất khó để thiết kế bài test và đưa ra các tiêu chí đánh giá đáng tin cậy cho bác sĩ.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Nếu làm lại, tôi sẽ chủ động thực hiện thêm các cuộc phỏng vấn với các bác sĩ trẻ bên ngoài nhóm để có thêm dữ liệu thực tế, giúp việc xây dựng kịch bản kiểm thử (test) cho quy trình được tốt hơn. Đồng thời, tôi sẽ phản biện nhóm mạnh hơn ở khâu kiểm soát chất lượng dữ liệu đầu vào và độ chuẩn xác của bước truy xuất (retrieval), nhằm đảm bảo hệ thống không đưa tài liệu sai lệch vào bước xử lý của AI.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Bác sĩ trẻ hoặc bác sĩ khi cần tìm hiểu kiến thức, kỹ thuật mới thường mất rất nhiều thời gian để tự tra cứu câu trả lời hoặc tìm đồng nghiệp giàu kinh nghiệm để tham vấn. Quy trình hiện tại gồm 5 bước: đặt câu hỏi, tìm kiếm, scan danh sách, lọc bài và đọc kỹ toàn văn; trong đó điểm nghẽn lớn nhất nằm ở Bước 4 (sàng lọc bài chất lượng và đúng quần thể bệnh, mất khoảng 25 phút). Metric thành công của nhóm là rút ngắn thời gian 4 bước tìm và lọc từ 60 phút xuống dưới 20 phút, với yêu cầu bắt buộc là không xảy ra lỗi trích dẫn sai số liệu so với bài gốc. Về Boundary, AI tuyệt đối không tự đưa ra quyết định điều trị thay bác sĩ, không hallucinate, không bịa trích dẫn và không cho phép sinh viên sử dụng tự do như ChatGPT. Nhóm lựa chọn mức Workflow kết hợp Rule và LLM để vừa tận dụng khả năng đọc hiểu ngữ nghĩa, vừa giảm tối đa độ tự do khó kiểm soát của Agent. Cuối cùng, nhóm quyết định Go ở phạm vi hẹp với đợt pilot thử nghiệm trên kho tài liệu chuyên khoa Răng Hàm Mặt, kèm ngưỡng dừng nghiêm ngặt là sẽ hủy (cancel) bước AI ngay lập tức nếu phát hiện hiện tượng bịa số liệu hoặc sai lệch trích dẫn.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- Del Fiol G, Workman TE, Gorman PN. *Clinical questions raised by clinicians at the point of care: a systematic review.* JAMA Intern Med. 2014;174(5):710–718. (Trích từ Slide 01 của nhóm)
+- OpenEvidence (Trích từ Slide 07 của nhóm)
+- UpToDate Expert AI — Wolters Kluwer, 9/2025 (Trích từ Slide 07 của nhóm)

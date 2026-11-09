@@ -137,17 +137,28 @@ Tổng hợp:
 HIỆN TẠI — 7 bước, 80 phút, 7/7 bước thủ công
 
 
+
 ```mermaid
 flowchart TD
-    A["1. Đọc tin nhắn Zalo/Slack: 15 phút"] --> B["2. Mở GitHub/Drive gom file: 15 phút"]
-    B --> C["3. Tạo file Google Docs mới: 5 phút"]
-    C --> D["4. Copy ghép thông tin: 10 phút"]
-    D --> E["5. Đọc hiểu và viết nhận định/rủi ro: 25 phút"]
-    E --> F["6. Rà soát và căn chỉnh format: 7 phút"]
-    F --> G["7. Gửi báo cáo cho Mentor: 3 phút"]
+    A["1. Đọc tin nhắn Zalo/Slack<br/>15 phút"]
+    --> B["2. Mở GitHub/Drive gom file<br/>15 phút"]
+    --> C["3. Tạo file Google Docs mới<br/>5 phút"]
+    --> D["4. Copy ghép thông tin<br/>10 phút"]
+    --> E["5. Đọc hiểu & viết nhận định/rủi ro<br/>25 phút<br/>BOTTLENECK"]
+    --> F["6. Rà soát & căn chỉnh format<br/>7 phút"]
+    --> G["7. Gửi báo cáo cho Mentor<br/>3 phút"]
 
-    style E fill:#ffcccc,stroke:#ff0000,stroke-width:3px
+    style A fill:#263445,stroke:#6685a6,color:#e2e8f0
+    style B fill:#263445,stroke:#6685a6,color:#e2e8f0
+    style C fill:#263445,stroke:#6685a6,color:#e2e8f0
+    style D fill:#263445,stroke:#6685a6,color:#e2e8f0
+    style E fill:#482b35,stroke:#c06b78,stroke-width:3px,color:#ffe4e6
+    style F fill:#263445,stroke:#6685a6,color:#e2e8f0
+    style G fill:#263445,stroke:#6685a6,color:#e2e8f0
+
+    linkStyle default stroke:#94a3b8,stroke-width:1.5px
 ```
+
 
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
@@ -170,39 +181,57 @@ flowchart TD
 TƯƠNG LAI — 5 bước, khoảng 20 phút, 2/5 bước thủ công
 
 
+
 ```mermaid
 flowchart TD
     A["1. Thành viên điền form tiến độ ngắn<br/>2 phút"]
     --> B["2. Script tự động tổng hợp vào 1 bảng<br/>1 phút"]
 
-    B --> C["3. AI đọc bảng và sinh bản nháp nhận định<br/>2 phút"]
+    B --> C["3. AI đọc bảng & sinh bản nháp nhận định<br/>2 phút"]
 
-    C --> D["4. PM đối chiếu số liệu và sửa bản nháp<br/>12 phút"]
+    C --> D["4. PM đối chiếu số liệu & sửa bản nháp<br/>12 phút"]
 
     D --> E["5. PM bấm duyệt và gửi Mentor<br/>3 phút"]
 
-    F["RULE<br/>Google Form tập trung"] -.-> A
-    G["RULE<br/>Google Sheets Script"] -.-> B
-    H["WORKFLOW<br/>LLM sinh nháp theo khung"] -.-> C
-    I["CON NGƯỜI<br/>HITL kiểm soát chất lượng"] -.-> D
-    J["CON NGƯỜI"] -.-> E
-
-    E --> K["Hoàn thành báo cáo"]
+    R1["RULE<br/>Google Form tập trung"] -.-> A
+    R2["RULE<br/>Google Sheets Script"] -.-> B
+    R3["WORKFLOW<br/>LLM sinh nháp theo khung"] -.-> C
+    R4["CON NGƯỜI<br/>HITL kiểm soát chất lượng"] -.-> D
+    R5["CON NGƯỜI"] -.-> E
 
     L["BOUNDARY<br/>AI tuyệt đối không tự gửi báo cáo.<br/>AI chỉ nhận xét dựa trên dữ liệu trong form,<br/>không suy đoán tiến độ ngoài đời."]
+
     C -.-> L
 
-    B --> M{"AI gặp lỗi server<br/>hoặc sinh nội dung ảo giác?"}
+    M{"AI sinh nháp bị ảo giác<br/>hoặc server gặp lỗi?"}
+    C --> M
+
     M -->|Có| N["FALLBACK<br/>PM copy bảng tổng hợp ở bước 2<br/>và tự viết theo template cũ"]
     N --> D
-    M -->|Không| C
 
-    style C fill:#dceeff,stroke:#2878b5,stroke-width:2px
-    style D fill:#d5f5e3,stroke:#229954,stroke-width:2px
-    style E fill:#d5f5e3,stroke:#229954,stroke-width:2px
-    style L fill:#fff0cc,stroke:#cc8800,stroke-width:2px
-    style N fill:#ffcccc,stroke:#cc0000,stroke-width:2px
+    M -->|Không| D
+
+    K["HOÀN THÀNH BÁO CÁO"]
+    E --> K
+
+    style A fill:#263445,stroke:#6685a6,color:#e2e8f0
+    style B fill:#263445,stroke:#6685a6,color:#e2e8f0
+    style C fill:#263c52,stroke:#6098c5,color:#e0f2fe,stroke-width:2px
+    style D fill:#244638,stroke:#63a889,color:#dcfce7,stroke-width:2px
+    style E fill:#244638,stroke:#63a889,color:#dcfce7,stroke-width:2px
+    style R1 fill:#303746,stroke:#78869b,color:#e2e8f0
+    style R2 fill:#303746,stroke:#78869b,color:#e2e8f0
+    style R3 fill:#263c52,stroke:#6098c5,color:#e0f2fe
+    style R4 fill:#244638,stroke:#63a889,color:#dcfce7
+    style R5 fill:#244638,stroke:#63a889,color:#dcfce7
+    style L fill:#493d27,stroke:#c49a50,color:#fef3c7,stroke-width:2px
+    style M fill:#393344,stroke:#a78bca,color:#ede9fe
+    style N fill:#482b35,stroke:#c06b78,color:#ffe4e6,stroke-width:2px
+    style K fill:#263c52,stroke:#6098c5,color:#e0f2fe
+
+    linkStyle default stroke:#94a3b8,stroke-width:1.5px
 ```
+
 
 Boundary: AI tuyệt đối không tự gửi báo cáo đi; AI chỉ nhận xét dựa trên dữ liệu có trong form, không tự suy đoán tiến độ ngoài đời.   Phương án quay về (Fallback): Nếu AI sinh nháp bị ảo giác hoặc server lỗi $\rightarrow$ PM copy bảng tổng hợp ở bước 2 và tự viết theo khung template cũ.
 

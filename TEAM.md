@@ -89,7 +89,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - Scan 20 vấn đề theo 4 lăng kính và chọn top 3 Problem Card: hóa đơn đầu vào bị lệch, giáo viên chấm và nhận xét bài, người bệnh chờ kết quả cận lâm sàng; mỗi card có quy trình nháp, bottleneck, success metric và phương án không dùng AI.
 - Đưa 3 card vào bảng pitch (dòng #10–12); gom 12 candidate của nhóm thành 4 cluster, viết cây OST với 1 outcome và 4 nhánh pain, gạch bỏ 5 solution đội lốt; ghi lý do loại 3 card của mình.
-- Phản biện nhóm 1: "Thị trường đã có sản phẩm tương tự, sản phẩm của bạn có gì tốt hơn?"
+- Phản biện các card của Nguyễn Bảo Trung (#2, #3) và Đặng Quang Duy (#5, #6) trong bảng pitch nhóm; phản biện nhóm 1: "Thị trường đã có sản phẩm tương tự, sản phẩm của bạn có gì tốt hơn?"
 - Tham gia bỏ phiếu chọn candidate, chọn mức Workflow và góp ý Boundary.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):

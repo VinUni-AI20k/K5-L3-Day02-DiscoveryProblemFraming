@@ -178,14 +178,18 @@ Có cá nhân tôi lo lắng về mặt dữ liệu, nên tôi đi tìm dữ li�
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 Tôi không đổi ý sau khi bị phản biện. Đề tài của tôi muốn làm là ứng dụng AI voice to text để phân tích cập nhật dữ liệu chăm sóc khách hàng cho Bank, tôi bị phản biện về việc mô hình không nhận diện đúng số liệu ảnh hưởng đến kết quả dự đoán đầu ra, tôi nghĩ vấn đề này có thể tối ưu được và có nhiều phương pháp phân biệt cảm xúc của khách hàng qua voice kết hợp với text nhận diện được.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
-Không bất ngờ vì vấn đề chung của AI không thể thay thế được con người là vì nó không có khả năng chịu trách nhiệm cho sai sót của mình,
+Không bất ngờ vì vấn đề chung của AI không thể thay thế được con người là vì nó không có khả năng chịu trách nhiệm cho sai sót của mình
+
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 Khó khăn lớn nhất khi xây dựng Problem Statement là phân biệt rõ vấn đề cốt lõi với giải pháp công nghệ, tránh tư duy solution-first (đề xuất giải pháp trước khi hiểu đầy đủ vấn đề).
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 Nếu làm lại tôi sẽ bắt đầu sớm hơn với vấn đề cốt lõi. Tôi sẽ phản biện nhóm mạnh hơn dựa vào những điểm yếu của AI như không thể chính xác 100%, không có khả năng chịu trách nhiệm, và đào sâu vào vấn đề cốt lõi của bài toán.
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
+**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+Việc đối chiếu hồ sơ nhà thầu dẫn đến tốn thời gian và nguy cơ bỏ sót sai lệch quan trọng -> Quy trình hiện tại chuyên viên phải tổng hợp hồ sơ từ 4 nhà thầu với khoảng hơn 4000 dòng dữ liệu mỗi hồ sơ tương đương với 16000 dòng dữ liệu đối chiếu, thông qua 8 bước thủ công -> metric: Nhóm đặt mục tiêu giảm từ 5 6h xuống 1,5h cho 1 lần rà soát -> Boundary: Hệ thống không được tự ý thay đổi số liệu nhà thầu, bỏ qua dòng chưa đối chiếu được hoặc tự quyết định nhà thầu đạt hay trúng thầu, mọi trường hợp bất thường phải được chuyên viên kiểm tra và xác nhận-> Mức can thiệp AI: Nhóm nhận thấy việc so sánh dữ liệu số đã có cấu trúc không nhất thiết cần AI, vì có thể giải quyết hiệu quả bằng Rule-based Automation như Excel Formula, Conditional Formatting và Power Query.-> Quyết định Nhóm đề xuất GO với Rule-based Automation và NOT YET đối với AI, ưu tiên thử nghiệm trên hồ sơ thực tế để đánh giá hiệu quả trước khi quyết định mở rộng sang AI Workflow hoặc Agent.
 ---
 
 ## 7. Tài liệu tham khảo

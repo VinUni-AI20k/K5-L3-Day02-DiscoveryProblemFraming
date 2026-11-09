@@ -71,4 +71,18 @@ CP5
 
 **Điều mình học được từ phần nhóm:** Ý kiến được thảo luận qua các góc nhìn khác nhau, giúp giải quyết bài toán dễ hiểu hơn.
 
+
+### HoangNgocHieu-2A202603976
+
+**Phần việc phụ trách:**
+CP6, CP7 và Điều phối chung hoạt động nhóm
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+Phụ trách chính phần CP6 và CP7: hoàn thiện ma trận lựa chọn mức độ can thiệp AI (mức Workflow), lập AI Canvas, xây dựng bộ tiêu chí đánh giá bản nháp (Eval), tinh chỉnh Problem Statement v1 và phân tích 4 khung rủi ro để đưa ra quyết định Go (thử nghiệm pilot 2 tuần). Đồng thời điều phối tiến độ, phân công nhiệm vụ và rà soát tổng hợp báo cáo nhóm.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+Đã hoàn thiện phần 6 & 7 trong `group_report.md`, khởi tạo và cập nhật file `TEAM.md` cùng các commit liên quan đến CP6, CP7.
+
+**Điều mình học được từ phần nhóm:** 
+Học được cách xác định đúng ranh giới kiểm soát công nghệ (Human-in-the-loop) để tránh bẫy "solution-first", đồng thời rèn luyện kỹ năng điều phối, lắng nghe và dung hòa các góc nhìn đa chiều từ các thành viên để đạt được đồng thuận chung trong dự án.
 -

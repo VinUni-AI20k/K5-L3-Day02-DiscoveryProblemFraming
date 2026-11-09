@@ -193,7 +193,7 @@ Có. Lúc suy nghĩ cho bài toán, tôi chỉ nghĩ đối tượng đang nhắ
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
-Có. Tôi khá bất ngờ vì tỷ lệ câu hỏi lâm sàng mà bác sĩ không đi tìm câu trả lời (Del Fiol 2014: chỉ 51% câu hỏi được đi tìm) khá cao so với suy nghĩ của tôi. Lúc đầu ấn tượng của tôi là bác sĩ biết rất nhiều nên khả năng trả lời được tất cả câu hỏi là rất cao. Tôi cũng bất ngờ là các công cụ như OpenEvidence, UpToDate đã có nhưng khó dùng ở Việt Nam, do rào cản về ngôn ngữ rất lớn.
+Có. Tôi khá bất ngờ vì tỷ lệ câu hỏi lâm sàng mà bác sĩ không đi tìm câu trả lời (Del Fiol 2014: chỉ 51% câu hỏi được đi tìm) khá cao so với suy nghĩ của tôi. Lúc đầu ấn tượng của tôi là bác sĩ biết rất nhiều nên khả năng trả lời được tất cả câu hỏi là rất cao. Tôi cũng bất ngờ là các công cụ như OpenEvidence, UpToDate đã có nhưng khó dùng ở Việt Nam: rào cản về ngôn ngữ rất lớn, OpenEvidence phải xác minh bằng mã hành nghề của Mỹ (NPI), UpToDate bán theo gói Enterprise nên chi phí cao, và cả hai đều không có phác đồ của Bộ Y tế.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 

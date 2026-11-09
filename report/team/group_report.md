@@ -1,14 +1,11 @@
 # Báo cáo nhóm — Day 02 Discovery & Problem Framing
 
-> Bản chung của nhóm, viết trên repo do nhóm trưởng fork. Không copy file này sang repo cá nhân.
-> Template chi tiết và prompt mẫu: [docs/01-worksheet.md](../../docs/01-worksheet.md). Bài mẫu: [docs/02-deliverable-example.md](../../docs/02-deliverable-example.md).
-
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: 4Ward
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
-- Quyết định cuối: Go / Not Yet / No-Go
+- Candidate problem được chọn (1 câu): Khi vừa kết thúc cuộc họp dài 1 tiếng, tôi muốn tổng hợp lại danh sách công việc (action items) kèm người phụ trách, để gửi cho từng người trong team xác nhận ngay.
+- Quyết định cuối: Go (Pilot phạm vi nhỏ)
 
 ---
 
@@ -35,40 +32,49 @@
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A - Quản lý & Theo dõi công việc trong team/dự án | 3, 6, 7, 8, 9 | Gom thông tin, ghi chú rải rác sau cuộc họp hoặc quá trình làm việc để tạo danh sách action items, viết docs API hoặc báo cáo tiến độ cho lead/mentor/team |
+| B - Thu thập & Theo dõi thông tin cá nhân (Học tập & Chi tiêu) | 2, 10, 11 | Gom và đối chiếu thông tin từ nhiều nguồn rời rác (lịch sử ngân hàng, bài tập LMS, slide/ghi chú ôn tập) để quản lý công việc và kế hoạch cá nhân |
+| C - Tìm kiếm & Tra cứu thông tin rải rác | 4, 12 | Tìm kiếm, truy xuất đúng đoạn tin nhắn/quyết định cũ trong kênh chat hoặc gom/phân loại feedback để chỉnh sửa bài |
+| D - Kiểm tra cấu trúc & Nhập liệu quy trình | 1, 5 | Đọc, đối chiếu và rà soát thủ công các thông tin/hồ sơ (hồ sơ giải ngân online, checklist cấu trúc bài lab) theo đúng mẫu tiêu chuẩn |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm 75% thời gian tổng hợp Action Items sau cuộc họp (từ 30 phút xuống <8 phút) mà không bị sót việc hoặc gán nhầm người phụ trách.
+├── Opportunity A: Note họp dạng văn bản thô bị lan man, lẫn lộn giữa thảo luận chung và task thực sự cần làm.
+├── Opportunity B: Tên người phụ trách (Assignee) và thời hạn (Deadline) không được chốt rõ ràng trong hội thoại họp.
+└── Opportunity C: Việc định dạng lại danh sách việc ra dạng bảng để gửi cho team xác nhận tốn thời gian thủ công.
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- "Xây bot AI tự động tham gia cuộc họp để ghi chép": Đây là giải pháp công nghệ, không phải nỗi đau người dùng; bỏ để tập trung vào nhu cầu xử lý nội dung thô.
+- "Tự động gửi danh sách công việc vào kênh chat ngay sau họp": Đây là tính năng/hành động giải pháp, vi phạm nguyên tắc chỉ ghi nhu cầu ở tầng Opportunity.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| Candidate #7: Action items sau họp (Nam Khánh) | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 35 |
+| Candidate #8: Viết tài liệu API từ source (Nam Khánh) | 5 | 5 | 4 | 4 | 5 | 3 | 4 | 30 |
+| Candidate #4: Tìm tin nhắn/quyết định cũ (Tuấn Anh) | 4 | 4 | 4 | 4 | 3 | 4 | 4 | 27 |
 
-**Candidate được chọn:**
+**Candidate được chọn:** Candidate #7 — Khi vừa kết thúc cuộc họp dài 1 tiếng, tôi muốn tổng hợp lại danh sách công việc (action items) kèm người phụ trách, để gửi cho từng người trong team xác nhận ngay.
 
 **Vì sao chọn:**
 
+- Actor và quy trình cực kỳ cụ thể: Đối tượng chịu ảnh hưởng rõ ràng (note-taker, PM, thành viên dự án); quy trình 5 bước đo được chính xác bằng phút.
+- Có baseline đo lường được: Mất 30 phút/buổi họp, tần suất 2–3 buổi/tuần, tác động trực tiếp đến tiến độ chung của team.
+- Phân định rõ ranh giới AI (HITL): Bài toán phù hợp hoàn hảo để triển khai mức Workflow, trong đó AI xử lý bước trích xuất nháp và con người (Note-taker/PM) kiểm tra lại trước khi gửi, đảm bảo không bị rủi ro gán sai người/sai việc.
+
 **Vì sao loại các candidate còn lại:**
 
-**Xử lý bất đồng (nếu có):**
+- Candidate #8 (Viết Docs API): Mặc dù quy trình rất chuẩn hóa, nhưng nhóm phân tích thấy có đến 80% công việc có thể xử lý hoàn toàn bằng Rule/Script (ví dụ: các thư viện Swagger/OpenAPI spec tự sinh docs từ code annotation), không thực sự cần tới sự can thiệp của AI.
+- Candidate #4 (Tìm quyết định cũ trong chat): Bài toán đòi hỏi quyền truy cập dữ liệu chat toàn công ty/nhóm, phạm vi quá rộng và chạm trần rủi ro về mặt Feasibility & Viability (quyền riêng tư và bảo mật dữ liệu).
+
+**Xử lý bất đồng (nếu có):** Không
 
 ---
 
@@ -78,16 +84,14 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Note-taker/PM khác cũng mất hơn 20 phút sau mỗi buổi họp 1h để lọc và tổng hợp lại action items | Value | 5 | 2 | Có |
+| 2 | Bước tốn thời gian nhất là đọc lại note thô để trích xuất task và gán Assignee, không phải bước gửi tin nhắn | Value | 5 | 2 | Có |
+| 3 | Thành viên trong team sẵn sàng xác nhận action items nếu nhận được dạng bảng ngắn gọn trong vòng 15 phút sau họp | Value | 4 | 3 | Có |
+| 4 | Nội dung transcript/note cuộc họp cung cấp đủ ngữ cảnh để AI phân biệt được đâu là "thảo luận" và đâu là "giao việc" | Feasibility | 5 | 2 | Có |
+| 5 | Người dùng dễ dàng kiểm tra, chỉnh sửa bản nháp của AI trong dưới 3 phút trước khi gửi cho team | Usability | 4 | 2 | - |
+| 6 | Công ty/Nhóm cho phép đưa transcript hoặc nội dung ghi chép họp nội bộ vào công cụ AI xử lý | Viability | 5 | 1 | Có |
 
-*Điền 4–6 giả định; xóa dòng thừa.*
-
-Giả định nhóm kiểm chứng trong buổi này:
+Giả định nhóm kiểm chứng trong buổi này: Giả định #1, #2, #4 và #6 (đây là các giả định có mức độ quan trọng cao từ 5 và bằng chứng hiện có thấp từ 1–2).
 
 ### 3.2. Kiểm chứng
 
@@ -129,36 +133,50 @@ Tổng hợp:
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 
 ```text
+HIỆN TẠI — 5 bước, 30 phút, 5/5 bước thủ công
 
+[1] Mở file note thô: 2'
+[2] Đọc lại & phân loại việc: 12'
+[3] Lọc Task + Assignee: 8' ← BOTTLENECK
+[4] Định dạng dạng bảng: 5'
+[5] Gửi lên Slack/Email: 3'
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Note-taker | File ghi chép thô trong cuộc họp | File note thô được mở | 2 phút / 2–3 họp/tuần | Dữ liệu lan man, lộn xộn |
+| 2 | Note-taker | File note thô | Các đoạn văn bản có chứa việc | 12 phút / 2–3 họp/tuần | Đọc rà soát lại toàn bộ |
+| 3 | Note-taker | Các đoạn văn bản chứa việc | Danh sách Task + tên Assignee | 8 phút / 2–3 họp/tuần | Bottleneck: Dễ sót việc hoặc gán nhầm |
+| 4 | Note-taker | Danh sách Task + Assignee | Bảng tổng hợp công việc | 5 phút / 2–3 họp/tuần | Định dạng thủ công |
+| 5 | Note-taker | Bảng tổng hợp công việc | Tin nhắn gửi lên kênh chat | 3 phút / 2–3 họp/tuần | Copy-paste và gửi team |
 
-**Bottleneck chính:**
+**Bottleneck chính:** Bước 2 và 3 (Đọc lại note thô để trích xuất Task và gán đúng người phụ trách) mất 20/30 phút vì cuộc họp thảo luận lan man, không chốt rõ ràng từ đầu.
 
 ### 4.2. Quy trình tương lai
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
 ```text
+TƯƠNG LAI — 4 bước, 7 phút, 2/4 bước thủ công
 
+[1] Dán note thô vào công cụ: 1'        ← CON NGƯỜI
+[2] AI trích xuất nháp bảng task: 1'    ← AI (Rule / Prompt)
+[3] Note-taker kiểm tra & chỉnh sửa: 3' ← CON NGƯỜI (HITL Boundary)
+[4] Gửi danh sách lên Slack: 2'         ← CON NGƯỜI
+
+BOUNDARY: AI không tự động gửi tin nhắn, không tự nghĩ ra task không có trong note thô.
+PHƯƠNG ÁN QUAY VỀ: AI sai hoặc nháp lộn xộn → Note-taker bỏ nháp, tự lọc tay theo cách cũ.
 ```
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 5 | 4 | Bỏ khâu định dạng và phân loại thủ công |
+| Tổng thời gian | 30 phút | khoảng 7 phút | Giảm hơn 70% thời gian sau họp |
+| Số bước thủ công | 5/5 | 3/4 | AI làm nháp, con người duyệt và gửi |
+| Bottleneck chính | Đọc lại note thô & gán người làm | Note-taker kiểm tra & sửa nháp | Chuyển thành bước kiểm soát chất lượng |
+| Rủi ro mới phát sinh | Không có | AI đoán sai người làm hoặc lọc thiếu task | Xử lý bằng kiểm tra người duyệt (HITL) |
 
 ---
 
@@ -166,16 +184,12 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
-
-Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
-
--
+| **Actor** | Note-taker / Người chủ trì cuộc họp team |
+| **Quy trình** | Mở file note thô sau họp → Lọc công việc và người làm thủ công → Định dạng lại bảng → Gửi lên Slack cho team |
+| **Bottleneck** | Khâu đọc lại ghi chú thô để lọc công việc và gán tên người phụ trách (Assignee), mất khoảng 20 phút |
+| **Impact** | Tốn 30 phút sau mỗi buổi họp (2–3 buổi/tuần); gửi danh sách trễ khiến team dễ quên việc hoặc làm chồng chéo |
+| **Success Metric** (baseline → target, cách đo) | Thời gian tổng hợp giảm từ 30 phút xuống <8 phút/buổi họp, đo bằng Note-taker tự bấm giờ 4 buổi pilot |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI chỉ được tạo bản nháp bảng task, không được tự động gửi tin nhắn và bắt buộc có con người (Note-taker) duyệt lại trước khi gửi |
 
 ---
 
@@ -183,38 +197,46 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:
+Bài của nhóm nằm ở ô: Độ mơ hồ Cao x Độ phức tạp Trung Bình
 
 Vì sao:
+- Độ mơ hồ Cao: Mỗi cuộc họp mọi người nói chuyện một kiểu, note thô viết mỗi lúc một khác. AI phải tự hiểu ngữ cảnh để lọc ra đâu là "việc cần làm" và ai phụ trách, chứ không có công thức đúng/sai cố định.
+- Độ phức tạp Trung Bình: Luồng xử lý đi thẳng từ trên xuống dưới (Nhập note thô -> AI lọc task -> Định dạng bảng -> Người duyệt), dữ liệu hoàn toàn là chữ (text) nên không bị rẽ nhánh hay tính toán quá phức tạp.
 
 ### 6.2. So sánh 4 mức
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| **No AI** (sửa quy trình) | Dùng template Notion/Docs chuẩn, bắt buộc ghi rõ Task + Người làm ngay trong lúc họp | Họp nhóm nhỏ (2–3 người), mọi người tự giác điền thẳng vào file trong lúc nói chuyện | Mọi người hay quên điền, lúc họp mải thảo luận nên note vẫn bị lộn xộn | Không chọn |
+| **Rule** | Viết script tự tạo công việc khi gõ đúng cú pháp cố định (ví dụ: @tên + task) | Mọi người chịu gõ đúng định dạng quy định sẵn trong file note | Rất gượng ép, trong lúc họp nói nhanh nên không ai rảnh gõ đúng cú pháp | Không chọn |
+| **Workflow** | Nhập note thô -> AI tự lọc task + người làm -> Hiện bản nháp cho Note-taker sửa -> Gửi Slack | Khi muốn giữ cách nói/ghi chép tự nhiên, nhưng vẫn cần AI lọc nháp và người duyệt lại cho chắc | AI có thể bắt thiếu task hoặc đoán sai người làm nếu note thô quá tắt | Chọn |
+| **Agent** | Cho AI tự vào họp ghi âm, tự đoán việc, tự tạo task trên Jira và tự gửi tin nhắn cho từng người | Khi quy trình đã quá chuẩn hóa, không cần con người kiểm tra lại | AI tự gửi linh tinh làm trôi tin nhắn, gán sai việc gây cãi nhau trong team, chi phí cao | Không chọn |
 
-**Mức chọn:**
+**Mức chọn:** Workflow
 
 **Vì sao không chọn mức đơn giản hơn:**
+- No AI (Template) không giải quyết được gốc rễ vấn đề: lúc họp mọi người chỉ tập trung trao đổi chứ không ai rảnh vừa nói vừa format lại chữ cho đẹp.
+- Rule (Script) thì quá cứng nhắc: bắt người dùng phải gõ đúng cú pháp @tên + làm việc X thì script mới hiểu, thực tế không ai làm theo được khi họp nhanh.
 
 ### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| **Prediction** — AI dự đoán / tạo ra gì? | Bảng danh sách nháp gồm: Tên công việc (Action Item) + Người phụ trách (Assignee) + Hạn chót (Deadline) được lọc ra từ ghi chú thô. |
+| **Judgment** — con người cân nhắc, quyết định gì? | Note-taker kiểm tra xem AI có lọc thiếu việc nào không, tên người phụ trách có bị gán nhầm không trước khi bấm gửi. |
+| **Action** — hành động cuối cùng là gì, ai làm? | Note-taker bấm xác nhận gửi bảng danh sách công việc đã duyệt lên kênh chat Slack/Discord cho cả team. |
+| **Outcome** — đo kết quả bằng gì? | Mất dưới 8 phút để tổng hợp (so với 30 phút cũ) và 100% việc gửi đi đều có đúng người nhận task. |
+| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Văn bản ghi chú thô (hoặc transcript) của buổi họp. Có sẵn ngay sau khi họp xong. |
+| **Feedback** — lấy phản hồi ở đâu để cải thiện? | Xem Note-taker hay sửa lại/xóa bỏ những dòng nào trên bản nháp để chỉnh lại prompt lọc task chuẩn hơn. |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
+- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**?
+    - Trả lời: Người dùng muốn được hỗ trợ (augment).
+    - Bằng chứng: Vì lúc họp mọi người hay nói tắt hoặc đùa vui, Note-taker rất sợ AI đoán sai người làm hoặc gán nhầm việc linh tinh. Bắt buộc phải để Note-taker nhìn qua bản nháp rồi tự tay bấm "Gửi", chứ không ai dám để AI tự động gửi thẳng vào Slack của team.
 - AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+    - Bỏ sót tệ hơn nhiều.
+    - Nếu AI báo nhầm (tự bịa ra 1 việc thừa), Note-taker nhìn thấy là bấm xóa cái rẹt trong 2 giây. Nhưng nếu AI bỏ sót (bỏ quên 1 task quan trọng), team sẽ bị trễ tiến độ mà không ai hay biết. Cách thiết kế là viết prompt dặn AI "thà bắt nhầm còn hơn bỏ sót" (cứ gom hết các việc có khả năng làm), sau đó để Note-taker tự tay tích chọn và xóa bớt những ý thừa trên màn hình duyệt.
 
 ---
 
@@ -222,29 +244,30 @@ Vì sao:
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Note-taker / Người chủ trì cuộc họp team |
+| **Quy trình** | Mở note thô sau họp -> Dán vào công cụ AI lọc task -> Kiểm tra & sửa bản nháp -> Gửi danh sách lên Slack |
+| **Bottleneck** | Khâu đọc lại ghi chú thô để lọc công việc và gán tên người phụ trách (Assignee) |
+| **Impact** | Tốn 30 phút sau mỗi buổi họp (2–3 buổi/tuần); trễ gửi danh sách khiến team quên việc hoặc làm chồng chéo |
+| **Success Metric** (baseline → target, cách đo) | (1) Thời gian tổng hợp giảm từ 30 phút xuống <8 phút; (2) 100% action items gửi đi có đúng tên người làm |
+| **Boundary** | AI chỉ được tạo bản nháp, không tự động gửi tin nhắn và không tự nghĩ ra task không có trong note thô |
+| **AI intervention point** | Ngay sau khi họp xong (sau khi Note-taker dán ghi chú thô vào) |
+| **Mức chọn** | Workflow |
+| **Rủi ro & người kiểm tra** | AI đoán sai người làm hoặc lọc thiếu việc -> Note-taker phải tự nhìn qua và sửa trước khi bấm gửi |
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| Success Metric | Chỉ đo thời gian tổng hợp (<8 phút) | Thêm chỉ số: 100% việc gửi đi có đúng người làm | Nhanh hơn mà gửi sai tên người làm thì cũng công cốc, nên cần đo thêm độ chuẩn xác |
+| Boundary | AI trợ giúp tóm tắt nội dung cuộc họp | Thêm cấm AI tự động gửi tin nhắn và cấm tự bịa task | Đặt ranh giới rõ ràng để Note-taker không sợ AI làm bậy |
 
 **Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | Không bịa task | Mọi công việc liệt kê ra đều có thông tin trong note thô | AI tự sáng tác thêm công việc không ai nói trong họp |
+| 2 | Đúng người phụ trách | Tên Assignee khớp chính xác với người được giao trong note | Gán nhầm việc của người này sang cho người khác |
+| 3 | Đúng định dạng bảng | Ra đúng dạng bảng 3 cột: Task, Assignee,  Deadline | Ra chữ lan man thành đoạn văn dài khó nhìn |
 
 ---
 
@@ -254,31 +277,23 @@ Vì sao:
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | Thấp | Note-taker nào họp xong cũng ngán khâu đọc lại note thô để gom việc. Nhu cầu rút ngắn thời gian sau họp là có thật. |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | Thấp | Giao diện hiện ra dạng bảng 3 cột (Task, Assignee, Deadline), Note-taker chỉ cần nhìn qua, bấm sửa chữ hoặc xóa dòng rất dễ dàng. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | Thấp | Input chỉ là văn bản note thô dán vào, dùng API của các model phổ biến (như ChatGPT/Claude) viết prompt lọc task là chạy được ngay. |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | Trung bình | Một số cuộc họp nội bộ có thông tin nhạy cảm nên công ty ngại dán vào AI bên ngoài; chi phí dùng API thì rất rẻ không đáng lo. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** Go (Pilot phạm vi nhỏ)
 
-**Lý do:**
+**Lý do:** Không có rủi ro nào ở mức Cao. Rủi ro duy nhất là Viability (bảo mật thông tin họp) có thể giải quyết bằng cách dặn người dùng xóa bớt các thông tin quá nhạy cảm trước khi dán vào AI.
 
-**Nếu Go — pilot nhỏ nhất:**
+**Nếu Go — pilot nhỏ nhất:** Nhóm chưa cần viết code/app gì phức tạp. Tạo sẵn 1 khung Prompt chuẩn. Mỗi lần họp nhóm xong, Note-taker dán note thô + Prompt đó vào AI (ChatGPT/Claude) để lấy bản nháp bảng task, dùng thử trong 2 tuần (khoảng 4–6 buổi họp).
 
-**Nếu Not Yet — cần kiểm chứng gì trước:**
-
-**Nếu No-Go — nên làm gì thay AI:**
-
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+**Ngưỡng dừng**: Nếu sau 2 tuần dùng thử mà Note-taker vẫn phải ngồi gõ lại tay hơn 50% nội dung bảng nháp -> Dừng lại, quay về dùng template Google Docs thủ công như cũ.
 
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
-
 ## 10. Tài liệu tham khảo
-
--

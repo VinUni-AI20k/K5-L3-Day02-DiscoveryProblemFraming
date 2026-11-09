@@ -142,16 +142,16 @@ HIỆN TẠI — 25 phút/lần báo cáo
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
+| Pitch Problem Card | Pitch Card #1 (Tổng hợp action items sau họp 1h) với baseline 30 phút/buổi. |  |
 | Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
 | Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
+| Gom cluster / cây OST | Cùng Trà phân loại 12 candidate thành 4 cụm; hỗ trợ xây dựng 3 nhánh Opportunity cho cây OST. | Loại bỏ các ý solution đội lốt (như "bot join họp tự động") ra khỏi cây OST. |
+| Chọn candidate problem | Đóng góp lập bảng chấm điểm 7 tiêu chí; bảo vệ quan điểm chọn bài họp vì baseline rõ ràng (30 phút). | Nhóm chốt được candidate #7 mà không phải bỏ phiếu cảm tính. |
 | Kiểm chứng / research | | |
 | Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Problem Statement | Cùng Tuấn Anh rà soát ranh giới Boundary và Success Metric cho bản v0 và v1. | Thêm tiêu chí chất lượng "100% action items gửi đi có đúng tên người làm". |
+| Mức can thiệp AI | Cùng Trà phân tích ma trận Độ mơ hồ (Cao) x Độ phức tạp (TB) để chọn mức Workflow. | Nhóm thống nhất không làm Agent để tránh AI gửi tin nhắn bậy bạ vào Slack. |
+| Quyết định | Đóng góp ý kiến đánh giá rủi ro Viability (bảo mật thông tin cuộc họp nội bộ). | Thống nhất chốt quyết định Go với pilot 2 tuần bằng prompt thủ công. |
 
 ---
 
@@ -159,35 +159,45 @@ HIỆN TẠI — 25 phút/lần báo cáo
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Gợi ý thêm các nỗi đau lặp lại theo vai trò Backend Dev | Nhớ ra bài toán viết Docs API và báo cáo cho Mentor | Gợi ý ý quá rộng như "Trợ lý AI quản lý toàn bộ dự án" | Bỏ các ý rộng, giữ ý có quy trình và con số rõ ràng |
+| CP2 Problem Card | Đóng vai PM hoài nghi để phản biện 3 card cá nhân | Chỉ ra bài #1 bị nhầm giữa tóm tắt họp với lọc action items | Gợi ý cho AI tự động gửi tin nhắn cho từng người | Đặt lại Boundary: AI chỉ làm nháp, con người duyệt mới được gửi |
+| CP4 Research | - | - | - | - |
+| CP5 Quy trình | - | - | - | - |
+| CP5–6 Problem Statement | Phản biện Problem Statement v0 | Gợi ý thêm đo lường về mặt chất lượng chứ không chỉ đo thời gian | Viết văn phong quá hoa mỹ, dùng nhiều từ trừu tượng | Sửa lại văn phong đơn giản, ghi rõ con số baseline 30' xuống 8' |
+| CP6 Mức can thiệp / quyết định | Gợi ý các rủi ro theo khung 4 rủi ro của SVPG | Liệt kê nhanh các rủi ro về Usability và Feasibility | Đánh giá rủi ro Viability thấp (coi nhẹ việc lộ dữ liệu họp) | Nâng rủi ro Viability lên Trung bình vì công ty rất ngại lộ tin nội bộ |
 
 ---
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
-
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+
+Bài toán hay không cần quá phức tạp. Quan trọng nhất là phải có Actor rõ ràng và đo được chính xác số phút bị lãng phí.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 
+Vừa chốt đề tài là nghĩ đến làm "bot AI tự nhảy vào họp ghi âm rồi gửi tin". Khi vẽ cây OST mới biết đó là giải pháp, bỏ ngay để quay về đúng nỗi đau: Note-taker mất 30 phút lọc note thô.
+
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+
+Ban đầu dự định cho AI gửi thẳng bảng task vào Slack. Nhóm phản biện nếu AI đoán sai mà gửi bậy thì rất tệ, nên đã đổi ý hạ xuống mức Workflow để con người kiểm tra trước khi bấm gửi.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
+
+
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+
+Khó nhất là đặt Boundary và Metric. Phải ghi con số thật cụ thể (từ 30 phút xuống 8 phút) và cấm AI tự gửi tin nhắn hay tự bịa task.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Cần phỏng vấn người dùng thật.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Problem: Note-taker tốn 30 phút lọc note thô -> Quy trình: AI tạo nháp, người dùng duyệt rồi gửi -> Metric: Giảm xuống 8 phút, 100% đúng người nhận việc -> Boundary: Cấm AI tự gửi tin nhắn và cấm tự bịa task -> Mức can thiệp AI: Workflow -> Quyết định: Go pilot 2 tuần bằng prompt thủ công.
 
 ---
 
 ## 7. Tài liệu tham khảo
-
--

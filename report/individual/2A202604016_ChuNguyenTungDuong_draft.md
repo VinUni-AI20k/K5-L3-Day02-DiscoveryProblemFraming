@@ -4,6 +4,20 @@
 
 > AI hỗ trợ diễn đạt Job Story, trình bày Problem Card và phản biện từ các vấn đề và thứ tự ưu tiên tôi đã chọn. Quy trình là bản phác thảo; bottleneck, impact và hiệu quả của các phương án là giả thuyết. Các ô [CẦN XÁC MINH: ...], [CẦN ĐO] và [CẦN XÁC ĐỊNH: ...] thể hiện dữ liệu thực tế còn thiếu.
 
+**Chú giải ký hiệu và trạng thái dữ liệu**
+
+Các ký hiệu dưới đây được chủ động giữ trong báo cáo để giảng viên nhận biết nội dung nào còn cần bằng chứng, số đo hoặc tiêu chí đánh giá. Đây là chú thích về mức độ kiểm chứng, không phải phần văn bản đang chờ AI viết tiếp. Việc đồng ý với cách diễn đạt một Problem Card không đồng nghĩa các giả thuyết trong card đã được xác nhận bằng dữ liệu thực tế.
+
+| Ký hiệu | Ý nghĩa |
+|---|---|
+| **[CẦN XÁC MINH: ...]** | Thông tin hoặc nhận định chưa có bằng chứng đủ rõ; phần sau dấu hai chấm nêu dữ liệu cần bổ sung từ trải nghiệm, quan sát hoặc nguồn thực tế. |
+| **[CẦN ĐO] / [CẦN ĐO: baseline, ...]** | Chưa ghi nhận số đo thực tế, chẳng hạn thời gian từng bước hoặc mức hiện tại. Chưa dùng số ước đoán thay cho kết quả đo. |
+| **[CẦN XÁC ĐỊNH: ...]** | Mục tiêu, tiêu chí chất lượng hoặc người kiểm tra chưa được chốt; cần xác định dựa trên dữ liệu và phạm vi đánh giá. |
+| **GIẢ THUYẾT / BOTTLENECK GIẢ THUYẾT** | Nhận định ban đầu về nguyên nhân, tác động hoặc bước nghẽn, còn cần đối chiếu với một lần thực hiện thực tế. |
+| **PHÁC THẢO** | Sơ đồ mô tả quy trình dự kiến để rà soát; chưa phải bản ghi quan sát quy trình đã được xác minh. |
+
+Bản báo cáo vẫn giữ trạng thái nháp. Các nhãn chỉ được thay bằng kết quả cụ thể sau khi có dữ liệu hoặc tiêu chí tương ứng; những mục còn mang nhãn chưa được coi là kết quả kiểm chứng.
+
 ## 1. Thông tin học viên
 
 - Họ tên: Chu Nguyễn Tùng Dương

@@ -18,9 +18,9 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
+| 1 | Nguyễn Thế Văn | Khi cần đăng bài cho nhiều sản phẩm mới lên fanpage mỗi ngày, tôi muốn biến thông tin sản phẩm thành bài đăng mà không copy qua lại nhiều nơi, để kịp lịch đăng | Nhân viên content fanpage | [Bước lâu nhất trong chuỗi copy → soạn → dán → duyệt → đăng] | [ghi lúc pitch] |
+| 2 | Nguyễn Thế Văn | Khi một bài trên fanpage bị sai giá, tôi muốn biết ai đã đăng và ai đã duyệt, để sửa nhanh và nhắc đúng người | Quản lý fanpage | Hỏi trong group và chờ người nhận | [ghi lúc pitch] |
+| 3 | Nguyễn Thế Văn | Khi có nhiều bài cần lên trong tuần, tôi muốn thấy bài nào đăng giờ nào trên trang nào, để không trùng hoặc trống lịch | Nhân viên content | Đến giờ phải vào từng trang đăng tay | [ghi lúc pitch] |
 | 4 | | | | | |
 | 5 | | | | | |
 | 6 | | | | | |
@@ -78,14 +78,14 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Nhân viên content ở nơi khác cũng mất trên [__] phút/bài cho chuỗi soạn và đăng bài | Value | 5 | 1 | Có |
+| 2 | Bước tốn thời gian nhất là soạn bài, không phải chờ duyệt | Value | 5 | 1 | Có |
+| 3 | Bài sai thông tin xảy ra đủ thường để đáng giải (≥[__] lần/tháng) | Value | 4 | 2 | Có |
+| 4 | Thông tin sản phẩm đã nằm ở một nguồn có cấu trúc (file, web, phần mềm bán hàng) | Feasibility | 4 | 2 | Có |
+| 5 | Quản lý chấp nhận bài do AI soạn nháp nếu vẫn có bước duyệt | Viability | 4 | 1 | Hỏi quản lý |
+| 6 | Team chưa dùng lên lịch và lịch sử hoạt động có sẵn của Facebook | Feasibility | 3 | 2 | — |
 
-*Điền 4–6 giả định; xóa dòng thừa.*
+*Nháp cho candidate "đăng bài fanpage". Nhóm chốt candidate ở CP3 rồi sửa lại; cột điểm do nhóm tự chấm.*
 
 Giả định nhóm kiểm chứng trong buổi này:
 
@@ -116,9 +116,9 @@ Tổng hợp:
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| Meta Business Suite — lên lịch bài cho Trang | https://www.facebook.com/business/help/1252240869631062 | Bước đăng: soạn trước, đặt giờ đăng, xem lịch các bài đã lên | Có sẵn, miễn phí cho người quản lý Trang | Không có bước duyệt nhiều cấp; không soạn bài | [nhóm điền] |
+| Planable — quy trình duyệt bài | https://planable.io/guides/content-approvals-in-planable/ | Bước duyệt + lên lịch: duyệt bắt buộc rồi tự lên lịch khi được duyệt | Duyệt bắt buộc và tự lên lịch khi duyệt | Duyệt bắt buộc cần gói Pro, nhiều cấp cần Enterprise; tốn phí | [nhóm điền] |
+| Facebook Page Management History (Social Media Today, 01/2020) | https://www.socialmediatoday.com/news/facebook-adds-new-page-management-history-tab-in-page-tools/570171/ | Bước "biết ai đăng": lịch sử thao tác quản trị của Trang | Có sẵn | Bài từ 2020; tab này ghi thay đổi vai trò và cài đặt, việc đăng bài nằm ở Activity Log; cần tự kiểm giao diện hiện tại | [nhóm điền] |
 
 ---
 

@@ -18,18 +18,18 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
+| 1 | Phùng Quang Trà | Khi có bộ hồ sơ giải ngân online mới, CRO muốn kiểm tra đủ giấy tờ và nhập lên hệ thống nhanh, để khách không phải chờ và phàn nàn vì xử lý chậm. | CRO nhập liệu; khách hàng chờ giải ngân bị ảnh hưởng gián tiếp. | Bước 3–4: đọc, trích thông tin và nhập hệ thống, ước tính ~45/80 phút mỗi bộ (~10 bộ/tháng); ~3/10 bộ bị trả về vì thiếu/sai; chưa bấm giờ thực tế. | |
+| 2 | Phùng Quang Trà | Khi đến ngày đầu tháng, tôi muốn biết tháng trước đã chi bao nhiêu và phát sinh vào đâu, để điều chỉnh chi tiêu tháng sau. | Người dùng cá nhân quản lý chi tiêu từ nhiều app ngân hàng / ví. | Bước 3–4: chép và phân loại giao dịch từ nhiều app, ước tính ~10/23 phút mỗi tháng; chỉ tổng kết xong 1/3 tháng gần đây. | |
+| 3 | Phùng Quang Trà | Khi kết thúc ngày làm việc, tôi muốn biết task nào đã xong, chưa xong và sắp tới, để sáng hôm sau bắt đầu ngay mà không bỏ sót việc. | Nhân viên văn phòng nhận việc qua email / chat. | Bước 1: lục lại email/chat tìm việc phát sinh, ước tính ~15/33 phút mỗi ngày; bỏ sót ~2 việc/tuần. | |
 | 4 | | | | | |
 | 5 | | | | | |
 | 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 7 | Vũ Nam Khánh | Khi vừa kết thúc cuộc họp dài 1 tiếng, tôi muốn tổng hợp lại danh sách công việc (action items) kèm người phụ trách, để gửi cho từng người trong team xác nhận ngay | Bản thân, Team | Trích xuất Task + Assignee | |
+| 8 | Vũ Nam Khánh | Khi cần viết tài liệu cho một API/service mới, tôi muốn có cấu trúc tài liệu nhất quán từ source/config, để không phải viết thủ công từ đầu | Backend Developer | Viết mô tả param + response mẫu | |
+| 9 | Vũ Nam Khánh | Khi mentor cần theo dõi tiến độ công việc, họ muốn thấy báo cáo dạng hình ảnh/bảng tổng quan ngắn gọn, để nắm tình hình mà không phải nhắn hỏi từng người | Mentor, Team | Lọc task xong & blocker | |
+| 10 | Phạm Duy Thành| Gom nhanh yêu cầu và deadline từ các nguồn (LMS, chat) để làm bài không sót việc.| Sinh viên làm bài cá nhân; bạn cùng lớp có thể bị ảnh hưởng nếu thông tin được chia sẻ không thống nhất.| Bước 2–4: tìm và đối chiếu thông tin giữa các nguồn, ước tính 10–15 phút/lần; chưa bấm giờ, cần đo ở lần làm bài tiếp theo. Thời gian chờ câu trả lời chưa tính.| |
+| 11 | Phạm Duy Thành| Tổng hợp tài liệu ôn tập (slide, ghi chú) để khoanh vùng phần chưa hiểu và học đúng trọng tâm.| Sinh viên đang tự ôn tập một chủ đề có nhiều tài liệu.| Bước 3–4: ghi chú rồi đối chiếu nội dung giữa các nguồn, ước tính 20–30 phút cho một chủ đề; chưa bấm giờ, số nguồn và độ dài tài liệu có thể làm thời gian thay đổi nhiều.| |
+| 12 | Phạm Duy Thành| Phân loại và xếp ưu tiên các feedback để chỉnh sửa bài hiệu quả, không bị sót lỗi.| Sinh viên viết/chỉnh sửa bài; người góp ý có thể cần biết phản hồi đã được tiếp nhận.| Bước 3–5: phân loại, gắn góp ý vào phần bài và xác định thứ tự, ước tính 15–25 phút/bộ góp ý; chưa đo trên một bộ phản hồi thật.| |
 
 ### 2.2. Cluster
 

@@ -130,16 +130,16 @@ KIỂM CHỨNG KẾT QUẢ — cần đo thời gian và độ chính xác
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Chuẩn bị 3 card cá nhân về **Text-to-SQL**: người nghiệp vụ hỏi dữ liệu không cần SQL; ánh xạ ngôn ngữ tự nhiên vào schema; kiểm chứng kết quả truy vấn. Bảng CP3 của nhóm đã ghi 3 card #7–#9 dưới tên Bảo. | Đóng góp thêm một cluster riêng về truy vấn và kiểm chứng dữ liệu kinh doanh, để nhóm so sánh với AIOps và EdTech. |
+| Phản biện bài của bạn khác | Theo bảng CP3 của nhóm, câu hỏi gắn tên Bảo gồm: số 90–120 phút là phát hiện hay điều tra; ngưỡng Confidence Score tính từ đâu; Rule thống kê có đủ lọc báo động giả không. Đây là các câu hỏi được bảng CP3 ghi nhận dưới tên tôi. | Làm rõ cách đo thời gian và an toàn khi để hệ thống tự can thiệp. |
+| Nhận phản biện | Trong bảng pitch, card Text-to-SQL của mình được hỏi về khả năng Dashboard BI có sẵn, việc ánh xạ schema có phải problem kỹ thuật, và cách người không biết SQL kiểm tra kết quả. | Báo cáo nhóm nêu lý do không chọn Text-to-SQL: baseline phía khách chưa được đo và một phần nhu cầu có thể giải bằng BI. Đây là các điểm cần lưu ý để đánh giá lại phạm vi của đề tài. |
+| Gom cluster / cây OST | Các card Text-to-SQL #7–#9 được ghi thành **Cluster C**. Mình được phân công hỗ trợ ghi bảng pitch, cluster và chấm điểm trong `TEAM.md`. | Bảng CP3 xếp nhóm AIOps 33/35, EdTech 31/35 và Text-to-SQL 27/35. Phần bảng tổng hợp được thể hiện trong báo cáo nhóm. |
+| Chọn candidate problem | Đọc và đối chiếu shortlist CP3 trong báo cáo chung; nhóm chọn bài toán phản ứng sự cố ngoài giờ từ các nguồn log đa tầng thay cho Text-to-SQL. | Có một problem chung để phát triển quy trình và metric; việc chốt lựa chọn của cả nhóm được ghi trong `group_report.md`. |
+| Kiểm chứng / research | Sử dụng bản tổng hợp CP4 đã được nhóm đưa vào repo để đối chiếu cách đặt problem, **không nhận là người trực tiếp phỏng vấn**. | Phát hiện khác biệt quan trọng: thời gian khoanh vùng thường được báo cáo là **15–30 phút**, không phải 90–120 phút như giả định đầu tiên; **2/5** người được hỏi thường bị gọi dậy ban đêm. |
+| Quy trình nhóm | Dựa trên sơ đồ 6 bước và quy trình Rule–Agent–HITL–Rollback do Nguyên phụ trách để xác định đúng nơi viết bottleneck, metric và boundary. | Không nhầm thời gian khoanh vùng với thời gian từ bất thường đến cô lập; phân biệt hành động tự động với bước phải được người duyệt. |
+| Problem Statement | Chuẩn bị nội dung v0 (CP5), v1 (CP6), bảng đối chiếu 8 thay đổi và 5 tiêu chí eval; gửi thay đổi vào **mục 5 và 7** của `report/team/group_report.md` qua PR #11 để nhóm review. | Đã có nội dung trong báo cáo nhóm về actor, workflow, bottleneck, baseline/target, boundary, điều kiện đánh giá; được gửi nhóm trưởng review trước khi chốt bản chung. |
+| Mức can thiệp AI | Đối chiếu phần mình viết với phương án của nhóm ở mục 6: Rule lọc nhiễu, Agent chỉ đọc để điều tra, policy kiểm quyền và HITL/rollback. | Đặt yêu cầu 0 chặn nhầm, không sinh shell command và có bằng chứng log trước kết luận; mức can thiệp là **định hướng pilot**, chưa được kiểm chứng thực nghiệm. |
+| Quyết định | Đọc định hướng **Go pilot có điều kiện tại Nginx** của nhóm và các tiêu chí kiểm tra an toàn; mục 8 do Hà Anh phụ trách. | Chưa nhận là người tự quyết Go/No-Go; kết luận cuối còn cần nhóm thống nhất. |
 
 ---
 
@@ -147,32 +147,44 @@ KIỂM CHỨNG KẾT QUẢ — cần đo thời gian và độ chính xác
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Trao đổi với ChatGPT để tìm hướng đề tài xuất phát từ trải nghiệm làm freelance và dự án Text-to-SQL đã triển khai. | Chuyển trọng tâm từ các pain chung như feedback Zalo sang câu hỏi dữ liệu tự nhiên dựa trên cơ sở dữ liệu khách hàng. | AI từng đề xuất đề tài kiểm tra chất lượng sản xuất dù mình không có trải nghiệm thực tế trong ngành này. | Mình đã phản đối việc gán trải nghiệm không có và yêu cầu dùng đúng dự án Text-to-SQL mình từng làm. |
+| CP2 Problem Card | Nhờ AI hỗ trợ cấu trúc 3 Problem Cards về truy vấn nghiệp vụ, mapping schema và độ tin cậy kết quả. | Phân biệt pain của người dùng cuối với bài toán kỹ thuật bên trong Text-to-SQL; gợi ý các câu phản biện. | Có xu hướng suy diễn số phút chờ khách hoặc hiệu quả giải pháp khi chưa được đo. | Yêu cầu ghi thời gian/định lượng **chưa có baseline**, không tạo số liệu giả. |
+| CP4 Research | Nhờ AI đối chiếu nội dung tổng hợp phỏng vấn đã có trong repo với giả định ban đầu của nhóm. | Chỉ ra kết quả **15–30 phút khoanh vùng** không thể dùng thay cho baseline **90–120 phút phát hiện→cô lập**. | Một số bản nháp ban đầu còn dùng số 90–120 như kết quả đã kiểm chứng hoặc gom các mốc thời gian khác nhau. | Dùng đúng thông tin trong báo cáo CP4; không trình bày mình là người trực tiếp phỏng vấn. |
+| CP5 Quy trình | Nhờ AI đọc sơ đồ workflow đã có và đặt câu hỏi về bottleneck, quyền chỉ đọc, HITL và rollback. | Giúp phát hiện khác biệt giữa thời gian lọc log, chờ cảnh báo và thời gian xử lý ngoài giờ. | AI lúc đầu thêm một **phiếu đo** như thể đó là đầu việc chính của mình, trong khi phần thu thập số liệu thuộc CP4. | Mình đã hỏi lại và làm rõ phần được giao trong `TEAM.md` là **Problem Statement và Eval**, không phải tự phỏng vấn/điền phiếu đo. |
+| CP5–6 Problem Statement | Dùng ChatGPT để phân tích cấu trúc v0/v1, tìm lỗ hổng metric/boundary, hỗ trợ chuẩn bị bản nháp trong file assets và mục 5, 7 của báo cáo nhóm. | Nêu rõ v0 là giả định, v1 cần dựa CP4; thêm điều kiện không chặn nhầm, không vượt quyền, phân biệt ngưỡng pilot và kết quả đo. | AI ban đầu nói đã “hoàn thiện” nhưng thực chất chỉ tạo file assets, còn `group_report.md` trống; nội dung sinh ra chưa phải câu chữ do mình tự chốt. | Mình đã chỉ ra phần v1 + eval vẫn trống và yêu cầu đưa tài liệu vào **đúng mục 5 và 7**; Bản cập nhật được gửi để nhóm review theo quy trình GitHub. |
+| CP6 Mức can thiệp / quyết định | Nhờ AI kiểm tra cách diễn đạt Eval đối với phương án Rule + Bounded Agent + HITL nhóm dự kiến thử ở Nginx. | Gợi 5 tiêu chí: truy xuất được bằng chứng, khoanh vùng/không bỏ sót, cảnh báo giả, phân quyền/chặn nhầm và thời gian phản ứng. | Ngưỡng ≥85% confidence hoặc <5 phút không tự chứng minh tính an toàn; chưa có pilot và tập incident có nhãn để đối chiếu. | **Chưa xác nhận các ngưỡng này qua thử nghiệm**; sẽ chỉ ghi là target đề xuất và đưa cho nhóm duyệt, không báo là hệ thống đã đạt. |
 
 ---
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
-
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Từ bảng pitch CP3 của nhóm, tôi thấy ba nhóm vấn đề rất khác nhau: AIOps xử lý sự cố hạ tầng, EdTech kiểm tra câu hỏi hoặc bài tập, và Text-to-SQL để hỏi dữ liệu kinh doanh. Điều đáng chú ý là một vấn đề nghe có vẻ khó về công nghệ chưa chắc là vấn đề cần AI nhất. Chẳng hạn, việc thống kê các lỗi lặp lại trong bài Python có thể bắt đầu bằng linter hoặc unit test; việc xem số liệu kinh doanh cũng nên so với dashboard có sẵn. Với tôi, cách so sánh theo actor, bước nghẽn, bằng chứng và phương án không AI hữu ích hơn việc lựa chọn theo tên công nghệ.
+
+**6.2. Nhóm có lúc nào bị “solution-first” không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Trong tài liệu nhóm, candidate AIOps ban đầu gắn khá chặt với phương án Agentic AI và tự cô lập sự cố. Đây là chỗ cần cảnh giác với solution-first: câu hỏi đầu tiên phải là kỹ sư đang chậm ở bước nào, không phải triển khai Agent ra sao. Báo cáo nhóm sau đó tách ba opportunity: lọc cảnh báo giả, tra chéo log đa tầng và phản ứng ngoài giờ. Việc tách này giúp mô tả nhu cầu trước, rồi mới so sánh No AI, Rule, Workflow và Agent. Tuy vậy, tôi nghĩ nhóm vẫn phải chứng minh Agent vượt được Workflow trong pilot thay vì xem đó là điều hiển nhiên.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Với hướng Text-to-SQL cá nhân, ban đầu tôi tập trung vào việc cho người dùng hỏi dữ liệu bằng ngôn ngữ tự nhiên. Khi xem lại các câu hỏi phản biện trong bảng CP3, tôi thấy cần tách vấn đề nghiệp vụ “người không biết SQL cần số liệu đúng lúc” khỏi vấn đề kỹ thuật “mô hình ánh xạ schema và JOIN”. Một dashboard hoặc công cụ BI có thể đã giải quyết phần nhu cầu tra cứu lặp lại. Vì vậy, đề xuất Text-to-SQL chỉ thuyết phục nếu xác định rõ những câu hỏi phát sinh ngoài báo cáo cố định, thời gian chờ thực tế và cách người dùng kiểm chứng kết quả. Đây là điều tôi rút ra từ quá trình chuẩn bị và xem lại các nhận xét trong báo cáo nhóm, không phải trích dẫn lời phát biểu ở buổi pitch.
+
+**6.4. Kết quả kiểm chứng có làm tôi bất ngờ không? Điều gì?**
+
+Điểm đáng chú ý nhất trong tổng hợp CP4 là thời gian khoanh vùng tầng lỗi phổ biến chỉ khoảng 15–30 phút, trong khi bản problem ban đầu dùng mốc 90–120 phút cho cả sự cố. Hai con số thực ra mô tả hai khoảng thời gian khác nhau. Ngoài ra, 2/5 người được hỏi thường bị gọi dậy giữa đêm; đa số không muốn hệ thống tự chặn vô điều kiện. Những dữ liệu này làm bài toán chuyển từ “đọc log nhanh hơn” sang “phát hiện và phản ứng ngoài giờ một cách an toàn”. Tôi không trực tiếp tham gia phỏng vấn; nhận xét này dựa trên bản tổng hợp mà nhóm đã ghi.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khó nhất là xác định metric không đánh tráo khái niệm. Thời gian từ lúc bất thường xuất hiện đến lúc có cảnh báo, thời gian kỹ sư tìm được tầng lỗi, và thời gian cô lập xong không giống nhau. Nếu dùng 15–30 phút khoanh vùng làm baseline rồi so với mục tiêu dưới 5 phút cô lập, kết quả sẽ thiếu công bằng. Tôi cũng phải phân biệt rõ điều đã có trong phỏng vấn với ngưỡng nhóm chỉ mới đề xuất, như confidence 85%, thời gian dưới 5 phút hay tỷ lệ cảnh báo sai dưới 15%. Problem Statement tốt không chỉ rõ pain mà còn nói rõ cách đo và việc hệ thống tuyệt đối không được tự làm.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+Tôi sẽ yêu cầu nhóm thống nhất định nghĩa từng mốc thời gian ngay từ trước khi chấm điểm candidate: phát hiện, khoanh vùng, cô lập và khắc phục. Với Text-to-SQL, tôi sẽ chuẩn bị thêm bằng chứng từ câu hỏi nghiệp vụ thực tế và thử so sánh với dashboard BI để không lẫn vấn đề khách hàng với thử thách kỹ thuật của developer. Với AIOps, tôi muốn hỏi kỹ cách tính confidence score: điểm này đã được hiệu chuẩn trên incident có nhãn chưa, và tại sao 85% là ngưỡng đủ để chặn? Cuối cùng, tôi sẽ đề nghị kiểm thử trong môi trường mô phỏng, có whitelist, audit và rollback, trước khi cân nhắc bất kỳ hành động tự động nào trên production.
+
+**6.7. Hiểu bài — chuỗi problem → quy trình → metric → boundary → mức can thiệp AI → quyết định**
+
+Vấn đề nhóm chọn là việc phát hiện và phản ứng sự cố hạ tầng ngoài giờ bị chậm, kèm cảnh báo giả và việc phải đối chiếu nhiều nguồn log. Trong quy trình hiện tại, kỹ sư nhận cảnh báo, lọc log, tra chéo các tầng rồi mới quyết định cô lập hoặc chuyển người phụ trách. Các chỉ số cần đo riêng gồm thời gian phát hiện, thời gian khoanh vùng, thời gian cô lập, tỷ lệ cảnh báo giả và số lần chặn nhầm. Boundary là không tự chạy shell tùy ý, không tác động IP trong whitelist hoặc hệ thống lõi, và phải có người duyệt khi chứng cứ chưa đủ. Rule xử lý lọc nhiễu theo ngưỡng; Agent được nhóm đề xuất để chọn nguồn log cần đọc tiếp, còn quyền thực thi do policy và runbook có giới hạn kiểm soát. Nếu có tự cô lập ở tầng Nginx thì hành động phải có TTL, self-check, rollback và audit. Vì chưa có kết quả pilot đầy đủ, hướng Go có điều kiện của nhóm vẫn cần được xác nhận bằng thử nghiệm và tiêu chí dừng cụ thể.
 
 ---
 

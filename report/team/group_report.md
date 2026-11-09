@@ -375,11 +375,27 @@ Vì sao:
 
 ## 9. Hạn chế và hướng tiếp theo
 
+**Hạn chế:**
+
+- Giả định #6 (Confidence Score tính từ tín hiệu kỹ thuật phân biệt được sự cố thật với lưu lượng tăng tự nhiên) chưa được kiểm chứng; đây là rủi ro kỹ thuật lớn nhất.
+- Chưa có dữ liệu log thật để đo tỷ lệ báo sai và tỷ lệ chặn nhầm của phương án đề xuất.
 - Kết quả hiện dựa trên 5 phỏng vấn tổng hợp, chưa có timestamp từng sự cố và chưa có log pilot; các target là ngưỡng đề xuất, không phải kết quả đã đạt.
 - Cần thống nhất owner cho dữ liệu, whitelist, runbook, audit và trực kill switch trước khi thử bất kỳ hành động thay đổi hệ thống nào.
 
+**Hướng tiếp theo:**
+
+- Thu log lịch sử tầng Nginx của một dịch vụ không cốt lõi, gán nhãn các sự cố đã biết, rồi chạy thử công thức Confidence Score offline trước khi cho hệ thống hành động.
+- Phỏng vấn thêm người trực ca, ghi biên bản riêng từng buổi, tập trung vào sự cố ngoài giờ và cảnh báo giả.
+- Chạy pilot ở chế độ chỉ đề xuất (người duyệt bấm), sau đó mới mở quyền tự chặn tạm thời nếu đạt ngưỡng ở mục 8.
+
 ## 10. Tài liệu tham khảo
 
+- Rob Fitzpatrick, *The Mom Test*: https://www.momtestbook.com/
+- Teresa Torres, *Opportunity Solution Trees*: https://www.producttalk.org/opportunity-solution-trees/
+- Anthropic, *Building effective agents*: https://www.anthropic.com/research/building-effective-agents
+- Google PAIR, *People + AI Guidebook — User Needs*: https://pair.withgoogle.com/chapter/user-needs/
 - Datadog, [Watchdog](https://docs.datadoghq.com/watchdog/) và [Watchdog RCA](https://docs.datadoghq.com/watchdog/rca/).
 - Dynatrace, [Davis AI](https://docs.dynatrace.com/docs/semantic-dictionary/model/davis) và [Root cause analysis concepts](https://docs.dynatrace.com/docs/dynatrace-intelligence/root-cause-analysis-classic/concepts).
 - PagerDuty, [AIOps](https://support.pagerduty.com/main/docs/aiops), [Event Orchestration](https://support.pagerduty.com/main/docs/event-orchestration) và [Pricing tiers](https://support.pagerduty.com/main/docs/pricing-tiers).
+- OpenSearch, *Anomaly Detection*: https://opensearch.org/docs/latest/monitoring-plugins/ad/index/
+- Grafana Labs, *Loki Documentation*: https://grafana.com/docs/loki/latest/

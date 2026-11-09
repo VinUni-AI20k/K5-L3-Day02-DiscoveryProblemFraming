@@ -144,12 +144,12 @@ Quy trình nháp hiện tại:
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Tìm kiếm và gợi ý các pain point thường gặp trong học tập và làm việc nhóm. | Giúp liệt kê nhanh nhiều ý tưởng lặp lại ở các môn học khác nhau. | Đưa ra các ý tưởng ngoài lề (như quản lý tài chính cá nhân) không sát bối cảnh làm việc nhóm. | Lọc bỏ các ý không phù hợp, giữ lại các ý có số liệu thời gian rõ ràng (như tổng hợp tài liệu, làm slide). |
+| CP2 Problem Card | Viết cấu trúc Job Story và phác thảo các bước quy trình hiện tại. | Định hình nhanh khung bảng chuẩn theo template mẫu. | Mô tả quy trình thủ công quá chung chung, chưa chỉ ra chính xác bước nào là bottleneck tiêu tốn nhiều thời gian nhất. | Tự đo lường và điều chỉnh lại số phút thực tế tại từng bước (ví dụ: bước lọc ý mất 90-120 phút). |
+| CP4 Research | Tổng hợp thông tin về các công cụ hỗ trợ tự động hóa và tóm tắt tài liệu hiện có. | Đưa ra bức tranh tổng quan về các giải pháp công nghệ trên thị trường. | Các số liệu benchmark thời gian thường mang tính lý thuyết, chưa sát với thực tế sinh viên làm đồ án. | Bổ sung đánh giá thực tế dựa trên năng lực và giới hạn công cụ của nhóm. |
+| CP5 Quy trình | Xây dựng sơ đồ quy trình Before/After cho giải pháp tự động hóa tài liệu. | Tạo chuỗi logic các bước chuyển dịch từ thô sơ sang tự động hóa. | Gộp quá nhiều bước nhỏ làm mờ đi điểm nghẽn (bottleneck) cốt lõi cần giải quyết. | Tách bạch rõ ràng các bước và chỉ định cụ thể điểm nghẽn mất nhiều thời gian nhất. |
+| CP5–6 Problem Statement | Hoàn thiện câu lệnh định nghĩa vấn đề (Problem Statement v0 và v1). | Rút gọn câu chữ mạch lạc, đúng chuẩn cú pháp bối cảnh - đối tượng - điểm nghẽn - hệ quả. | Câu văn do AI viết đôi khi quá văn hoa, làm giảm tính thực tế của nỗi đau (pain point). | Chỉnh sửa lại các thuật ngữ chuyên môn và gắn chặt với dữ liệu đo lường thực tế của nhóm. |
+| CP6 Mức can thiệp / quyết định | Phân tích và đánh giá 4 mức độ can thiệp của AI (từ No AI đến Agent). | Đưa ra khung tiêu chí so sánh (chi phí, độ chính xác, thời gian). | Đề xuất mức can thiệp tự động hoàn toàn (Fully Autonomous) trong khi độ chính xác của AI chưa đảm bảo tuyệt đối. | Thêm cơ chế kiểm duyệt của con người (Human-in-the-loop) để đảm bảo an toàn và kiểm soát chất lượng. |
 
 ---
 
@@ -158,21 +158,30 @@ Quy trình nháp hiện tại:
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Khi lắng nghe top 3 problems từ các nhóm và các thành viên khác, tôi nhận ra rằng những "nỗi đau" tưởng chừng rất nhỏ nhặt trong đời sống học tập hằng ngày (như việc tìm lại tin nhắn cũ, tra cứu lịch trình hay tổng hợp tài liệu) nếu được lượng hóa bằng thời gian và tần suất cụ thể đều trở thành những bài toán có giá trị lớn để tối ưu. Tôi học được cách tư duy nhìn nhận vấn đề không chỉ dưới góc độ cá nhân mà phải đặt vào bối cảnh chung của một tập thể, từ đó thấy rõ tầm quan trọng của việc xác định đúng điểm nghẽn trước khi nghĩ đến công nghệ giải quyết.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Có, ngay trong  đầu tiên brainstorming các ý tưởng Problem Card, nhóm tôi đã có xu hướng nhảy ngay vào việc "dùng AI tạo bot này, bot kia đi". Tuy nhiên, khi đối chiếu lại tiêu chí của bài tập và nhận những câu hỏi phản biện sắc sảo từ các thành viên khác (ví dụ: "Pain thật nằm ở bước nào hay đây chỉ là áp đặt giải pháp?"), chúng tôi đã kịp thời nhận ra. Nhóm đã xử lý bằng cách quay lại mổ xẻ kỹ quy trình hiện tại, đong đo từng phút lãng phí ở mỗi bước thủ công để chứng minh rằng vấn đề thực sự tồn tại rồi mới bàn đến việc dùng AI can thiệp ở mức độ nào.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+Tôi đã thay đổi quan điểm rõ rệt sau khi nhận phản biện cho Card số 7 (về việc tự động tổng hợp tài liệu). Ban đầu, tôi đặt tên Job Story mang tính chất kết luận giải pháp là "tự động gom nhóm". Sau khi nhận được câu hỏi phản biện: *"Job Story gốc có chữ tự động gom nhóm: đó là giải pháp. Pain thật nằm ở bước đọc, bước lọc hay bước viết lại? 2,5 giờ/tuần là đo hay ước?"*, tôi đã nhận ra mình đang mắc bẫy mô tả giải pháp thay vì mô tả nỗi đau. Tôi đã chỉnh sửa lại Problem Card, tập trung sâu hơn vào nỗi đau tốn thời gian ở bước lọc thủ công và bổ sung cơ chế kiểm duyệt con người (Human-in-the-loop) thay vì phó mặc hoàn toàn cho AI.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Kết quả research và quá trình đối chiếu thực tế làm tôi khá bất ngờ ở chỗ thời gian lãng phí cho các tác vụ lặp đi lặp lại (như tổng hợp tài liệu, căn chỉnh slide) lớn hơn nhiều so với cảm nhận chủ quan ban đầu. Ban đầu tôi nghĩ các công việc này chỉ mất khoảng vài chục phút, nhưng khi bóc tách từng bước (đọc, lọc, gom nhóm, viết lại), tổng thời gian tiêu tốn lên tới hơn 2-3 tiếng mỗi tuần. Điều này chứng minh rằng những tác vụ tưởng chừng đơn giản lại chính là điểm nghẽn âm thầm làm giảm hiệu suất làm việc nhóm.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+Theo tôi, điều khó nhất khi viết Problem Statement là phải cô đọng được một bức tranh phức tạp vào một câu văn ngắn gọn nhưng đầy đủ 4 yếu tố: bối cảnh, đối tượng, điểm nghẽn cốt lõi và hệ quả rõ ràng. Rất dễ rơi vào tình trạng viết quá chung chung (thiếu số liệu định lượng) hoặc lan man sang phần kể lể giải pháp, khiến người đọc không thấy được mức độ cấp bách của vấn đề cần giải quyết.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+Nếu được làm lại, tôi sẽ chủ động đề xuất việc phỏng vấn hoặc khảo sát thực tế với quy mô rộng hơn ngay từ những bước đầu tiên thay vì dựa nhiều vào trải nghiệm chủ quan của các thành viên trong nhóm. Đồng thời, tôi sẽ mạnh dạn phản biện gay gắt hơn đối với những ý tưởng card có tính khả thi thấp về mặt dữ liệu đầu vào hoặc những card sa đà vào việc dùng AI cho các tác vụ mà con người xử lý thủ công sẽ nhanh và an tâm hơn.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+Xác định đúng một *problem* bắt đầu từ việc bóc tách kỹ các bước trong *quy trình* hiện tại để tìm ra điểm nghẽn cốt lõi. Từ đó, dùng các *metric* định lượng thời gian và tần suất để chứng minh mức độ nghiêm trọng của vấn đề nằm trong một *boundary* (phạm vi) rõ ràng. Dựa trên bản chất của điểm nghẽn, ta xác định *mức can thiệp AI* phù hợp (từ hỗ trợ công cụ đến tự động hóa Agent) kết hợp với các rào chắn kiểm soát an toàn. Cuối cùng, đưa ra *quyết định* Go hay No-Go mang tính chiến lược, đảm bảo giải pháp công nghệ giải quyết đúng nỗi đau thực tế thay vì chạy theo công nghệ một cách cảm tính.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- Tài liệu hướng dẫn học tập và template bài tập môn học Discovery & Problem Framing (K5-L3B-DAY02).
+- Tài liệu thảo luận và biên bản làm việc chung của nhóm LuckyTeam trên kho lưu trữ GitHub.
+- Các nguồn tài liệu nghiên cứu về phương pháp ứng dụng AI Agent trong tối ưu hóa quy trình làm việc nhóm.

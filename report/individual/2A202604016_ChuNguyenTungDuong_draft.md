@@ -2,7 +2,7 @@
 
 > Template chi tiết và prompt mẫu: [docs/01-worksheet.md](../../docs/01-worksheet.md).
 
-> **Trạng thái bản nháp:** Tôi đã chọn 10 vấn đề và thứ tự top 3. AI diễn đạt lại Job Story, đề xuất phân loại, phác thảo card và phản biện; các nội dung này cần tôi xác nhận và viết lại theo trải nghiệm thật. Mọi quy trình, bottleneck, impact, phương án và lý do chọn bên dưới là giả thuyết sơ bộ, chưa được kiểm chứng. Các ô [CẦN XÁC MINH: ...] và [CẦN ĐO] chưa phải bằng chứng.
+> AI hỗ trợ diễn đạt Job Story, trình bày Problem Card và phản biện từ các vấn đề và thứ tự ưu tiên tôi đã chọn. Quy trình là bản phác thảo; bottleneck, impact và hiệu quả của các phương án là giả thuyết. Các ô [CẦN XÁC MINH: ...], [CẦN ĐO] và [CẦN XÁC ĐỊNH: ...] thể hiện dữ liệu thực tế còn thiếu.
 
 ## 1. Thông tin học viên
 
@@ -19,7 +19,7 @@
 
 Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng hợp nhiều thông tin** · **Pain từ người khác**.
 
-Các Job Story sau là **bản nháp do AI diễn đạt từ danh sách tôi đã chọn**, cần tôi xác nhận. Những dòng thuộc “Pain từ người khác” chưa khẳng định người khác đã than phiền; cần xác minh từ trải nghiệm hoặc nguồn thật.
+Job Story được AI hỗ trợ diễn đạt từ danh sách tôi đã chọn. Phân loại “Pain từ người khác” còn cần nguồn thực tế để xác nhận người khác đã gặp khó khăn.
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
@@ -34,7 +34,7 @@ Các Job Story sau là **bản nháp do AI diễn đạt từ danh sách tôi đ
 | #19 | Pain từ người khác | Khi kiểm tra các khoản điện, nước và dịch vụ, tôi muốn đối chiếu chúng với hợp đồng thuê nhà, để biết khoản phải trả có phù hợp không. | Người thuê nhà | [CẦN XÁC MINH: ai thực sự gặp vấn đề, khoản cần đối chiếu, thời gian và bằng chứng.] |
 | #18 | Cần đọc, tổng hợp nhiều thông tin | Khi cân nhắc mua một sản phẩm ở nhiều nơi bán, tôi muốn hiểu sự khác nhau về thông số và chính sách bảo hành, để chọn nơi mua phù hợp. | Người mua hàng | [CẦN XÁC MINH: sản phẩm, nơi bán, thời gian so sánh và lần mua thực tế.] |
 
-**Nếu có dùng AI để gợi ý thêm:** Danh sách candidate ở trên do tôi lựa chọn; AI diễn đạt lại và phân loại. [CẦN XÁC MINH: tự ghi ý nào giữ, bỏ hoặc sửa sau khi rà soát, cùng lý do.]
+**Sử dụng AI ở CP1:** Danh sách 10 candidate do tôi lựa chọn. AI hỗ trợ diễn đạt Job Story và phân loại theo lăng kính, không bổ sung candidate mới.
 
 ---
 
@@ -42,105 +42,138 @@ Các Job Story sau là **bản nháp do AI diễn đạt từ danh sách tôi đ
 
 ### Bảng chọn top 3
 
-Thứ tự do tôi chọn; lý do và điểm chưa chắc dưới đây là lập luận sơ bộ cần tôi kiểm tra.
-
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | #1 — Đọc nhiều file hướng dẫn bài lab để biết cần nộp gì | Có thể giới hạn phạm vi vào một bài lab và hành trình xác định yêu cầu nộp. | Sinh viên nào gặp khó, mất bao lâu và bước đối chiếu nào thực sự nghẽn? |
-| 2 | #12 — Nhập lại thông tin khách hàng trên nhiều biểu mẫu | Có thể xem xét từng lần nhập và đối chiếu thông tin giữa các biểu mẫu. | Những biểu mẫu nào trùng trường, quy trình và quyền xử lý dữ liệu thực tế ra sao? |
-| 3 | #19 — Kiểm tra tiền điện, nước, dịch vụ và đối chiếu hợp đồng | Có thể tách việc lấy số tiền, đọc điều khoản và đối chiếu theo từng khoản. | Người thuê thực sự nhận dữ liệu nào, điểm nghẽn nằm ở đâu và có phát sinh sai lệch không? |
+| 1 | #1 — Sinh viên đọc nhiều file hướng dẫn để xác định bài lab cần nộp gì | Phạm vi có thể giới hạn vào lab Day 02 và đầu ra cụ thể là danh sách yêu cầu nộp bài có dẫn nguồn. | Thời gian nằm ở việc đọc, đối chiếu hay tự kiểm bài? Checklist có sẵn đã đáp ứng đến đâu? |
+| 2 | #12 — Nhân viên nhập lại thông tin khách hàng trên nhiều biểu mẫu | Có thể xác định trường dữ liệu bị lặp và theo dõi từng lần xử lý một hồ sơ. | Những biểu mẫu nào bắt buộc nhập riêng? Có lỗi thực tế và có quyền thay đổi quy trình không? |
+| 3 | #19 — Người thuê nhà kiểm tra điện, nước, dịch vụ và đối chiếu hợp đồng | Phạm vi kiểm tra theo từng khoản giúp phân biệt việc tìm điều khoản, tính toán và làm rõ chênh lệch. | Người thuê có đủ hợp đồng, chứng từ và dữ liệu tính tiền không? Bước nào thực sự tốn công nhất? |
 
-### Problem Card #1 — Vấn đề #1: Hướng dẫn bài lab
+### Problem Card #1 — Vấn đề #1: Xác định yêu cầu nộp bài lab
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | **Bản nháp AI, cần xác nhận:** Khi chuẩn bị bài lab có nhiều file hướng dẫn, tôi muốn xác định những gì cần nộp, để chuẩn bị bài nộp đúng yêu cầu. |
-| Actor | Sinh viên làm lab; [CẦN XÁC MINH: lớp, mức quen với quy trình nộp và trường hợp cụ thể]. |
-| Thời điểm / bối cảnh | Khi bắt đầu hoặc chuẩn bị nộp một bài lab có nhiều tài liệu hướng dẫn; [CẦN XÁC MINH: thời điểm thực tế]. |
-| Quy trình hiện tại (3–7 bước) | **Phác thảo AI, chưa xác minh:** mở hướng dẫn → đọc các file → đối chiếu yêu cầu → ghi lại danh sách cần nộp → kiểm tra danh sách. |
-| Bottleneck (bước nào, mất bao nhiêu phút) | **Giả thuyết:** bước đối chiếu yêu cầu giữa các file; [CẦN ĐO] và xác nhận đây có phải bước nghẽn. |
-| Impact (nếu không giải thì sao) | **Giả thuyết:** mất thêm thời gian và có thể bỏ sót yêu cầu nộp; [CẦN XÁC MINH: lần xảy ra và mức ảnh hưởng]. |
-| Success metric (baseline → target) | Thời gian từ lúc bắt đầu đọc đến khi lập xong danh sách yêu cầu: [CẦN ĐO: baseline] → [CẦN XÁC ĐỊNH: target]; tự ghi giờ theo cùng phạm vi và kiểm tra danh sách với yêu cầu gốc. |
-| Phương án không dùng AI | **Đề xuất cần kiểm tra:** tự lập checklist, ghi nguồn từng yêu cầu và đối chiếu với tài liệu gốc. |
-| Giả thuyết về AI (nếu có) | **Chưa kiểm chứng:** AI có thể gợi ý các yêu cầu từ tài liệu được cung cấp; sinh viên đối chiếu từng mục với nguồn, không mặc định tin bản nháp. |
-| Cảm nhận nhanh | Chưa biết. |
+| Job Story | Khi chuẩn bị bài lab có nhiều file hướng dẫn, tôi muốn xác định những gì cần nộp, để chuẩn bị bài nộp đúng yêu cầu. |
+| Actor | Sinh viên lớp L3B thực hiện bài lab Day 02 — Discovery & Problem Framing trên repository nhóm. [CẦN XÁC MINH: mức quen với GitHub và cách đọc hướng dẫn của người gặp khó khăn.] |
+| Thời điểm / bối cảnh | Khi bắt đầu chuẩn bị hoặc kiểm tra bài trước khi nộp. Yêu cầu nằm trong README, CHECKPOINTS, SUBMISSION, rubric và các template; tài liệu cũng có hướng dẫn thứ tự đọc và checklist nộp bài. |
+| Quy trình hiện tại (3–7 bước) | 1. Mở README và tìm các tài liệu liên quan · 2. Đọc hướng dẫn checkpoint và nộp bài · 3. Đối chiếu các yêu cầu giữa tài liệu và template · 4. Ghi danh sách file và nội dung phải hoàn thành · 5. Kiểm tra danh sách với bài đang chuẩn bị · 6. Đọc lại nguồn khi có điểm chưa rõ. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Giả thuyết: bước 3, ghép các yêu cầu từ nhiều tài liệu thành danh sách thống nhất; thời gian [CẦN ĐO]. Chưa xác định bước này chiếm nhiều thời gian hơn việc đọc lần đầu hay kiểm tra bài. |
+| Impact (nếu không giải thì sao) | Có thể phải đọc lại nhiều lần, bỏ sót file hoặc nhầm phần cá nhân với phần nhóm. [CẦN XÁC MINH: trường hợp thực tế, thời gian phát sinh và yêu cầu từng bị bỏ sót.] |
+| Success metric (baseline → target) | Thời gian lập danh sách yêu cầu cho cùng phạm vi lab: [CẦN ĐO: baseline, phút/lần] → [CẦN XÁC ĐỊNH: target, phút/lần]. Ghi thời điểm bắt đầu đọc và kết thúc danh sách; đồng thời đếm yêu cầu thiếu hoặc hiểu sai khi đối chiếu với tài liệu gốc. [CẦN XÁC ĐỊNH: tiêu chí chất lượng và người kiểm tra.] |
+| Phương án không dùng AI | Dùng thứ tự đọc và checklist sẵn có trong repository; bổ sung dẫn nguồn đến từng yêu cầu nếu cần. Hiệu quả còn phải so sánh với cách đọc hiện tại. |
+| Giả thuyết về AI (nếu có) | AI có thể hỗ trợ gom yêu cầu thành bản nháp có dẫn nguồn sau bước đọc tài liệu. Sinh viên kiểm từng mục với nguồn; chưa có bằng chứng cho thấy lợi ích lớn hơn thời gian kiểm và sửa nháp. |
+| Cảm nhận nhanh | Chưa biết. Cần thử checklist sẵn có trước khi cân nhắc mức can thiệp. |
 
-Quy trình nháp hiện tại — từng bước đều là suy đoán cần xác nhận:
+Quy trình nháp — thời gian từng bước và bước nghẽn chưa được đo:
 
 ~~~text
-[Mở hướng dẫn: CẦN ĐO] → [Đọc từng file: CẦN ĐO]
-→ [Đối chiếu yêu cầu giữa các file: CẦN ĐO] ← NGHẼN GIẢ THUYẾT
-→ [Ghi danh sách cần nộp: CẦN ĐO] → [Kiểm tra danh sách: CẦN ĐO]
+HIỆN TẠI (PHÁC THẢO) — tổng thời gian: [CẦN ĐO]
+
+[1 Mở README và tài liệu liên quan: CẦN ĐO]
+→ [2 Đọc hướng dẫn checkpoint và nộp bài: CẦN ĐO]
+→ [3 Đối chiếu yêu cầu giữa tài liệu và template: CẦN ĐO] ← BOTTLENECK GIẢ THUYẾT
+→ [4 Ghi danh sách file và nội dung cần nộp: CẦN ĐO]
+→ [5 Kiểm tra danh sách với bài đang chuẩn bị: CẦN ĐO]
+→ [6 Đọc lại nguồn khi chưa rõ: CẦN ĐO]
 ~~~
 
 ### Problem Card #2 — Vấn đề #12: Nhập lại thông tin khách hàng
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | **Bản nháp AI, cần xác nhận:** Khi phải điền thông tin khách hàng vào nhiều biểu mẫu, tôi muốn nắm rõ thông tin cần nhập ở từng biểu mẫu, để hoàn tất hồ sơ mà không bỏ sót. |
-| Actor | Nhân viên nhập liệu; [CẦN XÁC MINH: vai trò cụ thể và quyền truy cập dữ liệu]. |
-| Thời điểm / bối cảnh | Khi xử lý hồ sơ cần điền nhiều biểu mẫu; [CẦN XÁC MINH: loại hồ sơ và số biểu mẫu]. |
-| Quy trình hiện tại (3–7 bước) | **Phác thảo AI, chưa xác minh:** nhận thông tin khách hàng → xem biểu mẫu → nhập biểu mẫu đầu → nhập lại vào biểu mẫu khác → đối chiếu và hoàn tất. |
-| Bottleneck (bước nào, mất bao nhiêu phút) | **Giả thuyết:** nhập lại trường trùng ở biểu mẫu tiếp theo; [CẦN ĐO] và xác nhận bước nghẽn. |
-| Impact (nếu không giải thì sao) | **Giả thuyết:** tốn công nhập lại, có thể xuất hiện thông tin không nhất quán; [CẦN XÁC MINH: lỗi và ảnh hưởng thực tế]. |
-| Success metric (baseline → target) | Thời gian hoàn tất một hồ sơ: [CẦN ĐO: baseline] → [CẦN XÁC ĐỊNH: target]; đo cùng loại hồ sơ, đồng thời kiểm tra số trường sai hoặc không nhất quán. |
-| Phương án không dùng AI | **Đề xuất cần kiểm tra:** rà soát việc gộp các trường trùng hoặc dùng biểu mẫu chung, nếu quy trình và quyền xử lý dữ liệu cho phép. |
-| Giả thuyết về AI (nếu có) | **Chưa kiểm chứng:** AI có thể gợi ý ghép các trường có cách gọi khác nhau; nhân viên kiểm tra từng trường và chỉ dùng dữ liệu được phép. Có thể không cần AI. |
-| Cảm nhận nhanh | Chưa biết. |
+| Job Story | Khi phải điền thông tin khách hàng vào nhiều biểu mẫu, tôi muốn nắm rõ thông tin cần nhập ở từng biểu mẫu, để hoàn tất hồ sơ mà không bỏ sót. |
+| Actor | Nhân viên phụ trách nhập thông tin khách hàng vào các biểu mẫu trong một hồ sơ. [CẦN XÁC MINH: bộ phận, loại hồ sơ và quyền truy cập hoặc chỉnh sửa biểu mẫu.] |
+| Thời điểm / bối cảnh | Khi tiếp nhận hoặc cập nhật hồ sơ có thông tin khách hàng được yêu cầu ở nhiều biểu mẫu. [CẦN XÁC MINH: danh sách biểu mẫu, trường trùng và tần suất phát sinh.] |
+| Quy trình hiện tại (3–7 bước) | 1. Nhận thông tin khách hàng · 2. Xác định các biểu mẫu cần điền · 3. Điền thông tin vào biểu mẫu đầu · 4. Nhập lại các trường trùng vào biểu mẫu tiếp theo · 5. Đối chiếu thông tin giữa các biểu mẫu · 6. Sửa chỗ không nhất quán nếu có và hoàn tất hồ sơ. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Giả thuyết: bước 4, nhập lại các trường trùng; thời gian [CẦN ĐO]. Cần tách thời gian nhập lại khỏi thời gian tìm dữ liệu, chờ xác nhận và sửa lỗi. |
+| Impact (nếu không giải thì sao) | Có thể tốn công nhập lặp và phát sinh thông tin không nhất quán, dẫn đến phải sửa hồ sơ. [CẦN XÁC MINH: lỗi từng xảy ra, thời gian sửa và hậu quả với người xử lý.] |
+| Success metric (baseline → target) | Thời gian nhập và hoàn tất cùng loại hồ sơ: [CẦN ĐO: baseline, phút/hồ sơ] → [CẦN XÁC ĐỊNH: target, phút/hồ sơ]. Ghi giờ theo từng bước, số biểu mẫu và trường phải nhập lại; kiểm số trường sai hoặc không nhất quán sau đối chiếu. [CẦN XÁC ĐỊNH: tiêu chí chất lượng và người kiểm tra.] |
+| Phương án không dùng AI | Dùng nguồn thông tin chuẩn và mẫu điền thống nhất; xem xét gộp trường trùng hoặc chuyển dữ liệu theo quy tắc nếu được phép. Chưa biết các biểu mẫu có bắt buộc độc lập hay không. |
+| Giả thuyết về AI (nếu có) | AI có thể gợi ý đối chiếu các trường có tên hoặc cách diễn đạt khác nhau khi quy tắc cố định không đủ. Nhân viên kiểm tra kết quả; chỉ dùng dữ liệu được phép chia sẻ. Chưa có bằng chứng cần AI thay vì chuẩn hóa biểu mẫu. |
+| Cảm nhận nhanh | Chưa biết. Cần phân biệt nhập lặp theo trường cố định với việc phải hiểu nội dung không đồng nhất. |
 
-Quy trình nháp hiện tại — từng bước đều là suy đoán cần xác nhận:
+Quy trình nháp — thời gian từng bước và bước nghẽn chưa được đo:
 
 ~~~text
-[Nhận thông tin: CẦN ĐO] → [Xem biểu mẫu: CẦN ĐO]
-→ [Nhập biểu mẫu đầu: CẦN ĐO]
-→ [Nhập lại vào biểu mẫu khác: CẦN ĐO] ← NGHẼN GIẢ THUYẾT
-→ [Đối chiếu và hoàn tất: CẦN ĐO]
+HIỆN TẠI (PHÁC THẢO) — tổng thời gian: [CẦN ĐO]
+
+[1 Nhận thông tin khách hàng: CẦN ĐO]
+→ [2 Xác định biểu mẫu cần điền: CẦN ĐO]
+→ [3 Điền biểu mẫu đầu: CẦN ĐO]
+→ [4 Nhập lại trường trùng vào biểu mẫu tiếp theo: CẦN ĐO] ← BOTTLENECK GIẢ THUYẾT
+→ [5 Đối chiếu thông tin giữa các biểu mẫu: CẦN ĐO]
+→ [6 Sửa chỗ không nhất quán nếu có và hoàn tất: CẦN ĐO]
 ~~~
 
 ### Problem Card #3 — Vấn đề #19: Đối chiếu chi phí thuê nhà
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | **Bản nháp AI, cần xác nhận:** Khi kiểm tra các khoản điện, nước và dịch vụ, tôi muốn đối chiếu chúng với hợp đồng thuê nhà, để biết khoản phải trả có phù hợp không. |
-| Actor | Người thuê nhà; [CẦN XÁC MINH: người thuê nào, loại hợp đồng và cách nhận thông báo tiền]. |
-| Thời điểm / bối cảnh | Khi nhận thông báo các khoản điện, nước và dịch vụ; [CẦN XÁC MINH: chu kỳ và dữ liệu người thuê nhận được]. |
-| Quy trình hiện tại (3–7 bước) | **Phác thảo AI, chưa xác minh:** nhận thông báo khoản phải trả → tìm hợp đồng → đọc điều khoản liên quan → đối chiếu từng khoản → làm rõ chênh lệch nếu có. |
-| Bottleneck (bước nào, mất bao nhiêu phút) | **Giả thuyết:** đối chiếu từng khoản với điều khoản và dữ liệu tương ứng; [CẦN ĐO] và xác nhận bước nghẽn. |
-| Impact (nếu không giải thì sao) | **Giả thuyết:** mất thời gian kiểm tra và có thể không phát hiện khoản chưa rõ; [CẦN XÁC MINH: tình huống và hậu quả thực tế]. |
-| Success metric (baseline → target) | Thời gian kiểm tra một thông báo khoản phải trả: [CẦN ĐO: baseline] → [CẦN XÁC ĐỊNH: target]; ghi giờ theo cùng phạm vi và kiểm tra khả năng phát hiện khoản cần làm rõ. |
-| Phương án không dùng AI | **Đề xuất cần kiểm tra:** bảng đối chiếu từng khoản với điều khoản hợp đồng và chứng từ, tự tính và hỏi chủ nhà khi thiếu dữ liệu. |
-| Giả thuyết về AI (nếu có) | **Chưa kiểm chứng:** AI có thể hỗ trợ tìm đoạn điều khoản liên quan từ tài liệu được phép chia sẻ; người thuê phải kiểm tra bản gốc và tự đối chiếu. |
-| Cảm nhận nhanh | Chưa biết. |
+| Job Story | Khi kiểm tra các khoản điện, nước và dịch vụ, tôi muốn đối chiếu chúng với hợp đồng thuê nhà, để biết khoản phải trả có phù hợp không. |
+| Actor | Người thuê nhà trực tiếp kiểm tra thông báo các khoản phải trả. [CẦN XÁC MINH: loại hình thuê, cách chia chi phí nếu ở chung và người giữ hợp đồng.] |
+| Thời điểm / bối cảnh | Khi nhận thông báo tiền điện, nước và dịch vụ trước khi thanh toán. [CẦN XÁC MINH: chu kỳ, định dạng thông báo và chứng từ người thuê thực sự nhận được.] |
+| Quy trình hiện tại (3–7 bước) | 1. Nhận thông báo các khoản phải trả · 2. Tìm hợp đồng và chứng từ liên quan · 3. Đọc điều khoản về đơn giá và cách tính · 4. Đối chiếu từng khoản với điều khoản và dữ liệu tính tiền đang có · 5. Ghi khoản khớp và khoản thiếu căn cứ · 6. Hỏi lại bên thu tiền nếu có khoản cần làm rõ. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Giả thuyết: bước 4, đối chiếu đơn giá, căn cứ và cách tính của từng khoản; thời gian [CẦN ĐO]. Nếu thiếu chứng từ, điểm nghẽn có thể là chờ thông tin thay vì thao tác đối chiếu. |
+| Impact (nếu không giải thì sao) | Có thể mất thêm công kiểm tra, phải hỏi lại hoặc khó nhận biết khoản chưa được giải thích rõ. [CẦN XÁC MINH: lần xảy ra, thời gian và ảnh hưởng thực tế; chưa có bằng chứng về khoản thu sai.] |
+| Success metric (baseline → target) | Thời gian thao tác kiểm tra một thông báo: [CẦN ĐO: baseline, phút/thông báo] → [CẦN XÁC ĐỊNH: target, phút/thông báo]. Ghi riêng thời gian chờ bên thu tiền phản hồi; đối chiếu kết quả với hợp đồng và chứng từ để kiểm các khoản đã khớp hoặc còn thiếu căn cứ. [CẦN XÁC ĐỊNH: tiêu chí chất lượng và người kiểm tra.] |
+| Phương án không dùng AI | Dùng bảng đối chiếu khoản thu, điều khoản và chứng từ; tính lại các khoản theo quy tắc rõ ràng, hỏi bên thu tiền khi thiếu căn cứ. Hiệu quả phụ thuộc dữ liệu có đủ và dễ truy cập hay không. |
+| Giả thuyết về AI (nếu có) | AI có thể hỗ trợ tìm đoạn điều khoản liên quan khi hợp đồng khó tra cứu. Người thuê kiểm lại bản gốc và phép tính; chưa có bằng chứng rằng tìm điều khoản là bước gây chậm nhất. |
+| Cảm nhận nhanh | Chưa biết. Cần xác định khó khăn nằm ở tìm tài liệu, tính toán hay thiếu thông tin từ bên thu tiền. |
 
-Quy trình nháp hiện tại — từng bước đều là suy đoán cần xác nhận:
+Quy trình nháp — thời gian từng bước và bước nghẽn chưa được đo:
 
 ~~~text
-[Nhận thông báo: CẦN ĐO] → [Tìm hợp đồng: CẦN ĐO]
-→ [Đọc điều khoản: CẦN ĐO]
-→ [Đối chiếu từng khoản: CẦN ĐO] ← NGHẼN GIẢ THUYẾT
-→ [Làm rõ chênh lệch nếu có: CẦN ĐO]
+HIỆN TẠI (PHÁC THẢO) — tổng thời gian: [CẦN ĐO]
+
+[1 Nhận thông báo các khoản phải trả: CẦN ĐO]
+→ [2 Tìm hợp đồng và chứng từ: CẦN ĐO]
+→ [3 Đọc điều khoản về đơn giá và cách tính: CẦN ĐO]
+→ [4 Đối chiếu từng khoản với điều khoản và dữ liệu: CẦN ĐO] ← BOTTLENECK GIẢ THUYẾT
+→ [5 Ghi khoản khớp và khoản thiếu căn cứ: CẦN ĐO]
+→ [6 Hỏi lại nếu có khoản cần làm rõ: CẦN ĐO]
 ~~~
 
 ### Card muốn pitch nhất
 
 - Card số: 1 — vấn đề #1.
-- Vì sao: Tôi chọn ưu tiên này; phạm vi một bài lab và việc xác định yêu cầu nộp có thể giúp nhóm thảo luận cụ thể. Lý do cần tôi rà soát theo trải nghiệm thật.
-- Câu hỏi muốn nhóm phản biện: Nếu chỉ lập một checklist có dẫn nguồn từ các file hướng dẫn, vấn đề còn ở bước nào và bằng chứng nào cho thấy bước đó thực sự đáng giải quyết?
+- Vì sao: Phạm vi một bài lab và đầu ra là danh sách yêu cầu nộp giúp nhóm thảo luận một quy trình cụ thể.
+- Câu hỏi muốn nhóm phản biện: Nếu chỉ dùng checklist có dẫn nguồn từ các file hướng dẫn, vấn đề còn ở bước nào và bằng chứng nào cho thấy bước đó thực sự đáng giải quyết?
 
 ### AI đã phản biện card thế nào
 
-| Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
+> Đóng vai một Product Manager khó tính. Chỉ ra điểm yếu về actor, quy trình, bottleneck, bằng chứng thực tế, success metric và khả năng giải quyết mà không cần AI. Không viết lại Problem Card, không bịa số liệu.
+
+#### Phản biện Card #1 — Yêu cầu nộp bài lab
+
+| Điểm yếu | Vì sao là điểm yếu | Câu hỏi cần xác minh |
 |---|---|---|
-| Card #1: “sinh viên làm lab” còn rộng; cần xác định người học, bài lab và mức quen với cách nộp. | | |
-| Card #1: chưa có quan sát cho thấy đối chiếu giữa file là bước mất thời gian nhất; checklist dẫn nguồn có thể đã đủ. | | |
-| Card #2: chưa rõ nhân viên, biểu mẫu và quyền xử lý dữ liệu; việc nhập lại và sự không nhất quán chưa được chứng minh. | | |
-| Card #2: gộp trường hoặc dùng biểu mẫu chung có thể đơn giản hơn AI; cần kiểm tra ràng buộc thực tế trước. | | |
-| Card #3: chưa rõ ai thuê, nhận được những chứng từ nào và có thực sự gặp khó khi đối chiếu hợp đồng không. | | |
-| Card #3: bảng đối chiếu và phép tính thông thường có thể đủ; việc tìm điều khoản bằng AI chưa chắc giải quyết bước nghẽn. | | |
-| Cả ba: quy trình và tác động đang là suy đoán; cần quan sát một lần thực tế và xác định bước nghẽn cụ thể trước khi pitch. | | |
-| Cả ba: metric chưa có baseline, target và cách kiểm tra chất lượng đủ rõ; cần đo thật và tự đặt mục tiêu phù hợp. | | |
+| Actor chưa phân biệt người mới với người đã quen cách đọc hướng dẫn | Cùng là sinh viên L3B nhưng mức quen với GitHub và lab có thể dẫn đến khó khăn khác nhau; chưa rõ nhóm nào thực sự cần hỗ trợ. | Sinh viên nào gặp khó trong lần làm lab gần nhất, và họ vướng ở thao tác nào? |
+| Chưa chứng minh bước đối chiếu là bottleneck | Quy trình mới là phác thảo; thời gian có thể nằm ở đọc lần đầu, hiểu thuật ngữ hoặc tự kiểm bài thay vì ghép yêu cầu. | Khi quan sát một lần thực tế, bước nào mất thời gian hoặc phải làm lại nhiều nhất? |
+| Chưa có bằng chứng bỏ sót yêu cầu hoặc đọc lại gây ảnh hưởng | Có nhiều file không tự chứng minh pain đủ lớn; chưa có trường hợp cụ thể cho thấy việc này cản trở hoàn thành bài. | Yêu cầu nào từng bị hiểu sai hoặc bỏ sót, và có bản nháp hay ghi nhận nào chứng minh? |
+| Success metric chưa có baseline và tiêu chuẩn kiểm danh sách | Thời gian chưa đo và phạm vi công việc chưa thống nhất; làm nhanh hơn nhưng hiểu sai yêu cầu vẫn có thể bị xem là thành công. | Tính từ lúc nào đến lúc nào, ai kiểm độ đầy đủ và chính xác, và target dựa trên baseline nào? |
+| Chưa đánh giá checklist có sẵn trước khi cân nhắc AI | Repository đã có thứ tự đọc và checklist; thời gian kiểm bản nháp AI có thể làm mất phần thời gian tiết kiệm được. | Checklist hiện tại thiếu gì, và dùng checklist có dẫn nguồn còn để lại khó khăn cụ thể nào? |
+
+#### Phản biện Card #2 — Nhập lại thông tin khách hàng
+
+| Điểm yếu | Vì sao là điểm yếu | Câu hỏi cần xác minh |
+|---|---|---|
+| Actor và quyền thay đổi biểu mẫu chưa rõ | Người nhập liệu có thể gặp khó nhưng không có quyền sửa biểu mẫu hoặc chuyển dữ liệu; chưa xác định người chịu tác động và ràng buộc của họ. | Bộ phận nào nhập dữ liệu, ai quản lý biểu mẫu và nhân viên được phép thay đổi những gì? |
+| Bước nhập lại chưa được chứng minh là bottleneck chính | Quy trình đang suy đoán; hồ sơ có thể chậm vì thiếu thông tin, chờ duyệt hoặc sửa dữ liệu nguồn hơn là nhập lặp. | Những trường nào thực sự bị nhập lại, và thời gian bước này so với thời gian chờ hoặc sửa lỗi là bao nhiêu? |
+| Chưa có hồ sơ thực tế chứng minh công việc lặp và lỗi phát sinh | Chưa biết trường trùng có thực sự cùng ý nghĩa hay phải nhập riêng để phục vụ yêu cầu khác nhau. | Có thể dùng hồ sơ đã che thông tin cá nhân để chỉ ra trường nhập lặp, lỗi từng gặp và lý do phải nhập riêng không? |
+| Metric chưa kiểm soát độ phức tạp hồ sơ và chất lượng | Thời gian giữa các loại hồ sơ không thể so trực tiếp; giảm thời gian nhập nhưng tăng sai lệch sẽ không phản ánh kết quả tốt. | So sánh trên loại hồ sơ nào, theo dõi những trường nào và xác định trường sai hoặc không nhất quán bằng cách nào? |
+| Chưa chứng minh cần AI thay vì chuẩn hóa hoặc quy tắc cố định | Nếu trường dữ liệu trùng và cấu trúc ổn định, việc ghép theo quy tắc có thể đủ; AI có thể thêm công kiểm kết quả. | Trở ngại cụ thể nào khiến nguồn chuẩn, biểu mẫu chung hoặc ánh xạ trường cố định không đáp ứng được? |
+
+#### Phản biện Card #3 — Đối chiếu chi phí thuê nhà
+
+| Điểm yếu | Vì sao là điểm yếu | Câu hỏi cần xác minh |
+|---|---|---|
+| Actor chưa phản ánh điều kiện thuê và chia chi phí | Người thuê riêng, ở ghép hoặc không giữ hợp đồng có thể gặp các vấn đề khác nhau; một quy trình chung có thể không đúng với người được nhắm tới. | Người thuê nào trực tiếp kiểm tiền, họ giữ tài liệu gì và có phải chia chi phí với người khác không? |
+| Chưa phân biệt công đối chiếu với thời gian chờ dữ liệu | Nếu thiếu chỉ số hoặc chứng từ, đối chiếu nhanh hơn không giải quyết được việc chờ bên thu tiền cung cấp thông tin. | Lần kiểm gần nhất bị chậm ở tìm tài liệu, tính toán hay chờ bổ sung căn cứ? |
+| Chưa có bằng chứng về khoản khó kiểm hoặc tác động thực tế | Cảm giác mất thời gian chưa cho biết khoản nào gây khó; chưa có cơ sở kết luận đã trả sai hoặc chịu thiệt hại. | Khoản nào từng phải hỏi lại, có tài liệu đã che thông tin cá nhân để minh họa và kết quả làm rõ ra sao? |
+| Metric chưa thống nhất điểm kết thúc và tiêu chí đúng | Kết thúc thao tác kiểm khác với kết thúc chờ giải đáp; “đã kiểm” cũng không đồng nghĩa mọi khoản có đủ căn cứ. | Đo thời gian thao tác hay cả thời gian chờ, khi nào coi là kiểm xong và dùng nguồn nào để xác nhận kết quả? |
+| Chưa chứng minh tra cứu bằng AI tốt hơn bảng đối chiếu | Nếu điều khoản ngắn và công thức rõ, bảng tính có thể đủ; AI cũng không bổ sung được chứng từ bên thu tiền chưa cung cấp. | Sau khi dùng bảng đối chiếu và phép tính thông thường, phần khó nào còn lại cần hỗ trợ đọc hiểu? |
 
 ---
+
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |

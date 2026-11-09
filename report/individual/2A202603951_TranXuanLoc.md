@@ -62,7 +62,8 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 Quy trình nháp hiện tại:
 
-```HIỆN TẠI — 25 phút sau mỗi buổi họp
+```
+HIỆN TẠI — 25 phút sau mỗi buổi họp
 
 [1 Vừa họp vừa ghi nháp: 0'] → [2 Đọc lại nháp: 5'] 
 → [3 & 4 Cố nhớ lại và gõ thành tin nhắn phân công: 15-20'] ← BOTTLENECK
@@ -87,7 +88,8 @@ Quy trình nháp hiện tại:
 
 Quy trình nháp hiện tại:
 
-```HIỆN TẠI — Hơn 3 tiếng/môn
+```
+HIỆN TẠI — Hơn 3 tiếng/môn
 
 [1 Tải tài liệu: 5'] → [2 Đọc lướt từng file: 15'] 
 → [3 & 4 Copy/Gõ lại định nghĩa sang Word: 120'] ← BOTTLENECK 
@@ -112,7 +114,8 @@ Quy trình nháp hiện tại:
 
 Quy trình nháp hiện tại:
 
-```HIỆN TẠI — 25 phút/món hàng
+```
+HIỆN TẠI — 25 phút/món hàng
 
 [1 Xem sao trung bình: 1'] → [2 Đọc và phân tích bình luận chê: 10'] ← BOTTLENECK 
 → [3 Đọc bình luận khen: 5'] → [4 Tự phân biệt nick ảo: 7'] ← BOTTLENECK 

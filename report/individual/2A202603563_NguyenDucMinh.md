@@ -147,7 +147,7 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-Các bạn đều chọn bối cảnh xưởng dịch vụ VinFast nhưng nhìn từ nhiều vai khác nhau: cố vấn, kỹ thuật viên, khách hàng. Tôi nhận ra nhiều card thực chất là cùng một nỗi khó, thông tin bị thiếu khi chuyển từ người này sang người khác, giống hệt card giao ca của tôi dù bối cảnh khác hẳn.
+Mình nhận ra nhiều card thực chất là cùng một vấn đề, thông tin bị thiếu khi chuyển từ người này sang người khác, giống hệt card giao ca của mình dù bối cảnh khác hẳn.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 
@@ -155,7 +155,7 @@ Có. Một số candidate viết thẳng giải pháp: "có bảng báo giá sơ
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
-Có. Quân hỏi tôi lần gần nhất việc giao ca bị sót là khi nào, hậu quả ra sao. Tôi không kể được chuyện cụ thể nào, nên tôi thừa nhận số liệu card giao ca chỉ là ước lượng và ghi rõ như vậy trong báo cáo.
+Có đổi ý sau khi bị phản biện. Thành viên nhóm hỏi mình lần gần nhất việc giao ca bị sót là khi nào, hậu quả ra sao. Mình không kể được chuyện cụ thể nào, nên đã thừa nhận số liệu card giao ca chỉ là ước lượng và ghi rõ như vậy trong báo cáo.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
@@ -163,11 +163,11 @@ Có hai điều. Thứ nhất, ở Mỹ đã có công cụ (myKaarma) gửi b�
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
-Đặt success metric có baseline thật. Nhóm không bấm giờ được ở xưởng nên phải để "[đo]" và ghi rõ số phút là ước lượng.
+Đặt success metric có baseline thật. Nhóm không bấm giờ được ở xưởng nên phải để đo và ghi rõ số phút là ước lượng.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-Tôi sẽ phỏng vấn người thật ngay từ đầu, vì cả ba nguồn trên mạng đều ở Mỹ. Tôi cũng sẽ phản biện mạnh hơn việc chọn Workflow: nếu thông tin thiếu chỉ là vài mục cố định thì form bắt buộc đã đủ.
+Mình sẽ phỏng vấn người thật ngay từ đầu (thành viên nhóm khác), hoặc là đổi bối cảnh chủ đề, vì cả ba nguồn trên mạng đều ở Mỹ. Mình cũng sẽ phản biện mạnh hơn việc chọn Workflow: nếu thông tin thiếu chỉ là vài mục cố định thì form bắt buộc đã đủ.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 

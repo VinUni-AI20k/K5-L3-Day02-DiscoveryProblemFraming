@@ -4,53 +4,21 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Candidate problem nhóm chọn (1 câu):
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Tên nhóm: **MH2T**
+- Candidate problem nhóm chọn (1 câu): **Tự động hóa hỗ trợ tổng hợp mốc thời gian (Timeline) và dấu hiệu nhận diện (IoC) để sinh bản báo cáo sự cố an ninh mạng (Incident Post-Mortem Report) trên TheHive/Wazuh.**
+- Quyết định cuối (Go / Not Yet / No-Go): **Go** (Pilot phạm vi nhỏ: Workflow soạn thảo bản nháp bán tự động có con người duyệt, không dùng Agent tự trị)
 
 ## Thành viên
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| 1 | Đỗ Hoàng Minh | | Phụ trách research công cụ & phản biện kỹ thuật | |
+| 2 | Lê Quang Huy | | Phụ trách kiểm chứng (The Mom Test) & ghi chép | |
+| 3 | Nguyễn Văn Tùng | 2A202603471 | Đề xuất bài toán chọn (Card #2), vẽ quy trình & Problem Statement | nguyenvantung-sec |
+| 4 | Nguyễn Hoàng Tùng | 2A202603481 | Nhóm trưởng, điều phối tiến trình & đánh giá 4 rủi ro | nhtng0212 |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
-Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối thời gian, ghi chép, người phản biện chính, phụ trách kiểm chứng (phỏng vấn/survey), phụ trách research, vẽ quy trình, viết Problem Statement.
+Gợi ý vai trò: điều phối thời gian, ghi chép, người phản biện chính, phụ trách kiểm chứng (phỏng vấn/survey), phụ trách research, vẽ quy trình, viết Problem Statement.
 
 ## Phân công theo checkpoint
-
-| Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
-|---|---|---|---|
-| CP3 — Hội tụ nhóm | | | Cluster, cây OST, bảng chấm điểm |
-| CP4 — Kiểm chứng | | | Assumption map, snapshot hoặc survey |
-| CP4 — Research | | | Bảng research có link |
-| CP5 — Quy trình trước/sau | | | Quy trình + bảng before/after |
-| CP5 — Problem Statement v0 | | | Problem Statement v0 |
-| CP6 — Mức can thiệp + Problem Statement v1 | | | Ma trận, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định | | | 4 rủi ro + Go/Not Yet/No-Go |
-
-## Cá nhân
-
-Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
-
-### HoVaTen-MSSV
-
-**Phần việc phụ trách:**
-
--
-
-**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
-
--
-
-**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
-
--
-
-**Điều mình học được từ phần nhóm:**
-
--

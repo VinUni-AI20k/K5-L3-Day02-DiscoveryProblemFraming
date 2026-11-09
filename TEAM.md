@@ -77,3 +77,43 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Khi tổng hợp phải giữ cùng phạm vi của baseline–target; số liệu trong báo cáo thành viên vẫn cần nguồn và quyền sử dụng được kiểm.
 - Công thức đúng không bảo đảm so đúng hạng mục; kiểm tổng tiền cần đi cùng mapping, đơn vị và truy vết.
 - Rule có thể phù hợp phần so số; hỗ trợ ghép ngữ nghĩa là bài toán mở rộng phải có đối chứng và người kiểm riêng.
+### DamTuanLinh-2A20263624
+
+**Phần việc phụ trách:**
+
+- Tham gia xây dựng và phản biện Problem Card, đánh giá tính thực tiễn và mức độ phù hợp của các vấn đề được đề xuất.
+- Tham gia phản biện chéo giữa các nhóm, tiếp nhận phản biện và đề xuất hướng cải thiện giải pháp AI.
+- Thực hiện nghiên cứu, phỏng vấn 3 chuyên viên trong lĩnh vực đấu thầu xây dựng nhằm kiểm chứng nhu cầu thực tế và tính khả thi của giải pháp.
+- Đóng góp vào việc điều chỉnh định hướng bài toán từ hệ thống AI tự động phát hiện sai lệch sang công cụ AI hỗ trợ đối soát hồ sơ, có sự kiểm chứng của con người.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- **Phản biện bài của nhóm khác:** Đặt câu hỏi cho nhóm phát triển nền tảng kết nối người kinh doanh đồ ăn và người mua trong khu dân cư: "Làm sao để xác nhận nhu cầu thực của người đăng bài?". Câu hỏi tập trung vào việc kiểm chứng nhu cầu người dùng trước khi phát triển giải pháp, tránh xây dựng sản phẩm dựa trên các giả định chưa được xác thực.
+
+- **Tiếp nhận phản biện:** Nhận câu hỏi về khả năng nhận dạng giọng nói trong điều kiện có tiếng ồn, khác biệt giọng vùng miền và yêu cầu độ chính xác cao đối với các thông tin tài chính như khoản vay, số tiền trả nợ và dữ liệu khách hàng. Từ đó đề xuất hướng giải quyết không chỉ tập trung tối ưu một mô hình Speech-to-Text mà xây dựng pipeline xử lý gồm tiền xử lý âm thanh, nhận dạng giọng nói, fine-tuning theo dữ liệu đặc thù và kiểm chứng thông tin tài chính quan trọng.
+
+- **Kiểm chứng nhu cầu thực tế:** Trực tiếp phỏng vấn 3 người có kinh nghiệm trong lĩnh vực đấu thầu xây dựng nhằm tìm hiểu khó khăn khi đối chiếu hồ sơ mời thầu và đánh giá khả năng ứng dụng AI vào quy trình làm việc.
+
+- **Tổng hợp kết quả phỏng vấn:** Trong 3 người được phỏng vấn, 2 người xác nhận có nhu cầu sử dụng công cụ AI hỗ trợ rà soát hồ sơ. Một người bày tỏ lo ngại về tính phức tạp của việc đối chiếu, khả năng AI đưa ra kết quả sai và vấn đề trách nhiệm khi xảy ra sai sót. Kết quả cho thấy giải pháp có tín hiệu nhu cầu ban đầu nhưng vẫn tồn tại rủi ro đáng kể về độ tin cậy và trách nhiệm chuyên môn.
+
+- **Đề xuất điều chỉnh định hướng giải pháp:** Từ kết quả kiểm chứng, đóng góp vào việc chuyển hướng bài toán từ hệ thống AI tự động phát hiện sai lệch và đưa ra kết luận sang công cụ AI hỗ trợ đối chiếu, rà soát hồ sơ (*AI-assisted Document Review*). Đề xuất áp dụng cơ chế *Human-in-the-loop*, trong đó AI hỗ trợ phát hiện chênh lệch, cung cấp thông tin để truy vết, còn chuyên viên chịu trách nhiệm xác minh và đưa ra quyết định cuối cùng.
+
+- **Đóng góp vào việc xác định mức can thiệp AI:** Làm rõ ranh giới giữa chức năng hỗ trợ nghiệp vụ và chức năng ra quyết định. AI không thay thế chuyên viên đánh giá hồ sơ, đặc biệt đối với các trường hợp cần diễn giải ngữ nghĩa, xác minh thông tin hoặc chịu trách nhiệm pháp lý.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- **Hoạt động phản biện chéo:** Câu hỏi về xác nhận nhu cầu thực của người đăng bài trong dự án kết nối kinh doanh đồ ăn tại khu dân cư.
+- **Hoạt động tiếp nhận phản biện:** Câu hỏi về nhận dạng giọng nói vùng miền, tiếng ồn và độ chính xác dữ liệu tài chính; đề xuất pipeline Speech-to-Text kết hợp kiểm chứng thông tin.
+- **Hoạt động kiểm chứng:** Kết quả phỏng vấn 3 người làm trong lĩnh vực đấu thầu xây dựng, gồm 2 phản hồi tích cực về nhu cầu sử dụng và 1 phản hồi nêu rủi ro về độ chính xác, trách nhiệm.
+- **Báo cáo nhóm `report/team/group_report.md`:** Các nội dung liên quan đến nghiên cứu người dùng, xác định vấn đề, phạm vi giải pháp, mức can thiệp AI và định hướng Human-in-the-loop.
+- **Kết quả tác động:** Đóng góp bằng chứng thực tế để nhóm xem xét điều chỉnh định hướng từ AI tự động kết luận sang AI hỗ trợ đối soát hồ sơ.
+
+*Lưu ý: Các bằng chứng trên được tổng hợp từ hoạt động cá nhân đã cung cấp; chưa xác định đường dẫn file minh chứng, số mục chính xác hoặc commit/PR riêng nên không gán mã commit chưa được kiểm chứng.*
+
+**Điều mình học được từ phần nhóm:**
+
+- Một vấn đề chỉ thực sự đáng giải quyết khi có bằng chứng về nhu cầu người dùng, không nên chỉ dựa trên giả định hoặc khả năng công nghệ.
+- Phỏng vấn người dùng không chỉ nhằm xác nhận nhu cầu mà còn giúp phát hiện những rủi ro, giới hạn và điều kiện cần thiết để giải pháp được chấp nhận.
+- Trong các nghiệp vụ đòi hỏi độ chính xác và trách nhiệm cao như đấu thầu xây dựng, AI không nhất thiết phải tự động hóa toàn bộ quy trình. Giải pháp hỗ trợ ra quyết định, có con người kiểm chứng, có thể phù hợp hơn.
+- Cần phân biệt giữa độ chính xác kỹ thuật của mô hình và độ tin cậy của toàn bộ hệ thống. Một mô hình nhận dạng hoặc phát hiện tốt vẫn có thể gây sai sót nếu thiếu bước kiểm chứng, đối chiếu ngữ cảnh và truy vết nguồn.
+- Kết quả nghiên cứu thực tế có thể làm thay đổi Problem Statement, phạm vi giải pháp và mức can thiệp AI. Việc điều chỉnh bài toán dựa trên bằng chứng là một phần quan trọng của quá trình Problem Discovery & Framing.

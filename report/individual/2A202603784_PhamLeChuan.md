@@ -23,7 +23,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | 1 | Tốn thời gian | Khi hệ thống đang chạy báo lỗi, tôi muốn biết nhanh vấn đề nằm ở đâu và khắc phục ngay | IT, Sysadmin | Thường mất 20-30 phút mỗi bài lần chỉ để dò lỗi cú pháp hoặc tìm hiểu nguyên nhân gây lỗi.| 
 | 2 | Tốn thời gian | Khi đến đầu và cuối mỗi ca học, tôi muốn thao tác điểm danh diễn ra nhanh chóng hoặc tự động, để không mất thời gian của buổi học | Sinh viên, Giảng viên/trợ giảng | Mất khoảng 5-10 phút đầu và cuối mỗi ca để quét mã/gọi tên. |
 | 3 | Pain từ người khác | Khi sát kỳ thi, tôi muốn có một nơi lưu trữ chung dễ tìm kiếm, tra cứu | Học viên, trợ giảng, bạn cùng lớp | Mất khoảng 15 - 20 phút để tìm kiếm và tải về các tài liệu cần thiết. |
-| 4 | Lặp lại |  Khi đến đầu và cuối mỗi ca học, tôi muốn thao tác điểm danh diễn ra nhanh chóng hoặc tự động | Học viên, trợ giảng, giảng viên | Mất khoảng 5-10 phút đầu và cuối mỗi ca để quét mã/gọi tên | 
+| 4 | Lặp lại |  Khi điện thoại báo đầy bộ nhớ, tôi muốn lọc và chuyển ảnh/tài liệu quan trọng sang máy tính lưu trữ offline một cách nhanh gọn, để giải phóng dung lượng mà không tốn tiền mua dung lượng đám mây. | Người dùng | Mỗi tháng tốn khoảng 45 phút cắm cáp, lướt tìm từng file/ảnh cũ để cắt dán thủ công sang ổ cứng máy tính | 
 | 5 | Cần đọc, tổng hợp nhiều thông tin | Tôi muốn tự động sắp xếp lịch trình, đặt lịch, nhắc hẹn | Con người | Mất thời gian để tự kiểm tra, sắp xếp |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.

@@ -405,7 +405,7 @@ Do đó, ưu tiên phát hiện đầy đủ các chênh lệch khối lượng 
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
 
-v1 dùng phạm vi Rule đã chọn, sau review v0 và nguồn Vinh/Tuyên. Năm tiêu chí dưới đây là yêu cầu nghiệm thu thiết kế, không phải kết quả test. Quân đã có bản eval và 10 tình huống tổng hợp tại `9ccefc8`; nhận xét review đã công bố qua PR #10, bản eval chưa được tích hợp vào main. Đầu nhánh Quân tại `70be730` đã xóa file eval; liên kết cố định bên dưới giữ bản nguồn để sửa và khôi phục khi tích hợp.
+v1 dùng phạm vi Rule đã chọn, sau review v0 và nguồn Vinh/Tuyên. Năm tiêu chí dưới đây là yêu cầu nghiệm thu thiết kế, không phải kết quả test. [Bộ eval của Quân](../assets/cp6-2A202603626-eval.md) đã được khôi phục từ bản nguồn `9ccefc8` và sửa sau review: có 10 tình huống dữ liệu tổng hợp, đáp án thiết kế, quy tắc, cách đo và điều kiện thử. Phê duyệt của người domain cùng kết quả thực nghiệm được ghi riêng; không coi bản tích hợp là test đã đạt.
 
 | Trường | Nội dung |
 |---|---|
@@ -438,11 +438,11 @@ Theo hướng dẫn trường hợp Rule, năm tiêu chí sau áp dụng cho gi�
 | 2 | Tính toán và đơn vị | Kết quả chênh khối lượng, giá và tổng khớp đáp án độc lập theo cùng tiền tệ/quy tắc/dung sai đã duyệt; thiếu giá, trùng khóa, khác đơn vị được cảnh báo. | Tính trên dòng không tương ứng; coi ô trống là 0; chia cho trung vị 0; tự chuyển đơn vị không có quy tắc. |
 | 3 | Phát hiện và kiểm mapping | Không bỏ sót dòng chênh khối lượng trong bộ đáp án; cảnh báo giá đúng quy tắc và có người xác minh ý nghĩa; bộ test có đổi chỗ dòng cùng tiền/cùng khối lượng. | Sót chênh đã biết hoặc chấp nhận mapping sai chỉ vì tổng tiền khớp; gán “giá sai” chỉ từ ngưỡng. |
 | 4 | Bảo toàn và kiểm trước trình | File gốc giữ nguyên; bảng kết quả có nguồn, ngoại lệ, cấu hình và xác nhận của chuyên viên; tổng tiền đối chiếu cùng cách tính. | Sửa số gốc, output không giải trình được hoặc đưa ngoại lệ mơ hồ qua cổng kiểm. |
-| 5 | Thời gian và khả năng sử dụng | Tổng công cùng phạm vi dưới 90 phút/vòng, ghi cả kiểm/sửa/ngoại lệ; chuyên viên hiểu và sửa được kết quả; mọi tiêu chí chất lượng cũng đạt. | Vượt target, chỉ nhanh do bỏ bước kiểm, hoặc chỉ báo lượt thành công để che lượt thất bại. |
+| 5 | Thời gian và khả năng sử dụng | Tổng công cùng phạm vi dưới 90 phút/vòng, ghi cả kiểm/sửa/ngoại lệ; chuyên viên hiểu và sửa được kết quả; mọi tiêu chí chất lượng cũng đạt. | Từ 90 phút/vòng trở lên, chỉ nhanh do bỏ bước kiểm, hoặc chỉ báo lượt thành công để che lượt thất bại. |
 
 Bộ tình huống cần bao phủ khi Quân hoàn thiện eval: bảng đúng mã; mã thiếu; khóa trùng; đơn vị khác; đảo vị trí dòng cùng tiền; cùng khối lượng nhưng khác mô tả; thiếu giá; trung vị giá 0; đổi phiên bản BOQ; dòng chỉ có ở một nhà thầu. Đáp án phải do người domain xác nhận trước khi dùng. Danh sách này là kế hoạch test, không phải bằng chứng các test đã đạt.
 
-**Review bàn giao của Quân ngày 2026-11-09:** [bản eval tại `9ccefc8`](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/9ccefc8/report/assets/cp6-2A202603626-eval.md) có tiêu chí và 10 tình huống dữ liệu tổng hợp, hữu ích để phát triển bộ kiểm. Các điểm cần sửa trước tích hợp:
+**Review bản nháp bàn giao của Quân ngày 2026-11-09:** [bản eval tại `9ccefc8`](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/9ccefc8/report/assets/cp6-2A202603626-eval.md) có tiêu chí và 10 tình huống dữ liệu tổng hợp, hữu ích để phát triển bộ kiểm. Các điểm được yêu cầu sửa ở bản nháp và đã đối chiếu trong bản eval tích hợp:
 
 - TC-03: trung vị của 3,2; 3,3; 3,5; 5,2 triệu là **3,4 triệu**; độ lệch của 5,2 triệu là khoảng **52,94%**, không phải 57,6%.
 - TC-09: **2,5 × 150.000 = 375.000**, không phải 375 triệu; thống nhất đơn vị tiền trước khi chốt đáp án.
@@ -450,7 +450,7 @@ Bộ tình huống cần bao phủ khi Quân hoàn thiện eval: bảng đúng m
 - Thống nhất một tiêu chuẩn đạt/không đạt: sót bất kỳ chênh khối lượng đã biết là không đạt; công soát phải **dưới 90 phút** cùng phạm vi, không dùng điều kiện “hoặc giảm 60%/75%”. Quy tắc đơn giá phải nhất quán giữa trung vị và trung bình; ngưỡng 30% là giả định thiết kế cần duyệt.
 - Tách AI giải thích và fuzzy matching khỏi bộ nghiệm thu Rule; dấu chấm/phẩy phải theo quy ước số được duyệt, không tự kết luận một chuỗi là lỗi hoặc hai mô tả kỹ thuật là tương đương.
 
-Đây là nhận xét review tài liệu trong lượt cập nhật hiện tại, không phải bản ghi Quân đã trả lời hoặc các thành viên đã biểu quyết.
+Bản eval tích hợp đã sửa trung vị/đơn vị tiền, bỏ baseline chất lượng thiếu nguồn và lời khẳng định đã đạt; chỉ dùng ngưỡng 30% cho dữ liệu minh họa. Phần phê duyệt ngưỡng/dung sai, bộ đáp án domain và log thử nghiệm vẫn là điều kiện trước pilot. Review tài liệu không thay cho hỏi–đáp trực tiếp hoặc kết quả biểu quyết.
 
 ---
 
@@ -523,4 +523,4 @@ Tuyên đề xuất Go cho Rule ở Card #1 và Not Yet với AI. Sau review ngu
 
 - Nguồn CP4 mới nhất: [cập nhật Linh tại e278c07](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/e278c07e098b3a8dc339a39d7d6e3dfe4b04c5e4/report/team/group_report.md), giữ nguyên assumption map và snapshot, kèm ghi chú giới hạn khi review.
 - [Linh bổ sung tổng hợp phỏng vấn tại `4efec2b`](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/commit/4efec2b075d78608d5365d380919f7331c9d2786): nguồn số người và ý kiến lo ngại độ chính xác/trách nhiệm; giới hạn snapshot được ghi ở mục 3.2.
-- Bản eval của Quân tại `9ccefc8` được dẫn trực tiếp ở mục 7; đây là nguồn review trên nhánh thành viên, không phải tài liệu đã merge hoặc kết quả đã chạy.
+- [Bộ eval Quân](../assets/cp6-2A202603626-eval.md) được khôi phục và sửa theo review bản `9ccefc8`; có 10 cặp dữ liệu tổng hợp/đáp án thiết kế. Không dùng bộ mẫu này để khẳng định hiệu quả đã đo.

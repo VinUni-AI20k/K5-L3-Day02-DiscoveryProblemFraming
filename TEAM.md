@@ -36,7 +36,7 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | CP4 — Research | Khương | Người hỗ trợ cụ thể chưa xác nhận | Research mục 3.3 đã merge qua PR #5; file assets riêng là tùy chọn |
 | CP5 — Quy trình trước/sau | Vinh | Hưởng tổng hợp | CP5 nguồn đã merge qua PR #4; mục 4.1 giữ bối cảnh, mục 4.2–4.3 cập nhật quy trình Rule đúng phạm vi đã chọn |
 | CP5 — Problem Statement v0 | Hưởng tổng hợp theo ủy quyền trưởng nhóm | Vinh cung cấp quy trình; Linh/Khương cung cấp bằng chứng | Mục 5: phạm vi soát, baseline tham chiếu 300–360 phút và target dưới 90 phút; dữ liệu/ngưỡng được kiểm trước pilot |
-| CP6 — Eval | Quân | Hưởng review | Bản eval và 10 tình huống trên nhánh Quân tại `9ccefc8`; nhận xét cần sửa ở mục 7 báo cáo nhóm; chưa tích hợp |
+| CP6 — Eval | Quân | Hưởng review | [Bộ eval](report/assets/cp6-2A202603626-eval.md) đã khôi phục và sửa sau review; 10 cặp dữ liệu tổng hợp/đáp án thiết kế, không phải kết quả chạy |
 | CP6 — Mức can thiệp + Problem Statement v1 | Tuyên phân tích; Hưởng tổng hợp theo ủy quyền | Quân cung cấp eval | Mục 6–7: chọn Rule, AI mapping tách riêng; năm tiêu chí phải đạt đồng thời |
 | CP6 — Quyết định | Hưởng, theo ủy quyền trực tiếp của trưởng nhóm | Tuyên cung cấp rủi ro; Quân cung cấp eval | Mục 8: Not Yet cho pilot, điều kiện chuyển Go, ngưỡng dừng và người phụ trách từng điều kiện |
 
@@ -213,3 +213,28 @@ Học được cách cùng nhóm thu hẹp bài toán, xác định đúng đi�
 - Phải tách bước gom khỏi bước soát; gộp lại thì baseline và target không cùng phạm vi.
 - Tổng tiền khớp không chứng minh các dòng đã được ghép đúng; cần kiểm cả mã, đơn vị và dòng nguồn.
 - Số liệu từ một gói thầu chỉ là điểm bắt đầu; cần bấm giờ từng bước và có bộ đáp án trước khi kết luận.
+
+### PhamNgocTrungQuan-2A202603626
+
+**Phần việc phụ trách:**
+
+- CP6 — tiêu chí đánh giá, tình huống đầu vào/đáp án mong đợi và cách so với phương án đơn giản.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Viết bản eval tại `9ccefc8`: phạm vi, quy tắc, năm tiêu chí và mười tình huống tổng hợp cho bước soát.
+- Bản tích hợp sau review sửa trung vị TC-03, đơn vị tiền TC-09, baseline chất lượng thiếu nguồn và tiêu chuẩn đạt/không đạt; giữ ngưỡng 30% là cấu hình minh họa cần duyệt trước áp dụng thực tế.
+- Đồng bộ nhật ký cá nhân với phạm vi Rule và Not Yet cho pilot; phần phỏng vấn dẫn theo Linh, quy trình dẫn theo Vinh và research theo Khương.
+- Phân biệt dữ liệu/đáp án thiết kế với kết quả thực nghiệm; không ghi là đã đạt target hoặc đã được domain duyệt khi chưa có nguồn.
+
+**Bằng chứng** (phần nào trong báo cáo, file nào, commit nào):
+
+- [Bản eval gốc tại 9ccefc8](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/blob/9ccefc8/report/assets/cp6-2A202603626-eval.md).
+- [Bộ eval sau review](report/assets/cp6-2A202603626-eval.md); [báo cáo nhóm](report/team/group_report.md), mục 7.
+- [Báo cáo cá nhân](report/individual/2A202603626_PhamNgocTrungQuan.md), mục 4–7; [bản cá nhân tại 8efa2c1](https://github.com/trongjhuongwr/K5-L3A-DAY02-TEAMLAGI-DiscoveryProblemFraming/commit/8efa2c1): nguồn phần reflection 6.1–6.6 được giữ nguyên khi review.
+
+**Điều mình học được từ phần nhóm:**
+
+- Phải xác định đáp án và tiêu chí trước khi đánh giá; số dòng lớn không chứng minh cần AI hoặc tự suy ra được tỷ lệ bỏ sót.
+- Công thức đúng vẫn có thể so sai hạng mục nếu mapping sai; cần truy vết và kiểm đầu vào trước phép tính.
+- Chọn Rule để chuẩn bị thử không có nghĩa đã đủ điều kiện Go cho pilot.

@@ -127,16 +127,16 @@ Quy trình nháp hiện tại:
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Pitch 3 card của cá nhân (Card 7, 8, 9 về tổng hợp tài liệu, làm slide và tìm lại quyết định chat). | Đưa lên bảng 12 card tổng hợp của nhóm để tiến hành phân cụm và chấm điểm shortlist. |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: <br>- Cho bài Card #2 của Đức Hải: "Lớp có cho tải video ghi hình không? Không có video thì bước nghẽn này không giải được." <br>- Cho bài Card #5 của Tùng Lâm: "App VinFast đã hiện trụ trống chưa? Nếu có thì chỉ còn phần dự đoán, mà phần đó cần dữ liệu của VinFast." <br>- Cho bài Card #10 của Anh Quân: "15 phút/lần là số minh họa. Đã có lần nào lỡ lịch thật chưa? Một bảng tính có đủ không?" | Giúp các thành viên nhìn nhận lại điểm nghẽn thực tế, kiểm tra tính khả thi của dữ liệu trước khi chọn card. |
+| Nhận phản biện | Câu hỏi tôi nhận được: <br>- Card #7: "Job Story gốc có chữ 'tự động gom nhóm': đó là giải pháp. Pain thật nằm ở bước đọc, bước lọc hay bước viết lại? 2,5 giờ/tuần là đo hay ước?" <br>- Card #8: "Slide Master hoặc template có sẵn đã giảm được bao nhiêu phút? Bài này có phải No AI là đủ không?" <br>- Card #9: "Trùng pattern với card #3 của Đức Hải. Đọc lịch sử chat nhóm có đụng tin nhắn riêng của thành viên không?" | Tôi đã sửa gì: <br>- Làm rõ lại pain point tập trung vào bước lọc thủ công thay vì kết luận giải pháp ngay. <br>- Cô đọng và tách bạch rõ ràng các bước đo lường thời gian thực tế. <br>- Gộp pattern trùng lặp với card tương ứng trong nhóm để tối ưu danh sách card chung. |
+| Gom cluster / cây OST | Tham gia thảo luận nhóm, đóng góp ý kiến gộp các card có cùng pattern (như card #7 và #12, card #9 và #3). | Hình thành cây Opportunity Solution Tree (OST) và rút gọn danh sách card chuẩn bị cho shortlist. |
+| Chọn candidate problem | Cùng nhóm chấm điểm shortlist để chốt 3 Problem Card đại diện cho toàn nhóm. | Chọn được Top 3 Problem Cards (Tự động tổng hợp tài liệu, cấu trúc layout slide, tóm tắt chat nhóm). |
+| Kiểm chứng / research | Phụ trách phần Research (CP4) cho bài toán, tìm kiếm các nguồn tài liệu và benchmark các phương pháp giải quyết hiện tại. | Cung cấp dữ liệu tham khảo để chứng minh tính cấp thiết của vấn đề nghiên cứu. |
+| Quy trình nhóm | Hỗ trợ Nguyễn Anh Quân vẽ và chuẩn hóa các bước quy trình hiện tại (Before) và quy trình tương lai (After). | Làm nổi bật rõ ràng các điểm nghẽn (bottleneck) để minh chứng lý do cần ứng dụng AI. |
+| Problem Statement | Phối hợp xây dựng Problem Statement v1 của nhóm. | Chuẩn hóa câu lệnh định nghĩa rõ bối cảnh, đối tượng, điểm nghẽn và hệ quả. |
+| Mức can thiệp AI | Phụ trách chính phần đánh giá mức độ can thiệp của AI (từ No AI đến Fully Autonomous Agent). | Xây dựng ma trận so sánh 4 mức can thiệp và thiết lập các tiêu chí đánh giá phù hợp. |
+| Quyết định | Tham gia đánh giá 4 rủi ro lớn và cùng nhóm đưa ra quyết định cuối cùng (Go/No-Go cho giải pháp AI). | Thống nhất hướng đi chiến lược và ngưỡng dừng (guardrails) an toàn cho giải pháp của nhóm. |
 
 ---
 

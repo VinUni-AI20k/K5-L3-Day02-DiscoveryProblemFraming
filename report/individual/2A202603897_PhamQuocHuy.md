@@ -152,12 +152,12 @@ HIỆN TẠI — 10 phút (ước tính)
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Nhờ AI góp ý cho 8 vấn đề tôi tự tìm và chỉnh cách viết Job Story | Giúp diễn đạt rõ ràng, xác định người chịu ảnh hưởng và bổ sung góc nhìn | Các vấn đề AI gợi ý thêm chưa sát với trải nghiệm của tôi | Không giữ ý tưởng nào từ AI, chỉ chỉnh cách diễn đạt 8 vấn đề ban đầu |
+| CP2 Problem Card | Nhờ AI xây dựng và phản biện 3 Problem Cards về ôn bài, đọc tin nhắn và khôi phục workspace | Giúp xác định bottleneck, impact, success metric và quy trình nháp | Thời gian từng bước còn là ước tính; AI chưa chứng minh được giải pháp AI tốt hơn cách làm thủ công | Ghi rõ số liệu ước tính, bổ sung tiêu chí chất lượng và phương án không dùng AI |
+| CP4 Research | Gợi ý cần xác nhận: Sử dụng AI để hỗ trợ tìm hướng nghiên cứu và tiêu chí so sánh các giải pháp | Có thể giúp nhận diện những điểm cần so sánh về tính năng, quyền truy cập và bảo mật | AI không thay thế được việc kiểm tra tài liệu chính thức và phỏng vấn người thật | Tự nghiên cứu Slack AI, Discord Blog, Telegram Bot và sử dụng kết quả hai cuộc phỏng vấn làm bằng chứng |
+| CP5 Quy trình | Gợi ý cần xác nhận: Nhờ AI phản biện quy trình As-Is và To-Be | Có thể giúp phát hiện bước thiếu, tình huống lỗi và điểm cần kiểm tra thủ công | Quy trình lý tưởng có thể bỏ qua lỗi API, timeout hoặc rate limit của LLM | Đóng góp phương án fallback để người dùng vẫn có thể xem tin nhắn gốc khi hệ thống gặp lỗi |
+| CP5–6 Problem Statement | Gợi ý cần xác nhận: Nhờ AI góp ý về metric, boundary và nội dung chuyển từ v0 sang v1 | Có thể giúp làm rõ các tiêu chí đo lường và điều kiện đánh giá đầu ra | Chỉ giảm thời gian đọc tin chưa đủ chứng minh hệ thống có ích | Đề xuất thêm Acceptance Rate ≥85% và tham gia rà soát tiêu chí đánh giá |
+| CP6 Mức can thiệp / quyết định | Gợi ý cần xác nhận: Dùng AI tham khảo cách so sánh Rule, Workflow và Agent cùng các nhóm rủi ro | Có thể hỗ trợ hệ thống hóa rủi ro và các yếu tố cần cân nhắc | Giải pháp Agent có thể phức tạp, tốn kém và vượt quá nhu cầu thực tế | Ủng hộ Workflow with AI, đánh giá 4 rủi ro và đề xuất Go (Small Pilot) trong 2 tuần kèm ngưỡng dừng |
 
 ---
 
@@ -166,21 +166,27 @@ HIỆN TẠI — 10 phút (ước tính)
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
-
+- Một vấn đề có thể gây khó chịu cho người dùng nhưng chưa chắc đủ lớn để cần xây dựng sản phẩm mới
+- Khi nghe các candidate của Minh, tôi nhận ra cần xem xét tính khả thi về API, bảo mật và khả năng triển khai ngay từ đầu
+- Việc so sánh các candidate giúp tôi hiểu rằng điểm đau thực tế quan trọng hơn sự hấp dẫn của công nghệ
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
-
+- Nhóm nhận ra những tính năng, không phải vấn đề của người dùng. Sau khi phản biện, nhóm quay lại xác định người gặp vấn đề, công việc họ thực hiện và bước gây khó khăn trước khi thảo luận giải pháp
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
-
+- Có. Ban đầu tôi ưu tiên vấn đề tóm tắt kiến thức để ôn bài vì bản thân thường mất 1-2 tiếng để xem lại tài liệu sau mỗi buổi học. Tuy nhiên, khi Minh phản biện rằng làm sao đảm bảo AI tóm tắt chính xác và không bịa thêm kiến thức, tôi nhận ra vấn đề này khó hơn mình nghĩ và hiện tại đã có NotebookLM hỗ trợ khá tốt việc này. Vì vậy, tôi không còn ưu tiên vấn đề này nữa và đồng ý cùng nhóm chọn vấn đề tổng hợp thông tin quan trọng từ các nhóm chat
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
-
+- Sau khi phỏng vấn 2 người, tôi nhận thấy cả hai cũng gặp vấn đề giống mình là mất nhiều thời gian đọc lại tin nhắn và dễ bỏ sót thông tin quan trọng. Điều này giúp tôi thấy rằng vấn đề không chỉ xảy ra với bản thân mà những người khác cũng gặp phải
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
-
+- Xác định được vấn đề cụ thể và đưa ra những chỉ số có thể đo lường
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
-
+- Tôi sẽ tìm hiểu các công cụ hiện có và kiểm chứng nhu cầu thực tế sớm hơn, trước khi dành nhiều thời gian phân tích giải pháp. Tôi cũng muốn thu thập thêm số liệu từ người dùng để có cơ sở đánh giá chính xác hơn.
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
-
+- Đầu tiên nhóm cần xác định đúng vấn đề mà người dùng đang gặp phải, cụ thể là mất thời gian đọc tin nhắn nhóm và dễ bỏ sót các task quan trọng. Sau đó, nhóm phân tích quy trình hiện tại để tìm ra bước gây mất thời gian nhất. Tiếp theo, nhóm đặt ra các chỉ số đo lường như thời gian tiết kiệm được và tỷ lệ task được người dùng chấp thuận. Tiếp theo là xác định boundary, đảm bảo quyền riêng tư và người dùng vẫn có quyền kiểm tra, xác nhận thông tin. Nhóm lựa chọn Workflow with AI vì chỉ cần AI hỗ trợ lọc và tổng hợp tin nhắn, không cần Agent tự quyết định mọi việc. Cuối cùng, sau khi đánh giá các rủi ro, nhóm quyết định Go với một đợt thử nghiệm nhỏ trong 2 tuần và có ngưỡng dừng nếu kết quả không đạt yêu cầu
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- **Slack Technologies (2024).** *Guide to AI features in Slack - Search and conversation summaries.* Truy cập tại: [https://slack.com/help/articles/25076892548883-Guide-to-AI-features-in-Slack](https://slack.com/help/articles/25076892548883-Guide-to-AI-features-in-Slack) (Tài liệu về tính năng tự động tóm tắt kênh chat và thread thảo luận của Slack).
+- **Discord Blog (2023).** *AI on Discord: Your Place for AI with Friends.* Truy cập tại: [https://discord.com/blog/ai-on-discord-your-place-for-ai-with-friends](https://discord.com/blog/ai-on-discord-your-place-for-ai-with-friends) (Bài viết chính thức của Discord về tính năng Conversation Summaries tự động nhóm tin nhắn thành các chủ đề có thể đọc lướt nhanh).
+- **Open-source Project (2024).** *Telegram Group Chat Summarizer Bot.* Repository: [https://github.com/moalimir/Telegram-Group-Chat-Summarizer-Bot](https://github.com/moalimir/Telegram-Group-Chat-Summarizer-Bot) (Dự án mã nguồn mở ứng dụng LLM tóm tắt tin nhắn nhóm Telegram).
+- **Google PAIR (People + AI Research).** *People + AI Guidebook - Designing human-centered AI products.* Truy cập tại: [https://pair.withgoogle.com/guidebook/](https://pair.withgoogle.com/guidebook/) (Nguyên tắc thiết kế hệ thống AI hỗ trợ con người, xử lý lỗi False Positive / False Negative và thiết kế Human-in-the-Loop).
+- **Rob Fitzpatrick (2013).** *The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you.* (Phương pháp phỏng vấn kiểm chứng nhu cầu thực tế dựa trên hành vi quá khứ).

@@ -13,7 +13,7 @@
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 |Nguyễn Thành Công | 2A202603789 | Điều phối thời gian, ghi chép, người phản biện, kiếm chứng | congnt180263 |
-| 2 | | | | |
+| 2 | Đồng Văn Quyến|2A202603769 | Người phản biện chính + phụ trách research | dvq2609 |
 | 3 | | | | |
 | 4 | | | | |
 
@@ -26,12 +26,12 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
 | CP3 — Hội tụ nhóm | Cả nhóm | | Cluster, cây OST, bảng chấm điểm |
-| CP4 — Kiểm chứng |Công | | Assumption map, snapshot hoặc survey |
-| CP4 — Research |Quyến | | Bảng research có link |
+| CP4 — Kiểm chứng |Công | Quyến | Assumption map, snapshot hoặc survey |
+| CP4 — Research |Quyến | Công | Bảng research có link |
 | CP5 — Quy trình trước/sau |Hân |Nguyên | Quy trình + bảng before/after |
 | CP5 — Problem Statement v0 |Nguyên | | Problem Statement v0 |
 | CP6 — Mức can thiệp + Problem Statement v1 |Quyến + Hân + Nguyên | | Ma trận, AI Canvas, eval, Problem Statement v1 |
-| CP6 — Quyết định |Công | | 4 rủi ro + Go/Not Yet/No-Go |
+| CP6 — Quyết định |Công | Quyến | 4 rủi ro + Go/Not Yet/No-Go |
 
 ## Cá nhân
 
@@ -71,3 +71,21 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Điều mình học được từ phần nhóm:**
 Học được cách pitch 1 problem một cách cụ thể không theo trend, học được cách kiểm chứng giả định 1 vấn đề, lựa chọn một 1 vấn đề có ích cho doanh nghiệp và xã hội nhiều nhất.
+
+
+### Đồng Văn Quyến-2A202603769
+
+**Phần việc phụ trách:**
+
+- thực hiện research các existing solution, phân tích ma trận độ mơ hồ * độ phức tạp, tham gia phản biện các idea, phụ trách kiểm chứng
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- tham gia phản biện các idea trong quá trình pitching, tìm kiếm các giải pháp đã có về vấn đề đặt ra, kiểm chứng các link về aws, misa, Rossum
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- Mục 3.3, 6.1, 6.2, 2.1 trong group_report.md, commit 'done' '3.3 research'
+
+**Điều mình học được từ phần nhóm:**
+Học được cách kiểm chứng, phản biện từ pitching, research và kiểm định các nguồn trên internet, tìm kiếm vấn đề thiết thực cho doanh nghiệp, cách sử dụng git

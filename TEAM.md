@@ -25,12 +25,12 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
-| CP3 — Hội tụ nhóm | | Lê Danh Giang | Cluster, cây OST, bảng chấm điểm |
+| CP3 — Hội tụ nhóm | |  | Cluster, cây OST, bảng chấm điểm |
 | CP4 — Kiểm chứng | | | Assumption map, snapshot hoặc survey |
-| CP4 — Research | Lê Danh Giang | | Bảng research có link |
-| CP5 — Quy trình trước/sau | | Lê Danh Giang | Quy trình + bảng before/after |
+| CP4 — Research |  | | Bảng research có link |
+| CP5 — Quy trình trước/sau | |  | Quy trình + bảng before/after |
 | CP5 — Problem Statement v0 | | | Problem Statement v0 |
-| CP6 — Mức can thiệp + Problem Statement v1 | Lê Danh Giang | | Ma trận, AI Canvas, eval, Problem Statement v1 |
+| CP6 — Mức can thiệp + Problem Statement v1 |  | | Ma trận, AI Canvas, eval, Problem Statement v1 |
 | CP6 — Quyết định | | | 4 rủi ro + Go/Not Yet/No-Go |
 
 ## Cá nhân

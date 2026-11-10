@@ -165,21 +165,21 @@ HIỆN TẠI — 10 phút (ước tính)
 
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
-**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?
 - Một vấn đề có thể gây khó chịu cho người dùng nhưng chưa chắc đủ lớn để cần xây dựng sản phẩm mới
 - Khi nghe các candidate của Minh, tôi nhận ra cần xem xét tính khả thi về API, bảo mật và khả năng triển khai ngay từ đầu
 - Việc so sánh các candidate giúp tôi hiểu rằng điểm đau thực tế quan trọng hơn sự hấp dẫn của công nghệ
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?
 - Nhóm nhận ra những tính năng, không phải vấn đề của người dùng. Sau khi phản biện, nhóm quay lại xác định người gặp vấn đề, công việc họ thực hiện và bước gây khó khăn trước khi thảo luận giải pháp
-**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.
 - Có. Ban đầu tôi ưu tiên vấn đề tóm tắt kiến thức để ôn bài vì bản thân thường mất 1-2 tiếng để xem lại tài liệu sau mỗi buổi học. Tuy nhiên, khi Minh phản biện rằng làm sao đảm bảo AI tóm tắt chính xác và không bịa thêm kiến thức, tôi nhận ra vấn đề này khó hơn mình nghĩ và hiện tại đã có NotebookLM hỗ trợ khá tốt việc này. Vì vậy, tôi không còn ưu tiên vấn đề này nữa và đồng ý cùng nhóm chọn vấn đề tổng hợp thông tin quan trọng từ các nhóm chat
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 - Sau khi phỏng vấn 2 người, tôi nhận thấy cả hai cũng gặp vấn đề giống mình là mất nhiều thời gian đọc lại tin nhắn và dễ bỏ sót thông tin quan trọng. Điều này giúp tôi thấy rằng vấn đề không chỉ xảy ra với bản thân mà những người khác cũng gặp phải
-**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+6.5. Điều khó nhất khi viết Problem Statement là gì?
 - Xác định được vấn đề cụ thể và đưa ra những chỉ số có thể đo lường
-**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?
 - Tôi sẽ tìm hiểu các công cụ hiện có và kiểm chứng nhu cầu thực tế sớm hơn, trước khi dành nhiều thời gian phân tích giải pháp. Tôi cũng muốn thu thập thêm số liệu từ người dùng để có cơ sở đánh giá chính xác hơn.
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+6.7. Hiểu bài: giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 - Đầu tiên nhóm cần xác định đúng vấn đề mà người dùng đang gặp phải, cụ thể là mất thời gian đọc tin nhắn nhóm và dễ bỏ sót các task quan trọng. Sau đó, nhóm phân tích quy trình hiện tại để tìm ra bước gây mất thời gian nhất. Tiếp theo, nhóm đặt ra các chỉ số đo lường như thời gian tiết kiệm được và tỷ lệ task được người dùng chấp thuận. Tiếp theo là xác định boundary, đảm bảo quyền riêng tư và người dùng vẫn có quyền kiểm tra, xác nhận thông tin. Nhóm lựa chọn Workflow with AI vì chỉ cần AI hỗ trợ lọc và tổng hợp tin nhắn, không cần Agent tự quyết định mọi việc. Cuối cùng, sau khi đánh giá các rủi ro, nhóm quyết định Go với một đợt thử nghiệm nhỏ trong 2 tuần và có ngưỡng dừng nếu kết quả không đạt yêu cầu
 ---
 

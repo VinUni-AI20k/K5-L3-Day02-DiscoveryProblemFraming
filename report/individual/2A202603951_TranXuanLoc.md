@@ -1,4 +1,4 @@
-# Báo cáo cá nhân — 2A202603951_TranXuanLoc
+﻿# Báo cáo cá nhân — 2A202603951_TranXuanLoc
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -142,16 +142,10 @@ HIỆN TẠI — 25 phút/món hàng
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Hội tụ nhóm (CP3) | Đưa ra ý tưởng Candidate #7 (Tạo To-do list sau họp) và bảo vệ thành công ý tưởng này để làm bài toán chung. | Đề tài của tôi được nhóm nhất trí chọn vì có baseline rõ ràng (15-20 phút rà soát), giải quyết đúng nỗi đau thật của sinh viên. |
+| Kiểm chứng & Research (CP4) | Hỗ trợ Đạt và Tiệp cung cấp bối cảnh thực tế (họp ở quán cafe, cãi nhau hăng say) làm cơ sở cho phỏng vấn và đánh giá. | Giúp nhóm nhận ra rủi ro khi dùng AI ghi âm trực tiếp, chuyển hướng bài toán sang xử lý text. |
+| Quy trình & Problem Statement v0 (CP5) | **Phụ trách chính**: Vẽ quy trình hiện tại (As-Is) và tương lai (To-Be). Soạn thảo Problem Statement v0. | Xác định chính xác "Bottleneck" nằm ở bước nhớ lại ý sót và định dạng văn bản; gộp được các bước thủ công thành 1 bước duyệt nháp của AI. |
+| Mức can thiệp & Quyết định (CP6) | Hỗ trợ Tiệp thiết lập 4 tiêu chí đánh giá bản nháp và hỗ trợ Phúc rà soát quyết định Not Yet. | Các tiêu chí (Không sót, Không bịa, Đúng người) trở thành cơ sở đo lường vững chắc cho Success Metric. |
 
 ---
 
@@ -159,12 +153,9 @@ HIỆN TẠI — 25 phút/món hàng
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Viết nháp Job Story cho nỗi đau phải hì hục gõ To-do list sau mỗi buổi cãi vã của nhóm đồ án. | Giúp định dạng câu văn rõ ràng, chỉ đích danh Actor (Trưởng nhóm). | Nhầm lẫn giữa "Opportunity" và "Tính năng AI". | Gạch bỏ các từ khóa liên quan đến AI ra khỏi Job Story, chỉ tập trung vào mong muốn cuối cùng là "tránh cãi nhau". |
+| CP5 Quy trình | Dùng AI để chuyển mô tả văn bản quy trình As-Is thành text có cấu trúc. | Tiết kiệm thời gian định dạng các bước. | AI gộp chung bước "nhớ lại" và "gõ văn bản" thành một. | Tôi tách đôi hai bước này ra vì "nhớ lại" mới là phần gây mệt mỏi và tốn não nhất. |
+| CP5 Problem Statement | Nhờ AI rà soát xem PS v0 có bị thiếu Success Metric định lượng không. | Nhắc nhở việc phải có con số cụ thể cho thời gian và tỷ lệ. | Đề xuất metric "100% tự động hóa" quá phi thực tế. | Thiết lập lại metric: giữ con người duyệt (HITL), giảm thời gian từ 20p xuống dưới 7p. |
 
 ---
 
@@ -173,21 +164,31 @@ HIỆN TẠI — 25 phút/món hàng
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Nghe ý tưởng của Đạt (Gom task từ Zalo) và Tiệp (Chẩn đoán lỗi test AI), tôi nhận ra mỗi người đều có những nỗi đau riêng cực kỳ khó chịu. Tuy nhiên, bài học lớn nhất là cách chấm điểm và so sánh: một nỗi đau dù đau đến mấy (như việc bị trôi task Zalo) nhưng nếu vướng rào cản kỹ thuật không thể vượt qua (Feasibility - Zalo chặn API), thì Product Manager cũng phải biết từ bỏ để chọn một trận chiến khác vừa sức và có khả năng ra kết quả (như bài toán To-do list của tôi).
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Có. Lúc bảo vệ ý tưởng của mình, tôi đã vô thức nói: "Mình làm một con AI chui vào ghi âm cuộc họp đi". Cả nhóm lập tức cuốn theo. Nhưng khi Đạt đặt câu hỏi: "Lúc cãi nhau hăng quá 3-4 người nói cùng lúc, quán cafe thì bật nhạc ầm ĩ, mầy nghĩ con AI nghe nổi không?", tôi mới tỉnh mộng. Nhóm quay lại tập trung vào "nỗi đau" (mất 20 phút gõ nháp) và nhận ra AI chỉ cần giải đúng bước "dịch văn bản nháp" là đủ, không cần phải làm một Agent thu âm hoành tráng.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+Có, chính là lần bị Đạt phản biện về việc AI ghi âm như tôi vừa kể trên. Ban đầu tôi khăng khăng muốn làm "chuyên nghiệp" như Zoom hay Google Meet, nhưng sau khi bị phản biện, tôi đồng ý đổi hướng 180 độ: từ bỏ việc ghi âm, chấp nhận việc trưởng nhóm vẫn phải ghi từ khóa thô, AI chỉ làm phần cấu trúc lại văn bản. Quyết định lùi một bước này làm tăng tính khả thi của dự án lên gấp nhiều lần.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Bất ngờ lớn nhất nằm ở việc chúng tôi nhận ra mình đang bị "thiên kiến xác nhận". Chúng tôi đều mặc định nỗi đau mất 20 phút sau họp là hiển nhiên với mọi người. Nhưng khi nhìn lại quá trình, nhóm giật mình nhận ra tất cả data mới chỉ đến từ trải nghiệm cá nhân của tôi và vài người trong nhóm. Điều này dẫn đến quyết định "Not Yet" ở bước cuối cùng, một quyết định rất dũng cảm thay vì nhắm mắt chọn "Go".
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+Vì phụ trách chính viết Problem Statement v0 (CP5), cái khó nhất với tôi là xác định "Success Metric". Làm sao để đo được chất lượng của một cái To-do list? Nếu chỉ đo bằng thời gian (nhanh hơn) thì AI rất dễ làm, nhưng nếu AI làm nhanh mà bịa sai tên người làm, dẫn đến cãi nhau to hơn, thì hệ thống thất bại. Tôi đã phải vật lộn để đưa vào các metric chặn lỗi như: 0 lần bịa, tỷ lệ đính chính phải giảm về 0.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+Nếu làm lại, tôi sẽ yêu cầu nhóm đi ra ngoài lớp phỏng vấn 3-5 Leader của các nhóm đồ án ngay trong buổi chiều hôm đó. Việc chần chừ không lấy data thật đã khiến chúng tôi bị mắc kẹt ở quyết định Not Yet. Tôi hiểu rằng một Problem Statement chỉ thực sự có sức nặng khi có con số từ người dùng bên ngoài bảo kê.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+Problem của nhóm xuất phát từ sự mệt mỏi và lãng phí 15-20 phút của người trưởng nhóm khi phải định dạng To-do list từ ghi chú lộn xộn sau các buổi họp. Quy trình hiện tại đòi hỏi trưởng nhóm phải tự nhớ lại ý sót và gõ thủ công. Chúng tôi đặt metric là giảm thời gian soát lỗi xuống dưới 7 phút mà vẫn giữ tỷ lệ chính xác 100%. Để kiểm soát rủi ro ảo giác, boundary yêu cầu AI không tự bịa thông tin thiếu và phải có con người xác nhận (HITL). Mức can thiệp được chọn là Workflow, AI chỉ phụ trách một khâu duy nhất là cấu trúc hóa văn bản. Do dữ liệu đánh giá nỗi đau mới chỉ đến từ nội bộ nhóm, rủi ro Value còn cao, nhóm quyết định "Not Yet" và sẽ tiến hành lấy data khách quan trước khi pilot.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- Otter.ai Meeting Assistant (Tham khảo tính năng trích xuất Action Item tự động): https://otter.ai
+- Zoom AI Companion (Tham khảo luồng tóm tắt buổi họp online): https://zoom.us/ai-companion
+- The Mom Test (Rob Fitzpatrick) (Phương pháp phỏng vấn tìm hiểu rủi ro Value và né thiên kiến khi hỏi người dùng): Dùng làm cơ sở thiết kế bộ câu hỏi cho kế hoạch phỏng vấn ở giai đoạn sau.
+- Google PAIR Guidebook (Tham khảo cách phân chia ranh giới giữa con người và AI - Augment vs Automate, Human-in-the-loop).

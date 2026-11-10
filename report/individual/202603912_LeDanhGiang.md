@@ -142,16 +142,16 @@ HIỆN TẠI — 15-20 phút loay hoay
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Pitch cả 3 card của mình (#4 gom tổng token và chi phí từ nhiều dashboard API AI, #5 tìm điểm kẹt xe khi qua cầu giờ cao điểm ở HN, #6 kiểm tra khi xe máy số cũ khó nổ buổi sáng) | Đóng góp 3 bài toán vào danh sách 12 candidate ở mục 2.1; sau khi so bằng chứng và khả năng kiểm chứng, nhóm thống nhất chọn #11 (ghép report nhóm nhiều người) của Tuấn Anh |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: Đặt câu hỏi kiểm tra khả năng tiếp cận người dùng thật ở CP4 cho các bài ngoài lớp (#7 giáo viên, #9 chủ hộ kinh doanh, #10 dữ liệu nội bộ công ty) và hỏi về bài #11: "Nếu mọi người nộp đúng hạn, đúng format thì bước đọc có còn là bottleneck không?" | Giúp nhóm loại sớm các candidate không phỏng vấn được người thật trong buổi lab và đưa giả định #2, #3 (template + deadline nội bộ đã đủ chưa) vào Assumption Map để kiểm chứng ở CP4 |
+| Nhận phản biện | Câu hỏi tôi nhận được: #4: "Lần gần nhất bạn thật sự vượt ngân sách là khi nào?" (Hải); #5: "Dữ liệu realtime lấy ở đâu, nhóm có tiếp cận được không?"; #6: "Đây là thiếu thông tin hay thiếu kỹ năng sửa xe?" | Kết quả: nhóm loại #4 vì mới có 1 người gặp và các hãng đã có usage dashboard; loại #5, #6 vì ngoài tầm dữ liệu giao thông realtime và ngoài domain của nhóm. Tôi đã sửa gì: Nhận ra #4 tần suất vượt ngân sách thấp, còn #6 nghiêng về kỹ năng thao tác thực hành hơn là bài toán xử lý thông tin cho AI |
+| Gom cluster / cây OST | Cùng nhóm gom 12 candidate thành 4 cluster (card #4 của tôi vào Cluster B — tự tìm và đối chiếu thông tin rời rạc; #5, #6 vào nhóm Ngoài cluster) và rà soát cây OST của bài #11 | Giúp nhóm phân biệt rõ đâu là opportunity (nỗi đau nộp trễ, sai format, lệch nội dung) và gạch bỏ được 3 giải pháp đội lốt opportunity (Template Docs chung, Bot nhắc deadline, AI tóm tắt từng phần) ở mục 2.3 |
+| Chọn candidate problem | Cùng nhóm chấm điểm shortlist 3 bài toán theo 7 tiêu chí và thảo luận khi chuyển từ đề xuất ban đầu (#1 đọc đề lab) sang #11 (ghép report nhóm, 33/35 điểm) | Thống nhất chọn #11 vì có số liệu hành vi thật từ nhiều người, cả 4 thành viên đều hiểu domain và so sánh rõ được cả 4 mức No AI / Rule / Workflow / Agent |
+| Kiểm chứng / research | Cùng nhóm đối chiếu kết quả phỏng vấn DA (mục 3.2) với 3 giả định đầu và tìm hiểu các công cụ có sẵn (Google Docs tabs, Gemini trong Docs, Gemini Notebook ở mục 3.3) | Phát hiện giả định #2 sai một phần (bottleneck thật là đồng bộ số liệu, biểu đồ và viết lại insight nối logic từ EDA sang Model mất 3–4 tiếng); kết luận đã có công cụ sẵn nên không tự xây agent |
+| Quy trình nhóm | Review quy trình hiện tại (5 bước thủ công) và quy trình tương lai (6 bước, kỳ vọng 90 phút), tách bước 0–2 cho No AI + Rule (template, hàm vẽ chung, bảng "Số liệu chính") | Chuẩn hóa bảng Before/After ở mục 4.3; chốt rõ boundary là AI chỉ chạy ở bước 3 để liệt kê chỗ mâu thuẫn kèm trích dẫn, không tự sửa file hay viết thay insight |
+| Problem Statement | Review Problem Statement v0, đọc các điểm phản biện ở mục 5 và cập nhật lên bản v1 kèm 5 tiêu chí đánh giá đầu ra của AI (mục 7) | Bỏ giới hạn "nhóm 4–7 người" chưa đủ nguồn ở Actor, bổ sung metric chất lượng (số chênh lệch số liệu còn sót = 0, số đoạn insight phải viết lại giảm ít nhất một nửa) |
+| Mức can thiệp AI | Review ma trận độ mơ hồ × độ phức tạp, bảng so sánh 4 mức, AI Canvas và 2 câu hỏi Google PAIR (Augment vs Automate; Báo nhầm vs Bỏ sót) ở mục 6 | Thống nhất chọn mức Workflow (No AI + Rule ở bước 0–2, AI ở bước 3); xác định "bỏ sót tệ hơn báo nhầm" để thiết kế Rule kiểm số liệu chạy trước AI |
+| Quyết định | Review phần đánh giá 4 rủi ro (Value, Usability, Feasibility, Viability) và chốt kế hoạch pilot kèm ngưỡng dừng (mục 8) | Chốt quyết định "Go, phạm vi nhỏ": ưu tiên chạy bước 0–2 (No AI + Rule) và bấm giờ trước; nếu đã giảm xuống dưới 90 phút hoặc AI bỏ sót lỗi trong 2 lần liên tiếp thì dừng AI, quay về No AI + Rule |
 
 ---
 
@@ -159,14 +159,12 @@ HIỆN TẠI — 15-20 phút loay hoay
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
-
----
+| CP1 Scan | Gợi ý mở rộng các vấn đề cá nhân thường gặp xoay quanh việc học, làm dự án AI và sinh hoạt hằng ngày theo 4 lăng kính để lập bảng scan | Giúp diễn đạt đúng cấu trúc Job Story ("Khi... tôi muốn... để...") và gợi nhớ nhanh các tình huống tốn thời gian bản thân từng gặp (theo dõi token API AI, kẹt xe qua cầu, xe máy khó nổ) | AI hay gợi ý các vấn đề chung chung và ước lượng thời gian/tần suất cảm tính, không chỉ ra được đâu là vấn đề ngoài tầm dữ liệu của nhóm | Chỉ giữ lại 3 vấn đề sát trải nghiệm thật của bản thân (#4, #5, #6), tự điền dấu hiệu thời gian thực tế (như khoảng 10 phút gom số từ các dashboard) thay vì lấy con số suy diễn của AI |
+| CP2 Problem Card | Hỗ trợ chia nhỏ các bước trong quy trình hiện tại cho 3 card (#4 theo dõi chi phí API AI, #5 tìm điểm kẹt xe qua cầu, #6 kiểm tra xe số cũ khó nổ) và gợi ý phương án không dùng AI | Giúp tách quy trình thành từng bước rõ ràng, xác định nhanh bước bottleneck và gợi ý các cách xử lý thủ công/quy tắc (như đặt hạn mức cảnh báo billing sẵn có hoặc lập checklist kiểm tra xe) | AI có xu hướng đề xuất xây công cụ/app AI tự động hóa cho cả 3 card mà bỏ qua rào cản thiếu dữ liệu giao thông realtime (#5) hoặc đặc thù kỹ năng thực hành (#6) | Giữ phần mô tả quy trình thực tế nhưng hạ kỳ vọng về AI, ghi rõ phương án No AI / Rule đã giải quyết được phần lớn cho card #4 và nhận diện hạn chế dữ liệu ở card #5, #6 |
+| CP4 Research | Hỗ trợ tóm tắt tính năng và giới hạn của các công cụ có sẵn (Google Docs document tabs, Gemini trong Docs, Gemini Notebook) để đối chiếu với quy trình ghép report | Giúp liệt kê nhanh công cụ nào giải được bước nào (thu bài, tóm tắt, hỏi chéo có trích dẫn inline) và điều kiện sử dụng gói tài khoản | AI thường đánh giá quá lạc quan khả năng tự động phát hiện mâu thuẫn của công cụ mà ít nhấn mạnh việc người ghép phải nạp lại nguồn khi thành viên sửa bài | Kiểm tra lại trên trang tài liệu chính thức của Google Support, bổ sung rõ cột "Khoảng trống / rủi ro" và rút ra bài học: tận dụng công cụ sẵn có theo hướng Workflow, không tự xây agent |
+| CP5 Quy trình | Không dùng | | | |
+| CP5–6 Problem Statement | Không dùng | | | |
+| CP6 Mức can thiệp / quyết định | Không dùng | | | |
 
 ## 6. Reflection (CP7)
 

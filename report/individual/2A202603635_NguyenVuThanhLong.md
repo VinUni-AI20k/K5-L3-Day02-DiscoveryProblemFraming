@@ -1,0 +1,219 @@
+# Báo cáo cá nhân — 2A202603635_NguyenVuThanhLong
+
+> Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
+> Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
+> Mỗi thành viên một file trong `report/individual/` trên repo nhóm: copy template này thành file mới, điền, rồi commit bằng tài khoản GitHub của bạn. Không viết hộ người khác.
+
+## 1. Thông tin học viên
+
+- Họ tên: Nguyễn Vũ Thành Long
+- MSSV: 2A202603635
+- Email trường (không bắt buộc, repo có thể để public):
+- Tên nhóm: PhuongHoang
+- Link repo nhóm: [GitHub - K5--L3A--DAY02-PhuongHoang-DiscoveryProblemFraming](https://github.com/MHuyHoat/K5--L3A--DAY02-PhuongHoang-DiscoveryProblemFraming/tree/main)
+
+---
+
+## 2. Scan problem (CP1)
+
+Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng hợp nhiều thông tin** · **Pain từ người khác**.
+
+| # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
+|---:|---|---|---|---|
+| 1 | Tốn thời gian | Khi tạo hoặc tìm lại đề IELTS Writing, tôi muốn phân loại và tìm kiếm đề theo dạng bài, chủ đề để thuận tiện lưu trữ và ôn tập. | Bản thân tôi | Đề được lưu chung trong một file Google Docs; phải tự xác định dạng bài, chủ đề và tìm vị trí lưu hoặc tìm lại, mất khoảng 3–5 phút mỗi lần. |
+| 2 | Tốn thời gian, lặp lại | Khi cần kiểm tra hàng hóa hoặc lịch sử bán hàng, tôi muốn tra cứu thông tin sản phẩm, số lượng đã xuất, giá bán và hàng tồn để quản lý cửa hàng chính xác hơn. | Gia đình tôi – những người trực tiếp kinh doanh và quản lý cửa hàng điện tử. | Có ghi chép nhưng chưa đầy đủ từng giao dịch, kết hợp nhiều cách quản lý; khi kiểm tra phải tìm lại sổ, đối chiếu hàng thực tế và khó xác định chính xác hàng đã bán, giá bán hoặc số lượng còn lại. |
+| 3 | Tốn thời gian, cần đọc và tổng hợp thông tin | Khi cần tìm lại thông tin trong nhóm chat, tôi muốn nhanh chóng truy xuất các thông báo quan trọng để không bỏ lỡ deadline, tài liệu và lịch hẹn. | Bản thân tôi và các thành viên trong nhóm chat. | Tin nhắn mới liên tục khiến thông tin cũ bị trôi; phải cuộn lại lịch sử trò chuyện hoặc hỏi lại thành viên khác để tìm thông tin. |
+| 4 | Tốn thời gian | Khi cần tìm lại tài liệu học tập, tôi muốn xác định nhanh tài liệu được lưu ở đâu để tiết kiệm thời gian học tập. | Bản thân tôi | Tài liệu được lưu ở nhiều nơi như Google Docs, Zalo, Messenger và các thư mục trên máy tính; đôi khi không nhớ tên hoặc vị trí lưu tài liệu. |
+| 5 | Lặp lại | Khi có nhiều mục tiêu và công việc cần thực hiện, tôi muốn sắp xếp lịch trình và theo dõi kế hoạch cá nhân để duy trì thói quen. | Bản thân tôi | Đôi khi quên kế hoạch đã đặt ra, chưa có lịch trình cụ thể và dễ bị gián đoạn khi phát sinh công việc khác. |
+| 6 | | | | |
+| 7 | | | | |
+| 8 | | | | |
+
+**Nếu có dùng AI để gợi ý thêm:** AI gợi ý các vấn đề liên quan đến quản lý thời gian, lưu trữ thông tin và quản lý công việc. Tôi giữ lại những vấn đề phù hợp với trải nghiệm thực tế của bản thân và gia đình; bỏ những vấn đề chưa có trải nghiệm hoặc bằng chứng cụ thể.
+
+- 
+
+---
+
+## 3. Top 3 Problem Cards + quy trình nháp (CP2)
+
+### Bảng chọn top 3
+
+| Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
+|---:|---|---|---|
+| 1 | Quản lý và tìm kiếm đề IELTS Writing | Là vấn đề bản thân trực tiếp gặp phải; việc phân loại và tìm lại đề mất khoảng 3–5 phút mỗi lần, ảnh hưởng đến thời gian luyện tập. | Cần kiểm tra khả năng giảm thời gian tìm kiếm khi áp dụng cách tổ chức mới. |
+| 2 | Quản lý hàng hóa và giao dịch bán hàng tại cửa hàng điện tử của gia đình | Ghi chép chưa đầy đủ, khó tra cứu giá bán, số lượng hàng đã xuất và hàng tồn; ảnh hưởng trực tiếp đến hoạt động kinh doanh của gia đình. | Chưa xác định được thời gian tra cứu trung bình, tần suất sai lệch và mức độ đầy đủ của dữ liệu giao dịch. |
+| 3 | Tìm kiếm thông tin trong nhóm chat | Tin nhắn quan trọng dễ bị trôi, phải tìm lại thủ công hoặc hỏi các thành viên khác, gây mất thời gian. | Chưa thống kê tần suất gặp vấn đề và thời gian tìm kiếm trung bình. |
+
+### Problem Card #1
+
+| Trường | Nội dung |
+|---|---|
+| Job Story | Khi tạo hoặc cần tìm lại đề IELTS Writing, tôi muốn phân loại và tìm kiếm đề theo dạng bài, chủ đề để thuận tiện lưu trữ và ôn tập. |
+| Actor | Bản thân tôi. |
+| Thời điểm / bối cảnh | Khi AI tạo đề IELTS Writing mới hoặc khi cần tìm lại đề cũ để luyện tập. |
+| Quy trình hiện tại (3–7 bước) | 1. Nhận đề IELTS Writing mới. 2. Đọc và xác định dạng bài. 3. Xác định chủ đề của đề. 4. Tìm vị trí phù hợp trong file Google Docs. 5. Lưu đề vào file. 6. Khi cần ôn tập, tìm lại đề bằng cách dò thủ công. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước phân loại, lưu trữ và tìm lại đề phải thực hiện thủ công, mất khoảng 3–5 phút mỗi lần. |
+| Impact (nếu không giải thì sao) | Mất thời gian quản lý tài liệu, gián đoạn quá trình luyện viết và khó hệ thống hóa đề để ôn tập theo từng dạng bài, chủ đề. |
+| Success metric (baseline → target) | Baseline: khoảng 3–5 phút/lần. Target đề xuất: dưới 1 phút/lần; cần kiểm tra lại khi thử nghiệm. |
+| Phương án không dùng AI | Sắp xếp Google Docs thành các thư mục hoặc bảng theo dạng bài và chủ đề; tạo mục lục và quy tắc đặt tên thống nhất để tìm kiếm nhanh. |
+| Giả thuyết về AI (nếu có) | AI có thể nhận diện dạng bài và chủ đề của đề IELTS Writing, tự động gợi ý phân loại và hỗ trợ tìm kiếm đề khi cần. |
+| Cảm nhận nhanh | Workflow |
+
+Quy trình nháp hiện tại:
+
+```text
+AI tạo đề IELTS Writing
+        ↓
+Đọc và xác định dạng bài
+        ↓
+Xác định chủ đề
+        ↓
+Tìm vị trí phù hợp trong Google Docs
+        ↓
+Lưu đề vào file
+        ↓
+Khi ôn tập: tìm lại đề thủ công
+```
+
+### Problem Card #2
+
+| Trường | Nội dung |
+|---|---|
+| Job Story | Khi cần kiểm tra hàng hóa hoặc lịch sử bán hàng, tôi muốn tra cứu thông tin sản phẩm, số lượng đã xuất, giá bán và hàng tồn thuận tiện để quản lý cửa hàng chính xác hơn. |
+| Actor | Gia đình tôi – những người trực tiếp kinh doanh và quản lý cửa hàng điện tử. |
+| Thời điểm / bối cảnh | Khi cần kiểm tra một sản phẩm đã bán hay chưa, đã xuất bao nhiêu, giá bán trong giao dịch trước là bao nhiêu hoặc hiện còn tồn kho hay không. |
+| Quy trình hiện tại (3–7 bước) | 1. Ghi nhận thông tin hàng hóa và giao dịch bằng các cách gia đình đang sử dụng. 2. Khi cần kiểm tra, tìm lại thông tin trong sổ sách. 3. Đối chiếu thông tin hàng đã nhập và đã bán. 4. Tính số lượng hàng còn lại dựa trên thông tin ghi nhận. 5. Kiểm tra hàng thực tế tại cửa hàng hoặc kho để đối chiếu. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Khâu tìm lại và đối chiếu thông tin trong sổ sách mất thời gian do giao dịch chưa được ghi chép đầy đủ. Khi kiểm tra giá bán phải tìm lại thông tin; đôi khi không nhớ chính xác giá đã bán và khó đối chiếu khi cùng một sản phẩm có các mức giá bán khác nhau. Chưa có số liệu cụ thể về số phút mỗi lần. |
+| Impact (nếu không giải thì sao) | Khó nắm chính xác sản phẩm đã xuất bán, giá bán từng giao dịch và số lượng hàng tồn; gây khó khăn trong kiểm soát hàng hóa và quản lý hoạt động kinh doanh. |
+| Success metric (baseline → target) | Baseline: chưa có số liệu cụ thể về thời gian tra cứu và độ chính xác tồn kho. Target: có thể tra cứu nhanh lịch sử bán hàng, giá bán và số lượng tồn; xác định mức cải thiện cụ thể sau khi đo lường thực tế. |
+| Phương án không dùng AI | Sử dụng phần mềm quản lý bán hàng và kho hoặc bảng tính để ghi nhận đầy đủ từng giao dịch nhập, xuất, số lượng và giá bán. |
+| Giả thuyết về AI (nếu có) | AI có thể hỗ trợ tìm kiếm lịch sử giao dịch, tổng hợp thông tin bán hàng và trả lời câu hỏi về sản phẩm, giá bán hoặc số lượng tồn dựa trên dữ liệu đã được ghi nhận đầy đủ. |
+| Cảm nhận nhanh | Workflow |
+
+Quy trình nháp hiện tại:
+
+```text
+Ghi nhận thông tin hàng hóa và giao dịch
+        ↓
+Khi cần kiểm tra: tìm lại thông tin trong sổ sách
+        ↓
+Đối chiếu thông tin hàng nhập và hàng đã bán
+        ↓
+Tính số lượng hàng còn lại
+        ↓
+Kiểm tra hàng thực tế tại cửa hàng/kho
+        ↓
+Xác định tình trạng hàng hóa
+```
+
+### Problem Card #3
+
+| Trường | Nội dung |
+|---|---|
+| Job Story | Khi cần tìm lại thông tin trong nhóm chat, tôi muốn nhanh chóng truy xuất các thông báo quan trọng để không bỏ lỡ deadline, tài liệu và lịch hẹn. |
+| Actor | Bản thân tôi và các thành viên trong nhóm chat. |
+| Thời điểm / bối cảnh | Khi cần tìm lại thông báo, tài liệu, thời hạn công việc hoặc lịch hẹn đã được gửi trong nhóm chat. |
+| Quy trình hiện tại (3–7 bước) | 1. Mở nhóm chat cần tìm thông tin. 2. Cuộn lại lịch sử tin nhắn. 3. Tìm kiếm từ khóa hoặc thời điểm gửi tin. 4. Mở lại tin nhắn hoặc tài liệu cần tìm. 5. Nếu không tìm được, hỏi lại thành viên trong nhóm. |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước tìm kiếm và cuộn lại lịch sử tin nhắn phải thực hiện thủ công; thông tin cũ dễ bị trôi khi có nhiều tin nhắn mới. Chưa có số liệu cụ thể về thời gian tìm kiếm. |
+| Impact (nếu không giải thì sao) | Có thể bỏ sót thông báo quan trọng, deadline, tài liệu hoặc lịch hẹn; mất thời gian hỏi lại các thành viên khác và ảnh hưởng đến tiến độ công việc nhóm. |
+| Success metric (baseline → target) | Baseline: chưa đo thời gian tìm kiếm và tần suất bỏ sót thông tin. Target: tìm được thông tin quan trọng nhanh hơn và hạn chế bỏ sót; cần xác định mức cụ thể sau khi thử nghiệm. |
+| Phương án không dùng AI | Ghim tin nhắn quan trọng, lưu tài liệu vào thư mục chung và ghi deadline vào lịch hoặc bảng quản lý công việc. |
+| Giả thuyết về AI (nếu có) | AI có thể tóm tắt nội dung nhóm chat, nhận diện thông báo quan trọng, trích xuất deadline và hỗ trợ tìm kiếm thông tin bằng từ khóa. |
+| Cảm nhận nhanh | Workflow |
+
+Quy trình nháp hiện tại:
+
+```text
+Có nhu cầu tìm lại thông tin
+        ↓
+Mở nhóm chat
+        ↓
+Cuộn lại lịch sử tin nhắn
+        ↓
+Tìm thông báo hoặc tài liệu cần thiết
+        ↓
+Nếu không tìm thấy: hỏi lại thành viên
+        ↓
+Lấy lại thông tin cần tìm
+```
+
+### Card muốn pitch nhất
+
+- Card số: 2
+- Vì sao: Đây là vấn đề thực tế tại cửa hàng điện tử của gia đình, ảnh hưởng trực tiếp đến việc quản lý hàng hóa và hoạt động bán hàng. Việc ghi chép chưa đầy đủ khiến quá trình tra cứu giá bán, số lượng hàng đã xuất và hàng tồn gặp khó khăn. Vấn đề có thể khảo sát thực tế và thử nghiệm cải tiến quy trình quản lý.
+- Câu hỏi muốn nhóm phản biện: Có nên ưu tiên xây dựng quy trình ghi nhận dữ liệu nhập – xuất – bán hàng đầy đủ trước khi ứng dụng AI, hay có thể kết hợp AI ngay từ đầu để hỗ trợ tra cứu và tổng hợp thông tin?
+
+### AI đã phản biện card thế nào
+
+| Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
+|---|---|---|
+| Chưa có số liệu cụ thể về thời gian tra cứu, tần suất gặp vấn đề và mức độ sai lệch tồn kho. | Đồng ý | Không tự đặt số liệu; ghi rõ các chỉ số cần khảo sát và đo lường thực tế trước khi đặt mục tiêu. |
+| Dữ liệu ghi chép chưa đầy đủ thì AI khó đưa ra kết quả tra cứu chính xác. | Đồng ý | Bổ sung phương án chuẩn hóa và ghi nhận đầy đủ giao dịch nhập, xuất, bán hàng trước khi ứng dụng AI. |
+| Cần xác định rõ AI hỗ trợ công đoạn nào thay vì dùng AI cho toàn bộ quy trình quản lý. | Đồng ý | Giới hạn giả thuyết AI ở việc tìm kiếm lịch sử giao dịch, tổng hợp thông tin bán hàng và tra cứu hàng hóa dựa trên dữ liệu đã ghi nhận. |
+
+---
+
+## 4. Tôi đã tham gia phần nào (CP3 → CP7)
+
+| Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
+|---|---|---|
+| Pitch Problem Card | Tôi trình bày Problem 2 về khó khăn trong quản lý hàng hóa và giao dịch tại cửa hàng điện tử của gia đình. | Giúp các thành viên hiểu vấn đề thực tế và có cơ sở thảo luận, lựa chọn đề tài. |
+| Phản biện bài của bạn khác | Tôi lắng nghe phần trình bày và đặt câu hỏi để làm rõ vấn đề, đối tượng gặp khó khăn và hướng giải quyết. | Giúp tôi nhìn nhận vấn đề từ nhiều góc độ và học cách phản biện các giả định chưa rõ ràng. |
+| Nhận phản biện | Câu hỏi tôi nhận được: [Bổ sung câu hỏi thực tế]. Tôi đã sửa lại cách xác định pain point, làm rõ đối tượng và nguyên nhân của vấn đề. | Giúp nội dung Problem 2 rõ ràng và có cơ sở hơn. |
+| Gom cluster / cây OST | Tôi tham gia sắp xếp và nhóm các vấn đề liên quan đến hoạt động kinh doanh. | Nhận ra các vấn đề ghi chép giao dịch, tra cứu giá bán và kiểm soát tồn kho có mối liên hệ với nhau. |
+| Chọn candidate problem | Tôi đưa Problem 2 ra thảo luận cùng các thành viên. | Sau khi trao đổi, cả nhóm thống nhất lựa chọn Problem 2 để triển khai. |
+| Kiểm chứng / research | Tôi tìm hiểu cách gia đình ghi nhận hàng nhập, hàng bán và kiểm tra hàng tồn. | Nhận thấy gia đình kết hợp ghi sổ, hóa đơn và phiếu giao hàng; thông tin chưa phải lúc nào cũng được ghi đầy đủ, gây khó khăn khi tra cứu. |
+| Quy trình nhóm | Tôi cùng các thành viên trao đổi về quy trình nhập hàng, bán hàng, ghi chép và kiểm tra tồn kho. | Giúp nhóm xác định những công đoạn còn bất tiện và cần cải thiện. |
+| Problem Statement | Tôi tham gia chỉnh sửa cách diễn đạt, làm rõ đối tượng, bối cảnh và khó khăn chính. | Tập trung vào khó khăn ghi nhận, tra cứu thông tin và rào cản sử dụng ứng dụng của chủ hộ kinh doanh lớn tuổi. |
+| Mức can thiệp AI | Tôi tìm hiểu khả năng ứng dụng Voice AI kết hợp AI Agent để ghi nhận giao dịch và tra cứu bằng giọng nói. | Xác định AI hỗ trợ nhận diện lời nói, trích xuất thông tin và hỏi lại khi chưa rõ; người dùng xác nhận trước khi lưu. |
+| Quyết định | Tôi tham gia thảo luận và thống nhất hướng giải pháp Voice AI dành cho hộ kinh doanh có chủ cửa hàng lớn tuổi. | Nhóm lựa chọn hướng giải pháp giúp giảm thao tác nhập liệu và thuận tiện hơn khi tra cứu thông tin. |
+
+---
+
+## 5. Dùng AI
+
+| Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
+|---|---|---|---|---|
+| CP1 Scan | Tôi dùng AI để gợi ý và tổng hợp các vấn đề có thể gặp trong hoạt động kinh doanh cửa hàng điện tử. | Giúp tôi có thêm góc nhìn và nhận diện các vấn đề ban đầu. | Một số gợi ý còn chung chung, chưa sát với tình hình cửa hàng gia đình. | Tôi chọn lại những vấn đề phù hợp với thực tế, không sử dụng tất cả gợi ý của AI. |
+| CP2 Problem Card | Tôi dùng AI để hỗ trợ xây dựng Problem Card, Job Story và xác định các pain point. | Giúp tôi sắp xếp nội dung rõ ràng, dễ theo dõi hơn. | AI đôi khi đưa ra nhận định về nguyên nhân và mức độ ảnh hưởng khi chưa có đủ thông tin chứng minh. | Tôi loại bỏ những chi tiết chưa có căn cứ và chỉnh sửa theo tình hình thực tế của gia đình. |
+| CP4 Research | Tôi dùng AI để gợi ý hướng nghiên cứu phần mềm quản lý bán hàng và các giải pháp Voice AI. | Giúp tôi xác định những tính năng cần tìm hiểu và tiêu chí so sánh. | Thông tin về sản phẩm và tính năng có thể chưa chính xác hoặc chưa được cập nhật. | Tôi đối chiếu lại với website và tài liệu chính thức trước khi sử dụng thông tin. |
+| CP5 Quy trình | Tôi dùng AI để hỗ trợ mô tả quy trình nhập hàng, bán hàng, ghi chép và kiểm tra tồn kho. | Giúp tôi sắp xếp các bước theo trình tự và dễ nhận ra những điểm bất tiện. | Nội dung ban đầu còn thiên về sử dụng phần mềm, chưa chú ý nhiều đến thói quen ghi sổ của bố mẹ. | Tôi điều chỉnh theo cách gia đình đang thực hiện và tập trung vào việc dùng giọng nói để giảm thao tác nhập liệu. |
+| CP5–6 Problem Statement | Tôi dùng AI để hỗ trợ viết và chỉnh sửa Problem Statement. | Giúp diễn đạt vấn đề mạch lạc hơn, làm rõ đối tượng và khó khăn cần giải quyết. | Một số cách diễn đạt còn rộng, dễ khiến vấn đề bị hiểu đơn giản là cửa hàng chưa có phần mềm quản lý. | Tôi chỉnh lại để nhấn mạnh khó khăn khi ghi chép, tra cứu và rào cản sử dụng ứng dụng của chủ hộ kinh doanh lớn tuổi. |
+| CP6 Mức can thiệp / quyết định | Tôi dùng AI để tìm hiểu cách kết hợp Voice AI với AI Agent trong việc ghi nhận và tra cứu giao dịch. | Giúp tôi hình dung quy trình từ lúc người dùng nói đến khi thông tin được xác nhận và lưu vào hệ thống. | AI đôi khi mô tả giải pháp như thể có thể tự xử lý mọi thứ, trong khi vẫn có nguy cơ nghe nhầm số lượng, giá tiền hoặc tên sản phẩm. | Tôi bổ sung bước đọc lại và xác nhận trước khi lưu. AI hỗ trợ tiếp nhận yêu cầu, còn hệ thống quản lý chịu trách nhiệm lưu trữ và tính toán tồn kho. |
+
+## 6. Reflection (CP7)
+
+**6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+
+Qua phần trình bày của các nhóm, tôi nhận ra mỗi vấn đề đều có những góc nhìn và khó khăn riêng. Tôi học được rằng cần tìm hiểu kỹ vấn đề thực tế của người dùng, không nên chỉ nhìn vào biểu hiện bên ngoài. Điều này giúp tôi có thêm góc nhìn khi phân tích Problem 2 của nhóm mình và hiểu rằng việc xác định đúng vấn đề quan trọng không kém việc tìm giải pháp.
+
+**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Nhóm tôi có lúc vừa tìm hiểu vấn đề vừa suy nghĩ về giải pháp. Khi nhận thấy cửa hàng gặp khó khăn trong việc ghi chép và quản lý hàng hóa, chúng tôi đã nghĩ đến việc sử dụng Voice AI. Tuy nhiên, tôi nhận ra nếu quá tập trung vào giải pháp thì nhóm có thể bỏ qua thói quen và nhu cầu thực tế của người dùng. Vì vậy, nhóm cần tìm hiểu kỹ hơn cách gia đình đang ghi chép, tra cứu thông tin và kiểm tra hàng tồn trước khi lựa chọn hướng giải quyết.
+
+**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+
+Tôi nhận được câu hỏi phản biện: "Nếu nhập liệu bằng giọng nói dẫn đến nhập liệu sai thì sẽ ảnh hưởng rất nghiêm trọng, bạn giải quyết thế nào?". Ban đầu, tôi chủ yếu nghĩ đến sự tiện lợi của Voice AI mà chưa chú ý nhiều đến rủi ro. Sau câu hỏi này, tôi nhận ra nếu AI nghe nhầm tên sản phẩm, số lượng hoặc giá tiền thì dữ liệu quản lý có thể bị sai. Vì vậy, tôi bổ sung ý tưởng cần có bước đọc lại thông tin để người dùng kiểm tra và xác nhận trước khi lưu.
+
+**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Điều khiến tôi chú ý khi tìm hiểu thực tế tại cửa hàng gia đình là bố mẹ sử dụng nhiều cách ghi chép khác nhau như sổ sách, hóa đơn và phiếu giao hàng. Trước đây tôi không quá để ý đến điều này, nhưng khi tìm hiểu kỹ hơn, tôi nhận ra thông tin được lưu ở nhiều nơi có thể khiến việc tra cứu giao dịch và kiểm tra hàng tồn trở nên bất tiện. Tôi cũng nhận thấy vấn đề không chỉ nằm ở việc thiếu phần mềm quản lý mà còn liên quan đến thói quen ghi chép đã hình thành từ lâu.
+
+**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+
+Đối với tôi, khó nhất là xác định đúng vấn đề cốt lõi. Ban đầu, tôi nghĩ cửa hàng chỉ cần một phần mềm quản lý hàng hóa. Tuy nhiên, sau khi tìm hiểu, tôi nhận ra khó khăn còn nằm ở việc ghi chép chưa thống nhất, thông tin chưa được lưu đầy đủ và bố mẹ chưa quen sử dụng các ứng dụng quản lý. Tôi cũng phải phân biệt giữa nguyên nhân, biểu hiện và hậu quả để tránh viết Problem Statement quá chung chung hoặc đưa giải pháp vào ngay từ đầu.
+
+**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+
+Nếu được làm lại, tôi muốn tìm hiểu thêm từ nhiều hộ kinh doanh khác thay vì chỉ dựa vào cửa hàng gia đình. Tôi cũng muốn thu thập số liệu cụ thể về thời gian ghi chép, tra cứu thông tin và kiểm tra hàng tồn để đánh giá vấn đề rõ ràng hơn. Khi thảo luận nhóm, tôi sẽ phản biện nhiều hơn về tính phù hợp của Voice AI, đặc biệt là độ chính xác khi nhận diện giọng nói và khả năng sử dụng của người lớn tuổi. Tôi nghĩ nhóm cần kiểm chứng xem người dùng có thực sự muốn nhập liệu bằng giọng nói hay không, thay vì mặc định đây là giải pháp phù hợp.
+
+**6.7. Hiểu bài:**
+
+Vấn đề nhóm tôi lựa chọn là khó khăn trong việc ghi nhận và tra cứu thông tin hàng hóa, giao dịch tại các hộ kinh doanh. Quy trình hiện tại gồm nhập hàng, ghi chép, bán hàng và kiểm tra tồn kho, nhưng thông tin có thể được lưu ở nhiều nơi khác nhau. Nhóm có thể đánh giá giải pháp thông qua thời gian ghi nhận giao dịch, thời gian tra cứu và độ đầy đủ của dữ liệu. AI không được tự suy đoán khi thông tin không rõ mà cần hỏi lại và yêu cầu người dùng xác nhận trước khi lưu. Mức độ can thiệp của AI là nhận diện giọng nói, hiểu yêu cầu và trích xuất thông tin giao dịch. Vì vậy, nhóm lựa chọn kết hợp Voice AI, AI Agent với hệ thống quản lý hàng hóa để giảm thao tác nhập liệu và hỗ trợ tra cứu thuận tiện hơn.
+
+---
+
+## 7. Tài liệu tham khảo
+
+-

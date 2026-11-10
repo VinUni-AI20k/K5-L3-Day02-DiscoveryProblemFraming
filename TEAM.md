@@ -5,24 +5,28 @@
 ## Thông tin nhóm
 
 - Tên nhóm: BacHo
-- Candidate problem nhóm chọn (1 câu): Sinh viên phụ trách ghép report nhóm mất khoảng 3–4 tiếng sát deadline để thu bài, đọc đối chiếu và sửa các phần mâu thuẫn thành một report thống nhất.
+- Candidate problem nhóm chọn (1 câu): Sinh viên phụ trách ghép report nhóm mất khoảng 3 tiếng sát deadline để thu, đọc, hỏi lại và sửa các phần của thành viên thành một report thống nhất.
 - Quyết định cuối (Go / Not Yet / No-Go): Go, phạm vi nhỏ
 
 ## Thành viên
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | Trần Hải Long | 202603891 | Nhóm trưởng | longhtr028 |
-| 2 | Lê Danh Giang | 202603912 | Phản biện, Research | giangj |
+| 1 | Trần Hải Long | 202603891 | | longhtr028 |
+| 2 | Lê Danh Giang | 202603912 | Người phản biện, phụ trách research | giangj |
 | 3 | Nguyễn Đức Hải | 2A202603899 | | hainguyen312 |
-| 4 | Trần Tuấn Anh | 2A202603909 | Phụ trách kiểm chứng | Tanh0406 |
+| 4 | Trần Tuấn Anh | 2A202603909 | | Tanh0406 |
+
+Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
+
+Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối thời gian, ghi chép, người phản biện chính, phụ trách kiểm chứng (phỏng vấn/survey), phụ trách research, vẽ quy trình, viết Problem Statement.
 
 ## Phân công theo checkpoint
 
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
-| CP3 — Hội tụ nhóm | Trần Hải Long | Lê Danh Giang | Cluster, cây OST, bảng chấm điểm |
-| CP4 — Kiểm chứng | Trần Tuấn Anh | | Assumption map, snapshot hoặc survey |
+| CP3 — Hội tụ nhóm | | Lê Danh Giang | Cluster, cây OST, bảng chấm điểm |
+| CP4 — Kiểm chứng | | | Assumption map, snapshot hoặc survey |
 | CP4 — Research | Lê Danh Giang | | Bảng research có link |
 | CP5 — Quy trình trước/sau | | Lê Danh Giang | Quy trình + bảng before/after |
 | CP5 — Problem Statement v0 | | | Problem Statement v0 |
@@ -30,6 +34,8 @@
 | CP6 — Quyết định | | | 4 rủi ro + Go/Not Yet/No-Go |
 
 ## Cá nhân
+
+Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
 
 ### LeDanhGiang-202603912
 

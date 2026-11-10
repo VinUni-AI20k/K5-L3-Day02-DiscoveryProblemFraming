@@ -183,8 +183,7 @@ Quy trình nháp hiện tại:
 | Gom cluster / cây OST | | |
 | Chọn candidate problem | Tham gia quá trình chấm điểm của short list | Kết quả sau khi pitch nhóm,chốt được bài toán với điểm số cụ thể |
 | Kiểm chứng / research | Tham gia cách desk research trong phần kiểm chứng | Có link tới nguồn tham khảo |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Quyết định | Xác định rủi ro và đưa đến kết luận cuối cùng và hạn chế và hướng tiếp theo | Quyết định của nhóm là  |
 
 ---
 

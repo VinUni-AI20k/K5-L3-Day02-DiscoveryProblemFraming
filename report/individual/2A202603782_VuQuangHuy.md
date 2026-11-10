@@ -188,18 +188,36 @@ Làm thế nào để kiểm chứng độ chính xác của các đề xuất k
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+
 Sau khi nghe top 3 problem của các bạn khác trong nhóm, tôi nhận thấy có thể coi tìm và xác định được một vấn đề là bước đầu quan trọng nhất trong quá trình tạo ra sản phẩm AI. Cần phải xác định được đúng điểm đau của đối tượng, từ đó đi đến giải pháp.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
 Một ví dụ mà nhóm đã bị cuốn theo hướng nghĩ giải pháp theo vấn đề là khi nhóm đã nghĩ trước là sử dụng AI để hỗ trợ học sinh tổng hợp kiến thức và deadline. Lúc đó nhóm đã nhanh chóng nhận ra và đi lại từng bước để xác định vấn đề cụ thể, rồi từ đó đi sâu vào giải pháp.
+
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+
 Tôi đã đổi ý trong lần phản biện ý tưởng dùng AI để tóm tắt đề cương ôn thi cho học sinh sinh viên. Lý do phản biện của các thành viên trong nhóm mà tôi thấy hợp lý là đã có những công cụ miễn phí có sẵn, tiêu biểu như NotebookLM của Google, để giải quyết vấn đề này một cách hiệu quả cho học sinh sinh viên. Từ phản biện đó tôi đã ưu tiên vấn đề task tracking.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
+Kết quả phỏng vấn 10 sinh viên ngoài nhóm để kiểm chứng vấn đề miss deadline => nhận thấy để cập nhật đầy đủ thông tin, các sinh viên phải thường xuyên kiểm tra thông báo, dẫn đến việc tốn thời gian.
+
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
-Điều khó nhất khi viết Problem Statement là việc này yêu cầu trải nghiệm thực tế rất cao, vì có trải nghiệm thực tết mới có các chi tiết những khó khăn, vấn đề tiềm năng cần giải quyết.
+
+Điều khó nhất khi viết Problem Statement là việc này yêu cầu trải nghiệm thực tế rất cao, vì có trải nghiệm thực tế mới có các chi tiết những khó khăn, vấn đề tiềm năng cần giải quyết.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 Nếu làm lại, tôi sẽ cố gắng đào sâu hơn, lấy những dữ liệu thực tế thay vì ước lượng như hiện tại.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+1. Problem: Sinh viên phải kiểm tra thông báo mỗi tối từ nhiều nguồn khác nhau (LMS, email, Zalo,...) để tránh bị miss deadline => phân tán thông tin dẫn đến nguy cơ miss thông báo quan trọng.
+2. Quy trình: Quy trình hiện tại có 5 bước, bottleneck nằm ở bước check tin nhắn Zalo (lẫn cả tin nhắn cá nhân và thông báo quan trọng).
+3. Metric: Mục tiêu giảm thời gian kiểm tra thông báo từ ~15 phút xuống còn <5 phút mỗi tối, số lần miss thông báo từ 1/2 lần 1 tháng xuống còn 0.
+4. Boundary: AI chỉ xử lý dựa trên thông tin cung cấp, không truy cập vào các tài khoản cá nhân như Zalo, phải hiển thị những thông tin mâu thuẫn cho user quyết định.
+5. Mức can thiệp AI: Nhóm đã lựa chọn Workflow + Rule. Do Rule không đủ để xử lý các thông báo tự nhiên trên Zalo và Agent có thể đòi hỏi quyền truy cập tài khoản Zalo.
+6. Quyết định: Nhóm chọn GO với phạm vi nhỏ, triển khai pilot với nhóm sinh viên nhỏ trong vòng 2 tuần.
 
 ---
 

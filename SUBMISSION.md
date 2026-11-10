@@ -92,13 +92,13 @@ Nhóm trưởng vào **Settings → Collaborators**, mời các thành viên đ�
 
 ## Checklist trước khi nộp
 
-- [ ] Nhóm chỉ có một repo, do nhóm trưởng fork từ repo đề bài. Tên đúng mẫu `K5-<L3A hoặc L3B>-DAY02-TenNhom-DiscoveryProblemFraming`: `TenNhom` là tên nhóm, `L3A` hoặc `L3B` đúng lớp.
-- [ ] Bạn đã có file báo cáo cá nhân đúng tên (ví dụ `report/individual/20241234_NguyenVanAn.md`) và điền đủ mục 1–6. Template `MSSV_HoTen.md` đã được xóa sau khi mọi người có file riêng.
-- [ ] Bảng scan có ít nhất 5 problem dạng Job Story (CP1).
-- [ ] Có 3 Problem Card và 3 quy trình nháp (CP2).
-- [ ] `report/team/group_report.md` và `TEAM.md` đã điền trên repo nhóm.
-- [ ] Phần của bạn trong `TEAM.md` đã điền.
-- [ ] Mọi ảnh và file phụ nằm trong `report/assets/` và hiển thị được khi mở báo cáo trên GitHub.
-- [ ] Mọi link trong bảng research mở được.
-- [ ] Không có thông tin cá nhân của người được phỏng vấn, API key hay file `.env`.
-- [ ] Bạn đã nộp đúng link repo nhóm trên LMS bằng tài khoản của mình, trước deadline.
+- [x] Nhóm chỉ có một repo, do nhóm trưởng fork từ repo đề bài. Tên đúng mẫu `K5-<L3A hoặc L3B>-DAY02-TenNhom-DiscoveryProblemFraming`: `TenNhom` là tên nhóm, `L3A` hoặc `L3B` đúng lớp.
+- [x] Bạn đã có file báo cáo cá nhân đúng tên (ví dụ `report/individual/20241234_NguyenVanAn.md`) và điền đủ mục 1–6. Template `MSSV_HoTen.md` đã được xóa sau khi mọi người có file riêng.
+- [x] Bảng scan có ít nhất 5 problem dạng Job Story (CP1).
+- [x] Có 3 Problem Card và 3 quy trình nháp (CP2).
+- [x] `report/team/group_report.md` và `TEAM.md` đã điền trên repo nhóm.
+- [x] Phần của bạn trong `TEAM.md` đã điền.
+- [x] Mọi ảnh và file phụ nằm trong `report/assets/` và hiển thị được khi mở báo cáo trên GitHub.
+- [x] Mọi link trong bảng research mở được.
+- [x] Không có thông tin cá nhân của người được phỏng vấn, API key hay file `.env`.
+- [x] Bạn đã nộp đúng link repo nhóm trên LMS bằng tài khoản của mình, trước deadline.

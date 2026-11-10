@@ -15,7 +15,7 @@
 | 1 | Vũ Quang Huy | 2A202603782 | Phụ trách CP5 — vẽ quy trình trước/sau, viết Problem Statement v0; hỗ trợ phản biện | huyvu-03 |
 | 2 | Nguyễn Văn Minh | 2A202603771 | Phụ trách CP4 — Kiểm chứng & Research; hỗ trợ phản biện | |
 | 3 | Phùng Văn Thanh Cao | 2A202603741 | Phụ trách CP6 — mức can thiệp AI, Problem Statement v1, quyết định; hỗ trợ các phần còn lại | ththanh8888 |
-| 4 | | | | |
+| 4 | Phạm Lê Chuẩn| 2A202603784| Phụ trách CP3 - Hội tụ nhóm, gom Cluster, tạo cây OST, tạo bảng chấm điểm | 22520160 |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
@@ -109,3 +109,27 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Không đưa giải pháp vào Job Story. Khi xác định vấn đề, cần tập trung vào hoàn cảnh, nhu cầu và kết quả người dùng mong muốn thay vì mặc định phải dùng AI hay một công nghệ cụ thể; xác định đúng problem giúp nhóm có nhiều lựa chọn giải pháp và tránh solution-first.
 - Không phải vấn đề nào cũng cần AI. Cần so sánh AI với Rule và No AI để xác định công nghệ có thực sự tạo thêm giá trị hay không.
 - Nội dung do AI tạo ra cần được kiểm chứng: AI có thể sai số liệu, lệch phạm vi hoặc đưa ra giải pháp không phù hợp; người sử dụng phải chịu trách nhiệm kiểm tra và chọn kết quả cuối cùng.
+
+### PhamLeChuan-2A202603784
+
+**Phần việc phụ trách:**
+
+- Phụ trách CP3 — Hội tụ nhóm: gom Cluster, lập cây OST và xây dựng bảng chấm điểm.
+- Hỗ trợ phản biện, tham gia phỏng vấn kiểm chứng và đóng góp ý tưởng cho CP4.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Thu thập, tóm tắt và phân loại 12 Job Story từ 4 thành viên thành 3 Cluster chính (Hỗ trợ học tập, Quản lý lịch & Deadline, Tối ưu quy trình).
+- Xây dựng cây Opportunity Solution Tree (OST) rút gọn, định hướng nhóm đi từ Outcome chung xuống các Opportunity, đồng thời gạch bỏ các "solution đội lốt" (như công cụ debug AI hay chatbot nhắc lịch).
+- Thiết lập bảng chấm điểm 3 candidate lọt vào shortlist dựa trên 7 tiêu chí (Actor, Quy trình, Pain, Impact, So sánh 4 mức, Vừa sức lab, Hiểu domain).
+- Đóng vai "Kẻ phản biện" (Devil's Advocate) trong CP3 để chỉ ra rủi ro về bảo mật dữ liệu (Zalo/LMS), giúp nhóm đánh giá khách quan giữa bài toán "Khắc phục lỗi code" và "Theo dõi task nhóm/deadline".
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `report/team/group_report.md`, mục 2 (CP3: Pitch, Cluster, OST, Chấm điểm).
+- `report/individual/2A202603784_PhamLeChuan.md`, mục 4 (bảng tham gia phần nhóm).
+
+**Điều mình học được từ phần nhóm:**
+
+- Nhận ra cây OST là công cụ cực kỳ lợi hại để "phanh" cả nhóm lại mỗi khi có ai đó lỡ miệng đề xuất giải pháp thay vì phân tích nỗi đau (pain point). 
+- Trong việc chấm điểm shortlist, điểm cao nhất không phải lúc nào cũng là kết quả cuối cùng. Việc tranh luận (như phân tích rủi ro data privacy) quan trọng hơn là chỉ nhìn vào điểm số tổng, giúp nhóm ra quyết định dựa trên tính khả thi thực tế thay vì cảm tính.

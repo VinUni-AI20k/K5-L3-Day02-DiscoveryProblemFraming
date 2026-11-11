@@ -9,3 +9,4 @@ Lab này **không có code**. Toàn bộ bài làm là file Markdown và hình �
 - File học viên được sửa: file báo cáo cá nhân của mình trong `report/individual/`, `report/team/group_report.md`, `TEAM.md`, thêm file vào `report/assets/`
 
 Nếu nhóm muốn làm thử một prototype nhỏ (không bắt buộc, không tính điểm), có thể đặt ở đây kèm hướng dẫn chạy.
+

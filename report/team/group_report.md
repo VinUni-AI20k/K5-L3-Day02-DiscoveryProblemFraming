@@ -5,7 +5,7 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: RANDOM
 - Thành viên: xem `TEAM.md`
 - Candidate problem được chọn (1 câu):
 - Quyết định cuối: Go / Not Yet / No-Go
@@ -18,18 +18,18 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 1 | Mai Tuấn Anh| Khi đến thời điểm báo cáo tiến độ hằng tuần, tôi muốn tổng hợp nhanh công việc và kết quả từ nhiều nguồn, để gửi báo cáo đầy đủ, chính xác và đúng hạn. | Trưởng nhóm dự án chịu trách nhiệm gửi báo cáo cho giảng viên.| Bước tổng hợp và viết nội dung báo cáo mất nhiều thời gian do phải đọc, đối chiếu dữ liệu từ nhiều nguồn. Ước tính 25–30 phút cho phần này| |
+| 2 | Mai Tuấn Anh| Sinh viên phải tìm kiếm từ nhiều website, PDF và bài báo khoa học. Có thể đo thời gian tìm kiếm và mức độ phù hợp của tài liệu.Khi thực hiện bài tập lớn hoặc đồ án, tôi muốn tìm được những tài liệu nghiên cứu phù hợp với chủ đề, để tiết kiệm thời gian và có đủ nguồn thông tin đáng tin cậy phục vụ nghiên cứu.| Trưởng nhóm, thành viên| Bước đọc và đánh giá tài liệu mất nhiều thời gian vì phải mở từng tài liệu, kiểm tra nội dung và xác định mức độ liên quan đến đề tài| |
+| 3 | Mai Tuấn Anh|TKhi bắt đầu một dự án hoặc nhận danh sách công việc mới, tôi muốn đánh giá khối lượng và độ phức tạp của từng task dựa trên năng lực thành viên, để phân chia công việc hợp lý và đảm bảo tiến độ chung. | Trưởng nhóm, thành viên|  Bước 2–4: Trưởng nhóm phải tự đọc, đánh giá độ phức tạp của từng task và đối chiếu với năng lực thành viên. Việc ước lượng thường mang tính chủ quan.| |
+| 4 | Nguyễn Khánh Duy | Khi nhóm chat lớp có rất nhiều tin nhắn mỗi ngày, tôi muốn nắm được tin @all, tin tag tên tôi và tin từ người quan trọng (mentor, lớp trưởng), để không bỏ lỡ thông báo, deadline và bài cần nộp| Sinh viên kiêm người đi làm/kinh doanh, tham gia nhiều nhóm chat học tập và dự án (50–60 tin nhắn/ngày/nhóm)| Bước 3: Đọc lướt thủ công để phân loại tin quan trọng mất khoảng 8 phút/nhóm, vì tin bài tập bị trôi lẫn giữa các cuộc trò chuyện tán gẫu| |
+| 5 | Nguyễn Khánh Duy | Khi bắt đầu sáng thứ Hai, tôi muốn thấy toàn bộ task tuần trước ở một chỗ (dự án, ngày tạo, nội dung, deadline, % hoàn thành, task còn nợ), để sắp xếp ưu tiên theo deadline cho tuần mới trước khi bắt tay vào làm| Cá nhân kiêm nhiệm nhiều vai trò cùng lúc (sinh viên, nhân viên công ty, chủ vận hành kinh doanh)| Bước 3: Lục tìm tin nhắn hẹn việc trên Zalo mất 10 phút, do Zalo không có tính năng quản lý task nên lời hẹn nằm rải rác trong tin nhắn cá nhân| |
+| 6 | Nguyễn Khánh Duy | Khi bắt đầu ngày làm việc ở mảng F&B và làm đẹp, tôi muốn theo dõi biến động số lượng hashtag của các chủ đề/món mới trên mạng xã hội, để nhận diện kịp thời xu hướng đang lên và ra sản phẩm/nội dung bắt trend trước khi nguội| Chủ cửa hàng F&B và làm đẹp trực tiếp phụ trách phát triển sản phẩm mới và nội dung truyền thông| Bước 3: Tra cứu thủ công từng hashtag trên từng nền tảng mất 30 phút mà chỉ kiểm tra được 5–10 từ khóa, không thấy được biểu đồ tốc độ tăng trưởng| |
+| 7 | Vũ Đức Tâm | Khi luyện nghe từ vựng tiếng Đức trên Todai, tôi muốn nhận diện đúng từ đang nghe, để hiểu nội dung và tiếp tục bài học.| Vũ Đức Tâm — đang học tiếng Đức đồng thời thực tập tại doanh nghiệp| Bước 2 và vòng lặp quay lại từ bước 4: nghe nhưng chưa nhận diện được từ, tiếp tục nghe lại đến khi hiểu. Tổng buổi nghe khoảng 180 phút; chưa tách số phút của vòng lặp.| |
+| 8 | Vũ Đức Tâm| Khi cần tìm thông tin liên hệ trong các tin nhắn Discord được chuyển tiếp qua lại, tôi muốn tìm được đúng người và thông tin liên hệ, để thực hiện việc liên lạc cần thiết.| Vũ Đức Tâm — thực tập sinh cần tìm người phụ trách để trao đổi công việc| Bước 3: dò các tin nhắn chuyển tiếp để xác định đúng người phụ trách. Một lượt tìm được học viên mô tả mất khoảng 30 phút tổng cộng; chưa tách riêng thời gian bước 3.| |
+| 9 | Vũ Đức Tâm| Khi sắp xếp lịch học tiếng Đức cùng lịch thực tập, tôi muốn dành được thời gian tập thể dục, để duy trì ít nhất 2 buổi tập mỗi tuần.| Vũ Đức Tâm — đang học tiếng Đức, thực tập và có mục tiêu tập thể dục| Điểm chuyển từ dự định tập sang quyết định có đi tập được hay không khi thời gian nghe kéo dài; giả thuyết là lịch tập chưa có khoảng thời gian được bảo vệ. Chưa xác nhận nguyên nhân gốc.| |
+| 10 | Phạm Đức Hồng Đức| Khi nhận catalogue sản phẩm từ nhà cung cấp, tôi muốn trích xuất đầy đủ hình ảnh và thông tin từng sản phẩm vào Excel, để có dữ liệu chính xác phục vụ quản lý và kinh doanh.| Nhân viên phụ trách nhập liệu sản phẩm.| Bước 4 — nhập thông tin thủ công, dự kiến 16 giờ cho catalogue ví dụ 40 giờ; bước 3 (cắt ảnh) cũng tốn công. Chưa đo riêng từng bước.| |
+| 11 | Phạm Đức Hồng Đức|Khi kết thúc tuần làm việc, tôi muốn tổng hợp task hoàn thành, đang thực hiện và khó khăn, để gửi báo cáo tiến độ đầy đủ cho quản lý. | Nhân viên phụ trách báo cáo tiến độ công việc cá nhân hằng tuần.| Bước 5 — viết báo cáo, dự kiến 25 phút trong ví dụ 90 phút; bước 2 cũng dự kiến 25 phút. Cần bấm giờ để phân biệt.| |
+| 12 | Phạm Đức Hồng Đức| Khi mới tham gia công ty hoặc dự án, tôi muốn nhanh chóng hiểu quy trình làm việc, công cụ và quy định nội bộ, để tự thực hiện công việc mà không phải liên tục hỏi đồng nghiệp.| Nhân viên mới trong 1–2 tuần đầu; nhân viên hướng dẫn onboarding chịu ảnh hưởng gián tiếp.| Bước 4 — hỏi và chờ người hướng dẫn, dự kiến 6 phút/câu trong ví dụ 20 phút; thực tế có thể thay đổi nhiều theo câu hỏi và người hỗ trợ.| |
 
 ### 2.2. Cluster
 
